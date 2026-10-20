@@ -1,0 +1,56 @@
+const {spawn}=require('child_process'),assert=require('assert/strict'),fs=require('fs'),path=require('path'),Database=require('better-sqlite3'),{io}=require('socket.io-client');
+const dir=fs.mkdtempSync(path.join(require('os').tmpdir(),'loud-test-'));const child=spawn(process.execPath,['server.cjs'],{env:{...process.env,PORT:'3107',HOST:'127.0.0.1',DATA_DIR:dir},stdio:'pipe'});let cookie='',token='';
+async function req(p,method='GET',body,admin=false){const headers={};if(token)headers.Authorization='Bearer '+token;if(admin)headers.Cookie=cookie;if(body&&!(body instanceof FormData))headers['Content-Type']='application/json';const r=await fetch('http://127.0.0.1:3107'+p,{method,headers,body:body instanceof FormData?body:body?JSON.stringify(body):undefined});return r}
+(async()=>{let ready=false;for(let i=0;i<60;i++){try{if((await req('/api/health')).ok){ready=true;break}}catch{}await new Promise(r=>setTimeout(r,100))}assert(ready);assert.equal((await req('/api/admin/messages')).status,401);token=(await(await req('/api/session','POST')).json()).token;const second=(await(await req('/api/session','POST')).json()).token;assert.notEqual(token,second);
+const OTPAuth=require('otpauth');
+// Seed a legacy password to exercise a non-destructive migration.
+const seed=new Database(path.join(dir,'chat.sqlite')),salt=require('crypto').randomBytes(16).toString('hex');
+seed.prepare('INSERT OR REPLACE INTO config VALUES(?,?)').run('salt',salt);
+seed.prepare('INSERT OR REPLACE INTO config VALUES(?,?)').run('password',require('crypto').scryptSync('test-only-strong-password',salt,64).toString('hex'));seed.close();
+assert.equal((await req('/api/admin/enroll/start','POST',{password:'wrong'})).status,401);
+let r=await req('/api/admin/login','POST',{password:'test-only-strong-password'});assert.equal(r.status,200);cookie=r.headers.get('set-cookie').split(';')[0];
+const enrolled=await(await req('/api/admin/enroll/start','POST',{},true)).json();assert(enrolled.qr.startsWith('data:image/png;base64,'));
+const otp=new OTPAuth.TOTP({secret:OTPAuth.Secret.fromBase32(enrolled.secret),algorithm:'SHA1',digits:6,period:30});
+assert.equal((await req('/api/admin/enroll/confirm','POST',{id:enrolled.id,code:'bad'},true)).status,401);
+r=await req('/api/admin/enroll/confirm','POST',{id:enrolled.id,code:otp.generate()},true);assert.equal(r.status,200);const recovery=await r.json();cookie=r.headers.get('set-cookie').split(';')[0];
+assert.equal(recovery.recoveryCodes.length,10);
+assert.equal((await req('/api/admin/login','POST',{code:otp.generate()})).status,401);
+r=await req('/api/admin/login','POST',{code:otp.generate({timestamp:Date.now()+30000})});assert.equal(r.status,200);cookie=r.headers.get('set-cookie').split(';')[0];
+assert.equal((await req('/api/admin/login','POST',{password:'test-only-strong-password'})).status,401);
+r=await req('/api/admin/recovery','POST',{code:recovery.recoveryCodes[0]});assert.equal(r.status,200);cookie=r.headers.get('set-cookie').split(';')[0];
+assert.equal((await req('/api/admin/recovery','POST',{code:recovery.recoveryCodes[0]})).status,401);
+const inspect=new Database(path.join(dir,'chat.sqlite'));assert(!inspect.prepare('SELECT value FROM config WHERE key=?').get('password'));assert(!inspect.prepare('SELECT value FROM config WHERE key=?').get('totp').value.includes(enrolled.secret));inspect.close();
+
+const socket=io('http://127.0.0.1:3107',{auth:{token:second}});await new Promise((resolve,reject)=>{socket.on('connect',resolve);socket.on('connect_error',reject)});const seen=new Promise(resolve=>socket.once('message',resolve));const id='test-message-000001';function form(){const f=new FormData();f.append('id',id);f.append('text','<script>alert(1)</script>');f.append('file',new Blob(['test attachment'],{type:'text/plain'}),'test.txt');return f}assert.equal((await req('/api/messages','POST',form())).status,200);assert.equal((await seen).id,id);await req('/api/messages','POST',form());let list=await(await req('/api/messages')).json();assert.equal(list.length,1);assert.equal((await req('/api/files/'+id)).status,200);const db=new Database(path.join(dir,'chat.sqlite'));db.prepare('UPDATE messages SET created=?').run(Date.now()-7*3600000);assert.equal((await(await req('/api/messages')).json()).length,0);assert.equal((await req('/api/files/'+id)).status,403);assert.equal((await req('/api/files/'+id,'GET',null,true)).status,200);assert.equal((await(await req('/api/admin/messages','GET',null,true)).json()).total,1);r=await req('/api/admin/settings','POST',{visibleHours:1,retentionHours:2},true);assert.equal((await r.json()).needsConfirmation,true);assert.equal((await(await req('/api/admin/messages','GET',null,true)).json()).total,1);await req('/api/admin/settings','POST',{visibleHours:1,retentionHours:2,confirm:true},true);assert.equal((await(await req('/api/admin/messages','GET',null,true)).json()).total,0);assert.equal(fs.readdirSync(path.join(dir,'files')).length,0);
+assert.equal((await req('/api/admin/clear-visible','POST')).status,401);
+assert.equal((await req('/api/messages','POST',form())).status,200);
+const clearedEvent=new Promise(resolve=>socket.once('settings',resolve));
+r=await req('/api/admin/clear-visible','POST',null,true);assert.equal(r.status,200);const cleared=await r.json();assert.equal(cleared.count,1);assert(cleared.visibleSince>0);assert.equal((await clearedEvent).visibleSince,cleared.visibleSince);
+assert.equal((await(await req('/api/messages')).json()).length,0);
+assert.equal((await req('/api/files/'+id)).status,403);
+assert.equal((await req('/api/files/'+id,'GET',null,true)).status,200);
+assert.equal((await(await req('/api/admin/messages','GET',null,true)).json()).total,1);
+assert.equal(Number(db.prepare('SELECT value FROM config WHERE key=?').get('visibleSince').value),cleared.visibleSince);
+await req('/api/admin/settings','POST',{visibleHours:2,retentionHours:720},true);
+assert.equal((await(await req('/api/messages')).json()).length,0);
+const fresh=new FormData();fresh.append('id','fresh-message-000002');fresh.append('text','new after clear');assert.equal((await req('/api/messages','POST',fresh)).status,200);
+const visible=await(await req('/api/messages')).json();assert.equal(visible.length,1);assert.equal(visible[0].id,'fresh-message-000002');
+
+assert.equal((await req('/api/admin/chat-state','POST',{enabled:false})).status,401);
+assert.equal((await req('/api/admin/chat-state','POST',{enabled:'false'},true)).status,400);
+const closing=new Promise(resolve=>socket.once('settings',resolve));
+r=await req('/api/admin/chat-state','POST',{enabled:false},true);assert.equal(r.status,200);assert.equal((await r.json()).chatEnabled,false);assert.equal((await closing).chatEnabled,false);
+assert.equal((await(await req('/api/settings')).json()).chatEnabled,false);
+assert.equal(db.prepare('SELECT value FROM config WHERE key=?').get('chatEnabled').value,'false');
+const filesBefore=fs.readdirSync(path.join(dir,'files')).length;
+assert.equal((await req('/api/messages')).status,403);
+assert.equal((await req('/api/messages','POST',form())).status,403);
+assert.equal(fs.readdirSync(path.join(dir,'files')).length,filesBefore);
+assert.equal((await req('/api/files/'+id)).status,403);
+assert.equal((await req('/api/files/'+id,'GET',null,true)).status,200);
+assert.equal((await req('/api/admin/messages','GET',null,true)).status,200);
+const reopening=new Promise(resolve=>socket.once('settings',resolve));
+assert.equal((await req('/api/admin/chat-state','POST',{enabled:true},true)).status,200);assert.equal((await reopening).chatEnabled,true);
+assert.equal((await(await req('/api/messages')).json()).length,1);
+assert.equal((await req('/api/messages','POST',fresh)).status,200);
+db.close();socket.close();console.log('PASS: anonymous identities, TOTP enrollment/migration/login/replay prevention/recovery, realtime delivery, upload/download, idempotency, visibility/attachment authorization, retention preview/cleanup, clear-visible broadcast/persistence/access control/new messages, chat close/open authorization/broadcast/persistence/upload blocking/admin access.');})().catch(e=>{console.error(e);process.exitCode=1}).finally(()=>{child.kill();setTimeout(()=>fs.rmSync(dir,{recursive:true,force:true}),500)});

@@ -1,0 +1,53 @@
+const express=require('express'), http=require('http'),{Server}=require('socket.io'),multer=require('multer'),Database=require('better-sqlite3'),crypto=require('crypto'),fs=require('fs'),path=require('path');
+const {rateLimit}=require('express-rate-limit');
+const root=process.env.DATA_DIR||path.join(__dirname,'data');fs.mkdirSync(path.join(root,'files'),{recursive:true});
+const db=new Database(path.join(root,'chat.sqlite'));db.pragma('journal_mode = WAL');
+db.exec(`CREATE TABLE IF NOT EXISTS config(key TEXT PRIMARY KEY,value TEXT); CREATE TABLE IF NOT EXISTS sessions(token TEXT PRIMARY KEY,nick TEXT,created INTEGER); CREATE TABLE IF NOT EXISTS messages(id TEXT PRIMARY KEY,token TEXT,nick TEXT,text TEXT,created INTEGER,file TEXT,name TEXT,mime TEXT,size INTEGER); CREATE INDEX IF NOT EXISTS message_time ON messages(created);`);
+const get=k=>db.prepare('SELECT value FROM config WHERE key=?').get(k)?.value;
+const set=(k,v)=>db.prepare('INSERT OR REPLACE INTO config VALUES(?,?)').run(k,String(v));
+if(!get('visible'))set('visible',6);if(!get('retention'))set('retention',720);
+const hash=(p,s)=>crypto.scryptSync(p,s,64).toString('hex');
+const app=express(),server=http.createServer(app),io=new Server(server,{maxHttpBufferSize:32100});app.disable('x-powered-by');
+app.use((req,res,next)=>{res.setHeader('X-Content-Type-Options','nosniff');res.setHeader('Referrer-Policy','no-referrer');res.setHeader('Cache-Control','no-store');if(!['GET','HEAD'].includes(req.method)&&req.headers.origin&&req.headers.origin!==`${req.protocol}://${req.headers.host}`)return res.sendStatus(403);next()});
+app.use(express.json({limit:'32kb'}));
+const admins=new Map();const cookie=req=>String(req.headers.cookie||'').split('; ').find(x=>x.startsWith('admin='))?.slice(6);
+const isAdmin=req=>{const t=cookie(req),until=admins.get(t);if(until>Date.now())return true;admins.delete(t);return false};
+const admin=(req,res,next)=>isAdmin(req)?next():res.sendStatus(401);
+const local=req=>['127.0.0.1','::1','::ffff:127.0.0.1'].includes(req.socket.remoteAddress);
+const auth=(req,res,next)=>{req.user=db.prepare('SELECT * FROM sessions WHERE token=?').get(req.headers.authorization?.replace('Bearer ','' )||'');req.user?next():res.sendStatus(401)};
+const chatEnabled=()=>get('chatEnabled')!=='false';
+const chatOpen=(req,res,next)=>chatEnabled()?next():res.status(403).json({error:'聊天室已关闭，请等待管理员开启',code:'CHAT_CLOSED'});
+const settings=()=>({visibleHours:Number(get('visible')),retentionHours:Number(get('retention')),visibleSince:Number(get('visibleSince')||0),chatEnabled:chatEnabled()});
+const cutoff=()=>Math.max(Date.now()-Number(get('visible'))*3600000,Number(get('visibleSince')||0));
+const publicMessage=m=>({id:m.id,nick:m.nick,text:m.text,created:m.created,attachment:m.file?{url:'/api/files/'+m.id,name:m.name,mime:m.mime,size:m.size}:null});
+function remove(rows){for(const m of rows){db.prepare('DELETE FROM messages WHERE id=?').run(m.id);if(m.file)fs.rmSync(path.join(root,'files',m.file),{force:true});io.emit('removed',m.id)}}
+function cleanup(){const hours=Number(get('retention'));if(hours)remove(db.prepare('SELECT * FROM messages WHERE created<?').all(Date.now()-hours*3600000));db.prepare('DELETE FROM sessions WHERE created<? AND token NOT IN (SELECT token FROM messages)').run(Date.now()-86400000);const used=new Set(db.prepare('SELECT file FROM messages WHERE file IS NOT NULL').all().map(x=>x.file));for(const f of fs.readdirSync(path.join(root,'files'))){const p=path.join(root,'files',f);if(!used.has(f)&&fs.statSync(p).mtimeMs<Date.now()-3600000)fs.rmSync(p,{force:true})}set('cleanup',Date.now());}
+app.get('/api/health',(req,res)=>res.json({ok:true}));
+app.get('/api/settings',(req,res)=>res.json({...settings(),configured:!!(get('totp')||get('password'))}));
+app.post('/api/session',rateLimit({windowMs:60000,limit:60}), (req,res)=>{const token=crypto.randomBytes(32).toString('hex'),nick=require('./nicknames.cjs')(new Set(db.prepare('SELECT nick FROM sessions').all().map(s=>s.nick)));db.prepare('INSERT INTO sessions VALUES(?,?,?)').run(token,nick,Date.now());res.json({token,nick})});
+app.get('/api/me',auth,(req,res)=>res.json({nick:req.user.nick}));
+app.get('/api/messages',auth,chatOpen,(req,res)=>{const before=Number(req.query.before)||Date.now()+1;res.json(db.prepare('SELECT * FROM messages WHERE created>=? AND created<? ORDER BY created DESC,id DESC LIMIT 100').all(cutoff(),before).reverse().map(publicMessage))});
+const upload=multer({dest:path.join(root,'files'),limits:{fileSize:20*1024*1024,files:1,fields:2}});
+app.post('/api/messages',auth,chatOpen,rateLimit({windowMs:60000,limit:30}),upload.single('file'),(req,res)=>{if(!chatEnabled()){if(req.file)fs.rmSync(req.file.path,{force:true});return res.status(403).json({error:'聊天室已关闭',code:'CHAT_CLOSED'})}const id=String(req.body.id||''),text=String(req.body.text||'').trim();const fail=code=>{if(req.file)fs.rmSync(req.file.path,{force:true});return res.sendStatus(code)};if(!/^[a-zA-Z0-9-]{16,80}$/.test(id)||text.length>4000||(!text&&!req.file))return fail(400);const existing=db.prepare('SELECT * FROM messages WHERE id=?').get(id);if(existing){if(req.file)fs.rmSync(req.file.path,{force:true});return existing.token===req.user.token?res.json(publicMessage(existing)):res.sendStatus(409)}const f=req.file;db.prepare('INSERT INTO messages VALUES(?,?,?,?,?,?,?,?,?)').run(id,req.user.token,req.user.nick,text,Math.max(Date.now(),Number(get('visibleSince')||0)),f?.filename||null,f?Buffer.from(f.originalname,'latin1').toString('utf8'):null,f?.mimetype||null,f?.size||null);const m=publicMessage(db.prepare('SELECT * FROM messages WHERE id=?').get(id));io.emit('message',m);res.json(m)});
+app.get('/api/files/:id',(req,res)=>{if(!isAdmin(req)&&!chatEnabled())return res.status(403).json({error:'聊天室已关闭',code:'CHAT_CLOSED'});const m=db.prepare('SELECT * FROM messages WHERE id=?').get(req.params.id);const u=db.prepare('SELECT token FROM sessions WHERE token=?').get(req.headers.authorization?.replace('Bearer ','')||'');if(!isAdmin(req)&&(!u||!m||m.created<cutoff()))return res.sendStatus(403);if(!m?.file)return res.sendStatus(404);const safe=['image/png','image/jpeg','image/gif','image/webp'].includes(m.mime);res.setHeader('Content-Type',safe?m.mime:'application/octet-stream');res.setHeader('Content-Disposition',`${safe?'inline':'attachment'}; filename*=UTF-8''${encodeURIComponent(m.name)}`);res.sendFile(path.join(root,'files',m.file))});
+const issue=res=>{const token=crypto.randomBytes(32).toString('hex');admins.set(token,Date.now()+8*3600000);res.setHeader('Set-Cookie',`admin=${token}; HttpOnly; SameSite=Strict; Path=/; Max-Age=28800`)};
+require('./admin-auth.cjs')({app,db,get,set,root,local,isAdmin,admins,hash,issue});
+app.post('/api/admin/logout',admin,(req,res)=>{admins.delete(cookie(req));res.setHeader('Set-Cookie','admin=; HttpOnly; SameSite=Strict; Path=/; Max-Age=0');res.json({ok:true})});
+app.get('/api/admin/messages',admin,(req,res)=>{const page=Math.max(0,Number(req.query.page)||0),q='%'+String(req.query.q||'').slice(0,200)+'%',from=Number(req.query.from)||0,to=Number(req.query.to)||Date.now()+1;const args=[q,q,from,to];const where='(text LIKE ? OR nick LIKE ?) AND created>=? AND created<=?';res.json({messages:db.prepare(`SELECT * FROM messages WHERE ${where} ORDER BY created DESC LIMIT 100 OFFSET ?`).all(...args,page*100).map(publicMessage),total:db.prepare(`SELECT count(*) n FROM messages WHERE ${where}`).get(...args).n,...settings(),lastCleanup:Number(get('cleanup')),bytes:db.prepare('SELECT coalesce(sum(size),0) n FROM messages').get().n})});
+app.delete('/api/admin/messages/:id',admin,(req,res)=>{remove(db.prepare('SELECT * FROM messages WHERE id=?').all(req.params.id));res.json({ok:true})});
+app.post('/api/admin/settings',admin,(req,res)=>{const {visibleHours:v,retentionHours:r,confirm}=req.body;if(!Number.isInteger(v)||v<1||v>87600||!Number.isInteger(r)||r<0||r>87600||(r&&r<v))return res.status(400).json({error:'请输入整数小时；保存时长须不小于可见时长，0 表示永久保存'});const rows=r?db.prepare('SELECT * FROM messages WHERE created<?').all(Date.now()-r*3600000):[];if(rows.length&&!confirm)return res.json({needsConfirmation:true,count:rows.length,bytes:rows.reduce((n,m)=>n+(m.size||0),0)});set('visible',v);set('retention',r);cleanup();io.emit('settings',settings());res.json({ok:true})});
+app.post('/api/admin/clear-visible',admin,(req,res)=>{
+  const count=db.prepare('SELECT count(*) n FROM messages WHERE created>=?').get(cutoff()).n;
+  const latest=db.prepare('SELECT coalesce(max(created),0) n FROM messages').get().n;
+  set('visibleSince',Math.max(Date.now(),latest+1,Number(get('visibleSince')||0)));
+  io.emit('settings',settings());res.json({ok:true,count,...settings()});
+});
+app.post('/api/admin/chat-state',admin,(req,res)=>{
+  if(typeof req.body.enabled!=='boolean')return res.status(400).json({error:'enabled 必须为布尔值'});
+  set('chatEnabled',req.body.enabled);io.emit('settings',settings());res.json({ok:true,...settings()});
+});
+io.use((socket,next)=>{const u=db.prepare('SELECT * FROM sessions WHERE token=?').get(socket.handshake.auth.token||'');if(!u)return next(new Error('unauthorized'));if(socket.handshake.headers.origin&&socket.handshake.headers.origin!==`http://${socket.handshake.headers.host}`)return next(new Error('origin'));socket.data.user=u;next()});
+const count=()=>io.emit('online',new Set([...io.sockets.sockets.values()].map(s=>s.data.user.token)).size);io.on('connection',s=>{count();s.on('disconnect',count)});
+app.use(express.static(path.join(__dirname,'public')));app.get('/admin',(req,res)=>res.sendFile(path.join(__dirname,'public','admin.html')));
+app.use((err,req,res,next)=>res.status(err.code==='LIMIT_FILE_SIZE'?413:500).json({error:err.code==='LIMIT_FILE_SIZE'?'文件不能超过 20 MB':'请求失败，请稍后重试'}));
+cleanup();setInterval(cleanup,600000).unref();const port=Number(process.env.PORT)||3210;server.on('error',e=>{console.error('启动失败：',e.code==='EADDRINUSE'?'端口已被占用':e.message);process.exit(1)});server.listen(port,process.env.HOST||'0.0.0.0',()=>{console.log(`大声说话：http://localhost:${port}  管理后台：http://localhost:${port}/admin`);for(const list of Object.values(require('os').networkInterfaces()))for(const n of list||[])if(n.family==='IPv4'&&!n.internal&&!n.address.startsWith('198.18.'))console.log(`内网访问：http://${n.address}:${port}`);if(!get('totp'))console.log('请在本机 localhost 管理后台绑定 Google Authenticator。')});

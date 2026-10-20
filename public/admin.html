@@ -1,0 +1,15 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>管理后台 · 大声说话</title><link rel="stylesheet" href="/style.css"><header><h1>大声说话 · 管理后台</h1><a href="/">进入聊天室</a></header><main><div id="login" class="card">
+<h2 id="title">Google Authenticator 登录</h2><p id="hint">输入手机验证器中的 6 位动态验证码。</p>
+<form id="auth"><input id="password" type="password" maxlength="128" placeholder="原管理员密码" autocomplete="current-password" hidden>
+<input id="code" type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" placeholder="6 位动态验证码" autocomplete="one-time-code" aria-label="动态验证码"><button id="auth-submit">登录</button></form>
+<button id="begin-enroll" type="button" hidden>绑定 Google Authenticator</button>
+<button id="recover-toggle" type="button" hidden>使用一次性恢复码</button>
+<form id="recover-form" hidden><input id="recovery-code" autocomplete="off" placeholder="一次性恢复码" aria-label="恢复码"><button>使用恢复码登录</button></form></div>
+<section id="enrollment" class="card" hidden><h2>绑定 Google Authenticator</h2>
+<p>手机打开 Google Authenticator，点击“＋”→“扫描二维码”。二维码与密钥仅在本机显示，请勿转发。</p>
+<img id="totp-qr" width="240" height="240" alt="验证器绑定二维码">
+<details><summary>无法扫码？查看手动输入密钥</summary><code id="totp-secret"></code><p>账号：Loud Speak 管理员；基于时间，6 位，每 30 秒更新。</p></details>
+<form id="confirm-enroll"><input id="enroll-code" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" autocomplete="one-time-code" placeholder="输入手机上的 6 位验证码" required aria-label="绑定验证码"><button>确认绑定</button></form>
+<p>10 分钟内有效。绑定确认成功后原密码登录停用。</p></section>
+<section id="recovery-box" class="card" hidden><h2>保存一次性恢复码</h2><p>仅显示这一次。请离线妥善保存，每条只能使用一次；手机丢失时可在本机后台登录并重新绑定。</p>
+<pre id="recovery-list"></pre><button id="recovery-saved">我已保存，进入后台</button></section><p id="error" role="status"></p><div id="dashboard" hidden><section class="card"><h2>聊天室开关</h2><p id="chat-state" role="status">正在读取状态…</p><button id="toggle-chat" type="button" disabled>读取中</button><p class="notice">关闭后所有用户暂停查看和发送消息、上传下载附件；后台管理不受影响。状态在重启后保留，重新开启恢复聊天。</p><h2>记录保留设置</h2><label>用户可见（小时）<input id="visible" type="number" min="1"></label><label>服务器保存（小时，0为永久）<input id="retention" type="number" min="0"></label><button id="save">保存设置</button><p id="stats"></p><div class="card"><button id="clear-visible" type="button">一键清空前端记录</button><p class="notice">让当前全部聊天记录立即对普通用户过期，在线页面同步清空；后台保存记录和附件不删除，新消息正常显示。</p></div><button id="rebind">重新绑定验证器（限本机）</button> <button id="logout">退出登录</button></section><section class="card"><h2>全部已保存记录</h2><div class="toolbar"><input id="query" placeholder="昵称或消息正文"><label>起始<input id="from" type="datetime-local"></label><label>结束<input id="to" type="datetime-local"></label><button id="search">查询</button></div><div id="records"></div><div class="toolbar"><button id="prev">上一页</button><span id="page"></span><button id="next">下一页</button></div></section></div></main><script src="/message-text.js"></script><script src="/admin.js"></script><script src="/admin-auth.js"></script></html>
