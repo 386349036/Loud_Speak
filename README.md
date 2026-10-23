@@ -111,7 +111,7 @@ WASD 移动，鼠标左键开火、右键瞄准，R 换弹，Shift 冲刺，Spac
 
 ## Sinharaja · 森林探险（本地部署）
 
-首页左下角的森林图标在新标签页打开 `/games/sinharaja/`。游戏代码及菜单图片由 Loud 本地静态服务提供，无需 Django、额外端口或 CDN。默认中文，菜单中的 🌐 按钮循环切换中文、英文与僧伽罗语，并保存本机偏好。中文覆盖章节介绍、主要状态栏、暂停菜单、键鼠说明及第一章主要对话和交互；部分图鉴、背包详情与后续章节原文仍保留。使用 WASD 移动、鼠标控制视角、E 交互、Escape 暂停，也提供屏幕触控控件。
+首页左下角的森林图标在新标签页打开 `/games/sinharaja/`。游戏代码及菜单图片由 Loud 本地静态服务提供，无需 Django、额外端口或 CDN。默认中文，菜单中的 🌐 按钮循环切换中文、英文与僧伽罗语，并保存本机偏好。中文覆盖已有源码中的章节介绍、状态栏、暂停菜单、键鼠说明、任务、证据板、背包、成就、图鉴和对话/录音文字稿，保留技术缩写与语言名称。使用 WASD 移动、鼠标控制视角、E 交互、P 拍照、C 蹲伏、M 地图、I 背包、Escape 暂停/关闭面板；也提供屏幕触控控件及窄屏排版。翻译覆盖不代表已验收全部章节通关。
 
 `npm run build:sinharaja` 重新构建，`npm run test:sinharaja` 检查图标渲染、触屏适配、资源和本机服务。源码归属及本地改动见 [integrations/sinharaja/UPSTREAM.md](integrations/sinharaja/UPSTREAM.md)，验证范围见 [SINHARAJA_DEPLOYMENT.md](SINHARAJA_DEPLOYMENT.md)。
 

@@ -569,7 +569,7 @@ const DIAL_3_OPTIONS = ["[I] ELEPHANT (හස්තියා)", "[II] LION (ස�
 const SAVE_KEY = "sinharaja_save_v2";
 
 export default function App() {
-  const [lang,setLang]=useState(()=>readLanguage(typeof localStorage==='undefined'?null:localStorage));
+  const [lang,setLang]=useState(()=>readLanguage());
   useEffect(()=>{document.documentElement.lang=lang==='zh'?'zh-CN':lang;document.title=lang==='zh'?'辛哈拉贾雨林探险 · Loud':'Sinharaja Expedition · Loud';},[lang]);
   return <LanguageContext.Provider value={{lang,setLang}}><GameApp /></LanguageContext.Provider>;
 }
@@ -1132,6 +1132,21 @@ function GameApp() {
     };
   }, [currentView]);
 
+  // The engine ignores gameplay keys while paused. Escape must still close overlays/resume.
+  useEffect(()=>{
+    const escapeOverlay=e=>{
+      if(currentView!=='playing'||e.repeat)return;
+      if(e.target?.isContentEditable||['INPUT','TEXTAREA'].includes(e.target?.tagName))return;
+      if((e.code==='Space'||e.key===' ')&&(photoModal||dialogue)){e.preventDefault();if(photoModal)setPhotoModal(null);else setDialogue(null);return;}
+      if(e.key!=='Escape')return;
+      const panels=[[photoModal,setPhotoModal,null],[inspectDouglasTapeOpen,setInspectDouglasTapeOpen,false],[inspectTapeOpen,setInspectTapeOpen,false],[inspectDiaryOpen,setInspectDiaryOpen,false],[runePuzzleOpen,setRunePuzzleOpen,false],[showControlsGuide,setShowControlsGuide,false],[showTrophies,setShowTrophies,false],[showJournal,setShowJournal,false],[showEvidenceBoard,setShowEvidenceBoard,false],[showInventory,setShowInventory,false],[showTacticalMap,setShowTacticalMap,false],[dialogue,setDialogue,null]];
+      const panel=panels.find(([open])=>open);
+      if(panel){e.preventDefault();panel[1](panel[2]);}else if(isPaused){e.preventDefault();setIsPaused(false);}
+    };
+    window.addEventListener('keydown',escapeOverlay);
+    return()=>window.removeEventListener('keydown',escapeOverlay);
+  },[currentView,isPaused,dialogue,photoModal,inspectDouglasTapeOpen,inspectTapeOpen,inspectDiaryOpen,runePuzzleOpen,showControlsGuide,showTrophies,showJournal,showEvidenceBoard,showInventory,showTacticalMap]);
+
   // Synchronize audio mute state smoothly without restarting engine
   useEffect(() => {
     if (engineRef.current) {
@@ -1588,7 +1603,7 @@ function GameApp() {
               onClick={toggleLanguage}
               title="භාෂාව මාරු කරන්න / Switch Language"
             >
-              🌐 {lang !== "si" ? "EN ⟷ සිංහල" : "සිංහල ⟷ EN"}
+              🌐 中文 / English / සිංහල
             </button>
             <button
               className="action-pill fullscreen-pill"
@@ -2006,7 +2021,7 @@ function GameApp() {
                     <div className="empty-gallery-box">
                       <span className="empty-cam-icon"><Icons.Camera className="tactical-svg-icon" /></span>
                       <p>තවමත් කිසිදු ඡායාරූපයක් ගෙන නොමැත.</p>
-                      <small>කැලයේ සතුන් (කැහිබෙල්ලා, වඳුරන්, පොළඟා, කලාමැදිරියන්) අසලදී <strong>[C]</strong> ඔබා ඡායාරූප ගන්න!</small>
+                      <small>කැලයේ සතුන් (කැහිබෙල්ලා, වඳුරන්, පොළඟා, කලාමැදිරියන්) අසලදී <strong>[P]</strong> ඔබා ඡායාරූප ගන්න!</small>
                     </div>
                   ) : (
                     capturedPhotos.map((photo) => (
@@ -2016,7 +2031,7 @@ function GameApp() {
                           <span className="polaroid-badge">FIELD PHOTO</span>
                         </div>
                         <div className="polaroid-item-info">
-                          <h4>{photo.name}</h4>
+                          <h4>{photo.name || photo.title}</h4>
                           <p>{photo.desc}</p>
                         </div>
                       </div>
@@ -2172,7 +2187,7 @@ function GameApp() {
               onClick={toggleLanguage}
               style={{ padding: "4px 10px", fontSize: "0.75rem" }}
             >
-              🌐 {lang !== "si" ? "EN ⟷ සිංහල" : "සිංහල ⟷ EN"}
+              🌐 中文 / English / සිංහල
             </button>
           </div>
           <h1 className="game-over-title">{title}</h1>
@@ -2513,7 +2528,7 @@ function GameApp() {
               <button
                 className="tactical-cam-btn"
                 onClick={() => handleVirtualAction("camera")}
-                title="කැමරාවෙන් ඡායාරූපයක් ගන්න [C]"
+                title="කැමරාවෙන් ඡායාරූපයක් ගන්න [P]"
               >
                 <Icons.Camera className="tactical-svg-icon" /> SNAP
               </button>
@@ -2527,7 +2542,7 @@ function GameApp() {
               <button
                 className={`tactical-hud-btn ${isImmersiveHud ? "hud-hidden" : ""}`}
                 onClick={() => handleVirtualAction("hud")}
-                title="HUD දර්ශනය පාලනය කරන්න [V]"
+                title="Show or hide interface"
               >
                 <Icons.Eye className="tactical-svg-icon" /> HUD
               </button>
@@ -2724,8 +2739,7 @@ function GameApp() {
             <button className="tip-close-btn" onClick={() => setShowOnboardingTip(false)}>✕</button>
           </div>
           <p>
-            <strong>WASD / ඊතල</strong> හෝ තිරය මත <strong>ක්ලික් කර</strong> ඇවිදින්න. <br />
-            ගිනිමැලය අසල <strong>[T]</strong> ඔබා ඔසුපැන් පෙරන්න | <strong>[Z]</strong> ඔබා Zoom කරන්න | මඟ පෙන්වුම් පුවරු අනුගමනය කරන්න!
+            {lang === 'zh' ? <><strong>WASD / 方向键</strong> 移动；点击画面后用鼠标转动视角。<br />按 <strong>[E]</strong> 交互，<strong>[L]</strong> 冲泡草药茶，<strong>[Z]</strong> 缩放。手机可拖动左侧摇杆移动，在画面上滑动转向。</> : <><strong>WASD / ඊතල</strong> හෝ තිරය මත <strong>ක්ලික් කර</strong> ඇවිදින්න. <br />ගිනිමැලය අසල <strong>[L]</strong> ඔබා ඔසුපැන් පෙරන්න | <strong>[Z]</strong> ඔබා Zoom කරන්න | මඟ පෙන්වුම් පුවරු අනුගමනය කරන්න!</>}
           </p>
         </div>
       )}
@@ -2777,9 +2791,9 @@ function GameApp() {
         <button
           className="hypothermia-alert-badge"
           onClick={() => handleVirtualAction("gingertea")}
-          title="ඉඟුරු තේ පානය කර ශරීරය උණුසුම් කරගන්න [G]"
+          title="ඉඟුරු තේ පානය කර ශරීරය උණුසුම් කරගන්න [J]"
         >
-          <Icons.Snowflake className="tactical-svg-icon" /> දැඩි ශීතල අනතුර (Hypothermia)! [G] ඔබා ඉඟුරු තේ පානය කරන්න හෝ උණුදිය උල්පතට යන්න!
+          <Icons.Snowflake className="tactical-svg-icon" /> දැඩි ශීතල අනතුර (Hypothermia)! [J] ඔබා ඉඟුරු තේ පානය කරන්න හෝ උණුදිය උල්පතට යන්න!
         </button>
       )}
 
@@ -2795,7 +2809,7 @@ function GameApp() {
               onClick={() => handleVirtualAction("tea")}
               title="ඖෂධ 1ක් වැය කර ඔසුපැන් පෙරන්න"
             >
-              <Icons.Tea className="tactical-svg-icon" /> ඔසුපැන් පෙරන්න [T] (+25 HP, +35 SAN, 60s Buff)
+              <Icons.Tea className="tactical-svg-icon" /> ඔසුපැන් පෙරන්න [L] (+25 HP, +35 SAN, 60s Buff)
             </button>
           )}
         </div>
@@ -3026,19 +3040,23 @@ function GameApp() {
             <div className="guide-grid">
               <div className="guide-row"><span className="kbd">W A S D / ඊතල</span><span>ඇවිදීම (Move Explorer)</span></div>
               <div className="guide-row"><span className="kbd">SHIFT</span><span>වේගයෙන් දිවීම (Sprint)</span></div>
-              <div className="guide-row"><span className="kbd">1 / SPACE</span><span>කූඩැල්ලන්ට ලුණු දැමීම (Throw Salt)</span></div>
+              <div className="guide-row"><span className="kbd">SPACE</span><span>Jump / remove attached leeches</span></div>
+              <div className="guide-row"><span className="kbd">C</span><span>Crouch / stand</span></div>
+              <div className="guide-row"><span className="kbd">1</span><span>කූඩැල්ලන්ට ලුණු දැමීම (Throw Salt)</span></div>
               <div className="guide-row"><span className="kbd">2 / H</span><span>ඖෂධ භාවිතය / විෂ නාශනය (Heal & Antivenom)</span></div>
               <div className="guide-row"><span className="kbd">R</span><span>හෑන්ඩ්-ක්‍රෑන්ක් ඩයිනමෝවෙන් ආරෝපණය (Crank Dynamo +14% Battery)</span></div>
               <div className="guide-row"><span className="kbd">B</span><span>කූඩැලි ආලේපනය (Leech Balm 90s Buff)</span></div>
-              <div className="guide-row"><span className="kbd">T</span><span>ගිනිමැලය අසල ඔසුපැන් පෙරීම (Brew Tea)</span></div>
-              <div className="guide-row"><span className="kbd">G</span><span>ඉඟුරු තේ පානය (Ginger Tea / Warmth +40%)</span></div>
-              <div className="guide-row"><span className="kbd">C</span><span>ක්ෂේත්‍ර කැමරාව (Wildlife Camera Snapshot)</span></div>
+              <div className="guide-row"><span className="kbd">L</span><span>ගිනිමැලය අසල ඔසුපැන් පෙරීම (Brew Tea)</span></div>
+              <div className="guide-row"><span className="kbd">J</span><span>ඉඟුරු තේ පානය (Ginger Tea / Warmth +40%)</span></div>
+              <div className="guide-row"><span className="kbd">P</span><span>ක්ෂේත්‍ර කැමරාව (Wildlife Camera Snapshot)</span></div>
+              <div className="guide-row"><span className="kbd">T</span><span>Cycle flashlight intensity</span></div>
               <div className="guide-row"><span className="kbd">U</span><span>පාරජම්බුල කිරණ (UV Blacklight Mode)</span></div>
               <div className="guide-row"><span className="kbd">Z</span><span>දුරදක්න කැමරාව (Binoculars Zoom)</span></div>
               <div className="guide-row"><span className="kbd">3 / F</span><span>විදුලි පන්දම (Flashlight On/Off)</span></div>
               <div className="guide-row"><span className="kbd">4 / E</span><span>පරීක්ෂාව / ඇරීම (Interact)</span></div>
               <div className="guide-row"><span className="kbd">M</span><span>සිතියම (Tactical Map)</span></div>
               <div className="guide-row"><span className="kbd">I</span><span>බඩු මල්ල (Inventory Backpack)</span></div>
+              <div className="guide-row"><span className="kbd">V</span><span>Cycle camera view</span></div>
               <div className="guide-row"><span className="kbd">ESC</span><span>Pause Menu</span></div>
             </div>
           </div>
@@ -3094,7 +3112,7 @@ function GameApp() {
           onClick={() => handleVirtualAction("tea")}
           title="ගිනිමැලය අසල ඔසුපැන් පෙරන්න"
         >
-          <span className="belt-hotkey">[T]</span>
+          <span className="belt-hotkey">[L]</span>
           <span className="belt-icon"><Icons.Tea className="tactical-svg-icon" /></span>
           <span className="belt-tag">{I18N[lang].tea}</span>
         </div>
@@ -3103,9 +3121,9 @@ function GameApp() {
           <div
             className={`belt-slot ${(stats.gingerTeaCount || 0) > 0 ? "" : "slot-empty"} ${(stats.temperature ?? 100) < 40 ? "highlight-cold" : ""}`}
             onClick={() => handleVirtualAction("gingertea")}
-            title="ඉඟුරු තේ පානය කර ශරීරය උණුසුම් කරන්න [G]"
+            title="ඉඟුරු තේ පානය කර ශරීරය උණුසුම් කරන්න [J]"
           >
-            <span className="belt-hotkey">[G]</span>
+            <span className="belt-hotkey">[J]</span>
             <span className="belt-icon"><Icons.GingerTea className="tactical-svg-icon" /></span>
             <span className="belt-tag">{I18N[lang].ginger_tea} ({stats.gingerTeaCount || 0})</span>
           </div>
@@ -3114,9 +3132,9 @@ function GameApp() {
         <div
           className="belt-slot"
           onClick={() => handleVirtualAction("camera")}
-          title="ක්ෂේත්‍ර කැමරාවෙන් ඡායාරූපයක් ගන්න [C]"
+          title="ක්ෂේත්‍ර කැමරාවෙන් ඡායාරූපයක් ගන්න [P]"
         >
-          <span className="belt-hotkey">[C]</span>
+          <span className="belt-hotkey">[P]</span>
           <span className="belt-icon"><Icons.Camera className="tactical-svg-icon" /></span>
           <span className="belt-tag">{I18N[lang].camera} ({capturedPhotos.length})</span>
         </div>
@@ -3471,7 +3489,7 @@ function GameApp() {
                   <div className="empty-gallery-box">
                     <span className="empty-cam-icon"><Icons.Camera className="tactical-svg-icon" /></span>
                     <p>තවමත් කිසිදු ඡායාරූපයක් ගෙන නොමැත.</p>
-                    <small>කැලයේ සතුන් (කැහිබෙල්ලා, වඳුරන්, පොළඟා, කලාමැදිරියන්) අසලදී <strong>[C]</strong> ඔබා ඡායාරූප ගන්න!</small>
+                    <small>කැලයේ සතුන් (කැහිබෙල්ලා, වඳුරන්, පොළඟා, කලාමැදිරියන්) අසලදී <strong>[P]</strong> ඔබා ඡායාරූප ගන්න!</small>
                   </div>
                 ) : (
                   capturedPhotos.map((photo) => (
@@ -3481,7 +3499,7 @@ function GameApp() {
                         <span className="polaroid-badge">FIELD PHOTO</span>
                       </div>
                       <div className="polaroid-item-info">
-                        <h4>{photo.name}</h4>
+                        <h4>{photo.name || photo.title}</h4>
                         <p>{photo.desc}</p>
                       </div>
                     </div>
@@ -3778,7 +3796,7 @@ function GameApp() {
                     if (engineRef.current) engineRef.current.takePhoto();
                   }}
                 >
-                  SNAP [C]
+                  SNAP [P]
                 </button>
               </div>
 
@@ -4160,7 +4178,7 @@ function GameApp() {
               <span className="polaroid-stamp">SINHARAJA ARCHIVE // 1987</span>
             </div>
             <div className="polaroid-caption">
-              <h3>{photoModal.name}</h3>
+              <h3>{photoModal.name || photoModal.title}</h3>
               <p>{photoModal.desc}</p>
               <span className="polaroid-subject-tag">WILDLIFE RECORDED ✓</span>
             </div>
@@ -4281,6 +4299,9 @@ function GameApp() {
             onClick={() => handleVirtualAction("herb")}
           >
             [HEAL]
+          </button>
+          <button className="touch-action-btn" onClick={()=>handleVirtualAction('torch')}>
+            [TORCH]
           </button>
           <button
             className="touch-action-btn balm-touch"

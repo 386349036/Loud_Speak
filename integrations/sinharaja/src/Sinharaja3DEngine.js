@@ -2211,12 +2211,15 @@ export class Sinharaja3DEngine {
   }
 
   _onKeyDown(e) {
-    // If a modal or paused, do not capture movement inputs
-    if (this.paused) return;
-
     // Filter out if user is typing in an input or textarea
     const tag = (e.target && e.target.tagName) ? e.target.tagName.toLowerCase() : "";
-    if (tag === "input" || tag === "textarea") return;
+    if (tag === "input" || tag === "textarea" || e.target?.isContentEditable) return;
+    const key=e.key.toLowerCase();
+    const panel={m:'onToggleMap',i:'onToggleInventory','5':'onToggleEvidence'}[key];
+    if(panel){if(!e.repeat&&this.cb[panel]){e.preventDefault();this.cb[panel]();}return;}
+    // Movement/items stay frozen while panels are open; panel keys can close their own panel.
+    if (this.paused) return;
+    if(e.repeat&&['c','p','j','h','1','2','3','4','b','r','u','z','o','l','v','escape'].includes(key))return;
 
     // Start continuous procedural ambience on first player interaction
     if (!this.ambientStarted) {
@@ -2268,6 +2271,8 @@ export class Sinharaja3DEngine {
     if (e.key.toLowerCase() === "j") {
       this.drinkGingerTea();
     }
+    if(key==='l')this.brewHerbalTea();
+    if(key==='v')this.toggleViewMode();
 
     // H -> Heal Herb
     if (e.key.toLowerCase() === "h") {
