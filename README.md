@@ -88,3 +88,9 @@ npm ci --cache .npm-cache
 首页游戏区的蔬果砖块图标打开，或访问 `/breakout.html`。六关、三条命，支持加长挡板、减速和多球道具；鼠标、触屏拖动或方向键/A D 移动，点击/空格发球，P 暂停。最高分和声音偏好保存在本机。
 
 运行 `npm run test:breakout` 验证核心和输入控制；规则及验收边界见 [BREAKOUT_DESIGN.md](BREAKOUT_DESIGN.md)。
+
+## 云端巡航 · 飞机大战
+
+首页游戏区的飞机大战图标打开，或访问 `/airwar.html`。三关、八类敌机及三种两阶段 Boss，自动射击，支持护甲、火力、维修、护盾与炸弹；方向键/WASD 移动，空格放炸弹，P 暂停，手机使用相对拖动。
+
+运行 `npm run test:airwar` 验证逻辑与正常输入三关模拟通关；素材处理和验证工具为 `prepare-airwar-assets.cjs`、`validate-airwar-assets.cjs`。详见 [AIRWAR_DESIGN.md](AIRWAR_DESIGN.md)。

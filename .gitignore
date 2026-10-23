@@ -13,3 +13,4 @@ test-data/
 .env
 .env.*
 !.env.example
+/deploy-airwar.cjs
