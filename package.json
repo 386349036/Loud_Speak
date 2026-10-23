@@ -9,7 +9,8 @@
     "test:tank": "node test-tank.cjs",
     "test:runner": "node test-runner.cjs && node test-runner-art.cjs",
     "test:sky": "node test-sky.cjs && node test-sky-render.mjs",
-    "test:airwar": "node test-airwar.cjs && node test-airwar-expansion.cjs && node test-airwar-playthrough.cjs"
+    "test:airwar": "node test-airwar.cjs && node test-airwar-expansion.cjs && node test-airwar-playthrough.cjs",
+    "deploy:two-games": "npm run build --prefix integrations/dungeon-crawler-now && node integrations/deploy-two-games.cjs"
   },
   "keywords": [],
   "author": "",
