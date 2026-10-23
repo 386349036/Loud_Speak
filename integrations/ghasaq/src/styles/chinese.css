@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Noto Sans SC Local';
+  src: url('/fonts/NotoSansSC-Variable.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+}
+:root {
+  --f-display: 'Noto Sans SC Local', 'Microsoft YaHei', sans-serif;
+  --f-num: 'Noto Sans SC Local', 'Microsoft YaHei', sans-serif;
+  --f-body: 'Noto Sans SC Local', 'Microsoft YaHei', sans-serif;
+}
+html { direction: ltr; }
+button, input, select { font-family: inherit; }
+.logo { letter-spacing: .08em; }
+.main-col .logo { font-size: clamp(42px, 4.3vw, 70px); white-space: nowrap; }
+#splash .logo { font-size: clamp(48px, 10vw, 130px); }
+.hint, .menu-desc, .set-info p, .guide p { line-height: 1.8; overflow-wrap: anywhere; }

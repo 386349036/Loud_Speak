@@ -4,13 +4,17 @@
   "main": "server.cjs",
   "scripts": {
     "start": "node server.cjs",
+    "deploy:two-games": "npm run build --prefix integrations/dungeon-crawler-now && node integrations/deploy-two-games.cjs",
     "test": "node test.cjs",
     "test:breakout": "node --test test-breakout.cjs test-breakout-ui.cjs",
+    "build:sinharaja": "npm run build --prefix integrations/sinharaja",
+    "test:sinharaja": "node integrations/sinharaja/test-zh.cjs && node integrations/sinharaja/test.cjs",
+    "deploy:smallscope": "node integrations/smallscope/deploy.cjs",
+    "test:smallscope": "node test-smallscope-relay.cjs && node integrations/smallscope/test.cjs",
     "test:tank": "node test-tank.cjs",
     "test:runner": "node test-runner.cjs && node test-runner-art.cjs",
     "test:sky": "node test-sky.cjs && node test-sky-render.mjs",
-    "test:airwar": "node test-airwar.cjs && node test-airwar-expansion.cjs && node test-airwar-playthrough.cjs",
-    "deploy:two-games": "npm run build --prefix integrations/dungeon-crawler-now && node integrations/deploy-two-games.cjs"
+    "test:airwar": "node test-airwar.cjs && node test-airwar-expansion.cjs && node test-airwar-playthrough.cjs"
   },
   "keywords": [],
   "author": "",
@@ -25,7 +29,8 @@
     "qrcode": "^1.5.4",
     "sharp": "^0.35.5",
     "socket.io": "^4.8.4",
-    "three": "^0.186.1"
+    "three": "^0.186.1",
+    "ws": "8.21.3"
   },
   "devDependencies": {
     "socket.io-client": "^4.8.4"

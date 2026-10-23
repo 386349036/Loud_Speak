@@ -1,0 +1,19 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),esbuild=require('esbuild'),React=require('react'),{renderToStaticMarkup}=require('react-dom/server');
+const app=fs.readFileSync(path.join(__dirname,'src/App.js'),'utf8');
+function load(code){const module={exports:{}};new Function('require','module','exports',esbuild.transformSync(code,{loader:'jsx',format:'cjs',target:'es2020'}).code)(require,module,module.exports);return module.exports}
+// The upstream pause menu referenced a missing Compass component. Check every literal icon usage.
+const icons=load("import React from 'react';\n"+app.slice(app.indexOf('export const Icons ='),app.indexOf('// ── Master Achievements'))).Icons;
+const used=new Set([...app.matchAll(/<Icons\.(\w+)/g)].map(m=>m[1]));
+for(const name of used){assert.equal(typeof icons[name],'function',`Missing icon: ${name}`);assert.match(renderToStaticMarkup(React.createElement(icons[name])),/<svg/)}
+console.log(`PASS: ${used.size} UI icons render, including the pause menu`);
+const {Sinharaja3DEngine}=load(fs.readFileSync(path.join(__dirname,'src/Sinharaja3DEngine.js'),'utf8'));
+const engine=Object.create(Sinharaja3DEngine.prototype);engine.setAnalogMove(2,-2,true);assert.deepEqual(engine.analogMove,{x:1,y:-1,active:true});engine.setAnalogMove(NaN,Infinity,false);assert.deepEqual(engine.analogMove,{x:0,y:0,active:false});
+const handlers=new Map(),oldWindow=global.window,oldDocument=global.document;global.window={addEventListener(){}};global.document={addEventListener(){}};
+try{engine.canvas={style:{},setPointerCapture(){},addEventListener:(n,f)=>handlers.set(n,f)};engine.player={targetYaw:0,targetPitch:0};engine.paused=false;engine.setupInputs();handlers.get('pointerdown')({pointerType:'touch',pointerId:1,clientX:20,clientY:20});handlers.get('pointermove')({pointerId:1,clientX:120,clientY:30});assert.ok(engine.player.targetYaw<0);assert.ok(engine.player.targetPitch<0);const yaw=engine.player.targetYaw;engine.paused=true;handlers.get('pointermove')({pointerId:1,clientX:220,clientY:30});assert.equal(engine.player.targetYaw,yaw);handlers.get('pointercancel')({pointerId:1});assert.equal(engine.touchLook,null)}finally{global.window=oldWindow;global.document=oldDocument}
+console.log('PASS: analog movement, touch camera, cancel and pause input guards');
+const output=path.resolve(__dirname,'../../public/games/sinharaja'),html=fs.readFileSync(path.join(output,'index.html'),'utf8'),css=fs.readFileSync(path.join(output,'game.css'),'utf8');
+assert.ok(fs.statSync(path.join(output,'game.js')).size>100000);assert.match(html,/Content-Security-Policy/);assert.doesNotMatch(app,/https?:\/\//);assert.doesNotMatch(css,/@import|https?:\/\//);
+for(const name of ['chapter-1','chapter-2','chapter-3','chapter-4','chapter-5','paper']){const image=fs.readFileSync(path.join(output,'images',name+'.jpg'));assert.equal(image[0],255);assert.equal(image[1],216);assert.ok(image.length>1000)}
+for(const match of css.matchAll(/url\(["']?(\/games\/sinharaja\/[^)"']+)/g))assert.ok(fs.existsSync(path.resolve(output,'..','..',match[1].slice(1))));
+assert.ok(fs.existsSync(path.join(output,'DEPENDENCY_LICENSES.txt')));console.log('PASS: offline bundle, six local images, stylesheet URLs and dependency notices');
+(async()=>{const base=process.env.SINHARAJA_TEST_URL||'http://127.0.0.1:3108';for(const item of ['/','/sinharaja-launcher.js','/assets/sinharaja-icon.svg','/games/sinharaja/','/games/sinharaja/game.js','/games/sinharaja/game.css',...['chapter-1','chapter-2','chapter-3','chapter-4','chapter-5','paper'].map(n=>'/games/sinharaja/images/'+n+'.jpg')]){const response=await fetch(base+item);assert.equal(response.status,200,item);assert.ok((await response.arrayBuffer()).byteLength>0)}console.log('PASS: live Loud homepage, launcher, game and all six images return HTTP 200')})().catch(e=>{console.error(e);process.exitCode=1});

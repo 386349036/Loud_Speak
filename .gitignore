@@ -14,3 +14,17 @@ test-data/
 .env.*
 !.env.example
 /deploy-airwar.cjs
+/.tmp-sinharaja-source/
+/.tmp-sinharaja.zip
+/.tmp-smallscope-source/
+/.tmp-smallscope.zip
+/.tmp-smallscope-tree.json
+/.tmp-smallscope-index.html
+/.tmp-smallscope-net.js
+/public/games/smallscope/
+/.tmp-*/
+/.tmp-*.zip
+/vendor-src/ghasaq/dist/
+/vendor-src/ghasaq/dist-single/
+/vendor-src/ghasaq/.git/
+/vendor-src/

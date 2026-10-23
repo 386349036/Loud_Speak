@@ -79,6 +79,20 @@ npm ci --cache .npm-cache
 
 `npm run test:sky` 验证空战逻辑；规则、参考来源及验证边界见 [SKY_DESIGN.md](SKY_DESIGN.md)。
 
+## 地下室的束缚 · 本地肉鸽地牢
+
+首页左下角的地牢图标在新标签页打开 `/games/roguelike/`。游戏由现有 Loud 服务托管，不需要额外端口、编译或联网加载资源，局域网用户可以各自游玩单人游戏。WASD 移动、方向键射击、P 暂停、I 背包、B 图鉴；手机支持触控。
+
+游戏来源：[whitemf3/roguelike-webgame](https://github.com/whitemf3/roguelike-webgame)。首页、CSS 和 JavaScript 保存在 `public/games/roguelike/`，保留上游 README。网页版支持鼠标左键朝点击位置开火，按住时持续朝当前光标位置连续射击，松手停止；保留原有射速限制。鼠标开火时优先于方向键。键盘增加八方向射击：同时按住两个相邻方向键可斜射，松开其中一个恢复单方向；同轴反向键以最后按下的键为准。普通眼泪和蓄力激光均支持斜射，弹速不变，手机版采用双摇杆：左侧移动，右侧拖动瞄准并连续射击，支持 360° 任意角度；中心死区不射击，松手、触控取消或切到后台停止射击。同组奖励只能选择一个，普通、诅咒或付费赌博选择后其余奖励立即消失，赌博失败也视为已作出选择；金币或生命不足时不会锁定选择。运行 `node --test test-roguelike-input.cjs test-roguelike-rewards.cjs` 验证输入、弹道和奖励互斥。已检查本地资源 HTTP 访问及 JavaScript 语法；尚未完成浏览器视觉和完整通关验收。
+
+## Ghasaq · 黄昏守城中文版
+
+首页左下角的夕阳堡垒图标在新标签页打开 `/games/ghasaq/`。游戏和中文字体都由 Loud 本地提供，无需独立服务端或额外端口。菜单、设置、装备、地图、任务、战斗提示、无线电及结算已翻译为简体中文；不包含中文配音，原作音效仍为程序合成。
+
+WASD 移动，鼠标左键开火、右键瞄准，R 换弹，Shift 冲刺，Space 跳跃，G 手榴弹，Q 专注，F 手电，3–6 呼叫支援，P/Esc 暂停。手机横屏使用触控界面。进度保存在各自浏览器内，为单人游戏。
+
+来源为 [aymansalkhatib/ghasaq](https://github.com/aymansalkhatib/ghasaq)，保留 MIT 许可。构建源码与翻译映射位于 `integrations/ghasaq/`，发布文件位于 `public/games/ghasaq/`；本地字体为 Noto Sans SC，保留 SIL OFL 许可。详细修改、构建和验证边界见 [GHASAQ_DEPLOYMENT.md](GHASAQ_DEPLOYMENT.md)。刷新主页即可看到入口。
+
 ## Kiomet · 在线即时战略
 
 首页左下角游戏区的塔楼图标在新标签页打开 [Kiomet 官方游戏](https://kiomet.com/)，需要互联网连接。当前为官方在线版入口，未在本机部署游戏服务端；源码见 [SoftbearStudios/kiomet](https://github.com/SoftbearStudios/kiomet)。刷新主页即可显示。
@@ -94,3 +108,15 @@ npm ci --cache .npm-cache
 首页游戏区的飞机大战图标打开，或访问 `/airwar.html`。三关、八类敌机及三种两阶段 Boss，自动射击，支持护甲、火力、维修、护盾与炸弹；方向键/WASD 移动，空格放炸弹，P 暂停，手机使用相对拖动。
 
 运行 `npm run test:airwar` 验证逻辑与正常输入三关模拟通关；素材处理和验证工具为 `prepare-airwar-assets.cjs`、`validate-airwar-assets.cjs`。详见 [AIRWAR_DESIGN.md](AIRWAR_DESIGN.md)。
+
+## Sinharaja · 森林探险（本地部署）
+
+首页左下角的森林图标在新标签页打开 `/games/sinharaja/`。游戏代码及菜单图片由 Loud 本地静态服务提供，无需 Django、额外端口或 CDN。默认中文，菜单中的 🌐 按钮循环切换中文、英文与僧伽罗语，并保存本机偏好。中文覆盖章节介绍、主要状态栏、暂停菜单、键鼠说明及第一章主要对话和交互；部分图鉴、背包详情与后续章节原文仍保留。使用 WASD 移动、鼠标控制视角、E 交互、Escape 暂停，也提供屏幕触控控件。
+
+`npm run build:sinharaja` 重新构建，`npm run test:sinharaja` 检查图标渲染、触屏适配、资源和本机服务。源码归属及本地改动见 [integrations/sinharaja/UPSTREAM.md](integrations/sinharaja/UPSTREAM.md)，验证范围见 [SINHARAJA_DEPLOYMENT.md](SINHARAJA_DEPLOYMENT.md)。
+
+## SmallScope / Softfall（中文局域网多人练习与 AI 对战）
+
+左下角蓝色图标在新标签页打开 `/games/smallscope/`。默认中文菜单、设置、装备名称及练习工具，可切换英文。同一局域网通过 `http://192.168.5.8:3210/games/smallscope/` 访问；房主选择「练习场」，点击顶部「复制邀请」，其他玩家打开邀请并准备，房主开始后共同进入地图。练习工具可升级，移动和等级同步。中继使用 Loud 的同一端口，聊天连接继续可用；房主需保持页面开启。使用 WASD 移动、Escape 打开设置。练习模式直达 `/games/smallscope/?practice=1`。
+
+`npm run deploy:smallscope` 部署，`npm run test:smallscope` 验证。来源、固定版本、素材授权范围与验收记录见 [SMALLSCOPE_DEPLOYMENT.md](SMALLSCOPE_DEPLOYMENT.md)。

@@ -1,0 +1,392 @@
+/* ==========================================================================
+   bestiary.css — 怪物图鉴样式
+   ========================================================================== */
+
+#bestiary {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 1000;
+  display: none;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+#bestiary.active {
+  display: flex;
+}
+
+/* 左侧怪物列表 */
+.beast-list {
+  width: 280px;
+  height: 100%;
+  background: linear-gradient(180deg, #1a1410 0%, #0d0a08 100%);
+  border-right: 2px solid #3a2c1a;
+  display: flex;
+  flex-direction: column;
+}
+
+.beast-header {
+  padding: 20px;
+  border-bottom: 2px solid #3a2c1a;
+}
+
+.beast-header h2 {
+  color: #f4e7c6;
+  font-size: 24px;
+  margin: 0 0 10px 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.beast-tabs {
+  display: flex;
+  gap: 8px;
+}
+
+.beast-tab {
+  flex: 1;
+  padding: 8px 12px;
+  background: rgba(42, 32, 20, 0.6);
+  border: 1px solid #4a3a28;
+  color: #a08060;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.beast-tab:hover {
+  background: rgba(62, 48, 32, 0.8);
+  color: #c9a878;
+}
+
+.beast-tab.active {
+  background: rgba(82, 62, 42, 0.9);
+  border-color: #c9a878;
+  color: #f4e7c6;
+}
+
+/* 搜索框 */
+.beast-search {
+  padding: 10px 20px;
+  border-bottom: 1px solid #2a2010;
+}
+
+.beast-search input {
+  width: 100%;
+  padding: 8px 12px;
+  background: rgba(20, 16, 12, 0.8);
+  border: 1px solid #4a3a28;
+  color: #f4e7c6;
+  font-size: 14px;
+}
+
+.beast-search input::placeholder {
+  color: #6a5a48;
+}
+
+/* 滚动列表 */
+.beast-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.beast-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.beast-scroll::-webkit-scrollbar-track {
+  background: rgba(20, 16, 12, 0.5);
+}
+
+.beast-scroll::-webkit-scrollbar-thumb {
+  background: #4a3a28;
+  border-radius: 4px;
+}
+
+/* 列表项 */
+.beast-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  margin-bottom: 6px;
+  background: rgba(30, 24, 18, 0.6);
+  border: 1px solid #3a2c1a;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.beast-item:hover {
+  background: rgba(50, 40, 28, 0.8);
+  border-color: #6a5a48;
+}
+
+.beast-item.active {
+  background: rgba(70, 56, 40, 0.9);
+  border-color: #c9a878;
+}
+
+.beast-icon-small {
+  width: 44px;
+  height: 44px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.beast-icon-small canvas {
+  transform: scale(0.5);
+}
+
+.beast-item-info {
+  flex: 1;
+}
+
+.beast-item-name {
+  color: #f4e7c6;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.beast-item-type {
+  color: #8a7a5a;
+  font-size: 12px;
+}
+
+/* Boss 标记 */
+.beast-item.boss .beast-item-name {
+  color: #ff6a5a;
+}
+
+/* 右侧详情面板 */
+.beast-detail {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #1a1410 0%, #0d0a08 100%);
+}
+
+.beast-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  border-bottom: 2px solid #3a2c1a;
+}
+
+.beast-detail-title {
+  color: #f4e7c6;
+  font-size: 32px;
+  margin: 0;
+}
+
+.beast-close {
+  width: 40px;
+  height: 40px;
+  background: rgba(60, 40, 30, 0.6);
+  border: 2px solid #6a5a48;
+  color: #c9a878;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.beast-close:hover {
+  background: rgba(100, 60, 40, 0.8);
+  border-color: #ff6a5a;
+  color: #ff6a5a;
+}
+
+/* 主内容区 */
+.beast-detail-content {
+  flex: 1;
+  display: flex;
+  padding: 30px;
+  gap: 30px;
+  overflow-y: auto;
+}
+
+/* 左侧：大图标 */
+.beast-preview {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.beast-icon-large {
+  width: 200px;
+  height: 200px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 3px solid #4a3a28;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+}
+
+.beast-icon-large.boss {
+  border-color: #8f1420;
+  box-shadow: 0 0 40px rgba(143, 20, 32, 0.4);
+}
+
+/* 属性条 */
+.beast-stats {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.beast-stat {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.beast-stat-label {
+  width: 80px;
+  color: #8a7a5a;
+  font-size: 13px;
+}
+
+.beast-stat-bar {
+  flex: 1;
+  height: 8px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #3a2c1a;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.beast-stat-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #6d9ec9 0%, #a8e0ff 100%);
+  transition: width 0.3s;
+}
+
+.beast-stat-fill.hp {
+  background: linear-gradient(90deg, #8f1420 0%, #ff6a5a 100%);
+}
+
+.beast-stat-fill.dmg {
+  background: linear-gradient(90deg, #c8a020 0%, #ffea50 100%);
+}
+
+.beast-stat-fill.speed {
+  background: linear-gradient(90deg, #2a8a4a 0%, #50ff80 100%);
+}
+
+.beast-stat-value {
+  width: 40px;
+  color: #f4e7c6;
+  font-size: 14px;
+  text-align: right;
+}
+
+/* 右侧：详细信息 */
+.beast-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.beast-section {
+  background: rgba(30, 24, 18, 0.5);
+  border: 1px solid #3a2c1a;
+  padding: 20px;
+}
+
+.beast-section h3 {
+  color: #c9a878;
+  font-size: 16px;
+  margin: 0 0 12px 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #3a2c1a;
+}
+
+.beast-section p {
+  color: #d0c0a0;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* 属性标签 */
+.beast-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.beast-tag {
+  padding: 4px 10px;
+  background: rgba(60, 48, 36, 0.6);
+  border: 1px solid #6a5a48;
+  color: #c9a878;
+  font-size: 12px;
+  border-radius: 12px;
+}
+
+.beast-tag.danger {
+  background: rgba(80, 30, 30, 0.6);
+  border-color: #8f1420;
+  color: #ff6a5a;
+}
+
+.beast-tag.flying {
+  background: rgba(30, 50, 80, 0.6);
+  border-color: #4a6a9a;
+  color: #8ac0ff;
+}
+
+/* 空状态 */
+.beast-empty {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #6a5a48;
+}
+
+.beast-empty-icon {
+  font-size: 80px;
+  margin-bottom: 20px;
+  opacity: 0.3;
+}
+
+.beast-empty-text {
+  font-size: 18px;
+}
+
+/* 按键提示 */
+.beast-keybind {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background: rgba(20, 16, 12, 0.9);
+  border: 1px solid #4a3a28;
+  color: #8a7a5a;
+  font-size: 13px;
+  border-radius: 8px;
+}
+
+.beast-keybind kbd {
+  padding: 2px 6px;
+  background: rgba(60, 48, 36, 0.8);
+  border: 1px solid #6a5a48;
+  border-radius: 3px;
+  color: #c9a878;
+}

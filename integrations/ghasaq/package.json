@@ -1,0 +1,43 @@
+{
+  "name": "ghasaq",
+  "private": true,
+  "version": "2.2.0",
+  "description": "Ghasaq: an Arabic-language, first-person survival shooter for the browser. Hold a desert fortress from 16:00 to midnight. Built with Three.js, cannon-es and Vite; every texture, model and sound is generated in code.",
+  "keywords": [
+    "game",
+    "fps",
+    "first-person-shooter",
+    "browser-game",
+    "threejs",
+    "webgl",
+    "cannon-es",
+    "vite",
+    "web-audio",
+    "procedural",
+    "arabic",
+    "rtl"
+  ],
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:mobile": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview --host",
+    "build:single": "node scripts/build-single.mjs",
+    "test": "vite build"
+  },
+  "dependencies": {
+    "cannon-es": "0.20.0",
+    "three": "0.170.0"
+  },
+  "devDependencies": {
+    "vite": "^6.0.7"
+  },
+  "license": "MIT",
+  "author": "Ayman Al-Khatib",
+  "homepage": "https://ghasaq-game.netlify.app/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aymansalkhatib/ghasaq.git"
+  }
+}

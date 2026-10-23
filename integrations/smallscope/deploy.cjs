@@ -1,0 +1,14 @@
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
+const root=path.resolve(__dirname,'../..'),source=path.join(root,'.tmp-smallscope-source/SmallScope-main'),output=path.join(root,'public/games/smallscope');
+const tree=JSON.parse(fs.readFileSync(path.join(root,'.tmp-smallscope-tree.json'),'utf8'));
+const selected=tree.tree.filter(f=>f.type==='blob'&&(f.path.startsWith('js/')||f.path.startsWith('audio/')||f.path.startsWith('bots/')||['index.html','favicon.ico','LICENSE'].includes(f.path)));
+for(const f of selected){const data=fs.readFileSync(path.join(source,f.path));const hash=crypto.createHash('sha1').update(`blob ${data.length}\0`).update(data).digest('hex');if(hash!==f.sha)throw Error('Upstream source incomplete: '+f.path)}
+for(const f of selected){const target=path.resolve(output,f.path);if(!target.startsWith(output+path.sep))throw Error('Invalid source path');fs.mkdirSync(path.dirname(target),{recursive:true});fs.copyFileSync(path.join(source,f.path),target)}
+let html=fs.readFileSync(path.join(output,'index.html'),'utf8');
+html=html.replace('<title>Softfall</title>','<title>SmallScope · 中文局域网版 · Loud Speak</title>').replace('<html lang="en">','<html lang="zh-CN">');
+html=html.replace('<body>','<body>\n<div class="loud-local-note"><a href="/">← Loud</a> · <span id="smallscope-status" role="status">局域网多人</span> · 房间 <code id="smallscope-room">—</code> <button id="smallscope-copy-invite" disabled>复制邀请</button> <button id="smallscope-language">English</button><input id="smallscope-invite" hidden readonly aria-label="局域网邀请链接"></div>');
+html=html.replace('</style>',`.loud-local-note{position:fixed;z-index:10;top:3px;left:50%;transform:translateX(-50%);padding:3px 8px;border-radius:5px;color:#dbe9f2;background:#0c1823ed;font:11px/1.5 system-ui,sans-serif;white-space:nowrap}.loud-local-note a{color:inherit}.loud-local-note button{font:inherit;cursor:pointer;background:#29495b;color:#eef4fa;border:1px solid #638e9e;border-radius:3px}.loud-local-note input{display:block;width:100%;box-sizing:border-box;font:11px system-ui}.loud-local-note input[hidden]{display:none}.loud-local-note:focus-within{outline:2px solid #e6ce89}\n</style>`);
+html=html.replace('<script defer src="js/app/boot.js"></script>','<script defer src="zh-cn.js"></script>\n<script defer src="loud-local.js"></script>\n<script defer src="js/app/boot.js"></script>');
+fs.writeFileSync(path.join(output,'index.html'),html);for(const name of ['loud-local.js','zh-cn.js'])fs.copyFileSync(path.join(__dirname,name),path.join(output,name));
+fs.writeFileSync(path.join(output,'LOCAL_SOURCE.json'),JSON.stringify({repository:'https://github.com/Aptyll/SmallScope',commit:tree.sha,mode:'lan-multiplayer',multiplayer:true,language:'zh-CN',files:selected.map(f=>({path:f.path,sha:f.sha,size:f.size}))},null,2));
+console.log(`SmallScope ${tree.sha}: verified and deployed ${selected.length} upstream files to ${output}`);

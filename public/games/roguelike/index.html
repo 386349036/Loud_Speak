@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>THE BINDING — 地下室的束缚</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/bestiary.css">
+<link rel="stylesheet" href="css/inventory.css">
+</head>
+<body>
+<div id="stage">
+  <canvas id="game" width="900" height="540"></canvas>
+
+  <!-- ============ 开始界面 ============ -->
+  <div class="screen" id="screen-title">
+    <div class="title-block">
+      <h1 class="game-title">THE BINDING</h1>
+      <p class="game-sub">地 下 室 的 束 缚</p>
+    </div>
+    <div class="title-foot">
+      <button class="btn" id="btn-start">开 始 探 索</button>
+      <p class="hint">
+        <b>WASD</b> 移动 &nbsp;·&nbsp; <b>鼠标左键</b> 瞄准开火（按住跟随光标连射） &nbsp;·&nbsp; <b>方向键</b> 射击（双键可斜射） &nbsp;·&nbsp; <b>P</b> 暂停 &nbsp;·&nbsp; <b>I</b> 背包 &nbsp;·&nbsp; <b>B</b> 图鉴 &nbsp;·&nbsp; 手机端左摇杆移动，右摇杆瞄准射击
+      </p>
+    </div>
+  </div>
+
+  <!-- ============ 死亡界面 ============ -->
+  <div class="screen hidden" id="screen-dead">
+    <h2 class="dead-title">YOU DIED</h2>
+    <p class="dead-sub" id="dead-sub">你在地下室深处倒下了</p>
+    <div class="stat-grid" id="dead-stats"></div>
+    <div class="item-recap" id="dead-items"></div>
+    <button class="btn" id="btn-retry">再 来 一 次</button>
+  </div>
+
+  <!-- ============ 通关界面 ============ -->
+  <div class="screen hidden" id="screen-win">
+    <h2 class="win-title">ESCAPED</h2>
+    <p class="dead-sub">你击穿了十二层地牢, 逃出了地下室</p>
+    <div class="stat-grid" id="win-stats"></div>
+    <div class="item-recap" id="win-items"></div>
+    <button class="btn" id="btn-again">再 来 一 局</button>
+  </div>
+
+  <!-- ============ 暂停 ============ -->
+  <div class="screen hidden pause" id="screen-pause">
+    <h2 class="pause-title">PAUSED</h2>
+    <p class="hint">按 <b>P</b> 继续</p>
+  </div>
+
+  <!-- ============ 背包 ============ -->
+  <div class="screen hidden" id="screen-inventory">
+    <div class="inventory-container">
+      <div class="inventory-header">
+        <h2>背包</h2>
+        <p class="hint">点击物品查看详情 · 再次点击丢弃 · 按 <b>I</b> 或 <b>ESC</b> 关闭</p>
+      </div>
+
+      <div class="inventory-grid" id="inventory-items"></div>
+
+      <div class="inventory-empty" id="inventory-empty" style="display: none;">
+        <div class="empty-icon">📦</div>
+        <p>背包空空如也</p>
+        <p class="hint">探索地牢收集道具吧！</p>
+      </div>
+
+      <div class="inventory-detail hidden" id="inventory-detail">
+        <p class="detail-desc" id="detail-desc"></p>
+        <div class="detail-actions">
+          <button class="btn-danger" id="btn-drop">丢弃物品</button>
+        </div>
+      </div>
+
+      <div class="confirm-dialog hidden" id="confirm-dialog">
+        <div class="dialog-content">
+          <p id="confirm-text"></p>
+          <p class="warning">丢弃后效果将立即移除！</p>
+          <div class="dialog-buttons">
+            <button class="btn-danger" id="btn-confirm-drop">确认丢弃</button>
+            <button class="btn" id="btn-cancel-drop">取消</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ============ 移动端操控（固定在视口上，不随画布缩放） ============ -->
+<div id="touch-ui" class="hidden">
+  <div id="rotate-hint"><span class="ph"></span>横屏握持可获得更大的画面</div>
+  <div id="joystick"><div id="joy-knob"></div></div>
+  <div id="shoot-joystick" aria-label="射击摇杆：拖动瞄准并射击，松手停止"><span class="shoot-label">射击</span><div id="shoot-knob">✦</div></div>
+</div>
+
+<script src="js/util.js"></script>
+<script src="js/modifiers.js"></script>
+<script src="js/art.js"></script>
+<script src="js/dungeon.js"></script>
+<script src="js/items.js"></script>
+<script src="js/pills.js"></script>
+<script src="js/entities.js"></script>
+<script src="js/game.js?v=20261023-choice-aim"></script>
+<script src="js/main.js?v=20261023-choice-aim"></script>
+<script src="js/inventory.js"></script>
+<script src="js/bestiary.js"></script>
+</body>
+</html>

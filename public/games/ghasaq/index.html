@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="zh-CN" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+  <meta name="theme-color" content="#0d0b0a" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <title>黄昏守城</title>
+  <script type="module" crossorigin src="./assets/index-BXbZKMID.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/three-Dg-BGQvu.js">
+  <link rel="modulepreload" crossorigin href="./assets/physics-DFhMMaxa.js">
+  <link rel="stylesheet" crossorigin href="./assets/index-DcjOPkXM.css">
+</head>
+<body data-screen="boot">
+  <canvas id="game" aria-label="三维战场"></canvas>
+  <div id="hurt"></div>
+  <div id="screenBlood"></div>
+
+  <!-- ===== overlays that belong to the view ===== -->
+  <div id="scope" hidden>
+    <svg viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs><mask id="scopeHole"><rect width="1000" height="1000" fill="#fff" /><circle cx="500" cy="500" r="330" fill="#000" /></mask></defs>
+      <rect width="1000" height="1000" fill="#050505" mask="url(#scopeHole)" />
+      <circle cx="500" cy="500" r="330" fill="none" stroke="#000" stroke-width="18" />
+      <g stroke="#0a0a0a" stroke-width="2.2">
+        <line x1="170" y1="500" x2="470" y2="500" /><line x1="530" y1="500" x2="830" y2="500" />
+        <line x1="500" y1="170" x2="500" y2="470" /><line x1="500" y1="530" x2="500" y2="830" />
+      </g>
+      <g stroke="#0a0a0a" stroke-width="5"><line x1="170" y1="500" x2="330" y2="500" /><line x1="670" y1="500" x2="830" y2="500" /><line x1="500" y1="670" x2="500" y2="830" /></g>
+      <g fill="#0a0a0a"><circle cx="500" cy="540" r="3" /><circle cx="500" cy="580" r="3" /><circle cx="500" cy="620" r="3" /><circle cx="460" cy="500" r="3" /><circle cx="540" cy="500" r="3" /><circle cx="420" cy="500" r="3" /><circle cx="580" cy="500" r="3" /></g>
+      <circle cx="500" cy="500" r="2.5" fill="#ff3b2e" />
+    </svg>
+  </div>
+  <div id="binoc" hidden>
+    <div class="bn-frame"></div>
+    <div class="bn-read"><span class="bn-k">目标指示望远镜</span><b id="binocDist">—</b><span id="binocWarn" class="bn-warn" hidden>危险: 目标离你太近</span></div>
+    <div class="bn-help">点击确认 · 右键取消</div>
+  </div>
+
+  <!-- ===== HUD ===== -->
+  <div id="hud" dir="ltr" hidden>
+    <div class="hud-tl">
+      <span id="rankMini"></span>
+      <div class="tl-nums" dir="ltr">
+        <span class="tl-row"><em>得分</em><b id="scoreNum">0</b></span>
+        <span class="tl-row sp"><em>支援点数</em><b id="spNum">0</b></span>
+      </div>
+    </div>
+    <div class="hud-top">
+      <canvas id="compass" width="880" height="76" aria-hidden="true"></canvas>
+      <div class="clockline" dir="ltr"><span id="clock">16:00</span><span class="pill" id="waveInfo"></span></div>
+      <span id="zoneName" class="zone-name" dir="ltr"></span>
+      <div id="boss" dir="ltr" hidden><span class="boss-name">敌方直升机</span><span class="boss-bar"><i id="bossBar"></i></span></div>
+    </div>
+    <div id="feed" dir="ltr"></div>
+    <div id="xh" data-style="cross"><i class="h l"></i><i class="h r"></i><i class="v u"></i><i class="v d"></i><i class="dot"></i><i class="ring"></i></div>
+    <div id="hit"><i></i><i></i><i></i><i></i></div>
+    <svg id="reloadRing" class="ring-ui" viewBox="0 0 46 46" hidden><circle id="reloadArc" cx="23" cy="23" r="20" /></svg>
+    <svg id="cookRing" class="ring-ui cook" viewBox="0 0 46 46" hidden><circle id="cookArc" cx="23" cy="23" r="20" /></svg>
+    <div id="dmg"></div>
+    <div id="nadeWarn" hidden><span class="nw-arrow"></span><span class="nw-ico">!</span></div>
+    <div id="markers"></div>
+    <div id="msg" dir="ltr"></div>
+    <div id="pop" dir="ltr"></div>
+    <div id="hint" dir="ltr"></div>
+    <div id="prompt" dir="ltr" hidden></div>
+    <div id="xpPops" dir="ltr"></div>
+    <div class="hud-bl">
+      <canvas id="ecg" width="420" height="68" aria-hidden="true"></canvas>
+      <div class="vital hp">
+        <svg viewBox="0 0 20 20"><path d="M7 1h6v6h6v6h-6v6H7v-6H1V7h6z" /></svg>
+        <span class="num" id="hpNum">100</span><span class="bar seg"><i id="hpBar"></i></span>
+      </div>
+      <div class="vital armor">
+        <svg viewBox="0 0 20 20"><path d="M10 1l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V4z" /></svg>
+        <span class="num" id="arNum">50</span><span class="bar"><i id="arBar"></i></span>
+      </div>
+      <div id="stamina"><i id="stBar"></i></div>
+    </div>
+    <div class="hud-br">
+      <div class="focus" id="focusBox" dir="ltr"><span>专注</span><kbd>Q</kbd><span class="fbar"><i id="focusBar"></i></span></div>
+      <div id="wList" class="wlist" dir="ltr"></div>
+      <div class="wpanel">
+        <span id="weaponIcon"></span>
+        <div class="w-lines" dir="ltr"><b id="wName"></b><em id="wMode"></em></div>
+      </div>
+      <div id="rounds"></div>
+      <div class="ammo"><span id="mag">30</span><span id="reserve">/ 120</span><span class="nades" id="nades"></span></div>
+    </div>
+    <div id="supportBar" dir="ltr"></div>
+    <div id="killedBy" dir="ltr" hidden><span class="kb-k">你已阵亡</span><span class="kb-by">击杀者</span><b id="kbName"></b><span id="kbInfo"></span></div>
+  </div>
+  <div id="banner" dir="ltr"><span id="bTime">16:00</span><span id="bTitle"></span><span id="bSub"></span></div>
+  <div id="tacmap" hidden>
+    <div class="tm-box">
+      <span class="tm-title" id="tmTitle">战术地图</span>
+      <canvas id="tacCanvas" width="600" height="600"></canvas>
+      <div class="tm-legend"><span class="lg you">你</span><span class="lg ally">队友</span><span class="lg foe">已发现的敌人</span><span class="lg sniper">狙击点</span><span class="lg sup">补给</span></div>
+    </div>
+  </div>
+  <div id="radio" dir="ltr"><span class="r-who"></span><span class="r-text"></span></div>
+  <div id="speech" dir="ltr"><span class="sp-who"></span><span class="sp-text"></span></div>
+  <div id="medalToast" dir="ltr"></div>
+
+  <!-- ===== touch controls ===== -->
+  <div id="touch">
+    <div id="tZoneL"></div>
+    <div id="tZoneR"></div>
+    <div id="tStick"><i id="tKnob"></i></div>
+    <div id="tBtns" dir="ltr">
+      <button type="button" class="tb pause" data-t="pause" aria-label="暂停">II</button>
+      <button type="button" class="tb map" data-t="map" aria-label="地图">地图</button>
+      <button type="button" class="tb support" data-t="support" aria-label="支援">支援</button>
+      <button type="button" class="tb fire2" data-t="fire" aria-label="开火">开火</button>
+      <button type="button" class="tb fire" data-t="fire" aria-label="开火">开火</button>
+      <button type="button" class="tb aim" data-t="aim" aria-label="瞄准">瞄准</button>
+      <button type="button" class="tb jump" data-t="jump" aria-label="跳跃">跳跃</button>
+      <button type="button" class="tb crouch" data-t="crouch" aria-label="蹲下">蹲下</button>
+      <button type="button" class="tb reload" data-t="reload" aria-label="换弹">换弹</button>
+      <button type="button" class="tb swap" data-t="swap" aria-label="切换武器">切换</button>
+      <button type="button" class="tb nade" data-t="nade" aria-label="手榴弹">手榴弹</button>
+      <button type="button" class="tb focusb" data-t="focus" aria-label="专注">专注</button>
+      <button type="button" class="tb melee" data-t="melee" aria-label="匕首">匕首</button>
+      <button type="button" class="tb use" data-t="use" aria-label="拾取">拾取</button>
+    </div>
+    <div id="tSupport" dir="ltr" hidden></div>
+  </div>
+
+  <!-- ===== screens ===== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="emSun" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe7bf" /><stop offset=".45" stop-color="#ffab5e" /><stop offset=".8" stop-color="#e2553a" /><stop offset="1" stop-color="#8e2a33" /></linearGradient>
+      <mask id="emCut"><rect width="100" height="100" fill="#fff" /><rect y="57" width="100" height="1.6" fill="#000" /><rect y="62" width="100" height="2.4" fill="#000" /><rect y="67.5" width="100" height="3.4" fill="#000" /><rect y="73" width="100" height="30" fill="#000" /></mask>
+    </defs>
+    <symbol id="emblem" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="47" fill="none" stroke="currentColor" stroke-opacity=".3" stroke-width="1" />
+      <circle cx="50" cy="50" r="42.5" fill="none" stroke="currentColor" stroke-opacity=".55" stroke-width="3" stroke-dasharray="0.8 3.65" />
+      <circle cx="50" cy="52" r="24" fill="url(#emSun)" mask="url(#emCut)" />
+      <path d="M16 75h68" stroke="#ff8a3d" stroke-width="2.2" />
+      <path d="M26 80.5h48M36 85.5h28" stroke="currentColor" stroke-opacity=".5" stroke-width="1.4" />
+      <path d="M50 12.5l1.9 4.1 4.5.5-3.4 3 1 4.4-4-2.3-4 2.3 1-4.4-3.4-3 4.5-.5z" fill="#ffb36b" />
+    </symbol>
+  </svg>
+  <canvas id="menuFx" aria-hidden="true"></canvas>
+  <div id="menuVeil" aria-hidden="true"></div>
+
+  <section id="boot" class="screen center">
+    <div class="boot-box">
+      <svg class="emblem boot-emblem" aria-hidden="true"><use href="#emblem" /></svg>
+      <span class="logo small" data-text="黄昏守城">黄昏守城</span>
+      <div class="boot-meter">
+        <span class="boot-bar"><i id="bootBar"></i></span>
+        <span class="boot-read"><span id="bootStep" class="boot-step">正在加载…</span><b id="bootPct">0%</b></span>
+      </div>
+      <div class="boot-tipbox"><span class="k">战地提示</span><p id="bootTip" class="boot-tip"></p></div>
+    </div>
+  </section>
+
+  <section id="splash" class="screen" hidden>
+    <i class="letterbox top"></i><i class="letterbox bottom"></i>
+    <div class="splash-box">
+      <svg class="emblem splash-emblem" aria-hidden="true"><use href="#emblem" /></svg>
+      <h1 class="logo" data-text="黄昏守城">黄昏守城</h1>
+      <span class="tagline"><i></i>坚守至午夜<i></i></span>
+      <span class="press" id="pressLine">按任意键开始</span>
+    </div>
+    <span class="splash-foot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2" fill="none" stroke="currentColor" stroke-width="1.8" /><rect x="3" y="13" width="4.5" height="7" rx="1.5" fill="currentColor" /><rect x="16.5" y="13" width="4.5" height="7" rx="1.5" fill="currentColor" /></svg>佩戴耳机以获得最佳体验: 三维空间音效</span>
+  </section>
+
+  <section id="main" class="screen" hidden>
+    <header class="main-top">
+      <div id="profileCard" class="profile"></div>
+    </header>
+    <div class="main-col">
+      <div class="brand">
+        <svg class="emblem brand-emblem" aria-hidden="true"><use href="#emblem" /></svg>
+        <div class="brand-t">
+          <span class="eyebrow" id="mainEyebrow">坚守至午夜</span>
+          <h1 class="logo" data-text="黄昏守城">黄昏守城</h1>
+        </div>
+      </div>
+      <nav class="menu" id="mainMenu">
+        <i class="msel" aria-hidden="true"></i>
+        <button type="button" class="mitem nav" data-act="play" data-desc="选择战场、任务和难度，然后出发" data-autofocus><em>01</em><b>开始行动</b></button>
+        <button type="button" class="mitem nav" data-act="loadout" data-desc="主武器与武器涂装"><em>02</em><b>装备</b></button>
+        <button type="button" class="mitem nav" data-act="guide" data-desc="玩法与操作说明"><em>03</em><b>游戏指南</b></button>
+        <button type="button" class="mitem nav" data-act="record" data-desc="军衔、勋章和最佳战绩"><em>04</em><b>服役档案</b></button>
+        <button type="button" class="mitem nav" data-act="settings" data-desc="画面、操作和声音"><em>05</em><b>设置</b></button>
+      </nav>
+      <p id="menuDesc" class="menu-desc">选择战场、任务和难度，然后出发</p>
+    </div>
+    <aside class="main-side">
+      <div id="dailyCard" class="orders"></div>
+      <p id="mainTip" class="radio-tip"></p>
+    </aside>
+    <footer class="main-foot">
+      <span class="keys"><kbd>↑</kbd><kbd>↓</kbd> 导航 <kbd>Enter</kbd> 选择</span>
+      <span class="version">版本 2.2</span>
+    </footer>
+  </section>
+
+  <section id="brief" class="screen page" data-tab="mission" hidden>
+    <header class="page-head">
+      <div class="ph-title"><span class="eyebrow">出发之前</span><h2>行动简报</h2></div>
+      <div id="briefTabs" class="tabs steps">
+        <button type="button" class="tab nav" data-btab="mission" aria-pressed="true"><em>1</em>任务</button>
+        <button type="button" class="tab nav" data-btab="gear" aria-pressed="false"><em>2</em>装备</button>
+      </div>
+    </header>
+    <div class="page-body brief-body">
+      <div class="brief-main">
+        <div id="bMission" class="bpane">
+          <h3>战场</h3>
+          <div id="mapList" class="maps"></div>
+          <h3>任务</h3>
+          <div id="opsList" class="ops"></div>
+          <h3>难度</h3>
+          <div id="diffList" class="diffs"></div>
+          <p id="diffNote" class="diff-note"></p>
+          <h3>战场情报</h3>
+          <p id="mapIntel" class="intel"></p>
+        </div>
+        <div id="bGear" class="bpane" hidden>
+          <h3>主武器</h3>
+          <div id="weaponList" class="weapons"></div>
+          <h3>武器涂装 <small>显示在你手持的武器上</small></h3>
+          <div id="skinList" class="skins"></div>
+        </div>
+      </div>
+      <aside class="brief-side">
+        <div id="briefMapWrap" class="viewport map-view">
+          <div id="briefMarks" class="marks" aria-hidden="true"></div>
+          <div class="vf" aria-hidden="true"><i class="vf-c"></i><i class="vf-r top"></i><i class="vf-r side"></i></div>
+          <div class="vf-top"><span class="live"><i></i>实时画面 · 空中侦察</span><span class="vf-read" id="vfRead"></span></div>
+          <div class="view-cap">
+            <span class="eyebrow">战场</span>
+            <b id="mapTitle"></b>
+            <p id="mapNote" class="map-note"></p>
+            <span id="mapChips" class="chips"></span>
+          </div>
+          <div class="legend"><span class="lg foe">敌人入口</span><span class="lg sniper">狙击阵地</span><span class="lg you">你的出发点</span></div>
+          <div class="map-loading"><span class="ml-noise"></span><b>正在进行空中侦察…</b><span class="ml-bar"><i></i></span></div>
+        </div>
+        <div id="armoryView" class="viewport arm-view" hidden>
+          <div class="arm-cap">
+            <span class="eyebrow" id="armCls"></span>
+            <b id="armName"></b>
+            <span id="armState" class="arm-state"></span>
+          </div>
+          <div id="armStage" class="arm-stage"></div>
+          <div id="armSpecs" class="arm-specs"></div>
+          <div id="armStats" class="arm-stats"></div>
+          <div class="sidearms"><span class="k">随身装备</span><span id="sideList" class="side-list"></span></div>
+        </div>
+      </aside>
+    </div>
+    <footer class="page-foot">
+      <button type="button" id="briefBack" class="gbtn ghost nav"><kbd>Esc</kbd>返回</button>
+      <span id="briefSummary" class="summary"></span>
+      <button type="button" id="briefStart" class="gbtn deploy nav"><span>出发</span><i class="chev" aria-hidden="true"><svg viewBox="0 0 9 16"><path d="M9 0H5L0 8l5 8h4L4 8z"/></svg><svg viewBox="0 0 9 16"><path d="M9 0H5L0 8l5 8h4L4 8z"/></svg><svg viewBox="0 0 9 16"><path d="M9 0H5L0 8l5 8h4L4 8z"/></svg></i></button>
+    </footer>
+  </section>
+
+  <section id="record" class="screen page" hidden>
+    <header class="page-head"><div class="ph-title"><span class="eyebrow">你的作战档案</span><h2>服役档案</h2></div></header>
+    <div class="page-body rec-grid">
+      <div class="rec-col">
+        <div id="recRank" class="rec-rank"></div>
+        <div id="recStats" class="readouts"></div>
+        <h3>最佳战绩</h3>
+        <div id="boardTabs" class="seg"><button type="button" class="nav" data-tab="dusk">黄昏行动</button><button type="button" class="nav" data-tab="dawn">直到黎明</button></div>
+        <div id="recBoard" class="board"></div>
+      </div>
+      <div class="rec-col">
+        <h3>勋章 <small id="medalCount"></small></h3>
+        <div id="recMedals" class="medals"></div>
+      </div>
+    </div>
+    <footer class="page-foot"><button type="button" id="recBack" class="gbtn ghost nav"><kbd>Esc</kbd>返回</button></footer>
+  </section>
+
+  <section id="settings" class="screen page" hidden>
+    <header class="page-head">
+      <div class="ph-title"><span class="eyebrow">自定义游戏体验</span><h2>设置</h2></div>
+      <div id="setTabs" class="tabs"></div>
+    </header>
+    <div class="page-body set-body">
+      <div id="setFields" class="fields"></div>
+      <aside class="set-info brk"><span class="eyebrow" id="setInfoTab"></span><b id="setInfoName"></b><p id="setInfoText"></p><span class="set-saved">修改会自动保存</span></aside>
+    </div>
+    <footer class="page-foot">
+      <button type="button" id="setReset" class="gbtn ghost nav">恢复默认</button>
+      <span class="spacer"></span>
+      <button type="button" id="setBack" class="gbtn nav"><kbd>Esc</kbd>完成</button>
+    </footer>
+  </section>
+
+  <section id="controls" class="screen page" hidden>
+    <header class="page-head">
+      <div class="ph-title"><span class="eyebrow">战地手册</span><h2>游戏指南</h2></div>
+      <div id="guideTabs" class="tabs">
+        <button type="button" class="tab nav" data-gtab="how" aria-pressed="true">玩法</button>
+        <button type="button" class="tab nav" data-gtab="keys" aria-pressed="false">操作</button>
+      </div>
+    </header>
+    <div class="page-body">
+      <div id="howGrid" class="how-grid"></div>
+      <div id="ctlGrid" class="ctl-grid" hidden></div>
+    </div>
+    <footer class="page-foot"><button type="button" id="ctlBack" class="gbtn ghost nav" data-autofocus><kbd>Esc</kbd>返回</button></footer>
+  </section>
+
+  <section id="pause" class="screen" hidden>
+    <div class="pause-box">
+      <span class="eyebrow">短暂休整</span>
+      <h2>战斗已暂停</h2>
+      <span id="pauseMeta" class="meta"></span>
+      <nav class="menu" id="pauseMenu">
+        <i class="msel" aria-hidden="true"></i>
+        <button type="button" id="resumeBtn" class="mitem nav" data-autofocus><em>01</em><b>继续</b></button>
+        <button type="button" id="pSetBtn" class="mitem nav"><em>02</em><b>设置</b></button>
+        <button type="button" id="pCtlBtn" class="mitem nav"><em>03</em><b>游戏指南</b></button>
+        <button type="button" id="restartBtn" class="mitem nav"><em>04</em><b>重新开始行动</b></button>
+        <button type="button" id="quitBtn" class="mitem nav warn"><em>05</em><b>撤退</b><span>保留目前获得的得分</span></button>
+      </nav>
+    </div>
+  </section>
+
+  <section id="aar" class="screen page" hidden>
+    <header class="page-head"><div class="ph-title"><span class="eyebrow" id="aarEyebrow">战后报告</span><h2 id="aarTitle"></h2><span id="aarMeta" class="meta"></span></div></header>
+    <div class="page-body aar-grid">
+      <div class="aar-col">
+        <div class="grade-box">
+          <span id="aarGrade" class="grade-stamp">A</span>
+          <div class="grade-side"><span class="k">行动评价</span><span id="aarStars" class="stars big"></span></div>
+        </div>
+        <div id="aarStats" class="readouts"></div>
+        <div id="aarMedals" class="medals row"></div>
+      </div>
+      <div class="aar-col">
+        <h3>获得经验</h3>
+        <div id="aarLines" class="aar-lines"></div>
+        <div class="aar-total"><span>总计</span><b id="aarTotal">0</b></div>
+        <div id="aarRank" class="rec-rank small"></div>
+        <div id="aarUnlocks" class="unlocks"></div>
+        <div id="aarDaily" class="orders inline"></div>
+      </div>
+    </div>
+    <footer class="page-foot">
+      <button type="button" id="aarMenu" class="gbtn ghost nav">主菜单</button>
+      <span class="spacer"></span>
+      <button type="button" id="aarAgain" class="gbtn nav" data-autofocus>新的行动</button>
+    </footer>
+  </section>
+
+  <div id="rotate" hidden><span class="rot-ico"></span><b>请横屏握持手机</b><span>本游戏为横屏设计</span></div>
+  <div id="fps" hidden></div>
+  <div id="err" hidden></div>
+  <script>
+    (function () {
+      function show(msg) { var el = document.getElementById('err'); if (!el) return; el.hidden = false; el.textContent += msg + '\n'; }
+      window.addEventListener('error', function (e) { show('Error: ' + (e.message || e.type) + (e.filename ? ' @ ' + e.filename.split('/').pop() + ':' + e.lineno : '')); });
+      window.addEventListener('unhandledrejection', function (e) { show('Promise: ' + (e.reason && (e.reason.stack || e.reason.message) || e.reason)); });
+    })();
+  </script>
+</body>
+</html>
