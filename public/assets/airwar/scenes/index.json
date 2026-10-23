@@ -1,0 +1,51 @@
+{
+  "generator": "built-in imagegen",
+  "assets": [
+    {
+      "id": "glacier",
+      "name": "冰川群岛",
+      "file": "glacier-loop.webp",
+      "original": "glacier-original.png",
+      "sourceSize": [
+        724,
+        2172
+      ],
+      "width": 360,
+      "height": 2160,
+      "loopMethod": "original plus vertical mirror",
+      "wrapEdgeMeanDelta": 0,
+      "sha256": "cd41e20f4a95d7535ae7eab55c5a04f688dfcb6baf60c3cbb6673e6fdbf36cf7"
+    },
+    {
+      "id": "volcano",
+      "name": "熔岩裂谷",
+      "file": "volcano-loop.webp",
+      "original": "volcano-original.png",
+      "sourceSize": [
+        724,
+        2172
+      ],
+      "width": 360,
+      "height": 2160,
+      "loopMethod": "original plus vertical mirror",
+      "wrapEdgeMeanDelta": 0,
+      "sha256": "8846e8e1f48353843333685ffe4603f3994b3c047103860205c3f8074a261f0f"
+    },
+    {
+      "id": "jungle",
+      "name": "雨林遗迹",
+      "file": "jungle-loop.webp",
+      "original": "jungle-original.png",
+      "sourceSize": [
+        724,
+        2172
+      ],
+      "width": 360,
+      "height": 2160,
+      "loopMethod": "original plus vertical mirror",
+      "wrapEdgeMeanDelta": 0,
+      "sha256": "43d59bde6a55282f9718c751d16b08d1befcd1d53e7df11797da07deb07c3764"
+    }
+  ],
+  "validation": "decoded dimensions and exact wrap/mirror rows passed"
+}

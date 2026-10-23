@@ -4,7 +4,10 @@
   "main": "server.cjs",
   "scripts": {
     "start": "node server.cjs",
-    "test": "node test.cjs"
+    "test": "node test.cjs",
+    "test:tank": "node test-tank.cjs",
+    "test:runner": "node test-runner.cjs && node test-runner-art.cjs",
+    "test:airwar": "node test-airwar.cjs && node test-airwar-expansion.cjs && node test-airwar-playthrough.cjs"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +20,7 @@
     "multer": "^2.4.0",
     "otpauth": "^9.5.2",
     "qrcode": "^1.5.4",
+    "sharp": "^0.35.5",
     "socket.io": "^4.8.4"
   },
   "devDependencies": {

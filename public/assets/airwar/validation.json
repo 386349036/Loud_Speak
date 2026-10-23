@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "generatedAssets": 35,
+  "animationFrames": 22,
+  "backgroundLoops": 9,
+  "checks": [
+    "dimensions",
+    "decoded image data",
+    "PNG alpha",
+    "nonempty animation frames",
+    "SHA-256",
+    "exact loop edges and mirror join",
+    "warning center transparency",
+    "preview dimensions"
+  ],
+  "boundary": "Static asset validation only; no playable aircraft game or collision acceptance."
+}
