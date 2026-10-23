@@ -1,0 +1,1003 @@
+{
+  "version": 1,
+  "generator": "built-in imagegen",
+  "style": "original 16-bit VGA pixel art",
+  "logicalViewport": [
+    360,
+    540
+  ],
+  "scope": "Art library consumed by /airwar.html; manifest describes static assets.",
+  "assets": [
+    {
+      "id": "coast-terrain",
+      "group": "backgrounds",
+      "file": "backgrounds/coast-terrain.webp",
+      "original": "originals/coast-terrain.png",
+      "width": 360,
+      "height": 1080,
+      "frameWidth": 360,
+      "frameHeight": 1080,
+      "frames": 1,
+      "columns": 1,
+      "rows": 1,
+      "fps": 0,
+      "alpha": false,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "sourceSize": [
+        724,
+        2172
+      ],
+      "sourceClearFraction": 0,
+      "clearFraction": 0,
+      "sha256": "14097c462b7aa941e7cc7ff5a38fb355982b567e9d3d9825049cd9f515b54523",
+      "prompt": "Use case: stylized-concept. Asset type: vertically scrolling 2D arcade shooter BACKGROUND TERRAIN layer. Dawn coast, orthographic top-down aerial map: deep slate teal sea, muted turquoise shallow waters, pale ochre beaches, a few fern-green forested islands, tiny lighthouse and small rustic harbor viewed from directly overhead. No horizon. Terrain should be irregular and interesting but calm enough for enemy bullets to read. Composition: tall portrait exactly 1:3 aspect ratio, designed for 360x1080 native game pixels (request 720x2160 output). UP and DOWN edge rows must match seamlessly for vertical tiling. All visual features seen from DIRECTLY ABOVE, flat orthographic map, not isometric, not perspective or a landscape vista. Rich sophisticated 16-bit VGA pixel art, crisp small pixel clusters, stepped shading and sparse dithering, no painterly brush, no blur, no smooth gradients, no vector flat shapes. Low-to-medium contrast and desaturated compared with bright game sprites; keep navigation space uncluttered. No clouds on this layer, no planes, no characters, no projectiles, no text, no watermark, no frame, no HUD. Opaque background.",
+      "loopFile": "backgrounds/coast-terrain-loop.webp",
+      "loopHeight": 2160,
+      "loopMethod": "original-plus-vertical-mirror",
+      "wrapEdgeMeanDelta": 0
+    },
+    {
+      "id": "coast-far",
+      "group": "backgrounds",
+      "file": "backgrounds/coast-far.webp",
+      "original": "originals/coast-far.png",
+      "width": 360,
+      "height": 540,
+      "frameWidth": 360,
+      "frameHeight": 540,
+      "frames": 1,
+      "columns": 1,
+      "rows": 1,
+      "fps": 0,
+      "alpha": false,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "sourceClearFraction": 0,
+      "clearFraction": 0,
+      "sha256": "b4a77ae7d93bd73a9e47b415ea04de6073d44792ee6f2f4003f06550bef49463",
+      "prompt": "Use case: stylized-concept. Asset type: FAR BACKDROP layer for a TOP-DOWN vertical scrolling 16-bit pixel-art aircraft shooter. Original pale slate cyan atmosphere, deep ocean blue distant soft cloud shadows, a few thin warm cream dawn wisps. A restrained low-contrast atmospheric texture, abstract overhead cloud/haze field rather than a horizon landscape. Crisp pixel clusters and subtle VGA dithering, no blur, no smooth gradient. Portrait 2:3 image, native game 360x540 (request 1024x1536). TOP and BOTTOM seamlessly match for vertical repetition. Entirely flat top-down view; no horizon, no sun disk, no mountains sticking up, no planes, no objects, no text, no UI, no frame. Opaque background.",
+      "loopFile": "backgrounds/coast-far-loop.webp",
+      "loopHeight": 1080,
+      "loopMethod": "original-plus-vertical-mirror",
+      "wrapEdgeMeanDelta": 0
+    },
+    {
+      "id": "coast-clouds",
+      "group": "backgrounds",
+      "file": "backgrounds/coast-clouds.png",
+      "original": "originals/coast-clouds.png",
+      "width": 360,
+      "height": 540,
+      "frameWidth": 360,
+      "frameHeight": 540,
+      "frames": 1,
+      "columns": 1,
+      "rows": 1,
+      "fps": 0,
+      "alpha": true,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "sourceClearFraction": 0.8079,
+      "clearFraction": 0.808,
+      "sha256": "73c182efc908c4a4aa336679e9102d4379cb698c5b021e925a18cca4d257bdf7",
+      "prompt": "Use case: stylized-concept. Asset type: transparent CLOUD OVERLAY layer for a top-down vertical 16-bit arcade airplane game. Draw a few separated small clusters of ivory cream clouds with subtle cool blue undersides, dawn warmth. Sparse wispy overhead clouds, about 15% cloud coverage and 85% genuinely transparent empty area; mostly along left and right sides, center largely empty. Portrait 2:3 composition to fit native game 360x540. Crisp small pixel clusters with stepped alpha at cloud edges, subtle VGA dithering, no photoreal blur or smooth gradients. Do not paint a sky, land, sea or any other background. No airplanes, text or border. Genuine alpha transparency, NO checkerboard pattern.",
+      "loopFile": "backgrounds/coast-clouds-loop.png",
+      "loopHeight": 1080,
+      "loopMethod": "original-plus-vertical-mirror",
+      "wrapEdgeMeanDelta": 0
+    },
+    {
+      "id": "canyon-terrain",
+      "group": "backgrounds",
+      "file": "backgrounds/canyon-terrain.webp",
+      "original": "originals/canyon-terrain.png",
+      "width": 360,
+      "height": 1080,
+      "frameWidth": 360,
+      "frameHeight": 1080,
+      "frames": 1,
+      "columns": 1,
+      "rows": 1,
+      "fps": 0,
+      "alpha": false,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "sourceSize": [
+        725,
+        2167
+      ],
+      "sourceClearFraction": 0,
+      "clearFraction": 0,
+      "sha256": "7d3543629bb7d87ecb6d362555fec94d603ff174bfe19b0b95a671fdce7b8d9c",
+      "prompt": "Use case: stylized-concept. Asset type: vertically scrolling 2D arcade shooter BACKGROUND TERRAIN layer. Ancient forest canyon fortress, strict top-down aerial map: a winding muted blue river, dense dark emerald canopy, lavender-gray canyon walls, weathered mauve stone bridges and small ruined masonry fortress embedded in rock. Roofs seen from above, no front elevations, no horizon. Atmospheric 1990s fantasy pixel-art terrain. Composition: tall portrait exactly 1:3 aspect ratio, designed for 360x1080 native game pixels (request 720x2160 output). UP and DOWN edge rows must match seamlessly for vertical tiling. All visual features seen from DIRECTLY ABOVE, flat orthographic map, not isometric, not perspective or a landscape vista. Rich sophisticated 16-bit VGA pixel art, crisp small pixel clusters, stepped shading and sparse dithering, no painterly brush, no blur, no smooth gradients, no vector flat shapes. Low-to-medium contrast and desaturated compared with bright game sprites; keep navigation space uncluttered. No clouds on this layer, no planes, no characters, no projectiles, no text, no watermark, no frame, no HUD. Opaque background.",
+      "loopFile": "backgrounds/canyon-terrain-loop.webp",
+      "loopHeight": 2160,
+      "loopMethod": "original-plus-vertical-mirror",
+      "wrapEdgeMeanDelta": 0
+    },
+    {
+      "id": "canyon-far",
+      "group": "backgrounds",
+      "file": "backgrounds/canyon-far.webp",
+      "original": "originals/canyon-far.png",
+      "width": 360,
+      "height": 540,
+      "frameWidth": 360,
+      "frameHeight": 540,
+      "frames": 1,
+      "columns": 1,
+      "rows": 1,
+      "fps": 0,
+      "alpha": false,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "sourceClearFraction": 0,
+      "clearFraction": 0,
+      "sha256": "4642b5fc5ab10896199f1766f29d07c526c0a061697958b40631d259d00049a0",
+      "prompt": "Use case: stylized-concept. Asset type: FAR BACKDROP layer for a TOP-DOWN vertical scrolling 16-bit pixel-art aircraft shooter. Original desaturated blue-green atmospheric haze, soft far-below evergreen canopy masses and lavender valley shadows. A restrained low-contrast atmospheric texture, abstract overhead cloud/haze field rather than a horizon landscape. Crisp pixel clusters and subtle VGA dithering, no blur, no smooth gradient. Portrait 2:3 image, native game 360x540 (request 1024x1536). TOP and BOTTOM seamlessly match for vertical repetition. Entirely flat top-down view; no horizon, no sun disk, no mountains sticking up, no planes, no objects, no text, no UI, no frame. Opaque background.",
+      "loopFile": "backgrounds/canyon-far-loop.webp",
+      "loopHeight": 1080,
+      "loopMethod": "original-plus-vertical-mirror",
+      "wrapEdgeMeanDelta": 0
+    },
+    {
+      "id": "canyon-clouds",
+      "group": "backgrounds",
+      "file": "backgrounds/canyon-clouds.png",
+      "original": "originals/canyon-clouds.png",
+      "width": 360,
+      "height": 540,
+      "frameWidth": 360,
+      "frameHeight": 540,
+      "frames": 1,
+      "columns": 1,
+      "rows": 1,
+      "fps": 0,
+      "alpha": true,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "sourceClearFraction": 0.8358,
+      "clearFraction": 0.8355,
+      "sha256": "d629c4f6c87c9dddb12c5a7a31bb228be35a7882fe8473f13d7a909a53bc4d6f",
+      "prompt": "Use case: stylized-concept. Asset type: transparent CLOUD OVERLAY layer for a top-down vertical 16-bit arcade airplane game. Draw a few separated small clusters of muted cool gray-green cloud wisps with lavender shaded undersides. Sparse wispy overhead clouds, about 15% cloud coverage and 85% genuinely transparent empty area; mostly along left and right sides, center largely empty. Portrait 2:3 composition to fit native game 360x540. Crisp small pixel clusters with stepped alpha at cloud edges, subtle VGA dithering, no photoreal blur or smooth gradients. Do not paint a sky, land, sea or any other background. No airplanes, text or border. Genuine alpha transparency, NO checkerboard pattern.",
+      "loopFile": "backgrounds/canyon-clouds-loop.png",
+      "loopHeight": 1080,
+      "loopMethod": "original-plus-vertical-mirror",
+      "wrapEdgeMeanDelta": 0
+    },
+    {
+      "id": "night-terrain",
+      "group": "backgrounds",
+      "file": "backgrounds/night-terrain.webp",
+      "original": "originals/night-terrain.png",
+      "width": 360,
+      "height": 1080,
+      "frameWidth": 360,
+      "frameHeight": 1080,
+      "frames": 1,
+      "columns": 1,
+      "rows": 1,
+      "fps": 0,
+      "alpha": false,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "sourceSize": [
+        724,
+        2172
+      ],
+      "sourceClearFraction": 0,
+      "clearFraction": 0,
+      "sha256": "f1ac6342be3545301542349f9b893a7134c7f9d47464b1a06b19bac562381ada",
+      "prompt": "Use case: stylized-concept. Asset type: vertically scrolling 2D arcade shooter BACKGROUND TERRAIN layer. Moonlit night flight route, strict top-down aerial map: deep indigo bay, small islands, a compact coastal city of slate violet rooftops with tiny scattered warm golden window lights, airport runway and subtle industrial district. No horizon. Lights restrained so warm enemy bullets remain distinctive. No aircraft. Composition: tall portrait exactly 1:3 aspect ratio, designed for 360x1080 native game pixels (request 720x2160 output). UP and DOWN edge rows must match seamlessly for vertical tiling. All visual features seen from DIRECTLY ABOVE, flat orthographic map, not isometric, not perspective or a landscape vista. Rich sophisticated 16-bit VGA pixel art, crisp small pixel clusters, stepped shading and sparse dithering, no painterly brush, no blur, no smooth gradients, no vector flat shapes. Low-to-medium contrast and desaturated compared with bright game sprites; keep navigation space uncluttered. No clouds on this layer, no planes, no characters, no projectiles, no text, no watermark, no frame, no HUD. Opaque background.",
+      "loopFile": "backgrounds/night-terrain-loop.webp",
+      "loopHeight": 2160,
+      "loopMethod": "original-plus-vertical-mirror",
+      "wrapEdgeMeanDelta": 0
+    },
+    {
+      "id": "night-far",
+      "group": "backgrounds",
+      "file": "backgrounds/night-far.webp",
+      "original": "originals/night-far.png",
+      "width": 360,
+      "height": 540,
+      "frameWidth": 360,
+      "frameHeight": 540,
+      "frames": 1,
+      "columns": 1,
+      "rows": 1,
+      "fps": 0,
+      "alpha": false,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "sourceClearFraction": 0,
+      "clearFraction": 0,
+      "sha256": "ad192310d1659e7f7286ab0fec229cb301c22c24f12e4f47ee6b5d6de89d7045",
+      "prompt": "Use case: stylized-concept. Asset type: FAR BACKDROP layer for a TOP-DOWN vertical scrolling 16-bit pixel-art aircraft shooter. Original deep indigo and violet moonlit atmosphere, faint blue-gray cloud shadows, tiny sparse muted pale cyan star-like atmospheric speckles. A restrained low-contrast atmospheric texture, abstract overhead cloud/haze field rather than a horizon landscape. Crisp pixel clusters and subtle VGA dithering, no blur, no smooth gradient. Portrait 2:3 image, native game 360x540 (request 1024x1536). TOP and BOTTOM seamlessly match for vertical repetition. Entirely flat top-down view; no horizon, no sun disk, no mountains sticking up, no planes, no objects, no text, no UI, no frame. Opaque background.",
+      "loopFile": "backgrounds/night-far-loop.webp",
+      "loopHeight": 1080,
+      "loopMethod": "original-plus-vertical-mirror",
+      "wrapEdgeMeanDelta": 0
+    },
+    {
+      "id": "night-clouds",
+      "group": "backgrounds",
+      "file": "backgrounds/night-clouds.png",
+      "original": "originals/night-clouds.png",
+      "width": 360,
+      "height": 540,
+      "frameWidth": 360,
+      "frameHeight": 540,
+      "frames": 1,
+      "columns": 1,
+      "rows": 1,
+      "fps": 0,
+      "alpha": true,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "sourceClearFraction": 0.816,
+      "clearFraction": 0.8155,
+      "sha256": "849035c5c4b8026d076b319685cf59f5e47c03990fe17e8fba3654980c634aa4",
+      "prompt": "Use case: stylized-concept. Asset type: transparent CLOUD OVERLAY layer for a top-down vertical 16-bit arcade airplane game. Draw a few separated small clusters of thin muted blue-gray moonlit wisps with a few pale lavender highlights. Sparse wispy overhead clouds, about 15% cloud coverage and 85% genuinely transparent empty area; mostly along left and right sides, center largely empty. Portrait 2:3 composition to fit native game 360x540. Crisp small pixel clusters with stepped alpha at cloud edges, subtle VGA dithering, no photoreal blur or smooth gradients. Do not paint a sky, land, sea or any other background. No airplanes, text or border. Genuine alpha transparency, NO checkerboard pattern.",
+      "loopFile": "backgrounds/night-clouds-loop.png",
+      "loopHeight": 1080,
+      "loopMethod": "original-plus-vertical-mirror",
+      "wrapEdgeMeanDelta": 0
+    },
+    {
+      "id": "player",
+      "group": "player",
+      "file": "player/player.png",
+      "original": "originals/player.png",
+      "width": 32,
+      "height": 40,
+      "frameWidth": 32,
+      "frameHeight": 40,
+      "frames": 1,
+      "columns": 1,
+      "rows": 1,
+      "fps": 0,
+      "alpha": true,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "facing": "up",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceClearFraction": 0.7417,
+      "clearFraction": 0.7078,
+      "sha256": "ba38d83e2991046d255e310f8a26ed53accb548a143b5a23653a889dec2cffde",
+      "prompt": "Use case: stylized-concept. Asset type: production sprite for a vertical 16-bit pixel-art arcade airplane shooter. Create ONE original player aircraft called Azure Falcon, strict orthographic TOP DOWN view, nose pointing straight UP, wings horizontally symmetric, long pointed nose, swept broad wings with small pale-gold wingtip markings, two engines, dark teal glass cockpit. Palette: ivory-white armor, desaturated turquoise panels, navy-teal outlines, subtle pale gold accents. Lighting consistently from upper LEFT. Exquisite 1990s 16-bit sprite art: crisp square pixel clusters, restrained stepped metal shading, tiny armor seams, no smooth gradients, no antialiasing, no 3D render. Design should read as a 32x40 pixel sprite, enlarged with nearest-neighbor to show detail. ONE centered aircraft only occupying about 70 percent of image height, generous transparent margins. NO exhaust plume, no bullets, no shadow cast onto a ground, no labels, no text, no border, no extra views, no background scene. Genuine transparent alpha background, never a painted checkerboard. Render a square transparent PNG."
+    },
+    {
+      "id": "player-left",
+      "group": "player",
+      "file": "player/player-left.png",
+      "original": "originals/player-left.png",
+      "width": 32,
+      "height": 40,
+      "frameWidth": 32,
+      "frameHeight": 40,
+      "frames": 1,
+      "columns": 1,
+      "rows": 1,
+      "fps": 0,
+      "alpha": true,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "facing": "up",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceClearFraction": 0.7266,
+      "clearFraction": 0.6453,
+      "sha256": "6e98608df3db59df82c9131aabbfb1fa5517555e4bb8d8f017057cd3b3b739da",
+      "prompt": "Use case: stylized-concept. Asset type: production transparent pixel-art aircraft sprite. Image 1 is the STYLE reference (and identity reference only for player bank variants). The EXACT same Azure Falcon player aircraft as Image 1: ivory, turquoise and pale gold, two engines and dark teal cockpit, same silhouette, scale and equipment. Change only the pose to a slight LEFT BANK in flight (wing foreshortening/roll, not yaw): nose still points straight UP, left wing appears slightly narrower, right wing slightly broader. Keep centered. Strict orthographic TOP-DOWN view, nose pointing straight UP. Match the reference's crisp square pixel clusters, detailed 1990s 16-bit stepped metal highlights and navy outlines; consistent upper LEFT illumination. Readable silhouette at 24-48 native game pixels. One aircraft centered, occupies 70-80 percent image, generous transparent margins. No perspective, no isometric angle, no ground, no exhaust, no bullets, no cast shadow, no labels or text, no frame. GENUINE transparent alpha PNG, not a painted checkerboard. Square image."
+    },
+    {
+      "id": "player-right",
+      "group": "player",
+      "file": "player/player-right.png",
+      "original": "originals/player-right.png",
+      "width": 32,
+      "height": 40,
+      "frameWidth": 32,
+      "frameHeight": 40,
+      "frames": 1,
+      "columns": 1,
+      "rows": 1,
+      "fps": 0,
+      "alpha": true,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "facing": "up",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceClearFraction": 0.7389,
+      "clearFraction": 0.6375,
+      "sha256": "99b0cecba550a9ce84cb5972fb56f1b2ee18a529c44b18336577c7b6847264ce",
+      "prompt": "Use case: stylized-concept. Asset type: production transparent pixel-art aircraft sprite. Image 1 is the STYLE reference (and identity reference only for player bank variants). The EXACT same Azure Falcon player aircraft as Image 1: ivory, turquoise and pale gold, two engines and dark teal cockpit, same silhouette, scale and equipment. Change only the pose to a slight RIGHT BANK in flight (wing foreshortening/roll, not yaw): nose still points straight UP, right wing appears slightly narrower, left wing slightly broader. Keep centered. Strict orthographic TOP-DOWN view, nose pointing straight UP. Match the reference's crisp square pixel clusters, detailed 1990s 16-bit stepped metal highlights and navy outlines; consistent upper LEFT illumination. Readable silhouette at 24-48 native game pixels. One aircraft centered, occupies 70-80 percent image, generous transparent margins. No perspective, no isometric angle, no ground, no exhaust, no bullets, no cast shadow, no labels or text, no frame. GENUINE transparent alpha PNG, not a painted checkerboard. Square image."
+    },
+    {
+      "id": "enemy-sparrow",
+      "group": "enemies",
+      "file": "enemies/enemy-sparrow.png",
+      "original": "originals/enemy-sparrow.png",
+      "width": 24,
+      "height": 28,
+      "frameWidth": 24,
+      "frameHeight": 28,
+      "frames": 1,
+      "columns": 1,
+      "rows": 1,
+      "fps": 0,
+      "alpha": true,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "facing": "up",
+      "sourceSize": [
+        1287,
+        1222
+      ],
+      "sourceClearFraction": 0.8125,
+      "clearFraction": 0.7976,
+      "sha256": "46b0388205fc7598b0564d5ea10c1a6d8924a7f8324ecfe09c12ab6c75a973bf",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original enemy aircraft sprite for a 1990s 16-bit VGA arcade shooter. ONE tiny stubby straight-wing propeller scout aircraft. Very SHORT rounded fuselage, a small circular propeller hub at TOP, LONG thin perfectly straight rectangular wings across the MIDDLE, one small straight horizontal tailplane at bottom, SINGLE central rear body, small amber canopy. Width about equal to height. Warm gray brown steel and cream highlights. Do NOT draw swept wings, pointed delta wings, side jet nacelles or the familiar twin-engine interceptor silhouette. Strict orthographic TOP-DOWN view, nose points straight UP, centered with generous transparent margin. Upper-left illumination. Crisp square pixel clusters, restrained stepped metallic shading with fine panel seams, dark charcoal outlines, readable at 24-32 native pixels. NO perspective, no exhaust, no ground, no text, no UI, no labels, no border. Genuine alpha transparency PNG, no painted checkerboard. This is a new distinct aircraft silhouette, not a recolor of any previous fighter."
+    },
+    {
+      "id": "enemy-swallow",
+      "group": "enemies",
+      "file": "enemies/enemy-swallow.png",
+      "original": "originals/enemy-swallow.png",
+      "width": 32,
+      "height": 32,
+      "frameWidth": 32,
+      "frameHeight": 32,
+      "frames": 1,
+      "columns": 1,
+      "rows": 1,
+      "fps": 0,
+      "alpha": true,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "facing": "up",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "sourceClearFraction": 0.6867,
+      "clearFraction": 0.6914,
+      "sha256": "794bb82508aa08424698d399125e0f31686c62aa4f96f3a17edf6956b4b25823",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original enemy aircraft sprite for a 1990s 16-bit VGA arcade shooter. ONE compact aggressive DELTA FLYING-WING enemy fighter. A wide SHORT triangular solid delta wing forms almost the entire aircraft; shallow central fuselage and tiny inset amber canopy near its top tip; two very SHORT rudder fins at bottom corners; two little rear nozzles. Almost equilateral triangle silhouette, WIDTH distinctly greater than HEIGHT. Iron red armor, charcoal seams and copper highlights. No long slender nose, no separate long swept wings, no wingtip vertical nacelles, no long tail prongs, NOT a standard twin-engine F-16-like fighter. Strict orthographic TOP-DOWN view, nose points straight UP, centered with generous transparent margin. Upper-left illumination. Crisp square pixel clusters, restrained stepped metallic shading with fine panel seams, dark charcoal outlines, readable at 24-32 native pixels. NO perspective, no exhaust, no ground, no text, no UI, no labels, no border. Genuine alpha transparency PNG, no painted checkerboard. This is a new distinct aircraft silhouette, not a recolor of any previous fighter."
+    },
+    {
+      "id": "enemy-whale",
+      "group": "enemies",
+      "file": "enemies/enemy-whale.png",
+      "original": "originals/enemy-whale.png",
+      "width": 48,
+      "height": 44,
+      "frameWidth": 48,
+      "frameHeight": 44,
+      "frames": 1,
+      "columns": 1,
+      "rows": 1,
+      "fps": 0,
+      "alpha": true,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "facing": "up",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceClearFraction": 0.6159,
+      "clearFraction": 0.5852,
+      "sha256": "2e0235b79745513fa1ae7a305456a02f8cbce51923774f9f04cb111b745f1e08",
+      "prompt": "Use case: stylized-concept. Asset type: production transparent pixel-art aircraft sprite. Image 1 is the STYLE reference (and identity reference only for player bank variants). ONE original armored enemy bomber called Iron Whale. Broad rounded heavy wings, squat thick fuselage, four embedded nacelles and a distinct central round belly gun module visible from overhead. Deep violet-gray armor and weathered pale steel edges, warm amber cockpit. Wide heavy silhouette, not a scaled player fighter. Strict orthographic TOP-DOWN view, nose pointing straight UP. Match the reference's crisp square pixel clusters, detailed 1990s 16-bit stepped metal highlights and navy outlines; consistent upper LEFT illumination. Readable silhouette at 24-48 native game pixels. One aircraft centered, occupies 70-80 percent image, generous transparent margins. No perspective, no isometric angle, no ground, no exhaust, no bullets, no cast shadow, no labels or text, no frame. GENUINE transparent alpha PNG, not a painted checkerboard. Square image."
+    },
+    {
+      "id": "enemy-shuttle",
+      "group": "enemies",
+      "file": "enemies/enemy-shuttle.png",
+      "original": "originals/enemy-shuttle.png",
+      "width": 24,
+      "height": 36,
+      "frameWidth": 24,
+      "frameHeight": 36,
+      "frames": 1,
+      "columns": 1,
+      "rows": 1,
+      "fps": 0,
+      "alpha": true,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "facing": "up",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceClearFraction": 0.8405,
+      "clearFraction": 0.7512,
+      "sha256": "e8ae136c69b95cd3772b6cd1f09057d4ec4058b6ad0ea23e2cc4f85264ba53e8",
+      "prompt": "Use case: stylized-concept. Asset type: production transparent pixel-art aircraft sprite. Image 1 is the STYLE reference (and identity reference only for player bank variants). ONE original fast enemy interceptor called Silver Shuttle. Extremely slim spear-like nose, small rear delta wings, split long tail prongs and prominent engine nozzle. Silver-gray and charcoal body, a single muted crimson identification stripe, narrow dark violet canopy. Sleek long narrow silhouette unlike all other planes. Strict orthographic TOP-DOWN view, nose pointing straight UP. Match the reference's crisp square pixel clusters, detailed 1990s 16-bit stepped metal highlights and navy outlines; consistent upper LEFT illumination. Readable silhouette at 24-48 native game pixels. One aircraft centered, occupies 70-80 percent image, generous transparent margins. No perspective, no isometric angle, no ground, no exhaust, no bullets, no cast shadow, no labels or text, no frame. GENUINE transparent alpha PNG, not a painted checkerboard. Square image."
+    },
+    {
+      "id": "boss-seahawk",
+      "group": "bosses",
+      "file": "bosses/boss-seahawk.png",
+      "original": "originals/boss-seahawk.png",
+      "width": 112,
+      "height": 88,
+      "frameWidth": 112,
+      "frameHeight": 88,
+      "frames": 1,
+      "columns": 1,
+      "rows": 1,
+      "fps": 0,
+      "alpha": true,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "facing": "up",
+      "sourceSize": [
+        1416,
+        1111
+      ],
+      "sourceClearFraction": 0.6322,
+      "clearFraction": 0.6199,
+      "sha256": "16337fa6bfbf3b0f8c90da31a7fbcbd1ecab26eaac8760f9178f1a5360e2f194",
+      "prompt": "Use case: stylized-concept. Asset type: BOSS sprite for a top-down 16-bit pixel airplane shooter. Image 1: STYLE reference for rendering, outlines and upper-left light, NOT shape. Sea Hawk heavy boss: very wide swept wings, FOUR engines, central dark canopy, twin large underwing cannon housings visible from above. Weathered brass armor with deep navy panels and cream highlights. Powerful enlarged heavy fighter, wide silhouette. Game size 112x88. Strict overhead orthographic TOP-DOWN, nose at TOP. Crisp square pixel clusters, stepped metal shading, fine armor seams, 1990s VGA arcade quality. Clearly delineate central hull, turret pods and engine nacelles with dark join lines, small transparent gaps at attachments where plausible, allowing later cropping of components. ONE COMPLETE assembled boss centered with transparent margins. No loose parts, no exhaust, no bullets, no text, no labels, no UI, no perspective, no floor or cast shadow. Genuine transparent alpha PNG, no painted checkerboard."
+    },
+    {
+      "id": "boss-fortress",
+      "group": "bosses",
+      "file": "bosses/boss-fortress.png",
+      "original": "originals/boss-fortress.png",
+      "width": 144,
+      "height": 104,
+      "frameWidth": 144,
+      "frameHeight": 104,
+      "frames": 1,
+      "columns": 1,
+      "rows": 1,
+      "fps": 0,
+      "alpha": true,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "facing": "up",
+      "sourceSize": [
+        1476,
+        1066
+      ],
+      "sourceClearFraction": 0.5609,
+      "clearFraction": 0.5556,
+      "sha256": "8be0d0ca7c38743353ab1454bed303edec5a8a8d62f3abdf62f090bd7df60996",
+      "prompt": "Use case: stylized-concept. Asset type: BOSS sprite for a top-down 16-bit pixel airplane shooter. Image 1: STYLE reference for rendering, outlines and upper-left light, NOT shape. Twin Wing Fortress boss: massive broad flying-wing body, TWO large circular side gun turrets symmetrically flanking a thick central armored core, four rear engines. Deep violet-gray steel armor, pale steel highlights, amber exposed mechanisms. Industrial fortress silhouette unlike a normal fighter. Game size 144x104. Strict overhead orthographic TOP-DOWN, nose at TOP. Crisp square pixel clusters, stepped metal shading, fine armor seams, 1990s VGA arcade quality. Clearly delineate central hull, turret pods and engine nacelles with dark join lines, small transparent gaps at attachments where plausible, allowing later cropping of components. ONE COMPLETE assembled boss centered with transparent margins. No loose parts, no exhaust, no bullets, no text, no labels, no UI, no perspective, no floor or cast shadow. Genuine transparent alpha PNG, no painted checkerboard."
+    },
+    {
+      "id": "boss-flagship",
+      "group": "bosses",
+      "file": "bosses/boss-flagship.png",
+      "original": "originals/boss-flagship.png",
+      "width": 184,
+      "height": 132,
+      "frameWidth": 184,
+      "frameHeight": 132,
+      "frames": 1,
+      "columns": 1,
+      "rows": 1,
+      "fps": 0,
+      "alpha": true,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "facing": "up",
+      "sourceSize": [
+        1480,
+        1063
+      ],
+      "sourceClearFraction": 0.5883,
+      "clearFraction": 0.5588,
+      "sha256": "94478a25b119362f0d4b03f7750487d2405cd9c454895b987b8e2267c76362c6",
+      "prompt": "Use case: stylized-concept. Asset type: BOSS sprite for a top-down 16-bit pixel airplane shooter. Image 1: STYLE reference for rendering, outlines and upper-left light, NOT shape. Firmament Flagship final boss: imposing indigo silver ARMORED AIRBORNE CARRIER, broad symmetric deck plates, two large flank weapon arrays, restrained bright amber central energy core, four rear engine sockets. Strong nose-UP aircraft silhouette, NOT an ocean ship. Game size 184x132. Strict overhead orthographic TOP-DOWN, nose at TOP. Crisp square pixel clusters, stepped metal shading, fine armor seams, 1990s VGA arcade quality. Clearly delineate central hull, turret pods and engine nacelles with dark join lines, small transparent gaps at attachments where plausible, allowing later cropping of components. ONE COMPLETE assembled boss centered with transparent margins. No loose parts, no exhaust, no bullets, no text, no labels, no UI, no perspective, no floor or cast shadow. Genuine transparent alpha PNG, no painted checkerboard."
+    },
+    {
+      "id": "bullet-player",
+      "group": "ammo",
+      "file": "ammo/bullet-player.png",
+      "original": "originals/bullet-player.png",
+      "width": 3,
+      "height": 10,
+      "frameWidth": 3,
+      "frameHeight": 10,
+      "frames": 1,
+      "columns": 1,
+      "rows": 1,
+      "fps": 0,
+      "alpha": true,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceClearFraction": 0.9074,
+      "clearFraction": 0.5,
+      "sha256": "c783c979d470eb763952c7bb3a645b5a2c2011552672734ffc88bc8098dc5847",
+      "prompt": "Use case: stylized-concept. Asset type: ONE transparent 16-bit arcade shooter projectile sprite. Image 1 is style reference for crisp pixel clusters and palette treatment ONLY. Draw a single narrow upward-pointing cyan-white energy needle, white core, dark teal 1-pixel outline, restrained short cyan tail; readable at 3x10 native pixels. Isolated object perfectly centered on a genuine transparent alpha background. Strong crisp square pixels, stepped colors, no antialiasing, no smooth gradient, no photoreal glow. The sprite fills about 65-75% of available canvas height, clear transparent margin. No plane, no weapon, no scenery, no multiple specimens, no spritesheet, no text, no labels or border, no painted checkerboard. Square PNG."
+    },
+    {
+      "id": "bullet-player-heavy",
+      "group": "ammo",
+      "file": "ammo/bullet-player-heavy.png",
+      "original": "originals/bullet-player-heavy.png",
+      "width": 5,
+      "height": 12,
+      "frameWidth": 5,
+      "frameHeight": 12,
+      "frames": 1,
+      "columns": 1,
+      "rows": 1,
+      "fps": 0,
+      "alpha": true,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceClearFraction": 0.8816,
+      "clearFraction": 0.7,
+      "sha256": "ede5adca979286197da68c3b3c66bde565fe00d2d6ca676bb94da001aae42658",
+      "prompt": "Use case: stylized-concept. Asset type: ONE transparent 16-bit arcade shooter projectile sprite. Image 1 is style reference for crisp pixel clusters and palette treatment ONLY. Draw a single thicker upward-pointing cyan energy bolt, bright ivory white center and saturated turquoise edges with a short tail; readable at 5x12 native pixels. Isolated object perfectly centered on a genuine transparent alpha background. Strong crisp square pixels, stepped colors, no antialiasing, no smooth gradient, no photoreal glow. The sprite fills about 65-75% of available canvas height, clear transparent margin. No plane, no weapon, no scenery, no multiple specimens, no spritesheet, no text, no labels or border, no painted checkerboard. Square PNG."
+    },
+    {
+      "id": "bullet-enemy",
+      "group": "ammo",
+      "file": "ammo/bullet-enemy.png",
+      "original": "originals/bullet-enemy.png",
+      "width": 7,
+      "height": 7,
+      "frameWidth": 7,
+      "frameHeight": 7,
+      "frames": 1,
+      "columns": 1,
+      "rows": 1,
+      "fps": 0,
+      "alpha": true,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceClearFraction": 0.71,
+      "clearFraction": 0.3878,
+      "sha256": "4f24bc11dc0256be4dea68396c7b3e282af37e51330b6294b27b883cb4b720d1",
+      "prompt": "Use case: stylized-concept. Asset type: ONE transparent 16-bit arcade shooter projectile sprite. Image 1 is style reference for crisp pixel clusters and palette treatment ONLY. Draw a single round enemy projectile, warm yellow center, burnt orange middle and dark crimson border; circular solid silhouette; readable at 7x7 native pixels. Isolated object perfectly centered on a genuine transparent alpha background. Strong crisp square pixels, stepped colors, no antialiasing, no smooth gradient, no photoreal glow. The sprite fills about 65-75% of available canvas height, clear transparent margin. No plane, no weapon, no scenery, no multiple specimens, no spritesheet, no text, no labels or border, no painted checkerboard. Square PNG."
+    },
+    {
+      "id": "bullet-aimed",
+      "group": "ammo",
+      "file": "ammo/bullet-aimed.png",
+      "original": "originals/bullet-aimed.png",
+      "width": 9,
+      "height": 11,
+      "frameWidth": 9,
+      "frameHeight": 11,
+      "frames": 1,
+      "columns": 1,
+      "rows": 1,
+      "fps": 0,
+      "alpha": true,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceClearFraction": 0.8838,
+      "clearFraction": 0.7475,
+      "sha256": "3aff3653f51ab051ebad35e36c74676d2bac27f3f430e0fe3cc1d60fefee1596",
+      "prompt": "Use case: stylized-concept. Asset type: ONE transparent 16-bit arcade shooter projectile sprite. Image 1 is style reference for crisp pixel clusters and palette treatment ONLY. Draw a single pointed diamond-shaped enemy projectile, peach-pink center, magenta body and dark purple border, point UP; readable at 9x11 native pixels. Isolated object perfectly centered on a genuine transparent alpha background. Strong crisp square pixels, stepped colors, no antialiasing, no smooth gradient, no photoreal glow. The sprite fills about 65-75% of available canvas height, clear transparent margin. No plane, no weapon, no scenery, no multiple specimens, no spritesheet, no text, no labels or border, no painted checkerboard. Square PNG."
+    },
+    {
+      "id": "bullet-boss",
+      "group": "ammo",
+      "file": "ammo/bullet-boss.png",
+      "original": "originals/bullet-boss.png",
+      "width": 11,
+      "height": 11,
+      "frameWidth": 11,
+      "frameHeight": 11,
+      "frames": 1,
+      "columns": 1,
+      "rows": 1,
+      "fps": 0,
+      "alpha": true,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceClearFraction": 0.5139,
+      "clearFraction": 0.3471,
+      "sha256": "30150957164639a486a0de4f6c7df0a2f2a532b9b34342093cfa47d009656271",
+      "prompt": "Use case: stylized-concept. Asset type: ONE transparent 16-bit arcade shooter projectile sprite. Image 1 is style reference for crisp pixel clusters and palette treatment ONLY. Draw a single large round armored boss projectile, pale gold center, orange body and segmented dark red rim; readable at 11x11 native pixels. Isolated object perfectly centered on a genuine transparent alpha background. Strong crisp square pixels, stepped colors, no antialiasing, no smooth gradient, no photoreal glow. The sprite fills about 65-75% of available canvas height, clear transparent margin. No plane, no weapon, no scenery, no multiple specimens, no spritesheet, no text, no labels or border, no painted checkerboard. Square PNG."
+    },
+    {
+      "id": "laser-warning",
+      "group": "ammo",
+      "file": "ammo/laser-warning.png",
+      "original": "originals/laser-warning.png",
+      "width": 12,
+      "height": 160,
+      "frameWidth": 12,
+      "frameHeight": 160,
+      "frames": 1,
+      "columns": 1,
+      "rows": 1,
+      "fps": 0,
+      "alpha": true,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "sourceSize": [
+        1086,
+        1448
+      ],
+      "sourceClearFraction": 0.9618,
+      "clearFraction": 0.8094,
+      "sha256": "19d36ea4d4b844bc652842bc241320ce534c5298b1cf2104c2a4fbad94a2f4f9",
+      "prompt": "Use case: stylized-concept. Asset type: transparent LASER WARNING sprite for a 16-bit pixel arcade game. Draw ONLY TWO long narrow vertical parallel DASHED rails, soft muted pink-magenta pixels. Rails stand apart with a completely EMPTY TRANSPARENT center corridor. Each rail consists of 12 separate rectangular dashes with clearly TRANSPARENT gaps between them. Think a thin dashed rectangular corridor missing its horizontal ends, NOT a tube or glowing laser. NO solid center stripe, NO continuous filled bar, NO cylinder, NO bright white core, NO rounded caps, NO background. Extremely simple crisp square pixel art, native game size 12x160, enlarged to show pixels. One centered pair of vertical dashed rails on genuine alpha transparency; transparent everywhere except the individual dashes. No text, no labels, no frame, no checkerboard."
+    },
+    {
+      "id": "laser-beam",
+      "group": "ammo",
+      "file": "ammo/laser-beam.png",
+      "original": "originals/laser-beam.png",
+      "width": 12,
+      "height": 160,
+      "frameWidth": 12,
+      "frameHeight": 160,
+      "frames": 1,
+      "columns": 1,
+      "rows": 1,
+      "fps": 0,
+      "alpha": true,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceClearFraction": 0.947,
+      "clearFraction": 0.1234,
+      "sha256": "ef0c51aa32776023e2d8c427f0dd485dd84029c99b61ab653a35ac72f93c1435",
+      "prompt": "Use case: stylized-concept. Asset type: ONE transparent 16-bit arcade shooter projectile sprite. Image 1 is style reference for crisp pixel clusters and palette treatment ONLY. Draw a single long narrow VERTICAL active laser beam: bright ivory white solid inner line, coral-red stepped outer border, short squared-off ends, no fuzzy glow; native target 12x160 pixels. Isolated object perfectly centered on a genuine transparent alpha background. Strong crisp square pixels, stepped colors, no antialiasing, no smooth gradient, no photoreal glow. The sprite fills about 65-75% of available canvas height, clear transparent margin. No plane, no weapon, no scenery, no multiple specimens, no spritesheet, no text, no labels or border, no painted checkerboard. Square PNG."
+    },
+    {
+      "id": "item-firepower",
+      "group": "items",
+      "file": "items/item-firepower.png",
+      "original": "originals/item-firepower.png",
+      "width": 20,
+      "height": 20,
+      "frameWidth": 20,
+      "frameHeight": 20,
+      "frames": 1,
+      "columns": 1,
+      "rows": 1,
+      "fps": 0,
+      "alpha": true,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceClearFraction": 0.6731,
+      "clearFraction": 0.3725,
+      "sha256": "c7db87d1896001bc73b4644aa9b41361212d61510d0e2c9c947033f1276c23eb",
+      "prompt": "Use case: stylized-concept. Asset type: ONE power-up sprite for a 16-bit top-down airplane shooter. Image 1 is STYLE reference for stepped metallic pixel shading and dark outlines. Create a hexagonal gold brass floating capsule with a dark center containing THREE distinct upward-pointing cannon barrels; warm yellow-orange accents; silhouette clearly hexagonal. Readable at 20x20 game pixels; strong dark outline, upper LEFT illumination, small chunky square pixel clusters, no antialiasing, no gradients, not a vector icon. One centered item only, generous transparent margins. No plane, no text, no letters, no numbers, no background scene, no cast shadow or border. Genuine transparent alpha PNG, no checkerboard."
+    },
+    {
+      "id": "item-repair",
+      "group": "items",
+      "file": "items/item-repair.png",
+      "original": "originals/item-repair.png",
+      "width": 20,
+      "height": 20,
+      "frameWidth": 20,
+      "frameHeight": 20,
+      "frames": 1,
+      "columns": 1,
+      "rows": 1,
+      "fps": 0,
+      "alpha": true,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceClearFraction": 0.797,
+      "clearFraction": 0.1425,
+      "sha256": "691466ac5d8cb271df40a389a1d63d23be23bd931ef5a99a3c8494d5bd5a46d1",
+      "prompt": "Use case: stylized-concept. Asset type: ONE power-up sprite for a 16-bit top-down airplane shooter. Image 1 is STYLE reference for stepped metallic pixel shading and dark outlines. Create a square mint-green and ivory repair toolbox capsule, a clearly recognizable small WRENCH emblem in the dark central panel; four beveled corners; silhouette square. Readable at 20x20 game pixels; strong dark outline, upper LEFT illumination, small chunky square pixel clusters, no antialiasing, no gradients, not a vector icon. One centered item only, generous transparent margins. No plane, no text, no letters, no numbers, no background scene, no cast shadow or border. Genuine transparent alpha PNG, no checkerboard."
+    },
+    {
+      "id": "item-shield",
+      "group": "items",
+      "file": "items/item-shield.png",
+      "original": "originals/item-shield.png",
+      "width": 20,
+      "height": 20,
+      "frameWidth": 20,
+      "frameHeight": 20,
+      "frames": 1,
+      "columns": 1,
+      "rows": 1,
+      "fps": 0,
+      "alpha": true,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceClearFraction": 0.7237,
+      "clearFraction": 0.2975,
+      "sha256": "b0eb30c2a67cda19a4af099594f9d098fded8b1aafb0bc58a47e3c7441289c04",
+      "prompt": "Use case: stylized-concept. Asset type: ONE power-up sprite for a 16-bit top-down airplane shooter. Image 1 is STYLE reference for stepped metallic pixel shading and dark outlines. Create a circular cyan-blue capsule with an ivory SHIELD emblem in the dark central panel, concentric segmented steel ring; silhouette circular. Readable at 20x20 game pixels; strong dark outline, upper LEFT illumination, small chunky square pixel clusters, no antialiasing, no gradients, not a vector icon. One centered item only, generous transparent margins. No plane, no text, no letters, no numbers, no background scene, no cast shadow or border. Genuine transparent alpha PNG, no checkerboard."
+    },
+    {
+      "id": "item-bomb",
+      "group": "items",
+      "file": "items/item-bomb.png",
+      "original": "originals/item-bomb.png",
+      "width": 20,
+      "height": 24,
+      "frameWidth": 20,
+      "frameHeight": 24,
+      "frames": 1,
+      "columns": 1,
+      "rows": 1,
+      "fps": 0,
+      "alpha": true,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "sourceSize": [
+        1145,
+        1374
+      ],
+      "sourceClearFraction": 0.8541,
+      "clearFraction": 0.5917,
+      "sha256": "925eebed14e27180f773a88b5b5210af35f888401d38ee81ad9feaa540691161",
+      "prompt": "Use case: stylized-concept. Asset type: ONE transparent inventory icon for a 16-bit arcade airplane shooter. A small copper-colored bomb seen from above, elongated rounded metal casing with short rear fins, ivory highlight from upper left, dark teal outline, tiny restrained aqua shockwave arcs flanking the casing. Readable at 20x24 native pixels. Crisp square pixels, stepped metal shading, no smooth gradients. One centered icon, no plane, no label, no text, no scenery, no UI or border. Genuine transparent alpha PNG, never painted checkerboard."
+    },
+    {
+      "id": "fx-exhaust",
+      "group": "effects",
+      "file": "effects/fx-exhaust.png",
+      "original": "originals/fx-exhaust.png",
+      "width": 32,
+      "height": 16,
+      "frameWidth": 8,
+      "frameHeight": 16,
+      "frames": 4,
+      "columns": 4,
+      "rows": 1,
+      "fps": 12,
+      "alpha": true,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "sourceSize": [
+        2172,
+        724
+      ],
+      "sourceClearFraction": 0.8766,
+      "clearFraction": 0.5234,
+      "sha256": "b0d25d4b17d9cf28b7f290351cf2c470d827bd101af5bd81a7342dfd6af695e0",
+      "prompt": "Use case: stylized-concept. Asset type: production game animation SPRITESHEET for a 1990s 16-bit pixel arcade aircraft shooter. ONE engine-exhaust ANIMATION sprite sheet, FOUR frames in a single evenly spaced horizontal row of FOUR equal transparent cells. In every frame one narrow flame points DOWN, icy white core and cyan blue stepped edges, flame length flickers gently. Each frame intended 8x16 game pixels. Same center/top anchor in every cell. No engine or plane. 4:1 wide canvas. Crisp square pixel clusters, stepped colors and hard pixel outlines, NO smooth bloom or photographic smoke. GENUINE transparent alpha background, never checkerboard. The sheet has no labels, no cell outlines, no text, no numbering, no frame, no extra specimen, no background. Follow the cell grid exactly; all frames fully contained in their own cell."
+    },
+    {
+      "id": "fx-muzzle",
+      "group": "effects",
+      "file": "effects/fx-muzzle.png",
+      "original": "originals/fx-muzzle.png",
+      "width": 32,
+      "height": 8,
+      "frameWidth": 8,
+      "frameHeight": 8,
+      "frames": 4,
+      "columns": 4,
+      "rows": 1,
+      "fps": 20,
+      "alpha": true,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "sourceSize": [
+        2172,
+        724
+      ],
+      "sourceClearFraction": 0.95,
+      "clearFraction": 0.8203,
+      "sha256": "e1e018bc98f92c6468a48ee5adc65ed126a7c50eb3edcc72c6ae37db35ff285c",
+      "prompt": "Use case: stylized-concept. Asset type: production game animation SPRITESHEET for a 1990s 16-bit pixel arcade aircraft shooter. ONE muzzle-flash ANIMATION sprite sheet, FOUR frames in one evenly spaced horizontal row of FOUR equal transparent cells. Each cell shows one small ivory and cyan star-shaped gun flash expanding and fading, aligned at same center. Native frame 8x8. No gun or plane. 4:1 wide canvas. Crisp square pixel clusters, stepped colors and hard pixel outlines, NO smooth bloom or photographic smoke. GENUINE transparent alpha background, never checkerboard. The sheet has no labels, no cell outlines, no text, no numbering, no frame, no extra specimen, no background. Follow the cell grid exactly; all frames fully contained in their own cell."
+    },
+    {
+      "id": "fx-explosion",
+      "group": "effects",
+      "file": "effects/fx-explosion.png",
+      "original": "originals/fx-explosion.png",
+      "width": 144,
+      "height": 96,
+      "frameWidth": 48,
+      "frameHeight": 48,
+      "frames": 6,
+      "columns": 3,
+      "rows": 2,
+      "fps": 12,
+      "alpha": true,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "sourceClearFraction": 0.7458,
+      "clearFraction": 0.6596,
+      "sha256": "a956ce7a2e15a0510a095694730c7962034982b8ceec23a4dbdb0a18cdd7338f",
+      "prompt": "Use case: stylized-concept. Asset type: production game animation SPRITESHEET for a 1990s 16-bit pixel arcade aircraft shooter. ONE explosion ANIMATION sprite sheet, SIX chronological frames arranged in a precise THREE columns by TWO rows grid of equal transparent cells. Each cell shows the SAME explosion evolving: small white spark, orange fireball, full orange-yellow pixel fire bloom, red-dark smoke, dissipating muted brown smoke, a few dim embers. Same center anchor, clear empty gaps, no overlap. Native frame 48x48. No debris resembling bright red bullets. 3:2 canvas. Crisp square pixel clusters, stepped colors and hard pixel outlines, NO smooth bloom or photographic smoke. GENUINE transparent alpha background, never checkerboard. The sheet has no labels, no cell outlines, no text, no numbering, no frame, no extra specimen, no background. Follow the cell grid exactly; all frames fully contained in their own cell."
+    },
+    {
+      "id": "fx-pickup",
+      "group": "effects",
+      "file": "effects/fx-pickup.png",
+      "original": "originals/fx-pickup.png",
+      "width": 64,
+      "height": 64,
+      "frameWidth": 32,
+      "frameHeight": 32,
+      "frames": 4,
+      "columns": 2,
+      "rows": 2,
+      "fps": 12,
+      "alpha": true,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceClearFraction": 0.8124,
+      "clearFraction": 0.718,
+      "sha256": "55da19d5d0eb5f47777e11cead13eec54871da65ee75817da305107ed70de993",
+      "prompt": "Use case: stylized-concept. Asset type: production game animation SPRITESHEET for a 1990s 16-bit pixel arcade aircraft shooter. ONE item-pickup ANIMATION sprite sheet, FOUR chronological frames in TWO columns by TWO rows equal transparent cells. Centered sparse golden-white tiny pixel sparkles expand in a hollow ring then fade. Same center anchor, no solid central disc, no item or aircraft. Native frame 32x32. Square canvas. Crisp square pixel clusters, stepped colors and hard pixel outlines, NO smooth bloom or photographic smoke. GENUINE transparent alpha background, never checkerboard. The sheet has no labels, no cell outlines, no text, no numbering, no frame, no extra specimen, no background. Follow the cell grid exactly; all frames fully contained in their own cell."
+    },
+    {
+      "id": "fx-bomb-wave",
+      "group": "effects",
+      "file": "effects/fx-bomb-wave.png",
+      "original": "originals/fx-bomb-wave.png",
+      "width": 720,
+      "height": 720,
+      "frameWidth": 360,
+      "frameHeight": 360,
+      "frames": 4,
+      "columns": 2,
+      "rows": 2,
+      "fps": 10,
+      "alpha": true,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceClearFraction": 0.6413,
+      "clearFraction": 0.6002,
+      "sha256": "1f8b29a227b5cd5e34f80e7a6fa05f4d2632f6b6b856afa2c754d41a92ad427d",
+      "prompt": "Use case: stylized-concept. Asset type: production game animation SPRITESHEET for a 1990s 16-bit pixel arcade aircraft shooter. ONE bomb-shockwave ANIMATION sprite sheet, FOUR chronological frames in a precise TWO columns by TWO rows grid of equal transparent cells. A thin hollow aqua-and-ivory circular pixel ring grows from small radius to medium to large to almost full cell, fading with each expansion. Same exact center anchor in all cells, distinct separated frames, transparent inside AND outside ring, no solid fill. Native frame 360x360. Square canvas. Crisp square pixel clusters, stepped colors and hard pixel outlines, NO smooth bloom or photographic smoke. GENUINE transparent alpha background, never checkerboard. The sheet has no labels, no cell outlines, no text, no numbering, no frame, no extra specimen, no background. Follow the cell grid exactly; all frames fully contained in their own cell."
+    }
+  ]
+}

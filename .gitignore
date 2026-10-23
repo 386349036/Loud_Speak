@@ -3,6 +3,7 @@ node_modules/
 data/
 test-data/
 /.publish/
+/.codex-remote-attachments/
 /ACCEPTANCE.md
 /*.png
 *.sqlite
