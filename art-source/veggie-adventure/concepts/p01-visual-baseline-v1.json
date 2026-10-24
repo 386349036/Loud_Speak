@@ -1,0 +1,27 @@
+{
+  "id": "P01",
+  "version": "v1",
+  "created": "2026-10-24",
+  "tool": "built-in image_gen",
+  "status": "visual-baseline",
+  "original": "../originals/p01-design-card-v1.png",
+  "preview": "p01-design-card-v1.png",
+  "prompt": "../prompts/p01-visual-baseline-v1.txt",
+  "references": [
+    "references/style-01-readable.png",
+    "references/style-03-forest.png",
+    "references/style-05-night.png"
+  ],
+  "observations": [
+    "基础、成长、辣椒与无敌叠加四种表现可辨",
+    "无敌示例叠加在辣椒形态上，红围巾保留，不表示新的能力状态",
+    "正侧背、奔跑、跳跃、受击、投掷已示意",
+    "昼夜预览为概念构图，不是1:1实机截图"
+  ],
+  "limitations": [
+    "成长和基础同尺度高度尚未严格达到2倍，正式精灵必须按画布校准",
+    "斑点数量随姿态存在变化，动画生产需要固定位置",
+    "无完整动画帧、透明精灵或像素级碰撞验证",
+    "图中文字、姿态与视觉轮廓已人工查看；未验证运动连贯性"
+  ]
+}

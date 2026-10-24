@@ -1,0 +1,62 @@
+[
+  {
+    "id": "W04-far",
+    "world": "04",
+    "name": "水生温室",
+    "kind": "far",
+    "transparent": false,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg04-aquatic-greenhouse-v1.png",
+    "prompt": "Use case: stylized-concept. Asset: original vegetable platformer far environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Opaque full-frame 16:9 distant background ONLY. Deep turquoise greenhouse interior seen through water, faint distant glass ribs and submerged silhouettes; no nearby plants. Quiet central play space. NO near trees, no foreground, no ground or platforms, no framing arch. Theme: partially submerged lotus greenhouse, glass ribs and deep water. Palette: turquoise water, cyan glass light, jade plants, muted rose lotus. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Fully opaque backdrop.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-b0e34b4d-7215-487d-9288-4dbccb9b8820.png"
+  },
+  {
+    "id": "W04-mid",
+    "world": "04",
+    "name": "水生温室",
+    "kind": "mid",
+    "transparent": true,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg04-aquatic-greenhouse-v1.png",
+    "prompt": "Use case: stylized-concept. Asset: original vegetable platformer mid environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent wide 16:9 middle-distance layer ONLY: partially submerged lotus greenhouse, glass ribs and deep water silhouettes forming a loose horizontal arrangement concentrated on bottom half. Open true transparent negative space above and through all openings. NO sky, NO distant mountains, NO water tint, NO ground slab or gameplay platforms, muted contrast. Theme: partially submerged lotus greenhouse, glass ribs and deep water. Palette: turquoise water, cyan glass light, jade plants, muted rose lotus. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-d3c1cb3a-99b2-4b17-97fd-53cec8045208.png"
+  },
+  {
+    "id": "W04-kit",
+    "world": "04",
+    "name": "水生温室",
+    "kind": "kit",
+    "transparent": true,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg04-aquatic-greenhouse-v1.png",
+    "prompt": "Use case: stylized-concept. Asset: original vegetable platformer kit environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent modular environment sheet exactly 8 isolated objects, 4 columns x 2 rows, even broad transparent spacing. Row1: rectangular wet stone ground ledge; matching stone brick ledge; short horizontal wooden bridge; three-step stone stair. Row2: aquatic reeds; standalone partially submerged lotus greenhouse, glass ribs and deep water arch or support frame; small lamp; low root or botanical decoration. All walkable tops straight horizontal, precise SIDE ELEVATION orthographic, no top surface visible, no perspective. Plants below walking top, never across it. Each object entirely within own cell. Theme: partially submerged lotus greenhouse, glass ribs and deep water. Palette: turquoise water, cyan glass light, jade plants, muted rose lotus. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-0553825f-2b03-4166-9fb9-3145af0b0675.png"
+  },
+  {
+    "id": "W04-arena",
+    "world": "04",
+    "name": "水生温室",
+    "kind": "arena",
+    "transparent": false,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg04-aquatic-greenhouse-v1.png",
+    "prompt": "Use case: stylized-concept. Asset: original vegetable platformer arena environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Opaque 16:9 boss-area BACKGROUND PLATE: lotus pool greenhouse chamber with visible distant waterline and pale glass dome. Main environment details along outer sides and upper third; center and lower third quiet dark low-contrast atmosphere for foreground fighters. Camera straight side-on, no ground plane receding to horizon, NO foreground ground slab, no stairs/platforms, no boss or character. This is the distant background behind separately built collidable arena floor. Theme: partially submerged lotus greenhouse, glass ribs and deep water. Palette: turquoise water, cyan glass light, jade plants, muted rose lotus. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Fully opaque backdrop.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-63dc64bc-05ab-416d-a8a0-1e6aba2958c6.png"
+  },
+  {
+    "id": "W04-special",
+    "world": "04",
+    "name": "水生温室",
+    "kind": "special",
+    "transparent": true,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg04-aquatic-greenhouse-v1.png",
+    "prompt": "Use case: stylized-concept. Asset: original vegetable platformer special environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent special environment/interaction sheet exactly 8 isolated objects in 4 columns x 2 rows, ordered left to right: flat water surface strip state one; identical water strip state two with shifted ripples; transparent underwater tint panel; rising bubble cluster; flat lotus-leaf platform SIDE VIEW; dry stone bank; glass greenhouse arch; lotus-emblem exit gate. Large transparent gaps, no overlap, every object fully inside its own cell. Flat side elevation, crisp straight walkable tops, do not put foliage across them. Gates and doors have botanical emblems NOT writing. Water, syrup, steam and effects also transparent outside their own silhouette. These are key state source illustrations, NOT a continuous animation. Theme: partially submerged lotus greenhouse, glass ribs and deep water. Palette: turquoise water, cyan glass light, jade plants, muted rose lotus. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-45919062-a89a-4c60-80bd-fc25564074e5.png"
+  },
+  {
+    "id": "W05-far",
+    "world": "05",
+    "name": "荆棘果园",
+    "kind": "far",
+    "transparent": false,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg05-thorn-orchard-v1.png",
+    "prompt": "Use case: stylized-concept. Asset: original vegetable platformer far environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Opaque full-frame 16:9 distant background ONLY. Sky across upper two thirds, distant mountain/tree silhouettes along lower third. Quiet central play space. NO near trees, no foreground, no ground or platforms, no framing arch. Theme: thorn orchard and weathered fruit-garden walls. Palette: apricot dusk, plum mountains, dark olive, amber fruit. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Fully opaque backdrop.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-db8e50ed-824c-45ae-b271-a5c1ae44318b.png"
+  }
+]

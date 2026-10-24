@@ -1,0 +1,751 @@
+{
+  "version": 1,
+  "status": "implemented-awaiting-user-playtest",
+  "formalAnimation": "deferred-by-user",
+  "visualVerified": false,
+  "levels": [
+    {
+      "id": "1-1",
+      "name": "芽豆出发",
+      "focus": "安全移动与短坑",
+      "module": "world-01/level-1-1.mjs",
+      "world": 1,
+      "boss": null,
+      "enemyKinds": [
+        "mushroom",
+        "cabbage"
+      ],
+      "waterRegions": 0,
+      "movingPlatforms": 0,
+      "hazards": [],
+      "turrets": 0,
+      "gates": 0,
+      "background": "W01-far",
+      "mid": "W01-mid",
+      "terrain": "W01-kit",
+      "runtimeReady": true,
+      "visualVerified": false
+    },
+    {
+      "id": "1-2",
+      "name": "苔墙岔路",
+      "focus": "上下路线",
+      "module": "world-01/level-1-2.mjs",
+      "world": 1,
+      "boss": null,
+      "enemyKinds": [
+        "cabbage",
+        "trap",
+        "mushroom"
+      ],
+      "waterRegions": 0,
+      "movingPlatforms": 0,
+      "hazards": [],
+      "turrets": 0,
+      "gates": 0,
+      "background": "W01-far",
+      "mid": "W01-mid",
+      "terrain": "W01-kit",
+      "runtimeReady": true,
+      "visualVerified": false
+    },
+    {
+      "id": "1-3",
+      "name": "根桥试炼",
+      "focus": "阶梯与木桥",
+      "module": "world-01/level-1-3.mjs",
+      "world": 1,
+      "boss": null,
+      "enemyKinds": [
+        "winged",
+        "mushroom"
+      ],
+      "waterRegions": 0,
+      "movingPlatforms": 0,
+      "hazards": [],
+      "turrets": 0,
+      "gates": 0,
+      "background": "W01-far",
+      "mid": "W01-mid",
+      "terrain": "W01-kit",
+      "runtimeReady": true,
+      "visualVerified": false
+    },
+    {
+      "id": "1-4",
+      "name": "南瓜庭院",
+      "focus": "宽平竞技场",
+      "module": "world-01/level-1-4.mjs",
+      "world": 1,
+      "boss": "B01",
+      "enemyKinds": [
+        "mushroom",
+        "cabbage"
+      ],
+      "waterRegions": 0,
+      "movingPlatforms": 0,
+      "hazards": [],
+      "turrets": 0,
+      "gates": 0,
+      "background": "W01-arena",
+      "mid": null,
+      "terrain": "W01-kit",
+      "runtimeReady": true,
+      "visualVerified": false
+    },
+    {
+      "id": "2-1",
+      "name": "根下入口",
+      "focus": "低顶与蹲行",
+      "module": "world-02/level-2-1.mjs",
+      "world": 2,
+      "boss": null,
+      "enemyKinds": [
+        "walnut",
+        "mushroom",
+        "trap"
+      ],
+      "waterRegions": 0,
+      "movingPlatforms": 0,
+      "hazards": [],
+      "turrets": 0,
+      "gates": 0,
+      "background": "W02-far",
+      "mid": "W02-mid",
+      "terrain": "W02-kit",
+      "runtimeReady": true,
+      "visualVerified": false
+    },
+    {
+      "id": "2-2",
+      "name": "垂直矿井",
+      "focus": "升降台",
+      "module": "world-02/level-2-2.mjs",
+      "world": 2,
+      "boss": null,
+      "enemyKinds": [
+        "walnut",
+        "jelly",
+        "fish"
+      ],
+      "waterRegions": 1,
+      "movingPlatforms": 2,
+      "hazards": [],
+      "turrets": 0,
+      "gates": 0,
+      "background": "W02-far",
+      "mid": "W02-mid",
+      "terrain": "W02-kit",
+      "runtimeReady": true,
+      "visualVerified": false
+    },
+    {
+      "id": "2-3",
+      "name": "碎墙密道",
+      "focus": "碎墙捷径",
+      "module": "world-02/level-2-3.mjs",
+      "world": 2,
+      "boss": null,
+      "enemyKinds": [
+        "walnut",
+        "cabbage",
+        "leaper"
+      ],
+      "waterRegions": 1,
+      "movingPlatforms": 0,
+      "hazards": [],
+      "turrets": 0,
+      "gates": 0,
+      "background": "W02-far",
+      "mid": "W02-mid",
+      "terrain": "W02-kit",
+      "runtimeReady": true,
+      "visualVerified": false
+    },
+    {
+      "id": "2-4",
+      "name": "洋葱矿厅",
+      "focus": "落石预兆与安全间隙",
+      "module": "world-02/level-2-4.mjs",
+      "world": 2,
+      "boss": "B02",
+      "enemyKinds": [
+        "walnut",
+        "cabbage"
+      ],
+      "waterRegions": 0,
+      "movingPlatforms": 0,
+      "hazards": [
+        "rock"
+      ],
+      "turrets": 0,
+      "gates": 0,
+      "background": "W02-arena",
+      "mid": null,
+      "terrain": "W02-kit",
+      "runtimeReady": true,
+      "visualVerified": false
+    },
+    {
+      "id": "3-1",
+      "name": "初登藤架",
+      "focus": "宽平台",
+      "module": "world-03/level-3-1.mjs",
+      "world": 3,
+      "boss": null,
+      "enemyKinds": [
+        "spike",
+        "corn",
+        "winged"
+      ],
+      "waterRegions": 0,
+      "movingPlatforms": 0,
+      "hazards": [],
+      "turrets": 0,
+      "gates": 0,
+      "background": "W03-far",
+      "mid": "W03-mid",
+      "terrain": "W03-kit",
+      "runtimeReady": true,
+      "visualVerified": false
+    },
+    {
+      "id": "3-2",
+      "name": "浮台云路",
+      "focus": "移动平台",
+      "module": "world-03/level-3-2.mjs",
+      "world": 3,
+      "boss": null,
+      "enemyKinds": [
+        "winged",
+        "corn",
+        "spike"
+      ],
+      "waterRegions": 0,
+      "movingPlatforms": 3,
+      "hazards": [],
+      "turrets": 0,
+      "gates": 0,
+      "background": "W03-far",
+      "mid": "W03-mid",
+      "terrain": "W03-kit",
+      "runtimeReady": true,
+      "visualVerified": false
+    },
+    {
+      "id": "3-3",
+      "name": "玉米守桥",
+      "focus": "投手压制",
+      "module": "world-03/level-3-3.mjs",
+      "world": 3,
+      "boss": null,
+      "enemyKinds": [
+        "corn",
+        "winged"
+      ],
+      "waterRegions": 0,
+      "movingPlatforms": 0,
+      "hazards": [],
+      "turrets": 0,
+      "gates": 0,
+      "background": "W03-far",
+      "mid": "W03-mid",
+      "terrain": "W03-kit",
+      "runtimeReady": true,
+      "visualVerified": false
+    },
+    {
+      "id": "3-4",
+      "name": "穗冠高台",
+      "focus": "宽长平台",
+      "module": "world-03/level-3-4.mjs",
+      "world": 3,
+      "boss": "B03",
+      "enemyKinds": [
+        "corn",
+        "cabbage"
+      ],
+      "waterRegions": 0,
+      "movingPlatforms": 0,
+      "hazards": [],
+      "turrets": 0,
+      "gates": 0,
+      "background": "W03-arena",
+      "mid": null,
+      "terrain": "W03-kit",
+      "runtimeReady": true,
+      "visualVerified": false
+    },
+    {
+      "id": "4-1",
+      "name": "浅水花房",
+      "focus": "水陆转换",
+      "module": "world-04/level-4-1.mjs",
+      "world": 4,
+      "boss": null,
+      "enemyKinds": [
+        "fish",
+        "jelly",
+        "cloud"
+      ],
+      "waterRegions": 2,
+      "movingPlatforms": 0,
+      "hazards": [],
+      "turrets": 0,
+      "gates": 0,
+      "background": "W04-far",
+      "mid": "W04-mid",
+      "terrain": "W04-kit",
+      "runtimeReady": true,
+      "visualVerified": false
+    },
+    {
+      "id": "4-2",
+      "name": "水母回廊",
+      "focus": "水下路线",
+      "module": "world-04/level-4-2.mjs",
+      "world": 4,
+      "boss": null,
+      "enemyKinds": [
+        "jelly",
+        "fish"
+      ],
+      "waterRegions": 1,
+      "movingPlatforms": 0,
+      "hazards": [],
+      "turrets": 0,
+      "gates": 0,
+      "background": "W04-far",
+      "mid": "W04-mid",
+      "terrain": "W04-kit",
+      "runtimeReady": true,
+      "visualVerified": false
+    },
+    {
+      "id": "4-3",
+      "name": "跃水长廊",
+      "focus": "水陆跳跃",
+      "module": "world-04/level-4-3.mjs",
+      "world": 4,
+      "boss": null,
+      "enemyKinds": [
+        "leaper",
+        "fish"
+      ],
+      "waterRegions": 3,
+      "movingPlatforms": 0,
+      "hazards": [],
+      "turrets": 0,
+      "gates": 0,
+      "background": "W04-far",
+      "mid": "W04-mid",
+      "terrain": "W04-kit",
+      "runtimeReady": true,
+      "visualVerified": false
+    },
+    {
+      "id": "4-4",
+      "name": "莲池深殿",
+      "focus": "水面上下分区",
+      "module": "world-04/level-4-4.mjs",
+      "world": 4,
+      "boss": "B04",
+      "enemyKinds": [
+        "leaper",
+        "cabbage"
+      ],
+      "waterRegions": 1,
+      "movingPlatforms": 0,
+      "hazards": [],
+      "turrets": 0,
+      "gates": 0,
+      "background": "W04-arena",
+      "mid": null,
+      "terrain": "W04-kit",
+      "runtimeReady": true,
+      "visualVerified": false
+    },
+    {
+      "id": "5-1",
+      "name": "刺栗边界",
+      "focus": "危险形状识别",
+      "module": "world-05/level-5-1.mjs",
+      "world": 5,
+      "boss": null,
+      "enemyKinds": [
+        "spike",
+        "walnut",
+        "cabbage"
+      ],
+      "waterRegions": 0,
+      "movingPlatforms": 0,
+      "hazards": [
+        "spikes"
+      ],
+      "turrets": 1,
+      "gates": 0,
+      "background": "W05-far",
+      "mid": "W05-mid",
+      "terrain": "W05-kit",
+      "runtimeReady": true,
+      "visualVerified": false
+    },
+    {
+      "id": "5-2",
+      "name": "荆棘落脚",
+      "focus": "安全落脚台",
+      "module": "world-05/level-5-2.mjs",
+      "world": 5,
+      "boss": null,
+      "enemyKinds": [
+        "spike",
+        "winged"
+      ],
+      "waterRegions": 0,
+      "movingPlatforms": 2,
+      "hazards": [
+        "spikes"
+      ],
+      "turrets": 0,
+      "gates": 0,
+      "background": "W05-far",
+      "mid": "W05-mid",
+      "terrain": "W05-kit",
+      "runtimeReady": true,
+      "visualVerified": false
+    },
+    {
+      "id": "5-3",
+      "name": "壳径果园",
+      "focus": "壳体解路",
+      "module": "world-05/level-5-3.mjs",
+      "world": 5,
+      "boss": null,
+      "enemyKinds": [
+        "cabbage",
+        "walnut",
+        "spike"
+      ],
+      "waterRegions": 0,
+      "movingPlatforms": 0,
+      "hazards": [],
+      "turrets": 0,
+      "gates": 2,
+      "background": "W05-far",
+      "mid": "W05-mid",
+      "terrain": "W05-kit",
+      "runtimeReady": true,
+      "visualVerified": false
+    },
+    {
+      "id": "5-4",
+      "name": "榴莲围庭",
+      "focus": "刺壳开合辨识",
+      "module": "world-05/level-5-4.mjs",
+      "world": 5,
+      "boss": "B05",
+      "enemyKinds": [
+        "spike",
+        "cabbage"
+      ],
+      "waterRegions": 0,
+      "movingPlatforms": 0,
+      "hazards": [],
+      "turrets": 0,
+      "gates": 0,
+      "background": "W05-arena",
+      "mid": null,
+      "terrain": "W05-kit",
+      "runtimeReady": true,
+      "visualVerified": false
+    },
+    {
+      "id": "6-1",
+      "name": "热流入口",
+      "focus": "热流等待",
+      "module": "world-06/level-6-1.mjs",
+      "world": 6,
+      "boss": null,
+      "enemyKinds": [
+        "mushroom",
+        "walnut",
+        "trap"
+      ],
+      "waterRegions": 0,
+      "movingPlatforms": 0,
+      "hazards": [
+        "heat"
+      ],
+      "turrets": 0,
+      "gates": 0,
+      "background": "W06-far",
+      "mid": "W06-mid",
+      "terrain": "W06-kit",
+      "runtimeReady": true,
+      "visualVerified": false
+    },
+    {
+      "id": "6-2",
+      "name": "炮弹作坊",
+      "focus": "掩体间穿行",
+      "module": "world-06/level-6-2.mjs",
+      "world": 6,
+      "boss": null,
+      "enemyKinds": [
+        "spike"
+      ],
+      "waterRegions": 0,
+      "movingPlatforms": 0,
+      "hazards": [],
+      "turrets": 3,
+      "gates": 0,
+      "background": "W06-far",
+      "mid": "W06-mid",
+      "terrain": "W06-kit",
+      "runtimeReady": true,
+      "visualVerified": false
+    },
+    {
+      "id": "6-3",
+      "name": "阀门长廊",
+      "focus": "上下火道",
+      "module": "world-06/level-6-3.mjs",
+      "world": 6,
+      "boss": null,
+      "enemyKinds": [
+        "trap",
+        "walnut"
+      ],
+      "waterRegions": 0,
+      "movingPlatforms": 0,
+      "hazards": [
+        "heat",
+        "chain"
+      ],
+      "turrets": 0,
+      "gates": 0,
+      "background": "W06-far",
+      "mid": "W06-mid",
+      "terrain": "W06-kit",
+      "runtimeReady": true,
+      "visualVerified": false
+    },
+    {
+      "id": "6-4",
+      "name": "辣椒炉厅",
+      "focus": "高低攻击预兆",
+      "module": "world-06/level-6-4.mjs",
+      "world": 6,
+      "boss": "B06",
+      "enemyKinds": [
+        "trap",
+        "cabbage"
+      ],
+      "waterRegions": 0,
+      "movingPlatforms": 0,
+      "hazards": [
+        "heat"
+      ],
+      "turrets": 0,
+      "gates": 0,
+      "background": "W06-arena",
+      "mid": null,
+      "terrain": "W06-kit",
+      "runtimeReady": true,
+      "visualVerified": false
+    },
+    {
+      "id": "7-1",
+      "name": "灯下藤径",
+      "focus": "夜间轮廓",
+      "module": "world-07/level-7-1.mjs",
+      "world": 7,
+      "boss": null,
+      "enemyKinds": [
+        "winged",
+        "cloud",
+        "mushroom"
+      ],
+      "waterRegions": 0,
+      "movingPlatforms": 0,
+      "hazards": [],
+      "turrets": 0,
+      "gates": 0,
+      "background": "W07-far",
+      "mid": "W07-mid",
+      "terrain": "W07-kit",
+      "runtimeReady": true,
+      "visualVerified": false
+    },
+    {
+      "id": "7-2",
+      "name": "云栗庭廊",
+      "focus": "上方落栗预警",
+      "module": "world-07/level-7-2.mjs",
+      "world": 7,
+      "boss": null,
+      "enemyKinds": [
+        "cloud",
+        "spike"
+      ],
+      "waterRegions": 0,
+      "movingPlatforms": 0,
+      "hazards": [
+        "rock"
+      ],
+      "turrets": 0,
+      "gates": 0,
+      "background": "W07-far",
+      "mid": "W07-mid",
+      "terrain": "W07-kit",
+      "runtimeReady": true,
+      "visualVerified": false
+    },
+    {
+      "id": "7-3",
+      "name": "双层葡萄架",
+      "focus": "藤架分层",
+      "module": "world-07/level-7-3.mjs",
+      "world": 7,
+      "boss": null,
+      "enemyKinds": [
+        "corn",
+        "winged",
+        "cloud"
+      ],
+      "waterRegions": 0,
+      "movingPlatforms": 2,
+      "hazards": [],
+      "turrets": 0,
+      "gates": 0,
+      "background": "W07-far",
+      "mid": "W07-mid",
+      "terrain": "W07-kit",
+      "runtimeReady": true,
+      "visualVerified": false
+    },
+    {
+      "id": "7-4",
+      "name": "双生月庭",
+      "focus": "横扫范围与交替攻击",
+      "module": "world-07/level-7-4.mjs",
+      "world": 7,
+      "boss": "B07",
+      "enemyKinds": [
+        "winged",
+        "cabbage"
+      ],
+      "waterRegions": 0,
+      "movingPlatforms": 1,
+      "hazards": [],
+      "turrets": 0,
+      "gates": 0,
+      "background": "W07-arena",
+      "mid": null,
+      "terrain": "W07-kit",
+      "runtimeReady": true,
+      "visualVerified": false
+    },
+    {
+      "id": "8-1",
+      "name": "王庭外墙",
+      "focus": "机制复习",
+      "module": "world-08/level-8-1.mjs",
+      "world": 8,
+      "boss": null,
+      "enemyKinds": [
+        "walnut",
+        "corn",
+        "spike"
+      ],
+      "waterRegions": 0,
+      "movingPlatforms": 1,
+      "hazards": [
+        "heat"
+      ],
+      "turrets": 0,
+      "gates": 0,
+      "background": "W08-far",
+      "mid": "W08-mid",
+      "terrain": "W08-kit",
+      "runtimeReady": true,
+      "visualVerified": false
+    },
+    {
+      "id": "8-2",
+      "name": "水火回廊",
+      "focus": "水陆炮弹",
+      "module": "world-08/level-8-2.mjs",
+      "world": 8,
+      "boss": null,
+      "enemyKinds": [
+        "fish",
+        "jelly",
+        "leaper"
+      ],
+      "waterRegions": 2,
+      "movingPlatforms": 0,
+      "hazards": [
+        "heat"
+      ],
+      "turrets": 2,
+      "gates": 0,
+      "background": "W08-far",
+      "mid": "W08-mid",
+      "terrain": "W08-kit",
+      "runtimeReady": true,
+      "visualVerified": false
+    },
+    {
+      "id": "8-3",
+      "name": "三重试炼",
+      "focus": "三段组合",
+      "module": "world-08/level-8-3.mjs",
+      "world": 8,
+      "boss": null,
+      "enemyKinds": [
+        "winged",
+        "corn",
+        "walnut"
+      ],
+      "waterRegions": 0,
+      "movingPlatforms": 2,
+      "hazards": [
+        "spikes",
+        "heat",
+        "chain"
+      ],
+      "turrets": 0,
+      "gates": 0,
+      "background": "W08-far",
+      "mid": "W08-mid",
+      "terrain": "W08-kit",
+      "runtimeReady": true,
+      "visualVerified": false
+    },
+    {
+      "id": "8-4",
+      "name": "石榴王座",
+      "focus": "阶段空间与弱点",
+      "module": "world-08/level-8-4.mjs",
+      "world": 8,
+      "boss": "B08",
+      "enemyKinds": [
+        "walnut",
+        "cabbage"
+      ],
+      "waterRegions": 0,
+      "movingPlatforms": 0,
+      "hazards": [
+        "heat"
+      ],
+      "turrets": 1,
+      "gates": 0,
+      "background": "W08-arena",
+      "mid": null,
+      "terrain": "W08-kit",
+      "runtimeReady": true,
+      "visualVerified": false
+    }
+  ]
+}

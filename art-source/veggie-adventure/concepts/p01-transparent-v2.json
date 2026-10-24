@@ -1,0 +1,23 @@
+{
+  "id": "P01",
+  "version": "v2",
+  "tool": "built-in image_gen",
+  "source": "p01-design-card-v1.png",
+  "output": "p01-transparent-v2.png",
+  "width": 1536,
+  "height": 1024,
+  "hasAlpha": true,
+  "fullyTransparentPixels": 1101255,
+  "partiallyTransparentPixels": 471609,
+  "fullyOpaquePixels": 0,
+  "maxAlpha": 254,
+  "transparentFraction": 0.7001590728759766,
+  "status": "transparent-concept-sheet",
+  "runtimeReady": false,
+  "notes": [
+    "无纸底、标题、标签、边框与场景",
+    "保留角色状态、动作和局部特效",
+    "尚未切分、统一角色比例、锚点或生成连续动画",
+    "生成器预览可能显示全透明像素中残留的RGB色彩，以PNG Alpha为准"
+  ]
+}

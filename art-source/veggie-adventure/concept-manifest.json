@@ -1,0 +1,1130 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "scope": "first-pass-concept-sources",
+  "planned": 37,
+  "generated": 37,
+  "assets": [
+    {
+      "id": "E01",
+      "name": "香菇巡逻兵",
+      "kind": "enemies",
+      "path": "originals/enemies/e01-shiitake-patrol-v2.png",
+      "prompt": "prompts/enemies/e01-shiitake-patrol-v2.txt",
+      "sha256": "db67c89f3f2a05b41d239b179d7cac1ab2340e1ce22bcc9d9e4186473d91792a",
+      "width": 1536,
+      "height": 1024,
+      "hasAlpha": true,
+      "transparent": true,
+      "alpha": {
+        "zero": 1005034,
+        "partial": 567830,
+        "opaque": 0,
+        "max": 254,
+        "corners": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "stage": "concept-source",
+      "runtimeReady": false,
+      "review": "已修订投石为行走，保留被踩扁与受击状态。",
+      "referenceIds": [
+        "P01"
+      ]
+    },
+    {
+      "id": "E02",
+      "name": "卷心菜壳兵",
+      "kind": "enemies",
+      "path": "originals/enemies/e02-cabbage-shell-v1.png",
+      "prompt": "prompts/enemies/e02-cabbage-shell-v1.txt",
+      "sha256": "63bae68919f616dbcb8e6a5bfa884c753ec34542d9740ef0ad83e3dea4713968",
+      "width": 1536,
+      "height": 1024,
+      "hasAlpha": true,
+      "transparent": true,
+      "alpha": {
+        "zero": 791409,
+        "partial": 781455,
+        "opaque": 0,
+        "max": 254,
+        "corners": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "stage": "concept-source",
+      "runtimeReady": false,
+      "review": "已查看轮廓与关键状态；比例、网格及动画连续性待后续统一。",
+      "referenceIds": [
+        "P01"
+      ]
+    },
+    {
+      "id": "E03",
+      "name": "核桃甲虫",
+      "kind": "enemies",
+      "path": "originals/enemies/e03-walnut-beetle-v1.png",
+      "prompt": "prompts/enemies/e03-walnut-beetle-v1.txt",
+      "sha256": "106cd08d9ca07354cf27076ef7ca1c656da330548ab11d999c4fe663c5c6ec07",
+      "width": 1536,
+      "height": 1024,
+      "hasAlpha": true,
+      "transparent": true,
+      "alpha": {
+        "zero": 899199,
+        "partial": 673665,
+        "opaque": 0,
+        "max": 254,
+        "corners": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "stage": "concept-source",
+      "runtimeReady": false,
+      "review": "已查看轮廓与关键状态；比例、网格及动画连续性待后续统一。",
+      "referenceIds": [
+        "P01"
+      ]
+    },
+    {
+      "id": "E04",
+      "name": "刺栗守卫",
+      "kind": "enemies",
+      "path": "originals/enemies/e04-chestnut-spike-v1.png",
+      "prompt": "prompts/enemies/e04-chestnut-spike-v1.txt",
+      "sha256": "53f5a36e39c17a72fe584ac3e34ad595137146f2032a95995c39e55a500a251c",
+      "width": 1536,
+      "height": 1024,
+      "hasAlpha": true,
+      "transparent": true,
+      "alpha": {
+        "zero": 962883,
+        "partial": 609981,
+        "opaque": 0,
+        "max": 254,
+        "corners": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "stage": "concept-source",
+      "runtimeReady": false,
+      "review": "已查看轮廓与关键状态；比例、网格及动画连续性待后续统一。",
+      "referenceIds": [
+        "P01"
+      ]
+    },
+    {
+      "id": "E05",
+      "name": "莲藕水母",
+      "kind": "enemies",
+      "path": "originals/enemies/e05-lotus-jelly-v1.png",
+      "prompt": "prompts/enemies/e05-lotus-jelly-v1.txt",
+      "sha256": "fe8544537315a0d72acc9c7bdddd19637739961ef7f361b149545e4b9eab8d03",
+      "width": 1536,
+      "height": 1024,
+      "hasAlpha": true,
+      "transparent": true,
+      "alpha": {
+        "zero": 786672,
+        "partial": 786192,
+        "opaque": 0,
+        "max": 254,
+        "corners": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "stage": "concept-source",
+      "runtimeReady": false,
+      "review": "已查看轮廓与关键状态；比例、网格与连续动画待后续统一。",
+      "referenceIds": [
+        "P01"
+      ]
+    },
+    {
+      "id": "E06",
+      "name": "椒鱼",
+      "kind": "enemies",
+      "path": "originals/enemies/e06-pepper-fish-v2.png",
+      "prompt": "prompts/enemies/e06-pepper-fish-v2.txt",
+      "sha256": "d4e2d3d4acd4960475a3e26a45fabec586ca3f6792d48589b4dd301a39e7349b",
+      "width": 1536,
+      "height": 1024,
+      "hasAlpha": true,
+      "transparent": true,
+      "alpha": {
+        "zero": 1039016,
+        "partial": 533848,
+        "opaque": 0,
+        "max": 254,
+        "corners": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "stage": "concept-source",
+      "runtimeReady": false,
+      "review": "已移除额外喷射能力，保持原定行为；比例和动画待统一。",
+      "referenceIds": [
+        "P01"
+      ]
+    },
+    {
+      "id": "E07",
+      "name": "玉米投手",
+      "kind": "enemies",
+      "path": "originals/enemies/e07-corn-thrower-v1.png",
+      "prompt": "prompts/enemies/e07-corn-thrower-v1.txt",
+      "sha256": "ff638234342a2f84137146e4306b68e115f1f7a811809dbdf487b43f00c34c87",
+      "width": 1536,
+      "height": 1024,
+      "hasAlpha": true,
+      "transparent": true,
+      "alpha": {
+        "zero": 930032,
+        "partial": 642832,
+        "opaque": 0,
+        "max": 254,
+        "corners": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "stage": "concept-source",
+      "runtimeReady": false,
+      "review": "已查看轮廓与关键状态；比例、网格与连续动画待后续统一。",
+      "referenceIds": [
+        "P01"
+      ]
+    },
+    {
+      "id": "E08",
+      "name": "豌豆捕虫株",
+      "kind": "enemies",
+      "path": "originals/enemies/e08-pea-trap-v2.png",
+      "prompt": "prompts/enemies/e08-pea-trap-v2.txt",
+      "sha256": "dd83ddee2304928660b3d6567e6383216d9005ecdf7dcf32ec5657a4d7ee20e4",
+      "width": 1536,
+      "height": 1024,
+      "hasAlpha": true,
+      "transparent": true,
+      "alpha": {
+        "zero": 945010,
+        "partial": 627854,
+        "opaque": 0,
+        "max": 254,
+        "corners": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "stage": "concept-source",
+      "runtimeReady": false,
+      "review": "已移除额外喷射能力，保持原定行为；比例和动画待统一。",
+      "referenceIds": [
+        "P01"
+      ]
+    },
+    {
+      "id": "E09",
+      "name": "棉花云牧者",
+      "kind": "enemies",
+      "path": "originals/enemies/e09-cotton-cloud-v2.png",
+      "prompt": "prompts/enemies/e09-cotton-cloud-v2.txt",
+      "sha256": "0c6b7da203fbb38ba1f9d9a6ed65431950007c54dd1973305b6e7dd96ee6134e",
+      "width": 1536,
+      "height": 1024,
+      "hasAlpha": true,
+      "transparent": true,
+      "alpha": {
+        "zero": 937244,
+        "partial": 635620,
+        "opaque": 0,
+        "max": 254,
+        "corners": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "stage": "concept-source",
+      "runtimeReady": false,
+      "review": "已将棉球改为刺栗，并显示下投轨迹。",
+      "referenceIds": [
+        "E09-v1",
+        "E04"
+      ]
+    },
+    {
+      "id": "E10",
+      "name": "茄子炮弹兵",
+      "kind": "enemies",
+      "path": "originals/enemies/e10-eggplant-bolt-v1.png",
+      "prompt": "prompts/enemies/e10-eggplant-bolt-v1.txt",
+      "sha256": "aa767ab179f7e1dea98641d45337c6f389eac3e2d8e7d43b8cb9e850bde46ec1",
+      "width": 1536,
+      "height": 1024,
+      "hasAlpha": true,
+      "transparent": true,
+      "alpha": {
+        "zero": 1032527,
+        "partial": 540337,
+        "opaque": 0,
+        "max": 254,
+        "corners": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "stage": "concept-source",
+      "runtimeReady": false,
+      "review": "已查看轮廓与状态；比例、网格和动画待统一。",
+      "referenceIds": [
+        "P01"
+      ]
+    },
+    {
+      "id": "E11",
+      "name": "飞翼卷心菜",
+      "kind": "enemies",
+      "path": "originals/enemies/e11-winged-cabbage-v1.png",
+      "prompt": "prompts/enemies/e11-winged-cabbage-v1.txt",
+      "sha256": "bca9075b38fda821f6cd910529596333f98fcf9dba9b7791e9e068ecccd8ba22",
+      "width": 1536,
+      "height": 1024,
+      "hasAlpha": true,
+      "transparent": true,
+      "alpha": {
+        "zero": 839927,
+        "partial": 732937,
+        "opaque": 0,
+        "max": 254,
+        "corners": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "stage": "concept-source",
+      "runtimeReady": false,
+      "review": "已查看轮廓与状态；比例、网格和动画待统一。",
+      "referenceIds": [
+        "P01",
+        "E02"
+      ]
+    },
+    {
+      "id": "E12",
+      "name": "跃水椒鱼",
+      "kind": "enemies",
+      "path": "originals/enemies/e12-leaping-pepper-fish-v1.png",
+      "prompt": "prompts/enemies/e12-leaping-pepper-fish-v1.txt",
+      "sha256": "8dca33a246b8a13782cda580ee4e56a37250c5df421b708b71290d3862eeb05c",
+      "width": 1536,
+      "height": 1024,
+      "hasAlpha": true,
+      "transparent": true,
+      "alpha": {
+        "zero": 895533,
+        "partial": 677331,
+        "opaque": 0,
+        "max": 254,
+        "corners": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "stage": "concept-source",
+      "runtimeReady": false,
+      "review": "已查看与椒鱼基础形象的一致性；跃水多个关键姿态同卡，尚非逐帧动画。",
+      "referenceIds": [
+        "P01",
+        "E06"
+      ]
+    },
+    {
+      "id": "B01",
+      "name": "南瓜门卫",
+      "kind": "bosses",
+      "path": "originals/bosses/b01-pumpkin-warden-v1.png",
+      "prompt": "prompts/bosses/b01-pumpkin-warden-v1.txt",
+      "sha256": "97c6412f9cea9f6901553392231bb9785c1d903d1c856e92845c78fd005a7521",
+      "width": 1536,
+      "height": 1024,
+      "hasAlpha": true,
+      "transparent": true,
+      "alpha": {
+        "zero": 843258,
+        "partial": 729606,
+        "opaque": 0,
+        "max": 254,
+        "corners": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "stage": "concept-source",
+      "runtimeReady": false,
+      "review": "已查看首领轮廓与攻击/破绽差异；身体比例和独立特效待正式素材阶段统一。",
+      "referenceIds": [
+        "P01"
+      ]
+    },
+    {
+      "id": "B02",
+      "name": "洋葱矿主",
+      "kind": "bosses",
+      "path": "originals/bosses/b02-onion-miner-v1.png",
+      "prompt": "prompts/bosses/b02-onion-miner-v1.txt",
+      "sha256": "8a412ddefaebf62316e54e9ec4a41c1a5d91d77c4c214dcd8c274b86e31f77dd",
+      "width": 1536,
+      "height": 1024,
+      "hasAlpha": true,
+      "transparent": true,
+      "alpha": {
+        "zero": 731655,
+        "partial": 841209,
+        "opaque": 0,
+        "max": 254,
+        "corners": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "stage": "concept-source",
+      "runtimeReady": false,
+      "review": "已查看首领轮廓与攻击/破绽差异；身体比例和独立特效待正式素材阶段统一。",
+      "referenceIds": [
+        "P01"
+      ]
+    },
+    {
+      "id": "B03",
+      "name": "玉米骑士",
+      "kind": "bosses",
+      "path": "originals/bosses/b03-corn-knight-v1.png",
+      "prompt": "prompts/bosses/b03-corn-knight-v1.txt",
+      "sha256": "0fb66e33f475c9f0686cc51c2d6827229f85fdf7026d6132e3efb3383aa841b2",
+      "width": 1536,
+      "height": 1024,
+      "hasAlpha": true,
+      "transparent": true,
+      "alpha": {
+        "zero": 790397,
+        "partial": 782467,
+        "opaque": 0,
+        "max": 254,
+        "corners": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "stage": "concept-source",
+      "runtimeReady": false,
+      "review": "已查看首领轮廓与攻击/破绽差异；身体比例和独立特效待正式素材阶段统一。",
+      "referenceIds": [
+        "P01"
+      ]
+    },
+    {
+      "id": "B04",
+      "name": "莲藕潜王",
+      "kind": "bosses",
+      "path": "originals/bosses/b04-lotus-diver-v1.png",
+      "prompt": "prompts/bosses/b04-lotus-diver-v1.txt",
+      "sha256": "64791ba17bbfcdc51274f96c727ab8023f73ac82d12b7d4964086e48771e2f0a",
+      "width": 1536,
+      "height": 1024,
+      "hasAlpha": true,
+      "transparent": true,
+      "alpha": {
+        "zero": 887381,
+        "partial": 685483,
+        "opaque": 0,
+        "max": 254,
+        "corners": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "stage": "concept-source",
+      "runtimeReady": false,
+      "review": "已查看首领轮廓与攻击/破绽差异；身体比例和独立特效待正式素材阶段统一。",
+      "referenceIds": [
+        "P01"
+      ]
+    },
+    {
+      "id": "B05",
+      "name": "榴莲堡主",
+      "kind": "bosses",
+      "path": "originals/bosses/b05-durian-fortress-v1.png",
+      "prompt": "prompts/bosses/b05-durian-fortress-v1.txt",
+      "sha256": "c58d9d37c6c1dd4a31b845222bcfdd6bd0dad9f5ab7ed3d68b185ef2387b9a5e",
+      "width": 1536,
+      "height": 1024,
+      "hasAlpha": true,
+      "transparent": true,
+      "alpha": {
+        "zero": 837882,
+        "partial": 734982,
+        "opaque": 0,
+        "max": 254,
+        "corners": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "stage": "concept-source",
+      "runtimeReady": false,
+      "review": "已查看角色轮廓与主要状态；完整动作、比例、网格待后续统一。",
+      "referenceIds": [
+        "P01"
+      ]
+    },
+    {
+      "id": "B06",
+      "name": "辣椒术士",
+      "kind": "bosses",
+      "path": "originals/bosses/b06-chili-mage-v1.png",
+      "prompt": "prompts/bosses/b06-chili-mage-v1.txt",
+      "sha256": "adac071c658a1884f26999e600adffe692ebc31607a153375b9d92b328e37a6c",
+      "width": 1536,
+      "height": 1024,
+      "hasAlpha": true,
+      "transparent": true,
+      "alpha": {
+        "zero": 865140,
+        "partial": 707724,
+        "opaque": 0,
+        "max": 254,
+        "corners": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "stage": "concept-source",
+      "runtimeReady": false,
+      "review": "熄火破绽已示意；高低弹与爆裂种子需在动画阶段分别补齐。",
+      "referenceIds": [
+        "P01"
+      ]
+    },
+    {
+      "id": "B07",
+      "name": "葡萄双生",
+      "kind": "bosses",
+      "path": "originals/bosses/b07-grape-twins-v1.png",
+      "prompt": "prompts/bosses/b07-grape-twins-v1.txt",
+      "sha256": "43324cc7021321b35376fc45b4b04a9bb0273a24a1f4aa0316652c46c2eb0ecb",
+      "width": 1536,
+      "height": 1024,
+      "hasAlpha": true,
+      "transparent": true,
+      "alpha": {
+        "zero": 798453,
+        "partial": 774411,
+        "opaque": 0,
+        "max": 254,
+        "corners": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "stage": "concept-source",
+      "runtimeReady": false,
+      "review": "双头与顶部破绽已示意；藤条横扫与另一侧攻击需在动画阶段补齐。",
+      "referenceIds": [
+        "P01"
+      ]
+    },
+    {
+      "id": "B08",
+      "name": "石榴王",
+      "kind": "bosses",
+      "path": "originals/bosses/b08-pomegranate-king-v1.png",
+      "prompt": "prompts/bosses/b08-pomegranate-king-v1.txt",
+      "sha256": "e74e7994aaa839508b51a0c36b2e2d34c39a934a2371d337966199a6a33d72b2",
+      "width": 1536,
+      "height": 1024,
+      "hasAlpha": true,
+      "transparent": true,
+      "alpha": {
+        "zero": 832862,
+        "partial": 740002,
+        "opaque": 0,
+        "max": 254,
+        "corners": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "stage": "concept-source",
+      "runtimeReady": false,
+      "review": "已查看角色轮廓与主要状态；完整动作、比例、网格待后续统一。",
+      "referenceIds": [
+        "P01"
+      ]
+    },
+    {
+      "id": "N01",
+      "name": "萝卜向导",
+      "kind": "npcs",
+      "path": "originals/npcs/n01-radish-guide-v1.png",
+      "prompt": "prompts/npcs/n01-radish-guide-v1.txt",
+      "sha256": "577d4d19aafc7facfc50133d0682f193052cff0b348e2ad0fbb8e7357b48ac29",
+      "width": 1536,
+      "height": 1024,
+      "hasAlpha": true,
+      "transparent": true,
+      "alpha": {
+        "zero": 904777,
+        "partial": 668087,
+        "opaque": 0,
+        "max": 254,
+        "corners": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "stage": "concept-source",
+      "runtimeReady": false,
+      "review": "已查看角色轮廓与主要状态；完整动作、比例、网格待后续统一。",
+      "referenceIds": [
+        "P01"
+      ]
+    },
+    {
+      "id": "N02",
+      "name": "草莓园丁",
+      "kind": "npcs",
+      "path": "originals/npcs/n02-strawberry-gardener-v1.png",
+      "prompt": "prompts/npcs/n02-strawberry-gardener-v1.txt",
+      "sha256": "03341b8651a600e957a4c3e28e257835e3f581bada25efd40e2b2695bb918227",
+      "width": 1536,
+      "height": 1024,
+      "hasAlpha": true,
+      "transparent": true,
+      "alpha": {
+        "zero": 685217,
+        "partial": 887647,
+        "opaque": 0,
+        "max": 254,
+        "corners": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "stage": "concept-source",
+      "runtimeReady": false,
+      "review": "已查看园丁身份、种植和庆祝动作；种植时土堆属于动作附属物，正式切图应独立。",
+      "referenceIds": [
+        "P01"
+      ]
+    },
+    {
+      "id": "BG01",
+      "name": "晨光苔林",
+      "kind": "backgrounds",
+      "path": "originals/backgrounds/bg01-garden-dawn-v1.png",
+      "prompt": "prompts/backgrounds/bg01-garden-dawn-v1.txt",
+      "sha256": "fd18bb88575a363fb42f71bef7b60744a6ac2f9d4fd85f333bc2fdfc7884bd5b",
+      "width": 1672,
+      "height": 941,
+      "hasAlpha": false,
+      "transparent": false,
+      "alpha": {
+        "zero": 0,
+        "partial": 0,
+        "opaque": 1573352,
+        "max": 255,
+        "corners": [
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      "stage": "concept-source",
+      "runtimeReady": false,
+      "review": "已查看无角色的场景构图与下部空间；不是分层视差资源，尚未验证无缝循环。",
+      "referenceIds": [
+        "style-03",
+        "style-05"
+      ]
+    },
+    {
+      "id": "BG02",
+      "name": "根系地窖",
+      "kind": "backgrounds",
+      "path": "originals/backgrounds/bg02-root-cellar-v1.png",
+      "prompt": "prompts/backgrounds/bg02-root-cellar-v1.txt",
+      "sha256": "aa043657fa99589dfc78b26b48ceccefb8d5fe99c608b73bc8388a0b350f9ea0",
+      "width": 1672,
+      "height": 940,
+      "hasAlpha": false,
+      "transparent": false,
+      "alpha": {
+        "zero": 0,
+        "partial": 0,
+        "opaque": 1571680,
+        "max": 255,
+        "corners": [
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      "stage": "concept-source",
+      "runtimeReady": false,
+      "review": "已查看无角色的场景构图与下部空间；不是分层视差资源，尚未验证无缝循环。",
+      "referenceIds": [
+        "style-03",
+        "style-05"
+      ]
+    },
+    {
+      "id": "BG03",
+      "name": "藤架高空",
+      "kind": "backgrounds",
+      "path": "originals/backgrounds/bg03-canopy-heights-v1.png",
+      "prompt": "prompts/backgrounds/bg03-canopy-heights-v1.txt",
+      "sha256": "0e22c44e19be3c11e4ab48e7b89595a6b70304c06b8ee700828f60ecf4cdb5a2",
+      "width": 1672,
+      "height": 941,
+      "hasAlpha": false,
+      "transparent": false,
+      "alpha": {
+        "zero": 0,
+        "partial": 0,
+        "opaque": 1573352,
+        "max": 255,
+        "corners": [
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      "stage": "concept-source",
+      "runtimeReady": false,
+      "review": "已查看无角色的场景构图与下部空间；不是分层视差资源，尚未验证无缝循环。",
+      "referenceIds": [
+        "style-03",
+        "style-05"
+      ]
+    },
+    {
+      "id": "BG04",
+      "name": "水生温室",
+      "kind": "backgrounds",
+      "path": "originals/backgrounds/bg04-aquatic-greenhouse-v1.png",
+      "prompt": "prompts/backgrounds/bg04-aquatic-greenhouse-v1.txt",
+      "sha256": "d166c497c3c2523c6e96b03c295ef6d1c22995f76543bfdadff94e17e0153d52",
+      "width": 1672,
+      "height": 941,
+      "hasAlpha": false,
+      "transparent": false,
+      "alpha": {
+        "zero": 0,
+        "partial": 0,
+        "opaque": 1573352,
+        "max": 255,
+        "corners": [
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      "stage": "concept-source",
+      "runtimeReady": false,
+      "review": "已查看无角色的场景构图与下部空间；不是分层视差资源，尚未验证无缝循环。",
+      "referenceIds": [
+        "style-03",
+        "style-05"
+      ]
+    },
+    {
+      "id": "BG05",
+      "name": "荆棘果园",
+      "kind": "backgrounds",
+      "path": "originals/backgrounds/bg05-thorn-orchard-v1.png",
+      "prompt": "prompts/backgrounds/bg05-thorn-orchard-v1.txt",
+      "sha256": "b5aefd791e296032180eeb083f6b630122f305e0eab3311ba680d6c899234b6b",
+      "width": 1672,
+      "height": 941,
+      "hasAlpha": false,
+      "transparent": false,
+      "alpha": {
+        "zero": 0,
+        "partial": 0,
+        "opaque": 1573352,
+        "max": 255,
+        "corners": [
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      "stage": "concept-source",
+      "runtimeReady": false,
+      "review": "已查看世界配色与无角色场景构图；需后续拆分视差层、处理衔接及前景对比。",
+      "referenceIds": [
+        "style-03",
+        "style-05"
+      ]
+    },
+    {
+      "id": "BG06",
+      "name": "熔糖工坊",
+      "kind": "backgrounds",
+      "path": "originals/backgrounds/bg06-ember-workshop-v1.png",
+      "prompt": "prompts/backgrounds/bg06-ember-workshop-v1.txt",
+      "sha256": "803fe3341b546f907fa22f5e80e7195ba6d95bbf98cff748d5ed92a92a244c67",
+      "width": 1672,
+      "height": 940,
+      "hasAlpha": false,
+      "transparent": false,
+      "alpha": {
+        "zero": 0,
+        "partial": 0,
+        "opaque": 1571680,
+        "max": 255,
+        "corners": [
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      "stage": "concept-source",
+      "runtimeReady": false,
+      "review": "已查看世界配色与无角色场景构图；需后续拆分视差层、处理衔接及前景对比。",
+      "referenceIds": [
+        "style-03",
+        "style-05"
+      ]
+    },
+    {
+      "id": "BG07",
+      "name": "月夜藤园",
+      "kind": "backgrounds",
+      "path": "originals/backgrounds/bg07-moon-vine-garden-v1.png",
+      "prompt": "prompts/backgrounds/bg07-moon-vine-garden-v1.txt",
+      "sha256": "81aec7a1b3b2aa18eebdf22f951897314da728bf29a55e0b3e8c97113eafb465",
+      "width": 1672,
+      "height": 941,
+      "hasAlpha": false,
+      "transparent": false,
+      "alpha": {
+        "zero": 0,
+        "partial": 0,
+        "opaque": 1573352,
+        "max": 255,
+        "corners": [
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      "stage": "concept-source",
+      "runtimeReady": false,
+      "review": "已查看世界配色与无角色场景构图；需后续拆分视差层、处理衔接及前景对比。",
+      "referenceIds": [
+        "style-03",
+        "style-05"
+      ]
+    },
+    {
+      "id": "BG08",
+      "name": "石榴王庭",
+      "kind": "backgrounds",
+      "path": "originals/backgrounds/bg08-pomegranate-citadel-v1.png",
+      "prompt": "prompts/backgrounds/bg08-pomegranate-citadel-v1.txt",
+      "sha256": "b04b40dcc88aab8e7f16bb97a75a91c6901157ad0a99d58d34695d716a0bfc2a",
+      "width": 1672,
+      "height": 941,
+      "hasAlpha": false,
+      "transparent": false,
+      "alpha": {
+        "zero": 0,
+        "partial": 0,
+        "opaque": 1573352,
+        "max": 255,
+        "corners": [
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      "stage": "concept-source",
+      "runtimeReady": false,
+      "review": "已查看世界配色与无角色场景构图；需后续拆分视差层、处理衔接及前景对比。",
+      "referenceIds": [
+        "style-03",
+        "style-05"
+      ]
+    },
+    {
+      "id": "IT01",
+      "name": "道具总览",
+      "kind": "items",
+      "path": "originals/items/it01-powerups-collectibles-v1.png",
+      "prompt": "prompts/items/it01-powerups-collectibles-v1.txt",
+      "sha256": "ad4e167a99d5a7778bf2a9b193a442d81d5144c40d30626d74689cf8657acee7",
+      "width": 1536,
+      "height": 1024,
+      "hasAlpha": true,
+      "transparent": true,
+      "alpha": {
+        "zero": 1087704,
+        "partial": 485160,
+        "opaque": 0,
+        "max": 254,
+        "corners": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "stage": "concept-source",
+      "runtimeReady": false,
+      "review": "已查看轮廓与分隔；仍需单项拆分、特效解耦、尺寸统一与动画制作。",
+      "referenceIds": [
+        "P01"
+      ]
+    },
+    {
+      "id": "PR01",
+      "name": "投射物总览",
+      "kind": "projectiles",
+      "path": "originals/projectiles/pr01-projectile-library-v1.png",
+      "prompt": "prompts/projectiles/pr01-projectile-library-v1.txt",
+      "sha256": "0b49e6d7518c1f1f9bd68107a052e3d88036a3a38d98edfd8514064cd45b3773",
+      "width": 1536,
+      "height": 1024,
+      "hasAlpha": true,
+      "transparent": true,
+      "alpha": {
+        "zero": 993713,
+        "partial": 579151,
+        "opaque": 0,
+        "max": 254,
+        "corners": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "stage": "concept-source",
+      "runtimeReady": false,
+      "review": "投射物概念库已查看；绿色种子是通用候选，不新增豌豆捕虫株射击能力。",
+      "referenceIds": [
+        "P01"
+      ]
+    },
+    {
+      "id": "MC01",
+      "name": "机关与交互物",
+      "kind": "mechanisms",
+      "path": "originals/mechanisms/mc01-mechanisms-props-v2.png",
+      "prompt": "prompts/mechanisms/mc01-mechanisms-props-v2.txt",
+      "sha256": "cd1b6d2b77c72f76b93b99c1c9d554a473a3ba36ff138e93848ca4c05c6cdedb",
+      "width": 1536,
+      "height": 1024,
+      "hasAlpha": true,
+      "transparent": true,
+      "alpha": {
+        "zero": 756109,
+        "partial": 816755,
+        "opaque": 0,
+        "max": 254,
+        "corners": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "stage": "concept-source",
+      "runtimeReady": false,
+      "review": "已修正耗尽箱为完整暗色空箱；后续拆分机关状态。",
+      "referenceIds": [
+        "P01"
+      ]
+    },
+    {
+      "id": "FX01",
+      "name": "特效总览",
+      "kind": "effects",
+      "path": "originals/effects/fx01-effects-library-v1.png",
+      "prompt": "prompts/effects/fx01-effects-library-v1.txt",
+      "sha256": "1baca777c8c5a953b62297149ff0065d25baf69542dea269d2cebc56754bf67f",
+      "width": 1536,
+      "height": 1024,
+      "hasAlpha": true,
+      "transparent": true,
+      "alpha": {
+        "zero": 834949,
+        "partial": 737915,
+        "opaque": 0,
+        "max": 254,
+        "corners": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "stage": "concept-source",
+      "runtimeReady": false,
+      "review": "已查看轮廓与分隔；仍需单项拆分、特效解耦、尺寸统一与动画制作。",
+      "referenceIds": [
+        "P01"
+      ]
+    },
+    {
+      "id": "UI01",
+      "name": "界面图标",
+      "kind": "ui",
+      "path": "originals/ui/ui01-interface-icons-v1.png",
+      "prompt": "prompts/ui/ui01-interface-icons-v1.txt",
+      "sha256": "c109b1aac551c7dfcfae8bc45681bfa94657ff52b37afba397d287990fb2ec9d",
+      "width": 1536,
+      "height": 1024,
+      "hasAlpha": true,
+      "transparent": true,
+      "alpha": {
+        "zero": 927309,
+        "partial": 645555,
+        "opaque": 0,
+        "max": 254,
+        "corners": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "stage": "concept-source",
+      "runtimeReady": false,
+      "review": "形象概念完成；后续统一尺寸、拆分与校准。",
+      "referenceIds": [
+        "P01"
+      ]
+    },
+    {
+      "id": "TL01",
+      "name": "自然地形构件",
+      "kind": "tilesets",
+      "path": "originals/tilesets/tl01-natural-terrain-kit-v1.png",
+      "prompt": "prompts/tilesets/tl01-natural-terrain-kit-v1.txt",
+      "sha256": "371c72deb04fc06c50af5272bf2be34534ea440850c8c4460cf7d68ed63511c2",
+      "width": 1536,
+      "height": 1024,
+      "hasAlpha": true,
+      "transparent": true,
+      "alpha": {
+        "zero": 746298,
+        "partial": 826566,
+        "opaque": 0,
+        "max": 254,
+        "corners": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "stage": "concept-source",
+      "runtimeReady": false,
+      "review": "自然地形概念完成；后续统一网格并清理可站立面的植被遮挡。",
+      "referenceIds": [
+        "P01"
+      ]
+    },
+    {
+      "id": "TL02",
+      "name": "建筑地形构件",
+      "kind": "tilesets",
+      "path": "originals/tilesets/tl02-built-terrain-kit-v1.png",
+      "prompt": "prompts/tilesets/tl02-built-terrain-kit-v1.txt",
+      "sha256": "f5c961bc9046d5d328591d6fff83f6a5371387853464f163e7f09aaaa837d71e",
+      "width": 1536,
+      "height": 1024,
+      "hasAlpha": true,
+      "transparent": true,
+      "alpha": {
+        "zero": 664423,
+        "partial": 908441,
+        "opaque": 0,
+        "max": 254,
+        "corners": [
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "stage": "concept-source",
+      "runtimeReady": false,
+      "review": "形象概念完成；后续统一尺寸、拆分与校准。",
+      "referenceIds": [
+        "P01"
+      ]
+    }
+  ]
+}

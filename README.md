@@ -1,5 +1,11 @@
 # 大声说话 · Loud Speak
 
+## 双端同步发布
+
+本地内网及 Google Cloud 实例按同一 Git 提交发布；代码和静态资源同步，各端聊天数据独立保存。发布、版本核验及管理隧道说明见 [双端发布约定](docs/operations/DEPLOYMENT.md)。
+
+首页左下角新增「蔬果大冒险」入口，也可访问 `/games/veggie-adventure/`。八世界32关，主角三形态、12类敌人、8位首领；手机左摇杆、右功能键。完整制作记录见 [游戏设计索引](docs/veggie-adventure/README.md)。
+
 Windows 局域网匿名公共聊天室。Node.js 22 LTS；SQLite 本地保存，无外部账号或云服务依赖。
 
 ## 安装

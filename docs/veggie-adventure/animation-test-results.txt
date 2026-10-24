@@ -1,0 +1,255 @@
+TAP version 13
+# Subtest: gravity lands on floor and movement stays grounded
+ok 1 - gravity lands on floor and movement stays grounded
+  ---
+  duration_ms: 3.5115
+  ...
+# Subtest: held jump exceeds tap, repeated press cannot double jump
+ok 2 - held jump exceeds tap, repeated press cannot double jump
+  ---
+  duration_ms: 2.0183
+  ...
+# Subtest: short pits in 1-1 are below full running jump horizontal range
+ok 3 - short pits in 1-1 are below full running jump horizontal range
+  ---
+  duration_ms: 1.5684
+  ...
+# Subtest: reward box only spawns once and brick needs grown form
+ok 4 - reward box only spawns once and brick needs grown form
+  ---
+  duration_ms: 0.4347
+  ...
+# Subtest: reward emerges then drops to reachable ground beside box
+ok 5 - reward emerges then drops to reachable ground beside box
+  ---
+  duration_ms: 2.7544
+  ...
+# Subtest: growth keeps feet fixed; low ceiling forces crouch
+ok 6 - growth keeps feet fixed; low ceiling forces crouch
+  ---
+  duration_ms: 0.6512
+  ...
+# Subtest: power states and damage protection
+ok 7 - power states and damage protection
+  ---
+  duration_ms: 0.3113
+  ...
+# Subtest: star resets to ten seconds and does not protect pits
+ok 8 - star resets to ten seconds and does not protect pits
+  ---
+  duration_ms: 0.2513
+  ...
+# Subtest: descending stomp kills mushroom but side contact kills player
+ok 9 - descending stomp kills mushroom but side contact kills player
+  ---
+  duration_ms: 0.6473
+  ...
+# Subtest: cabbage stomp, kick and rolling-shell enemy hit
+ok 10 - cabbage stomp, kick and rolling-shell enemy hit
+  ---
+  duration_ms: 0.7953
+  ...
+# Subtest: shell recovers after nine seconds
+ok 11 - shell recovers after nine seconds
+  ---
+  duration_ms: 1.0612
+  ...
+# Subtest: fireball respects form, cooldown, count and crouch
+ok 12 - fireball respects form, cooldown, count and crouch
+  ---
+  duration_ms: 0.3599
+  ...
+# Subtest: death restores world, score, timer and clears star/projectiles
+ok 13 - death restores world, score, timer and clears star/projectiles
+  ---
+  duration_ms: 0.5186
+  ...
+# Subtest: checkpoint saves once and restores its position
+ok 14 - checkpoint saves once and restores its position
+  ---
+  duration_ms: 0.5612
+  ...
+# Subtest: timeout restarts and exit completes without advancing other levels
+ok 15 - timeout restarts and exit completes without advancing other levels
+  ---
+  duration_ms: 0.1902
+  ...
+# Subtest: save round trip rejects broken inputs
+ok 16 - save round trip rejects broken inputs
+  ---
+  duration_ms: 0.8894
+  ...
+# Subtest: 32 ordered independent maps, all resource references and safe spawn/checkpoint/exit ground
+ok 17 - 32 ordered independent maps, all resource references and safe spawn/checkpoint/exit ground
+  ---
+  duration_ms: 6.4829
+  ...
+# Subtest: campaign advances all 32 exits, carries score/form, restores completed campaign and ends once
+ok 18 - campaign advances all 32 exits, carries score/form, restores completed campaign and ends once
+  ---
+  duration_ms: 11.9555
+  ...
+# Subtest: grown player crawls through low root tunnel without standing into roof
+ok 19 - grown player crawls through low root tunnel without standing into roof
+  ---
+  duration_ms: 4.4088
+  ...
+# Subtest: underwater swimming rises, fish cannot be stomped, and air leaper can
+ok 20 - underwater swimming rises, fish cannot be stomped, and air leaper can
+  ---
+  duration_ms: 1.2037
+  ...
+# Subtest: moving platforms carry rider, crumble restores and crushing ignores star
+ok 21 - moving platforms carry rider, crumble restores and crushing ignores star
+  ---
+  duration_ms: 0.7112
+  ...
+# Subtest: heat has warning/rest phases and is fatal even with star; spikes respect temporary immunity
+ok 22 - heat has warning/rest phases and is fatal even with star; spikes respect temporary immunity
+  ---
+  duration_ms: 0.2721
+  ...
+# Subtest: walnut/bolt resist fire, spike cannot be stomped, winged becomes cabbage
+ok 23 - walnut/bolt resist fire, spike cannot be stomped, winged becomes cabbage
+  ---
+  duration_ms: 0.7576
+  ...
+# Subtest: rolling shell opens gate and defeats fireproof walnut
+ok 24 - rolling shell opens gate and defeats fireproof walnut
+  ---
+  duration_ms: 0.4653
+  ...
+# Subtest: turret suppresses near fire, signals before shooting; cloud has three-child cap
+ok 25 - turret suppresses near fire, signals before shooting; cloud has three-child cap
+  ---
+  duration_ms: 0.5547
+  ...
+# Subtest: boss 1 telegraph, weakness window, one HP per opening and entrance rollback
+ok 26 - boss 1 telegraph, weakness window, one HP per opening and entrance rollback
+  ---
+  duration_ms: 1.2242
+  ...
+# Subtest: boss 2 telegraph, weakness window, one HP per opening and entrance rollback
+ok 27 - boss 2 telegraph, weakness window, one HP per opening and entrance rollback
+  ---
+  duration_ms: 0.5374
+  ...
+# Subtest: boss 3 telegraph, weakness window, one HP per opening and entrance rollback
+ok 28 - boss 3 telegraph, weakness window, one HP per opening and entrance rollback
+  ---
+  duration_ms: 0.4592
+  ...
+# Subtest: boss 4 telegraph, weakness window, one HP per opening and entrance rollback
+ok 29 - boss 4 telegraph, weakness window, one HP per opening and entrance rollback
+  ---
+  duration_ms: 0.5955
+  ...
+# Subtest: boss 5 telegraph, weakness window, one HP per opening and entrance rollback
+ok 30 - boss 5 telegraph, weakness window, one HP per opening and entrance rollback
+  ---
+  duration_ms: 0.4545
+  ...
+# Subtest: boss 6 telegraph, weakness window, one HP per opening and entrance rollback
+ok 31 - boss 6 telegraph, weakness window, one HP per opening and entrance rollback
+  ---
+  duration_ms: 0.4165
+  ...
+# Subtest: boss 7 telegraph, weakness window, one HP per opening and entrance rollback
+ok 32 - boss 7 telegraph, weakness window, one HP per opening and entrance rollback
+  ---
+  duration_ms: 0.4833
+  ...
+# Subtest: boss 8 telegraph, weakness window, one HP per opening and entrance rollback
+ok 33 - boss 8 telegraph, weakness window, one HP per opening and entrance rollback
+  ---
+  duration_ms: 0.4784
+  ...
+# Subtest: closed boss blocks exit; open-window partial fire hits reset and star cannot auto-kill
+ok 34 - closed boss blocks exit; open-window partial fire hits reset and star cannot auto-kill
+  ---
+  duration_ms: 0.3446
+  ...
+# Subtest: checkpoint restores moving terrain, gates, enemy projectiles and timers
+ok 35 - checkpoint restores moving terrain, gates, enemy projectiles and timers
+  ---
+  duration_ms: 0.2753
+  ...
+# Subtest: campaign save rejects other-level shapes, malformed boss and NaN-like fields
+ok 36 - campaign save rejects other-level shapes, malformed boss and NaN-like fields
+  ---
+  duration_ms: 0.5355
+  ...
+# Subtest: basic running jump physically reaches every exposed boss head without a power-up
+ok 37 - basic running jump physically reaches every exposed boss head without a power-up
+  ---
+  duration_ms: 2.643
+  ...
+# Subtest: all runtime images decode and sprite canvases have uniform foot anchors
+ok 38 - all runtime images decode and sprite canvases have uniform foot anchors
+  ---
+  duration_ms: 268.5923
+  ...
+# Subtest: local HTTP serves page, complete module graph and every manifest image
+ok 39 - local HTTP serves page, complete module graph and every manifest image
+  ---
+  duration_ms: 470.5131
+  ...
+# Subtest: visible body calibration makes base hero larger than common enemies while keeping feet and collision data
+ok 40 - visible body calibration makes base hero larger than common enemies while keeping feet and collision data
+  ---
+  duration_ms: 0.3101
+  ...
+# Subtest: new PNG shield has a transparent center and renders only while star protection is active
+ok 41 - new PNG shield has a transparent center and renders only while star protection is active
+  ---
+  duration_ms: 16.8494
+  ...
+# Subtest: all 27 atlases cover roster clips, decode, have alpha and distinct nonempty frames
+ok 42 - all 27 atlases cover roster clips, decode, have alpha and distinct nonempty frames
+  ---
+  duration_ms: 2717.8256
+  ...
+# Subtest: looping frames wrap and terminal frames hold independently of frame rate
+ok 43 - looping frames wrap and terminal frames hold independently of frame rate
+  ---
+  duration_ms: 0.1751
+  ...
+# Subtest: animation changes do not change simulation outcomes across all 32 levels
+ok 44 - animation changes do not change simulation outcomes across all 32 levels
+  ---
+  duration_ms: 245.9172
+  ...
+# Subtest: death continues visually while physics time stops; restore resets presentation
+ok 45 - death continues visually while physics time stops; restore resets presentation
+  ---
+  duration_ms: 0.3858
+  ...
+# Subtest: terminal victory animates every form and does not advance simulation
+ok 46 - terminal victory animates every form and does not advance simulation
+  ---
+  duration_ms: 1.98
+  ...
+# Subtest: shell retract, wing loss, deflect and defeated sprites persist without live collisions
+ok 47 - shell retract, wing loss, deflect and defeated sprites persist without live collisions
+  ---
+  duration_ms: 0.3496
+  ...
+# Subtest: every enemy and boss phase selects a clip that exists
+ok 48 - every enemy and boss phase selects a clip that exists
+  ---
+  duration_ms: 0.4985
+  ...
+# Subtest: headless draw uses valid atlas crops for all levels without mutating gameplay
+ok 49 - headless draw uses valid atlas crops for all levels without mutating gameplay
+  ---
+  duration_ms: 9.7729
+  ...
+1..49
+# tests 49
+# suites 0
+# pass 49
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3860.6139

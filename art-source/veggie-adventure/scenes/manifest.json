@@ -1,0 +1,83 @@
+{
+  "stage": "separated-environment-sources",
+  "assets": [
+    {
+      "id": "W01-far",
+      "world": "01",
+      "kind": "far",
+      "path": "scenes/batch-01/w01-far-v1.png",
+      "prompt": "prompts/scenes/w01-far-v1.txt",
+      "width": 1672,
+      "height": 940,
+      "transparent": false,
+      "alphaZero": 0,
+      "sha256": "5a8e35c6bc3042f48362614d6c71f3f89c2e644ad3e72f931ca23d62f1b79d97",
+      "runtimeReady": false
+    },
+    {
+      "id": "W01-mid",
+      "world": "01",
+      "kind": "mid",
+      "path": "scenes/batch-01/w01-mid-v1.png",
+      "prompt": "prompts/scenes/w01-mid-v1.txt",
+      "width": 1672,
+      "height": 941,
+      "transparent": true,
+      "alphaZero": 910918,
+      "sha256": "c48ec7920f32896d8e8aee95e74de1bfd69b58a3919d6a1a117840b48ec820f5",
+      "runtimeReady": false
+    },
+    {
+      "id": "W01-kit",
+      "world": "01",
+      "kind": "kit",
+      "path": "scenes/batch-01/w01-kit-v1.png",
+      "prompt": "prompts/scenes/w01-kit-v1.txt",
+      "width": 1672,
+      "height": 941,
+      "transparent": true,
+      "alphaZero": 961135,
+      "sha256": "e3c087807b40b3d7f69bfcfcc0cb985bc06448a9c86ac8a4604538b22e1586b2",
+      "runtimeReady": false
+    },
+    {
+      "id": "W07-far",
+      "world": "07",
+      "kind": "far",
+      "path": "scenes/batch-01/w07-far-v1.png",
+      "prompt": "prompts/scenes/w07-far-v1.txt",
+      "width": 1672,
+      "height": 941,
+      "transparent": false,
+      "alphaZero": 0,
+      "sha256": "8126ec7e0e12ecec40e16cb467d82e49331e9838042ae48544fcb7cd33f325bd",
+      "runtimeReady": false
+    },
+    {
+      "id": "W07-mid",
+      "world": "07",
+      "kind": "mid",
+      "path": "scenes/batch-01/w07-mid-v1.png",
+      "prompt": "prompts/scenes/w07-mid-v1.txt",
+      "width": 1672,
+      "height": 941,
+      "transparent": true,
+      "alphaZero": 886567,
+      "sha256": "260b35806f5a6486597f101f60c5c402331607a0e67ecfb18753388de8ab8581",
+      "runtimeReady": false
+    },
+    {
+      "id": "W07-kit",
+      "world": "07",
+      "kind": "kit",
+      "path": "scenes/batch-01/w07-kit-v1.png",
+      "prompt": "prompts/scenes/w07-kit-v1.txt",
+      "width": 1671,
+      "height": 941,
+      "transparent": true,
+      "alphaZero": 953746,
+      "sha256": "073081136cb93291c61f9621c481481eb1566a8f142800d9189e61e57c712959",
+      "runtimeReady": false
+    }
+  ]
+}

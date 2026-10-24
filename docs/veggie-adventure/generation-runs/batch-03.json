@@ -1,0 +1,53 @@
+[
+  {
+    "id": "E09",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-87129efa-c605-4986-b256-a45bcb698e16.png",
+    "version": "v1",
+    "prompt": "Use case: stylized-concept. Produce ONE character concept asset sheet for an original vegetable-themed 2D platformer. True transparent PNG alpha background. Reference image 1 is STYLE ONLY: match its polished 32-bit-era 2D pixel art, crisp dark contours, warm readable shading, expressive eyes, controlled fine pixel clusters. Do NOT copy its potato anatomy, scarf or boots onto unrelated species. No text, title, labels, borders, swatches, floor, cast shadow, landscape, paper, checkerboard or matte. All blank space alpha=0. Opaque interiors with clean alpha edges; no general glow. Not vector, not 3D, no soft painting. Six separate complete figures in a generous 3-column by 2-row layout. No overlap between poses, at least 10% transparent gutters, keep every limb and particle within its cell. These are key-pose CONCEPTS, not animation frames; scale and grid fitting will be done later. Maintain exact same design identity between poses.\nCharacter E09: 棉花云牧者. Ingredient: 棉花与棉桃. Silhouette MUST follow: 蓬松棉团托着棉桃脸，两片苞叶像扶手. Palette: 暖白／青灰／褐绿.\nBehavior context: 空中横向跟随，定时投下E04；同屏其生成的刺栗最多3只. Readable counterplay: 借高台踩踏；火弹. Danger cue: 投掷前0.6秒抬手；禁止在玩家身上直接生成刺栗.\nShow SIX ordered poses: front three-quarter idle, side movement, back silhouette, primary special behavior, alternative state, non-gory hurt pose. Required behavioral states to communicate across these poses: 跟随→抬手→投掷→冷却. For simple swimmers or walkers use distinct movement anticipation and action. Show cotton boll creature on a compact cotton puff, not goggles or a turtle riding a weather cloud.\nPreserve recognizable edible plant anatomy and game-readable contours. All figures isolated on actual transparent alpha.\nSTRICT: Do not invent attacks not specified. No fire/chili/stars except tiny hurt marks. For flying cabbage, reference 2 is its exact base anatomy; add leaf wings, preserve base face/root feet.",
+    "referenceIds": [
+      "P01"
+    ],
+    "review": "待修订：投掷物应为刺栗，当前像棉桃。"
+  },
+  {
+    "id": "E10",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-280cf405-c9a0-42a6-8f78-570bfcbd2a93.png",
+    "version": "v1",
+    "prompt": "Use case: stylized-concept. Produce ONE character concept asset sheet for an original vegetable-themed 2D platformer. True transparent PNG alpha background. Reference image 1 is STYLE ONLY: match its polished 32-bit-era 2D pixel art, crisp dark contours, warm readable shading, expressive eyes, controlled fine pixel clusters. Do NOT copy its potato anatomy, scarf or boots onto unrelated species. No text, title, labels, borders, swatches, floor, cast shadow, landscape, paper, checkerboard or matte. All blank space alpha=0. Opaque interiors with clean alpha edges; no general glow. Not vector, not 3D, no soft painting. Six separate complete figures in a generous 3-column by 2-row layout. No overlap between poses, at least 10% transparent gutters, keep every limb and particle within its cell. These are key-pose CONCEPTS, not animation frames; scale and grid fitting will be done later. Maintain exact same design identity between poses.\nCharacter E10: 茄子炮弹兵. Ingredient: 茄子. Silhouette MUST follow: 横向茄子、叶萼尾翼、钝圆头；没有手脚. Palette: 紫黑／浅紫／叶绿.\nBehavior context: 从固定发射器水平飞行，离开活动区域销毁. Readable counterplay: 从上方踩落；火弹无效. Danger cue: 发射器亮起0.5秒提示；近距24逻辑单位禁止发射.\nShow SIX ordered poses: front three-quarter idle, side movement, back silhouette, primary special behavior, alternative state, non-gory hurt pose. Required behavioral states to communicate across these poses: 发射→飞行→踩落. For simple swimmers or walkers use distinct movement anticipation and action. Horizontal eggplant projectile has NO ARMS, NO LEGS, NO BOOTS. Six views/states of eggplant with leaf tail fins.\nPreserve recognizable edible plant anatomy and game-readable contours. All figures isolated on actual transparent alpha.\nSTRICT: Do not invent attacks not specified. No fire/chili/stars except tiny hurt marks. For flying cabbage, reference 2 is its exact base anatomy; add leaf wings, preserve base face/root feet.",
+    "referenceIds": [
+      "P01"
+    ],
+    "review": "已查看轮廓与状态；比例、网格和动画待统一。"
+  },
+  {
+    "id": "E11",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-2048396f-a0e3-4a4f-a0bc-738a953d4867.png",
+    "version": "v1",
+    "prompt": "Use case: stylized-concept. Produce ONE character concept asset sheet for an original vegetable-themed 2D platformer. True transparent PNG alpha background. Reference image 1 is STYLE ONLY: match its polished 32-bit-era 2D pixel art, crisp dark contours, warm readable shading, expressive eyes, controlled fine pixel clusters. Do NOT copy its potato anatomy, scarf or boots onto unrelated species. No text, title, labels, borders, swatches, floor, cast shadow, landscape, paper, checkerboard or matte. All blank space alpha=0. Opaque interiors with clean alpha edges; no general glow. Not vector, not 3D, no soft painting. Six separate complete figures in a generous 3-column by 2-row layout. No overlap between poses, at least 10% transparent gutters, keep every limb and particle within its cell. These are key-pose CONCEPTS, not animation frames; scale and grid fitting will be done later. Maintain exact same design identity between poses.\nCharacter E11: 飞翼卷心菜. Ingredient: 卷心菜与翼状叶片. Silhouette MUST follow: 沿用E02身体，两片对称大叶翼；不能只靠换色区分. Palette: 嫩绿／青绿／奶白.\nBehavior context: 按关卡配置跳跃或沿固定路径飞行；首次踩踏去翼变E02. Readable counterplay: 首次踩踏去翼；火弹或运动壳体消灭. Danger cue: 碰撞体不包括叶翼装饰.\nShow SIX ordered poses: front three-quarter idle, side movement, back silhouette, primary special behavior, alternative state, non-gory hurt pose. Required behavioral states to communicate across these poses: 飞行／跳跃→去翼→E02巡逻. For simple swimmers or walkers use distinct movement anticipation and action. \nPreserve recognizable edible plant anatomy and game-readable contours. All figures isolated on actual transparent alpha.\nSTRICT: Do not invent attacks not specified. No fire/chili/stars except tiny hurt marks. For flying cabbage, reference 2 is its exact base anatomy; add leaf wings, preserve base face/root feet.",
+    "referenceIds": [
+      "P01",
+      "E02"
+    ],
+    "review": "已查看轮廓与状态；比例、网格和动画待统一。"
+  },
+  {
+    "id": "E06",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-a58f1716-33c8-4eb7-97cc-1b6cb0bb028f.png",
+    "version": "v2",
+    "prompt": "Edit this transparent bell pepper fish six-pose sheet. Preserve design, style, layout and every other pose. ONLY fix bottom-left pose: REMOVE ALL flame, projectile and fiery glow; replace fire breath pose with a horizontal fast-swimming pose with closed mouth and bent leaf tail. Fish never attacks by shooting. Actual transparent alpha background, no text or background, no new effects.",
+    "referenceIds": [
+      "P01"
+    ],
+    "review": "已移除额外喷射能力，保持原定行为；比例和动画待统一。"
+  },
+  {
+    "id": "E08",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-c942409e-5c36-4b72-8b1e-a26aed603581.png",
+    "version": "v2",
+    "prompt": "Edit this transparent pea pod plant six-pose sheet. Preserve design, style, layout and every other pose. ONLY fix bottom-left pose: REMOVE the detached flying pea and all motion trails. Keep the pod wide open with all round pea teeth firmly ATTACHED inside jaws. This plant bites and retracts, it never spits or shoots peas. Actual transparent alpha background, no text or background, no new effects.",
+    "referenceIds": [
+      "P01"
+    ],
+    "review": "已移除额外喷射能力，保持原定行为；比例和动画待统一。"
+  }
+]

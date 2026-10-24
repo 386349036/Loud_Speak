@@ -1,0 +1,62 @@
+[
+  {
+    "id": "W01-arena",
+    "world": "01",
+    "name": "晨光苔林",
+    "kind": "arena",
+    "transparent": false,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg01-garden-dawn-v1.png",
+    "prompt": "Use case: stylized-concept. Asset: original vegetable platformer arena environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Opaque 16:9 boss-area BACKGROUND PLATE: open pumpkin-emblem garden gate beyond a wide empty courtyard. Main environment details along outer sides and upper third; center and lower third quiet dark low-contrast atmosphere for foreground fighters. Camera straight side-on, no ground plane receding to horizon, NO foreground ground slab, no stairs/platforms, no boss or character. This is the distant background behind separately built collidable arena floor. Theme: mossy forest roots and ancient stone garden. Palette: cream dawn, moss green, ochre stone. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Fully opaque backdrop.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-fa4f6334-3fed-4a82-8c4d-48259478a6d7.png"
+  },
+  {
+    "id": "W01-special",
+    "world": "01",
+    "name": "晨光苔林",
+    "kind": "special",
+    "transparent": true,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg01-garden-dawn-v1.png",
+    "prompt": "Use case: stylized-concept. Asset: original vegetable platformer special environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent special environment/interaction sheet exactly 8 isolated objects in 4 columns x 2 rows, ordered left to right: root stair section; low garden wall; intact seed-mark reward box; empty dark spent box; breakable stone wall; short root bridge; pumpkin-emblem exit gate; tiny fallen-leaf foreground cluster. Large transparent gaps, no overlap, every object fully inside its own cell. Flat side elevation, crisp straight walkable tops, do not put foliage across them. Gates and doors have botanical emblems NOT writing. Water, syrup, steam and effects also transparent outside their own silhouette. These are key state source illustrations, NOT a continuous animation. Theme: mossy forest roots and ancient stone garden. Palette: cream dawn, moss green, ochre stone. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-5a3ffdb9-a245-4c45-a476-704348d3e4fa.png"
+  },
+  {
+    "id": "W02-far",
+    "world": "02",
+    "name": "根系地窖",
+    "kind": "far",
+    "transparent": false,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg02-root-cellar-v1.png",
+    "prompt": "Use case: stylized-concept. Asset: original vegetable platformer far environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Opaque full-frame 16:9 distant background ONLY. Deep cave atmosphere, recessed cave walls and tiny root silhouettes in the distance; NO outdoor sky. Quiet central play space. NO near trees, no foreground, no ground or platforms, no framing arch. Theme: underground root cellar and onion storage mine. Palette: dusky violet rock, warm amber lamps, earthy umber. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Fully opaque backdrop.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-b8ed0ebb-ccaa-427c-bc01-2fef0f94e718.png"
+  },
+  {
+    "id": "W02-mid",
+    "world": "02",
+    "name": "根系地窖",
+    "kind": "mid",
+    "transparent": true,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg02-root-cellar-v1.png",
+    "prompt": "Use case: stylized-concept. Asset: original vegetable platformer mid environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent wide 16:9 middle-distance layer ONLY: underground root cellar and onion storage mine silhouettes forming a loose horizontal arrangement concentrated on bottom half. Open true transparent negative space above and through all openings. NO sky, NO distant mountains, NO water tint, NO ground slab or gameplay platforms, muted contrast. Theme: underground root cellar and onion storage mine. Palette: dusky violet rock, warm amber lamps, earthy umber. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-13c95453-f0d5-49eb-8146-9add12fcbce7.png"
+  },
+  {
+    "id": "W02-kit",
+    "world": "02",
+    "name": "根系地窖",
+    "kind": "kit",
+    "transparent": true,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg02-root-cellar-v1.png",
+    "prompt": "Use case: stylized-concept. Asset: original vegetable platformer kit environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent modular environment sheet exactly 8 isolated objects, 4 columns x 2 rows, even broad transparent spacing. Row1: rectangular stratified soil ground ledge; matching stone brick ledge; short horizontal wooden bridge; three-step stone stair. Row2: root cluster; standalone underground root cellar and onion storage mine arch or support frame; small lamp; low root or botanical decoration. All walkable tops straight horizontal, precise SIDE ELEVATION orthographic, no top surface visible, no perspective. Plants below walking top, never across it. Each object entirely within own cell. Theme: underground root cellar and onion storage mine. Palette: dusky violet rock, warm amber lamps, earthy umber. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-57712d8d-64e4-40f8-8305-41a4bacb2a0d.png"
+  },
+  {
+    "id": "W02-arena",
+    "world": "02",
+    "name": "根系地窖",
+    "kind": "arena",
+    "transparent": false,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg02-root-cellar-v1.png",
+    "prompt": "Use case: stylized-concept. Asset: original vegetable platformer arena environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Opaque 16:9 boss-area BACKGROUND PLATE: deep onion-root mine chamber, large root arch and recessed onion store niches. Main environment details along outer sides and upper third; center and lower third quiet dark low-contrast atmosphere for foreground fighters. Camera straight side-on, no ground plane receding to horizon, NO foreground ground slab, no stairs/platforms, no boss or character. This is the distant background behind separately built collidable arena floor. Theme: underground root cellar and onion storage mine. Palette: dusky violet rock, warm amber lamps, earthy umber. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Fully opaque backdrop.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-65af3f49-c649-4985-a576-6945bb9e7770.png"
+  }
+]

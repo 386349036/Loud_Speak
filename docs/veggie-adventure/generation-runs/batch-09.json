@@ -1,0 +1,30 @@
+[
+  {
+    "id": "TL01",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-0e566cbe-a66b-47ad-bf80-c6cc5d6f5de0.png",
+    "version": "v1",
+    "prompt": "Use case: stylized-concept. ONE clean transparent PNG game asset CONCEPT sheet for original vegetable platformer. Match reference's sophisticated 32-bit 2D pixel-art contour, texture detail and palette; do NOT draw the reference hero. TWELVE separate side-on terrain concept chunks in 4 columns x 3 rows: grass soil top segment, matching exposed soil block, mossy stone ledge, cracked stone block, tree root ledge, bark platform, cornfield dirt ledge, thorn hedge hazard, aquatic stone ledge with algae, lotus leaf platform, night violet moss ledge, grape-vine bridge segment. Isolated individual chunks with transparent gaps, no scenery or sky, no character. Show clear flat playable tops, decorative plants kept below or to sides. Not an exact seamless tileset yet. True alpha background, no floor or cast shadows, no text, labels, border, paper, checkerboard or opaque matte. Hard pixel clusters and readable silhouettes. Large transparent gutters, every object fully inside canvas, no cropping. This is art concept source; exact sizes/grid/proportions will be normalized later. Landscape 3:2.",
+    "review": "自然地形概念完成；后续统一网格并清理可站立面的植被遮挡。"
+  },
+  {
+    "id": "UI01",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-9b5a2ad3-d7b9-4287-8246-885f53b9e170.png",
+    "version": "v1",
+    "prompt": "Use case: stylized-concept. ONE clean transparent PNG game asset CONCEPT sheet for original vegetable platformer. Match reference's sophisticated 32-bit 2D pixel-art contour, texture detail and palette; do NOT draw the reference hero. TWELVE distinct isolated UI icons in 4 columns x 3 rows: left arrow, right arrow, jump upward arrow, chili attack icon, pause two bars, play triangle, retry curved arrow, speaker on, muted speaker, leaf-shaped full heart, empty heart outline, small seed medal. Botanical wood-and-leaf style, consistent dark outline and cream/gold/green fill. Symbols only, no written text, no panels, no decorative scenery. True alpha background, no floor or cast shadows, no text, labels, border, paper, checkerboard or opaque matte. Hard pixel clusters and readable silhouettes. Large transparent gutters, every object fully inside canvas, no cropping. This is art concept source; exact sizes/grid/proportions will be normalized later. Landscape 3:2.",
+    "review": "形象概念完成；后续统一尺寸、拆分与校准。"
+  },
+  {
+    "id": "TL02",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-cd22dc92-56b7-4abb-9297-6b3893332d90.png",
+    "version": "v1",
+    "prompt": "Use case: stylized-concept. ONE clean transparent PNG game asset CONCEPT sheet for original vegetable platformer. Match reference's sophisticated 32-bit 2D pixel-art contour, texture detail and palette; do NOT draw the reference hero. TWELVE separate side-on terrain concept chunks in 4 columns x 3 rows: root cellar purple stone top ledge, matching wall block, timber support beam, greenhouse pale stone arch, glass conservatory window frame, terracotta workshop ledge, copper vent block, dark fireproof masonry, amber molten-sugar pool cross-section hazard, crimson citadel ledge, golden calyx ornamental column, ruby seed crystal inset wall. Each isolated on transparent with clear gutter, no characters or scenery. Keep modular rectangular readable geometry. Concept chunks, not a certified seamless atlas. True alpha background, no floor or cast shadows, no text, labels, border, paper, checkerboard or opaque matte. Hard pixel clusters and readable silhouettes. Large transparent gutters, every object fully inside canvas, no cropping. This is art concept source; exact sizes/grid/proportions will be normalized later. Landscape 3:2.",
+    "review": "形象概念完成；后续统一尺寸、拆分与校准。"
+  },
+  {
+    "id": "MC01",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-6e159928-37f0-43ea-bcaa-158f638eeaa6.png",
+    "version": "v2",
+    "prompt": "Edit this transparent 12-object game prop sheet. Change ONLY the TOP ROW SECOND object, currently a BROKEN wooden crate. Replace it with an INTACT closed dark desaturated brown wooden spent-reward crate of identical outer size and same wood style as first crate, but NO golden seed emblem and NO sprout, no holes, no broken planks, no particles. It is a solid used-up reward block that remains standable after collecting its reward. Keep every other eleven object EXACTLY unchanged. Transparent PNG alpha background, no text, no labels, no ground or cast shadows.",
+    "review": "已修正耗尽箱为完整暗色空箱；后续拆分机关状态。"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "W06-mid",
+    "world": "06",
+    "name": "熔糖工坊",
+    "kind": "mid",
+    "transparent": true,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg06-ember-workshop-v1.png",
+    "prompt": "Use case: stylized-concept. Asset: original vegetable platformer mid environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent wide 16:9 middle-distance layer ONLY: sugar cooking workshop, kilns and copper pipes silhouettes forming a loose horizontal arrangement concentrated on bottom half. Open true transparent negative space above and through all openings. NO sky, NO distant mountains, NO water tint, NO ground slab or gameplay platforms, muted contrast. Theme: sugar cooking workshop, kilns and copper pipes. Palette: indigo dusk, terracotta bricks, copper, restrained orange heat. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-16201789-5a6d-4e25-905c-91f7a2de8579.png"
+  },
+  {
+    "id": "W06-kit",
+    "world": "06",
+    "name": "熔糖工坊",
+    "kind": "kit",
+    "transparent": true,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg06-ember-workshop-v1.png",
+    "prompt": "Use case: stylized-concept. Asset: original vegetable platformer kit environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent modular environment sheet exactly 8 isolated objects, 4 columns x 2 rows, even broad transparent spacing. Row1: rectangular kiln brick ground ledge; matching stone brick ledge; short horizontal wooden bridge; three-step stone stair. Row2: herb planter; standalone sugar cooking workshop, kilns and copper pipes arch or support frame; small lamp; low root or botanical decoration. All walkable tops straight horizontal, precise SIDE ELEVATION orthographic, no top surface visible, no perspective. Plants below walking top, never across it. Each object entirely within own cell. Theme: sugar cooking workshop, kilns and copper pipes. Palette: indigo dusk, terracotta bricks, copper, restrained orange heat. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-42241f5f-8649-4385-9fc2-39d3dbefbcb7.png"
+  },
+  {
+    "id": "W06-arena",
+    "world": "06",
+    "name": "熔糖工坊",
+    "kind": "arena",
+    "transparent": false,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg06-ember-workshop-v1.png",
+    "prompt": "Use case: stylized-concept. Asset: original vegetable platformer arena environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Opaque 16:9 boss-area BACKGROUND PLATE: chili-emblem sugar workshop hall, distant furnaces at sides, dark readable center. Main environment details along outer sides and upper third; center and lower third quiet dark low-contrast atmosphere for foreground fighters. Camera straight side-on, no ground plane receding to horizon, NO foreground ground slab, no stairs/platforms, no boss or character. This is the distant background behind separately built collidable arena floor. Theme: sugar cooking workshop, kilns and copper pipes. Palette: indigo dusk, terracotta bricks, copper, restrained orange heat. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Fully opaque backdrop.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-bec7a6bf-366a-4639-8fc0-ca8aed7f5da0.png"
+  },
+  {
+    "id": "W06-special",
+    "world": "06",
+    "name": "熔糖工坊",
+    "kind": "special",
+    "transparent": true,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg06-ember-workshop-v1.png",
+    "prompt": "Use case: stylized-concept. Asset: original vegetable platformer special environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent special environment/interaction sheet exactly 8 isolated objects in 4 columns x 2 rows, ordered left to right: flat amber syrup hazard surface strip; inactive copper steam vent; same vent emitting narrow steam plume; copper valve; low brick cover block; rectangular moving metal platform; chili-emblem workshop exit; sparse ember cluster. Large transparent gaps, no overlap, every object fully inside its own cell. Flat side elevation, crisp straight walkable tops, do not put foliage across them. Gates and doors have botanical emblems NOT writing. Water, syrup, steam and effects also transparent outside their own silhouette. These are key state source illustrations, NOT a continuous animation. Theme: sugar cooking workshop, kilns and copper pipes. Palette: indigo dusk, terracotta bricks, copper, restrained orange heat. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-9010525e-b8d7-4746-a3a1-2c2d98fbb61d.png"
+  },
+  {
+    "id": "W07-arena",
+    "world": "07",
+    "name": "月夜藤园",
+    "kind": "arena",
+    "transparent": false,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg07-moon-vine-garden-v1.png",
+    "prompt": "Use case: stylized-concept. Asset: original vegetable platformer arena environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Opaque 16:9 boss-area BACKGROUND PLATE: twin grape-emblem garden pavilion under moonlight, empty open center. Main environment details along outer sides and upper third; center and lower third quiet dark low-contrast atmosphere for foreground fighters. Camera straight side-on, no ground plane receding to horizon, NO foreground ground slab, no stairs/platforms, no boss or character. This is the distant background behind separately built collidable arena floor. Theme: moonlit grape garden and ruined vine arches. Palette: indigo moonlight, violet vines, pale cyan edges, amber lamps. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Fully opaque backdrop.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-86e0ea5c-da32-4398-85e8-93d5619e29f5.png"
+  },
+  {
+    "id": "W07-special",
+    "world": "07",
+    "name": "月夜藤园",
+    "kind": "special",
+    "transparent": true,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg07-moon-vine-garden-v1.png",
+    "prompt": "Use case: stylized-concept. Asset: original vegetable platformer special environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent special environment/interaction sheet exactly 8 isolated objects in 4 columns x 2 rows, ordered left to right: flat violet vine platform; warm ground lantern; hanging grape trellis; thin vine sweep hazard curved horizontally; falling chestnut hazard with green spikes; small overhead leaf-rustle warning cluster; twin grape-emblem exit arch; sparse blue flower foreground fringe. Large transparent gaps, no overlap, every object fully inside its own cell. Flat side elevation, crisp straight walkable tops, do not put foliage across them. Gates and doors have botanical emblems NOT writing. Water, syrup, steam and effects also transparent outside their own silhouette. These are key state source illustrations, NOT a continuous animation. Theme: moonlit grape garden and ruined vine arches. Palette: indigo moonlight, violet vines, pale cyan edges, amber lamps. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-f95b54b9-e2e4-49e0-a8ba-03df107939a5.png"
+  }
+]

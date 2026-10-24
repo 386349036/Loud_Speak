@@ -1,0 +1,52 @@
+[
+  {
+    "id": "W08-far",
+    "world": "08",
+    "name": "石榴王庭",
+    "kind": "far",
+    "transparent": false,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg08-pomegranate-citadel-v1.png",
+    "prompt": "Use case: stylized-concept. Asset: original vegetable platformer far environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Opaque full-frame 16:9 distant background ONLY. Distant palace towers below moonlit purple sky. Quiet central play space. NO near trees, no foreground, no ground or platforms, no framing arch. Theme: pomegranate royal palace, seed-window stone arches. Palette: royal purple, ruby seed glass, pale gold, deep blue. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Fully opaque backdrop.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-ea39ba35-bc2b-4ab2-9018-4624b757f4d3.png"
+  },
+  {
+    "id": "W08-mid",
+    "world": "08",
+    "name": "石榴王庭",
+    "kind": "mid",
+    "transparent": true,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg08-pomegranate-citadel-v1.png",
+    "prompt": "Use case: stylized-concept. Asset: original vegetable platformer mid environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent wide 16:9 middle-distance layer ONLY: pomegranate royal palace, seed-window stone arches silhouettes forming a loose horizontal arrangement concentrated on bottom half. Open true transparent negative space above and through all openings. NO sky, NO distant mountains, NO water tint, NO ground slab or gameplay platforms, muted contrast. Theme: pomegranate royal palace, seed-window stone arches. Palette: royal purple, ruby seed glass, pale gold, deep blue. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-88f9fa27-01be-4d95-a83c-b50f89e58fbf.png"
+  },
+  {
+    "id": "W08-kit",
+    "world": "08",
+    "name": "石榴王庭",
+    "kind": "kit",
+    "transparent": true,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg08-pomegranate-citadel-v1.png",
+    "prompt": "Use case: stylized-concept. Asset: original vegetable platformer kit environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent modular environment sheet exactly 8 isolated objects, 4 columns x 2 rows, even broad transparent spacing. Row1: rectangular royal stone ground ledge; matching stone brick ledge; short horizontal wooden bridge; three-step stone stair. Row2: white blossom planter; standalone pomegranate royal palace, seed-window stone arches arch or support frame; small lamp; low root or botanical decoration. All walkable tops straight horizontal, precise SIDE ELEVATION orthographic, no top surface visible, no perspective. Plants below walking top, never across it. Each object entirely within own cell. Theme: pomegranate royal palace, seed-window stone arches. Palette: royal purple, ruby seed glass, pale gold, deep blue. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-3918f2bb-5196-46ef-ab1d-213ea33e09c8.png"
+  },
+  {
+    "id": "W08-arena",
+    "world": "08",
+    "name": "石榴王庭",
+    "kind": "arena",
+    "transparent": false,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg08-pomegranate-citadel-v1.png",
+    "prompt": "Use case: stylized-concept. Asset: original vegetable platformer arena environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Opaque 16:9 boss-area BACKGROUND PLATE: pomegranate royal throne chamber, ruby seed-window recesses and distant central throne, empty fighting space. Main environment details along outer sides and upper third; center and lower third quiet dark low-contrast atmosphere for foreground fighters. Camera straight side-on, no ground plane receding to horizon, NO foreground ground slab, no stairs/platforms, no boss or character. This is the distant background behind separately built collidable arena floor. Theme: pomegranate royal palace, seed-window stone arches. Palette: royal purple, ruby seed glass, pale gold, deep blue. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Fully opaque backdrop.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-29d55dc4-d093-44b7-8709-25058e67b132.png"
+  },
+  {
+    "id": "W08-special",
+    "world": "08",
+    "name": "石榴王庭",
+    "kind": "special",
+    "transparent": true,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg08-pomegranate-citadel-v1.png",
+    "prompt": "Use case: stylized-concept. Asset: original vegetable platformer special environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent special environment/interaction sheet exactly 8 isolated objects in 4 columns x 2 rows, ordered left to right: gold-edged stone platform; shallow water surface strip; flat copper turret mounting pedestal no weapon; broken royal column; intact seed-seal door; open seed-seal door; pomegranate crown victory gate; small ruby sparkle cluster. Large transparent gaps, no overlap, every object fully inside its own cell. Flat side elevation, crisp straight walkable tops, do not put foliage across them. Gates and doors have botanical emblems NOT writing. Water, syrup, steam and effects also transparent outside their own silhouette. These are key state source illustrations, NOT a continuous animation. Theme: pomegranate royal palace, seed-window stone arches. Palette: royal purple, ruby seed glass, pale gold, deep blue. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-3e66eb01-143e-428a-a31a-151fe68a99dc.png"
+  }
+]

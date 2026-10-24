@@ -1,0 +1,64 @@
+[
+  {
+    "id": "E12",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-cedce47e-98d6-4d78-98e4-3309c586ac33.png",
+    "version": "v1",
+    "prompt": "Use case: stylized-concept. Produce ONE character concept asset sheet for an original vegetable-themed 2D platformer. True transparent PNG alpha background. Reference image 1 is STYLE ONLY: match its polished 32-bit-era 2D pixel art, crisp dark contours, warm readable shading, expressive eyes, controlled fine pixel clusters. Do NOT copy its potato anatomy, scarf or boots onto unrelated species. No text, title, labels, borders, swatches, floor, cast shadow, landscape, paper, checkerboard or matte. All blank space alpha=0. Opaque interiors with clean alpha edges; no general glow. Not vector, not 3D, no soft painting. Six separate complete figures in a generous 3-column by 2-row layout. No overlap between poses, at least 10% transparent gutters, keep every limb and particle within its cell. These are key-pose CONCEPTS, not animation frames; scale and grid fitting will be done later. Maintain exact same design identity between poses.\nCharacter E12: 跃水椒鱼. Ingredient: 甜椒. Silhouette MUST follow: 沿用E06，尾鳍展开、腹部增加浅色条纹. Palette: 橙红／浅黄／叶绿.\nBehavior context: 从关卡固定发射区沿抛物线跃水，不追踪玩家位置. Readable counterplay: 空中可踩；火弹. Danger cue: 水面先出现0.5秒涟漪；入水后销毁.\nShow SIX ordered poses: front three-quarter idle, side movement, back silhouette, primary special behavior, alternative state, non-gory hurt pose. Required behavioral states to communicate across these poses: 涟漪预警→跃起→下落→入水. For simple swimmers or walkers use distinct movement anticipation and action. \nPreserve recognizable edible plant anatomy and game-readable contours. All figures isolated on actual transparent alpha.\nSTRICT: No added abilities, weapons or fire unless stated. Reference 2 is the SAME fish base design. Preserve it, add pale belly stripe and spread tail. NO FIRE, NO PROJECTILES. Show swimming, leaping, falling and splashing.",
+    "referenceIds": [
+      "P01",
+      "E06"
+    ],
+    "review": "已查看与椒鱼基础形象的一致性；跃水多个关键姿态同卡，尚非逐帧动画。"
+  },
+  {
+    "id": "B01",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-6748e8e9-898f-4115-ac24-10ec1355aac5.png",
+    "version": "v1",
+    "prompt": "Use case: stylized-concept. Produce ONE character concept asset sheet for an original vegetable-themed 2D platformer. True transparent PNG alpha background. Reference image 1 is STYLE ONLY: match its polished 32-bit-era 2D pixel art, crisp dark contours, warm readable shading, expressive eyes, controlled fine pixel clusters. Do NOT copy its potato anatomy, scarf or boots onto unrelated species. No text, title, labels, borders, swatches, floor, cast shadow, landscape, paper, checkerboard or matte. All blank space alpha=0. Opaque interiors with clean alpha edges; no general glow. Not vector, not 3D, no soft painting. Six separate complete figures in a generous 3-column by 2-row layout. No overlap between poses, at least 10% transparent gutters, keep every limb and particle within its cell. These are key-pose CONCEPTS, not animation frames; scale and grid fitting will be done later. Maintain exact same design identity between poses.\nCharacter B01: 南瓜门卫. Ingredient: 南瓜. Silhouette MUST follow: 宽胖南瓜、藤带、大叶护臂. Palette: 橘黄／深绿.\nBehavior context: 短跳落地产生左右贴地震波. Readable counterplay: 跳过震波后踩头. Danger cue: 每次攻击至少0.5秒预兆；弱点打开同时改变形状、姿态和色值.\nShow SIX ordered poses: front three-quarter idle, side view idle, attack anticipation, main attack, exposed vulnerable state, non-gory defeated sitting/slumped pose. Weakness MUST be clear by physically opening/retracting armor: 落地后头顶嫩芽露出，喘息2秒. Design a powerful expressive FOOD CREATURE, not a human wearing food armor.\nPreserve recognizable edible plant anatomy and game-readable contours. All figures isolated on actual transparent alpha.\nSTRICT: No added abilities, weapons or fire unless stated. ",
+    "referenceIds": [
+      "P01"
+    ],
+    "review": "已查看首领轮廓与攻击/破绽差异；身体比例和独立特效待正式素材阶段统一。"
+  },
+  {
+    "id": "B02",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-78946e93-c078-4cf5-a630-24406308db9d.png",
+    "version": "v1",
+    "prompt": "Use case: stylized-concept. Produce ONE character concept asset sheet for an original vegetable-themed 2D platformer. True transparent PNG alpha background. Reference image 1 is STYLE ONLY: match its polished 32-bit-era 2D pixel art, crisp dark contours, warm readable shading, expressive eyes, controlled fine pixel clusters. Do NOT copy its potato anatomy, scarf or boots onto unrelated species. No text, title, labels, borders, swatches, floor, cast shadow, landscape, paper, checkerboard or matte. All blank space alpha=0. Opaque interiors with clean alpha edges; no general glow. Not vector, not 3D, no soft painting. Six separate complete figures in a generous 3-column by 2-row layout. No overlap between poses, at least 10% transparent gutters, keep every limb and particle within its cell. These are key-pose CONCEPTS, not animation frames; scale and grid fitting will be done later. Maintain exact same design identity between poses.\nCharacter B02: 洋葱矿主. Ingredient: 洋葱. Silhouette MUST follow: 层叠洋葱、根须胡子、矿石护肩. Palette: 紫褐／米白.\nBehavior context: 依次抛落土块、卷身向玩家蓄力冲撞. Readable counterplay: 引导撞边，避开落土后踩顶部. Danger cue: 每次攻击至少0.5秒预兆；弱点打开同时改变形状、姿态和色值.\nShow SIX ordered poses: front three-quarter idle, side view idle, attack anticipation, main attack, exposed vulnerable state, non-gory defeated sitting/slumped pose. Weakness MUST be clear by physically opening/retracting armor: 撞上场边软土后眩晕2秒，顶部矿帽脱落. Design a powerful expressive FOOD CREATURE, not a human wearing food armor.\nPreserve recognizable edible plant anatomy and game-readable contours. All figures isolated on actual transparent alpha.\nSTRICT: No added abilities, weapons or fire unless stated. ",
+    "referenceIds": [
+      "P01"
+    ],
+    "review": "已查看首领轮廓与攻击/破绽差异；身体比例和独立特效待正式素材阶段统一。"
+  },
+  {
+    "id": "B03",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-75a24e37-25c2-4ee8-b127-262b1f33c7ec.png",
+    "version": "v1",
+    "prompt": "Use case: stylized-concept. Produce ONE character concept asset sheet for an original vegetable-themed 2D platformer. True transparent PNG alpha background. Reference image 1 is STYLE ONLY: match its polished 32-bit-era 2D pixel art, crisp dark contours, warm readable shading, expressive eyes, controlled fine pixel clusters. Do NOT copy its potato anatomy, scarf or boots onto unrelated species. No text, title, labels, borders, swatches, floor, cast shadow, landscape, paper, checkerboard or matte. All blank space alpha=0. Opaque interiors with clean alpha edges; no general glow. Not vector, not 3D, no soft painting. Six separate complete figures in a generous 3-column by 2-row layout. No overlap between poses, at least 10% transparent gutters, keep every limb and particle within its cell. These are key-pose CONCEPTS, not animation frames; scale and grid fitting will be done later. Maintain exact same design identity between poses.\nCharacter B03: 玉米骑士. Ingredient: 玉米. Silhouette MUST follow: 高挑玉米、叶披风、穗须盔；明显高于普通投手. Palette: 金黄／青绿.\nBehavior context: 抛弧线籽弹，再沿地面突进. Readable counterplay: 跳过突进，借场中固定矮台踩头. Danger cue: 每次攻击至少0.5秒预兆；弱点打开同时改变形状、姿态和色值.\nShow SIX ordered poses: front three-quarter idle, side view idle, attack anticipation, main attack, exposed vulnerable state, non-gory defeated sitting/slumped pose. Weakness MUST be clear by physically opening/retracting armor: 突进结束失衡2秒，头盔向后翻开. Design a powerful expressive FOOD CREATURE, not a human wearing food armor.\nPreserve recognizable edible plant anatomy and game-readable contours. All figures isolated on actual transparent alpha.\nSTRICT: No added abilities, weapons or fire unless stated. ",
+    "referenceIds": [
+      "P01"
+    ],
+    "review": "已查看首领轮廓与攻击/破绽差异；身体比例和独立特效待正式素材阶段统一。"
+  },
+  {
+    "id": "B04",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-09cad2a3-70cd-441e-9b64-8b217a287ca4.png",
+    "version": "v1",
+    "prompt": "Use case: stylized-concept. Produce ONE character concept asset sheet for an original vegetable-themed 2D platformer. True transparent PNG alpha background. Reference image 1 is STYLE ONLY: match its polished 32-bit-era 2D pixel art, crisp dark contours, warm readable shading, expressive eyes, controlled fine pixel clusters. Do NOT copy its potato anatomy, scarf or boots onto unrelated species. No text, title, labels, borders, swatches, floor, cast shadow, landscape, paper, checkerboard or matte. All blank space alpha=0. Opaque interiors with clean alpha edges; no general glow. Not vector, not 3D, no soft painting. Six separate complete figures in a generous 3-column by 2-row layout. No overlap between poses, at least 10% transparent gutters, keep every limb and particle within its cell. These are key-pose CONCEPTS, not animation frames; scale and grid fitting will be done later. Maintain exact same design identity between poses.\nCharacter B04: 莲藕潜王. Ingredient: 莲藕. Silhouette MUST follow: 三节藕身、荷叶鳍、孔洞喷口. Palette: 粉白／湖蓝.\nBehavior context: 水池内喷种子，随后固定轨迹跃上岸台. Readable counterplay: 岸台躲喷射，等上岸后踩顶部；不要求水下踩踏. Danger cue: 每次攻击至少0.5秒预兆；弱点打开同时改变形状、姿态和色值.\nShow SIX ordered poses: front three-quarter idle, side view idle, attack anticipation, main attack, exposed vulnerable state, non-gory defeated sitting/slumped pose. Weakness MUST be clear by physically opening/retracting armor: 上岸停留2.5秒，藕冠张开. Design a powerful expressive FOOD CREATURE, not a human wearing food armor.\nPreserve recognizable edible plant anatomy and game-readable contours. All figures isolated on actual transparent alpha.\nSTRICT: No added abilities, weapons or fire unless stated. ",
+    "referenceIds": [
+      "P01"
+    ],
+    "review": "已查看首领轮廓与攻击/破绽差异；身体比例和独立特效待正式素材阶段统一。"
+  },
+  {
+    "id": "E09",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-0db20dfe-0a4b-4cdf-9788-1f18b3c080a6.png",
+    "version": "v2",
+    "prompt": "Edit Image 1 cotton cloud shepherd transparent sheet. Keep all six cotton creature poses, style and layout. ONLY replace the two detached thrown COTTON BALLS in bottom-left and bottom-middle cells with small CLOSED GREEN SPIKY CHESTNUTS matching Image 2 enemy's spiky shell, at about one-quarter of the shepherd's size. These are closed shells: olive green, clearly long golden spikes, no cotton, no white fluff, no exposed face. Bottom-middle should drop the chestnut downward, not throw horizontally. Image 2 is only the projectile-shell identity reference; do not add its full six poses. True transparent background, no text, no ground, no other changes.",
+    "referenceIds": [
+      "E09-v1",
+      "E04"
+    ],
+    "review": "已将棉球改为刺栗，并显示下投轨迹。"
+  }
+]

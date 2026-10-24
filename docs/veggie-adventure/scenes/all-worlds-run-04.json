@@ -1,0 +1,63 @@
+[
+  {
+    "id": "W05-mid",
+    "world": "05",
+    "name": "荆棘果园",
+    "kind": "mid",
+    "transparent": true,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg05-thorn-orchard-v1.png",
+    "prompt": "Use case: stylized-concept. Asset: original vegetable platformer mid environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent wide 16:9 middle-distance layer ONLY: thorn orchard and weathered fruit-garden walls silhouettes forming a loose horizontal arrangement concentrated on bottom half. Open true transparent negative space above and through all openings. NO sky, NO distant mountains, NO water tint, NO ground slab or gameplay platforms, muted contrast. Theme: thorn orchard and weathered fruit-garden walls. Palette: apricot dusk, plum mountains, dark olive, amber fruit. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-9ee70299-793f-4051-99e7-b521fb550a32.png"
+  },
+  {
+    "id": "W05-kit",
+    "world": "05",
+    "name": "荆棘果园",
+    "kind": "kit",
+    "transparent": true,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg05-thorn-orchard-v1.png",
+    "prompt": "Use case: stylized-concept. Asset: original vegetable platformer kit environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent modular environment sheet exactly 8 isolated objects, 4 columns x 2 rows, even broad transparent spacing. Row1: rectangular orchard earth ground ledge; matching stone brick ledge; short horizontal wooden bridge; three-step stone stair. Row2: orchard shrub; standalone thorn orchard and weathered fruit-garden walls arch or support frame; small lamp; low root or botanical decoration. All walkable tops straight horizontal, precise SIDE ELEVATION orthographic, no top surface visible, no perspective. Plants below walking top, never across it. Each object entirely within own cell. Theme: thorn orchard and weathered fruit-garden walls. Palette: apricot dusk, plum mountains, dark olive, amber fruit. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-5f147262-704f-49e4-b9c4-d49b53121981.png"
+  },
+  {
+    "id": "W05-arena",
+    "world": "05",
+    "name": "荆棘果园",
+    "kind": "arena",
+    "transparent": false,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg05-thorn-orchard-v1.png",
+    "prompt": "Use case: stylized-concept. Asset: original vegetable platformer arena environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Opaque 16:9 boss-area BACKGROUND PLATE: durian-emblem orchard courtyard surrounded by thorny trees, spacious empty center. Main environment details along outer sides and upper third; center and lower third quiet dark low-contrast atmosphere for foreground fighters. Camera straight side-on, no ground plane receding to horizon, NO foreground ground slab, no stairs/platforms, no boss or character. This is the distant background behind separately built collidable arena floor. Theme: thorn orchard and weathered fruit-garden walls. Palette: apricot dusk, plum mountains, dark olive, amber fruit. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Fully opaque backdrop.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-9764540f-99f8-4fec-9446-6d30085d6b5d.png"
+  },
+  {
+    "id": "W05-special",
+    "world": "05",
+    "name": "荆棘果园",
+    "kind": "special",
+    "transparent": true,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg05-thorn-orchard-v1.png",
+    "prompt": "Use case: stylized-concept. Asset: original vegetable platformer special environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent special environment/interaction sheet exactly 8 isolated objects in 4 columns x 2 rows, ordered left to right: sharp upright thorn hazard strip; safe thornless ledge; wooden fruit orchard fence; cracked breakable wall; closed empty durian shell obstacle; open empty durian shell obstacle; durian-emblem exit gate; sparse fruit-tree foreground branch. Large transparent gaps, no overlap, every object fully inside its own cell. Flat side elevation, crisp straight walkable tops, do not put foliage across them. Gates and doors have botanical emblems NOT writing. Water, syrup, steam and effects also transparent outside their own silhouette. These are key state source illustrations, NOT a continuous animation. Theme: thorn orchard and weathered fruit-garden walls. Palette: apricot dusk, plum mountains, dark olive, amber fruit. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-665d9b0e-02e6-42f0-baff-0910140d830b.png"
+  },
+  {
+    "id": "W06-far",
+    "world": "06",
+    "name": "熔糖工坊",
+    "kind": "far",
+    "transparent": false,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg06-ember-workshop-v1.png",
+    "prompt": "Use case: stylized-concept. Asset: original vegetable platformer far environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Opaque full-frame 16:9 distant background ONLY. Distant hazy workshop roofs and night sky, tiny low-contrast distant kilns. Quiet central play space. NO near trees, no foreground, no ground or platforms, no framing arch. Theme: sugar cooking workshop, kilns and copper pipes. Palette: indigo dusk, terracotta bricks, copper, restrained orange heat. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Fully opaque backdrop.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-188a139e-f949-4e5b-9ac1-f3ed870ba025.png"
+  },
+  {
+    "id": "W04-mid",
+    "world": "04",
+    "name": "水生温室",
+    "kind": "mid",
+    "transparent": true,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg04-aquatic-greenhouse-v1.png",
+    "prompt": "Use case: precise-object-edit. Edit this transparent pixel-art greenhouse middle-distance layer. Remove ONLY the bottom water reflection band, all horizontal water lines, ripples and mirrored columns. Keep all actual arches, dome, lotus plants, color palette, scale and placement unchanged. Architecture should terminate as dry stone bases with transparent space below. All gaps, sky and outside silhouette remain true alpha transparent. NO water, no reflection, no ground, no text, no additional objects. Preserve crisp 32-bit-era pixel style.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-f9fd3038-28ec-424a-aae1-38c39640f03e.png",
+    "version": "v2"
+  }
+]

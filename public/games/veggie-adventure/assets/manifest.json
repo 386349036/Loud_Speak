@@ -1,0 +1,3860 @@
+{
+  "schemaVersion": 1,
+  "artDirection": "32-bit-era-2d-pixel",
+  "status": "campaign-animation-integrated-awaiting-user-review",
+  "assets": [
+    {
+      "id": "B01-1",
+      "path": "campaign/B01-1.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b01-pumpkin-warden-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 1,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "B01-2",
+      "path": "campaign/B01-2.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b01-pumpkin-warden-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 2,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "B01-3",
+      "path": "campaign/B01-3.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b01-pumpkin-warden-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 3,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "B01-4",
+      "path": "campaign/B01-4.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b01-pumpkin-warden-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 4,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "B01-5",
+      "path": "campaign/B01-5.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b01-pumpkin-warden-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 5,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "B02-1",
+      "path": "campaign/B02-1.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b02-onion-miner-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 1,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "B02-2",
+      "path": "campaign/B02-2.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b02-onion-miner-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 2,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "B02-3",
+      "path": "campaign/B02-3.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b02-onion-miner-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 3,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "B02-4",
+      "path": "campaign/B02-4.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b02-onion-miner-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 4,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "B02-5",
+      "path": "campaign/B02-5.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b02-onion-miner-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 5,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "B03-1",
+      "path": "campaign/B03-1.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b03-corn-knight-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 1,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "B03-2",
+      "path": "campaign/B03-2.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b03-corn-knight-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 2,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "B03-3",
+      "path": "campaign/B03-3.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b03-corn-knight-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 3,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "B03-4",
+      "path": "campaign/B03-4.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b03-corn-knight-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 4,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "B03-5",
+      "path": "campaign/B03-5.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b03-corn-knight-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 5,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "B04-1",
+      "path": "campaign/B04-1.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b04-lotus-diver-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 1,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "B04-2",
+      "path": "campaign/B04-2.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b04-lotus-diver-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 2,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "B04-3",
+      "path": "campaign/B04-3.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b04-lotus-diver-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 3,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "B04-4",
+      "path": "campaign/B04-4.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b04-lotus-diver-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 4,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "B04-5",
+      "path": "campaign/B04-5.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b04-lotus-diver-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 5,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "B05-1",
+      "path": "campaign/B05-1.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b05-durian-fortress-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 1,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "B05-2",
+      "path": "campaign/B05-2.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b05-durian-fortress-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 2,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "B05-3",
+      "path": "campaign/B05-3.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b05-durian-fortress-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 3,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "B05-4",
+      "path": "campaign/B05-4.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b05-durian-fortress-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 4,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "B05-5",
+      "path": "campaign/B05-5.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b05-durian-fortress-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 5,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "B06-1",
+      "path": "campaign/B06-1.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b06-chili-mage-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 1,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "B06-2",
+      "path": "campaign/B06-2.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b06-chili-mage-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 2,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "B06-3",
+      "path": "campaign/B06-3.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b06-chili-mage-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 3,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "B06-4",
+      "path": "campaign/B06-4.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b06-chili-mage-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 4,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "B06-5",
+      "path": "campaign/B06-5.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b06-chili-mage-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 5,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "B07-1",
+      "path": "campaign/B07-1.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b07-grape-twins-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 1,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "B07-2",
+      "path": "campaign/B07-2.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b07-grape-twins-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 2,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "B07-3",
+      "path": "campaign/B07-3.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b07-grape-twins-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 3,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "B07-4",
+      "path": "campaign/B07-4.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b07-grape-twins-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 4,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "B07-5",
+      "path": "campaign/B07-5.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b07-grape-twins-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 5,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "B08-1",
+      "path": "campaign/B08-1.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b08-pomegranate-king-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 1,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "B08-2",
+      "path": "campaign/B08-2.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b08-pomegranate-king-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 2,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "B08-3",
+      "path": "campaign/B08-3.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b08-pomegranate-king-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 3,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "B08-4",
+      "path": "campaign/B08-4.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b08-pomegranate-king-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 4,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "B08-5",
+      "path": "campaign/B08-5.png",
+      "width": 120,
+      "height": 120,
+      "anchor": [
+        60,
+        120
+      ],
+      "source": "originals/bosses/b08-pomegranate-king-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 5,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "E01-1",
+      "path": "campaign/E01-1.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "originals/enemies/e01-shiitake-patrol-v2.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 1,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "E02-1",
+      "path": "campaign/E02-1.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "originals/enemies/e02-cabbage-shell-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 1,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "E03-1",
+      "path": "campaign/E03-1.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "originals/enemies/e03-walnut-beetle-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 1,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "E04-1",
+      "path": "campaign/E04-1.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "originals/enemies/e04-chestnut-spike-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 1,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "E05-1",
+      "path": "campaign/E05-1.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "originals/enemies/e05-lotus-jelly-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 1,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "E06-1",
+      "path": "campaign/E06-1.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "originals/enemies/e06-pepper-fish-v2.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 1,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "E07-1",
+      "path": "campaign/E07-1.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "originals/enemies/e07-corn-thrower-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 1,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "E08-1",
+      "path": "campaign/E08-1.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "originals/enemies/e08-pea-trap-v2.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 1,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "E09-1",
+      "path": "campaign/E09-1.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "originals/enemies/e09-cotton-cloud-v2.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 1,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "E10-1",
+      "path": "campaign/E10-1.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "originals/enemies/e10-eggplant-bolt-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 1,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "E11-1",
+      "path": "campaign/E11-1.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "originals/enemies/e11-winged-cabbage-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 1,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "E12-1",
+      "path": "campaign/E12-1.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "originals/enemies/e12-leaping-pepper-fish-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 1,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "forest-far",
+      "path": "prototype/forest-far.png",
+      "stage": "prototype-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "forest-mid",
+      "path": "prototype/forest-mid.png",
+      "stage": "prototype-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "hero-0",
+      "path": "prototype/hero-0.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "stage": "prototype-runtime",
+      "visualVerified": false,
+      "source": "working/prototype/hero-atlas-v1.png",
+      "cell": 0
+    },
+    {
+      "id": "hero-1",
+      "path": "prototype/hero-1.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "stage": "prototype-runtime",
+      "visualVerified": false,
+      "source": "working/prototype/hero-atlas-v1.png",
+      "cell": 1
+    },
+    {
+      "id": "hero-10",
+      "path": "prototype/hero-10.png",
+      "width": 48,
+      "height": 96,
+      "anchor": [
+        24,
+        96
+      ],
+      "stage": "prototype-runtime",
+      "visualVerified": false,
+      "source": "working/prototype/hero-atlas-v1.png",
+      "cell": 10
+    },
+    {
+      "id": "hero-11",
+      "path": "prototype/hero-11.png",
+      "width": 48,
+      "height": 96,
+      "anchor": [
+        24,
+        96
+      ],
+      "stage": "prototype-runtime",
+      "visualVerified": false,
+      "source": "working/prototype/hero-atlas-v1.png",
+      "cell": 11
+    },
+    {
+      "id": "hero-12",
+      "path": "prototype/hero-12.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "stage": "prototype-runtime",
+      "visualVerified": false,
+      "source": "working/prototype/hero-atlas-v1.png",
+      "cell": 12
+    },
+    {
+      "id": "hero-13",
+      "path": "prototype/hero-13.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "stage": "prototype-runtime",
+      "visualVerified": false,
+      "source": "working/prototype/hero-atlas-v1.png",
+      "cell": 13
+    },
+    {
+      "id": "hero-14",
+      "path": "prototype/hero-14.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "stage": "prototype-runtime",
+      "visualVerified": false,
+      "source": "working/prototype/hero-atlas-v1.png",
+      "cell": 14
+    },
+    {
+      "id": "hero-15",
+      "path": "prototype/hero-15.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "stage": "prototype-runtime",
+      "visualVerified": false,
+      "source": "working/prototype/hero-atlas-v1.png",
+      "cell": 15
+    },
+    {
+      "id": "hero-2",
+      "path": "prototype/hero-2.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "stage": "prototype-runtime",
+      "visualVerified": false,
+      "source": "working/prototype/hero-atlas-v1.png",
+      "cell": 2
+    },
+    {
+      "id": "hero-3",
+      "path": "prototype/hero-3.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "stage": "prototype-runtime",
+      "visualVerified": false,
+      "source": "working/prototype/hero-atlas-v1.png",
+      "cell": 3
+    },
+    {
+      "id": "hero-4",
+      "path": "prototype/hero-4.png",
+      "width": 48,
+      "height": 96,
+      "anchor": [
+        24,
+        96
+      ],
+      "stage": "prototype-runtime",
+      "visualVerified": false,
+      "source": "working/prototype/hero-atlas-v1.png",
+      "cell": 4
+    },
+    {
+      "id": "hero-5",
+      "path": "prototype/hero-5.png",
+      "width": 48,
+      "height": 96,
+      "anchor": [
+        24,
+        96
+      ],
+      "stage": "prototype-runtime",
+      "visualVerified": false,
+      "source": "working/prototype/hero-atlas-v1.png",
+      "cell": 5
+    },
+    {
+      "id": "hero-6",
+      "path": "prototype/hero-6.png",
+      "width": 48,
+      "height": 96,
+      "anchor": [
+        24,
+        96
+      ],
+      "stage": "prototype-runtime",
+      "visualVerified": false,
+      "source": "working/prototype/hero-atlas-v1.png",
+      "cell": 6
+    },
+    {
+      "id": "hero-7",
+      "path": "prototype/hero-7.png",
+      "width": 48,
+      "height": 96,
+      "anchor": [
+        24,
+        96
+      ],
+      "stage": "prototype-runtime",
+      "visualVerified": false,
+      "source": "working/prototype/hero-atlas-v1.png",
+      "cell": 7
+    },
+    {
+      "id": "hero-8",
+      "path": "prototype/hero-8.png",
+      "width": 48,
+      "height": 96,
+      "anchor": [
+        24,
+        96
+      ],
+      "stage": "prototype-runtime",
+      "visualVerified": false,
+      "source": "working/prototype/hero-atlas-v1.png",
+      "cell": 8
+    },
+    {
+      "id": "hero-9",
+      "path": "prototype/hero-9.png",
+      "width": 48,
+      "height": 96,
+      "anchor": [
+        24,
+        96
+      ],
+      "stage": "prototype-runtime",
+      "visualVerified": false,
+      "source": "working/prototype/hero-atlas-v1.png",
+      "cell": 9
+    },
+    {
+      "id": "N01-1",
+      "path": "campaign/N01-1.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "originals/npcs/n01-radish-guide-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 1,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "N02-1",
+      "path": "campaign/N02-1.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "originals/npcs/n02-strawberry-gardener-v1.png",
+      "grid": [
+        3,
+        2
+      ],
+      "cell": 1,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "objects-0",
+      "path": "prototype/objects-0.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "stage": "prototype-runtime",
+      "visualVerified": false,
+      "source": "working/prototype/objects-atlas-v1.png",
+      "cell": 0
+    },
+    {
+      "id": "objects-1",
+      "path": "prototype/objects-1.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "stage": "prototype-runtime",
+      "visualVerified": false,
+      "source": "working/prototype/objects-atlas-v1.png",
+      "cell": 1
+    },
+    {
+      "id": "objects-10",
+      "path": "prototype/objects-10.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "stage": "prototype-runtime",
+      "visualVerified": false,
+      "source": "working/prototype/objects-atlas-v1.png",
+      "cell": 10
+    },
+    {
+      "id": "objects-11",
+      "path": "prototype/objects-11.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "stage": "prototype-runtime",
+      "visualVerified": false,
+      "source": "working/prototype/objects-atlas-v1.png",
+      "cell": 11
+    },
+    {
+      "id": "objects-12",
+      "path": "prototype/objects-12.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "stage": "prototype-runtime",
+      "visualVerified": false,
+      "source": "working/prototype/objects-atlas-v1.png",
+      "cell": 12
+    },
+    {
+      "id": "objects-13",
+      "path": "prototype/objects-13.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "stage": "prototype-runtime",
+      "visualVerified": false,
+      "source": "working/prototype/objects-atlas-v1.png",
+      "cell": 13
+    },
+    {
+      "id": "objects-14",
+      "path": "prototype/objects-14.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "stage": "prototype-runtime",
+      "visualVerified": false,
+      "source": "working/prototype/objects-atlas-v1.png",
+      "cell": 14
+    },
+    {
+      "id": "objects-15",
+      "path": "prototype/objects-15.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "stage": "prototype-runtime",
+      "visualVerified": false,
+      "source": "working/prototype/objects-atlas-v1.png",
+      "cell": 15
+    },
+    {
+      "id": "objects-2",
+      "path": "prototype/objects-2.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "stage": "prototype-runtime",
+      "visualVerified": false,
+      "source": "working/prototype/objects-atlas-v1.png",
+      "cell": 2
+    },
+    {
+      "id": "objects-3",
+      "path": "prototype/objects-3.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "stage": "prototype-runtime",
+      "visualVerified": false,
+      "source": "working/prototype/objects-atlas-v1.png",
+      "cell": 3
+    },
+    {
+      "id": "objects-4",
+      "path": "prototype/objects-4.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "stage": "prototype-runtime",
+      "visualVerified": false,
+      "source": "working/prototype/objects-atlas-v1.png",
+      "cell": 4
+    },
+    {
+      "id": "objects-5",
+      "path": "prototype/objects-5.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "stage": "prototype-runtime",
+      "visualVerified": false,
+      "source": "working/prototype/objects-atlas-v1.png",
+      "cell": 5
+    },
+    {
+      "id": "objects-6",
+      "path": "prototype/objects-6.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "stage": "prototype-runtime",
+      "visualVerified": false,
+      "source": "working/prototype/objects-atlas-v1.png",
+      "cell": 6
+    },
+    {
+      "id": "objects-7",
+      "path": "prototype/objects-7.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "stage": "prototype-runtime",
+      "visualVerified": false,
+      "source": "working/prototype/objects-atlas-v1.png",
+      "cell": 7
+    },
+    {
+      "id": "objects-8",
+      "path": "prototype/objects-8.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "stage": "prototype-runtime",
+      "visualVerified": false,
+      "source": "working/prototype/objects-atlas-v1.png",
+      "cell": 8
+    },
+    {
+      "id": "objects-9",
+      "path": "prototype/objects-9.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "stage": "prototype-runtime",
+      "visualVerified": false,
+      "source": "working/prototype/objects-atlas-v1.png",
+      "cell": 9
+    },
+    {
+      "id": "W01-arena",
+      "path": "campaign/W01-arena.png",
+      "source": "scenes/world-01/w01-arena-v1.png",
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W01-far",
+      "path": "campaign/W01-far.png",
+      "source": "scenes/batch-01/w01-far-v1.png",
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W01-kit-0",
+      "path": "campaign/W01-kit-0.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "scenes/batch-01/w01-kit-v1.png",
+      "grid": [
+        4,
+        2
+      ],
+      "cell": 0,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W01-kit-1",
+      "path": "campaign/W01-kit-1.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "scenes/batch-01/w01-kit-v1.png",
+      "grid": [
+        4,
+        2
+      ],
+      "cell": 1,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W01-kit-2",
+      "path": "campaign/W01-kit-2.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "scenes/batch-01/w01-kit-v1.png",
+      "grid": [
+        4,
+        2
+      ],
+      "cell": 2,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W01-mid",
+      "path": "campaign/W01-mid.png",
+      "source": "scenes/batch-01/w01-mid-v1.png",
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W01-special-exit",
+      "path": "campaign/W01-special-exit.png",
+      "width": 96,
+      "height": 144,
+      "anchor": [
+        48,
+        144
+      ],
+      "source": "scenes/world-01/w01-special-v1.png",
+      "grid": [
+        4,
+        2
+      ],
+      "cell": 7,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W02-arena",
+      "path": "campaign/W02-arena.png",
+      "source": "scenes/world-02/w02-arena-v1.png",
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W02-far",
+      "path": "campaign/W02-far.png",
+      "source": "scenes/world-02/w02-far-v1.png",
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W02-kit-0",
+      "path": "campaign/W02-kit-0.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "scenes/world-02/w02-kit-v1.png",
+      "grid": [
+        4,
+        2
+      ],
+      "cell": 0,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W02-kit-1",
+      "path": "campaign/W02-kit-1.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "scenes/world-02/w02-kit-v1.png",
+      "grid": [
+        4,
+        2
+      ],
+      "cell": 1,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W02-kit-2",
+      "path": "campaign/W02-kit-2.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "scenes/world-02/w02-kit-v1.png",
+      "grid": [
+        4,
+        2
+      ],
+      "cell": 2,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W02-mid",
+      "path": "campaign/W02-mid.png",
+      "source": "scenes/world-02/w02-mid-v1.png",
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W02-special-exit",
+      "path": "campaign/W02-special-exit.png",
+      "width": 96,
+      "height": 144,
+      "anchor": [
+        48,
+        144
+      ],
+      "source": "scenes/world-02/w02-special-v1.png",
+      "grid": [
+        4,
+        2
+      ],
+      "cell": 7,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W03-arena",
+      "path": "campaign/W03-arena.png",
+      "source": "scenes/world-03/w03-arena-v1.png",
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W03-far",
+      "path": "campaign/W03-far.png",
+      "source": "scenes/world-03/w03-far-v1.png",
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W03-kit-0",
+      "path": "campaign/W03-kit-0.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "scenes/world-03/w03-kit-v1.png",
+      "grid": [
+        4,
+        2
+      ],
+      "cell": 0,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W03-kit-1",
+      "path": "campaign/W03-kit-1.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "scenes/world-03/w03-kit-v1.png",
+      "grid": [
+        4,
+        2
+      ],
+      "cell": 1,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W03-kit-2",
+      "path": "campaign/W03-kit-2.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "scenes/world-03/w03-kit-v1.png",
+      "grid": [
+        4,
+        2
+      ],
+      "cell": 2,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W03-mid",
+      "path": "campaign/W03-mid.png",
+      "source": "scenes/world-03/w03-mid-v1.png",
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W03-special-exit",
+      "path": "campaign/W03-special-exit.png",
+      "width": 96,
+      "height": 144,
+      "anchor": [
+        48,
+        144
+      ],
+      "source": "scenes/world-03/w03-special-v1.png",
+      "grid": [
+        4,
+        2
+      ],
+      "cell": 7,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W04-arena",
+      "path": "campaign/W04-arena.png",
+      "source": "scenes/world-04/w04-arena-v1.png",
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W04-far",
+      "path": "campaign/W04-far.png",
+      "source": "scenes/world-04/w04-far-v1.png",
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W04-kit-0",
+      "path": "campaign/W04-kit-0.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "scenes/world-04/w04-kit-v1.png",
+      "grid": [
+        4,
+        2
+      ],
+      "cell": 0,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W04-kit-1",
+      "path": "campaign/W04-kit-1.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "scenes/world-04/w04-kit-v1.png",
+      "grid": [
+        4,
+        2
+      ],
+      "cell": 1,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W04-kit-2",
+      "path": "campaign/W04-kit-2.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "scenes/world-04/w04-kit-v1.png",
+      "grid": [
+        4,
+        2
+      ],
+      "cell": 2,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W04-mid",
+      "path": "campaign/W04-mid.png",
+      "source": "scenes/world-04/w04-mid-v2.png",
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W04-special-exit",
+      "path": "campaign/W04-special-exit.png",
+      "width": 96,
+      "height": 144,
+      "anchor": [
+        48,
+        144
+      ],
+      "source": "scenes/world-04/w04-special-v1.png",
+      "grid": [
+        4,
+        2
+      ],
+      "cell": 7,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W05-arena",
+      "path": "campaign/W05-arena.png",
+      "source": "scenes/world-05/w05-arena-v1.png",
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W05-far",
+      "path": "campaign/W05-far.png",
+      "source": "scenes/world-05/w05-far-v1.png",
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W05-kit-0",
+      "path": "campaign/W05-kit-0.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "scenes/world-05/w05-kit-v1.png",
+      "grid": [
+        4,
+        2
+      ],
+      "cell": 0,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W05-kit-1",
+      "path": "campaign/W05-kit-1.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "scenes/world-05/w05-kit-v1.png",
+      "grid": [
+        4,
+        2
+      ],
+      "cell": 1,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W05-kit-2",
+      "path": "campaign/W05-kit-2.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "scenes/world-05/w05-kit-v1.png",
+      "grid": [
+        4,
+        2
+      ],
+      "cell": 2,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W05-mid",
+      "path": "campaign/W05-mid.png",
+      "source": "scenes/world-05/w05-mid-v1.png",
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W05-special-exit",
+      "path": "campaign/W05-special-exit.png",
+      "width": 96,
+      "height": 144,
+      "anchor": [
+        48,
+        144
+      ],
+      "source": "scenes/world-05/w05-special-v1.png",
+      "grid": [
+        4,
+        2
+      ],
+      "cell": 7,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W06-arena",
+      "path": "campaign/W06-arena.png",
+      "source": "scenes/world-06/w06-arena-v1.png",
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W06-far",
+      "path": "campaign/W06-far.png",
+      "source": "scenes/world-06/w06-far-v1.png",
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W06-kit-0",
+      "path": "campaign/W06-kit-0.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "scenes/world-06/w06-kit-v1.png",
+      "grid": [
+        4,
+        2
+      ],
+      "cell": 0,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W06-kit-1",
+      "path": "campaign/W06-kit-1.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "scenes/world-06/w06-kit-v1.png",
+      "grid": [
+        4,
+        2
+      ],
+      "cell": 1,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W06-kit-2",
+      "path": "campaign/W06-kit-2.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "scenes/world-06/w06-kit-v1.png",
+      "grid": [
+        4,
+        2
+      ],
+      "cell": 2,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W06-mid",
+      "path": "campaign/W06-mid.png",
+      "source": "scenes/world-06/w06-mid-v1.png",
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W06-special-exit",
+      "path": "campaign/W06-special-exit.png",
+      "width": 96,
+      "height": 144,
+      "anchor": [
+        48,
+        144
+      ],
+      "source": "scenes/world-06/w06-special-v1.png",
+      "grid": [
+        4,
+        2
+      ],
+      "cell": 7,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W07-arena",
+      "path": "campaign/W07-arena.png",
+      "source": "scenes/world-07/w07-arena-v1.png",
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W07-far",
+      "path": "campaign/W07-far.png",
+      "source": "scenes/batch-01/w07-far-v1.png",
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W07-kit-0",
+      "path": "campaign/W07-kit-0.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "scenes/batch-01/w07-kit-v1.png",
+      "grid": [
+        4,
+        2
+      ],
+      "cell": 0,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W07-kit-1",
+      "path": "campaign/W07-kit-1.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "scenes/batch-01/w07-kit-v1.png",
+      "grid": [
+        4,
+        2
+      ],
+      "cell": 1,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W07-kit-2",
+      "path": "campaign/W07-kit-2.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "scenes/batch-01/w07-kit-v1.png",
+      "grid": [
+        4,
+        2
+      ],
+      "cell": 2,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W07-mid",
+      "path": "campaign/W07-mid.png",
+      "source": "scenes/batch-01/w07-mid-v1.png",
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W07-special-exit",
+      "path": "campaign/W07-special-exit.png",
+      "width": 96,
+      "height": 144,
+      "anchor": [
+        48,
+        144
+      ],
+      "source": "scenes/world-07/w07-special-v2.png",
+      "grid": [
+        4,
+        2
+      ],
+      "cell": 7,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W08-arena",
+      "path": "campaign/W08-arena.png",
+      "source": "scenes/world-08/w08-arena-v1.png",
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W08-far",
+      "path": "campaign/W08-far.png",
+      "source": "scenes/world-08/w08-far-v1.png",
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W08-kit-0",
+      "path": "campaign/W08-kit-0.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "scenes/world-08/w08-kit-v1.png",
+      "grid": [
+        4,
+        2
+      ],
+      "cell": 0,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W08-kit-1",
+      "path": "campaign/W08-kit-1.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "scenes/world-08/w08-kit-v1.png",
+      "grid": [
+        4,
+        2
+      ],
+      "cell": 1,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W08-kit-2",
+      "path": "campaign/W08-kit-2.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "scenes/world-08/w08-kit-v1.png",
+      "grid": [
+        4,
+        2
+      ],
+      "cell": 2,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W08-mid",
+      "path": "campaign/W08-mid.png",
+      "source": "scenes/world-08/w08-mid-v1.png",
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "W08-special-exit",
+      "path": "campaign/W08-special-exit.png",
+      "width": 96,
+      "height": 144,
+      "anchor": [
+        48,
+        144
+      ],
+      "source": "scenes/world-08/w08-special-v2.png",
+      "grid": [
+        4,
+        2
+      ],
+      "cell": 7,
+      "campaign": true,
+      "stage": "temporary-key-pose-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "anim-P01-0",
+      "path": "animations/P01-0.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/P01-0.png"
+      ]
+    },
+    {
+      "id": "anim-P01-1",
+      "path": "animations/P01-1.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/P01-1-part0.png",
+        "art-source/veggie-adventure/animations/v1/P01-1-part1.png"
+      ]
+    },
+    {
+      "id": "anim-P01-2",
+      "path": "animations/P01-2.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/P01-2.png"
+      ]
+    },
+    {
+      "id": "anim-E01",
+      "path": "animations/E01.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/E01.png"
+      ]
+    },
+    {
+      "id": "anim-E02",
+      "path": "animations/E02.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/E02.png"
+      ]
+    },
+    {
+      "id": "anim-E03",
+      "path": "animations/E03.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/E03.png"
+      ]
+    },
+    {
+      "id": "anim-E04",
+      "path": "animations/E04.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/E04.png"
+      ]
+    },
+    {
+      "id": "anim-E05",
+      "path": "animations/E05.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/E05.png"
+      ]
+    },
+    {
+      "id": "anim-E06",
+      "path": "animations/E06.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/E06.png"
+      ]
+    },
+    {
+      "id": "anim-E07",
+      "path": "animations/E07.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/E07.png"
+      ]
+    },
+    {
+      "id": "anim-E08",
+      "path": "animations/E08.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/E08.png"
+      ]
+    },
+    {
+      "id": "anim-E09",
+      "path": "animations/E09.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/E09.png"
+      ]
+    },
+    {
+      "id": "anim-E10",
+      "path": "animations/E10.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/E10.png"
+      ]
+    },
+    {
+      "id": "anim-E11",
+      "path": "animations/E11.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/E11.png"
+      ]
+    },
+    {
+      "id": "anim-E12",
+      "path": "animations/E12.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/E12.png"
+      ]
+    },
+    {
+      "id": "anim-B01",
+      "path": "animations/B01.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/B01.png"
+      ]
+    },
+    {
+      "id": "anim-B02",
+      "path": "animations/B02.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/B02.png"
+      ]
+    },
+    {
+      "id": "anim-B03",
+      "path": "animations/B03.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/B03.png"
+      ]
+    },
+    {
+      "id": "anim-B04",
+      "path": "animations/B04.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/B04.png"
+      ]
+    },
+    {
+      "id": "anim-B05",
+      "path": "animations/B05.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/B05.png"
+      ]
+    },
+    {
+      "id": "anim-B06",
+      "path": "animations/B06.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/B06.png"
+      ]
+    },
+    {
+      "id": "anim-B07",
+      "path": "animations/B07.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/B07-part0.png",
+        "art-source/veggie-adventure/animations/v1/B07-part1.png"
+      ]
+    },
+    {
+      "id": "anim-B08",
+      "path": "animations/B08.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/B08.png"
+      ]
+    },
+    {
+      "id": "anim-N01",
+      "path": "animations/N01.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/N01.png"
+      ]
+    },
+    {
+      "id": "anim-N02",
+      "path": "animations/N02.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/N02.png"
+      ]
+    },
+    {
+      "id": "anim-FX01",
+      "path": "animations/FX01.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/FX01.png"
+      ]
+    },
+    {
+      "id": "star-shield-v1",
+      "path": "effects/star-shield-v1.png",
+      "source": "art-source/veggie-adventure/effects/star-shield-v1/source.png",
+      "visualVerified": false
+    }
+  ],
+  "animations": {
+    "version": 1,
+    "actors": {
+      "P01-0": {
+        "asset": "anim-P01-0",
+        "frameWidth": 48,
+        "frameHeight": 48,
+        "anchor": [
+          24,
+          48
+        ],
+        "clips": {
+          "idle": {
+            "row": 0,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "walk": {
+            "row": 1,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "run": {
+            "row": 2,
+            "frames": 4,
+            "fps": 14,
+            "loop": true
+          },
+          "jump-rise": {
+            "row": 3,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "jump-fall": {
+            "row": 4,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "crouch": {
+            "row": 5,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "swim": {
+            "row": 6,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "throw": {
+            "row": 7,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "hurt": {
+            "row": 8,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "death": {
+            "row": 9,
+            "frames": 4,
+            "fps": 6,
+            "loop": false
+          },
+          "victory": {
+            "row": 10,
+            "frames": 4,
+            "fps": 6,
+            "loop": false
+          }
+        },
+        "presentation": {
+          "referenceHeight": 23,
+          "targetHeight": 18,
+          "scale": 0.782608695652174
+        }
+      },
+      "P01-1": {
+        "asset": "anim-P01-1",
+        "frameWidth": 48,
+        "frameHeight": 96,
+        "anchor": [
+          24,
+          96
+        ],
+        "clips": {
+          "idle": {
+            "row": 0,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "walk": {
+            "row": 1,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "run": {
+            "row": 2,
+            "frames": 4,
+            "fps": 14,
+            "loop": true
+          },
+          "jump-rise": {
+            "row": 3,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "jump-fall": {
+            "row": 4,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "crouch": {
+            "row": 5,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "swim": {
+            "row": 6,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "throw": {
+            "row": 7,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "hurt": {
+            "row": 8,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "death": {
+            "row": 9,
+            "frames": 4,
+            "fps": 6,
+            "loop": false
+          },
+          "victory": {
+            "row": 10,
+            "frames": 4,
+            "fps": 6,
+            "loop": false
+          }
+        },
+        "presentation": {
+          "referenceHeight": 43,
+          "targetHeight": 28,
+          "scale": 0.6511627906976745
+        }
+      },
+      "P01-2": {
+        "asset": "anim-P01-2",
+        "frameWidth": 48,
+        "frameHeight": 96,
+        "anchor": [
+          24,
+          96
+        ],
+        "clips": {
+          "idle": {
+            "row": 0,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "walk": {
+            "row": 1,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "run": {
+            "row": 2,
+            "frames": 4,
+            "fps": 14,
+            "loop": true
+          },
+          "jump-rise": {
+            "row": 3,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "jump-fall": {
+            "row": 4,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "crouch": {
+            "row": 5,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "swim": {
+            "row": 6,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "throw": {
+            "row": 7,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "hurt": {
+            "row": 8,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "death": {
+            "row": 9,
+            "frames": 4,
+            "fps": 6,
+            "loop": false
+          },
+          "victory": {
+            "row": 10,
+            "frames": 4,
+            "fps": 6,
+            "loop": false
+          }
+        },
+        "presentation": {
+          "referenceHeight": 26.5,
+          "targetHeight": 28,
+          "scale": 1.0566037735849056
+        }
+      },
+      "E01": {
+        "asset": "anim-E01",
+        "frameWidth": 48,
+        "frameHeight": 48,
+        "anchor": [
+          24,
+          48
+        ],
+        "clips": {
+          "walk": {
+            "row": 0,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "flatten": {
+            "row": 1,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "hit": {
+            "row": 2,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          }
+        },
+        "presentation": {
+          "referenceHeight": 40,
+          "targetHeight": 16,
+          "scale": 0.4
+        }
+      },
+      "E02": {
+        "asset": "anim-E02",
+        "frameWidth": 48,
+        "frameHeight": 48,
+        "anchor": [
+          24,
+          48
+        ],
+        "clips": {
+          "walk": {
+            "row": 0,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "retract": {
+            "row": 1,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "shell-idle": {
+            "row": 2,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "shell-slide": {
+            "row": 3,
+            "frames": 4,
+            "fps": 14,
+            "loop": true
+          },
+          "wake": {
+            "row": 4,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "hit": {
+            "row": 5,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          }
+        },
+        "presentation": {
+          "referenceHeight": 35.5,
+          "targetHeight": 16,
+          "scale": 0.4507042253521127
+        }
+      },
+      "E03": {
+        "asset": "anim-E03",
+        "frameWidth": 48,
+        "frameHeight": 48,
+        "anchor": [
+          24,
+          48
+        ],
+        "clips": {
+          "walk": {
+            "row": 0,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "retract": {
+            "row": 1,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "shell-idle": {
+            "row": 2,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "shell-slide": {
+            "row": 3,
+            "frames": 4,
+            "fps": 14,
+            "loop": true
+          },
+          "wake": {
+            "row": 4,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "deflect": {
+            "row": 5,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "hit": {
+            "row": 6,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          }
+        },
+        "presentation": {
+          "referenceHeight": 25,
+          "targetHeight": 16,
+          "scale": 0.64
+        }
+      },
+      "E04": {
+        "asset": "anim-E04",
+        "frameWidth": 48,
+        "frameHeight": 48,
+        "anchor": [
+          24,
+          48
+        ],
+        "clips": {
+          "fall": {
+            "row": 0,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "unfold": {
+            "row": 1,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "walk": {
+            "row": 2,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "hit": {
+            "row": 3,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          }
+        },
+        "presentation": {
+          "referenceHeight": 34.5,
+          "targetHeight": 16,
+          "scale": 0.463768115942029
+        }
+      },
+      "E05": {
+        "asset": "anim-E05",
+        "frameWidth": 48,
+        "frameHeight": 48,
+        "anchor": [
+          24,
+          48
+        ],
+        "clips": {
+          "float": {
+            "row": 0,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "pulse": {
+            "row": 1,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "hit": {
+            "row": 2,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          }
+        },
+        "presentation": {
+          "referenceHeight": 33,
+          "targetHeight": 16,
+          "scale": 0.48484848484848486
+        }
+      },
+      "E06": {
+        "asset": "anim-E06",
+        "frameWidth": 48,
+        "frameHeight": 48,
+        "anchor": [
+          24,
+          48
+        ],
+        "clips": {
+          "swim": {
+            "row": 0,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "hit": {
+            "row": 1,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          }
+        },
+        "presentation": {
+          "referenceHeight": 26,
+          "targetHeight": 16,
+          "scale": 0.6153846153846154
+        }
+      },
+      "E07": {
+        "asset": "anim-E07",
+        "frameWidth": 48,
+        "frameHeight": 48,
+        "anchor": [
+          24,
+          48
+        ],
+        "clips": {
+          "walk": {
+            "row": 0,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "jump": {
+            "row": 1,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "windup": {
+            "row": 2,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "throw": {
+            "row": 3,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "recover": {
+            "row": 4,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "hit": {
+            "row": 5,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          }
+        },
+        "presentation": {
+          "referenceHeight": 27,
+          "targetHeight": 16,
+          "scale": 0.5925925925925926
+        }
+      },
+      "E08": {
+        "asset": "anim-E08",
+        "frameWidth": 48,
+        "frameHeight": 48,
+        "anchor": [
+          24,
+          48
+        ],
+        "clips": {
+          "emerge": {
+            "row": 0,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "idle": {
+            "row": 1,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "retract": {
+            "row": 2,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "hit": {
+            "row": 3,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          }
+        },
+        "presentation": {
+          "referenceHeight": 30.5,
+          "targetHeight": 16,
+          "scale": 0.5245901639344263
+        }
+      },
+      "E09": {
+        "asset": "anim-E09",
+        "frameWidth": 48,
+        "frameHeight": 48,
+        "anchor": [
+          24,
+          48
+        ],
+        "clips": {
+          "float": {
+            "row": 0,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "windup": {
+            "row": 1,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "drop": {
+            "row": 2,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "hit": {
+            "row": 3,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          }
+        },
+        "presentation": {
+          "referenceHeight": 29,
+          "targetHeight": 16,
+          "scale": 0.5517241379310345
+        }
+      },
+      "E10": {
+        "asset": "anim-E10",
+        "frameWidth": 48,
+        "frameHeight": 48,
+        "anchor": [
+          24,
+          48
+        ],
+        "clips": {
+          "fly": {
+            "row": 0,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "fall": {
+            "row": 1,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "deflect": {
+            "row": 2,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          }
+        },
+        "presentation": {
+          "referenceHeight": 18.5,
+          "targetHeight": 16,
+          "scale": 0.8648648648648649
+        }
+      },
+      "E11": {
+        "asset": "anim-E11",
+        "frameWidth": 48,
+        "frameHeight": 48,
+        "anchor": [
+          24,
+          48
+        ],
+        "clips": {
+          "fly": {
+            "row": 0,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "hop": {
+            "row": 1,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "lose-wings": {
+            "row": 2,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "hit": {
+            "row": 3,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          }
+        },
+        "presentation": {
+          "referenceHeight": 29.5,
+          "targetHeight": 16,
+          "scale": 0.5423728813559322
+        }
+      },
+      "E12": {
+        "asset": "anim-E12",
+        "frameWidth": 48,
+        "frameHeight": 48,
+        "anchor": [
+          24,
+          48
+        ],
+        "clips": {
+          "leap": {
+            "row": 0,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "fall": {
+            "row": 1,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "splash": {
+            "row": 2,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "hit": {
+            "row": 3,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          }
+        },
+        "presentation": {
+          "referenceHeight": 26.5,
+          "targetHeight": 16,
+          "scale": 0.6037735849056604
+        }
+      },
+      "B01": {
+        "asset": "anim-B01",
+        "frameWidth": 120,
+        "frameHeight": 120,
+        "anchor": [
+          60,
+          120
+        ],
+        "clips": {
+          "idle": {
+            "row": 0,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "windup": {
+            "row": 1,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "jump": {
+            "row": 2,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "land": {
+            "row": 3,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "expose": {
+            "row": 4,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "hit": {
+            "row": 5,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "defeat": {
+            "row": 6,
+            "frames": 4,
+            "fps": 6,
+            "loop": false
+          }
+        }
+      },
+      "B02": {
+        "asset": "anim-B02",
+        "frameWidth": 120,
+        "frameHeight": 120,
+        "anchor": [
+          60,
+          120
+        ],
+        "clips": {
+          "idle": {
+            "row": 0,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "throw": {
+            "row": 1,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "windup": {
+            "row": 2,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "roll": {
+            "row": 3,
+            "frames": 4,
+            "fps": 14,
+            "loop": true
+          },
+          "stun": {
+            "row": 4,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "hit": {
+            "row": 5,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "defeat": {
+            "row": 6,
+            "frames": 4,
+            "fps": 6,
+            "loop": false
+          }
+        }
+      },
+      "B03": {
+        "asset": "anim-B03",
+        "frameWidth": 120,
+        "frameHeight": 120,
+        "anchor": [
+          60,
+          120
+        ],
+        "clips": {
+          "idle": {
+            "row": 0,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "throw": {
+            "row": 1,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "windup": {
+            "row": 2,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "dash": {
+            "row": 3,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "stagger": {
+            "row": 4,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "hit": {
+            "row": 5,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "defeat": {
+            "row": 6,
+            "frames": 4,
+            "fps": 6,
+            "loop": false
+          }
+        }
+      },
+      "B04": {
+        "asset": "anim-B04",
+        "frameWidth": 120,
+        "frameHeight": 120,
+        "anchor": [
+          60,
+          120
+        ],
+        "clips": {
+          "swim": {
+            "row": 0,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "windup": {
+            "row": 1,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "spray": {
+            "row": 2,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "leap": {
+            "row": 3,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "stranded": {
+            "row": 4,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "hit": {
+            "row": 5,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "defeat": {
+            "row": 6,
+            "frames": 4,
+            "fps": 6,
+            "loop": false
+          }
+        }
+      },
+      "B05": {
+        "asset": "anim-B05",
+        "frameWidth": 120,
+        "frameHeight": 120,
+        "anchor": [
+          60,
+          120
+        ],
+        "clips": {
+          "idle": {
+            "row": 0,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "windup": {
+            "row": 1,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "roll": {
+            "row": 2,
+            "frames": 4,
+            "fps": 14,
+            "loop": true
+          },
+          "shed": {
+            "row": 3,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "open": {
+            "row": 4,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "hit": {
+            "row": 5,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "defeat": {
+            "row": 6,
+            "frames": 4,
+            "fps": 6,
+            "loop": false
+          }
+        }
+      },
+      "B06": {
+        "asset": "anim-B06",
+        "frameWidth": 120,
+        "frameHeight": 120,
+        "anchor": [
+          60,
+          120
+        ],
+        "clips": {
+          "idle": {
+            "row": 0,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "cast-high": {
+            "row": 1,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "cast-low": {
+            "row": 2,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "seed": {
+            "row": 3,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "exhaust": {
+            "row": 4,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "hit": {
+            "row": 5,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "defeat": {
+            "row": 6,
+            "frames": 4,
+            "fps": 6,
+            "loop": false
+          }
+        }
+      },
+      "B07": {
+        "asset": "anim-B07",
+        "frameWidth": 120,
+        "frameHeight": 120,
+        "anchor": [
+          60,
+          120
+        ],
+        "clips": {
+          "idle": {
+            "row": 0,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "left-attack": {
+            "row": 1,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "right-attack": {
+            "row": 2,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "sweep": {
+            "row": 3,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "expose": {
+            "row": 4,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "hit": {
+            "row": 5,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "defeat": {
+            "row": 6,
+            "frames": 4,
+            "fps": 6,
+            "loop": false
+          }
+        }
+      },
+      "B08": {
+        "asset": "anim-B08",
+        "frameWidth": 120,
+        "frameHeight": 120,
+        "anchor": [
+          60,
+          120
+        ],
+        "clips": {
+          "idle": {
+            "row": 0,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "windup": {
+            "row": 1,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "jump": {
+            "row": 2,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "land": {
+            "row": 3,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "seed-fan": {
+            "row": 4,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "open": {
+            "row": 5,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "enrage": {
+            "row": 6,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "hit": {
+            "row": 7,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "defeat": {
+            "row": 8,
+            "frames": 4,
+            "fps": 6,
+            "loop": false
+          }
+        }
+      },
+      "N01": {
+        "asset": "anim-N01",
+        "frameWidth": 48,
+        "frameHeight": 48,
+        "anchor": [
+          24,
+          48
+        ],
+        "clips": {
+          "idle": {
+            "row": 0,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "wave": {
+            "row": 1,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "map": {
+            "row": 2,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "talk": {
+            "row": 3,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          }
+        }
+      },
+      "N02": {
+        "asset": "anim-N02",
+        "frameWidth": 48,
+        "frameHeight": 48,
+        "anchor": [
+          24,
+          48
+        ],
+        "clips": {
+          "idle": {
+            "row": 0,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "rescue": {
+            "row": 1,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "plant": {
+            "row": 2,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "celebrate": {
+            "row": 3,
+            "frames": 4,
+            "fps": 6,
+            "loop": false
+          }
+        }
+      },
+      "FX01": {
+        "asset": "anim-FX01",
+        "frameWidth": 48,
+        "frameHeight": 48,
+        "anchor": [
+          24,
+          48
+        ],
+        "clips": {
+          "fire": {
+            "row": 0,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "seed": {
+            "row": 1,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "dust": {
+            "row": 2,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "splash": {
+            "row": 3,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "hit": {
+            "row": 4,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "spark": {
+            "row": 5,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "wave": {
+            "row": 6,
+            "frames": 4,
+            "fps": 10,
+            "loop": true
+          },
+          "burst": {
+            "row": 7,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          }
+        }
+      },
+      "SHIELD": {
+        "asset": "star-shield-v1",
+        "frameWidth": 96,
+        "frameHeight": 96,
+        "anchor": [
+          48,
+          48
+        ],
+        "clips": {
+          "aura": {
+            "row": 0,
+            "frames": 4,
+            "fps": 8,
+            "loop": true
+          }
+        }
+      }
+    }
+  }
+}

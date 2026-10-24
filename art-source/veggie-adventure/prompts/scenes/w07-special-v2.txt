@@ -1,0 +1,1 @@
+Use case: precise-object-edit. Change ONLY the falling chestnut in bottom row column 1: replace the split-open chestnut with a CLOSED round green spiky chestnut burr. No visible brown nut or cut surface. Retain the downward movement cue and its location, size, pixel style. Preserve the other seven objects and all positions. All empty space remains true alpha transparent.

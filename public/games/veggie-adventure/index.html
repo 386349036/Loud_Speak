@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>蔬果大冒险 · 八世界旅程</title><link rel="stylesheet" href="styles/game.css"></head>
+<body><main>
+<header><div><small>蔬果大冒险 · 八世界 / 32关</small><h1 id="title">芽豆出发</h1></div><div><button id="pause" disabled>暂停</button><button id="retry" disabled>检查点重试</button><button id="fresh" disabled>重开本关</button></div></header>
+<div class="level-picker"><label for="level">关卡</label><select id="level" aria-label="选择关卡"></select><button id="load-level" disabled>进入选中关卡</button></div>
+<div id="hud" role="status">加载资源…</div>
+<section class="screen"><canvas id="game" width="768" height="720" aria-label="蔬果大冒险游戏画面"></canvas><div id="overlay"><h2 id="message">正在准备旅程</h2><p id="detail">加载主角与场景素材</p><button id="start" disabled>开始冒险</button></div></section>
+<div class="touch" aria-label="触屏操作"><div class="stick-group"><div id="joystick" aria-label="移动摇杆：左右移动，下拉蹲下"><span class="stick-directions" aria-hidden="true">←　→<br>↓</span><span class="stick-knob"></span></div><small>移动 · 下拉蹲下</small></div><div class="action-buttons"><button data-key="run" aria-label="按住奔跑">跑</button><button data-key="fire" aria-label="发射火弹">火弹</button><button data-key="jump" aria-label="按住跳跃或游泳">跳跃</button></div></div>
+<p class="help touch-help">左摇杆移动，下拉蹲下；右侧按住跳跃可跳得更高／游泳，跑＋跳可越过远坑。支持多指同时操作。</p>
+<p class="help">方向键 / A、D 移动 · 空格 / Z 跳跃（按住跳得更高，水下连续上划） · Shift 奔跑 · ↓ / S 蹲行 · X 火弹 · P 暂停</p>
+<p class="help">到达叶旗保存检查点，死亡无限重试。过关后可进入下一关并延续分数与形态，也可直接选关。首领绿标破绽期间可踩顶部，或命中三枚火弹；击败后出口开放。</p>
+<p id="storage" class="help"></p></main><script type="module" src="js/main.mjs"></script></body></html>

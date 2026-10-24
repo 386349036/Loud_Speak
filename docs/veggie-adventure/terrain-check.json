@@ -1,0 +1,325 @@
+{
+  "scope": "terrain-only nonvisual simulation; combat, boss and hazard encounters excluded; not user play acceptance",
+  "results": [
+    {
+      "id": "1-1",
+      "terrainProbePassed": true,
+      "maxX": 1461,
+      "exit": 1460,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      }
+    },
+    {
+      "id": "1-2",
+      "terrainProbePassed": true,
+      "maxX": 1489,
+      "exit": 1488,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      }
+    },
+    {
+      "id": "1-3",
+      "terrainProbePassed": true,
+      "maxX": 1488,
+      "exit": 1488,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      }
+    },
+    {
+      "id": "1-4",
+      "terrainProbePassed": true,
+      "maxX": 1745,
+      "exit": 1744,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      }
+    },
+    {
+      "id": "2-1",
+      "terrainProbePassed": true,
+      "maxX": 1488,
+      "exit": 1488,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      }
+    },
+    {
+      "id": "2-2",
+      "terrainProbePassed": true,
+      "maxX": 1489,
+      "exit": 1488,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 16
+      }
+    },
+    {
+      "id": "2-3",
+      "terrainProbePassed": true,
+      "maxX": 1489,
+      "exit": 1488,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      }
+    },
+    {
+      "id": "2-4",
+      "terrainProbePassed": true,
+      "maxX": 1745,
+      "exit": 1744,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      }
+    },
+    {
+      "id": "3-1",
+      "terrainProbePassed": true,
+      "maxX": 1488,
+      "exit": 1488,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      }
+    },
+    {
+      "id": "3-2",
+      "terrainProbePassed": true,
+      "maxX": 1489,
+      "exit": 1488,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      }
+    },
+    {
+      "id": "3-3",
+      "terrainProbePassed": true,
+      "maxX": 1489,
+      "exit": 1488,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      }
+    },
+    {
+      "id": "3-4",
+      "terrainProbePassed": true,
+      "maxX": 1745,
+      "exit": 1744,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      }
+    },
+    {
+      "id": "4-1",
+      "terrainProbePassed": true,
+      "maxX": 1488,
+      "exit": 1488,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      }
+    },
+    {
+      "id": "4-2",
+      "terrainProbePassed": true,
+      "maxX": 1488,
+      "exit": 1488,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      }
+    },
+    {
+      "id": "4-3",
+      "terrainProbePassed": true,
+      "maxX": 1489,
+      "exit": 1488,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      }
+    },
+    {
+      "id": "4-4",
+      "terrainProbePassed": true,
+      "maxX": 1745,
+      "exit": 1744,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      }
+    },
+    {
+      "id": "5-1",
+      "terrainProbePassed": true,
+      "maxX": 1488,
+      "exit": 1488,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      }
+    },
+    {
+      "id": "5-2",
+      "terrainProbePassed": true,
+      "maxX": 1489,
+      "exit": 1488,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      }
+    },
+    {
+      "id": "5-3",
+      "terrainProbePassed": true,
+      "maxX": 1489,
+      "exit": 1488,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      }
+    },
+    {
+      "id": "5-4",
+      "terrainProbePassed": true,
+      "maxX": 1745,
+      "exit": 1744,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      }
+    },
+    {
+      "id": "6-1",
+      "terrainProbePassed": true,
+      "maxX": 1488,
+      "exit": 1488,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      }
+    },
+    {
+      "id": "6-2",
+      "terrainProbePassed": true,
+      "maxX": 1489,
+      "exit": 1488,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      }
+    },
+    {
+      "id": "6-3",
+      "terrainProbePassed": true,
+      "maxX": 1488,
+      "exit": 1488,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      }
+    },
+    {
+      "id": "6-4",
+      "terrainProbePassed": true,
+      "maxX": 1745,
+      "exit": 1744,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      }
+    },
+    {
+      "id": "7-1",
+      "terrainProbePassed": true,
+      "maxX": 1488,
+      "exit": 1488,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      }
+    },
+    {
+      "id": "7-2",
+      "terrainProbePassed": true,
+      "maxX": 1488,
+      "exit": 1488,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      }
+    },
+    {
+      "id": "7-3",
+      "terrainProbePassed": true,
+      "maxX": 1489,
+      "exit": 1488,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      }
+    },
+    {
+      "id": "7-4",
+      "terrainProbePassed": true,
+      "maxX": 1745,
+      "exit": 1744,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      }
+    },
+    {
+      "id": "8-1",
+      "terrainProbePassed": true,
+      "maxX": 1488,
+      "exit": 1488,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      }
+    },
+    {
+      "id": "8-2",
+      "terrainProbePassed": true,
+      "maxX": 1489,
+      "exit": 1488,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      }
+    },
+    {
+      "id": "8-3",
+      "terrainProbePassed": true,
+      "maxX": 1488,
+      "exit": 1488,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      }
+    },
+    {
+      "id": "8-4",
+      "terrainProbePassed": true,
+      "maxX": 1745,
+      "exit": 1744,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      }
+    }
+  ]
+}

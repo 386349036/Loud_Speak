@@ -1,0 +1,363 @@
+{
+  "version": 1,
+  "date": "2026-10-24",
+  "scope": "first-pass-concept-sources",
+  "note": "先形象，后按实际需要统一比例；不是完整运行精灵、动画或音频交付",
+  "entries": [
+    {
+      "id": "E01",
+      "slug": "shiitake-patrol",
+      "name": "香菇巡逻兵",
+      "kind": "enemies",
+      "transparent": true,
+      "referenceType": "hero",
+      "baseId": null,
+      "prompt": "Use case: stylized-concept. Produce ONE character concept asset sheet for an original vegetable-themed 2D platformer. True transparent PNG alpha background. Reference image 1 is STYLE ONLY: match its polished 32-bit-era 2D pixel art, crisp dark contours, warm readable shading, expressive eyes, controlled fine pixel clusters. Do NOT copy its potato anatomy, scarf or boots onto unrelated species. No text, title, labels, borders, swatches, floor, cast shadow, landscape, paper, checkerboard or matte. All blank space alpha=0. Opaque interiors with clean alpha edges; no general glow. Not vector, not 3D, no soft painting. Six separate complete figures in a generous 3-column by 2-row layout. No overlap between poses, at least 10% transparent gutters, keep every limb and particle within its cell. These are key-pose CONCEPTS, not animation frames; scale and grid fitting will be done later. Maintain exact same design identity between poses.\nCharacter E01: 香菇巡逻兵. Ingredient: 香菇. Silhouette MUST follow: 扁圆棕色菌盖、米白短菌柄；脸长在菌柄正面，不用红白圆点帽. Palette: 棕褐／米白／苔绿.\nBehavior context: 地面巡逻，撞墙折返，允许走落边缘. Readable counterplay: 踩踏、辣椒火弹、运动壳体. Danger cue: 接触伤害；无背刺.\nShow SIX ordered poses: front three-quarter idle, side movement, back silhouette, primary special behavior, alternative state, non-gory hurt pose. Required behavioral states to communicate across these poses: 巡逻→被踩压扁／被击飞. For simple swimmers or walkers use distinct movement anticipation and action. Mushroom MUST be an edible BROWN SHIITAKE with a flat rounded cap and cream stem face, NEVER a red spotted mushroom.\nPreserve recognizable edible plant anatomy and game-readable contours. All figures isolated on actual transparent alpha."
+    },
+    {
+      "id": "E02",
+      "slug": "cabbage-shell",
+      "name": "卷心菜壳兵",
+      "kind": "enemies",
+      "transparent": true,
+      "referenceType": "hero",
+      "baseId": null,
+      "prompt": "Use case: stylized-concept. Produce ONE character concept asset sheet for an original vegetable-themed 2D platformer. True transparent PNG alpha background. Reference image 1 is STYLE ONLY: match its polished 32-bit-era 2D pixel art, crisp dark contours, warm readable shading, expressive eyes, controlled fine pixel clusters. Do NOT copy its potato anatomy, scarf or boots onto unrelated species. No text, title, labels, borders, swatches, floor, cast shadow, landscape, paper, checkerboard or matte. All blank space alpha=0. Opaque interiors with clean alpha edges; no general glow. Not vector, not 3D, no soft painting. Six separate complete figures in a generous 3-column by 2-row layout. No overlap between poses, at least 10% transparent gutters, keep every limb and particle within its cell. These are key-pose CONCEPTS, not animation frames; scale and grid fitting will be done later. Maintain exact same design identity between poses.\nCharacter E02: 卷心菜壳兵. Ingredient: 卷心菜. Silhouette MUST follow: 层叠菜叶形成圆壳，外露短根足；缩壳时完全收脚. Palette: 嫩绿／深绿／奶白.\nBehavior context: 巡逻；被踩缩壳；接触静止壳可踢动；运动壳撞墙反弹. Readable counterplay: 踩踏切换壳状态；火弹消灭；其他运动壳体消灭. Danger cue: 移动壳伤害玩家；静止壳安全.\nShow SIX ordered poses: front three-quarter idle, side movement, back silhouette, primary special behavior, alternative state, non-gory hurt pose. Required behavioral states to communicate across these poses: 巡逻→静止壳→运动壳；静止8秒后摇晃1秒再恢复. For simple swimmers or walkers use distinct movement anticipation and action. The cabbage has ROOT FEET and a small leafy face, NEVER a turtle head. Include fully closed leaf ball with no feet and sliding ball.\nPreserve recognizable edible plant anatomy and game-readable contours. All figures isolated on actual transparent alpha."
+    },
+    {
+      "id": "E03",
+      "slug": "walnut-beetle",
+      "name": "核桃甲虫",
+      "kind": "enemies",
+      "transparent": true,
+      "referenceType": "hero",
+      "baseId": null,
+      "prompt": "Use case: stylized-concept. Produce ONE character concept asset sheet for an original vegetable-themed 2D platformer. True transparent PNG alpha background. Reference image 1 is STYLE ONLY: match its polished 32-bit-era 2D pixel art, crisp dark contours, warm readable shading, expressive eyes, controlled fine pixel clusters. Do NOT copy its potato anatomy, scarf or boots onto unrelated species. No text, title, labels, borders, swatches, floor, cast shadow, landscape, paper, checkerboard or matte. All blank space alpha=0. Opaque interiors with clean alpha edges; no general glow. Not vector, not 3D, no soft painting. Six separate complete figures in a generous 3-column by 2-row layout. No overlap between poses, at least 10% transparent gutters, keep every limb and particle within its cell. These are key-pose CONCEPTS, not animation frames; scale and grid fitting will be done later. Maintain exact same design identity between poses.\nCharacter E03: 核桃甲虫. Ingredient: 核桃. Silhouette MUST follow: 低矮横椭圆硬壳，核桃沟纹与两根根须触角. Palette: 棕灰／赭黄／深褐.\nBehavior context: 壳体状态机同卷心菜；对火弹免疫. Readable counterplay: 踩踏缩壳后踢动；其他运动壳体. Danger cue: 深色硬壳与火花弹开反馈表示抗火.\nShow SIX ordered poses: front three-quarter idle, side movement, back silhouette, primary special behavior, alternative state, non-gory hurt pose. Required behavioral states to communicate across these poses: 巡逻→静止壳→运动壳→恢复. For simple swimmers or walkers use distinct movement anticipation and action. Include closed walnut shell and rolling shell with legs retracted.\nPreserve recognizable edible plant anatomy and game-readable contours. All figures isolated on actual transparent alpha."
+    },
+    {
+      "id": "E04",
+      "slug": "chestnut-spike",
+      "name": "刺栗守卫",
+      "kind": "enemies",
+      "transparent": true,
+      "referenceType": "hero",
+      "baseId": null,
+      "prompt": "Use case: stylized-concept. Produce ONE character concept asset sheet for an original vegetable-themed 2D platformer. True transparent PNG alpha background. Reference image 1 is STYLE ONLY: match its polished 32-bit-era 2D pixel art, crisp dark contours, warm readable shading, expressive eyes, controlled fine pixel clusters. Do NOT copy its potato anatomy, scarf or boots onto unrelated species. No text, title, labels, borders, swatches, floor, cast shadow, landscape, paper, checkerboard or matte. All blank space alpha=0. Opaque interiors with clean alpha edges; no general glow. Not vector, not 3D, no soft painting. Six separate complete figures in a generous 3-column by 2-row layout. No overlap between poses, at least 10% transparent gutters, keep every limb and particle within its cell. These are key-pose CONCEPTS, not animation frames; scale and grid fitting will be done later. Maintain exact same design identity between poses.\nCharacter E04: 刺栗守卫. Ingredient: 栗子带刺外壳. Silhouette MUST follow: 低矮圆球，背部至少三枚明显长刺，腹部留无刺区. Palette: 橄榄绿／黄褐.\nBehavior context: 地面巡逻；可从云牧者投下并落地展开. Readable counterplay: 火弹、运动壳体；不可踩. Danger cue: 长刺轮廓；踩中同接触受伤.\nShow SIX ordered poses: front three-quarter idle, side movement, back silhouette, primary special behavior, alternative state, non-gory hurt pose. Required behavioral states to communicate across these poses: 落下→展开→巡逻→击飞. For simple swimmers or walkers use distinct movement anticipation and action. \nPreserve recognizable edible plant anatomy and game-readable contours. All figures isolated on actual transparent alpha."
+    },
+    {
+      "id": "E05",
+      "slug": "lotus-jelly",
+      "name": "莲藕水母",
+      "kind": "enemies",
+      "transparent": true,
+      "referenceType": "hero",
+      "baseId": null,
+      "prompt": "Use case: stylized-concept. Produce ONE character concept asset sheet for an original vegetable-themed 2D platformer. True transparent PNG alpha background. Reference image 1 is STYLE ONLY: match its polished 32-bit-era 2D pixel art, crisp dark contours, warm readable shading, expressive eyes, controlled fine pixel clusters. Do NOT copy its potato anatomy, scarf or boots onto unrelated species. No text, title, labels, borders, swatches, floor, cast shadow, landscape, paper, checkerboard or matte. All blank space alpha=0. Opaque interiors with clean alpha edges; no general glow. Not vector, not 3D, no soft painting. Six separate complete figures in a generous 3-column by 2-row layout. No overlap between poses, at least 10% transparent gutters, keep every limb and particle within its cell. These are key-pose CONCEPTS, not animation frames; scale and grid fitting will be done later. Maintain exact same design identity between poses.\nCharacter E05: 莲藕水母. Ingredient: 莲藕与荷叶. Silhouette MUST follow: 莲藕切面圆头、可见藕孔、细根须触手. Palette: 淡粉／灰紫／湖绿.\nBehavior context: 水下脉冲上浮，停顿下沉；周期性朝玩家方向移动. Readable counterplay: 火弹；游泳躲避；水下踩踏无效. Danger cue: 触手展开时接触区域仍固定，不随装饰波动.\nShow SIX ordered poses: front three-quarter idle, side movement, back silhouette, primary special behavior, alternative state, non-gory hurt pose. Required behavioral states to communicate across these poses: 漂浮→蓄力→脉冲→漂浮. For simple swimmers or walkers use distinct movement anticipation and action. \nPreserve recognizable edible plant anatomy and game-readable contours. All figures isolated on actual transparent alpha."
+    },
+    {
+      "id": "E06",
+      "slug": "pepper-fish",
+      "name": "椒鱼",
+      "kind": "enemies",
+      "transparent": true,
+      "referenceType": "hero",
+      "baseId": null,
+      "prompt": "Use case: stylized-concept. Produce ONE character concept asset sheet for an original vegetable-themed 2D platformer. True transparent PNG alpha background. Reference image 1 is STYLE ONLY: match its polished 32-bit-era 2D pixel art, crisp dark contours, warm readable shading, expressive eyes, controlled fine pixel clusters. Do NOT copy its potato anatomy, scarf or boots onto unrelated species. No text, title, labels, borders, swatches, floor, cast shadow, landscape, paper, checkerboard or matte. All blank space alpha=0. Opaque interiors with clean alpha edges; no general glow. Not vector, not 3D, no soft painting. Six separate complete figures in a generous 3-column by 2-row layout. No overlap between poses, at least 10% transparent gutters, keep every limb and particle within its cell. These are key-pose CONCEPTS, not animation frames; scale and grid fitting will be done later. Maintain exact same design identity between poses.\nCharacter E06: 椒鱼. Ingredient: 甜椒. Silhouette MUST follow: 侧扁甜椒鱼身、叶片尾鳍、椒蒂背鳍. Palette: 橙红／叶绿.\nBehavior context: 水中沿配置方向和速度水平游动. Readable counterplay: 火弹；水下不可踩. Danger cue: 鱼鳍与轮廓固定显示游动方向.\nShow SIX ordered poses: front three-quarter idle, side movement, back silhouette, primary special behavior, alternative state, non-gory hurt pose. Required behavioral states to communicate across these poses: 游动→击败. For simple swimmers or walkers use distinct movement anticipation and action. \nPreserve recognizable edible plant anatomy and game-readable contours. All figures isolated on actual transparent alpha."
+    },
+    {
+      "id": "E07",
+      "slug": "corn-thrower",
+      "name": "玉米投手",
+      "kind": "enemies",
+      "transparent": true,
+      "referenceType": "hero",
+      "baseId": null,
+      "prompt": "Use case: stylized-concept. Produce ONE character concept asset sheet for an original vegetable-themed 2D platformer. True transparent PNG alpha background. Reference image 1 is STYLE ONLY: match its polished 32-bit-era 2D pixel art, crisp dark contours, warm readable shading, expressive eyes, controlled fine pixel clusters. Do NOT copy its potato anatomy, scarf or boots onto unrelated species. No text, title, labels, borders, swatches, floor, cast shadow, landscape, paper, checkerboard or matte. All blank space alpha=0. Opaque interiors with clean alpha edges; no general glow. Not vector, not 3D, no soft painting. Six separate complete figures in a generous 3-column by 2-row layout. No overlap between poses, at least 10% transparent gutters, keep every limb and particle within its cell. These are key-pose CONCEPTS, not animation frames; scale and grid fitting will be done later. Maintain exact same design identity between poses.\nCharacter E07: 玉米投手. Ingredient: 玉米. Silhouette MUST follow: 直立玉米、两片粗叶手臂、穗须眉，手中玉米粒可见. Palette: 金黄／墨绿.\nBehavior context: 短距离巡逻与跳台；预备后连续抛3枚弧线玉米粒. Readable counterplay: 踩踏、火弹、运动壳体. Danger cue: 举臂0.5秒后投掷；每轮后至少0.8秒休息.\nShow SIX ordered poses: front three-quarter idle, side movement, back silhouette, primary special behavior, alternative state, non-gory hurt pose. Required behavioral states to communicate across these poses: 巡逻→举臂→投掷→恢复；跳跃为独立移动状态. For simple swimmers or walkers use distinct movement anticipation and action. \nPreserve recognizable edible plant anatomy and game-readable contours. All figures isolated on actual transparent alpha."
+    },
+    {
+      "id": "E08",
+      "slug": "pea-trap",
+      "name": "豌豆捕虫株",
+      "kind": "enemies",
+      "transparent": true,
+      "referenceType": "hero",
+      "baseId": null,
+      "prompt": "Use case: stylized-concept. Produce ONE character concept asset sheet for an original vegetable-themed 2D platformer. True transparent PNG alpha background. Reference image 1 is STYLE ONLY: match its polished 32-bit-era 2D pixel art, crisp dark contours, warm readable shading, expressive eyes, controlled fine pixel clusters. Do NOT copy its potato anatomy, scarf or boots onto unrelated species. No text, title, labels, borders, swatches, floor, cast shadow, landscape, paper, checkerboard or matte. All blank space alpha=0. Opaque interiors with clean alpha edges; no general glow. Not vector, not 3D, no soft painting. Six separate complete figures in a generous 3-column by 2-row layout. No overlap between poses, at least 10% transparent gutters, keep every limb and particle within its cell. These are key-pose CONCEPTS, not animation frames; scale and grid fitting will be done later. Maintain exact same design identity between poses.\nCharacter E08: 豌豆捕虫株. Ingredient: 豌豆荚. Silhouette MUST follow: 两瓣豆荚口、内部圆豆牙、细藤颈；固定藤管. Palette: 豆绿／浅黄.\nBehavior context: 周期伸出、停留、缩回；开始伸出前若玩家距管口中心不足24逻辑单位则等待. Readable counterplay: 伸出时火弹；不可踩. Danger cue: 张开的豆荚口表示危险；缩回后管口可站立.\nShow SIX ordered poses: front three-quarter idle, side movement, back silhouette, primary special behavior, alternative state, non-gory hurt pose. Required behavioral states to communicate across these poses: 隐藏→伸出→停留→缩回. For simple swimmers or walkers use distinct movement anticipation and action. Only plant body and its attached vine base, no giant pipe or ground. Include folded pea pod and wide open split pod with round pea teeth.\nPreserve recognizable edible plant anatomy and game-readable contours. All figures isolated on actual transparent alpha."
+    },
+    {
+      "id": "E09",
+      "slug": "cotton-cloud",
+      "name": "棉花云牧者",
+      "kind": "enemies",
+      "transparent": true,
+      "referenceType": "hero",
+      "baseId": null,
+      "prompt": "Use case: stylized-concept. Produce ONE character concept asset sheet for an original vegetable-themed 2D platformer. True transparent PNG alpha background. Reference image 1 is STYLE ONLY: match its polished 32-bit-era 2D pixel art, crisp dark contours, warm readable shading, expressive eyes, controlled fine pixel clusters. Do NOT copy its potato anatomy, scarf or boots onto unrelated species. No text, title, labels, borders, swatches, floor, cast shadow, landscape, paper, checkerboard or matte. All blank space alpha=0. Opaque interiors with clean alpha edges; no general glow. Not vector, not 3D, no soft painting. Six separate complete figures in a generous 3-column by 2-row layout. No overlap between poses, at least 10% transparent gutters, keep every limb and particle within its cell. These are key-pose CONCEPTS, not animation frames; scale and grid fitting will be done later. Maintain exact same design identity between poses.\nCharacter E09: 棉花云牧者. Ingredient: 棉花与棉桃. Silhouette MUST follow: 蓬松棉团托着棉桃脸，两片苞叶像扶手. Palette: 暖白／青灰／褐绿.\nBehavior context: 空中横向跟随，定时投下E04；同屏其生成的刺栗最多3只. Readable counterplay: 借高台踩踏；火弹. Danger cue: 投掷前0.6秒抬手；禁止在玩家身上直接生成刺栗.\nShow SIX ordered poses: front three-quarter idle, side movement, back silhouette, primary special behavior, alternative state, non-gory hurt pose. Required behavioral states to communicate across these poses: 跟随→抬手→投掷→冷却. For simple swimmers or walkers use distinct movement anticipation and action. Show cotton boll creature on a compact cotton puff, not goggles or a turtle riding a weather cloud.\nPreserve recognizable edible plant anatomy and game-readable contours. All figures isolated on actual transparent alpha."
+    },
+    {
+      "id": "E10",
+      "slug": "eggplant-bolt",
+      "name": "茄子炮弹兵",
+      "kind": "enemies",
+      "transparent": true,
+      "referenceType": "hero",
+      "baseId": null,
+      "prompt": "Use case: stylized-concept. Produce ONE character concept asset sheet for an original vegetable-themed 2D platformer. True transparent PNG alpha background. Reference image 1 is STYLE ONLY: match its polished 32-bit-era 2D pixel art, crisp dark contours, warm readable shading, expressive eyes, controlled fine pixel clusters. Do NOT copy its potato anatomy, scarf or boots onto unrelated species. No text, title, labels, borders, swatches, floor, cast shadow, landscape, paper, checkerboard or matte. All blank space alpha=0. Opaque interiors with clean alpha edges; no general glow. Not vector, not 3D, no soft painting. Six separate complete figures in a generous 3-column by 2-row layout. No overlap between poses, at least 10% transparent gutters, keep every limb and particle within its cell. These are key-pose CONCEPTS, not animation frames; scale and grid fitting will be done later. Maintain exact same design identity between poses.\nCharacter E10: 茄子炮弹兵. Ingredient: 茄子. Silhouette MUST follow: 横向茄子、叶萼尾翼、钝圆头；没有手脚. Palette: 紫黑／浅紫／叶绿.\nBehavior context: 从固定发射器水平飞行，离开活动区域销毁. Readable counterplay: 从上方踩落；火弹无效. Danger cue: 发射器亮起0.5秒提示；近距24逻辑单位禁止发射.\nShow SIX ordered poses: front three-quarter idle, side movement, back silhouette, primary special behavior, alternative state, non-gory hurt pose. Required behavioral states to communicate across these poses: 发射→飞行→踩落. For simple swimmers or walkers use distinct movement anticipation and action. Horizontal eggplant projectile has NO ARMS, NO LEGS, NO BOOTS. Six views/states of eggplant with leaf tail fins.\nPreserve recognizable edible plant anatomy and game-readable contours. All figures isolated on actual transparent alpha."
+    },
+    {
+      "id": "E11",
+      "slug": "winged-cabbage",
+      "name": "飞翼卷心菜",
+      "kind": "enemies",
+      "transparent": true,
+      "referenceType": "hero",
+      "baseId": "E02",
+      "prompt": "Use case: stylized-concept. Produce ONE character concept asset sheet for an original vegetable-themed 2D platformer. True transparent PNG alpha background. Reference image 1 is STYLE ONLY: match its polished 32-bit-era 2D pixel art, crisp dark contours, warm readable shading, expressive eyes, controlled fine pixel clusters. Do NOT copy its potato anatomy, scarf or boots onto unrelated species. No text, title, labels, borders, swatches, floor, cast shadow, landscape, paper, checkerboard or matte. All blank space alpha=0. Opaque interiors with clean alpha edges; no general glow. Not vector, not 3D, no soft painting. Six separate complete figures in a generous 3-column by 2-row layout. No overlap between poses, at least 10% transparent gutters, keep every limb and particle within its cell. These are key-pose CONCEPTS, not animation frames; scale and grid fitting will be done later. Maintain exact same design identity between poses.\nCharacter E11: 飞翼卷心菜. Ingredient: 卷心菜与翼状叶片. Silhouette MUST follow: 沿用E02身体，两片对称大叶翼；不能只靠换色区分. Palette: 嫩绿／青绿／奶白.\nBehavior context: 按关卡配置跳跃或沿固定路径飞行；首次踩踏去翼变E02. Readable counterplay: 首次踩踏去翼；火弹或运动壳体消灭. Danger cue: 碰撞体不包括叶翼装饰.\nShow SIX ordered poses: front three-quarter idle, side movement, back silhouette, primary special behavior, alternative state, non-gory hurt pose. Required behavioral states to communicate across these poses: 飞行／跳跃→去翼→E02巡逻. For simple swimmers or walkers use distinct movement anticipation and action. \nPreserve recognizable edible plant anatomy and game-readable contours. All figures isolated on actual transparent alpha."
+    },
+    {
+      "id": "E12",
+      "slug": "leaping-pepper-fish",
+      "name": "跃水椒鱼",
+      "kind": "enemies",
+      "transparent": true,
+      "referenceType": "hero",
+      "baseId": "E06",
+      "prompt": "Use case: stylized-concept. Produce ONE character concept asset sheet for an original vegetable-themed 2D platformer. True transparent PNG alpha background. Reference image 1 is STYLE ONLY: match its polished 32-bit-era 2D pixel art, crisp dark contours, warm readable shading, expressive eyes, controlled fine pixel clusters. Do NOT copy its potato anatomy, scarf or boots onto unrelated species. No text, title, labels, borders, swatches, floor, cast shadow, landscape, paper, checkerboard or matte. All blank space alpha=0. Opaque interiors with clean alpha edges; no general glow. Not vector, not 3D, no soft painting. Six separate complete figures in a generous 3-column by 2-row layout. No overlap between poses, at least 10% transparent gutters, keep every limb and particle within its cell. These are key-pose CONCEPTS, not animation frames; scale and grid fitting will be done later. Maintain exact same design identity between poses.\nCharacter E12: 跃水椒鱼. Ingredient: 甜椒. Silhouette MUST follow: 沿用E06，尾鳍展开、腹部增加浅色条纹. Palette: 橙红／浅黄／叶绿.\nBehavior context: 从关卡固定发射区沿抛物线跃水，不追踪玩家位置. Readable counterplay: 空中可踩；火弹. Danger cue: 水面先出现0.5秒涟漪；入水后销毁.\nShow SIX ordered poses: front three-quarter idle, side movement, back silhouette, primary special behavior, alternative state, non-gory hurt pose. Required behavioral states to communicate across these poses: 涟漪预警→跃起→下落→入水. For simple swimmers or walkers use distinct movement anticipation and action. \nPreserve recognizable edible plant anatomy and game-readable contours. All figures isolated on actual transparent alpha."
+    },
+    {
+      "id": "B01",
+      "slug": "pumpkin-warden",
+      "name": "南瓜门卫",
+      "kind": "bosses",
+      "transparent": true,
+      "referenceType": "hero",
+      "baseId": null,
+      "prompt": "Use case: stylized-concept. Produce ONE character concept asset sheet for an original vegetable-themed 2D platformer. True transparent PNG alpha background. Reference image 1 is STYLE ONLY: match its polished 32-bit-era 2D pixel art, crisp dark contours, warm readable shading, expressive eyes, controlled fine pixel clusters. Do NOT copy its potato anatomy, scarf or boots onto unrelated species. No text, title, labels, borders, swatches, floor, cast shadow, landscape, paper, checkerboard or matte. All blank space alpha=0. Opaque interiors with clean alpha edges; no general glow. Not vector, not 3D, no soft painting. Six separate complete figures in a generous 3-column by 2-row layout. No overlap between poses, at least 10% transparent gutters, keep every limb and particle within its cell. These are key-pose CONCEPTS, not animation frames; scale and grid fitting will be done later. Maintain exact same design identity between poses.\nCharacter B01: 南瓜门卫. Ingredient: 南瓜. Silhouette MUST follow: 宽胖南瓜、藤带、大叶护臂. Palette: 橘黄／深绿.\nBehavior context: 短跳落地产生左右贴地震波. Readable counterplay: 跳过震波后踩头. Danger cue: 每次攻击至少0.5秒预兆；弱点打开同时改变形状、姿态和色值.\nShow SIX ordered poses: front three-quarter idle, side view idle, attack anticipation, main attack, exposed vulnerable state, non-gory defeated sitting/slumped pose. Weakness MUST be clear by physically opening/retracting armor: 落地后头顶嫩芽露出，喘息2秒. Design a powerful expressive FOOD CREATURE, not a human wearing food armor.\nPreserve recognizable edible plant anatomy and game-readable contours. All figures isolated on actual transparent alpha."
+    },
+    {
+      "id": "B02",
+      "slug": "onion-miner",
+      "name": "洋葱矿主",
+      "kind": "bosses",
+      "transparent": true,
+      "referenceType": "hero",
+      "baseId": null,
+      "prompt": "Use case: stylized-concept. Produce ONE character concept asset sheet for an original vegetable-themed 2D platformer. True transparent PNG alpha background. Reference image 1 is STYLE ONLY: match its polished 32-bit-era 2D pixel art, crisp dark contours, warm readable shading, expressive eyes, controlled fine pixel clusters. Do NOT copy its potato anatomy, scarf or boots onto unrelated species. No text, title, labels, borders, swatches, floor, cast shadow, landscape, paper, checkerboard or matte. All blank space alpha=0. Opaque interiors with clean alpha edges; no general glow. Not vector, not 3D, no soft painting. Six separate complete figures in a generous 3-column by 2-row layout. No overlap between poses, at least 10% transparent gutters, keep every limb and particle within its cell. These are key-pose CONCEPTS, not animation frames; scale and grid fitting will be done later. Maintain exact same design identity between poses.\nCharacter B02: 洋葱矿主. Ingredient: 洋葱. Silhouette MUST follow: 层叠洋葱、根须胡子、矿石护肩. Palette: 紫褐／米白.\nBehavior context: 依次抛落土块、卷身向玩家蓄力冲撞. Readable counterplay: 引导撞边，避开落土后踩顶部. Danger cue: 每次攻击至少0.5秒预兆；弱点打开同时改变形状、姿态和色值.\nShow SIX ordered poses: front three-quarter idle, side view idle, attack anticipation, main attack, exposed vulnerable state, non-gory defeated sitting/slumped pose. Weakness MUST be clear by physically opening/retracting armor: 撞上场边软土后眩晕2秒，顶部矿帽脱落. Design a powerful expressive FOOD CREATURE, not a human wearing food armor.\nPreserve recognizable edible plant anatomy and game-readable contours. All figures isolated on actual transparent alpha."
+    },
+    {
+      "id": "B03",
+      "slug": "corn-knight",
+      "name": "玉米骑士",
+      "kind": "bosses",
+      "transparent": true,
+      "referenceType": "hero",
+      "baseId": null,
+      "prompt": "Use case: stylized-concept. Produce ONE character concept asset sheet for an original vegetable-themed 2D platformer. True transparent PNG alpha background. Reference image 1 is STYLE ONLY: match its polished 32-bit-era 2D pixel art, crisp dark contours, warm readable shading, expressive eyes, controlled fine pixel clusters. Do NOT copy its potato anatomy, scarf or boots onto unrelated species. No text, title, labels, borders, swatches, floor, cast shadow, landscape, paper, checkerboard or matte. All blank space alpha=0. Opaque interiors with clean alpha edges; no general glow. Not vector, not 3D, no soft painting. Six separate complete figures in a generous 3-column by 2-row layout. No overlap between poses, at least 10% transparent gutters, keep every limb and particle within its cell. These are key-pose CONCEPTS, not animation frames; scale and grid fitting will be done later. Maintain exact same design identity between poses.\nCharacter B03: 玉米骑士. Ingredient: 玉米. Silhouette MUST follow: 高挑玉米、叶披风、穗须盔；明显高于普通投手. Palette: 金黄／青绿.\nBehavior context: 抛弧线籽弹，再沿地面突进. Readable counterplay: 跳过突进，借场中固定矮台踩头. Danger cue: 每次攻击至少0.5秒预兆；弱点打开同时改变形状、姿态和色值.\nShow SIX ordered poses: front three-quarter idle, side view idle, attack anticipation, main attack, exposed vulnerable state, non-gory defeated sitting/slumped pose. Weakness MUST be clear by physically opening/retracting armor: 突进结束失衡2秒，头盔向后翻开. Design a powerful expressive FOOD CREATURE, not a human wearing food armor.\nPreserve recognizable edible plant anatomy and game-readable contours. All figures isolated on actual transparent alpha."
+    },
+    {
+      "id": "B04",
+      "slug": "lotus-diver",
+      "name": "莲藕潜王",
+      "kind": "bosses",
+      "transparent": true,
+      "referenceType": "hero",
+      "baseId": null,
+      "prompt": "Use case: stylized-concept. Produce ONE character concept asset sheet for an original vegetable-themed 2D platformer. True transparent PNG alpha background. Reference image 1 is STYLE ONLY: match its polished 32-bit-era 2D pixel art, crisp dark contours, warm readable shading, expressive eyes, controlled fine pixel clusters. Do NOT copy its potato anatomy, scarf or boots onto unrelated species. No text, title, labels, borders, swatches, floor, cast shadow, landscape, paper, checkerboard or matte. All blank space alpha=0. Opaque interiors with clean alpha edges; no general glow. Not vector, not 3D, no soft painting. Six separate complete figures in a generous 3-column by 2-row layout. No overlap between poses, at least 10% transparent gutters, keep every limb and particle within its cell. These are key-pose CONCEPTS, not animation frames; scale and grid fitting will be done later. Maintain exact same design identity between poses.\nCharacter B04: 莲藕潜王. Ingredient: 莲藕. Silhouette MUST follow: 三节藕身、荷叶鳍、孔洞喷口. Palette: 粉白／湖蓝.\nBehavior context: 水池内喷种子，随后固定轨迹跃上岸台. Readable counterplay: 岸台躲喷射，等上岸后踩顶部；不要求水下踩踏. Danger cue: 每次攻击至少0.5秒预兆；弱点打开同时改变形状、姿态和色值.\nShow SIX ordered poses: front three-quarter idle, side view idle, attack anticipation, main attack, exposed vulnerable state, non-gory defeated sitting/slumped pose. Weakness MUST be clear by physically opening/retracting armor: 上岸停留2.5秒，藕冠张开. Design a powerful expressive FOOD CREATURE, not a human wearing food armor.\nPreserve recognizable edible plant anatomy and game-readable contours. All figures isolated on actual transparent alpha."
+    },
+    {
+      "id": "B05",
+      "slug": "durian-fortress",
+      "name": "榴莲堡主",
+      "kind": "bosses",
+      "transparent": true,
+      "referenceType": "hero",
+      "baseId": null,
+      "prompt": "Use case: stylized-concept. Produce ONE character concept asset sheet for an original vegetable-themed 2D platformer. True transparent PNG alpha background. Reference image 1 is STYLE ONLY: match its polished 32-bit-era 2D pixel art, crisp dark contours, warm readable shading, expressive eyes, controlled fine pixel clusters. Do NOT copy its potato anatomy, scarf or boots onto unrelated species. No text, title, labels, borders, swatches, floor, cast shadow, landscape, paper, checkerboard or matte. All blank space alpha=0. Opaque interiors with clean alpha edges; no general glow. Not vector, not 3D, no soft painting. Six separate complete figures in a generous 3-column by 2-row layout. No overlap between poses, at least 10% transparent gutters, keep every limb and particle within its cell. These are key-pose CONCEPTS, not animation frames; scale and grid fitting will be done later. Maintain exact same design identity between poses.\nCharacter B05: 榴莲堡主. Ingredient: 榴莲. Silhouette MUST follow: 巨大尖刺外壳、短粗腿、纵向开合壳瓣. Palette: 橄榄黄／深褐.\nBehavior context: 滚动冲撞后抖落尖刺. Readable counterplay: 避开滚动和落刺，确认开壳后踩果肉. Danger cue: 每次攻击至少0.5秒预兆；弱点打开同时改变形状、姿态和色值.\nShow SIX ordered poses: front three-quarter idle, side view idle, attack anticipation, main attack, exposed vulnerable state, non-gory defeated sitting/slumped pose. Weakness MUST be clear by physically opening/retracting armor: 撞墙开壳2秒，露出无刺果肉顶部. Design a powerful expressive FOOD CREATURE, not a human wearing food armor.\nPreserve recognizable edible plant anatomy and game-readable contours. All figures isolated on actual transparent alpha."
+    },
+    {
+      "id": "B06",
+      "slug": "chili-mage",
+      "name": "辣椒术士",
+      "kind": "bosses",
+      "transparent": true,
+      "referenceType": "hero",
+      "baseId": null,
+      "prompt": "Use case: stylized-concept. Produce ONE character concept asset sheet for an original vegetable-themed 2D platformer. True transparent PNG alpha background. Reference image 1 is STYLE ONLY: match its polished 32-bit-era 2D pixel art, crisp dark contours, warm readable shading, expressive eyes, controlled fine pixel clusters. Do NOT copy its potato anatomy, scarf or boots onto unrelated species. No text, title, labels, borders, swatches, floor, cast shadow, landscape, paper, checkerboard or matte. All blank space alpha=0. Opaque interiors with clean alpha edges; no general glow. Not vector, not 3D, no soft painting. Six separate complete figures in a generous 3-column by 2-row layout. No overlap between poses, at least 10% transparent gutters, keep every limb and particle within its cell. These are key-pose CONCEPTS, not animation frames; scale and grid fitting will be done later. Maintain exact same design identity between poses.\nCharacter B06: 辣椒术士. Ingredient: 红辣椒. Silhouette MUST follow: 修长弯椒、焦叶披肩、椒蒂尖帽. Palette: 深红／橙金.\nBehavior context: 高低火弹轮换，再投延迟爆裂种子. Readable counterplay: 读高低弹道，避开爆裂圈后借矮台踩头. Danger cue: 每次攻击至少0.5秒预兆；弱点打开同时改变形状、姿态和色值.\nShow SIX ordered poses: front three-quarter idle, side view idle, attack anticipation, main attack, exposed vulnerable state, non-gory defeated sitting/slumped pose. Weakness MUST be clear by physically opening/retracting armor: 一轮施法后熄火2秒，顶部火冠消失. Design a powerful expressive FOOD CREATURE, not a human wearing food armor.\nPreserve recognizable edible plant anatomy and game-readable contours. All figures isolated on actual transparent alpha."
+    },
+    {
+      "id": "B07",
+      "slug": "grape-twins",
+      "name": "葡萄双生",
+      "kind": "bosses",
+      "transparent": true,
+      "referenceType": "hero",
+      "baseId": null,
+      "prompt": "Use case: stylized-concept. Produce ONE character concept asset sheet for an original vegetable-themed 2D platformer. True transparent PNG alpha background. Reference image 1 is STYLE ONLY: match its polished 32-bit-era 2D pixel art, crisp dark contours, warm readable shading, expressive eyes, controlled fine pixel clusters. Do NOT copy its potato anatomy, scarf or boots onto unrelated species. No text, title, labels, borders, swatches, floor, cast shadow, landscape, paper, checkerboard or matte. All blank space alpha=0. Opaque interiors with clean alpha edges; no general glow. Not vector, not 3D, no soft painting. Six separate complete figures in a generous 3-column by 2-row layout. No overlap between poses, at least 10% transparent gutters, keep every limb and particle within its cell. These are key-pose CONCEPTS, not animation frames; scale and grid fitting will be done later. Maintain exact same design identity between poses.\nCharacter B07: 葡萄双生. Ingredient: 紫葡萄. Silhouette MUST follow: 共用藤梗的双头、藤条双臂；一左一右表情不同. Palette: 紫／青绿.\nBehavior context: 两头交替喷籽弹，随后藤条贴地横扫. Readable counterplay: 跳过横扫，踩疲劳头；两头不可同时造成伤害. Danger cue: 每次攻击至少0.5秒预兆；弱点打开同时改变形状、姿态和色值.\nShow SIX ordered poses: front three-quarter idle, side view idle, attack anticipation, main attack, exposed vulnerable state, non-gory defeated sitting/slumped pose. Weakness MUST be clear by physically opening/retracting armor: 攻击头疲劳2秒；另一头同期收起攻击，共用3格生命. Design a powerful expressive FOOD CREATURE, not a human wearing food armor.\nPreserve recognizable edible plant anatomy and game-readable contours. All figures isolated on actual transparent alpha."
+    },
+    {
+      "id": "B08",
+      "slug": "pomegranate-king",
+      "name": "石榴王",
+      "kind": "bosses",
+      "transparent": true,
+      "referenceType": "hero",
+      "baseId": null,
+      "prompt": "Use case: stylized-concept. Produce ONE character concept asset sheet for an original vegetable-themed 2D platformer. True transparent PNG alpha background. Reference image 1 is STYLE ONLY: match its polished 32-bit-era 2D pixel art, crisp dark contours, warm readable shading, expressive eyes, controlled fine pixel clusters. Do NOT copy its potato anatomy, scarf or boots onto unrelated species. No text, title, labels, borders, swatches, floor, cast shadow, landscape, paper, checkerboard or matte. All blank space alpha=0. Opaque interiors with clean alpha edges; no general glow. Not vector, not 3D, no soft painting. Six separate complete figures in a generous 3-column by 2-row layout. No overlap between poses, at least 10% transparent gutters, keep every limb and particle within its cell. These are key-pose CONCEPTS, not animation frames; scale and grid fitting will be done later. Maintain exact same design identity between poses.\nCharacter B08: 石榴王. Ingredient: 石榴. Silhouette MUST follow: 王冠果萼、厚果皮甲、红色籽晶核心. Palette: 绛红／金褐.\nBehavior context: 跳震与扇形籽弹交替；剩1格时节奏加快. Readable counterplay: 跳震与籽弹间隙穿行，借固定矮台踩顶部核心. Danger cue: 每次攻击至少0.5秒预兆；弱点打开同时改变形状、姿态和色值.\nShow SIX ordered poses: front three-quarter idle, side view idle, attack anticipation, main attack, exposed vulnerable state, non-gory defeated sitting/slumped pose. Weakness MUST be clear by physically opening/retracting armor: 每次组合结束开甲2秒，核心从顶部显露；低血阶段仍保留预兆与破绽时间. Design a powerful expressive FOOD CREATURE, not a human wearing food armor.\nPreserve recognizable edible plant anatomy and game-readable contours. All figures isolated on actual transparent alpha."
+    },
+    {
+      "id": "N01",
+      "slug": "radish-guide",
+      "name": "萝卜向导",
+      "kind": "npcs",
+      "transparent": true,
+      "referenceType": "hero",
+      "baseId": null,
+      "prompt": "Use case: stylized-concept. Produce ONE character concept asset sheet for an original vegetable-themed 2D platformer. True transparent PNG alpha background. Reference image 1 is STYLE ONLY: match its polished 32-bit-era 2D pixel art, crisp dark contours, warm readable shading, expressive eyes, controlled fine pixel clusters. Do NOT copy its potato anatomy, scarf or boots onto unrelated species. No text, title, labels, borders, swatches, floor, cast shadow, landscape, paper, checkerboard or matte. All blank space alpha=0. Opaque interiors with clean alpha edges; no general glow. Not vector, not 3D, no soft painting. Six separate complete figures in a generous 3-column by 2-row layout. No overlap between poses, at least 10% transparent gutters, keep every limb and particle within its cell. These are key-pose CONCEPTS, not animation frames; scale and grid fitting will be done later. Maintain exact same design identity between poses.\nCharacter N01: 萝卜向导. Ingredient: 白萝卜. Silhouette MUST follow: 翘起的叶发、细根胡子、折叠种子地图. Palette: 米白／叶绿／土褐.\nBehavior context: 开始教程与世界间提示；提示可跳过. Readable counterplay: 不参与战斗，不阻挡玩家. Danger cue: 没有尖刺、火光或危险闪烁.\nShow SIX ordered poses: front idle, side idle, back view, waving, opening seed map, talking with expressive gesture. Friendly noncombatant, food body not human costume.\nPreserve recognizable edible plant anatomy and game-readable contours. All figures isolated on actual transparent alpha."
+    },
+    {
+      "id": "N02",
+      "slug": "strawberry-gardener",
+      "name": "草莓园丁",
+      "kind": "npcs",
+      "transparent": true,
+      "referenceType": "hero",
+      "baseId": null,
+      "prompt": "Use case: stylized-concept. Produce ONE character concept asset sheet for an original vegetable-themed 2D platformer. True transparent PNG alpha background. Reference image 1 is STYLE ONLY: match its polished 32-bit-era 2D pixel art, crisp dark contours, warm readable shading, expressive eyes, controlled fine pixel clusters. Do NOT copy its potato anatomy, scarf or boots onto unrelated species. No text, title, labels, borders, swatches, floor, cast shadow, landscape, paper, checkerboard or matte. All blank space alpha=0. Opaque interiors with clean alpha edges; no general glow. Not vector, not 3D, no soft painting. Six separate complete figures in a generous 3-column by 2-row layout. No overlap between poses, at least 10% transparent gutters, keep every limb and particle within its cell. These are key-pose CONCEPTS, not animation frames; scale and grid fitting will be done later. Maintain exact same design identity between poses.\nCharacter N02: 草莓园丁. Ingredient: 草莓. Silhouette MUST follow: 草莓斗篷、花朵发饰、育苗工具袋. Palette: 莓红／奶白／叶绿.\nBehavior context: 最终营救对象，参与结局修复花园. Readable counterplay: 不参与战斗，不设置护送生命值. Danger cue: 圆润轮廓、花朵标识，与攻击型红辣椒区分.\nShow SIX ordered poses: front idle, side idle, back view, relieved rescue pose, planting seedling, cheerful celebration. Friendly noncombatant, food body not human costume.\nPreserve recognizable edible plant anatomy and game-readable contours. All figures isolated on actual transparent alpha."
+    },
+    {
+      "id": "BG01",
+      "slug": "garden-dawn",
+      "name": "晨光苔林",
+      "kind": "backgrounds",
+      "transparent": false,
+      "referenceType": "scene",
+      "prompt": "Use case: stylized-concept. ONE wide landscape background concept for a 32-bit-era 2D SIDE-SCROLLING vegetable platformer. Reference 1 provides refined forest depth/moss/stone; reference 2 supplies moonlit palette only where appropriate. Scene: Warm dawn emerald ancient vegetable garden, mossy ruined stone arches, giant roots, distant teal forests, pale amber rays. Sophisticated crisp fine pixel clusters, detailed but readable parallax-like layers, deliberate pixel shading, not 3D not watercolor. Side-on scene, no isometric or aerial view. No characters, enemies, items, collectible seeds, GUI, text, logo, border. This is BACKGROUND ONLY: no foreground playable platforms, no collision floor, no obstacle props. Keep lower quarter subdued and unobstructed for separately placed playable terrain. Landscape around 1536x864. Rich full background, not transparent. Separate parallax layers and seamless tiling will be extracted/redesigned later; do not draw layer panels."
+    },
+    {
+      "id": "BG02",
+      "slug": "root-cellar",
+      "name": "根系地窖",
+      "kind": "backgrounds",
+      "transparent": false,
+      "referenceType": "scene",
+      "prompt": "Use case: stylized-concept. ONE wide landscape background concept for a 32-bit-era 2D SIDE-SCROLLING vegetable platformer. Reference 1 provides refined forest depth/moss/stone; reference 2 supplies moonlit palette only where appropriate. Scene: Underground root cellar cavern, tangled roots and onion storage niches, purple-grey stone, warm amber lamps, cool distant tunnels. Sophisticated crisp fine pixel clusters, detailed but readable parallax-like layers, deliberate pixel shading, not 3D not watercolor. Side-on scene, no isometric or aerial view. No characters, enemies, items, collectible seeds, GUI, text, logo, border. This is BACKGROUND ONLY: no foreground playable platforms, no collision floor, no obstacle props. Keep lower quarter subdued and unobstructed for separately placed playable terrain. Landscape around 1536x864. Rich full background, not transparent. Separate parallax layers and seamless tiling will be extracted/redesigned later; do not draw layer panels."
+    },
+    {
+      "id": "BG03",
+      "slug": "canopy-heights",
+      "name": "藤架高空",
+      "kind": "backgrounds",
+      "transparent": false,
+      "referenceType": "scene",
+      "prompt": "Use case: stylized-concept. ONE wide landscape background concept for a 32-bit-era 2D SIDE-SCROLLING vegetable platformer. Reference 1 provides refined forest depth/moss/stone; reference 2 supplies moonlit palette only where appropriate. Scene: Airy elevated treetop garden, corn-field terraces far below, distant vine bridges and bright turquoise sky, layered forest cliffs. Sophisticated crisp fine pixel clusters, detailed but readable parallax-like layers, deliberate pixel shading, not 3D not watercolor. Side-on scene, no isometric or aerial view. No characters, enemies, items, collectible seeds, GUI, text, logo, border. This is BACKGROUND ONLY: no foreground playable platforms, no collision floor, no obstacle props. Keep lower quarter subdued and unobstructed for separately placed playable terrain. Landscape around 1536x864. Rich full background, not transparent. Separate parallax layers and seamless tiling will be extracted/redesigned later; do not draw layer panels."
+    },
+    {
+      "id": "BG04",
+      "slug": "aquatic-greenhouse",
+      "name": "水生温室",
+      "kind": "backgrounds",
+      "transparent": false,
+      "referenceType": "scene",
+      "prompt": "Use case: stylized-concept. ONE wide landscape background concept for a 32-bit-era 2D SIDE-SCROLLING vegetable platformer. Reference 1 provides refined forest depth/moss/stone; reference 2 supplies moonlit palette only where appropriate. Scene: Underwater glass conservatory, gigantic lotus stems and submerged arches, pale aqua light shafts, layered aquatic foliage, open readable water. Sophisticated crisp fine pixel clusters, detailed but readable parallax-like layers, deliberate pixel shading, not 3D not watercolor. Side-on scene, no isometric or aerial view. No characters, enemies, items, collectible seeds, GUI, text, logo, border. This is BACKGROUND ONLY: no foreground playable platforms, no collision floor, no obstacle props. Keep lower quarter subdued and unobstructed for separately placed playable terrain. Landscape around 1536x864. Rich full background, not transparent. Separate parallax layers and seamless tiling will be extracted/redesigned later; do not draw layer panels."
+    },
+    {
+      "id": "BG05",
+      "slug": "thorn-orchard",
+      "name": "荆棘果园",
+      "kind": "backgrounds",
+      "transparent": false,
+      "referenceType": "scene",
+      "prompt": "Use case: stylized-concept. ONE wide landscape background concept for a 32-bit-era 2D SIDE-SCROLLING vegetable platformer. Reference 1 provides refined forest depth/moss/stone; reference 2 supplies moonlit palette only where appropriate. Scene: Dusk fruit orchard ruins, distant durian-like silhouettes and thorn hedges, olive moss and plum stone, peach horizon. Sophisticated crisp fine pixel clusters, detailed but readable parallax-like layers, deliberate pixel shading, not 3D not watercolor. Side-on scene, no isometric or aerial view. No characters, enemies, items, collectible seeds, GUI, text, logo, border. This is BACKGROUND ONLY: no foreground playable platforms, no collision floor, no obstacle props. Keep lower quarter subdued and unobstructed for separately placed playable terrain. Landscape around 1536x864. Rich full background, not transparent. Separate parallax layers and seamless tiling will be extracted/redesigned later; do not draw layer panels."
+    },
+    {
+      "id": "BG06",
+      "slug": "ember-workshop",
+      "name": "熔糖工坊",
+      "kind": "backgrounds",
+      "transparent": false,
+      "referenceType": "scene",
+      "prompt": "Use case: stylized-concept. ONE wide landscape background concept for a 32-bit-era 2D SIDE-SCROLLING vegetable platformer. Reference 1 provides refined forest depth/moss/stone; reference 2 supplies moonlit palette only where appropriate. Scene: Fantasy vegetable workshop interior, terracotta kilns and copper sugar vats, distant molten amber channels, dark plum masonry, warm firelight. Sophisticated crisp fine pixel clusters, detailed but readable parallax-like layers, deliberate pixel shading, not 3D not watercolor. Side-on scene, no isometric or aerial view. No characters, enemies, items, collectible seeds, GUI, text, logo, border. This is BACKGROUND ONLY: no foreground playable platforms, no collision floor, no obstacle props. Keep lower quarter subdued and unobstructed for separately placed playable terrain. Landscape around 1536x864. Rich full background, not transparent. Separate parallax layers and seamless tiling will be extracted/redesigned later; do not draw layer panels."
+    },
+    {
+      "id": "BG07",
+      "slug": "moon-vine-garden",
+      "name": "月夜藤园",
+      "kind": "backgrounds",
+      "transparent": false,
+      "referenceType": "scene",
+      "prompt": "Use case: stylized-concept. ONE wide landscape background concept for a 32-bit-era 2D SIDE-SCROLLING vegetable platformer. Reference 1 provides refined forest depth/moss/stone; reference 2 supplies moonlit palette only where appropriate. Scene: Indigo and violet moonlit forest garden, distant aqueduct, hanging grape vines, tiny cyan luminous plants and warm lanterns, silver moon. Sophisticated crisp fine pixel clusters, detailed but readable parallax-like layers, deliberate pixel shading, not 3D not watercolor. Side-on scene, no isometric or aerial view. No characters, enemies, items, collectible seeds, GUI, text, logo, border. This is BACKGROUND ONLY: no foreground playable platforms, no collision floor, no obstacle props. Keep lower quarter subdued and unobstructed for separately placed playable terrain. Landscape around 1536x864. Rich full background, not transparent. Separate parallax layers and seamless tiling will be extracted/redesigned later; do not draw layer panels."
+    },
+    {
+      "id": "BG08",
+      "slug": "pomegranate-citadel",
+      "name": "石榴王庭",
+      "kind": "backgrounds",
+      "transparent": false,
+      "referenceType": "scene",
+      "prompt": "Use case: stylized-concept. ONE wide landscape background concept for a 32-bit-era 2D SIDE-SCROLLING vegetable platformer. Reference 1 provides refined forest depth/moss/stone; reference 2 supplies moonlit palette only where appropriate. Scene: Majestic ruined botanical citadel inside giant pomegranate gardens, dark red stone arches, golden calyx motifs, crimson seed crystal windows and distant purple forest. Sophisticated crisp fine pixel clusters, detailed but readable parallax-like layers, deliberate pixel shading, not 3D not watercolor. Side-on scene, no isometric or aerial view. No characters, enemies, items, collectible seeds, GUI, text, logo, border. This is BACKGROUND ONLY: no foreground playable platforms, no collision floor, no obstacle props. Keep lower quarter subdued and unobstructed for separately placed playable terrain. Landscape around 1536x864. Rich full background, not transparent. Separate parallax layers and seamless tiling will be extracted/redesigned later; do not draw layer panels."
+    },
+    {
+      "id": "IT01",
+      "slug": "powerups-collectibles",
+      "name": "道具总览",
+      "kind": "items",
+      "transparent": true,
+      "referenceType": "hero",
+      "prompt": "Use case: stylized-concept. ONE clean transparent PNG game asset CONCEPT sheet for original vegetable platformer. Match reference's sophisticated 32-bit 2D pixel-art contour, texture detail and palette; do NOT draw the reference hero. Five primary isolated items: ordinary orange nutrition carrot with green leaves; curved red chili attack powerup; golden starfruit with five ridges and sliced star silhouette; golden oval seed collectible; distinctly GOLD METAL CARROT bonus item. Provide two views each, TEN objects in 5 columns x 2 rows, same item identity down each column. No faces, no packaging, no text. Make golden carrot unmistakably gold, distinct from orange nutrition carrot. True alpha background, no floor or cast shadows, no text, labels, border, paper, checkerboard or opaque matte. Hard pixel clusters and readable silhouettes. Large transparent gutters, every object fully inside canvas, no cropping. This is art concept source; exact sizes/grid/proportions will be normalized later. Landscape 3:2."
+    },
+    {
+      "id": "PR01",
+      "slug": "projectile-library",
+      "name": "投射物总览",
+      "kind": "projectiles",
+      "transparent": true,
+      "referenceType": "hero",
+      "prompt": "Use case: stylized-concept. ONE clean transparent PNG game asset CONCEPT sheet for original vegetable platformer. Match reference's sophisticated 32-bit 2D pixel-art contour, texture detail and palette; do NOT draw the reference hero. TWELVE isolated projectiles in 4 columns x 3 rows: player red chili flame; yellow corn kernel; green pea seed; irregular brown earth clod; olive thorn; glowing red delayed-explosion seed; pumpkin shockwave arc; onion soil fragment; lotus pale seed spray cluster; grape violet seed; pomegranate ruby seed crystal; short vine sweep segment. Separation between particles in a cluster but no overlap across cells. No characters or weapons, no labels. True alpha background, no floor or cast shadows, no text, labels, border, paper, checkerboard or opaque matte. Hard pixel clusters and readable silhouettes. Large transparent gutters, every object fully inside canvas, no cropping. This is art concept source; exact sizes/grid/proportions will be normalized later. Landscape 3:2."
+    },
+    {
+      "id": "MC01",
+      "slug": "mechanisms-props",
+      "name": "机关与交互物",
+      "kind": "mechanisms",
+      "transparent": true,
+      "referenceType": "hero",
+      "prompt": "Use case: stylized-concept. ONE clean transparent PNG game asset CONCEPT sheet for original vegetable platformer. Match reference's sophisticated 32-bit 2D pixel-art contour, texture detail and palette; do NOT draw the reference hero. TWELVE isolated side-view interactive props in 4 columns x 3 rows: wooden seed reward crate with embossed seed icon NOT question mark; spent reward crate; breakable masonry block; hollow green vine pipe; thin wood platform hanging from two vines; cracked falling stone platform; dark violet eggplant-shaped launcher; pivot with chain of three small chili flames; amber molten-sugar fountain; unfurled climbable vine; leafy checkpoint pennant; wooden garden exit gate framed by vines. Individual objects only, transparent background, no connected terrain. True alpha background, no floor or cast shadows, no text, labels, border, paper, checkerboard or opaque matte. Hard pixel clusters and readable silhouettes. Large transparent gutters, every object fully inside canvas, no cropping. This is art concept source; exact sizes/grid/proportions will be normalized later. Landscape 3:2."
+    },
+    {
+      "id": "FX01",
+      "slug": "effects-library",
+      "name": "特效总览",
+      "kind": "effects",
+      "transparent": true,
+      "referenceType": "hero",
+      "prompt": "Use case: stylized-concept. ONE clean transparent PNG game asset CONCEPT sheet for original vegetable platformer. Match reference's sophisticated 32-bit 2D pixel-art contour, texture detail and palette; do NOT draw the reference hero. TWELVE isolated compact effect key poses in 4 columns x 3 rows: leaf footstep puff; earth impact burst; gold seed pickup sparkle; growing green leaf swirl; chili muzzle spark; chili impact flame; small white hurt starburst; golden starfruit orbit fragments; water splash; water ripple; falling petal victory confetti; broken wood fragments. No characters, no text, no solid background. Particle clusters stay within own cells. Limited soft alpha only for effects, not a general wash over canvas. True alpha background, no floor or cast shadows, no text, labels, border, paper, checkerboard or opaque matte. Hard pixel clusters and readable silhouettes. Large transparent gutters, every object fully inside canvas, no cropping. This is art concept source; exact sizes/grid/proportions will be normalized later. Landscape 3:2."
+    },
+    {
+      "id": "UI01",
+      "slug": "interface-icons",
+      "name": "界面图标",
+      "kind": "ui",
+      "transparent": true,
+      "referenceType": "hero",
+      "prompt": "Use case: stylized-concept. ONE clean transparent PNG game asset CONCEPT sheet for original vegetable platformer. Match reference's sophisticated 32-bit 2D pixel-art contour, texture detail and palette; do NOT draw the reference hero. TWELVE distinct isolated UI icons in 4 columns x 3 rows: left arrow, right arrow, jump upward arrow, chili attack icon, pause two bars, play triangle, retry curved arrow, speaker on, muted speaker, leaf-shaped full heart, empty heart outline, small seed medal. Botanical wood-and-leaf style, consistent dark outline and cream/gold/green fill. Symbols only, no written text, no panels, no decorative scenery. True alpha background, no floor or cast shadows, no text, labels, border, paper, checkerboard or opaque matte. Hard pixel clusters and readable silhouettes. Large transparent gutters, every object fully inside canvas, no cropping. This is art concept source; exact sizes/grid/proportions will be normalized later. Landscape 3:2."
+    },
+    {
+      "id": "TL01",
+      "slug": "natural-terrain-kit",
+      "name": "自然地形构件",
+      "kind": "tilesets",
+      "transparent": true,
+      "referenceType": "hero",
+      "prompt": "Use case: stylized-concept. ONE clean transparent PNG game asset CONCEPT sheet for original vegetable platformer. Match reference's sophisticated 32-bit 2D pixel-art contour, texture detail and palette; do NOT draw the reference hero. TWELVE separate side-on terrain concept chunks in 4 columns x 3 rows: grass soil top segment, matching exposed soil block, mossy stone ledge, cracked stone block, tree root ledge, bark platform, cornfield dirt ledge, thorn hedge hazard, aquatic stone ledge with algae, lotus leaf platform, night violet moss ledge, grape-vine bridge segment. Isolated individual chunks with transparent gaps, no scenery or sky, no character. Show clear flat playable tops, decorative plants kept below or to sides. Not an exact seamless tileset yet. True alpha background, no floor or cast shadows, no text, labels, border, paper, checkerboard or opaque matte. Hard pixel clusters and readable silhouettes. Large transparent gutters, every object fully inside canvas, no cropping. This is art concept source; exact sizes/grid/proportions will be normalized later. Landscape 3:2."
+    },
+    {
+      "id": "TL02",
+      "slug": "built-terrain-kit",
+      "name": "建筑地形构件",
+      "kind": "tilesets",
+      "transparent": true,
+      "referenceType": "hero",
+      "prompt": "Use case: stylized-concept. ONE clean transparent PNG game asset CONCEPT sheet for original vegetable platformer. Match reference's sophisticated 32-bit 2D pixel-art contour, texture detail and palette; do NOT draw the reference hero. TWELVE separate side-on terrain concept chunks in 4 columns x 3 rows: root cellar purple stone top ledge, matching wall block, timber support beam, greenhouse pale stone arch, glass conservatory window frame, terracotta workshop ledge, copper vent block, dark fireproof masonry, amber molten-sugar pool cross-section hazard, crimson citadel ledge, golden calyx ornamental column, ruby seed crystal inset wall. Each isolated on transparent with clear gutter, no characters or scenery. Keep modular rectangular readable geometry. Concept chunks, not a certified seamless atlas. True alpha background, no floor or cast shadows, no text, labels, border, paper, checkerboard or opaque matte. Hard pixel clusters and readable silhouettes. Large transparent gutters, every object fully inside canvas, no cropping. This is art concept source; exact sizes/grid/proportions will be normalized later. Landscape 3:2."
+    }
+  ]
+}

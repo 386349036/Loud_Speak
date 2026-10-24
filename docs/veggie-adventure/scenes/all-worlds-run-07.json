@@ -1,0 +1,24 @@
+[
+  {
+    "id": "W08-special",
+    "world": "08",
+    "name": "石榴王庭",
+    "kind": "special",
+    "transparent": true,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg08-pomegranate-citadel-v1.png",
+    "prompt": "Use case: precise-object-edit. Change ONLY the open seed-seal doorway in bottom row column 2: remove the entire painted landscape and floor seen through its opening, leaving true transparent alpha through the doorway between the open door leaves. Preserve the door frame, open leaves, all other seven objects, positions, palette, pixels and canvas. Keep true alpha outside all objects. No new objects.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-1bede3bf-ede8-4937-9abb-f54fa4a24296.png",
+    "version": "v2"
+  },
+  {
+    "id": "W07-special",
+    "world": "07",
+    "name": "月夜藤园",
+    "kind": "special",
+    "transparent": true,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg07-moon-vine-garden-v1.png",
+    "prompt": "Use case: precise-object-edit. Change ONLY the falling chestnut in bottom row column 1: replace the split-open chestnut with a CLOSED round green spiky chestnut burr. No visible brown nut or cut surface. Retain the downward movement cue and its location, size, pixel style. Preserve the other seven objects and all positions. All empty space remains true alpha transparent.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-e89234cc-0acc-4f44-aaed-c313c4369f31.png",
+    "version": "v2"
+  }
+]

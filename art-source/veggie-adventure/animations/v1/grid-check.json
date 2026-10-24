@@ -1,0 +1,394 @@
+[
+  {
+    "id": "P01-0",
+    "source": "art-source/veggie-adventure/animations/v1/P01-0.png",
+    "size": [
+      1070,
+      1470
+    ],
+    "detectedBands": 11,
+    "expectedRows": 11,
+    "status": "row-bands-match",
+    "runtimeFrames": 44,
+    "sourceCellsRecorded": true,
+    "visualVerified": false
+  },
+  {
+    "id": "P01-1",
+    "source": "art-source/veggie-adventure/animations/v1/P01-1-part0.png",
+    "size": [
+      1122,
+      1402
+    ],
+    "detectedBands": 5,
+    "expectedRows": 5,
+    "status": "row-bands-match",
+    "runtimeFrames": 44,
+    "sourceCellsRecorded": true,
+    "visualVerified": false
+  },
+  {
+    "id": "P01-1",
+    "source": "art-source/veggie-adventure/animations/v1/P01-1-part1.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "detectedBands": 6,
+    "expectedRows": 6,
+    "status": "row-bands-match",
+    "runtimeFrames": 44,
+    "sourceCellsRecorded": true,
+    "visualVerified": false
+  },
+  {
+    "id": "P01-2",
+    "source": "art-source/veggie-adventure/animations/v1/P01-2.png",
+    "size": [
+      1110,
+      1417
+    ],
+    "detectedBands": 11,
+    "expectedRows": 11,
+    "status": "row-bands-match",
+    "runtimeFrames": 44,
+    "sourceCellsRecorded": true,
+    "visualVerified": false
+  },
+  {
+    "id": "E01",
+    "source": "art-source/veggie-adventure/animations/v1/E01.png",
+    "size": [
+      1448,
+      1086
+    ],
+    "detectedBands": 3,
+    "expectedRows": 3,
+    "status": "row-bands-match",
+    "runtimeFrames": 12,
+    "sourceCellsRecorded": true,
+    "visualVerified": false
+  },
+  {
+    "id": "E02",
+    "source": "art-source/veggie-adventure/animations/v1/E02.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "detectedBands": 6,
+    "expectedRows": 6,
+    "status": "row-bands-match",
+    "runtimeFrames": 24,
+    "sourceCellsRecorded": true,
+    "visualVerified": false
+  },
+  {
+    "id": "E03",
+    "source": "art-source/veggie-adventure/animations/v1/E03.png",
+    "size": [
+      1499,
+      1049
+    ],
+    "detectedBands": 7,
+    "expectedRows": 7,
+    "status": "row-bands-match",
+    "runtimeFrames": 28,
+    "sourceCellsRecorded": true,
+    "visualVerified": false
+  },
+  {
+    "id": "E04",
+    "source": "art-source/veggie-adventure/animations/v1/E04.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "detectedBands": 4,
+    "expectedRows": 4,
+    "status": "row-bands-match",
+    "runtimeFrames": 16,
+    "sourceCellsRecorded": true,
+    "visualVerified": false
+  },
+  {
+    "id": "E05",
+    "source": "art-source/veggie-adventure/animations/v1/E05.png",
+    "size": [
+      1448,
+      1086
+    ],
+    "detectedBands": 3,
+    "expectedRows": 3,
+    "status": "row-bands-match",
+    "runtimeFrames": 12,
+    "sourceCellsRecorded": true,
+    "visualVerified": false
+  },
+  {
+    "id": "E06",
+    "source": "art-source/veggie-adventure/animations/v1/E06.png",
+    "size": [
+      1774,
+      887
+    ],
+    "detectedBands": 2,
+    "expectedRows": 2,
+    "status": "row-bands-match",
+    "runtimeFrames": 8,
+    "sourceCellsRecorded": true,
+    "visualVerified": false
+  },
+  {
+    "id": "E07",
+    "source": "art-source/veggie-adventure/animations/v1/E07.png",
+    "size": [
+      1443,
+      1090
+    ],
+    "detectedBands": 6,
+    "expectedRows": 6,
+    "status": "row-bands-match",
+    "runtimeFrames": 24,
+    "sourceCellsRecorded": true,
+    "visualVerified": false
+  },
+  {
+    "id": "E08",
+    "source": "art-source/veggie-adventure/animations/v1/E08.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "detectedBands": 4,
+    "expectedRows": 4,
+    "status": "row-bands-match",
+    "runtimeFrames": 16,
+    "sourceCellsRecorded": true,
+    "visualVerified": false
+  },
+  {
+    "id": "E09",
+    "source": "art-source/veggie-adventure/animations/v1/E09.png",
+    "size": [
+      1448,
+      1086
+    ],
+    "detectedBands": 4,
+    "expectedRows": 4,
+    "status": "row-bands-match",
+    "runtimeFrames": 16,
+    "sourceCellsRecorded": true,
+    "visualVerified": false
+  },
+  {
+    "id": "E10",
+    "source": "art-source/veggie-adventure/animations/v1/E10.png",
+    "size": [
+      1448,
+      1086
+    ],
+    "detectedBands": 3,
+    "expectedRows": 3,
+    "status": "row-bands-match",
+    "runtimeFrames": 12,
+    "sourceCellsRecorded": true,
+    "visualVerified": false
+  },
+  {
+    "id": "E11",
+    "source": "art-source/veggie-adventure/animations/v1/E11.png",
+    "size": [
+      1448,
+      1086
+    ],
+    "detectedBands": 4,
+    "expectedRows": 4,
+    "status": "row-bands-match",
+    "runtimeFrames": 16,
+    "sourceCellsRecorded": true,
+    "visualVerified": false
+  },
+  {
+    "id": "E12",
+    "source": "art-source/veggie-adventure/animations/v1/E12.png",
+    "size": [
+      1448,
+      1086
+    ],
+    "detectedBands": 4,
+    "expectedRows": 4,
+    "status": "row-bands-match",
+    "runtimeFrames": 16,
+    "sourceCellsRecorded": true,
+    "visualVerified": false
+  },
+  {
+    "id": "B01",
+    "source": "art-source/veggie-adventure/animations/v1/B01.png",
+    "size": [
+      948,
+      1659
+    ],
+    "detectedBands": 7,
+    "expectedRows": 7,
+    "status": "row-bands-match",
+    "runtimeFrames": 28,
+    "sourceCellsRecorded": true,
+    "visualVerified": false
+  },
+  {
+    "id": "B02",
+    "source": "art-source/veggie-adventure/animations/v1/B02.png",
+    "size": [
+      948,
+      1659
+    ],
+    "detectedBands": 7,
+    "expectedRows": 7,
+    "status": "row-bands-match",
+    "runtimeFrames": 28,
+    "sourceCellsRecorded": true,
+    "visualVerified": false
+  },
+  {
+    "id": "B03",
+    "source": "art-source/veggie-adventure/animations/v1/B03.png",
+    "size": [
+      948,
+      1659
+    ],
+    "detectedBands": 7,
+    "expectedRows": 7,
+    "status": "row-bands-match",
+    "runtimeFrames": 28,
+    "sourceCellsRecorded": true,
+    "visualVerified": false
+  },
+  {
+    "id": "B04",
+    "source": "art-source/veggie-adventure/animations/v1/B04.png",
+    "size": [
+      1499,
+      1049
+    ],
+    "detectedBands": 6,
+    "expectedRows": 7,
+    "status": "adjacent-row-bands-touch-use-recorded-cuts",
+    "runtimeFrames": 28,
+    "sourceCellsRecorded": true,
+    "visualVerified": false
+  },
+  {
+    "id": "B05",
+    "source": "art-source/veggie-adventure/animations/v1/B05.png",
+    "size": [
+      948,
+      1659
+    ],
+    "detectedBands": 7,
+    "expectedRows": 7,
+    "status": "row-bands-match",
+    "runtimeFrames": 28,
+    "sourceCellsRecorded": true,
+    "visualVerified": false
+  },
+  {
+    "id": "B06",
+    "source": "art-source/veggie-adventure/animations/v1/B06.png",
+    "size": [
+      948,
+      1659
+    ],
+    "detectedBands": 7,
+    "expectedRows": 7,
+    "status": "row-bands-match",
+    "runtimeFrames": 28,
+    "sourceCellsRecorded": true,
+    "visualVerified": false
+  },
+  {
+    "id": "B07",
+    "source": "art-source/veggie-adventure/animations/v1/B07-part0.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "detectedBands": 4,
+    "expectedRows": 4,
+    "status": "row-bands-match",
+    "runtimeFrames": 28,
+    "sourceCellsRecorded": true,
+    "visualVerified": false
+  },
+  {
+    "id": "B07",
+    "source": "art-source/veggie-adventure/animations/v1/B07-part1.png",
+    "size": [
+      1448,
+      1086
+    ],
+    "detectedBands": 3,
+    "expectedRows": 3,
+    "status": "row-bands-match",
+    "runtimeFrames": 28,
+    "sourceCellsRecorded": true,
+    "visualVerified": false
+  },
+  {
+    "id": "B08",
+    "source": "art-source/veggie-adventure/animations/v1/B08.png",
+    "size": [
+      836,
+      1881
+    ],
+    "detectedBands": 9,
+    "expectedRows": 9,
+    "status": "row-bands-match",
+    "runtimeFrames": 36,
+    "sourceCellsRecorded": true,
+    "visualVerified": false
+  },
+  {
+    "id": "N01",
+    "source": "art-source/veggie-adventure/animations/v1/N01.png",
+    "size": [
+      1402,
+      1122
+    ],
+    "detectedBands": 4,
+    "expectedRows": 4,
+    "status": "row-bands-match",
+    "runtimeFrames": 16,
+    "sourceCellsRecorded": true,
+    "visualVerified": false
+  },
+  {
+    "id": "N02",
+    "source": "art-source/veggie-adventure/animations/v1/N02.png",
+    "size": [
+      1448,
+      1086
+    ],
+    "detectedBands": 4,
+    "expectedRows": 4,
+    "status": "row-bands-match",
+    "runtimeFrames": 16,
+    "sourceCellsRecorded": true,
+    "visualVerified": false
+  },
+  {
+    "id": "FX01",
+    "source": "art-source/veggie-adventure/animations/v1/FX01.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "detectedBands": 8,
+    "expectedRows": 8,
+    "status": "row-bands-match",
+    "runtimeFrames": 32,
+    "sourceCellsRecorded": true,
+    "visualVerified": false
+  }
+]

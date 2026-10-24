@@ -1,0 +1,62 @@
+[
+  {
+    "id": "W03-far",
+    "world": "03",
+    "name": "藤架高空",
+    "kind": "far",
+    "transparent": false,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg03-canopy-heights-v1.png",
+    "prompt": "Use case: stylized-concept. Asset: original vegetable platformer far environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Opaque full-frame 16:9 distant background ONLY. Sky across upper two thirds, distant mountain/tree silhouettes along lower third. Quiet central play space. NO near trees, no foreground, no ground or platforms, no framing arch. Theme: high forest canopy, vine trellises, distant peaks. Palette: clear cyan sky, soft cream clouds, pale jade, golden wood. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Fully opaque backdrop.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-f9592ab4-1b30-41dc-9441-15d9b23389b4.png"
+  },
+  {
+    "id": "W02-special",
+    "world": "02",
+    "name": "根系地窖",
+    "kind": "special",
+    "transparent": true,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg02-root-cellar-v1.png",
+    "prompt": "Use case: stylized-concept. Asset: original vegetable platformer special environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent special environment/interaction sheet exactly 8 isolated objects in 4 columns x 2 rows, ordered left to right: low ceiling soil block; timber mine support frame; decorative horizontal rail strip; cracked breakable wall block; falling rock; small dust warning puff; rectangular elevator platform without cables; onion-emblem exit gate. Large transparent gaps, no overlap, every object fully inside its own cell. Flat side elevation, crisp straight walkable tops, do not put foliage across them. Gates and doors have botanical emblems NOT writing. Water, syrup, steam and effects also transparent outside their own silhouette. These are key state source illustrations, NOT a continuous animation. Theme: underground root cellar and onion storage mine. Palette: dusky violet rock, warm amber lamps, earthy umber. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-120a1cc3-0d4d-4837-b4e4-65909912563d.png"
+  },
+  {
+    "id": "W03-mid",
+    "world": "03",
+    "name": "藤架高空",
+    "kind": "mid",
+    "transparent": true,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg03-canopy-heights-v1.png",
+    "prompt": "Use case: stylized-concept. Asset: original vegetable platformer mid environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent wide 16:9 middle-distance layer ONLY: high forest canopy, vine trellises, distant peaks silhouettes forming a loose horizontal arrangement concentrated on bottom half. Open true transparent negative space above and through all openings. NO sky, NO distant mountains, NO water tint, NO ground slab or gameplay platforms, muted contrast. Theme: high forest canopy, vine trellises, distant peaks. Palette: clear cyan sky, soft cream clouds, pale jade, golden wood. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-48a4142d-2a70-45ac-bc82-9aa768b4f64b.png"
+  },
+  {
+    "id": "W03-kit",
+    "world": "03",
+    "name": "藤架高空",
+    "kind": "kit",
+    "transparent": true,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg03-canopy-heights-v1.png",
+    "prompt": "Use case: stylized-concept. Asset: original vegetable platformer kit environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent modular environment sheet exactly 8 isolated objects, 4 columns x 2 rows, even broad transparent spacing. Row1: rectangular vine-bound wood ground ledge; matching stone brick ledge; short horizontal wooden bridge; three-step stone stair. Row2: hanging leaves; standalone high forest canopy, vine trellises, distant peaks arch or support frame; small lamp; low root or botanical decoration. All walkable tops straight horizontal, precise SIDE ELEVATION orthographic, no top surface visible, no perspective. Plants below walking top, never across it. Each object entirely within own cell. Theme: high forest canopy, vine trellises, distant peaks. Palette: clear cyan sky, soft cream clouds, pale jade, golden wood. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-607147ff-cf90-42b6-8e83-05e7eec21d36.png"
+  },
+  {
+    "id": "W03-arena",
+    "world": "03",
+    "name": "藤架高空",
+    "kind": "arena",
+    "transparent": false,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg03-canopy-heights-v1.png",
+    "prompt": "Use case: stylized-concept. Asset: original vegetable platformer arena environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Opaque 16:9 boss-area BACKGROUND PLATE: high corn-emblem trellis pavilion above clouds, open central sky. Main environment details along outer sides and upper third; center and lower third quiet dark low-contrast atmosphere for foreground fighters. Camera straight side-on, no ground plane receding to horizon, NO foreground ground slab, no stairs/platforms, no boss or character. This is the distant background behind separately built collidable arena floor. Theme: high forest canopy, vine trellises, distant peaks. Palette: clear cyan sky, soft cream clouds, pale jade, golden wood. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Fully opaque backdrop.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-875dce15-66a0-4d0f-a130-d64aeebdb877.png"
+  },
+  {
+    "id": "W03-special",
+    "world": "03",
+    "name": "藤架高空",
+    "kind": "special",
+    "transparent": true,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg03-canopy-heights-v1.png",
+    "prompt": "Use case: stylized-concept. Asset: original vegetable platformer special environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent special environment/interaction sheet exactly 8 isolated objects in 4 columns x 2 rows, ordered left to right: wide suspended vine ledge; short floating wood ledge; rope suspension frame; moving platform rectangular flat top; carved wooden endpoint marker; broken trellis column; corn-emblem exit arch; sparse foreground leaf fringe. Large transparent gaps, no overlap, every object fully inside its own cell. Flat side elevation, crisp straight walkable tops, do not put foliage across them. Gates and doors have botanical emblems NOT writing. Water, syrup, steam and effects also transparent outside their own silhouette. These are key state source illustrations, NOT a continuous animation. Theme: high forest canopy, vine trellises, distant peaks. Palette: clear cyan sky, soft cream clouds, pale jade, golden wood. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-1368b90e-13da-4640-bafb-a86c51fc174b.png"
+  }
+]

@@ -28,3 +28,4 @@ test-data/
 /vendor-src/ghasaq/dist-single/
 /vendor-src/ghasaq/.git/
 /vendor-src/
+/public/deployment.json

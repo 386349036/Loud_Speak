@@ -1,0 +1,15 @@
+'use strict';
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const root=path.resolve(__dirname,'../..'),art=path.join(root,'art-source/veggie-adventure'),doc=path.join(root,'docs/veggie-adventure/scenes');
+const manifest=JSON.parse(fs.readFileSync(path.join(art,'scenes/all-worlds-manifest.json'),'utf8'));
+const plan=JSON.parse(fs.readFileSync(path.join(doc,'all-worlds-generation-plan.json'),'utf8'));
+const levels=JSON.parse(fs.readFileSync(path.join(doc,'level-asset-map.json'),'utf8')).levels;
+assert.equal(manifest.assets.length,40);assert.equal(levels.length,32);
+for(const w of plan.worlds)for(const kind of ['far','mid','kit','arena','special'])assert.equal(manifest.assets.filter(a=>a.world===w.id&&a.kind===kind).length,1);
+for(const l of levels)for(const id of [l.background,l.mid,l.terrain,l.special,...l.sharedAssets,...l.extraAssets].filter(Boolean))assert.ok(manifest.assets.some(a=>a.id===id),l.id+' '+id);
+for(const a of manifest.assets)for(const file of [a.path,a.prompt])assert.ok(fs.existsSync(path.join(art,file)),file);
+const data={worlds:plan.worlds,levels,assets:manifest.assets};
+const html=fs.readFileSync(path.join(__dirname,'scene-library.template.html'),'utf8').replace('/*__SCENE_DATA__*/null',JSON.stringify(data).replace(/</g,'\\u003c'));
+new Function(html.match(/<script>([\s\S]*?)<\/script>/)[1]);
+fs.writeFileSync(path.join(art,'scene-library.html'),html);
+console.log(JSON.stringify({status:'passed',worlds:8,levels:32,sources:40,referenceCoverage:'complete',runtimeReady:false}));

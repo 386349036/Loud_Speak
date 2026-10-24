@@ -1,0 +1,62 @@
+[
+  {
+    "id": "W01-far",
+    "world": "01",
+    "name": "晨光苔林",
+    "kind": "far",
+    "transparent": false,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg01-garden-dawn-v1.png",
+    "prompt": "Use case: stylized-concept. Asset type: separated environment source for original vegetable themed side scrolling platform game. Reference image is STYLE AND PALETTE only, do not reproduce its whole scene. World 晨光苔林. Opaque wide 16:9 FAR BACKDROP ONLY: sky across upper two thirds, distant mountain silhouettes and very distant low treeline along bottom third. No nearby trees, no foreground, no ground platform, no buildings. Quiet center with little contrast, horizontal composition for scrolling. Style: 32-bit-era hand-crafted 2D pixel art with clearly visible crisp pixel clusters, no smooth painting, no 3D. Palette: warm cream sky, distant desaturated blue-green mountains, moss green and ochre. Environment vocabulary: mossy trunks, fern, ancient stone arch ruins, woody roots. NO characters, enemies, collectibles, HUD, text, labels, grid lines, borders, cast shadow outside objects, checkerboard pattern. Complete opaque backdrop. Maintain quiet gameplay readability. This is a source asset, not a gameplay screenshot.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-3a855a17-ef49-4248-b3d3-1a9fa268056a.png"
+  },
+  {
+    "id": "W01-mid",
+    "world": "01",
+    "name": "晨光苔林",
+    "kind": "mid",
+    "transparent": true,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg01-garden-dawn-v1.png",
+    "prompt": "Use case: stylized-concept. Asset type: separated environment source for original vegetable themed side scrolling platform game. Reference image is STYLE AND PALETTE only, do not reproduce its whole scene. World 晨光苔林. Transparent wide 16:9 MIDDLE DISTANCE LAYER ONLY: a single horizontal silhouette arrangement of trees and garden ruin arches concentrated in lower 45 percent, open transparent sky above and through arches. No sky, no mountains, no ground slab, no water, no platform surfaces. Muted contrast, no large framing trees along edges. Style: 32-bit-era hand-crafted 2D pixel art with clearly visible crisp pixel clusters, no smooth painting, no 3D. Palette: warm cream sky, distant desaturated blue-green mountains, moss green and ochre. Environment vocabulary: mossy trunks, fern, ancient stone arch ruins, woody roots. NO characters, enemies, collectibles, HUD, text, labels, grid lines, borders, cast shadow outside objects, checkerboard pattern. True transparent PNG alpha, not a colored background. Maintain quiet gameplay readability. This is a source asset, not a gameplay screenshot.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-9e05b6c9-442e-4b4e-b08a-e5a54a05a6ca.png"
+  },
+  {
+    "id": "W01-kit",
+    "world": "01",
+    "name": "晨光苔林",
+    "kind": "kit",
+    "transparent": true,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg01-garden-dawn-v1.png",
+    "prompt": "Use case: stylized-concept. Asset type: separated environment source for original vegetable themed side scrolling platform game. Reference image is STYLE AND PALETTE only, do not reproduce its whole scene. World 晨光苔林. Transparent landscape modular environment sheet, exactly 8 separate isolated objects arranged 4 columns x 2 rows with generous transparent gaps. Row1: rectangular moss-topped dirt ledge with perfectly flat walkable top; rectangular stone-brick ledge with flat top; narrow horizontal wooden bridge with flat top; short stone stair with three flat steps. Row2: small non-colliding fern cluster; standalone vine-wrapped ruined stone arch with open center; small ground lantern; low root-and-leaf decoration. All ledges SIDE ELEVATION orthographic, no top-down view, no perspective depth, no sloped walking surfaces, vegetation only on underside or side of walking ledges. No background landscape. Shapes fully inside each cell. Style: 32-bit-era hand-crafted 2D pixel art with clearly visible crisp pixel clusters, no smooth painting, no 3D. Palette: warm cream sky, distant desaturated blue-green mountains, moss green and ochre. Environment vocabulary: mossy trunks, fern, ancient stone arch ruins, woody roots. NO characters, enemies, collectibles, HUD, text, labels, grid lines, borders, cast shadow outside objects, checkerboard pattern. True transparent PNG alpha, not a colored background. Maintain quiet gameplay readability. This is a source asset, not a gameplay screenshot.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-18297466-df3c-43f4-a760-6ca733505310.png"
+  },
+  {
+    "id": "W07-far",
+    "world": "07",
+    "name": "月夜藤园",
+    "kind": "far",
+    "transparent": false,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg07-moon-vine-garden-v1.png",
+    "prompt": "Use case: stylized-concept. Asset type: separated environment source for original vegetable themed side scrolling platform game. Reference image is STYLE AND PALETTE only, do not reproduce its whole scene. World 月夜藤园. Opaque wide 16:9 FAR BACKDROP ONLY: sky across upper two thirds, distant mountain silhouettes and very distant low treeline along bottom third. No nearby trees, no foreground, no ground platform, no buildings. Quiet center with little contrast, horizontal composition for scrolling. Style: 32-bit-era hand-crafted 2D pixel art with clearly visible crisp pixel clusters, no smooth painting, no 3D. Palette: indigo sky, pale cyan moon, muted violet mountains, cool blue foliage, restrained amber lantern accents. Environment vocabulary: grape vines, ruined garden arches, twisting vine trunks, sparse tiny blue flowers. NO characters, enemies, collectibles, HUD, text, labels, grid lines, borders, cast shadow outside objects, checkerboard pattern. Complete opaque backdrop. Maintain quiet gameplay readability. This is a source asset, not a gameplay screenshot.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-4d74ffb4-5f3a-45fd-b1ca-89e98a768fae.png"
+  },
+  {
+    "id": "W07-mid",
+    "world": "07",
+    "name": "月夜藤园",
+    "kind": "mid",
+    "transparent": true,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg07-moon-vine-garden-v1.png",
+    "prompt": "Use case: stylized-concept. Asset type: separated environment source for original vegetable themed side scrolling platform game. Reference image is STYLE AND PALETTE only, do not reproduce its whole scene. World 月夜藤园. Transparent wide 16:9 MIDDLE DISTANCE LAYER ONLY: a single horizontal silhouette arrangement of trees and garden ruin arches concentrated in lower 45 percent, open transparent sky above and through arches. No sky, no mountains, no ground slab, no water, no platform surfaces. Muted contrast, no large framing trees along edges. Style: 32-bit-era hand-crafted 2D pixel art with clearly visible crisp pixel clusters, no smooth painting, no 3D. Palette: indigo sky, pale cyan moon, muted violet mountains, cool blue foliage, restrained amber lantern accents. Environment vocabulary: grape vines, ruined garden arches, twisting vine trunks, sparse tiny blue flowers. NO characters, enemies, collectibles, HUD, text, labels, grid lines, borders, cast shadow outside objects, checkerboard pattern. True transparent PNG alpha, not a colored background. Maintain quiet gameplay readability. This is a source asset, not a gameplay screenshot.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-b756675c-fa5d-4951-8025-52763ab6f73b.png"
+  },
+  {
+    "id": "W07-kit",
+    "world": "07",
+    "name": "月夜藤园",
+    "kind": "kit",
+    "transparent": true,
+    "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg07-moon-vine-garden-v1.png",
+    "prompt": "Use case: stylized-concept. Asset type: separated environment source for original vegetable themed side scrolling platform game. Reference image is STYLE AND PALETTE only, do not reproduce its whole scene. World 月夜藤园. Transparent landscape modular environment sheet, exactly 8 separate isolated objects arranged 4 columns x 2 rows with generous transparent gaps. Row1: rectangular moss-topped dirt ledge with perfectly flat walkable top; rectangular stone-brick ledge with flat top; narrow horizontal wooden bridge with flat top; short stone stair with three flat steps. Row2: small non-colliding fern cluster; standalone vine-wrapped ruined stone arch with open center; small ground lantern; low root-and-leaf decoration. All ledges SIDE ELEVATION orthographic, no top-down view, no perspective depth, no sloped walking surfaces, vegetation only on underside or side of walking ledges. No background landscape. Shapes fully inside each cell. Style: 32-bit-era hand-crafted 2D pixel art with clearly visible crisp pixel clusters, no smooth painting, no 3D. Palette: indigo sky, pale cyan moon, muted violet mountains, cool blue foliage, restrained amber lantern accents. Environment vocabulary: grape vines, ruined garden arches, twisting vine trunks, sparse tiny blue flowers. NO characters, enemies, collectibles, HUD, text, labels, grid lines, borders, cast shadow outside objects, checkerboard pattern. True transparent PNG alpha, not a colored background. Maintain quiet gameplay readability. This is a source asset, not a gameplay screenshot.",
+    "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16beb-02aa-7871-9179-45a47c27b5ea\\exec-3b2fb358-3b26-4c56-af17-397961832d6a.png"
+  }
+]

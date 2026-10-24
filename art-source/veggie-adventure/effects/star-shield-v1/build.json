@@ -1,0 +1,123 @@
+{
+  "source": "art-source/veggie-adventure/effects/star-shield-v1/source.png",
+  "cells": [
+    {
+      "left": 42,
+      "top": 94,
+      "width": 479,
+      "height": 494
+    },
+    {
+      "left": 579,
+      "top": 99,
+      "width": 475,
+      "height": 491
+    },
+    {
+      "left": 1116,
+      "top": 105,
+      "width": 474,
+      "height": 485
+    },
+    {
+      "left": 1663,
+      "top": 103,
+      "width": 480,
+      "height": 483
+    }
+  ],
+  "scale": 0.1862348178137652,
+  "calibration": [
+    {
+      "id": "P01-0",
+      "referenceHeight": 23,
+      "targetHeight": 18,
+      "scale": 0.782608695652174
+    },
+    {
+      "id": "P01-1",
+      "referenceHeight": 43,
+      "targetHeight": 28,
+      "scale": 0.6511627906976745
+    },
+    {
+      "id": "P01-2",
+      "referenceHeight": 26.5,
+      "targetHeight": 28,
+      "scale": 1.0566037735849056
+    },
+    {
+      "id": "E01",
+      "referenceHeight": 40,
+      "targetHeight": 16,
+      "scale": 0.4
+    },
+    {
+      "id": "E02",
+      "referenceHeight": 35.5,
+      "targetHeight": 16,
+      "scale": 0.4507042253521127
+    },
+    {
+      "id": "E03",
+      "referenceHeight": 25,
+      "targetHeight": 16,
+      "scale": 0.64
+    },
+    {
+      "id": "E04",
+      "referenceHeight": 34.5,
+      "targetHeight": 16,
+      "scale": 0.463768115942029
+    },
+    {
+      "id": "E05",
+      "referenceHeight": 33,
+      "targetHeight": 16,
+      "scale": 0.48484848484848486
+    },
+    {
+      "id": "E06",
+      "referenceHeight": 26,
+      "targetHeight": 16,
+      "scale": 0.6153846153846154
+    },
+    {
+      "id": "E07",
+      "referenceHeight": 27,
+      "targetHeight": 16,
+      "scale": 0.5925925925925926
+    },
+    {
+      "id": "E08",
+      "referenceHeight": 30.5,
+      "targetHeight": 16,
+      "scale": 0.5245901639344263
+    },
+    {
+      "id": "E09",
+      "referenceHeight": 29,
+      "targetHeight": 16,
+      "scale": 0.5517241379310345
+    },
+    {
+      "id": "E10",
+      "referenceHeight": 18.5,
+      "targetHeight": 16,
+      "scale": 0.8648648648648649
+    },
+    {
+      "id": "E11",
+      "referenceHeight": 29.5,
+      "targetHeight": 16,
+      "scale": 0.5423728813559322
+    },
+    {
+      "id": "E12",
+      "referenceHeight": 26.5,
+      "targetHeight": 16,
+      "scale": 0.6037735849056604
+    }
+  ],
+  "visualVerified": false
+}

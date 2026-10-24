@@ -1,0 +1,404 @@
+{
+  "version": 1,
+  "scope": "32-level-shared-environment-source-library",
+  "existing": 6,
+  "newSources": 34,
+  "worlds": [
+    {
+      "id": "01",
+      "name": "晨光苔林",
+      "slug": "garden-dawn",
+      "palette": "cream dawn, moss green, ochre stone",
+      "theme": "mossy forest roots and ancient stone garden",
+      "arena": "open pumpkin-emblem garden gate beyond a wide empty courtyard",
+      "material": "moss dirt",
+      "plant": "fern",
+      "special": "root stair section; low garden wall; intact seed-mark reward box; empty dark spent box; breakable stone wall; short root bridge; pumpkin-emblem exit gate; tiny fallen-leaf foreground cluster"
+    },
+    {
+      "id": "02",
+      "name": "根系地窖",
+      "slug": "root-cellar",
+      "palette": "dusky violet rock, warm amber lamps, earthy umber",
+      "theme": "underground root cellar and onion storage mine",
+      "arena": "deep onion-root mine chamber, large root arch and recessed onion store niches",
+      "material": "stratified soil",
+      "plant": "root cluster",
+      "special": "low ceiling soil block; timber mine support frame; decorative horizontal rail strip; cracked breakable wall block; falling rock; small dust warning puff; rectangular elevator platform without cables; onion-emblem exit gate"
+    },
+    {
+      "id": "03",
+      "name": "藤架高空",
+      "slug": "canopy-heights",
+      "palette": "clear cyan sky, soft cream clouds, pale jade, golden wood",
+      "theme": "high forest canopy, vine trellises, distant peaks",
+      "arena": "high corn-emblem trellis pavilion above clouds, open central sky",
+      "material": "vine-bound wood",
+      "plant": "hanging leaves",
+      "special": "wide suspended vine ledge; short floating wood ledge; rope suspension frame; moving platform rectangular flat top; carved wooden endpoint marker; broken trellis column; corn-emblem exit arch; sparse foreground leaf fringe"
+    },
+    {
+      "id": "04",
+      "name": "水生温室",
+      "slug": "aquatic-greenhouse",
+      "palette": "turquoise water, cyan glass light, jade plants, muted rose lotus",
+      "theme": "partially submerged lotus greenhouse, glass ribs and deep water",
+      "arena": "lotus pool greenhouse chamber with visible distant waterline and pale glass dome",
+      "material": "wet stone",
+      "plant": "aquatic reeds",
+      "special": "flat water surface strip state one; identical water strip state two with shifted ripples; transparent underwater tint panel; rising bubble cluster; flat lotus-leaf platform SIDE VIEW; dry stone bank; glass greenhouse arch; lotus-emblem exit gate"
+    },
+    {
+      "id": "05",
+      "name": "荆棘果园",
+      "slug": "thorn-orchard",
+      "palette": "apricot dusk, plum mountains, dark olive, amber fruit",
+      "theme": "thorn orchard and weathered fruit-garden walls",
+      "arena": "durian-emblem orchard courtyard surrounded by thorny trees, spacious empty center",
+      "material": "orchard earth",
+      "plant": "orchard shrub",
+      "special": "sharp upright thorn hazard strip; safe thornless ledge; wooden fruit orchard fence; cracked breakable wall; closed empty durian shell obstacle; open empty durian shell obstacle; durian-emblem exit gate; sparse fruit-tree foreground branch"
+    },
+    {
+      "id": "06",
+      "name": "熔糖工坊",
+      "slug": "ember-workshop",
+      "palette": "indigo dusk, terracotta bricks, copper, restrained orange heat",
+      "theme": "sugar cooking workshop, kilns and copper pipes",
+      "arena": "chili-emblem sugar workshop hall, distant furnaces at sides, dark readable center",
+      "material": "kiln brick",
+      "plant": "herb planter",
+      "special": "flat amber syrup hazard surface strip; inactive copper steam vent; same vent emitting narrow steam plume; copper valve; low brick cover block; rectangular moving metal platform; chili-emblem workshop exit; sparse ember cluster"
+    },
+    {
+      "id": "07",
+      "name": "月夜藤园",
+      "slug": "moon-vine-garden",
+      "palette": "indigo moonlight, violet vines, pale cyan edges, amber lamps",
+      "theme": "moonlit grape garden and ruined vine arches",
+      "arena": "twin grape-emblem garden pavilion under moonlight, empty open center",
+      "material": "violet stone",
+      "plant": "blue flower cluster",
+      "special": "flat violet vine platform; warm ground lantern; hanging grape trellis; thin vine sweep hazard curved horizontally; falling chestnut hazard with green spikes; small overhead leaf-rustle warning cluster; twin grape-emblem exit arch; sparse blue flower foreground fringe"
+    },
+    {
+      "id": "08",
+      "name": "石榴王庭",
+      "slug": "pomegranate-citadel",
+      "palette": "royal purple, ruby seed glass, pale gold, deep blue",
+      "theme": "pomegranate royal palace, seed-window stone arches",
+      "arena": "pomegranate royal throne chamber, ruby seed-window recesses and distant central throne, empty fighting space",
+      "material": "royal stone",
+      "plant": "white blossom planter",
+      "special": "gold-edged stone platform; shallow water surface strip; flat copper turret mounting pedestal no weapon; broken royal column; intact seed-seal door; open seed-seal door; pomegranate crown victory gate; small ruby sparkle cluster"
+    }
+  ],
+  "entries": [
+    {
+      "id": "W01-arena",
+      "world": "01",
+      "name": "晨光苔林",
+      "kind": "arena",
+      "transparent": false,
+      "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg01-garden-dawn-v1.png",
+      "prompt": "Use case: stylized-concept. Asset: original vegetable platformer arena environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Opaque 16:9 boss-area BACKGROUND PLATE: open pumpkin-emblem garden gate beyond a wide empty courtyard. Main environment details along outer sides and upper third; center and lower third quiet dark low-contrast atmosphere for foreground fighters. Camera straight side-on, no ground plane receding to horizon, NO foreground ground slab, no stairs/platforms, no boss or character. This is the distant background behind separately built collidable arena floor. Theme: mossy forest roots and ancient stone garden. Palette: cream dawn, moss green, ochre stone. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Fully opaque backdrop."
+    },
+    {
+      "id": "W01-special",
+      "world": "01",
+      "name": "晨光苔林",
+      "kind": "special",
+      "transparent": true,
+      "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg01-garden-dawn-v1.png",
+      "prompt": "Use case: stylized-concept. Asset: original vegetable platformer special environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent special environment/interaction sheet exactly 8 isolated objects in 4 columns x 2 rows, ordered left to right: root stair section; low garden wall; intact seed-mark reward box; empty dark spent box; breakable stone wall; short root bridge; pumpkin-emblem exit gate; tiny fallen-leaf foreground cluster. Large transparent gaps, no overlap, every object fully inside its own cell. Flat side elevation, crisp straight walkable tops, do not put foliage across them. Gates and doors have botanical emblems NOT writing. Water, syrup, steam and effects also transparent outside their own silhouette. These are key state source illustrations, NOT a continuous animation. Theme: mossy forest roots and ancient stone garden. Palette: cream dawn, moss green, ochre stone. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background."
+    },
+    {
+      "id": "W02-far",
+      "world": "02",
+      "name": "根系地窖",
+      "kind": "far",
+      "transparent": false,
+      "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg02-root-cellar-v1.png",
+      "prompt": "Use case: stylized-concept. Asset: original vegetable platformer far environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Opaque full-frame 16:9 distant background ONLY. Deep cave atmosphere, recessed cave walls and tiny root silhouettes in the distance; NO outdoor sky. Quiet central play space. NO near trees, no foreground, no ground or platforms, no framing arch. Theme: underground root cellar and onion storage mine. Palette: dusky violet rock, warm amber lamps, earthy umber. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Fully opaque backdrop."
+    },
+    {
+      "id": "W02-mid",
+      "world": "02",
+      "name": "根系地窖",
+      "kind": "mid",
+      "transparent": true,
+      "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg02-root-cellar-v1.png",
+      "prompt": "Use case: stylized-concept. Asset: original vegetable platformer mid environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent wide 16:9 middle-distance layer ONLY: underground root cellar and onion storage mine silhouettes forming a loose horizontal arrangement concentrated on bottom half. Open true transparent negative space above and through all openings. NO sky, NO distant mountains, NO water tint, NO ground slab or gameplay platforms, muted contrast. Theme: underground root cellar and onion storage mine. Palette: dusky violet rock, warm amber lamps, earthy umber. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background."
+    },
+    {
+      "id": "W02-kit",
+      "world": "02",
+      "name": "根系地窖",
+      "kind": "kit",
+      "transparent": true,
+      "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg02-root-cellar-v1.png",
+      "prompt": "Use case: stylized-concept. Asset: original vegetable platformer kit environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent modular environment sheet exactly 8 isolated objects, 4 columns x 2 rows, even broad transparent spacing. Row1: rectangular stratified soil ground ledge; matching stone brick ledge; short horizontal wooden bridge; three-step stone stair. Row2: root cluster; standalone underground root cellar and onion storage mine arch or support frame; small lamp; low root or botanical decoration. All walkable tops straight horizontal, precise SIDE ELEVATION orthographic, no top surface visible, no perspective. Plants below walking top, never across it. Each object entirely within own cell. Theme: underground root cellar and onion storage mine. Palette: dusky violet rock, warm amber lamps, earthy umber. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background."
+    },
+    {
+      "id": "W02-arena",
+      "world": "02",
+      "name": "根系地窖",
+      "kind": "arena",
+      "transparent": false,
+      "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg02-root-cellar-v1.png",
+      "prompt": "Use case: stylized-concept. Asset: original vegetable platformer arena environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Opaque 16:9 boss-area BACKGROUND PLATE: deep onion-root mine chamber, large root arch and recessed onion store niches. Main environment details along outer sides and upper third; center and lower third quiet dark low-contrast atmosphere for foreground fighters. Camera straight side-on, no ground plane receding to horizon, NO foreground ground slab, no stairs/platforms, no boss or character. This is the distant background behind separately built collidable arena floor. Theme: underground root cellar and onion storage mine. Palette: dusky violet rock, warm amber lamps, earthy umber. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Fully opaque backdrop."
+    },
+    {
+      "id": "W02-special",
+      "world": "02",
+      "name": "根系地窖",
+      "kind": "special",
+      "transparent": true,
+      "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg02-root-cellar-v1.png",
+      "prompt": "Use case: stylized-concept. Asset: original vegetable platformer special environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent special environment/interaction sheet exactly 8 isolated objects in 4 columns x 2 rows, ordered left to right: low ceiling soil block; timber mine support frame; decorative horizontal rail strip; cracked breakable wall block; falling rock; small dust warning puff; rectangular elevator platform without cables; onion-emblem exit gate. Large transparent gaps, no overlap, every object fully inside its own cell. Flat side elevation, crisp straight walkable tops, do not put foliage across them. Gates and doors have botanical emblems NOT writing. Water, syrup, steam and effects also transparent outside their own silhouette. These are key state source illustrations, NOT a continuous animation. Theme: underground root cellar and onion storage mine. Palette: dusky violet rock, warm amber lamps, earthy umber. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background."
+    },
+    {
+      "id": "W03-far",
+      "world": "03",
+      "name": "藤架高空",
+      "kind": "far",
+      "transparent": false,
+      "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg03-canopy-heights-v1.png",
+      "prompt": "Use case: stylized-concept. Asset: original vegetable platformer far environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Opaque full-frame 16:9 distant background ONLY. Sky across upper two thirds, distant mountain/tree silhouettes along lower third. Quiet central play space. NO near trees, no foreground, no ground or platforms, no framing arch. Theme: high forest canopy, vine trellises, distant peaks. Palette: clear cyan sky, soft cream clouds, pale jade, golden wood. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Fully opaque backdrop."
+    },
+    {
+      "id": "W03-mid",
+      "world": "03",
+      "name": "藤架高空",
+      "kind": "mid",
+      "transparent": true,
+      "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg03-canopy-heights-v1.png",
+      "prompt": "Use case: stylized-concept. Asset: original vegetable platformer mid environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent wide 16:9 middle-distance layer ONLY: high forest canopy, vine trellises, distant peaks silhouettes forming a loose horizontal arrangement concentrated on bottom half. Open true transparent negative space above and through all openings. NO sky, NO distant mountains, NO water tint, NO ground slab or gameplay platforms, muted contrast. Theme: high forest canopy, vine trellises, distant peaks. Palette: clear cyan sky, soft cream clouds, pale jade, golden wood. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background."
+    },
+    {
+      "id": "W03-kit",
+      "world": "03",
+      "name": "藤架高空",
+      "kind": "kit",
+      "transparent": true,
+      "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg03-canopy-heights-v1.png",
+      "prompt": "Use case: stylized-concept. Asset: original vegetable platformer kit environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent modular environment sheet exactly 8 isolated objects, 4 columns x 2 rows, even broad transparent spacing. Row1: rectangular vine-bound wood ground ledge; matching stone brick ledge; short horizontal wooden bridge; three-step stone stair. Row2: hanging leaves; standalone high forest canopy, vine trellises, distant peaks arch or support frame; small lamp; low root or botanical decoration. All walkable tops straight horizontal, precise SIDE ELEVATION orthographic, no top surface visible, no perspective. Plants below walking top, never across it. Each object entirely within own cell. Theme: high forest canopy, vine trellises, distant peaks. Palette: clear cyan sky, soft cream clouds, pale jade, golden wood. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background."
+    },
+    {
+      "id": "W03-arena",
+      "world": "03",
+      "name": "藤架高空",
+      "kind": "arena",
+      "transparent": false,
+      "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg03-canopy-heights-v1.png",
+      "prompt": "Use case: stylized-concept. Asset: original vegetable platformer arena environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Opaque 16:9 boss-area BACKGROUND PLATE: high corn-emblem trellis pavilion above clouds, open central sky. Main environment details along outer sides and upper third; center and lower third quiet dark low-contrast atmosphere for foreground fighters. Camera straight side-on, no ground plane receding to horizon, NO foreground ground slab, no stairs/platforms, no boss or character. This is the distant background behind separately built collidable arena floor. Theme: high forest canopy, vine trellises, distant peaks. Palette: clear cyan sky, soft cream clouds, pale jade, golden wood. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Fully opaque backdrop."
+    },
+    {
+      "id": "W03-special",
+      "world": "03",
+      "name": "藤架高空",
+      "kind": "special",
+      "transparent": true,
+      "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg03-canopy-heights-v1.png",
+      "prompt": "Use case: stylized-concept. Asset: original vegetable platformer special environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent special environment/interaction sheet exactly 8 isolated objects in 4 columns x 2 rows, ordered left to right: wide suspended vine ledge; short floating wood ledge; rope suspension frame; moving platform rectangular flat top; carved wooden endpoint marker; broken trellis column; corn-emblem exit arch; sparse foreground leaf fringe. Large transparent gaps, no overlap, every object fully inside its own cell. Flat side elevation, crisp straight walkable tops, do not put foliage across them. Gates and doors have botanical emblems NOT writing. Water, syrup, steam and effects also transparent outside their own silhouette. These are key state source illustrations, NOT a continuous animation. Theme: high forest canopy, vine trellises, distant peaks. Palette: clear cyan sky, soft cream clouds, pale jade, golden wood. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background."
+    },
+    {
+      "id": "W04-far",
+      "world": "04",
+      "name": "水生温室",
+      "kind": "far",
+      "transparent": false,
+      "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg04-aquatic-greenhouse-v1.png",
+      "prompt": "Use case: stylized-concept. Asset: original vegetable platformer far environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Opaque full-frame 16:9 distant background ONLY. Deep turquoise greenhouse interior seen through water, faint distant glass ribs and submerged silhouettes; no nearby plants. Quiet central play space. NO near trees, no foreground, no ground or platforms, no framing arch. Theme: partially submerged lotus greenhouse, glass ribs and deep water. Palette: turquoise water, cyan glass light, jade plants, muted rose lotus. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Fully opaque backdrop."
+    },
+    {
+      "id": "W04-mid",
+      "world": "04",
+      "name": "水生温室",
+      "kind": "mid",
+      "transparent": true,
+      "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg04-aquatic-greenhouse-v1.png",
+      "prompt": "Use case: stylized-concept. Asset: original vegetable platformer mid environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent wide 16:9 middle-distance layer ONLY: partially submerged lotus greenhouse, glass ribs and deep water silhouettes forming a loose horizontal arrangement concentrated on bottom half. Open true transparent negative space above and through all openings. NO sky, NO distant mountains, NO water tint, NO ground slab or gameplay platforms, muted contrast. Theme: partially submerged lotus greenhouse, glass ribs and deep water. Palette: turquoise water, cyan glass light, jade plants, muted rose lotus. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background."
+    },
+    {
+      "id": "W04-kit",
+      "world": "04",
+      "name": "水生温室",
+      "kind": "kit",
+      "transparent": true,
+      "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg04-aquatic-greenhouse-v1.png",
+      "prompt": "Use case: stylized-concept. Asset: original vegetable platformer kit environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent modular environment sheet exactly 8 isolated objects, 4 columns x 2 rows, even broad transparent spacing. Row1: rectangular wet stone ground ledge; matching stone brick ledge; short horizontal wooden bridge; three-step stone stair. Row2: aquatic reeds; standalone partially submerged lotus greenhouse, glass ribs and deep water arch or support frame; small lamp; low root or botanical decoration. All walkable tops straight horizontal, precise SIDE ELEVATION orthographic, no top surface visible, no perspective. Plants below walking top, never across it. Each object entirely within own cell. Theme: partially submerged lotus greenhouse, glass ribs and deep water. Palette: turquoise water, cyan glass light, jade plants, muted rose lotus. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background."
+    },
+    {
+      "id": "W04-arena",
+      "world": "04",
+      "name": "水生温室",
+      "kind": "arena",
+      "transparent": false,
+      "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg04-aquatic-greenhouse-v1.png",
+      "prompt": "Use case: stylized-concept. Asset: original vegetable platformer arena environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Opaque 16:9 boss-area BACKGROUND PLATE: lotus pool greenhouse chamber with visible distant waterline and pale glass dome. Main environment details along outer sides and upper third; center and lower third quiet dark low-contrast atmosphere for foreground fighters. Camera straight side-on, no ground plane receding to horizon, NO foreground ground slab, no stairs/platforms, no boss or character. This is the distant background behind separately built collidable arena floor. Theme: partially submerged lotus greenhouse, glass ribs and deep water. Palette: turquoise water, cyan glass light, jade plants, muted rose lotus. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Fully opaque backdrop."
+    },
+    {
+      "id": "W04-special",
+      "world": "04",
+      "name": "水生温室",
+      "kind": "special",
+      "transparent": true,
+      "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg04-aquatic-greenhouse-v1.png",
+      "prompt": "Use case: stylized-concept. Asset: original vegetable platformer special environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent special environment/interaction sheet exactly 8 isolated objects in 4 columns x 2 rows, ordered left to right: flat water surface strip state one; identical water strip state two with shifted ripples; transparent underwater tint panel; rising bubble cluster; flat lotus-leaf platform SIDE VIEW; dry stone bank; glass greenhouse arch; lotus-emblem exit gate. Large transparent gaps, no overlap, every object fully inside its own cell. Flat side elevation, crisp straight walkable tops, do not put foliage across them. Gates and doors have botanical emblems NOT writing. Water, syrup, steam and effects also transparent outside their own silhouette. These are key state source illustrations, NOT a continuous animation. Theme: partially submerged lotus greenhouse, glass ribs and deep water. Palette: turquoise water, cyan glass light, jade plants, muted rose lotus. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background."
+    },
+    {
+      "id": "W05-far",
+      "world": "05",
+      "name": "荆棘果园",
+      "kind": "far",
+      "transparent": false,
+      "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg05-thorn-orchard-v1.png",
+      "prompt": "Use case: stylized-concept. Asset: original vegetable platformer far environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Opaque full-frame 16:9 distant background ONLY. Sky across upper two thirds, distant mountain/tree silhouettes along lower third. Quiet central play space. NO near trees, no foreground, no ground or platforms, no framing arch. Theme: thorn orchard and weathered fruit-garden walls. Palette: apricot dusk, plum mountains, dark olive, amber fruit. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Fully opaque backdrop."
+    },
+    {
+      "id": "W05-mid",
+      "world": "05",
+      "name": "荆棘果园",
+      "kind": "mid",
+      "transparent": true,
+      "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg05-thorn-orchard-v1.png",
+      "prompt": "Use case: stylized-concept. Asset: original vegetable platformer mid environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent wide 16:9 middle-distance layer ONLY: thorn orchard and weathered fruit-garden walls silhouettes forming a loose horizontal arrangement concentrated on bottom half. Open true transparent negative space above and through all openings. NO sky, NO distant mountains, NO water tint, NO ground slab or gameplay platforms, muted contrast. Theme: thorn orchard and weathered fruit-garden walls. Palette: apricot dusk, plum mountains, dark olive, amber fruit. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background."
+    },
+    {
+      "id": "W05-kit",
+      "world": "05",
+      "name": "荆棘果园",
+      "kind": "kit",
+      "transparent": true,
+      "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg05-thorn-orchard-v1.png",
+      "prompt": "Use case: stylized-concept. Asset: original vegetable platformer kit environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent modular environment sheet exactly 8 isolated objects, 4 columns x 2 rows, even broad transparent spacing. Row1: rectangular orchard earth ground ledge; matching stone brick ledge; short horizontal wooden bridge; three-step stone stair. Row2: orchard shrub; standalone thorn orchard and weathered fruit-garden walls arch or support frame; small lamp; low root or botanical decoration. All walkable tops straight horizontal, precise SIDE ELEVATION orthographic, no top surface visible, no perspective. Plants below walking top, never across it. Each object entirely within own cell. Theme: thorn orchard and weathered fruit-garden walls. Palette: apricot dusk, plum mountains, dark olive, amber fruit. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background."
+    },
+    {
+      "id": "W05-arena",
+      "world": "05",
+      "name": "荆棘果园",
+      "kind": "arena",
+      "transparent": false,
+      "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg05-thorn-orchard-v1.png",
+      "prompt": "Use case: stylized-concept. Asset: original vegetable platformer arena environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Opaque 16:9 boss-area BACKGROUND PLATE: durian-emblem orchard courtyard surrounded by thorny trees, spacious empty center. Main environment details along outer sides and upper third; center and lower third quiet dark low-contrast atmosphere for foreground fighters. Camera straight side-on, no ground plane receding to horizon, NO foreground ground slab, no stairs/platforms, no boss or character. This is the distant background behind separately built collidable arena floor. Theme: thorn orchard and weathered fruit-garden walls. Palette: apricot dusk, plum mountains, dark olive, amber fruit. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Fully opaque backdrop."
+    },
+    {
+      "id": "W05-special",
+      "world": "05",
+      "name": "荆棘果园",
+      "kind": "special",
+      "transparent": true,
+      "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg05-thorn-orchard-v1.png",
+      "prompt": "Use case: stylized-concept. Asset: original vegetable platformer special environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent special environment/interaction sheet exactly 8 isolated objects in 4 columns x 2 rows, ordered left to right: sharp upright thorn hazard strip; safe thornless ledge; wooden fruit orchard fence; cracked breakable wall; closed empty durian shell obstacle; open empty durian shell obstacle; durian-emblem exit gate; sparse fruit-tree foreground branch. Large transparent gaps, no overlap, every object fully inside its own cell. Flat side elevation, crisp straight walkable tops, do not put foliage across them. Gates and doors have botanical emblems NOT writing. Water, syrup, steam and effects also transparent outside their own silhouette. These are key state source illustrations, NOT a continuous animation. Theme: thorn orchard and weathered fruit-garden walls. Palette: apricot dusk, plum mountains, dark olive, amber fruit. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background."
+    },
+    {
+      "id": "W06-far",
+      "world": "06",
+      "name": "熔糖工坊",
+      "kind": "far",
+      "transparent": false,
+      "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg06-ember-workshop-v1.png",
+      "prompt": "Use case: stylized-concept. Asset: original vegetable platformer far environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Opaque full-frame 16:9 distant background ONLY. Distant hazy workshop roofs and night sky, tiny low-contrast distant kilns. Quiet central play space. NO near trees, no foreground, no ground or platforms, no framing arch. Theme: sugar cooking workshop, kilns and copper pipes. Palette: indigo dusk, terracotta bricks, copper, restrained orange heat. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Fully opaque backdrop."
+    },
+    {
+      "id": "W06-mid",
+      "world": "06",
+      "name": "熔糖工坊",
+      "kind": "mid",
+      "transparent": true,
+      "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg06-ember-workshop-v1.png",
+      "prompt": "Use case: stylized-concept. Asset: original vegetable platformer mid environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent wide 16:9 middle-distance layer ONLY: sugar cooking workshop, kilns and copper pipes silhouettes forming a loose horizontal arrangement concentrated on bottom half. Open true transparent negative space above and through all openings. NO sky, NO distant mountains, NO water tint, NO ground slab or gameplay platforms, muted contrast. Theme: sugar cooking workshop, kilns and copper pipes. Palette: indigo dusk, terracotta bricks, copper, restrained orange heat. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background."
+    },
+    {
+      "id": "W06-kit",
+      "world": "06",
+      "name": "熔糖工坊",
+      "kind": "kit",
+      "transparent": true,
+      "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg06-ember-workshop-v1.png",
+      "prompt": "Use case: stylized-concept. Asset: original vegetable platformer kit environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent modular environment sheet exactly 8 isolated objects, 4 columns x 2 rows, even broad transparent spacing. Row1: rectangular kiln brick ground ledge; matching stone brick ledge; short horizontal wooden bridge; three-step stone stair. Row2: herb planter; standalone sugar cooking workshop, kilns and copper pipes arch or support frame; small lamp; low root or botanical decoration. All walkable tops straight horizontal, precise SIDE ELEVATION orthographic, no top surface visible, no perspective. Plants below walking top, never across it. Each object entirely within own cell. Theme: sugar cooking workshop, kilns and copper pipes. Palette: indigo dusk, terracotta bricks, copper, restrained orange heat. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background."
+    },
+    {
+      "id": "W06-arena",
+      "world": "06",
+      "name": "熔糖工坊",
+      "kind": "arena",
+      "transparent": false,
+      "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg06-ember-workshop-v1.png",
+      "prompt": "Use case: stylized-concept. Asset: original vegetable platformer arena environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Opaque 16:9 boss-area BACKGROUND PLATE: chili-emblem sugar workshop hall, distant furnaces at sides, dark readable center. Main environment details along outer sides and upper third; center and lower third quiet dark low-contrast atmosphere for foreground fighters. Camera straight side-on, no ground plane receding to horizon, NO foreground ground slab, no stairs/platforms, no boss or character. This is the distant background behind separately built collidable arena floor. Theme: sugar cooking workshop, kilns and copper pipes. Palette: indigo dusk, terracotta bricks, copper, restrained orange heat. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Fully opaque backdrop."
+    },
+    {
+      "id": "W06-special",
+      "world": "06",
+      "name": "熔糖工坊",
+      "kind": "special",
+      "transparent": true,
+      "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg06-ember-workshop-v1.png",
+      "prompt": "Use case: stylized-concept. Asset: original vegetable platformer special environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent special environment/interaction sheet exactly 8 isolated objects in 4 columns x 2 rows, ordered left to right: flat amber syrup hazard surface strip; inactive copper steam vent; same vent emitting narrow steam plume; copper valve; low brick cover block; rectangular moving metal platform; chili-emblem workshop exit; sparse ember cluster. Large transparent gaps, no overlap, every object fully inside its own cell. Flat side elevation, crisp straight walkable tops, do not put foliage across them. Gates and doors have botanical emblems NOT writing. Water, syrup, steam and effects also transparent outside their own silhouette. These are key state source illustrations, NOT a continuous animation. Theme: sugar cooking workshop, kilns and copper pipes. Palette: indigo dusk, terracotta bricks, copper, restrained orange heat. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background."
+    },
+    {
+      "id": "W07-arena",
+      "world": "07",
+      "name": "月夜藤园",
+      "kind": "arena",
+      "transparent": false,
+      "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg07-moon-vine-garden-v1.png",
+      "prompt": "Use case: stylized-concept. Asset: original vegetable platformer arena environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Opaque 16:9 boss-area BACKGROUND PLATE: twin grape-emblem garden pavilion under moonlight, empty open center. Main environment details along outer sides and upper third; center and lower third quiet dark low-contrast atmosphere for foreground fighters. Camera straight side-on, no ground plane receding to horizon, NO foreground ground slab, no stairs/platforms, no boss or character. This is the distant background behind separately built collidable arena floor. Theme: moonlit grape garden and ruined vine arches. Palette: indigo moonlight, violet vines, pale cyan edges, amber lamps. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Fully opaque backdrop."
+    },
+    {
+      "id": "W07-special",
+      "world": "07",
+      "name": "月夜藤园",
+      "kind": "special",
+      "transparent": true,
+      "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg07-moon-vine-garden-v1.png",
+      "prompt": "Use case: stylized-concept. Asset: original vegetable platformer special environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent special environment/interaction sheet exactly 8 isolated objects in 4 columns x 2 rows, ordered left to right: flat violet vine platform; warm ground lantern; hanging grape trellis; thin vine sweep hazard curved horizontally; falling chestnut hazard with green spikes; small overhead leaf-rustle warning cluster; twin grape-emblem exit arch; sparse blue flower foreground fringe. Large transparent gaps, no overlap, every object fully inside its own cell. Flat side elevation, crisp straight walkable tops, do not put foliage across them. Gates and doors have botanical emblems NOT writing. Water, syrup, steam and effects also transparent outside their own silhouette. These are key state source illustrations, NOT a continuous animation. Theme: moonlit grape garden and ruined vine arches. Palette: indigo moonlight, violet vines, pale cyan edges, amber lamps. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background."
+    },
+    {
+      "id": "W08-far",
+      "world": "08",
+      "name": "石榴王庭",
+      "kind": "far",
+      "transparent": false,
+      "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg08-pomegranate-citadel-v1.png",
+      "prompt": "Use case: stylized-concept. Asset: original vegetable platformer far environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Opaque full-frame 16:9 distant background ONLY. Distant palace towers below moonlit purple sky. Quiet central play space. NO near trees, no foreground, no ground or platforms, no framing arch. Theme: pomegranate royal palace, seed-window stone arches. Palette: royal purple, ruby seed glass, pale gold, deep blue. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Fully opaque backdrop."
+    },
+    {
+      "id": "W08-mid",
+      "world": "08",
+      "name": "石榴王庭",
+      "kind": "mid",
+      "transparent": true,
+      "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg08-pomegranate-citadel-v1.png",
+      "prompt": "Use case: stylized-concept. Asset: original vegetable platformer mid environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent wide 16:9 middle-distance layer ONLY: pomegranate royal palace, seed-window stone arches silhouettes forming a loose horizontal arrangement concentrated on bottom half. Open true transparent negative space above and through all openings. NO sky, NO distant mountains, NO water tint, NO ground slab or gameplay platforms, muted contrast. Theme: pomegranate royal palace, seed-window stone arches. Palette: royal purple, ruby seed glass, pale gold, deep blue. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background."
+    },
+    {
+      "id": "W08-kit",
+      "world": "08",
+      "name": "石榴王庭",
+      "kind": "kit",
+      "transparent": true,
+      "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg08-pomegranate-citadel-v1.png",
+      "prompt": "Use case: stylized-concept. Asset: original vegetable platformer kit environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent modular environment sheet exactly 8 isolated objects, 4 columns x 2 rows, even broad transparent spacing. Row1: rectangular royal stone ground ledge; matching stone brick ledge; short horizontal wooden bridge; three-step stone stair. Row2: white blossom planter; standalone pomegranate royal palace, seed-window stone arches arch or support frame; small lamp; low root or botanical decoration. All walkable tops straight horizontal, precise SIDE ELEVATION orthographic, no top surface visible, no perspective. Plants below walking top, never across it. Each object entirely within own cell. Theme: pomegranate royal palace, seed-window stone arches. Palette: royal purple, ruby seed glass, pale gold, deep blue. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background."
+    },
+    {
+      "id": "W08-arena",
+      "world": "08",
+      "name": "石榴王庭",
+      "kind": "arena",
+      "transparent": false,
+      "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg08-pomegranate-citadel-v1.png",
+      "prompt": "Use case: stylized-concept. Asset: original vegetable platformer arena environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Opaque 16:9 boss-area BACKGROUND PLATE: pomegranate royal throne chamber, ruby seed-window recesses and distant central throne, empty fighting space. Main environment details along outer sides and upper third; center and lower third quiet dark low-contrast atmosphere for foreground fighters. Camera straight side-on, no ground plane receding to horizon, NO foreground ground slab, no stairs/platforms, no boss or character. This is the distant background behind separately built collidable arena floor. Theme: pomegranate royal palace, seed-window stone arches. Palette: royal purple, ruby seed glass, pale gold, deep blue. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Fully opaque backdrop."
+    },
+    {
+      "id": "W08-special",
+      "world": "08",
+      "name": "石榴王庭",
+      "kind": "special",
+      "transparent": true,
+      "reference": "C:/codex/loud/art-source/veggie-adventure/originals/backgrounds/bg08-pomegranate-citadel-v1.png",
+      "prompt": "Use case: stylized-concept. Asset: original vegetable platformer special environment source. Reference image is STYLE/PALETTE reference only, NOT composition to copy. Transparent special environment/interaction sheet exactly 8 isolated objects in 4 columns x 2 rows, ordered left to right: gold-edged stone platform; shallow water surface strip; flat copper turret mounting pedestal no weapon; broken royal column; intact seed-seal door; open seed-seal door; pomegranate crown victory gate; small ruby sparkle cluster. Large transparent gaps, no overlap, every object fully inside its own cell. Flat side elevation, crisp straight walkable tops, do not put foliage across them. Gates and doors have botanical emblems NOT writing. Water, syrup, steam and effects also transparent outside their own silhouette. These are key state source illustrations, NOT a continuous animation. Theme: pomegranate royal palace, seed-window stone arches. Palette: royal purple, ruby seed glass, pale gold, deep blue. 32-bit-era fine 2D pixel art, clearly visible crisp square pixel clusters, restrained texture, readable silhouettes. NO smooth painterly gradients, no 3D render, no isometric view, no characters or enemies, no UI, no text, no labels, no border or checkerboard. Real transparent PNG alpha background."
+    }
+  ]
+}

@@ -8,6 +8,7 @@ const set=(k,v)=>db.prepare('INSERT OR REPLACE INTO config VALUES(?,?)').run(k,S
 if(!get('visible'))set('visible',6);if(!get('retention'))set('retention',720);
 const hash=(p,s)=>crypto.scryptSync(p,s,64).toString('hex');
 const app=express(),server=http.createServer(app),io=new Server(server,{maxHttpBufferSize:32100});app.disable('x-powered-by');
+if(process.env.TRUST_PROXY==='loopback')app.set('trust proxy','loopback');
 app.use((req,res,next)=>{res.setHeader('X-Content-Type-Options','nosniff');res.setHeader('Referrer-Policy','no-referrer');res.setHeader('Cache-Control','no-store');if(!['GET','HEAD'].includes(req.method)&&req.headers.origin&&req.headers.origin!==`${req.protocol}://${req.headers.host}`)return res.sendStatus(403);next()});
 app.use(express.json({limit:'32kb'}));
 const admins=new Map();const cookie=req=>String(req.headers.cookie||'').split('; ').find(x=>x.startsWith('admin='))?.slice(6);
