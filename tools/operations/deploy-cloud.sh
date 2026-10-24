@@ -81,6 +81,10 @@ if [[ "$healthy" != true ]]; then
  exit 1
 fi
 systemctl reload nginx
-curl -fsS http://127.0.0.1/deployment.json
+for attempt in $(seq 1 10); do
+ if curl -fsS http://127.0.0.1/deployment.json | grep -q "$commit"; then break; fi
+ sleep 1
+done
+curl -fsS http://127.0.0.1/deployment.json | grep "$commit"
 echo
 echo "DEPLOYED $commit"

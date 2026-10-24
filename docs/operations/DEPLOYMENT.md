@@ -19,3 +19,5 @@
 通过 scp 传输运行包及 tools/operations/deploy-cloud.sh 后，在服务器运行：`sudo bash deploy-cloud.sh <运行包> <完整commit> <sha256>`。脚本验证包摘要、安装依赖、启动服务，健康检查失败时切回已有旧版本。保留旧release用于回滚。
 
 每次发布应分别核验本机、内网地址及云端公网：首页、/api/health、/deployment.json、/games/veggie-adventure/及关键静态资产。运行时和HTTP检查不代替视觉、手机或整关游玩验收。当前公网IP上线使用HTTP；尚未配置域名或HTTPS。
+
+2026-10-25 首次双端发布已核验内网与公网的首页、健康、提交号、171项游戏图片及4项脚本／样式／最终关数据（共175文件）。游戏51项非视觉测试及聊天／附件／认证回归通过。本轮将 multer 升级到2.5.0、body-parser升级到2.4.0，修复依赖审计发现的两项高危拒绝服务漏洞，生产依赖审计为0漏洞。具体发布提交、运行包SHA256及两端检查结果记录在本机忽略目录 `.publish/`，以实际 `/deployment.json` 为当前版本依据。
