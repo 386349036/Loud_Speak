@@ -22,7 +22,7 @@
 
 通过 scp 传输运行包及 tools/operations/deploy-cloud.sh 后，在服务器运行：`sudo bash deploy-cloud.sh <运行包> <完整commit> <sha256>`。脚本验证包摘要、安装依赖、启动服务，健康检查失败时切回已有旧版本。保留旧release用于回滚。
 
-每次发布应分别核验本机、内网地址及云端公网：首页、/api/health、/deployment.json、/games/veggie-adventure/及静态资产。verify-deployment.cjs现逐文件校验整个蔬果游戏目录，覆盖全部32关、共用逻辑、验收台和图片；文本仅归一化CRLF/LF后比较SHA256。运行时和HTTP检查不代替视觉、手机或整关游玩验收。公网使用上述HTTPS入口，HTTP保留跳转。
+每次发布应分别核验本机、内网地址及云端公网：首页、/api/health、/deployment.json、/games/veggie-adventure/及静态资产。verify-deployment.cjs现逐文件校验整个蔬果游戏目录对外提供的文件，覆盖全部32关、共用逻辑、验收台和图片；排除Express不提供的.gitkeep等隐藏占位文件，文本仅归一化CRLF/LF后比较SHA256。运行时和HTTP检查不代替视觉、手机或整关游玩验收。公网使用上述HTTPS入口，HTTP保留跳转。
 
 2026-10-25 本轮发布准备：102项游戏回归与聊天／附件／认证回归通过；发布内容包括场景01正式动画、运动与关卡调整、首领情境行为、小兵智能V1，以及保留TLS的部署脚本。两端实际发布提交和验证结果记录在本机忽略目录 `.publish/deployment-state.json`，以访问 `/deployment.json` 的结果确认，不能仅凭提交成功判断双端上线完成。
 
