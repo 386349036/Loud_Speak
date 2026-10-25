@@ -1,4 +1,3 @@
-// 灯下藤径 — 夜间轮廓
 export default {
   "id": "7-1",
   "name": "灯下藤径",
@@ -41,30 +40,6 @@ export default {
       "y": 208,
       "w": 288,
       "h": 32
-    },
-    {
-      "x": 272,
-      "y": 192,
-      "w": 32,
-      "h": 16
-    },
-    {
-      "x": 304,
-      "y": 176,
-      "w": 32,
-      "h": 32
-    },
-    {
-      "x": 704,
-      "y": 192,
-      "w": 32,
-      "h": 16
-    },
-    {
-      "x": 736,
-      "y": 176,
-      "w": 32,
-      "h": 32
     }
   ],
   "blocks": [
@@ -73,24 +48,89 @@ export default {
       "y": 144,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "carrot"
+      "kind": "brick",
+      "item": "carrot",
+      "breakable": true
     },
     {
-      "x": 608,
-      "y": 144,
+      "x": 272,
+      "y": 192,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "chili"
+      "kind": "brick",
+      "breakable": true
     },
     {
-      "x": 1248,
-      "y": 144,
+      "x": 288,
+      "y": 192,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "star"
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 304,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 304,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 704,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 720,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 736,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 752,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 736,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 752,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
     }
   ],
   "enemies": [

@@ -45,6 +45,8 @@ ReadWritePaths=/var/lib/loud
 [Install]
 WantedBy=multi-user.target
 SERVICE
+# Preserve the certificate and HTTP-01 locations installed by HTTPS setup.
+if [[ ! -f /etc/nginx/sites-available/loud-speak ]] || ! grep -q 'ssl_certificate ' /etc/nginx/sites-available/loud-speak; then
 cat > /etc/nginx/sites-available/loud-speak <<'NGINX'
 server {
  listen 80 default_server;
@@ -65,6 +67,7 @@ server {
  }
 }
 NGINX
+fi
 ln -sfn /etc/nginx/sites-available/loud-speak /etc/nginx/sites-enabled/loud-speak
 if [[ -L /etc/nginx/sites-enabled/default ]]; then unlink /etc/nginx/sites-enabled/default; fi
 nginx -t
@@ -82,9 +85,9 @@ if [[ "$healthy" != true ]]; then
 fi
 systemctl reload nginx
 for attempt in $(seq 1 10); do
- if curl -fsS http://127.0.0.1/deployment.json | grep -q "$commit"; then break; fi
+   if curl -fsSL http://127.0.0.1/deployment.json | grep -q "$commit"; then break; fi
  sleep 1
 done
-curl -fsS http://127.0.0.1/deployment.json | grep "$commit"
+curl -fsSL http://127.0.0.1/deployment.json | grep "$commit"
 echo
 echo "DEPLOYED $commit"

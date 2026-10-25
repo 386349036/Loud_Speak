@@ -1,4 +1,3 @@
-// 刺栗边界 — 危险形状识别
 export default {
   "id": "5-1",
   "name": "刺栗边界",
@@ -43,24 +42,18 @@ export default {
       "y": 144,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "carrot"
-    },
-    {
-      "x": 608,
-      "y": 144,
-      "w": 16,
-      "h": 16,
-      "kind": "reward",
-      "item": "chili"
+      "kind": "brick",
+      "item": "carrot",
+      "breakable": true
     },
     {
       "x": 1248,
       "y": 144,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "star"
+      "kind": "brick",
+      "item": "star",
+      "breakable": true
     }
   ],
   "enemies": [

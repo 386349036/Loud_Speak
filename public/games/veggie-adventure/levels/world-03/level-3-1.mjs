@@ -1,4 +1,3 @@
-// 初登藤架 — 宽平台
 export default {
   "id": "3-1",
   "name": "初登藤架",
@@ -41,42 +40,6 @@ export default {
       "y": 208,
       "w": 256,
       "h": 32
-    },
-    {
-      "x": 256,
-      "y": 192,
-      "w": 32,
-      "h": 16
-    },
-    {
-      "x": 288,
-      "y": 176,
-      "w": 32,
-      "h": 32
-    },
-    {
-      "x": 672,
-      "y": 192,
-      "w": 32,
-      "h": 16
-    },
-    {
-      "x": 704,
-      "y": 176,
-      "w": 32,
-      "h": 32
-    },
-    {
-      "x": 320,
-      "y": 144,
-      "w": 112,
-      "h": 16
-    },
-    {
-      "x": 736,
-      "y": 144,
-      "w": 144,
-      "h": 16
     }
   ],
   "blocks": [
@@ -85,24 +48,145 @@ export default {
       "y": 144,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "carrot"
+      "kind": "brick",
+      "item": "carrot",
+      "breakable": true
     },
     {
-      "x": 608,
+      "x": 256,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 272,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 288,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 304,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 288,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 304,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 672,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 688,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 704,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 720,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 704,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 720,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 320,
       "y": 144,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "chili"
+      "kind": "brick",
+      "breakable": true
     },
     {
-      "x": 1248,
+      "x": 336,
       "y": 144,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "star"
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 736,
+      "y": 144,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 752,
+      "y": 144,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 768,
+      "y": 144,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
     }
   ],
   "enemies": [

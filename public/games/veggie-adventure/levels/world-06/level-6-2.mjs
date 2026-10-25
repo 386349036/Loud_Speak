@@ -1,4 +1,3 @@
-// 炮弹作坊 — 掩体间穿行
 export default {
   "id": "6-2",
   "name": "炮弹作坊",
@@ -35,42 +34,6 @@ export default {
       "y": 208,
       "w": 368,
       "h": 32
-    },
-    {
-      "x": 304,
-      "y": 192,
-      "w": 32,
-      "h": 16
-    },
-    {
-      "x": 336,
-      "y": 176,
-      "w": 32,
-      "h": 32
-    },
-    {
-      "x": 864,
-      "y": 192,
-      "w": 32,
-      "h": 16
-    },
-    {
-      "x": 896,
-      "y": 176,
-      "w": 32,
-      "h": 32
-    },
-    {
-      "x": 368,
-      "y": 144,
-      "w": 64,
-      "h": 16
-    },
-    {
-      "x": 928,
-      "y": 144,
-      "w": 64,
-      "h": 16
     }
   ],
   "blocks": [
@@ -79,24 +42,169 @@ export default {
       "y": 144,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "carrot"
+      "kind": "brick",
+      "item": "carrot",
+      "breakable": true
     },
     {
-      "x": 608,
+      "x": 304,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 320,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 336,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 352,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 336,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 352,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 864,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 880,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 896,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 912,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 896,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 912,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 368,
       "y": 144,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "chili"
+      "kind": "brick",
+      "breakable": true
     },
     {
-      "x": 1248,
+      "x": 384,
       "y": 144,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "star"
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 400,
+      "y": 144,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 416,
+      "y": 144,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 928,
+      "y": 144,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 944,
+      "y": 144,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 960,
+      "y": 144,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 976,
+      "y": 144,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
     }
   ],
   "enemies": [
@@ -138,7 +246,7 @@ export default {
     },
     {
       "x": 352,
-      "y": 176,
+      "y": 160,
       "w": 10,
       "h": 12,
       "kind": "seed",
@@ -178,7 +286,7 @@ export default {
     },
     {
       "x": 912,
-      "y": 176,
+      "y": 160,
       "w": 10,
       "h": 12,
       "kind": "seed",

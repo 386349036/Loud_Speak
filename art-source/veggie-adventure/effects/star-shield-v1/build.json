@@ -30,33 +30,33 @@
   "calibration": [
     {
       "id": "P01-0",
-      "referenceHeight": 23,
+      "referenceHeight": 50.5,
       "targetHeight": 18,
-      "scale": 0.782608695652174
+      "scale": 0.3564356435643564
     },
     {
       "id": "P01-1",
-      "referenceHeight": 43,
+      "referenceHeight": 46.5,
       "targetHeight": 28,
-      "scale": 0.6511627906976745
+      "scale": 0.6021505376344086
     },
     {
       "id": "P01-2",
-      "referenceHeight": 26.5,
+      "referenceHeight": 48,
       "targetHeight": 28,
-      "scale": 1.0566037735849056
+      "scale": 0.5833333333333334
     },
     {
       "id": "E01",
-      "referenceHeight": 40,
+      "referenceHeight": 45,
       "targetHeight": 16,
-      "scale": 0.4
+      "scale": 0.35555555555555557
     },
     {
       "id": "E02",
-      "referenceHeight": 35.5,
+      "referenceHeight": 41,
       "targetHeight": 16,
-      "scale": 0.4507042253521127
+      "scale": 0.3902439024390244
     },
     {
       "id": "E03",

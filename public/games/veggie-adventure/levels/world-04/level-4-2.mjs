@@ -1,4 +1,3 @@
-// 水母回廊 — 水下路线
 export default {
   "id": "4-2",
   "name": "水母回廊",
@@ -35,24 +34,6 @@ export default {
       "y": 208,
       "w": 128,
       "h": 32
-    },
-    {
-      "x": 352,
-      "y": 144,
-      "w": 80,
-      "h": 16
-    },
-    {
-      "x": 704,
-      "y": 112,
-      "w": 80,
-      "h": 16
-    },
-    {
-      "x": 1056,
-      "y": 160,
-      "w": 96,
-      "h": 16
     }
   ],
   "blocks": [
@@ -61,24 +42,155 @@ export default {
       "y": 144,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "carrot"
+      "kind": "brick",
+      "item": "carrot",
+      "breakable": true
     },
     {
       "x": 608,
       "y": 144,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "chili"
+      "kind": "brick",
+      "item": "chili",
+      "breakable": true
     },
     {
       "x": 1248,
       "y": 144,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "star"
+      "kind": "brick",
+      "item": "star",
+      "breakable": true
+    },
+    {
+      "x": 352,
+      "y": 144,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 368,
+      "y": 144,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 384,
+      "y": 144,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 400,
+      "y": 144,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 416,
+      "y": 144,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 704,
+      "y": 112,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 720,
+      "y": 112,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 736,
+      "y": 112,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 752,
+      "y": 112,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 768,
+      "y": 112,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 1056,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 1072,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 1088,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 1104,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 1120,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 1136,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
     }
   ],
   "enemies": [

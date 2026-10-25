@@ -1,4 +1,3 @@
-// 王庭外墙 — 机制复习
 export default {
   "id": "8-1",
   "name": "王庭外墙",
@@ -35,25 +34,6 @@ export default {
       "y": 208,
       "w": 480,
       "h": 32
-    },
-    {
-      "x": 272,
-      "y": 192,
-      "w": 32,
-      "h": 16
-    },
-    {
-      "x": 304,
-      "y": 176,
-      "w": 32,
-      "h": 32
-    },
-    {
-      "x": 640,
-      "y": 160,
-      "w": 96,
-      "h": 32,
-      "ceiling": true
     }
   ],
   "blocks": [
@@ -62,24 +42,162 @@ export default {
       "y": 144,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "carrot"
-    },
-    {
-      "x": 608,
-      "y": 144,
-      "w": 16,
-      "h": 16,
-      "kind": "reward",
-      "item": "chili"
+      "kind": "brick",
+      "item": "carrot",
+      "breakable": true
     },
     {
       "x": 1248,
       "y": 144,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "star"
+      "kind": "brick",
+      "item": "star",
+      "breakable": true
+    },
+    {
+      "x": 272,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 288,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 304,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 320,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 304,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 320,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 640,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 656,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 672,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 688,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 704,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 720,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 640,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 656,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 672,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 688,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 704,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 720,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
     }
   ],
   "enemies": [
@@ -173,7 +291,7 @@ export default {
     },
     {
       "x": 688,
-      "y": 176,
+      "y": 144,
       "w": 10,
       "h": 12,
       "kind": "seed",

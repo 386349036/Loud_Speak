@@ -5,7 +5,7 @@ const plan=JSON.parse(fs.readFileSync(path.join(root,'docs/veggie-adventure/scen
 const box=(x,y,w,h)=>({x,y,w,h});
 // Each row supplies independent pit/terrain/encounter positions, not a random seed.
 const designs={
- '1-2':{gaps:[[544,32],[1072,48]],stairs:[320,752],upper:[[384,160,96],[816,144,112]],enemies:[[240,'cabbage'],[656,'trap'],[960,'mushroom'],[1280,'cabbage']]},
+ '1-2':{gaps:[[544,32],[1072,48]],stairs:[320,752],upper:[[384,160,64],[816,160,32],[848,144,80]],enemies:[[240,'cabbage'],[656,'trap'],[960,'mushroom'],[1280,'cabbage']]},
  '1-3':{gaps:[[416,48],[672,48],[976,48],[1248,48]],stairs:[224,784],bridges:[[448,192,32],[1008,192,32]],enemies:[[320,'winged'],[832,'mushroom'],[1168,'winged']]},
  '2-1':{gaps:[[752,32]],ceilings:[[256,160,128,32],[992,160,144,32]],stairs:[544],enemies:[[448,'walnut'],[656,'mushroom'],[1216,'trap']],bricks:[864]},
  '2-2':{gaps:[[448,48],[864,48]],movers:[[432,192,48,'y',64,4],[832,176,64,'y',48,5]],stairs:[272,1056],upper:[[512,144,112],[928,128,96]],water:[[1184,144,240,80]],enemies:[[336,'walnut'],[1232,'jelly'],[1328,'fish']]},
@@ -35,7 +35,8 @@ const index=[];
 for(const meta of plan){
  const [world,stage]=meta.id.split('-').map(Number),wd='world-'+String(world).padStart(2,'0'),file=path.join(dir,wd,'level-'+meta.id+'.mjs');fs.mkdirSync(path.dirname(file),{recursive:true});
  index.push(`import l${world}${stage} from './${wd}/level-${meta.id}.mjs';`);
- if(meta.id==='1-1')continue;
+ // Preserve the hand-authored introduction and experimental first boss level.
+ if(['1-1','1-4'].includes(meta.id))continue;
  const boss=stage===4,design=designs[meta.id]||{},width=boss?1792:1536;
  const level={id:meta.id,name:meta.name,focus:meta.focus,world,stage,width,height:240,timeLimit:boss?420:360,spawn:{x:32,y:180},exit:width-48,checkpoint:boss?width-384:720,background:meta.background,mid:meta.mid,terrain:meta.terrain,platforms:[],blocks:[],enemies:[],items:[],movers:[],hazards:[],water:[],turrets:[],gates:[],boss:null};
  let cursor=0;for(const [x,gap] of design.gaps||[]){level.platforms.push(box(cursor,208,x-cursor,32));cursor=x+gap;}level.platforms.push(box(cursor,208,width-cursor,32));
@@ -52,7 +53,7 @@ for(const meta of plan){
  for(const [x,y,radius] of design.chains||[])level.hazards.push({...box(x,y,8,8),kind:'chain',radius,period:5});
  for(const x of design.turrets||[])level.turrets.push({...box(x,176,16,32),cooldown:1.5,windup:0});
  for(const x of design.gates||[])level.gates.push({...box(x,176,16,32),open:false});
- for(const x of [160,608,1248])level.blocks.push({...box(x,144,16,16),kind:'reward',item:x===160?'carrot':x===608?'chili':'star'});
+ for(const x of [160,608,1248])level.blocks.push({...box(world===1&&stage===3&&x===1248?1152:x,144,16,16),kind:'reward',item:x===160?'carrot':x===608?'chili':'star'});
  for(const x of design.bricks||[])for(let n=0;n<3;n++)level.blocks.push({...box(x+n*16,144,16,16),kind:'brick'});
  for(const [x,kind] of design.enemies||[]){const pool=level.water.find(w=>x>=w.x&&x<w.x+w.w);level.enemies.push(enemy(x,kind,level.enemies.length,pool?pool.y+24:kind==='cloud'?64:kind==='winged'?160:194));}
  for(let x=128;x<width-128;x+=112){if(!(design.gaps||[]).some(([a,b])=>x>=a&&x<a+b))level.items.push({...box(x,176,10,12),kind:'seed',collected:false});}
@@ -72,4 +73,5 @@ for(const meta of plan){
  fs.writeFileSync(file,'// '+meta.name+' — '+meta.focus+'\nexport default '+JSON.stringify(level,null,2)+';\n');
 }
 fs.writeFileSync(path.join(dir,'catalog.mjs'),index.join('\n')+`\nexport const LEVELS=[${plan.map(m=>'l'+m.id.replace('-','')).join(',')}];\nexport const levelById=id=>LEVELS.find(l=>l.id===id);\nexport const nextLevel=id=>LEVELS[LEVELS.findIndex(l=>l.id===id)+1]||null;\n`);
-console.log('31 new level modules + ordered 32-level catalog; 1-1 preserved.');
+console.log('30 generated level modules + ordered 32-level catalog; authored 1-1 and 1-4 preserved.');
+import('./normalize-feedback-levels.mjs').catch(error=>{console.error(error);process.exitCode=1;});

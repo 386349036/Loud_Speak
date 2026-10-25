@@ -1,4 +1,3 @@
-// 垂直矿井 — 升降台
 export default {
   "id": "2-2",
   "name": "垂直矿井",
@@ -47,42 +46,6 @@ export default {
       "y": 208,
       "w": 112,
       "h": 32
-    },
-    {
-      "x": 272,
-      "y": 192,
-      "w": 32,
-      "h": 16
-    },
-    {
-      "x": 304,
-      "y": 176,
-      "w": 32,
-      "h": 32
-    },
-    {
-      "x": 1056,
-      "y": 192,
-      "w": 32,
-      "h": 16
-    },
-    {
-      "x": 1088,
-      "y": 176,
-      "w": 32,
-      "h": 32
-    },
-    {
-      "x": 512,
-      "y": 144,
-      "w": 112,
-      "h": 16
-    },
-    {
-      "x": 928,
-      "y": 128,
-      "w": 96,
-      "h": 16
     }
   ],
   "blocks": [
@@ -91,24 +54,98 @@ export default {
       "y": 144,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "carrot"
-    },
-    {
-      "x": 608,
-      "y": 144,
-      "w": 16,
-      "h": 16,
-      "kind": "reward",
-      "item": "chili"
+      "kind": "brick",
+      "item": "carrot",
+      "breakable": true
     },
     {
       "x": 1248,
       "y": 144,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "star"
+      "kind": "brick",
+      "item": "star",
+      "breakable": true
+    },
+    {
+      "x": 272,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 288,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 304,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 304,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 1056,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 1072,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 1088,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 1104,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 1088,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 1104,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
     }
   ],
   "enemies": [

@@ -1,4 +1,3 @@
-// 辣椒炉厅 — 高低攻击预兆
 export default {
   "id": "6-4",
   "name": "辣椒炉厅",
@@ -23,30 +22,6 @@ export default {
       "y": 208,
       "w": 1792,
       "h": 32
-    },
-    {
-      "x": 1552,
-      "y": 192,
-      "w": 32,
-      "h": 16
-    },
-    {
-      "x": 1680,
-      "y": 192,
-      "w": 32,
-      "h": 16
-    },
-    {
-      "x": 624,
-      "y": 192,
-      "w": 32,
-      "h": 16
-    },
-    {
-      "x": 656,
-      "y": 176,
-      "w": 48,
-      "h": 32
     }
   ],
   "blocks": [
@@ -55,32 +30,132 @@ export default {
       "y": 144,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "carrot"
+      "kind": "brick",
+      "item": "carrot",
+      "breakable": true
     },
     {
       "x": 608,
       "y": 144,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "chili"
+      "kind": "brick",
+      "item": "chili",
+      "breakable": true
     },
     {
       "x": 1248,
       "y": 144,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "star"
+      "kind": "brick",
+      "item": "star",
+      "breakable": true
     },
     {
       "x": 1408,
       "y": 144,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "chili"
+      "kind": "brick",
+      "item": "chili",
+      "breakable": true
+    },
+    {
+      "x": 1552,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 1568,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 1680,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 1696,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 624,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 640,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 656,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 672,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 688,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 656,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 672,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 688,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
     }
   ],
   "enemies": [
@@ -164,7 +239,7 @@ export default {
     },
     {
       "x": 688,
-      "y": 176,
+      "y": 160,
       "w": 10,
       "h": 12,
       "kind": "seed",

@@ -1,4 +1,3 @@
-// 玉米守桥 — 投手压制
 export default {
   "id": "3-3",
   "name": "玉米守桥",
@@ -35,56 +34,6 @@ export default {
       "y": 208,
       "w": 512,
       "h": 32
-    },
-    {
-      "x": 304,
-      "y": 192,
-      "w": 32,
-      "h": 16
-    },
-    {
-      "x": 336,
-      "y": 176,
-      "w": 32,
-      "h": 32
-    },
-    {
-      "x": 752,
-      "y": 192,
-      "w": 32,
-      "h": 16
-    },
-    {
-      "x": 784,
-      "y": 176,
-      "w": 32,
-      "h": 32
-    },
-    {
-      "x": 368,
-      "y": 144,
-      "w": 80,
-      "h": 16
-    },
-    {
-      "x": 816,
-      "y": 144,
-      "w": 96,
-      "h": 16
-    },
-    {
-      "x": 544,
-      "y": 192,
-      "w": 80,
-      "h": 16,
-      "bridge": true
-    },
-    {
-      "x": 960,
-      "y": 192,
-      "w": 80,
-      "h": 16,
-      "bridge": true
     }
   ],
   "blocks": [
@@ -93,24 +42,162 @@ export default {
       "y": 144,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "carrot"
-    },
-    {
-      "x": 608,
-      "y": 144,
-      "w": 16,
-      "h": 16,
-      "kind": "reward",
-      "item": "chili"
+      "kind": "brick",
+      "item": "carrot",
+      "breakable": true
     },
     {
       "x": 1248,
       "y": 144,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "star"
+      "kind": "brick",
+      "item": "star",
+      "breakable": true
+    },
+    {
+      "x": 304,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 320,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 336,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 352,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 336,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 352,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 752,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 768,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 784,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 800,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 784,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 800,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 368,
+      "y": 144,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 384,
+      "y": 144,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 400,
+      "y": 144,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 416,
+      "y": 144,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 816,
+      "y": 144,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 832,
+      "y": 144,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
     }
   ],
   "enemies": [
@@ -206,7 +293,7 @@ export default {
     },
     {
       "x": 352,
-      "y": 176,
+      "y": 160,
       "w": 10,
       "h": 12,
       "kind": "seed",
@@ -230,7 +317,7 @@ export default {
     },
     {
       "x": 800,
-      "y": 176,
+      "y": 160,
       "w": 10,
       "h": 12,
       "kind": "seed",

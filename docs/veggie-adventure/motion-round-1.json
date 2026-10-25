@@ -1,0 +1,48 @@
+{
+  "jumps": [
+    {
+      "runSeconds": 0,
+      "holdSeconds": 0.05,
+      "height": 20.82,
+      "distance": 0,
+      "airtime": 0.383
+    },
+    {
+      "runSeconds": 0,
+      "holdSeconds": "full",
+      "height": 62.83,
+      "distance": 0,
+      "airtime": 0.758
+    },
+    {
+      "runSeconds": 0.5,
+      "holdSeconds": 0.05,
+      "height": 21.69,
+      "distance": 34.61,
+      "airtime": 0.392
+    },
+    {
+      "runSeconds": 0.5,
+      "holdSeconds": "full",
+      "height": 70.89,
+      "distance": 81.28,
+      "airtime": 0.808
+    },
+    {
+      "runSeconds": 1,
+      "holdSeconds": 0.05,
+      "height": 22.49,
+      "distance": 43.87,
+      "airtime": 0.392
+    },
+    {
+      "runSeconds": 1,
+      "holdSeconds": "full",
+      "height": 78.69,
+      "distance": 96.13,
+      "airtime": 0.858
+    }
+  ],
+  "stopDistance": 27.53,
+  "stopSeconds": 0.508
+}

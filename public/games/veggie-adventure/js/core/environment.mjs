@@ -11,7 +11,7 @@ export function updateEnvironment(game,dt){
  const p=game.p;
  for(const m of game.movers){const ox=m.x,oy=m.y,riding=!m.fallen&&p.grounded&&Math.abs(p.y+p.h-oy)<1&&p.x+p.w>ox&&p.x<ox+m.w;
   if(m.kind==='lift'){const displacement=Math.sin(game.time*2*Math.PI/m.period)*m.range;m.x=m.baseX+(m.axis==='x'?displacement:0);m.y=m.baseY-(m.axis==='y'?displacement:0);}
-  else {if(riding||m.timer>0)m.timer+=dt;if(m.timer>=.8)m.fallen=true;if(m.timer>4){m.timer=0;m.fallen=false;}}
+  else if(m.kind==='crumble'){if(riding||m.timer>0)m.timer+=dt;if(m.timer>=.8)m.fallen=true;if(m.timer>4){m.timer=0;m.fallen=false;}}
   if(riding&&!m.fallen){p.x+=m.x-ox;p.y+=m.y-oy;if(game.solids().some(b=>b!==m&&overlap(p,b)))game.kill();}
  }
  for(const h of game.level.hazards||[])if(h.kind==='rock'){
@@ -22,11 +22,11 @@ export function updateEnvironment(game,dt){
  }
 }
 export function updateDangers(game,dt){
- for(const d of game.dangers){d.life-=dt;if(d.delay>0){d.delay-=dt;continue;}d.vy+=(d.gravity||0)*dt;d.x+=d.vx*dt;d.y+=d.vy*dt;
+ for(const d of game.dangers){d.life-=dt;if(d.delay>0){d.delay-=dt;continue;}const oldBottom=d.y+d.h;d.vy+=(d.gravity||0)*dt;d.x+=d.vx*dt;d.y+=d.vy*dt;
   if(d.kind==='burst'&&!d.exploded&&d.y>=196){d.exploded=true;d.y=184;d.x-=12;d.w=32;d.h=24;d.vx=0;d.vy=0;d.gravity=0;d.delay=.7;d.life=1.3;}
   if(d.exploded&&d.delay>0)continue;
   if(overlap(game.p,d)){game.damage();d.life=0;}
-  if(!['wave','sweep','burst'].includes(d.kind)&&game.solids().some(s=>overlap(d,s)))d.life=0;
+  if(!['wave','sweep','burst'].includes(d.kind)&&game.solids().some(s=>(!s.oneWay||(d.vy>=0&&oldBottom<=s.y+.1))&&overlap(d,s)))d.life=0;
  }
  game.dangers=game.dangers.filter(d=>d.life>0&&d.y<256&&Math.abs(d.x-game.p.x)<520);
  for(const h of hazardShapes(game))if(h.active&&overlap(game.p,h)){if(h.kind==='heat')game.kill();else game.damage();}

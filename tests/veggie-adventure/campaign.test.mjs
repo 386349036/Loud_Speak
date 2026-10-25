@@ -18,7 +18,7 @@ test('32 ordered independent maps, all resource references and safe spawn/checkp
   assert.ok(decodeSave(encodeSave(g)),l.id+' save');
  }
  assert.equal(LEVELS.filter(l=>l.boss).length,8);assert.equal(nextLevel('8-4'),null);
- assert.equal(new Set(LEVELS.map(l=>JSON.stringify(l.platforms)+JSON.stringify(l.enemies))).size,32);
+ assert.equal(new Set(LEVELS.map(l=>JSON.stringify(l.platforms)+JSON.stringify(l.blocks)+JSON.stringify(l.enemies))).size,32);
 });
 test('campaign advances all 32 exits, carries score/form, restores completed campaign and ends once',()=>{
  const c=new Campaign();assert.equal(c.advance(),false);
@@ -46,7 +46,7 @@ test('campaign save rejects other-level shapes, malformed boss and NaN-like fiel
 test('basic running jump physically reaches every exposed boss head without a power-up',()=>{
  for(let world=1;world<=8;world++){const g=new Game(levelById(world+'-4')),b=g.boss;g.level.platforms=[{x:0,y:208,w:g.level.width,h:32}];g.level.water=[];g.level.hazards=[];g.movers=[];g.blocks=[];g.enemies=[];g.turrets=[];g.items=[];
   Object.assign(b,{active:true,phase:'expose',timer:0,y:176,head:0});g.p.x=b.x-48;g.p.y=194;g.p.grounded=true;g.p.vx=112;
-  for(let i=0;i<80&&b.hp===3&&g.mode==='playing';i++)g.step(STEP,{right:true,run:true,jump:true,jumpPressed:i===0});
+  for(let i=0;i<120&&b.hp===3&&g.mode==='playing';i++){const target=b.x+(b.kind===7?8:16)-g.p.w/2,projected=g.p.x+g.p.vx*.25;g.step(STEP,{right:projected<target-1,left:projected>target+1,jump:true,jumpPressed:i===0});}
   assert.equal(b.hp,2,'boss '+world);assert.equal(g.mode,'playing','boss '+world);assert.equal(g.p.form,0);
  }
 });

@@ -1,0 +1,2722 @@
+{
+  "version": 2,
+  "identityReference": "art-source/veggie-adventure/animations/v2-scene01/reference.png",
+  "visualVerified": false,
+  "status": "built-local-awaiting-user-review",
+  "jobs": [
+    {
+      "id": "P01-0",
+      "states": [
+        "idle",
+        "walk",
+        "run",
+        "jump-rise",
+        "jump-fall",
+        "crouch",
+        "swim",
+        "throw",
+        "hurt",
+        "death",
+        "victory"
+      ],
+      "parts": [
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part0.png",
+          "states": [
+            "idle",
+            "walk",
+            "run",
+            "jump-rise"
+          ],
+          "prompt": "Use case: identity-preserve. Asset: production 32-bit-era 2D PIXEL ART animation spritesheet, not a design card. Image references define the EXACT character identity, anatomy, face and palette. Subject: the exact golden potato hero in the reference, a plump pear-shaped body, TWO large vertical navy-black eyes with white highlights visible together, orange-pink cheeks, wide smiling open mouth with red tongue, tiny eyebrows, two green sprout leaves, short thick potato arms and stubby brown feet integrated directly into the body, warm ochre speckles. BASE form, no clothes, no scarf. Match the reference's thick dark stepped outline, warm saturated compact pixel clusters and cheerful readable facial features. Side three-quarter view facing RIGHT, while BOTH eyes remain readable as in the reference. No one-eye profile. Exactly FOUR columns and 4 rows; 16 complete independent sprites, equal square cells. Row order TOP to BOTTOM: 1 idle; 2 walk; 3 run; 4 jump-rise. Each row has FOUR consecutive genuinely redrawn animation frames LEFT to RIGHT. Row instructions: idle is subtle breathing and blink, walk alternating feet, run wider alternating strides, jump-rise legs tucked, jump-fall feet reaching downward, crouch body lowered with bent short limbs, swim arms paddling and short legs kicking, throw anticipation then arm forward then recover, hurt startled expression, death falling and resting with closed eyes, victory arms up. Enemy shell-slide uses rotating shell details; wake face and feet emerge. Ignore instructions for rows not requested. Preserve IDENTICAL body proportions, face shape, sprout size, eye design, identity and scale across all frames. Never grow or shrink the body during an animation. Keep body horizontal center and fixed feet baseline at 85% of cell height. Wide empty transparent gutters separating cells. REAL transparent alpha background and ground, NO scenery, NO floor, NO cast shadow, NO text, NO labels, NO borders, NO grid lines, NO extra props. All requested rows mandatory, no omitted rows and no duplicate rows. Preserve the original identity rather than inventing a substitute mascot."
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part1.png",
+          "states": [
+            "jump-fall",
+            "crouch",
+            "swim",
+            "throw"
+          ],
+          "prompt": "Use case: identity-preserve. Asset: production 32-bit-era 2D PIXEL ART animation spritesheet, not a design card. Image references define the EXACT character identity, anatomy, face and palette. Subject: the exact golden potato hero in the reference, a plump pear-shaped body, TWO large vertical navy-black eyes with white highlights visible together, orange-pink cheeks, wide smiling open mouth with red tongue, tiny eyebrows, two green sprout leaves, short thick potato arms and stubby brown feet integrated directly into the body, warm ochre speckles. BASE form, no clothes, no scarf. Match the reference's thick dark stepped outline, warm saturated compact pixel clusters and cheerful readable facial features. Side three-quarter view facing RIGHT, while BOTH eyes remain readable as in the reference. No one-eye profile. Exactly FOUR columns and 4 rows; 16 complete independent sprites, equal square cells. Row order TOP to BOTTOM: 1 jump-fall; 2 crouch; 3 swim; 4 throw. Each row has FOUR consecutive genuinely redrawn animation frames LEFT to RIGHT. Row instructions: idle is subtle breathing and blink, walk alternating feet, run wider alternating strides, jump-rise legs tucked, jump-fall feet reaching downward, crouch body lowered with bent short limbs, swim arms paddling and short legs kicking, throw anticipation then arm forward then recover, hurt startled expression, death falling and resting with closed eyes, victory arms up. Enemy shell-slide uses rotating shell details; wake face and feet emerge. Ignore instructions for rows not requested. Preserve IDENTICAL body proportions, face shape, sprout size, eye design, identity and scale across all frames. Never grow or shrink the body during an animation. Keep body horizontal center and fixed feet baseline at 85% of cell height. Wide empty transparent gutters separating cells. REAL transparent alpha background and ground, NO scenery, NO floor, NO cast shadow, NO text, NO labels, NO borders, NO grid lines, NO extra props. All requested rows mandatory, no omitted rows and no duplicate rows. Preserve the original identity rather than inventing a substitute mascot."
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part2.png",
+          "states": [
+            "hurt",
+            "death",
+            "victory"
+          ],
+          "prompt": "Use case: identity-preserve. Asset: production 32-bit-era 2D PIXEL ART animation spritesheet, not a design card. Image references define the EXACT character identity, anatomy, face and palette. Subject: the exact golden potato hero in the reference, a plump pear-shaped body, TWO large vertical navy-black eyes with white highlights visible together, orange-pink cheeks, wide smiling open mouth with red tongue, tiny eyebrows, two green sprout leaves, short thick potato arms and stubby brown feet integrated directly into the body, warm ochre speckles. BASE form, no clothes, no scarf. Match the reference's thick dark stepped outline, warm saturated compact pixel clusters and cheerful readable facial features. Side three-quarter view facing RIGHT, while BOTH eyes remain readable as in the reference. No one-eye profile. Exactly FOUR columns and 3 rows; 12 complete independent sprites, equal square cells. Row order TOP to BOTTOM: 1 hurt; 2 death; 3 victory. Each row has FOUR consecutive genuinely redrawn animation frames LEFT to RIGHT. Row instructions: idle is subtle breathing and blink, walk alternating feet, run wider alternating strides, jump-rise legs tucked, jump-fall feet reaching downward, crouch body lowered with bent short limbs, swim arms paddling and short legs kicking, throw anticipation then arm forward then recover, hurt startled expression, death falling and resting with closed eyes, victory arms up. Enemy shell-slide uses rotating shell details; wake face and feet emerge. Ignore instructions for rows not requested. Preserve IDENTICAL body proportions, face shape, sprout size, eye design, identity and scale across all frames. Never grow or shrink the body during an animation. Keep body horizontal center and fixed feet baseline at 85% of cell height. Wide empty transparent gutters separating cells. REAL transparent alpha background and ground, NO scenery, NO floor, NO cast shadow, NO text, NO labels, NO borders, NO grid lines, NO extra props. All requested rows mandatory, no omitted rows and no duplicate rows. Preserve the original identity rather than inventing a substitute mascot."
+        }
+      ],
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "reference": "art-source/veggie-adventure/animations/v2-scene01/hero-reference.png",
+      "status": "built",
+      "cells": [
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part0.png",
+          "state": "idle",
+          "frame": 0,
+          "normalization": 0.7494021604683764,
+          "rect": {
+            "left": 54,
+            "top": 51,
+            "width": 240,
+            "height": 266
+          },
+          "partReference": 217.28582739509105,
+          "hash": "e2bf556c85d66edda47ffad6355d5a8aecc3a2ae58847a2ecd696ef14ebcd277"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part0.png",
+          "state": "idle",
+          "frame": 1,
+          "normalization": 0.7494021604683764,
+          "rect": {
+            "left": 373,
+            "top": 53,
+            "width": 238,
+            "height": 265
+          },
+          "partReference": 217.28582739509105,
+          "hash": "1d91c8c74c9aca453973c594ff7e5072bbb67d12203e767ba1bfe9a51c47420c"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part0.png",
+          "state": "idle",
+          "frame": 2,
+          "normalization": 0.7494021604683764,
+          "rect": {
+            "left": 676,
+            "top": 52,
+            "width": 237,
+            "height": 267
+          },
+          "partReference": 217.28582739509105,
+          "hash": "504f1896c2518b0e9508d30da86704e1f6ab5f65da0680dde48912f4f6047a16"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part0.png",
+          "state": "idle",
+          "frame": 3,
+          "normalization": 0.7494021604683764,
+          "rect": {
+            "left": 986,
+            "top": 50,
+            "width": 242,
+            "height": 268
+          },
+          "partReference": 217.28582739509105,
+          "hash": "744ae8148307add8f9b0e649cefe668715fc2504fd484dd632c21265872377de"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part0.png",
+          "state": "walk",
+          "frame": 0,
+          "normalization": 0.7494021604683764,
+          "rect": {
+            "left": 58,
+            "top": 350,
+            "width": 268,
+            "height": 271
+          },
+          "partReference": 217.28582739509105,
+          "hash": "4c405978490f6bd4dc84b1907db71cd8c31e91c00d3133adcef960943dc06001"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part0.png",
+          "state": "walk",
+          "frame": 1,
+          "normalization": 0.7494021604683764,
+          "rect": {
+            "left": 382,
+            "top": 348,
+            "width": 244,
+            "height": 272
+          },
+          "partReference": 217.28582739509105,
+          "hash": "429ded6cce294cd9808293d1fa9a474d93ae32b7215aa4e81167d38c19ebebd6"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part0.png",
+          "state": "walk",
+          "frame": 2,
+          "normalization": 0.7494021604683764,
+          "rect": {
+            "left": 685,
+            "top": 348,
+            "width": 254,
+            "height": 280
+          },
+          "partReference": 217.28582739509105,
+          "hash": "eb8136fa5a1f66118ebf8880786dfe128a390b5e2362492b2ebda3717641f3f0"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part0.png",
+          "state": "walk",
+          "frame": 3,
+          "normalization": 0.7494021604683764,
+          "rect": {
+            "left": 988,
+            "top": 350,
+            "width": 246,
+            "height": 272
+          },
+          "partReference": 217.28582739509105,
+          "hash": "6ac25a65c9ec31e1ab748267d16aa83070720e6415536fec40aec989f9e96a01"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part0.png",
+          "state": "run",
+          "frame": 0,
+          "normalization": 0.7494021604683764,
+          "rect": {
+            "left": 57,
+            "top": 657,
+            "width": 290,
+            "height": 268
+          },
+          "partReference": 217.28582739509105,
+          "hash": "6eba655a1c17d6939fd3b9e878e423eb15aed7d55b796d675f02760bc1ca97f8"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part0.png",
+          "state": "run",
+          "frame": 1,
+          "normalization": 0.7494021604683764,
+          "rect": {
+            "left": 377,
+            "top": 651,
+            "width": 263,
+            "height": 250
+          },
+          "partReference": 217.28582739509105,
+          "hash": "ae90bb58f45b1b9477bdb8477ec63b634d0c67be0d6ee6535680a440aecc6cd3"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part0.png",
+          "state": "run",
+          "frame": 2,
+          "normalization": 0.7494021604683764,
+          "rect": {
+            "left": 685,
+            "top": 653,
+            "width": 258,
+            "height": 261
+          },
+          "partReference": 217.28582739509105,
+          "hash": "9040b230d1be2bce3f80133be0a7531978ada13aa0ab5890a8ea78c8e5842328"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part0.png",
+          "state": "run",
+          "frame": 3,
+          "normalization": 0.7494021604683764,
+          "rect": {
+            "left": 983,
+            "top": 652,
+            "width": 262,
+            "height": 276
+          },
+          "partReference": 217.28582739509105,
+          "hash": "6589014b1e40d864256c73dab86bf55a3e32287de1e0b22c32c7ab997be3258b"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part0.png",
+          "state": "jump-rise",
+          "frame": 0,
+          "normalization": 0.7494021604683764,
+          "rect": {
+            "left": 73,
+            "top": 972,
+            "width": 242,
+            "height": 244
+          },
+          "partReference": 217.28582739509105,
+          "hash": "a042ffb4137d9cab59f4f460107250eeef71e1ba27b502db8c4bea74b0c89f0d"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part0.png",
+          "state": "jump-rise",
+          "frame": 1,
+          "normalization": 0.7494021604683764,
+          "rect": {
+            "left": 373,
+            "top": 936,
+            "width": 258,
+            "height": 274
+          },
+          "partReference": 217.28582739509105,
+          "hash": "a3554e61ce3b4d0411609c1214457567546690fad1e6630bd4c9ce995cbfcf71"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part0.png",
+          "state": "jump-rise",
+          "frame": 2,
+          "normalization": 0.7494021604683764,
+          "rect": {
+            "left": 683,
+            "top": 931,
+            "width": 260,
+            "height": 268
+          },
+          "partReference": 217.28582739509105,
+          "hash": "0530efafd3b02c27a14f29194b4e325d93f7a81dec3072240416b39f1bcf7aa3"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part0.png",
+          "state": "jump-rise",
+          "frame": 3,
+          "normalization": 0.7494021604683764,
+          "rect": {
+            "left": 986,
+            "top": 928,
+            "width": 252,
+            "height": 259
+          },
+          "partReference": 217.28582739509105,
+          "hash": "0ddce35cee2693a5e59f08b75ae041f5446bdad6a18a4be880deec45d268ca28"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part1.png",
+          "state": "jump-fall",
+          "frame": 0,
+          "normalization": 0.7814777393211083,
+          "rect": {
+            "left": 39,
+            "top": 22,
+            "width": 268,
+            "height": 268
+          },
+          "partReference": 196.2475764354959,
+          "hash": "394db69ecdb46b0c40c573f3d0d9b5e2d7c88312b0dfebde159f8447859560d8"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part1.png",
+          "state": "jump-fall",
+          "frame": 1,
+          "normalization": 0.7814777393211083,
+          "rect": {
+            "left": 389,
+            "top": 15,
+            "width": 278,
+            "height": 262
+          },
+          "partReference": 196.2475764354959,
+          "hash": "272f2dffeef1c035f0cde4dd037f27d4b5fb8fd972333f691e4ac76027913bfc"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part1.png",
+          "state": "jump-fall",
+          "frame": 2,
+          "normalization": 0.7814777393211083,
+          "rect": {
+            "left": 729,
+            "top": 32,
+            "width": 262,
+            "height": 273
+          },
+          "partReference": 196.2475764354959,
+          "hash": "9346344d4b14c87a36b2260106b90b4c0551811a8114d1cc97461a8ccef1de05"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part1.png",
+          "state": "jump-fall",
+          "frame": 3,
+          "normalization": 0.7814777393211083,
+          "rect": {
+            "left": 1074,
+            "top": 62,
+            "width": 245,
+            "height": 257
+          },
+          "partReference": 196.2475764354959,
+          "hash": "6198554aeaddf04b884977c638b139659f2bd36b0d71da2c089f3937d1df00d3"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part1.png",
+          "state": "crouch",
+          "frame": 0,
+          "normalization": 0.7814777393211083,
+          "rect": {
+            "left": 31,
+            "top": 362,
+            "width": 251,
+            "height": 243
+          },
+          "partReference": 196.2475764354959,
+          "hash": "d41b5095ec50f02b74cc5747d34c7bf827bac20e8f95de7355f46be70df173a2"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part1.png",
+          "state": "crouch",
+          "frame": 1,
+          "normalization": 0.7814777393211083,
+          "rect": {
+            "left": 391,
+            "top": 393,
+            "width": 250,
+            "height": 216
+          },
+          "partReference": 196.2475764354959,
+          "hash": "67e5c473ac36328b22293ab2b97b8c967f7a6df68f1ba7a4f663159029a13113"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part1.png",
+          "state": "crouch",
+          "frame": 2,
+          "normalization": 0.7814777393211083,
+          "rect": {
+            "left": 722,
+            "top": 364,
+            "width": 251,
+            "height": 245
+          },
+          "partReference": 196.2475764354959,
+          "hash": "64eaf899b1cf8cfc3753556dd5926f0563da1f7a427730288a44f78e20a3d7ea"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part1.png",
+          "state": "crouch",
+          "frame": 3,
+          "normalization": 0.7814777393211083,
+          "rect": {
+            "left": 1078,
+            "top": 355,
+            "width": 237,
+            "height": 254
+          },
+          "partReference": 196.2475764354959,
+          "hash": "fd4d701960758ce2dd00c11d26e46d759fdbc9f52a03c7bab332e829b0731d0f"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part1.png",
+          "state": "swim",
+          "frame": 0,
+          "normalization": 0.7814777393211083,
+          "rect": {
+            "left": 21,
+            "top": 651,
+            "width": 304,
+            "height": 219
+          },
+          "partReference": 196.2475764354959,
+          "hash": "111284a08deb7358e729c4606198e8259d31cae8ee2c5eec2830233a2f7cd1f7"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part1.png",
+          "state": "swim",
+          "frame": 1,
+          "normalization": 0.7814777393211083,
+          "rect": {
+            "left": 370,
+            "top": 651,
+            "width": 293,
+            "height": 211
+          },
+          "partReference": 196.2475764354959,
+          "hash": "48c755cbdd524093e73b558f05385d552b61fb4604a5533a1fefb6f90b43296b"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part1.png",
+          "state": "swim",
+          "frame": 2,
+          "normalization": 0.7814777393211083,
+          "rect": {
+            "left": 701,
+            "top": 654,
+            "width": 303,
+            "height": 208
+          },
+          "partReference": 196.2475764354959,
+          "hash": "08bb7e1dc0bd470be5252624fa0697768cee7173e52233d862be546f56eb24d6"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part1.png",
+          "state": "swim",
+          "frame": 3,
+          "normalization": 0.7814777393211083,
+          "rect": {
+            "left": 1033,
+            "top": 652,
+            "width": 293,
+            "height": 214
+          },
+          "partReference": 196.2475764354959,
+          "hash": "99c7c4079f232836aa65db24739c3180407875de7cd9d80aeca46bfa7786c4cd"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part1.png",
+          "state": "throw",
+          "frame": 0,
+          "normalization": 0.7814777393211083,
+          "rect": {
+            "left": 53,
+            "top": 894,
+            "width": 251,
+            "height": 248
+          },
+          "partReference": 196.2475764354959,
+          "hash": "fbc077600215c39cae42aa81b0ecad742ae7cb9a382401985cc92ca074e29624"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part1.png",
+          "state": "throw",
+          "frame": 1,
+          "normalization": 0.7814777393211083,
+          "rect": {
+            "left": 398,
+            "top": 893,
+            "width": 278,
+            "height": 249
+          },
+          "partReference": 196.2475764354959,
+          "hash": "4acfc37a5a67d048def21528abaee4331b0d25f7e963520b420f5fef278a0f34"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part1.png",
+          "state": "throw",
+          "frame": 2,
+          "normalization": 0.7814777393211083,
+          "rect": {
+            "left": 731,
+            "top": 895,
+            "width": 295,
+            "height": 247
+          },
+          "partReference": 196.2475764354959,
+          "hash": "9f7e9668a983c67eb8407f2611d6846a243e4e04cfaa3fcba5d47a3694cda661"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part1.png",
+          "state": "throw",
+          "frame": 3,
+          "normalization": 0.7814777393211083,
+          "rect": {
+            "left": 1081,
+            "top": 895,
+            "width": 238,
+            "height": 252
+          },
+          "partReference": 196.2475764354959,
+          "hash": "a6a8ce69fdf012fffc13b28d098e4c6fb144959980ae24a32ecf374e568384f2"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part2.png",
+          "state": "hurt",
+          "frame": 0,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 77,
+            "top": 70,
+            "width": 274,
+            "height": 301
+          },
+          "partReference": 200.83977900552486,
+          "hash": "d0b9aca8e3da5601e7e90aa40753d4d227ff5d137e3a5efab04c3e48c6498518"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part2.png",
+          "state": "hurt",
+          "frame": 1,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 417,
+            "top": 82,
+            "width": 275,
+            "height": 288
+          },
+          "partReference": 200.83977900552486,
+          "hash": "a2e6fc32a3fb9e21468f0b2392498b12ee1b1f87ca0d95e570fe0fa7972c9885"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part2.png",
+          "state": "hurt",
+          "frame": 2,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 756,
+            "top": 94,
+            "width": 299,
+            "height": 273
+          },
+          "partReference": 200.83977900552486,
+          "hash": "5ceca636f2f29d136675b836758a93a74cfc4aaf3b179e8ce1872e74be0fe597"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part2.png",
+          "state": "hurt",
+          "frame": 3,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 1148,
+            "top": 70,
+            "width": 256,
+            "height": 297
+          },
+          "partReference": 200.83977900552486,
+          "hash": "165fa8789c7bc977afb91f3cfdda1e0d1da1eb8d1dea72f793098da8a540d951"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part2.png",
+          "state": "death",
+          "frame": 0,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 51,
+            "top": 417,
+            "width": 300,
+            "height": 282
+          },
+          "partReference": 200.83977900552486,
+          "hash": "afc6adb1bab0b4ae6051557990cb51923f09be17bd17bd8c0eebae0573c64344"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part2.png",
+          "state": "death",
+          "frame": 1,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 378,
+            "top": 464,
+            "width": 313,
+            "height": 231
+          },
+          "partReference": 200.83977900552486,
+          "hash": "70f2b56f8d2c9679523a88f1ab028271f4c7707cd8577a3cff63a28d6a6c5e1c"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part2.png",
+          "state": "death",
+          "frame": 2,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 748,
+            "top": 536,
+            "width": 312,
+            "height": 162
+          },
+          "partReference": 200.83977900552486,
+          "hash": "8205307067a48fe67e8f1201da86aa85a1758ad40f5d9747e3a2d9c357a82f19"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part2.png",
+          "state": "death",
+          "frame": 3,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 1097,
+            "top": 546,
+            "width": 314,
+            "height": 153
+          },
+          "partReference": 200.83977900552486,
+          "hash": "17277e2617d16f6dfd5faa2c60cefce3ffeacb77519384d3d7f0473918a27b4b"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part2.png",
+          "state": "victory",
+          "frame": 0,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 65,
+            "top": 763,
+            "width": 281,
+            "height": 279
+          },
+          "partReference": 200.83977900552486,
+          "hash": "82abb1c16750976f8281d71a5b6326c030591fc52c64cb2f9b4178dbca1c908d"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part2.png",
+          "state": "victory",
+          "frame": 1,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 421,
+            "top": 763,
+            "width": 264,
+            "height": 279
+          },
+          "partReference": 200.83977900552486,
+          "hash": "2dce2b3785530972aff6fc02b36cd671652ac9057e94aa2ff9a5c904a2d3cf48"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part2.png",
+          "state": "victory",
+          "frame": 2,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 778,
+            "top": 737,
+            "width": 266,
+            "height": 273
+          },
+          "partReference": 200.83977900552486,
+          "hash": "d1a222251087386c20b79730539334b61a9ae54dd26905c4ca7ffe9b5ae6175e"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part2.png",
+          "state": "victory",
+          "frame": 3,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 1139,
+            "top": 758,
+            "width": 265,
+            "height": 284
+          },
+          "partReference": 200.83977900552486,
+          "hash": "d8a609c8545303932a82e8f6ec640782238aced8673b66c21046d55008827182"
+        }
+      ],
+      "partsReport": [
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part0.png",
+          "reference": 217.28582739509105,
+          "bandCount": 4,
+          "states": [
+            "idle",
+            "walk",
+            "run",
+            "jump-rise"
+          ]
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part1.png",
+          "reference": 196.2475764354959,
+          "bandCount": 4,
+          "states": [
+            "jump-fall",
+            "crouch",
+            "swim",
+            "throw"
+          ]
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-0-part2.png",
+          "reference": 200.83977900552486,
+          "bandCount": 3,
+          "states": [
+            "hurt",
+            "death",
+            "victory"
+          ]
+        }
+      ],
+      "scale": 0.2525579567040401
+    },
+    {
+      "id": "P01-1",
+      "states": [
+        "idle",
+        "walk",
+        "run",
+        "jump-rise",
+        "jump-fall",
+        "crouch",
+        "swim",
+        "throw",
+        "hurt",
+        "death",
+        "victory"
+      ],
+      "parts": [
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part0.png",
+          "states": [
+            "idle",
+            "walk",
+            "run",
+            "jump-rise"
+          ],
+          "prompt": "Use case: identity-preserve. Asset: production 32-bit-era 2D PIXEL ART animation spritesheet, not a design card. Image references define the EXACT character identity, anatomy, face and palette. Subject: the exact golden potato hero in the reference, a plump pear-shaped body, TWO large vertical navy-black eyes with white highlights visible together, orange-pink cheeks, wide smiling open mouth with red tongue, tiny eyebrows, two green sprout leaves, short thick potato arms and stubby brown feet integrated directly into the body, warm ochre speckles. GROWN form: keep EXACTLY the same wide plump pear shape, face and short limbs as the small reference hero; growth is ONLY overall size in the game, NOT a taller or thinner body. NO scarf or clothes. Match the reference's thick dark stepped outline, warm saturated compact pixel clusters and cheerful readable facial features. Side three-quarter view facing RIGHT, while BOTH eyes remain readable as in the reference. No one-eye profile. Exactly FOUR columns and 4 rows; 16 complete independent sprites, equal square cells. Row order TOP to BOTTOM: 1 idle; 2 walk; 3 run; 4 jump-rise. Each row has FOUR consecutive genuinely redrawn animation frames LEFT to RIGHT. Row instructions: idle is subtle breathing and blink, walk alternating feet, run wider alternating strides, jump-rise legs tucked, jump-fall feet reaching downward, crouch body lowered with bent short limbs, swim arms paddling and short legs kicking, throw anticipation then arm forward then recover, hurt startled expression, death falling and resting with closed eyes, victory arms up. Enemy shell-slide uses rotating shell details; wake face and feet emerge. Ignore instructions for rows not requested. Preserve IDENTICAL body proportions, face shape, sprout size, eye design, identity and scale across all frames. Never grow or shrink the body during an animation. Keep body horizontal center and fixed feet baseline at 85% of cell height. Wide empty transparent gutters separating cells. REAL transparent alpha background and ground, NO scenery, NO floor, NO cast shadow, NO text, NO labels, NO borders, NO grid lines, NO extra props. All requested rows mandatory, no omitted rows and no duplicate rows. Preserve the original identity rather than inventing a substitute mascot."
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part1.png",
+          "states": [
+            "jump-fall",
+            "crouch",
+            "swim",
+            "throw"
+          ],
+          "prompt": "Use case: identity-preserve. Asset: production 32-bit-era 2D PIXEL ART animation spritesheet, not a design card. Image references define the EXACT character identity, anatomy, face and palette. Subject: the exact golden potato hero in the reference, a plump pear-shaped body, TWO large vertical navy-black eyes with white highlights visible together, orange-pink cheeks, wide smiling open mouth with red tongue, tiny eyebrows, two green sprout leaves, short thick potato arms and stubby brown feet integrated directly into the body, warm ochre speckles. GROWN form: keep EXACTLY the same wide plump pear shape, face and short limbs as the small reference hero; growth is ONLY overall size in the game, NOT a taller or thinner body. NO scarf or clothes. Match the reference's thick dark stepped outline, warm saturated compact pixel clusters and cheerful readable facial features. Side three-quarter view facing RIGHT, while BOTH eyes remain readable as in the reference. No one-eye profile. Exactly FOUR columns and 4 rows; 16 complete independent sprites, equal square cells. Row order TOP to BOTTOM: 1 jump-fall; 2 crouch; 3 swim; 4 throw. Each row has FOUR consecutive genuinely redrawn animation frames LEFT to RIGHT. Row instructions: idle is subtle breathing and blink, walk alternating feet, run wider alternating strides, jump-rise legs tucked, jump-fall feet reaching downward, crouch body lowered with bent short limbs, swim arms paddling and short legs kicking, throw anticipation then arm forward then recover, hurt startled expression, death falling and resting with closed eyes, victory arms up. Enemy shell-slide uses rotating shell details; wake face and feet emerge. Ignore instructions for rows not requested. Preserve IDENTICAL body proportions, face shape, sprout size, eye design, identity and scale across all frames. Never grow or shrink the body during an animation. Keep body horizontal center and fixed feet baseline at 85% of cell height. Wide empty transparent gutters separating cells. REAL transparent alpha background and ground, NO scenery, NO floor, NO cast shadow, NO text, NO labels, NO borders, NO grid lines, NO extra props. All requested rows mandatory, no omitted rows and no duplicate rows. Preserve the original identity rather than inventing a substitute mascot."
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part2.png",
+          "states": [
+            "hurt",
+            "death",
+            "victory"
+          ],
+          "prompt": "Use case: identity-preserve. Asset: production 32-bit-era 2D PIXEL ART animation spritesheet, not a design card. Image references define the EXACT character identity, anatomy, face and palette. Subject: the exact golden potato hero in the reference, a plump pear-shaped body, TWO large vertical navy-black eyes with white highlights visible together, orange-pink cheeks, wide smiling open mouth with red tongue, tiny eyebrows, two green sprout leaves, short thick potato arms and stubby brown feet integrated directly into the body, warm ochre speckles. GROWN form: keep EXACTLY the same wide plump pear shape, face and short limbs as the small reference hero; growth is ONLY overall size in the game, NOT a taller or thinner body. NO scarf or clothes. Match the reference's thick dark stepped outline, warm saturated compact pixel clusters and cheerful readable facial features. Side three-quarter view facing RIGHT, while BOTH eyes remain readable as in the reference. No one-eye profile. Exactly FOUR columns and 3 rows; 12 complete independent sprites, equal square cells. Row order TOP to BOTTOM: 1 hurt; 2 death; 3 victory. Each row has FOUR consecutive genuinely redrawn animation frames LEFT to RIGHT. Row instructions: idle is subtle breathing and blink, walk alternating feet, run wider alternating strides, jump-rise legs tucked, jump-fall feet reaching downward, crouch body lowered with bent short limbs, swim arms paddling and short legs kicking, throw anticipation then arm forward then recover, hurt startled expression, death falling and resting with closed eyes, victory arms up. Enemy shell-slide uses rotating shell details; wake face and feet emerge. Ignore instructions for rows not requested. Preserve IDENTICAL body proportions, face shape, sprout size, eye design, identity and scale across all frames. Never grow or shrink the body during an animation. Keep body horizontal center and fixed feet baseline at 85% of cell height. Wide empty transparent gutters separating cells. REAL transparent alpha background and ground, NO scenery, NO floor, NO cast shadow, NO text, NO labels, NO borders, NO grid lines, NO extra props. All requested rows mandatory, no omitted rows and no duplicate rows. Preserve the original identity rather than inventing a substitute mascot."
+        }
+      ],
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "reference": "art-source/veggie-adventure/animations/v2-scene01/hero-reference.png",
+      "status": "built",
+      "cells": [
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part0.png",
+          "state": "idle",
+          "frame": 0,
+          "normalization": 0.7681941284801213,
+          "rect": {
+            "left": 39,
+            "top": 42,
+            "width": 236,
+            "height": 254
+          },
+          "partReference": 201.48148148148147,
+          "hash": "f52f03c2678275fe5ac2b99e31954014a69289cc275c7cf831b2a469fd6d9c96"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part0.png",
+          "state": "idle",
+          "frame": 1,
+          "normalization": 0.7681941284801213,
+          "rect": {
+            "left": 365,
+            "top": 41,
+            "width": 240,
+            "height": 255
+          },
+          "partReference": 201.48148148148147,
+          "hash": "b3d22361fcbaf91747ce0e2ff62a2b3f8f2b2188df91115ed5da4ffb4f9e36c8"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part0.png",
+          "state": "idle",
+          "frame": 2,
+          "normalization": 0.7681941284801213,
+          "rect": {
+            "left": 689,
+            "top": 41,
+            "width": 241,
+            "height": 255
+          },
+          "partReference": 201.48148148148147,
+          "hash": "0d5529a6a7235f4eca6e7a484fa40bcef127c42a913b54891385d9e770eeabd5"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part0.png",
+          "state": "idle",
+          "frame": 3,
+          "normalization": 0.7681941284801213,
+          "rect": {
+            "left": 1014,
+            "top": 42,
+            "width": 238,
+            "height": 254
+          },
+          "partReference": 201.48148148148147,
+          "hash": "7e31449cc33520470ee0c01d67bb298949a90edf153216c13e4f6d6ccd557a11"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part0.png",
+          "state": "walk",
+          "frame": 0,
+          "normalization": 0.7681941284801213,
+          "rect": {
+            "left": 31,
+            "top": 333,
+            "width": 256,
+            "height": 265
+          },
+          "partReference": 201.48148148148147,
+          "hash": "04ece76868421d99d64ffbf4c71a9f988cea1089d74292079755ea0ee3cdf973"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part0.png",
+          "state": "walk",
+          "frame": 1,
+          "normalization": 0.7681941284801213,
+          "rect": {
+            "left": 374,
+            "top": 335,
+            "width": 232,
+            "height": 253
+          },
+          "partReference": 201.48148148148147,
+          "hash": "b7a42cfd52f4c83c5582bbfa930c547b3c05434c02adb0c6824d19a6281ec6e6"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part0.png",
+          "state": "walk",
+          "frame": 2,
+          "normalization": 0.7681941284801213,
+          "rect": {
+            "left": 695,
+            "top": 335,
+            "width": 249,
+            "height": 257
+          },
+          "partReference": 201.48148148148147,
+          "hash": "5701ea4e6e0696092b231d1fea4daec584faba9a33a3fb234d928296f38d3632"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part0.png",
+          "state": "walk",
+          "frame": 3,
+          "normalization": 0.7681941284801213,
+          "rect": {
+            "left": 1024,
+            "top": 334,
+            "width": 241,
+            "height": 259
+          },
+          "partReference": 201.48148148148147,
+          "hash": "700bd46188e16d990d64658d5b9a6f7f91af6cbfcb12932192c863c70b303af7"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part0.png",
+          "state": "run",
+          "frame": 0,
+          "normalization": 0.7681941284801213,
+          "rect": {
+            "left": 40,
+            "top": 624,
+            "width": 260,
+            "height": 261
+          },
+          "partReference": 201.48148148148147,
+          "hash": "cf9772d2f3a96e823563fcc79cbd2adb07bf41a440b6f1c618c4b31687f0b215"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part0.png",
+          "state": "run",
+          "frame": 1,
+          "normalization": 0.7681941284801213,
+          "rect": {
+            "left": 361,
+            "top": 626,
+            "width": 276,
+            "height": 253
+          },
+          "partReference": 201.48148148148147,
+          "hash": "9118f06c202bbb26118bf315dd9556dea0305f0c851791deb6c3036ebb9811e3"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part0.png",
+          "state": "run",
+          "frame": 2,
+          "normalization": 0.7681941284801213,
+          "rect": {
+            "left": 695,
+            "top": 627,
+            "width": 258,
+            "height": 262
+          },
+          "partReference": 201.48148148148147,
+          "hash": "08ccafc6ba15badcd45e4beb6216071cd81276126c981e5e0931007fdb489683"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part0.png",
+          "state": "run",
+          "frame": 3,
+          "normalization": 0.7681941284801213,
+          "rect": {
+            "left": 1019,
+            "top": 628,
+            "width": 263,
+            "height": 251
+          },
+          "partReference": 201.48148148148147,
+          "hash": "a85c1e53b2051030c81c265a3ca9fc0313784189312f74bbdb50930ca385df7b"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part0.png",
+          "state": "jump-rise",
+          "frame": 0,
+          "normalization": 0.7681941284801213,
+          "rect": {
+            "left": 40,
+            "top": 962,
+            "width": 232,
+            "height": 222
+          },
+          "partReference": 201.48148148148147,
+          "hash": "5aa9fbcab7b408975f05094d7af615a67ff9333053f102d0eca704e12697ec64"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part0.png",
+          "state": "jump-rise",
+          "frame": 1,
+          "normalization": 0.7681941284801213,
+          "rect": {
+            "left": 360,
+            "top": 928,
+            "width": 261,
+            "height": 256
+          },
+          "partReference": 201.48148148148147,
+          "hash": "a70b4b9482d4a0b4bc9eaaff4a6f4ace5b9a6726944cdb91a3f446968fd11ea8"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part0.png",
+          "state": "jump-rise",
+          "frame": 2,
+          "normalization": 0.7681941284801213,
+          "rect": {
+            "left": 688,
+            "top": 904,
+            "width": 257,
+            "height": 246
+          },
+          "partReference": 201.48148148148147,
+          "hash": "5e1200867b466651416ec128c20074023f4e13c59389dc13e0c4682a77847deb"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part0.png",
+          "state": "jump-rise",
+          "frame": 3,
+          "normalization": 0.7681941284801213,
+          "rect": {
+            "left": 1023,
+            "top": 903,
+            "width": 258,
+            "height": 256
+          },
+          "partReference": 201.48148148148147,
+          "hash": "5153d0ccef6e7c95b263024bc293c977a5e571b10793cbcdac35cbfb637f96ce"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part1.png",
+          "state": "jump-fall",
+          "frame": 0,
+          "normalization": 0.812819513537058,
+          "rect": {
+            "left": 78,
+            "top": 18,
+            "width": 254,
+            "height": 257
+          },
+          "partReference": 172.93903293622984,
+          "hash": "da074d85af0a84398882b94d17af2f4865771962f6703a30214b44a53d923c7d"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part1.png",
+          "state": "jump-fall",
+          "frame": 1,
+          "normalization": 0.812819513537058,
+          "rect": {
+            "left": 433,
+            "top": 9,
+            "width": 249,
+            "height": 241
+          },
+          "partReference": 172.93903293622984,
+          "hash": "79ab6c5220ced2713109413f2d5cea1f961daccf2549f8114e6a8ebc2babb818"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part1.png",
+          "state": "jump-fall",
+          "frame": 2,
+          "normalization": 0.812819513537058,
+          "rect": {
+            "left": 779,
+            "top": 42,
+            "width": 247,
+            "height": 253
+          },
+          "partReference": 172.93903293622984,
+          "hash": "52fce3e5e926c879601acc80f935f786065ae19b419af3d0c488a285aaea19a0"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part1.png",
+          "state": "jump-fall",
+          "frame": 3,
+          "normalization": 0.812819513537058,
+          "rect": {
+            "left": 1144,
+            "top": 49,
+            "width": 221,
+            "height": 256
+          },
+          "partReference": 172.93903293622984,
+          "hash": "020bec7c421f9485fddf76bd5f879c09b36a508e460e77bf5f159b04496f71eb"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part1.png",
+          "state": "crouch",
+          "frame": 0,
+          "normalization": 0.812819513537058,
+          "rect": {
+            "left": 79,
+            "top": 341,
+            "width": 233,
+            "height": 228
+          },
+          "partReference": 172.93903293622984,
+          "hash": "113ebf11e492549faa43b87f43bc761c47db87530e58ce0b0c8161b1a4386f77"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part1.png",
+          "state": "crouch",
+          "frame": 1,
+          "normalization": 0.812819513537058,
+          "rect": {
+            "left": 435,
+            "top": 369,
+            "width": 241,
+            "height": 200
+          },
+          "partReference": 172.93903293622984,
+          "hash": "5f0d536904e1a7eebad181efa32775b73454d6df42cb0d8c4a0f8fb5ae27724c"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part1.png",
+          "state": "crouch",
+          "frame": 2,
+          "normalization": 0.812819513537058,
+          "rect": {
+            "left": 793,
+            "top": 340,
+            "width": 232,
+            "height": 229
+          },
+          "partReference": 172.93903293622984,
+          "hash": "bab597ea9f23daf9c71fe088331e2c5e8b4181a02b228fa592231c3be5751af4"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part1.png",
+          "state": "crouch",
+          "frame": 3,
+          "normalization": 0.812819513537058,
+          "rect": {
+            "left": 1147,
+            "top": 327,
+            "width": 228,
+            "height": 242
+          },
+          "partReference": 172.93903293622984,
+          "hash": "0af0afb54912e06d1c15d892461be566619e4c0e71155a5518be9ade903a9766"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part1.png",
+          "state": "swim",
+          "frame": 0,
+          "normalization": 0.812819513537058,
+          "rect": {
+            "left": 45,
+            "top": 596,
+            "width": 295,
+            "height": 214
+          },
+          "partReference": 172.93903293622984,
+          "hash": "a8b46f470800732d16eb127805be83944bd6c2e3a8e0ac60655ea90d3951c711"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part1.png",
+          "state": "swim",
+          "frame": 1,
+          "normalization": 0.812819513537058,
+          "rect": {
+            "left": 404,
+            "top": 600,
+            "width": 303,
+            "height": 213
+          },
+          "partReference": 172.93903293622984,
+          "hash": "ace0da342ac8f06b4892d24ce9e7dbf1df4e6b3d6e7e9fe995b07de5b6754a55"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part1.png",
+          "state": "swim",
+          "frame": 2,
+          "normalization": 0.812819513537058,
+          "rect": {
+            "left": 757,
+            "top": 604,
+            "width": 290,
+            "height": 221
+          },
+          "partReference": 172.93903293622984,
+          "hash": "f59074d5005a15a6f25904700e3bd3642bab8d49c0344b937eda66d96724e6e9"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part1.png",
+          "state": "swim",
+          "frame": 3,
+          "normalization": 0.812819513537058,
+          "rect": {
+            "left": 1129,
+            "top": 610,
+            "width": 284,
+            "height": 213
+          },
+          "partReference": 172.93903293622984,
+          "hash": "8e77403b180426eed1e35f719ce28906f08343aa4f6f64cc733ef397b904f0c3"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part1.png",
+          "state": "throw",
+          "frame": 0,
+          "normalization": 0.812819513537058,
+          "rect": {
+            "left": 59,
+            "top": 845,
+            "width": 255,
+            "height": 239
+          },
+          "partReference": 172.93903293622984,
+          "hash": "d40f8c8cfba598e16148eb1d845c9ef46cdcc1e3223e0bbc25c0a39a86a5673a"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part1.png",
+          "state": "throw",
+          "frame": 1,
+          "normalization": 0.812819513537058,
+          "rect": {
+            "left": 432,
+            "top": 844,
+            "width": 241,
+            "height": 240
+          },
+          "partReference": 172.93903293622984,
+          "hash": "d13be56d17bea05a77f911255d3f7d88f5f4ba771a2999aae2bacc762fef2038"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part1.png",
+          "state": "throw",
+          "frame": 2,
+          "normalization": 0.812819513537058,
+          "rect": {
+            "left": 788,
+            "top": 845,
+            "width": 310,
+            "height": 239
+          },
+          "partReference": 172.93903293622984,
+          "hash": "1ce51818c3e4dfc8c80bcd845e9db99f74e7229e456491ecfae2612204ade85e"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part1.png",
+          "state": "throw",
+          "frame": 3,
+          "normalization": 0.812819513537058,
+          "rect": {
+            "left": 1157,
+            "top": 843,
+            "width": 231,
+            "height": 241
+          },
+          "partReference": 172.93903293622984,
+          "hash": "17f45c4ebfc4313dd3f437a5daf719e98cce72d03deada3bffe1852014002a27"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part2.png",
+          "state": "hurt",
+          "frame": 0,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 47,
+            "top": 68,
+            "width": 276,
+            "height": 283
+          },
+          "partReference": 195.88950276243094,
+          "hash": "545899cd4e70f05996d08138037d324efdfdc4e440e9c9689f2b5c83b06ef5db"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part2.png",
+          "state": "hurt",
+          "frame": 1,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 443,
+            "top": 78,
+            "width": 250,
+            "height": 273
+          },
+          "partReference": 195.88950276243094,
+          "hash": "0222c63b1eb3363da4384bbefb755a632dd77feaabbd742b72859adb3861737f"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part2.png",
+          "state": "hurt",
+          "frame": 2,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 778,
+            "top": 82,
+            "width": 286,
+            "height": 270
+          },
+          "partReference": 195.88950276243094,
+          "hash": "d8b2444bc7692ac1dc6a465e683de813bb2607561fb0104bf0e7d3a55333a2eb"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part2.png",
+          "state": "hurt",
+          "frame": 3,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 1141,
+            "top": 78,
+            "width": 279,
+            "height": 273
+          },
+          "partReference": 195.88950276243094,
+          "hash": "1871e212c7a2d1ed9f1de5057ec706d778128b1d2fe5f5929de9e4baa6da103e"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part2.png",
+          "state": "death",
+          "frame": 0,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 47,
+            "top": 422,
+            "width": 306,
+            "height": 272
+          },
+          "partReference": 195.88950276243094,
+          "hash": "a14aea6a07994fadcb81c2e21e5bb1a5c82ed0550bd2a5af1b52d43a07632cd9"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part2.png",
+          "state": "death",
+          "frame": 1,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 400,
+            "top": 469,
+            "width": 297,
+            "height": 223
+          },
+          "partReference": 195.88950276243094,
+          "hash": "dc22ec1bcd2b0a5a93aa619dcd35eba1944e68d5d6584d41037f148d70b89ff0"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part2.png",
+          "state": "death",
+          "frame": 2,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 751,
+            "top": 502,
+            "width": 314,
+            "height": 194
+          },
+          "partReference": 195.88950276243094,
+          "hash": "e9d0eb5bd444b694eb2e26f47578e43c6729331d10c119f043dfc5bb3c5cbd3f"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part2.png",
+          "state": "death",
+          "frame": 3,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 1127,
+            "top": 532,
+            "width": 305,
+            "height": 163
+          },
+          "partReference": 195.88950276243094,
+          "hash": "d017dcd23d20555c8efb27257c58336f2778c20ed1de29f08adcdfbe90c89f69"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part2.png",
+          "state": "victory",
+          "frame": 0,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 70,
+            "top": 769,
+            "width": 264,
+            "height": 271
+          },
+          "partReference": 195.88950276243094,
+          "hash": "fbe34571cab23838c3d8b9f04b41b0102aa80342d2e7cc12ae394e9353289079"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part2.png",
+          "state": "victory",
+          "frame": 1,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 437,
+            "top": 751,
+            "width": 274,
+            "height": 288
+          },
+          "partReference": 195.88950276243094,
+          "hash": "d81793832289c86523d44610eb2ccf3a5a13ea57a63491d55f5c9b28c7b0121f"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part2.png",
+          "state": "victory",
+          "frame": 2,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 789,
+            "top": 733,
+            "width": 269,
+            "height": 282
+          },
+          "partReference": 195.88950276243094,
+          "hash": "45ecef081a89198dc9a9314742b3ecf7b7c9bd70d7f32d0fe256bb39554cc2e3"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part2.png",
+          "state": "victory",
+          "frame": 3,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 1152,
+            "top": 763,
+            "width": 270,
+            "height": 277
+          },
+          "partReference": 195.88950276243094,
+          "hash": "aeac9fa85ec6cd498f781cd2d8133451de6963a7a48659d7272a5fdd763111f9"
+        }
+      ],
+      "partsReport": [
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part0.png",
+          "reference": 201.48148148148147,
+          "bandCount": 4,
+          "states": [
+            "idle",
+            "walk",
+            "run",
+            "jump-rise"
+          ]
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part1.png",
+          "reference": 172.93903293622984,
+          "bandCount": 4,
+          "states": [
+            "jump-fall",
+            "crouch",
+            "swim",
+            "throw"
+          ]
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-1-part2.png",
+          "reference": 195.88950276243094,
+          "bandCount": 3,
+          "states": [
+            "hurt",
+            "death",
+            "victory"
+          ]
+        }
+      ],
+      "scale": 0.23811975952020495
+    },
+    {
+      "id": "P01-2",
+      "states": [
+        "idle",
+        "walk",
+        "run",
+        "jump-rise",
+        "jump-fall",
+        "crouch",
+        "swim",
+        "throw",
+        "hurt",
+        "death",
+        "victory"
+      ],
+      "parts": [
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part0.png",
+          "states": [
+            "idle",
+            "walk",
+            "run",
+            "jump-rise"
+          ],
+          "prompt": "Use case: identity-preserve. Asset: production 32-bit-era 2D PIXEL ART animation spritesheet, not a design card. Image references define the EXACT character identity, anatomy, face and palette. Subject: the exact golden potato hero in the reference, a plump pear-shaped body, TWO large vertical navy-black eyes with white highlights visible together, orange-pink cheeks, wide smiling open mouth with red tongue, tiny eyebrows, two green sprout leaves, short thick potato arms and stubby brown feet integrated directly into the body, warm ochre speckles. CHILI form: keep EXACTLY the same wide plump pear shape and face; add ONLY a bright red short flowing scarf. No hats, armor or other changes. Match the reference's thick dark stepped outline, warm saturated compact pixel clusters and cheerful readable facial features. Side three-quarter view facing RIGHT, while BOTH eyes remain readable as in the reference. No one-eye profile. Exactly FOUR columns and 4 rows; 16 complete independent sprites, equal square cells. Row order TOP to BOTTOM: 1 idle; 2 walk; 3 run; 4 jump-rise. Each row has FOUR consecutive genuinely redrawn animation frames LEFT to RIGHT. Row instructions: idle is subtle breathing and blink, walk alternating feet, run wider alternating strides, jump-rise legs tucked, jump-fall feet reaching downward, crouch body lowered with bent short limbs, swim arms paddling and short legs kicking, throw anticipation then arm forward then recover, hurt startled expression, death falling and resting with closed eyes, victory arms up. Enemy shell-slide uses rotating shell details; wake face and feet emerge. Ignore instructions for rows not requested. Preserve IDENTICAL body proportions, face shape, sprout size, eye design, identity and scale across all frames. Never grow or shrink the body during an animation. Keep body horizontal center and fixed feet baseline at 85% of cell height. Wide empty transparent gutters separating cells. REAL transparent alpha background and ground, NO scenery, NO floor, NO cast shadow, NO text, NO labels, NO borders, NO grid lines, NO extra props. All requested rows mandatory, no omitted rows and no duplicate rows. Preserve the original identity rather than inventing a substitute mascot."
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part1.png",
+          "states": [
+            "jump-fall",
+            "crouch",
+            "swim",
+            "throw"
+          ],
+          "prompt": "Use case: identity-preserve. Asset: production 32-bit-era 2D PIXEL ART animation spritesheet, not a design card. Image references define the EXACT character identity, anatomy, face and palette. Subject: the exact golden potato hero in the reference, a plump pear-shaped body, TWO large vertical navy-black eyes with white highlights visible together, orange-pink cheeks, wide smiling open mouth with red tongue, tiny eyebrows, two green sprout leaves, short thick potato arms and stubby brown feet integrated directly into the body, warm ochre speckles. CHILI form: keep EXACTLY the same wide plump pear shape and face; add ONLY a bright red short flowing scarf. No hats, armor or other changes. Match the reference's thick dark stepped outline, warm saturated compact pixel clusters and cheerful readable facial features. Side three-quarter view facing RIGHT, while BOTH eyes remain readable as in the reference. No one-eye profile. Exactly FOUR columns and 4 rows; 16 complete independent sprites, equal square cells. Row order TOP to BOTTOM: 1 jump-fall; 2 crouch; 3 swim; 4 throw. Each row has FOUR consecutive genuinely redrawn animation frames LEFT to RIGHT. Row instructions: idle is subtle breathing and blink, walk alternating feet, run wider alternating strides, jump-rise legs tucked, jump-fall feet reaching downward, crouch body lowered with bent short limbs, swim arms paddling and short legs kicking, throw anticipation then arm forward then recover, hurt startled expression, death falling and resting with closed eyes, victory arms up. Enemy shell-slide uses rotating shell details; wake face and feet emerge. Ignore instructions for rows not requested. Preserve IDENTICAL body proportions, face shape, sprout size, eye design, identity and scale across all frames. Never grow or shrink the body during an animation. Keep body horizontal center and fixed feet baseline at 85% of cell height. Wide empty transparent gutters separating cells. REAL transparent alpha background and ground, NO scenery, NO floor, NO cast shadow, NO text, NO labels, NO borders, NO grid lines, NO extra props. All requested rows mandatory, no omitted rows and no duplicate rows. Preserve the original identity rather than inventing a substitute mascot."
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part2.png",
+          "states": [
+            "hurt",
+            "death",
+            "victory"
+          ],
+          "prompt": "Use case: identity-preserve. Asset: production 32-bit-era 2D PIXEL ART animation spritesheet, not a design card. Image references define the EXACT character identity, anatomy, face and palette. Subject: the exact golden potato hero in the reference, a plump pear-shaped body, TWO large vertical navy-black eyes with white highlights visible together, orange-pink cheeks, wide smiling open mouth with red tongue, tiny eyebrows, two green sprout leaves, short thick potato arms and stubby brown feet integrated directly into the body, warm ochre speckles. CHILI form: keep EXACTLY the same wide plump pear shape and face; add ONLY a bright red short flowing scarf. No hats, armor or other changes. Match the reference's thick dark stepped outline, warm saturated compact pixel clusters and cheerful readable facial features. Side three-quarter view facing RIGHT, while BOTH eyes remain readable as in the reference. No one-eye profile. Exactly FOUR columns and 3 rows; 12 complete independent sprites, equal square cells. Row order TOP to BOTTOM: 1 hurt; 2 death; 3 victory. Each row has FOUR consecutive genuinely redrawn animation frames LEFT to RIGHT. Row instructions: idle is subtle breathing and blink, walk alternating feet, run wider alternating strides, jump-rise legs tucked, jump-fall feet reaching downward, crouch body lowered with bent short limbs, swim arms paddling and short legs kicking, throw anticipation then arm forward then recover, hurt startled expression, death falling and resting with closed eyes, victory arms up. Enemy shell-slide uses rotating shell details; wake face and feet emerge. Ignore instructions for rows not requested. Preserve IDENTICAL body proportions, face shape, sprout size, eye design, identity and scale across all frames. Never grow or shrink the body during an animation. Keep body horizontal center and fixed feet baseline at 85% of cell height. Wide empty transparent gutters separating cells. REAL transparent alpha background and ground, NO scenery, NO floor, NO cast shadow, NO text, NO labels, NO borders, NO grid lines, NO extra props. All requested rows mandatory, no omitted rows and no duplicate rows. Preserve the original identity rather than inventing a substitute mascot."
+        }
+      ],
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "reference": "art-source/veggie-adventure/animations/v2-scene01/hero-reference.png",
+      "status": "built",
+      "cells": [
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part0.png",
+          "state": "idle",
+          "frame": 0,
+          "normalization": 0.8074128855440029,
+          "rect": {
+            "left": 27,
+            "top": 43,
+            "width": 253,
+            "height": 250
+          },
+          "partReference": 203.99686274509804,
+          "hash": "faeaed42009fadec4a03fd6f4f6b3e7baf7fbb2fd692f75809f670d2ecb0ad31"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part0.png",
+          "state": "idle",
+          "frame": 1,
+          "normalization": 0.8074128855440029,
+          "rect": {
+            "left": 343,
+            "top": 43,
+            "width": 257,
+            "height": 250
+          },
+          "partReference": 203.99686274509804,
+          "hash": "0e357cd87601f088b56b2d60ac772b653b3feb80ff693e55cbbeba3e2004077f"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part0.png",
+          "state": "idle",
+          "frame": 2,
+          "normalization": 0.8074128855440029,
+          "rect": {
+            "left": 662,
+            "top": 43,
+            "width": 256,
+            "height": 250
+          },
+          "partReference": 203.99686274509804,
+          "hash": "1b3dab6a067a5ae4c00de899cd96f49d45971c27537a7e412aed650eaacf1050"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part0.png",
+          "state": "idle",
+          "frame": 3,
+          "normalization": 0.8074128855440029,
+          "rect": {
+            "left": 981,
+            "top": 42,
+            "width": 256,
+            "height": 251
+          },
+          "partReference": 203.99686274509804,
+          "hash": "7ec283424ad8bf787fed9034a8cdc228984834bf8919621198909b603b534ae1"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part0.png",
+          "state": "walk",
+          "frame": 0,
+          "normalization": 0.8074128855440029,
+          "rect": {
+            "left": 26,
+            "top": 331,
+            "width": 271,
+            "height": 262
+          },
+          "partReference": 203.99686274509804,
+          "hash": "5a42e8eb0d6d70a38367150546e4c6af9dc28712e512c8f95b20194dc08ec3fa"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part0.png",
+          "state": "walk",
+          "frame": 1,
+          "normalization": 0.8074128855440029,
+          "rect": {
+            "left": 341,
+            "top": 335,
+            "width": 273,
+            "height": 258
+          },
+          "partReference": 203.99686274509804,
+          "hash": "515bf93d790375e0c5ec284e680f6496b4d882b57a9216834bb5d4a796a48512"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part0.png",
+          "state": "walk",
+          "frame": 2,
+          "normalization": 0.8074128855440029,
+          "rect": {
+            "left": 662,
+            "top": 335,
+            "width": 269,
+            "height": 258
+          },
+          "partReference": 203.99686274509804,
+          "hash": "11063113401ad38f009fdc6435a0682c9bf969dc8875b8d8e53dc02222ef5318"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part0.png",
+          "state": "walk",
+          "frame": 3,
+          "normalization": 0.8074128855440029,
+          "rect": {
+            "left": 976,
+            "top": 335,
+            "width": 277,
+            "height": 257
+          },
+          "partReference": 203.99686274509804,
+          "hash": "b6f4c48611f0a6efa78e9eeae6e88c5a345a5a5dfee8a95497062db6bc97798e"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part0.png",
+          "state": "run",
+          "frame": 0,
+          "normalization": 0.8074128855440029,
+          "rect": {
+            "left": 32,
+            "top": 635,
+            "width": 287,
+            "height": 260
+          },
+          "partReference": 203.99686274509804,
+          "hash": "391c79ef2893d6f6210be181460e01f0e167de5468334493a7acf080e0fab631"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part0.png",
+          "state": "run",
+          "frame": 1,
+          "normalization": 0.8074128855440029,
+          "rect": {
+            "left": 350,
+            "top": 635,
+            "width": 283,
+            "height": 254
+          },
+          "partReference": 203.99686274509804,
+          "hash": "7ee1a3ebaa21f95f7f61bc16932ce34b6b5417595db45db75161db53f9e1fd48"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part0.png",
+          "state": "run",
+          "frame": 2,
+          "normalization": 0.8074128855440029,
+          "rect": {
+            "left": 666,
+            "top": 635,
+            "width": 291,
+            "height": 256
+          },
+          "partReference": 203.99686274509804,
+          "hash": "ddd1c6ef5e35dee51a92fbdf29ca499daaf5e040c7b81cb3620701520e5b0b4d"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part0.png",
+          "state": "run",
+          "frame": 3,
+          "normalization": 0.8074128855440029,
+          "rect": {
+            "left": 983,
+            "top": 633,
+            "width": 275,
+            "height": 260
+          },
+          "partReference": 203.99686274509804,
+          "hash": "b8c8855a539913b2d872d8ef49c15b861c72bc96334767c60679a6c306d61e45"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part0.png",
+          "state": "jump-rise",
+          "frame": 0,
+          "normalization": 0.8074128855440029,
+          "rect": {
+            "left": 37,
+            "top": 945,
+            "width": 273,
+            "height": 252
+          },
+          "partReference": 203.99686274509804,
+          "hash": "d1aa7c1629740fe5fdd2670ec5a569932c5fc5ef46e64ce66c0c9755bc70a3b6"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part0.png",
+          "state": "jump-rise",
+          "frame": 1,
+          "normalization": 0.8074128855440029,
+          "rect": {
+            "left": 350,
+            "top": 942,
+            "width": 274,
+            "height": 244
+          },
+          "partReference": 203.99686274509804,
+          "hash": "5b237c949794379fa7bdab63b75b0f8b704c911ae82f612d8513b88263823beb"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part0.png",
+          "state": "jump-rise",
+          "frame": 2,
+          "normalization": 0.8074128855440029,
+          "rect": {
+            "left": 666,
+            "top": 931,
+            "width": 269,
+            "height": 248
+          },
+          "partReference": 203.99686274509804,
+          "hash": "590dc203cf51c7ff427206bacf5834b3677c0936f0b2c30d3510794c042dafd5"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part0.png",
+          "state": "jump-rise",
+          "frame": 3,
+          "normalization": 0.8074128855440029,
+          "rect": {
+            "left": 992,
+            "top": 924,
+            "width": 261,
+            "height": 241
+          },
+          "partReference": 203.99686274509804,
+          "hash": "52b8d4fcd3d48a44f26d02a1ffabea3b3af57f2408efcba7feb91f197de8907f"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part1.png",
+          "state": "jump-fall",
+          "frame": 0,
+          "normalization": 0.7623898621865308,
+          "rect": {
+            "left": 24,
+            "top": 24,
+            "width": 307,
+            "height": 281
+          },
+          "partReference": 209.31306990881458,
+          "hash": "7e788697413e9134b31fd40d8743bbe90662d10da83ced529f62f92e4881a0c9"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part1.png",
+          "state": "jump-fall",
+          "frame": 1,
+          "normalization": 0.7623898621865308,
+          "rect": {
+            "left": 370,
+            "top": 24,
+            "width": 306,
+            "height": 269
+          },
+          "partReference": 209.31306990881458,
+          "hash": "41f34a28e7c6d6c56c986045c9e9fa89f1d0c6a8898cfc80c66d6b56041b2f91"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part1.png",
+          "state": "jump-fall",
+          "frame": 2,
+          "normalization": 0.7623898621865308,
+          "rect": {
+            "left": 708,
+            "top": 46,
+            "width": 301,
+            "height": 292
+          },
+          "partReference": 209.31306990881458,
+          "hash": "476472498ea46338bacad7bba3c5d816f5cd87cb054e2419d4654af58909667c"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part1.png",
+          "state": "jump-fall",
+          "frame": 3,
+          "normalization": 0.7623898621865308,
+          "rect": {
+            "left": 1038,
+            "top": 58,
+            "width": 265,
+            "height": 292
+          },
+          "partReference": 209.31306990881458,
+          "hash": "3cd81edd2adc3cf8256b912e68dd4253b59806d1b3369945a36b2c4a322fb651"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part1.png",
+          "state": "crouch",
+          "frame": 0,
+          "normalization": 0.7623898621865308,
+          "rect": {
+            "left": 31,
+            "top": 388,
+            "width": 286,
+            "height": 256
+          },
+          "partReference": 209.31306990881458,
+          "hash": "d0ed3b8e063cb0e7cb45d5a250ac82f7fd0542814e1a60bcf0f42cd6672e445f"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part1.png",
+          "state": "crouch",
+          "frame": 1,
+          "normalization": 0.7623898621865308,
+          "rect": {
+            "left": 372,
+            "top": 414,
+            "width": 278,
+            "height": 231
+          },
+          "partReference": 209.31306990881458,
+          "hash": "e18227c0a446ced9d80b2a121cefcfff11c653caf6b3b637c1410a8b750907fd"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part1.png",
+          "state": "crouch",
+          "frame": 2,
+          "normalization": 0.7623898621865308,
+          "rect": {
+            "left": 705,
+            "top": 398,
+            "width": 296,
+            "height": 246
+          },
+          "partReference": 209.31306990881458,
+          "hash": "f37f4bd5c90881ee4f7177a55f4d37414ab9f832fa5e9eff5acd46a7eda11526"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part1.png",
+          "state": "crouch",
+          "frame": 3,
+          "normalization": 0.7623898621865308,
+          "rect": {
+            "left": 1037,
+            "top": 389,
+            "width": 264,
+            "height": 256
+          },
+          "partReference": 209.31306990881458,
+          "hash": "294c30c9627c34e51e3e91a0271f5419d88b02586d45ab13c856ea5ec230ec8d"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part1.png",
+          "state": "swim",
+          "frame": 0,
+          "normalization": 0.7623898621865308,
+          "rect": {
+            "left": 25,
+            "top": 692,
+            "width": 328,
+            "height": 203
+          },
+          "partReference": 209.31306990881458,
+          "hash": "496e29f9727901640a5d4acb8e919a7c23a7f4ac8c7cb07e7dad690d058a8d00"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part1.png",
+          "state": "swim",
+          "frame": 1,
+          "normalization": 0.7623898621865308,
+          "rect": {
+            "left": 369,
+            "top": 694,
+            "width": 304,
+            "height": 201
+          },
+          "partReference": 209.31306990881458,
+          "hash": "d5ba88169d5ff64654c00f1fb177c06d612762ee58e3ab0b57515c9f3b91c475"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part1.png",
+          "state": "swim",
+          "frame": 2,
+          "normalization": 0.7623898621865308,
+          "rect": {
+            "left": 688,
+            "top": 689,
+            "width": 322,
+            "height": 204
+          },
+          "partReference": 209.31306990881458,
+          "hash": "895f552dddf88cd127c9c4cccd590a36d122b561155679857c33fe3161417b59"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part1.png",
+          "state": "swim",
+          "frame": 3,
+          "normalization": 0.7623898621865308,
+          "rect": {
+            "left": 1025,
+            "top": 689,
+            "width": 264,
+            "height": 214
+          },
+          "partReference": 209.31306990881458,
+          "hash": "3855153e112df82d7fb5a1560542121ec9a5eb402d0bee65534998021e26c1b2"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part1.png",
+          "state": "throw",
+          "frame": 0,
+          "normalization": 0.7623898621865308,
+          "rect": {
+            "left": 19,
+            "top": 932,
+            "width": 301,
+            "height": 240
+          },
+          "partReference": 209.31306990881458,
+          "hash": "30bc84da99f55cf8d5a39130d981448980553377702912d9f7e189e6ac74fc0e"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part1.png",
+          "state": "throw",
+          "frame": 1,
+          "normalization": 0.7623898621865308,
+          "rect": {
+            "left": 381,
+            "top": 934,
+            "width": 310,
+            "height": 238
+          },
+          "partReference": 209.31306990881458,
+          "hash": "8d7289e5165dacc305cd52a1f9fc56cb1ea096cd58898c1cfd6ba29e20015aac"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part1.png",
+          "state": "throw",
+          "frame": 2,
+          "normalization": 0.7623898621865308,
+          "rect": {
+            "left": 718,
+            "top": 935,
+            "width": 290,
+            "height": 237
+          },
+          "partReference": 209.31306990881458,
+          "hash": "d21275564221fbe0c2e66443cda746e8a195d033b7b91f29c4ff788d9c123d6d"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part1.png",
+          "state": "throw",
+          "frame": 3,
+          "normalization": 0.7623898621865308,
+          "rect": {
+            "left": 1039,
+            "top": 929,
+            "width": 257,
+            "height": 243
+          },
+          "partReference": 209.31306990881458,
+          "hash": "53e39bf4f8aec88a147e650d422e85babca037aff3d20d2ce9bff1b8d48ac5d6"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part2.png",
+          "state": "hurt",
+          "frame": 0,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 23,
+            "top": 78,
+            "width": 315,
+            "height": 293
+          },
+          "partReference": 205.08287292817678,
+          "hash": "28513ab7e4fa51b8d74577fe1978e2ef4dbace0f284cb6207902d666ca4bfe9f"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part2.png",
+          "state": "hurt",
+          "frame": 1,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 382,
+            "top": 78,
+            "width": 326,
+            "height": 293
+          },
+          "partReference": 205.08287292817678,
+          "hash": "e643c176bad77dc492057799600d09fe3fc146c29c9e37bf3aa4acc489804c0c"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part2.png",
+          "state": "hurt",
+          "frame": 2,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 724,
+            "top": 98,
+            "width": 346,
+            "height": 274
+          },
+          "partReference": 205.08287292817678,
+          "hash": "12249959c74c60397c607124c65543b00182b79f0f88627b09f7929ae3f8baa2"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part2.png",
+          "state": "hurt",
+          "frame": 3,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 1112,
+            "top": 143,
+            "width": 321,
+            "height": 229
+          },
+          "partReference": 205.08287292817678,
+          "hash": "07212b80df04d261966ce9fdc5f930f7ff238f783e351387e9728740a9594f33"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part2.png",
+          "state": "death",
+          "frame": 0,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 16,
+            "top": 431,
+            "width": 334,
+            "height": 281
+          },
+          "partReference": 205.08287292817678,
+          "hash": "272428414635460e748c5c2562630fc9fa7706dc4d0f0a2b770642744fa7b10a"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part2.png",
+          "state": "death",
+          "frame": 1,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 382,
+            "top": 484,
+            "width": 327,
+            "height": 220
+          },
+          "partReference": 205.08287292817678,
+          "hash": "709c19848f30f325606fb5d0f5af097c9c91e77ae89fc44a8094aaf9c2e6463b"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part2.png",
+          "state": "death",
+          "frame": 2,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 736,
+            "top": 533,
+            "width": 331,
+            "height": 183
+          },
+          "partReference": 205.08287292817678,
+          "hash": "648060896ed37de67b7ccc9ef46c8a0c029a8535baff4e3645b67237f1eae85f"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part2.png",
+          "state": "death",
+          "frame": 3,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 1104,
+            "top": 558,
+            "width": 329,
+            "height": 158
+          },
+          "partReference": 205.08287292817678,
+          "hash": "ff9066e7c6b67b3a9e10294b07d24f671089abe71670d15836c067539633f88c"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part2.png",
+          "state": "victory",
+          "frame": 0,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 24,
+            "top": 769,
+            "width": 303,
+            "height": 290
+          },
+          "partReference": 205.08287292817678,
+          "hash": "e8d3f117f86e7e10ecf58728cac06387c2ac180cacdd0b3abf137b978c133038"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part2.png",
+          "state": "victory",
+          "frame": 1,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 388,
+            "top": 761,
+            "width": 309,
+            "height": 298
+          },
+          "partReference": 205.08287292817678,
+          "hash": "dcbb5f254a4c2778c78dcd77523dfc90f01dffee97d79e7c9788bbf8e47b8e3c"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part2.png",
+          "state": "victory",
+          "frame": 2,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 748,
+            "top": 742,
+            "width": 300,
+            "height": 279
+          },
+          "partReference": 205.08287292817678,
+          "hash": "4b8883e3abcbcffd6a1dea8d252ec984b142bcb858abecc7b226b2bb00c76a9c"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part2.png",
+          "state": "victory",
+          "frame": 3,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 1110,
+            "top": 775,
+            "width": 317,
+            "height": 284
+          },
+          "partReference": 205.08287292817678,
+          "hash": "6e5e756a28147c9202edbeb415d030a332152c8fe3a667d26a18bcf966a88406"
+        }
+      ],
+      "partsReport": [
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part0.png",
+          "reference": 203.99686274509804,
+          "bandCount": 4,
+          "states": [
+            "idle",
+            "walk",
+            "run",
+            "jump-rise"
+          ]
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part1.png",
+          "reference": 209.31306990881458,
+          "bandCount": 4,
+          "states": [
+            "jump-fall",
+            "crouch",
+            "swim",
+            "throw"
+          ]
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/P01-2-part2.png",
+          "reference": 205.08287292817678,
+          "bandCount": 3,
+          "states": [
+            "hurt",
+            "death",
+            "victory"
+          ]
+        }
+      ],
+      "scale": 0.23993869585786376
+    },
+    {
+      "id": "E01",
+      "states": [
+        "walk",
+        "flatten",
+        "hit"
+      ],
+      "parts": [
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E01-part0.png",
+          "states": [
+            "walk",
+            "flatten",
+            "hit"
+          ],
+          "prompt": "Use case: identity-preserve. Asset: production 32-bit-era 2D PIXEL ART animation spritesheet, not a design card. Image references define the EXACT character identity, anatomy, face and palette. Subject: the exact RED-CAP mushroom enemy from the reference lower strip: broad vivid red mushroom cap with large creamy white spots, thick black stepped outline, cream stalk-face with two small angry eyes, squat body and two tiny brown feet. NOT a brown shiitake cap; retain the red white-spotted cap in all frames. Match the reference's thick dark stepped outline, warm saturated compact pixel clusters and cheerful readable facial features. Side three-quarter view facing RIGHT, while BOTH eyes remain readable as in the reference. No one-eye profile. Exactly FOUR columns and 3 rows; 12 complete independent sprites, equal square cells. Row order TOP to BOTTOM: 1 walk; 2 flatten; 3 hit. Each row has FOUR consecutive genuinely redrawn animation frames LEFT to RIGHT. Row instructions: idle is subtle breathing and blink, walk alternating feet, run wider alternating strides, jump-rise legs tucked, jump-fall feet reaching downward, crouch body lowered with bent short limbs, swim arms paddling and short legs kicking, throw anticipation then arm forward then recover, hurt startled expression, death falling and resting with closed eyes, victory arms up. Enemy shell-slide uses rotating shell details; wake face and feet emerge. Ignore instructions for rows not requested. Preserve IDENTICAL body proportions, face shape, sprout size, eye design, identity and scale across all frames. Never grow or shrink the body during an animation. Keep body horizontal center and fixed feet baseline at 85% of cell height. Wide empty transparent gutters separating cells. REAL transparent alpha background and ground, NO scenery, NO floor, NO cast shadow, NO text, NO labels, NO borders, NO grid lines, NO extra props. All requested rows mandatory, no omitted rows and no duplicate rows. Preserve the original identity rather than inventing a substitute mascot."
+        }
+      ],
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "reference": "art-source/veggie-adventure/animations/v2-scene01/reference.png",
+      "status": "built",
+      "cells": [
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E01-part0.png",
+          "state": "walk",
+          "frame": 0,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 64,
+            "top": 111,
+            "width": 241,
+            "height": 215
+          },
+          "partReference": 152.04419889502762,
+          "hash": "def8ef02d7f65d1e9162f28e67f56a103b6e5f149b228fcedac25001b5dd4415"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E01-part0.png",
+          "state": "walk",
+          "frame": 1,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 425,
+            "top": 111,
+            "width": 242,
+            "height": 215
+          },
+          "partReference": 152.04419889502762,
+          "hash": "cfd59afe880ee8ea815b0c9f11bc43a95330f3fb9affc45d39d6c6ec32fbe3d2"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E01-part0.png",
+          "state": "walk",
+          "frame": 2,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 787,
+            "top": 111,
+            "width": 242,
+            "height": 215
+          },
+          "partReference": 152.04419889502762,
+          "hash": "05d64cfb3e4aaf4c9b34b83e96204d4300694f07795ed92a072462a7c83fb9b4"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E01-part0.png",
+          "state": "walk",
+          "frame": 3,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 1136,
+            "top": 111,
+            "width": 244,
+            "height": 215
+          },
+          "partReference": 152.04419889502762,
+          "hash": "15cea11eb2f1bad1fd63434b628ee93e5dc5d89f70a061d7fd14280c614da9c4"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E01-part0.png",
+          "state": "flatten",
+          "frame": 0,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 64,
+            "top": 473,
+            "width": 241,
+            "height": 215
+          },
+          "partReference": 152.04419889502762,
+          "hash": "95d9e617432415aaf8b2e4945ec505bd21d4fe6476fab24f280f4391aac3f82c"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E01-part0.png",
+          "state": "flatten",
+          "frame": 1,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 417,
+            "top": 512,
+            "width": 258,
+            "height": 176
+          },
+          "partReference": 152.04419889502762,
+          "hash": "635580f8bc8436f29f8be9148e6197cae42a74c80fe4d273cdba02a867cbaba0"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E01-part0.png",
+          "state": "flatten",
+          "frame": 2,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 771,
+            "top": 542,
+            "width": 273,
+            "height": 146
+          },
+          "partReference": 152.04419889502762,
+          "hash": "6cba5477867ba2cde6a0a0505f545ea9fd568379c9b21af7f6e5875d48a8fa77"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E01-part0.png",
+          "state": "flatten",
+          "frame": 3,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 1150,
+            "top": 473,
+            "width": 242,
+            "height": 215
+          },
+          "partReference": 152.04419889502762,
+          "hash": "f7e307e819552108e7c76ec8a0b337e5148318c1dbdbb5b7a7bcde552533ddc8"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E01-part0.png",
+          "state": "hit",
+          "frame": 0,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 64,
+            "top": 836,
+            "width": 241,
+            "height": 214
+          },
+          "partReference": 152.04419889502762,
+          "hash": "266bc8f443351e909c127c76abfd546ded58c1eb227b0dcce15b4fe1e637c9d5"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E01-part0.png",
+          "state": "hit",
+          "frame": 1,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 411,
+            "top": 770,
+            "width": 274,
+            "height": 263
+          },
+          "partReference": 152.04419889502762,
+          "hash": "e9a661b495cd960494d2bb0d0ce0ddcd15a188b15e5b1706279230ca3552f1b6"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E01-part0.png",
+          "state": "hit",
+          "frame": 2,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 771,
+            "top": 756,
+            "width": 289,
+            "height": 245
+          },
+          "partReference": 152.04419889502762,
+          "hash": "1cf41439831d10fd79225b79c425e8a7ab53e4ce131fc843b3395518dddc1d71"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E01-part0.png",
+          "state": "hit",
+          "frame": 3,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 1134,
+            "top": 806,
+            "width": 285,
+            "height": 244
+          },
+          "partReference": 152.04419889502762,
+          "hash": "ffaf83c4f6787d8d424bcdc6bfad5225b3894ac72ff5d0d445612184d6490b43"
+        }
+      ],
+      "partsReport": [
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E01-part0.png",
+          "reference": 152.04419889502762,
+          "bandCount": 3,
+          "states": [
+            "walk",
+            "flatten",
+            "hit"
+          ]
+        }
+      ],
+      "scale": 0.29357698961937717
+    },
+    {
+      "id": "E02",
+      "states": [
+        "walk",
+        "retract",
+        "shell-idle",
+        "shell-slide",
+        "wake",
+        "hit"
+      ],
+      "parts": [
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E02-part0.png",
+          "states": [
+            "walk",
+            "retract",
+            "shell-idle"
+          ],
+          "prompt": "Use case: identity-preserve. Asset: production 32-bit-era 2D PIXEL ART animation spritesheet, not a design card. Image references define the EXACT character identity, anatomy, face and palette. Subject: the exact squat cabbage crawler from the reference lower strip: wide layered bright green leafy shell with curled pale veins, a separate pale cream face projecting at the lower FRONT with two angry black eyes, low broad silhouette and four small green root feet. The face is NOT an upright round cabbage head. Retract means face and feet tuck inside the leafy shell. Match the reference's thick dark stepped outline, warm saturated compact pixel clusters and cheerful readable facial features. Side three-quarter view facing RIGHT, while BOTH eyes remain readable as in the reference. No one-eye profile. Exactly FOUR columns and 3 rows; 12 complete independent sprites, equal square cells. Row order TOP to BOTTOM: 1 walk; 2 retract; 3 shell-idle. Each row has FOUR consecutive genuinely redrawn animation frames LEFT to RIGHT. Row instructions: idle is subtle breathing and blink, walk alternating feet, run wider alternating strides, jump-rise legs tucked, jump-fall feet reaching downward, crouch body lowered with bent short limbs, swim arms paddling and short legs kicking, throw anticipation then arm forward then recover, hurt startled expression, death falling and resting with closed eyes, victory arms up. Enemy shell-slide uses rotating shell details; wake face and feet emerge. Ignore instructions for rows not requested. Preserve IDENTICAL body proportions, face shape, sprout size, eye design, identity and scale across all frames. Never grow or shrink the body during an animation. Keep body horizontal center and fixed feet baseline at 85% of cell height. Wide empty transparent gutters separating cells. REAL transparent alpha background and ground, NO scenery, NO floor, NO cast shadow, NO text, NO labels, NO borders, NO grid lines, NO extra props. All requested rows mandatory, no omitted rows and no duplicate rows. Preserve the original identity rather than inventing a substitute mascot."
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E02-part1.png",
+          "states": [
+            "shell-slide",
+            "wake",
+            "hit"
+          ],
+          "prompt": "Use case: identity-preserve. Asset: production 32-bit-era 2D PIXEL ART animation spritesheet, not a design card. Image references define the EXACT character identity, anatomy, face and palette. Subject: the exact squat cabbage crawler from the reference lower strip: wide layered bright green leafy shell with curled pale veins, a separate pale cream face projecting at the lower FRONT with two angry black eyes, low broad silhouette and four small green root feet. The face is NOT an upright round cabbage head. Retract means face and feet tuck inside the leafy shell. Match the reference's thick dark stepped outline, warm saturated compact pixel clusters and cheerful readable facial features. Side three-quarter view facing RIGHT, while BOTH eyes remain readable as in the reference. No one-eye profile. Exactly FOUR columns and 3 rows; 12 complete independent sprites, equal square cells. Row order TOP to BOTTOM: 1 shell-slide; 2 wake; 3 hit. Each row has FOUR consecutive genuinely redrawn animation frames LEFT to RIGHT. Row instructions: idle is subtle breathing and blink, walk alternating feet, run wider alternating strides, jump-rise legs tucked, jump-fall feet reaching downward, crouch body lowered with bent short limbs, swim arms paddling and short legs kicking, throw anticipation then arm forward then recover, hurt startled expression, death falling and resting with closed eyes, victory arms up. Enemy shell-slide uses rotating shell details; wake face and feet emerge. Ignore instructions for rows not requested. Preserve IDENTICAL body proportions, face shape, sprout size, eye design, identity and scale across all frames. Never grow or shrink the body during an animation. Keep body horizontal center and fixed feet baseline at 85% of cell height. Wide empty transparent gutters separating cells. REAL transparent alpha background and ground, NO scenery, NO floor, NO cast shadow, NO text, NO labels, NO borders, NO grid lines, NO extra props. All requested rows mandatory, no omitted rows and no duplicate rows. Preserve the original identity rather than inventing a substitute mascot."
+        }
+      ],
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "reference": "art-source/veggie-adventure/animations/v2-scene01/reference.png",
+      "status": "built",
+      "cells": [
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E02-part0.png",
+          "state": "walk",
+          "frame": 0,
+          "normalization": 0.7206524598789792,
+          "rect": {
+            "left": 30,
+            "top": 145,
+            "width": 305,
+            "height": 210
+          },
+          "partReference": 148.50828729281767,
+          "hash": "91dbbdd06733a84c78bd11cc66c3a565aaa70633a99d636fed0640680e31086f"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E02-part0.png",
+          "state": "walk",
+          "frame": 1,
+          "normalization": 0.7206524598789792,
+          "rect": {
+            "left": 393,
+            "top": 145,
+            "width": 302,
+            "height": 212
+          },
+          "partReference": 148.50828729281767,
+          "hash": "9ffb6daf15c8ec88ecb46c4be27c4cc2583032e6ecf93c3da98847c6e1ee4807"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E02-part0.png",
+          "state": "walk",
+          "frame": 2,
+          "normalization": 0.7206524598789792,
+          "rect": {
+            "left": 752,
+            "top": 145,
+            "width": 309,
+            "height": 213
+          },
+          "partReference": 148.50828729281767,
+          "hash": "7ca29adc9943ac1e4e178c50ae723fc8029a66c0af0c47c1965e5995de2d7752"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E02-part0.png",
+          "state": "walk",
+          "frame": 3,
+          "normalization": 0.7206524598789792,
+          "rect": {
+            "left": 1114,
+            "top": 145,
+            "width": 304,
+            "height": 210
+          },
+          "partReference": 148.50828729281767,
+          "hash": "81452981ee1ac7ad055e9e804ce3bd6c2c5883868e33ac28d8599036e2ec02da"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E02-part0.png",
+          "state": "retract",
+          "frame": 0,
+          "normalization": 0.7206524598789792,
+          "rect": {
+            "left": 32,
+            "top": 481,
+            "width": 302,
+            "height": 204
+          },
+          "partReference": 148.50828729281767,
+          "hash": "fc54ee95270f122733d8f8b190cb95183b0bffee932dcfcef7921d28892ca976"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E02-part0.png",
+          "state": "retract",
+          "frame": 1,
+          "normalization": 0.7206524598789792,
+          "rect": {
+            "left": 402,
+            "top": 492,
+            "width": 297,
+            "height": 190
+          },
+          "partReference": 148.50828729281767,
+          "hash": "ca5ba286b1af390d7aeee0c90786ad4ace5202d7609d59b0eaf82e21c7569bea"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E02-part0.png",
+          "state": "retract",
+          "frame": 2,
+          "normalization": 0.7206524598789792,
+          "rect": {
+            "left": 766,
+            "top": 491,
+            "width": 290,
+            "height": 194
+          },
+          "partReference": 148.50828729281767,
+          "hash": "7857b9fc6ea7785c7ee0c3da9baaefddd8a2eccc034ad434c2376e787d1af1f8"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E02-part0.png",
+          "state": "retract",
+          "frame": 3,
+          "normalization": 0.7206524598789792,
+          "rect": {
+            "left": 1121,
+            "top": 490,
+            "width": 291,
+            "height": 195
+          },
+          "partReference": 148.50828729281767,
+          "hash": "0f83b482cbed8441d50f7de9577bd4c6057a6bab2d957ab760c90b44c8203ad9"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E02-part0.png",
+          "state": "shell-idle",
+          "frame": 0,
+          "normalization": 0.7206524598789792,
+          "rect": {
+            "left": 29,
+            "top": 811,
+            "width": 304,
+            "height": 210
+          },
+          "partReference": 148.50828729281767,
+          "hash": "23422de952d5a0fc99457629160684bd6c6056d35c37947736a28678a6fd8c8f"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E02-part0.png",
+          "state": "shell-idle",
+          "frame": 1,
+          "normalization": 0.7206524598789792,
+          "rect": {
+            "left": 390,
+            "top": 811,
+            "width": 305,
+            "height": 210
+          },
+          "partReference": 148.50828729281767,
+          "hash": "d0519589e0c3e06b81c54f07e243d8a675d33f1cc98855846f6f44bb6297b893"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E02-part0.png",
+          "state": "shell-idle",
+          "frame": 2,
+          "normalization": 0.7206524598789792,
+          "rect": {
+            "left": 756,
+            "top": 811,
+            "width": 307,
+            "height": 210
+          },
+          "partReference": 148.50828729281767,
+          "hash": "4c7d2a9eb5d977735bc5461c02869f6fef0efc7b1fc0ec1360c04b3b4b36b16e"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E02-part0.png",
+          "state": "shell-idle",
+          "frame": 3,
+          "normalization": 0.7206524598789792,
+          "rect": {
+            "left": 1115,
+            "top": 811,
+            "width": 303,
+            "height": 210
+          },
+          "partReference": 148.50828729281767,
+          "hash": "9e0b4e1871e53c6f49f592f60bcf91a93908223e29a49d17acdcfe9e1a5b1af9"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E02-part1.png",
+          "state": "shell-slide",
+          "frame": 0,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 52,
+            "top": 140,
+            "width": 301,
+            "height": 224
+          },
+          "partReference": 151.33701657458562,
+          "hash": "29f6117d02c86a8d724b5466f5fe667df8a2989c4237486e6d351efe2c6b0670"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E02-part1.png",
+          "state": "shell-slide",
+          "frame": 1,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 410,
+            "top": 141,
+            "width": 289,
+            "height": 223
+          },
+          "partReference": 151.33701657458562,
+          "hash": "3e8b88b0df079f52223fdb09c3b3c5ab84ca3f867b58646b983598755fd36b9b"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E02-part1.png",
+          "state": "shell-slide",
+          "frame": 2,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 759,
+            "top": 140,
+            "width": 291,
+            "height": 224
+          },
+          "partReference": 151.33701657458562,
+          "hash": "6a2db06b85a431245e7b48f1dd0d8d57360281c63d7e88bf2f160779c26d0731"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E02-part1.png",
+          "state": "shell-slide",
+          "frame": 3,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 1109,
+            "top": 140,
+            "width": 290,
+            "height": 224
+          },
+          "partReference": 151.33701657458562,
+          "hash": "969f023a9d931889cf002c5007b2e7b1f9a19795c0b7285dab00f48e5f6966b8"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E02-part1.png",
+          "state": "wake",
+          "frame": 0,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 52,
+            "top": 484,
+            "width": 291,
+            "height": 211
+          },
+          "partReference": 151.33701657458562,
+          "hash": "ed5ccdf64d314c2c8fb89b48af293ba1ee957bb4c806f79c1495550f826f1670"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E02-part1.png",
+          "state": "wake",
+          "frame": 1,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 410,
+            "top": 486,
+            "width": 290,
+            "height": 209
+          },
+          "partReference": 151.33701657458562,
+          "hash": "2bf48b91302a0826448ae1c853e52db76033b7501bb3e20e01c2e4dedb2855af"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E02-part1.png",
+          "state": "wake",
+          "frame": 2,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 750,
+            "top": 489,
+            "width": 300,
+            "height": 207
+          },
+          "partReference": 151.33701657458562,
+          "hash": "6adcf199c0520e90ed9fd3bf60c3b520f318b45fa7b8ae2ed5f32108b189518b"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E02-part1.png",
+          "state": "wake",
+          "frame": 3,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 1104,
+            "top": 489,
+            "width": 295,
+            "height": 207
+          },
+          "partReference": 151.33701657458562,
+          "hash": "b2f42e9c2e0b194e087e0c58d88497109fa2c18afb5884cf7577f9bc3f035290"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E02-part1.png",
+          "state": "hit",
+          "frame": 0,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 52,
+            "top": 820,
+            "width": 297,
+            "height": 207
+          },
+          "partReference": 151.33701657458562,
+          "hash": "d2977b80a021d59a47202f77dc07fcbd97b3b49873527a2fcb073ccd6e4c00cb"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E02-part1.png",
+          "state": "hit",
+          "frame": 1,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 406,
+            "top": 804,
+            "width": 302,
+            "height": 223
+          },
+          "partReference": 151.33701657458562,
+          "hash": "2dbefc5cb0ea8ed110389b646eef2265f53fbf98a34cd3a03ac17327b0d6753f"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E02-part1.png",
+          "state": "hit",
+          "frame": 2,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 756,
+            "top": 755,
+            "width": 288,
+            "height": 214
+          },
+          "partReference": 151.33701657458562,
+          "hash": "99accbe2018cd76aa069e6f4c162f4837832c33d9ace1399e6160434b5c289bf"
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E02-part1.png",
+          "state": "hit",
+          "frame": 3,
+          "normalization": 0.7071823204419889,
+          "rect": {
+            "left": 1098,
+            "top": 840,
+            "width": 309,
+            "height": 187
+          },
+          "partReference": 151.33701657458562,
+          "hash": "846687ccd0a59d91628bb49ae11c1d0f395bdc681e5faaaf645f1c005c6e54fb"
+        }
+      ],
+      "partsReport": [
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E02-part0.png",
+          "reference": 148.50828729281767,
+          "bandCount": 3,
+          "states": [
+            "walk",
+            "retract",
+            "shell-idle"
+          ]
+        },
+        {
+          "source": "art-source/veggie-adventure/animations/v2-scene01/E02-part1.png",
+          "reference": 151.33701657458562,
+          "bandCount": 3,
+          "states": [
+            "shell-slide",
+            "wake",
+            "hit"
+          ]
+        }
+      ],
+      "scale": 0.269442995190999
+    }
+  ]
+}

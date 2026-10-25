@@ -1,4 +1,3 @@
-// 碎墙密道 — 碎墙捷径
 export default {
   "id": "2-3",
   "name": "碎墙密道",
@@ -47,42 +46,6 @@ export default {
       "y": 208,
       "w": 128,
       "h": 32
-    },
-    {
-      "x": 304,
-      "y": 192,
-      "w": 32,
-      "h": 16
-    },
-    {
-      "x": 336,
-      "y": 176,
-      "w": 32,
-      "h": 32
-    },
-    {
-      "x": 896,
-      "y": 192,
-      "w": 32,
-      "h": 16
-    },
-    {
-      "x": 928,
-      "y": 176,
-      "w": 32,
-      "h": 32
-    },
-    {
-      "x": 368,
-      "y": 144,
-      "w": 96,
-      "h": 16
-    },
-    {
-      "x": 960,
-      "y": 144,
-      "w": 96,
-      "h": 16
     }
   ],
   "blocks": [
@@ -91,87 +54,130 @@ export default {
       "y": 144,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "carrot"
-    },
-    {
-      "x": 608,
-      "y": 144,
-      "w": 16,
-      "h": 16,
-      "kind": "reward",
-      "item": "chili"
+      "kind": "brick",
+      "item": "carrot",
+      "breakable": true
     },
     {
       "x": 1248,
       "y": 144,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "star"
+      "kind": "brick",
+      "item": "star",
+      "breakable": true
     },
     {
-      "x": 416,
+      "x": 304,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 320,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 336,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 352,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 336,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 352,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 896,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 912,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 928,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 944,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 928,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 944,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 368,
       "y": 144,
       "w": 16,
       "h": 16,
-      "kind": "brick"
+      "kind": "brick",
+      "breakable": true
     },
     {
-      "x": 432,
+      "x": 384,
       "y": 144,
       "w": 16,
       "h": 16,
-      "kind": "brick"
-    },
-    {
-      "x": 448,
-      "y": 144,
-      "w": 16,
-      "h": 16,
-      "kind": "brick"
-    },
-    {
-      "x": 960,
-      "y": 144,
-      "w": 16,
-      "h": 16,
-      "kind": "brick"
-    },
-    {
-      "x": 976,
-      "y": 144,
-      "w": 16,
-      "h": 16,
-      "kind": "brick"
-    },
-    {
-      "x": 992,
-      "y": 144,
-      "w": 16,
-      "h": 16,
-      "kind": "brick"
-    },
-    {
-      "x": 1200,
-      "y": 144,
-      "w": 16,
-      "h": 16,
-      "kind": "brick"
-    },
-    {
-      "x": 1216,
-      "y": 144,
-      "w": 16,
-      "h": 16,
-      "kind": "brick"
-    },
-    {
-      "x": 1232,
-      "y": 144,
-      "w": 16,
-      "h": 16,
-      "kind": "brick"
+      "kind": "brick",
+      "breakable": true
     }
   ],
   "enemies": [
@@ -249,7 +255,7 @@ export default {
     },
     {
       "x": 352,
-      "y": 176,
+      "y": 160,
       "w": 10,
       "h": 12,
       "kind": "seed",

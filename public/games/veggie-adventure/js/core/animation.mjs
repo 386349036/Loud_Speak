@@ -1,18 +1,18 @@
-import {ENEMY_ART} from './enemies.mjs';
+import {ENEMY_ART,enemyFacing} from './enemies.mjs';
 export function frameAt(clip,elapsed){const n=Math.floor(Math.max(0,elapsed)*clip.fps+1e-7);return clip.loop?n%clip.frames:Math.min(clip.frames-1,n);}
-export function playerClip(game){const p=game.p;if(game.mode==='dead')return 'death';if(game.mode==='won')return 'victory';if(p.hurt>1.15)return 'hurt';if(p.form===2&&p.shotCooldown>.02)return 'throw';if(p.crouch)return 'crouch';if(p.inWater)return 'swim';if(!p.grounded)return p.vy<0?'jump-rise':'jump-fall';return Math.abs(p.vx)>85?'run':Math.abs(p.vx)>4?'walk':'idle';}
+export function playerClip(game){const p=game.p;if(game.mode==='dead')return 'death';if(game.mode==='won')return 'victory';if(p.hurt>1.15)return 'hurt';if(p.form===2&&p.shotCooldown>.02)return 'throw';if(p.crouch)return 'crouch';if(p.inWater)return 'swim';if(!p.grounded)return p.vy<0?'jump-rise':'jump-fall';return Math.abs(p.vx)>4?'run':'idle';}
 export function enemyClip(e){
- if(e.dead)return e.kind==='mushroom'?'flatten':e.kind==='bolt'?'fall':'hit';
- if(e.state==='rolling')return 'shell-slide';if(e.state==='shell')return e.timer>8.6?'wake':'shell-idle';
+ if(e.dead)return e.kind==='mushroom'&&e.defeatedBy==='stomp'?'flatten':e.kind==='bolt'?'fall':'hit';
+ if(e.state==='rolling')return 'shell-slide';if(e.state==='shell')return e.timer>=8?'wake':'shell-idle';
  switch(e.kind){
  case 'mushroom':case 'cabbage':case 'walnut':return 'walk';
  case 'spike':return e.grounded?'walk':'fall';
  case 'jelly':return (e.phase||0)%2<.5?'pulse':'float';
  case 'fish':return 'swim';
  case 'corn':return e.warning?'windup':e.cooldown>2.95?'throw':e.cooldown>2.55?'recover':!e.grounded?'jump':'walk';
- case 'trap':{const t=(e.phase||0)%3;return t<.3?'retract':t<1.1?'hidden':t<1.5?'emerge':'idle';}
- case 'cloud':return e.warning?'windup':e.cooldown>2.6?'drop':'float';
- case 'bolt':return 'fly';case 'winged':return 'fly';case 'leaper':return e.vy<0?'leap':e.grounded?'splash':'fall';
+ case 'trap':{const t=(e.phase||0)%3;return t<.8?'hidden':t<1.2?'emerge':t<2.6?'idle':'retract';}
+ case 'cloud':return e.warning?'windup':e.dropTimer>0?'drop':'float';
+ case 'bolt':return 'fly';case 'winged':return 'fly';case 'leaper':return e.leapPhase==='wait'?'hidden':e.leapPhase==='splash'?'splash':e.vy<0?'leap':e.grounded?'splash':'fall';
  default:return 'idle';}
 }
 export function bossClip(b){
@@ -20,6 +20,8 @@ export function bossClip(b){
  const kind=b.kind,t=b.timer||0;
  if(b.phase==='expose')return ['expose','expose','stun','stagger','stranded','open','exhaust','expose','open'][kind];
  if(b.phase==='recover')return 'hit';
+ if(kind===1&&b.phase==='attack'){if(b.pattern==='seeds')return 'windup';if(b.pattern==='dash')return 'land';return t>.8?'land':'jump';}
+ if(kind===8&&b.phase==='attack'){const volley=b.pattern==='volley'||(!b.pattern&&b.cycle%2===0);return volley?'seed-fan':t>.75?'land':'jump';}
  if(b.phase==='windup')return kind===6?'cast-high':kind===7?(b.head?'right-attack':'left-attack'):'windup';
  if(b.phase==='attack')return ({1:t>.75?'land':'jump',2:t<.4?'throw':'roll',3:t<.6?'throw':'dash',4:t<.3?'spray':'leap',5:t<.35?'shed':'roll',6:t<.45?'cast-high':t<.9?'cast-low':'seed',7:t<.6?(b.head?'right-attack':'left-attack'):'sweep',8:b.cycle%2?(t>.75?'land':'jump'):'seed-fan'})[kind];
  return kind===4?'swim':kind===8&&b.hp===1?'enrage':'idle';
@@ -32,16 +34,17 @@ export class AnimationPlayer{
  update(game,dt){
   if(this.game!==game||game.time<this.lastTime||this.player&&this.player!==game.p){this.reset();this.game=game;}this.player=game.p;
   this.lastTime=game.time;this.time+=dt;this.ghosts=this.ghosts.filter(g=>(g.elapsed+=dt)<.5);this.effects=this.effects.filter(e=>(e.elapsed+=dt)<.5);
-  const p=game.p;this.track(p,'P01-'+p.form,playerClip(game),dt);
+  const p=game.p,clip=playerClip(game),rate=clip==='run'?Math.max(.35,Math.min(1,Math.abs(p.vx)/112)):1;this.track(p,'P01-'+p.form,clip,dt*rate);
   const live=new Set([p,'boss','N01','N02']);
   for(const e of game.enemies){const old=this.previous.get(e);let actor=ENEMY_ART[e.kind],clip=enemyClip(e);live.add(e);
-   if(old&&!old.dead&&e.dead)this.ghosts.push({actor,clip,x:e.x,y:e.y,w:e.w,h:e.h,flip:e.vx<0,elapsed:0});
+   if(old&&!old.dead&&e.dead)this.ghosts.push({actor,clip,x:e.x,y:e.y,w:e.w,h:e.h,flip:enemyFacing(e)<0,elapsed:0});
    let track=this.tracks.get(e);
-   if(old&&old.kind==='winged'&&e.kind==='cabbage')track=this.track(e,'E11','lose-wings',0,'transition');
+   if(e.dead)track=this.track(e,actor,clip,dt);
+   else if(old&&old.kind==='winged'&&e.kind==='cabbage')track=this.track(e,'E11','lose-wings',0,'transition');
    else if(old&&old.state!=='shell'&&e.state==='shell')track=this.track(e,actor,'retract',0,'transition');
    else if(old&&!old.grounded&&e.grounded&&['spike','leaper'].includes(e.kind))track=this.track(e,actor,e.kind==='spike'?'unfold':'splash',0,'transition');
    else if(track?.token==='transition'&&track.elapsed<.35){track.elapsed+=dt;}
-   else this.track(e,actor,clip,dt);
+   else this.track(e,actor,clip,clip==='walk'?dt*Math.min(1.4,Math.abs(e.vx)/20):dt,clip==='walk'&&Math.abs(e.vx)<.1?'stand':'');
    this.previous.set(e,{kind:e.kind,state:e.state,dead:e.dead,grounded:e.grounded});
   }
   for(const [e,old] of this.previous)if(!live.has(e)){if(e.dead&&!old.dead)this.ghosts.push({actor:ENEMY_ART[old.kind],clip:old.kind==='bolt'?'fall':'hit',x:e.x,y:e.y,w:e.w,h:e.h,flip:e.vx<0,elapsed:0});this.previous.delete(e);}

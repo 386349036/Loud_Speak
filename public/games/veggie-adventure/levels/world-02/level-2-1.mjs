@@ -1,4 +1,3 @@
-// 根下入口 — 低顶与蹲行
 export default {
   "id": "2-1",
   "name": "根下入口",
@@ -29,32 +28,6 @@ export default {
       "y": 208,
       "w": 752,
       "h": 32
-    },
-    {
-      "x": 544,
-      "y": 192,
-      "w": 32,
-      "h": 16
-    },
-    {
-      "x": 576,
-      "y": 176,
-      "w": 32,
-      "h": 32
-    },
-    {
-      "x": 256,
-      "y": 160,
-      "w": 128,
-      "h": 32,
-      "ceiling": true
-    },
-    {
-      "x": 992,
-      "y": 160,
-      "w": 144,
-      "h": 32,
-      "ceiling": true
     }
   ],
   "blocks": [
@@ -63,45 +36,347 @@ export default {
       "y": 144,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "carrot"
+      "kind": "brick",
+      "item": "carrot",
+      "breakable": true
     },
     {
       "x": 608,
       "y": 144,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "chili"
+      "kind": "brick",
+      "item": "chili",
+      "breakable": true
     },
     {
       "x": 1248,
       "y": 144,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "star"
+      "kind": "brick",
+      "item": "star",
+      "breakable": true
     },
     {
-      "x": 864,
-      "y": 144,
+      "x": 544,
+      "y": 192,
       "w": 16,
       "h": 16,
-      "kind": "brick"
+      "kind": "brick",
+      "breakable": true
     },
     {
-      "x": 880,
-      "y": 144,
+      "x": 560,
+      "y": 192,
       "w": 16,
       "h": 16,
-      "kind": "brick"
+      "kind": "brick",
+      "breakable": true
     },
     {
-      "x": 896,
-      "y": 144,
+      "x": 576,
+      "y": 176,
       "w": 16,
       "h": 16,
-      "kind": "brick"
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 592,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 576,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 592,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 256,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 272,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 288,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 304,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 320,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 336,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 352,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 368,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 256,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 272,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 288,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 304,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 320,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 336,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 352,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 368,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 992,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 1008,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 1024,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 1040,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 1056,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 1072,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 1088,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 1104,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 1120,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 992,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 1008,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 1024,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 1040,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 1056,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 1072,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 1088,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 1104,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 1120,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
     }
   ],
   "enemies": [
@@ -179,7 +454,7 @@ export default {
     },
     {
       "x": 352,
-      "y": 176,
+      "y": 144,
       "w": 10,
       "h": 12,
       "kind": "seed",
@@ -195,7 +470,7 @@ export default {
     },
     {
       "x": 576,
-      "y": 176,
+      "y": 160,
       "w": 10,
       "h": 12,
       "kind": "seed",
@@ -227,7 +502,7 @@ export default {
     },
     {
       "x": 1024,
-      "y": 176,
+      "y": 144,
       "w": 10,
       "h": 12,
       "kind": "seed",

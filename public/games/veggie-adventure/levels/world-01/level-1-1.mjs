@@ -38,30 +38,6 @@ export default {
       "y": 208,
       "w": 240,
       "h": 32
-    },
-    {
-      "x": 768,
-      "y": 192,
-      "w": 32,
-      "h": 16
-    },
-    {
-      "x": 800,
-      "y": 176,
-      "w": 32,
-      "h": 32
-    },
-    {
-      "x": 832,
-      "y": 160,
-      "w": 32,
-      "h": 48
-    },
-    {
-      "x": 896,
-      "y": 144,
-      "w": 80,
-      "h": 16
     }
   ],
   "blocks": [
@@ -70,46 +46,57 @@ export default {
       "y": 144,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "carrot"
+      "kind": "brick",
+      "item": "carrot",
+      "breakable": true
     },
     {
       "x": 192,
       "y": 144,
       "w": 16,
       "h": 16,
-      "kind": "brick"
+      "kind": "brick",
+      "breakable": true
     },
     {
-      "x": 304,
-      "y": 144,
+      "x": 784,
+      "y": 192,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "chili"
+      "kind": "brick",
+      "breakable": true
     },
     {
-      "x": 480,
-      "y": 144,
+      "x": 800,
+      "y": 176,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "star"
+      "kind": "brick",
+      "breakable": true
     },
     {
-      "x": 832,
-      "y": 96,
+      "x": 816,
+      "y": 176,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "chili"
+      "kind": "brick",
+      "breakable": true
     },
     {
-      "x": 1072,
-      "y": 144,
+      "x": 800,
+      "y": 192,
       "w": 16,
       "h": 16,
-      "kind": "brick"
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 816,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
     }
   ],
   "enemies": [
@@ -142,7 +129,7 @@ export default {
       "dead": false
     },
     {
-      "x": 1088,
+      "x": 1152,
       "kind": "cabbage",
       "id": 2,
       "y": 190,
@@ -153,10 +140,13 @@ export default {
       "state": "walk",
       "timer": 0,
       "grace": 0,
-      "dead": false
+      "dead": false,
+      "homeX": 1152,
+      "patrolLeft": 1136,
+      "patrolRight": 1200
     },
     {
-      "x": 1200,
+      "x": 1408,
       "kind": "mushroom",
       "id": 3,
       "y": 190,
@@ -167,7 +157,10 @@ export default {
       "state": "walk",
       "timer": 0,
       "grace": 0,
-      "dead": false
+      "dead": false,
+      "homeX": 1408,
+      "patrolLeft": 1376,
+      "patrolRight": 1440
     }
   ],
   "items": [

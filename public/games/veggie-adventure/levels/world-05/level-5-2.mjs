@@ -1,4 +1,3 @@
-// 荆棘落脚 — 安全落脚台
 export default {
   "id": "5-2",
   "name": "荆棘落脚",
@@ -41,24 +40,6 @@ export default {
       "y": 208,
       "w": 240,
       "h": 32
-    },
-    {
-      "x": 288,
-      "y": 176,
-      "w": 64,
-      "h": 16
-    },
-    {
-      "x": 688,
-      "y": 176,
-      "w": 64,
-      "h": 16
-    },
-    {
-      "x": 1104,
-      "y": 176,
-      "w": 64,
-      "h": 16
     }
   ],
   "blocks": [
@@ -67,24 +48,57 @@ export default {
       "y": 144,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "carrot"
+      "kind": "brick",
+      "item": "carrot",
+      "breakable": true
     },
     {
-      "x": 608,
-      "y": 144,
+      "x": 288,
+      "y": 176,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "chili"
+      "kind": "brick",
+      "breakable": true
     },
     {
-      "x": 1248,
-      "y": 144,
+      "x": 304,
+      "y": 176,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "star"
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 688,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 704,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 720,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 1104,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
     }
   ],
   "enemies": [
@@ -160,7 +174,7 @@ export default {
     },
     {
       "x": 688,
-      "y": 176,
+      "y": 160,
       "w": 10,
       "h": 12,
       "kind": "seed",

@@ -1,8 +1,9 @@
 import LEVEL from '../../levels/world-01/level-1-1.mjs';
 import {copy,overlap} from './geometry.mjs';
 import {updateEnvironment,updateDangers} from './environment.mjs';
-import {updateEnemies,fireproof,defeat} from './enemies.mjs';
+import {updateEnemies,fireproof,defeat,enemyActive} from './enemies.mjs';
 import {updateBoss,hurtBoss,bossHitbox} from './bosses.mjs';
+import {jumpProfile} from './jump-profile.mjs';
 export {overlap};
 export const TILE=16,STEP=1/120;
 export function makeLevel(){return copy(LEVEL);}
@@ -16,18 +17,18 @@ export class Game{
  solids(){return [...this.level.platforms,...this.blocks.filter(b=>!b.broken),...this.movers.filter(m=>!m.fallen),...this.gates.filter(g=>!g.open)];}
  snapshot(){return copy({p:this.p,enemies:this.enemies,blocks:this.blocks,items:this.items,movers:this.movers,turrets:this.turrets,gates:this.gates,boss:this.boss,time:this.time,serial:this.serial,score:this.score,remaining:this.remaining,checkpointReached:this.checkpointReached});}
  saveCheckpoint(){this.checkpoint=this.snapshot();}
- restore(){Object.assign(this,copy(this.checkpoint));this.p.star=0;this.p.hurt=0;this.p.vx=0;this.p.vy=0;this.shots=[];this.dangers=[];this.animationEvents=[];this.mode='playing';this.deathTimer=0;}
+ restore(){Object.assign(this,copy(this.checkpoint));this.p.star=0;this.p.hurt=0;this.p.vx=0;this.p.vy=0;this.p.runCharge=0;this.p.jumpPhysics=null;this.p.coyote=0;this.p.jumpBuffer=0;this.p.dropThrough=0;this.shots=[];this.dangers=[];this.animationEvents=[];this.mode='playing';this.deathTimer=0;}
  emitAnimation(type,body){this.animationEvents.push({type,body,x:body.x,y:body.y});if(this.animationEvents.length>64)this.animationEvents.shift();}
  kill(){if(this.mode==='playing'){this.mode='dead';this.deathTimer=.7;}}
  damage(){if(this.p.star>0||this.p.hurt>0||this.mode!=='playing')return;if(this.p.form){this.p.form=0;this.p.y+=this.p.h-14;this.p.h=14;this.p.hurt=1.5;}else this.kill();}
- resizePlayer(crouch=false){const p=this.p,h=p.form&&!crouch?28:14;if(h>p.h&&this.solids().some(b=>overlap({...p,y:p.y+p.h-h,h},b))){p.crouch=!!p.form;return;}p.y+=p.h-h;p.h=h;p.crouch=!!p.form&&crouch;}
+ resizePlayer(crouch=false){const p=this.p,h=p.form&&!crouch?28:14;if(h>p.h&&this.solids().some(b=>!b.oneWay&&overlap({...p,y:p.y+p.h-h,h},b))){p.crouch=!!p.form;return;}p.y+=p.h-h;p.h=h;p.crouch=!!p.form&&crouch;}
  collect(kind){if(kind==='seed')this.score+=100;else if(kind==='star')this.p.star=10;else {this.score+=1000;if(kind==='carrot')this.p.form=Math.max(1,this.p.form);if(kind==='chili')this.p.form=Math.min(2,this.p.form+1);this.resizePlayer(this.p.crouch);}}
- hitBlock(b){if(b.kind==='reward'&&!b.used){b.used=true;this.items.push({x:b.x+2,y:b.y-14,w:12,h:14,vx:25,vy:0,kind:b.item,collected:false});}else if(b.kind==='brick'&&this.p.form){b.broken=true;this.score+=50;}}
+ hitBlock(b){if(b.broken)return;if(b.breakable){b.broken=true;this.score+=50;if(b.item&&!b.used){b.used=true;this.items.push({x:b.x+2,y:b.y-14,w:12,h:14,vx:25,vy:0,kind:b.item,collected:false});}}else if(b.kind==='reward'&&!b.used){b.used=true;this.items.push({x:b.x+2,y:b.y-14,w:12,h:14,vx:25,vy:0,kind:b.item,collected:false});}else if(b.kind==='brick'&&this.p.form){b.broken=true;this.score+=50;}}
  move(body,dt,player=false){let wall=false;body.x+=body.vx*dt;
-  for(const b of this.solids())if(overlap(body,b)){if(body.vx>0)body.x=b.x-body.w;else if(body.vx<0)body.x=b.x+b.w;wall=true;}
+  for(const b of this.solids())if(!b.oneWay&&overlap(body,b)){if(body.vx>0)body.x=b.x-body.w;else if(body.vx<0)body.x=b.x+b.w;wall=true;}
   if(wall)body.vx=player?0:-body.vx;
-  body.grounded=false;const vy=body.vy;body.y+=vy*dt;
-  for(const b of this.solids())if(overlap(body,b)){if(vy>0){body.y=b.y-body.h;body.grounded=true;}else if(vy<0){body.y=b.y+b.h;if(player)this.hitBlock(b);}body.vy=0;}
+  body.grounded=false;const vy=body.vy,oldBottom=body.y+body.h;body.y+=vy*dt;
+  for(const b of this.solids())if((!b.oneWay||(vy>0&&oldBottom<=b.y+.1&&!(player&&body.dropThrough>0)))&&overlap(body,b)){if(vy>0){body.y=b.y-body.h;body.grounded=true;}else if(vy<0){body.y=b.y+b.h;if(player)this.hitBlock(b);}body.vy=0;}
   return wall;
  }
  shoot(){const p=this.p;if(p.form!==2||p.crouch||p.shotCooldown>0||this.shots.length>=2)return;this.shots.push({x:p.x+(p.facing>0?p.w:-4),y:p.y+8,w:4,h:4,vx:p.facing*150,vy:50,life:3});p.shotCooldown=.25;}
@@ -35,15 +36,23 @@ export class Game{
   if(this.mode==='won')return;if(this.mode==='dead'){this.deathTimer-=dt;if(this.deathTimer<=0)this.restore();return;}
   const p=this.p;this.time+=dt;this.remaining-=dt;p.hurt=Math.max(0,p.hurt-dt);p.star=Math.max(0,p.star-dt);p.shotCooldown=Math.max(0,p.shotCooldown-dt);p.swimCooldown=Math.max(0,(p.swimCooldown||0)-dt);
   updateEnvironment(this,dt);this.resizePlayer(!!input.down);p.inWater=(this.level.water||[]).some(w=>overlap({...p,y:p.y+p.h/2,h:p.h/2},w));
-  const dir=(input.right?1:0)-(input.left?1:0),speed=p.inWater?58:p.crouch?32:input.run?112:76,target=dir*speed;
-  p.vx+=Math.max(-600*dt,Math.min(600*dt,target-p.vx));if(dir)p.facing=dir;
-  if(p.inWater){if(input.jump&&p.swimCooldown===0){p.vy=-115;p.swimCooldown=.25;}p.vy=Math.min(55,p.vy+170*dt);}
-  else {if(input.jumpPressed&&p.grounded){p.vy=-210;p.grounded=false;}if(!input.jump&&p.vy<-85)p.vy=-85;p.vy=Math.min(280,p.vy+600*dt);}
-  const oldBottom=p.y+p.h;this.move(p,dt,true);p.x=Math.max(0,Math.min(this.level.width-p.w,p.x));
+  const dir=(input.right?1:0)-(input.left?1:0),speed=p.inWater?58:p.crouch?32:112,target=dir*speed;
+  const accelerating=dir&&p.vx*dir>=0&&Math.abs(p.vx)<speed;
+  const acceleration=p.inWater||p.crouch?600:!p.grounded?(dir?224:0):accelerating?112:dir?448:320;
+  p.vx+=Math.max(-acceleration*dt,Math.min(acceleration*dt,target-p.vx));if(dir)p.facing=dir;
+  p.runCharge=p.inWater||p.crouch?0:Math.min(1,Math.abs(p.vx)/112);
+  p.coyote=p.grounded?.075:Math.max(0,(p.coyote||0)-dt);
+  p.jumpBuffer=input.jumpPressed?.1:Math.max(0,(p.jumpBuffer||0)-dt);
+  p.dropThrough=Math.max(0,(p.dropThrough||0)-dt);
+  if(input.down&&input.jumpPressed&&p.grounded&&this.movers.some(m=>m.oneWay&&p.x+p.w>m.x&&p.x<m.x+m.w&&Math.abs(p.y+p.h-m.y)<1)){p.dropThrough=.18;p.jumpBuffer=0;p.coyote=0;p.grounded=false;p.y+=2;p.vy=30;}
+  if(p.inWater){p.coyote=0;p.jumpBuffer=0;if(input.jump&&p.swimCooldown===0){p.vy=-115;p.swimCooldown=.25;}p.vy=Math.min(55,p.vy+170*dt);}
+  else {if(p.jumpBuffer>0&&(p.grounded||p.coyote>0)){p.jumpPhysics=jumpProfile(p.form,p.runCharge);p.vy=-p.jumpPhysics.velocity;p.grounded=false;p.coyote=0;p.jumpBuffer=0;}const j=p.jumpPhysics||jumpProfile(p.form,p.runCharge);if(!input.jump&&p.vy<-j.cutoff)p.vy=-j.cutoff;p.vy=Math.min(350,p.vy+(p.vy<0?j.gravity:j.fallGravity)*dt);}
+  const oldBottom=p.y+p.h;this.move(p,dt,true);const boundedX=Math.max(0,Math.min(this.level.width-p.w,p.x));if(boundedX!==p.x)p.vx=0;p.x=boundedX;
+  p.runCharge=p.inWater||p.crouch?0:Math.min(1,Math.abs(p.vx)/112);if(p.grounded||p.inWater)p.jumpPhysics=null;
   if(input.fire)this.shoot();updateEnemies(this,dt,oldBottom);updateBoss(this,dt,oldBottom);
   for(const s of this.shots){s.life-=dt;s.vy=Math.min(220,s.vy+500*dt);if(this.move(s,dt))s.life=0;if(s.grounded)s.vy=-100;
    if(this.boss&&!this.boss.dead&&this.boss.active&&overlap(s,bossHitbox(this.boss))){hurtBoss(this,'fire');s.life=0;}
-   for(const e of this.enemies)if(!e.dead&&!(e.kind==='trap'&&!e.active)&&overlap(s,e)){if(!fireproof(e))defeat(this,e);else this.emitAnimation('deflect',e);s.life=0;break;}
+   for(const e of this.enemies)if(enemyActive(e)&&overlap(s,e)){if(!fireproof(e))defeat(this,e);else this.emitAnimation('deflect',e);s.life=0;break;}
   }
   this.shots=this.shots.filter(s=>s.life>0&&s.y<270&&s.x>=0&&s.x<this.level.width);
   for(const i of this.items)if(!i.collected){if(i.kind!=='seed'){i.vx=Number.isFinite(i.vx)?i.vx:25;i.vy=Math.min(220,(i.vy||0)+500*dt);this.move(i,dt);if(i.y>270){i.collected=true;continue;}}if(overlap(p,i)){i.collected=true;this.collect(i.kind);}}

@@ -1,0 +1,30 @@
+{
+  "reports": [
+    {
+      "id": "P01-0",
+      "frames": 44,
+      "sourceGroups": 3
+    },
+    {
+      "id": "P01-1",
+      "frames": 44,
+      "sourceGroups": 3
+    },
+    {
+      "id": "P01-2",
+      "frames": 44,
+      "sourceGroups": 3
+    },
+    {
+      "id": "E01",
+      "frames": 12,
+      "sourceGroups": 1
+    },
+    {
+      "id": "E02",
+      "frames": 24,
+      "sourceGroups": 2
+    }
+  ],
+  "visualVerified": false
+}

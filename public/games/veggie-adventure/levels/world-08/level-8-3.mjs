@@ -1,4 +1,3 @@
-// 三重试炼 — 三段组合
 export default {
   "id": "8-3",
   "name": "三重试炼",
@@ -41,18 +40,6 @@ export default {
       "y": 208,
       "w": 288,
       "h": 32
-    },
-    {
-      "x": 704,
-      "y": 192,
-      "w": 32,
-      "h": 16
-    },
-    {
-      "x": 736,
-      "y": 176,
-      "w": 32,
-      "h": 32
     }
   ],
   "blocks": [
@@ -61,24 +48,34 @@ export default {
       "y": 144,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "carrot"
+      "kind": "brick",
+      "item": "carrot",
+      "breakable": true
     },
     {
       "x": 608,
       "y": 144,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "chili"
+      "kind": "brick",
+      "item": "chili",
+      "breakable": true
     },
     {
-      "x": 1248,
-      "y": 144,
+      "x": 704,
+      "y": 192,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "star"
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 720,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
     }
   ],
   "enemies": [

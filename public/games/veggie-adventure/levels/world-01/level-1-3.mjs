@@ -1,4 +1,3 @@
-// 根桥试炼 — 阶梯与木桥
 export default {
   "id": "1-3",
   "name": "根桥试炼",
@@ -47,44 +46,6 @@ export default {
       "y": 208,
       "w": 240,
       "h": 32
-    },
-    {
-      "x": 224,
-      "y": 192,
-      "w": 32,
-      "h": 16
-    },
-    {
-      "x": 256,
-      "y": 176,
-      "w": 32,
-      "h": 32
-    },
-    {
-      "x": 784,
-      "y": 192,
-      "w": 32,
-      "h": 16
-    },
-    {
-      "x": 816,
-      "y": 176,
-      "w": 32,
-      "h": 32
-    },
-    {
-      "x": 448,
-      "y": 192,
-      "w": 32,
-      "h": 16,
-      "bridge": true
-    },
-    {
-      "x": 1008,
-      "y": 192,
-      "w": 32,
-      "h": 16,
-      "bridge": true
     }
   ],
   "blocks": [
@@ -93,24 +54,57 @@ export default {
       "y": 144,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "carrot"
+      "kind": "brick",
+      "item": "carrot",
+      "breakable": true
     },
     {
-      "x": 608,
-      "y": 144,
+      "x": 224,
+      "y": 192,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "chili"
+      "kind": "brick",
+      "breakable": true
     },
     {
-      "x": 1248,
-      "y": 144,
+      "x": 240,
+      "y": 192,
       "w": 16,
       "h": 16,
-      "kind": "reward",
-      "item": "star"
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 256,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 272,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 256,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
+    },
+    {
+      "x": 272,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true
     }
   ],
   "enemies": [
