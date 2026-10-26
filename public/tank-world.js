@@ -26,7 +26,7 @@ case 5:
 // Open spawn apron and shared base area. All fixed choke points are >=2 tiles.
 for(let y=0;y<3;y++)for(let x=0;x<26;x++)a[y][x]=0;
 for(let y=23;y<26;y++)for(let x=0;x<26;x++)a[y][x]=0;
-for(let x=11;x<=14;x++)a[23][x]=1;for(let y=24;y<26;y++){a[y][11]=a[y][14]=1;a[y][12]=a[y][13]=4}
+for(let x=11;x<=14;x++)a[23][x]=2;for(let y=24;y<26;y++){a[y][11]=a[y][14]=1;a[y][12]=a[y][13]=4}
 // Alternate a small number of brick/steel accents on later cycles.
 if(level>6)for(let y=4;y<21;y++)for(let x=1;x<25;x++)if(a[y][x]===1&&(x*7+y*11+level)%19===0)a[y][x]=2;
 const terrain=Array.from({length:26},()=>Array(26).fill('normal')),decor=[];
