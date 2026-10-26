@@ -1,0 +1,35 @@
+{
+  "source": "art-source/veggie-adventure/effects/trap-soil-v1/source.png",
+  "cells": [
+    {
+      "left": 36,
+      "top": 569,
+      "width": 324,
+      "height": 103
+    },
+    {
+      "left": 414,
+      "top": 568,
+      "width": 331,
+      "height": 104
+    },
+    {
+      "left": 796,
+      "top": 536,
+      "width": 320,
+      "height": 136
+    },
+    {
+      "left": 1174,
+      "top": 474,
+      "width": 332,
+      "height": 198
+    }
+  ],
+  "scale": 0.18072289156626506,
+  "frameWidth": 64,
+  "frameHeight": 40,
+  "frames": 4,
+  "transparent": true,
+  "enemyVisualScale": 1.5
+}

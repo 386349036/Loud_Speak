@@ -1,30 +1,40 @@
 import {ENEMY_ART,enemyFacing} from './enemies.mjs';
+import {trapStage} from './trap-profile.mjs';
+import {bossEnraged} from './boss-balance.mjs';
 export function frameAt(clip,elapsed){const n=Math.floor(Math.max(0,elapsed)*clip.fps+1e-7);return clip.loop?n%clip.frames:Math.min(clip.frames-1,n);}
-export function playerClip(game){const p=game.p;if(game.mode==='dead')return 'death';if(game.mode==='won')return 'victory';if(p.hurt>1.15)return 'hurt';if(p.form===2&&p.shotCooldown>.02)return 'throw';if(p.crouch)return 'crouch';if(p.inWater)return 'swim';if(!p.grounded)return p.vy<0?'jump-rise':'jump-fall';return Math.abs(p.vx)>4?'run':'idle';}
+export function playerClip(game){const p=game.p;if(game.mode==='dead'||game.mode==='gameover')return 'death';if(game.mode==='won')return 'victory';if(p.hurt>1.15)return 'hurt';if(p.form===2&&p.shotCooldown>.02)return 'throw';if(p.crouch)return 'crouch';if(p.inWater)return 'swim';if(!p.grounded)return p.vy<0?'jump-rise':'jump-fall';return Math.abs(p.vx)>4?'run':'idle';}
 export function enemyClip(e){
  if(e.dead)return e.kind==='mushroom'&&e.defeatedBy==='stomp'?'flatten':e.kind==='bolt'?'fall':'hit';
  if(e.state==='rolling')return 'shell-slide';if(e.state==='shell')return e.timer>=8?'wake':'shell-idle';
  switch(e.kind){
+ case 'anemone':return e.plantPhase==='windup'?'windup':e.plantPhase==='attack'?'attack':'idle';
  case 'mushroom':case 'cabbage':case 'walnut':return 'walk';
- case 'spike':return e.grounded?'walk':'fall';
+ case 'spike':return e.intent==='spine-volley'?'unfold':e.grounded?'walk':'fall';
  case 'jelly':return (e.phase||0)%2<.5?'pulse':'float';
  case 'fish':return 'swim';
  case 'corn':return e.warning?'windup':e.cooldown>2.95?'throw':e.cooldown>2.55?'recover':!e.grounded?'jump':'walk';
- case 'trap':{const t=(e.phase||0)%3;return t<.8?'hidden':t<1.2?'emerge':t<2.6?'idle':'retract';}
+ case 'trap':{const stage=trapStage(e).name;return stage==='rumble'?'hidden':stage;}
  case 'cloud':return e.warning?'windup':e.dropTimer>0?'drop':'float';
  case 'bolt':return 'fly';case 'winged':return 'fly';case 'leaper':return e.leapPhase==='wait'?'hidden':e.leapPhase==='splash'?'splash':e.vy<0?'leap':e.grounded?'splash':'fall';
  default:return 'idle';}
 }
 export function bossClip(b){
- if(b.dead)return 'defeat';if(b.invulnerable>.65)return 'hit';
+ if(b.dead)return 'defeat';if(b.hitFlash>0)return 'hit';
  const kind=b.kind,t=b.timer||0;
  if(b.phase==='expose')return ['expose','expose','stun','stagger','stranded','open','exhaust','expose','open'][kind];
  if(b.phase==='recover')return 'hit';
+ if(b.phase==='attack'){
+  if(kind===2&&b.pattern==='charge')return 'roll';
+  if(kind===3&&b.pattern==='dash')return 'dash';
+  if(kind===3&&b.pattern==='seed-dash')return t<.45?'throw':'dash';
+  if(kind===4&&b.pattern==='double-fan'&&t>=.5&&t<.75)return 'spray';
+  if(kind===6&&b.pattern==='burst')return 'seed';
+ }
  if(kind===1&&b.phase==='attack'){if(b.pattern==='seeds')return 'windup';if(b.pattern==='dash')return 'land';return t>.8?'land':'jump';}
  if(kind===8&&b.phase==='attack'){const volley=b.pattern==='volley'||(!b.pattern&&b.cycle%2===0);return volley?'seed-fan':t>.75?'land':'jump';}
  if(b.phase==='windup')return kind===6?'cast-high':kind===7?(b.head?'right-attack':'left-attack'):'windup';
  if(b.phase==='attack')return ({1:t>.75?'land':'jump',2:t<.4?'throw':'roll',3:t<.6?'throw':'dash',4:t<.3?'spray':'leap',5:t<.35?'shed':'roll',6:t<.45?'cast-high':t<.9?'cast-low':'seed',7:t<.6?(b.head?'right-attack':'left-attack'):'sweep',8:b.cycle%2?(t>.75?'land':'jump'):'seed-fan'})[kind];
- return kind===4?'swim':kind===8&&b.hp===1?'enrage':'idle';
+ return kind===4?'swim':kind===8&&bossEnraged(b)?'enrage':'idle';
 }
 // Presentation owns all clocks and transient sprites; simulation objects remain untouched.
 export class AnimationPlayer{
@@ -42,7 +52,7 @@ export class AnimationPlayer{
    if(e.dead)track=this.track(e,actor,clip,dt);
    else if(old&&old.kind==='winged'&&e.kind==='cabbage')track=this.track(e,'E11','lose-wings',0,'transition');
    else if(old&&old.state!=='shell'&&e.state==='shell')track=this.track(e,actor,'retract',0,'transition');
-   else if(old&&!old.grounded&&e.grounded&&['spike','leaper'].includes(e.kind))track=this.track(e,actor,e.kind==='spike'?'unfold':'splash',0,'transition');
+   else if(old&&!old.grounded&&e.grounded&&e.state==='walk'&&['spike','leaper'].includes(e.kind))track=this.track(e,actor,e.kind==='spike'?'unfold':'splash',0,'transition');
    else if(track?.token==='transition'&&track.elapsed<.35){track.elapsed+=dt;}
    else this.track(e,actor,clip,clip==='walk'?dt*Math.min(1.4,Math.abs(e.vx)/20):dt,clip==='walk'&&Math.abs(e.vx)<.1?'stand':'');
    this.previous.set(e,{kind:e.kind,state:e.state,dead:e.dead,grounded:e.grounded});
@@ -51,7 +61,7 @@ export class AnimationPlayer{
   if(game.boss)this.track('boss',game.boss.id,bossClip(game.boss),dt,game.boss.phase);
   this.track('N01','N01',Math.abs(p.x-64)<48?['wave','map','talk'][Math.floor(this.time/2)%3]:'idle',dt);
   const rescued=this.tracks.get('boss');this.track('N02','N02',game.mode==='won'?'celebrate':game.boss?.dead?(rescued?.elapsed<.6?'rescue':'plant'):'idle',dt);
-  for(const event of game.animationEvents||[]){if(event.type==='deflect'){this.track(event.body,ENEMY_ART[event.body.kind],'deflect',0,'transition');this.effect('hit',event.x,event.y);}}if(game.animationEvents)game.animationEvents.length=0;
+  for(const event of game.animationEvents||[]){if(event.type==='deflect')this.track(event.body,ENEMY_ART[event.body.kind],'deflect',0,'transition');if(['enemy-block','boss-block'].includes(event.type))this.effect('spark',event.x,event.y);if(['deflect','enemy-hit','boss-hit'].includes(event.type))this.effect('hit',event.x,event.y);}if(game.animationEvents)game.animationEvents.length=0;
   for(const key of this.tracks.keys())if(!live.has(key))this.tracks.delete(key);
   if(this.observed){if(p.grounded&&!this.grounded)this.effect('dust',p.x,p.y+p.h);if(p.inWater!==this.water)this.effect('splash',p.x,p.y+p.h/2);if(game.score>this.score)this.effect('spark',p.x,p.y);if(p.hurt>this.hurt||game.mode==='dead'&&this.mode!=='dead')this.effect('hit',p.x,p.y);}
   this.observed=true;this.grounded=p.grounded;this.water=p.inWater;this.score=game.score;this.hurt=p.hurt;this.mode=game.mode;

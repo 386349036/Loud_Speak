@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "scope": "world 4 pool beds; boss-only pool excluded",
+  "levels": [
+    {
+      "id": "4-1",
+      "added": 13,
+      "totalEnemies": 23,
+      "layoutVersion": 3
+    },
+    {
+      "id": "4-2",
+      "added": 19,
+      "totalEnemies": 30,
+      "layoutVersion": 3
+    },
+    {
+      "id": "4-3",
+      "added": 14,
+      "totalEnemies": 26,
+      "layoutVersion": 3
+    },
+    {
+      "id": "4-4",
+      "added": 8,
+      "totalEnemies": 18,
+      "layoutVersion": 3
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "source": "art-source/veggie-adventure/enemies/aquatic-plant-v1/generated.png",
+  "cells": [
+    {
+      "left": 93,
+      "top": 11,
+      "width": 251,
+      "height": 227
+    },
+    {
+      "left": 464,
+      "top": 8,
+      "width": 250,
+      "height": 230
+    },
+    {
+      "left": 832,
+      "top": 8,
+      "width": 270,
+      "height": 230
+    },
+    {
+      "left": 1211,
+      "top": 15,
+      "width": 254,
+      "height": 241
+    },
+    {
+      "left": 85,
+      "top": 263,
+      "width": 283,
+      "height": 229
+    },
+    {
+      "left": 461,
+      "top": 263,
+      "width": 275,
+      "height": 249
+    },
+    {
+      "left": 830,
+      "top": 263,
+      "width": 265,
+      "height": 249
+    },
+    {
+      "left": 1200,
+      "top": 256,
+      "width": 283,
+      "height": 236
+    },
+    {
+      "left": 54,
+      "top": 512,
+      "width": 314,
+      "height": 242
+    },
+    {
+      "left": 448,
+      "top": 512,
+      "width": 306,
+      "height": 242
+    },
+    {
+      "left": 829,
+      "top": 512,
+      "width": 288,
+      "height": 242
+    },
+    {
+      "left": 1198,
+      "top": 526,
+      "width": 285,
+      "height": 228
+    },
+    {
+      "left": 88,
+      "top": 776,
+      "width": 273,
+      "height": 226
+    },
+    {
+      "left": 466,
+      "top": 793,
+      "width": 283,
+      "height": 210
+    },
+    {
+      "left": 829,
+      "top": 781,
+      "width": 273,
+      "height": 221
+    },
+    {
+      "left": 1201,
+      "top": 819,
+      "width": 279,
+      "height": 183
+    }
+  ],
+  "frameHashes": [
+    "99e6bed4b512f327d739dc2a75295ccd05eeaf311cb326529c5acd42f187e006",
+    "95cc94823b2fc6753e3c32a96532d595fd3b5647a62fe21128fd9c45bfd7aae7",
+    "b25e096a0b525b48a10e206c7c302f71bc8f7f9052ca42b85a8d2e88c45f99cd",
+    "5b5e0c790793a2597c98bf6a5f3fe3c1c7cd6546d58b1ea9739b8fdc998c574b",
+    "83a4cf4cf7d849c523d3f7f0a59de04e214350bf4073fdfe4ea950075f83c1df",
+    "bd99f77e3109e922ea1911e87082e15568306caa2caa3b275e00fc3b98cb69bd",
+    "559b19d66fcdca3c67dcc0904ff27bf06a0625c29f3b663e4a138a2b902c6d34",
+    "1ef74d2f6395a86f5145797386920ba17759ebc24c6527feefea29b3009e65ea",
+    "83df9a03f44cf27cc222abab2dc170f98edfb248728b543f3665da0d669f8bed",
+    "d64971f23e6a94a9d0054eeb05263a47bac3814ae67d60081e05473565875c27",
+    "e209f359507c3e02a2e0d6fc3f9286b78a3ec94bc23aad3511b9f5e3283d1ffb",
+    "3c31bbe75b4ca2444fecf858b01e4fefb0bcd11d709d7059b8e593442827b09b",
+    "664ff4b509610c3dd517b08b64c8d23525bcfc3ff6344406e1a36c25b6e3f62c",
+    "8842924a2cdae50e24430d96c1e9325e4a58ab94e412b13a9b497c8aee44b8f0",
+    "347084accc175b9482ca0e4bc506eb8d186216fae8018a80dcde55b5740169c7",
+    "299d3c215430c6bb8428a08461b6ddbd630f911b0c4fc27edef30113129ab259"
+  ],
+  "scale": 0.14012738853503184,
+  "referenceHeight": 32,
+  "alphaThreshold": 64,
+  "rootAnchor": [
+    24,
+    48
+  ]
+}

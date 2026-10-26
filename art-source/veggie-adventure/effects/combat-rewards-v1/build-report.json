@@ -1,0 +1,83 @@
+{
+  "tool": "built-in image_gen",
+  "sourceWidth": 1254,
+  "sourceHeight": 1254,
+  "sprites": [
+    {
+      "id": "reward-rebirth-face",
+      "path": "effects/combat-rewards-v1/reward-rebirth-face.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "effects/combat-rewards-v1/generated.png",
+      "grid": [
+        2,
+        2
+      ],
+      "cell": 0,
+      "stage": "combat-rewards-runtime-v1",
+      "visualVerified": false,
+      "sha256": "b6eb5d284b96a27b5da1c5d576728086084066f17a1e56bf0c60d67506a25d62"
+    },
+    {
+      "id": "item-rebirth",
+      "path": "effects/combat-rewards-v1/item-rebirth.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "effects/combat-rewards-v1/generated.png",
+      "grid": [
+        2,
+        2
+      ],
+      "cell": 1,
+      "stage": "combat-rewards-runtime-v1",
+      "visualVerified": false,
+      "sha256": "4594bf188ef184f63bf115bfd34d5705929455b65cd2452576c42c9e19de6789"
+    },
+    {
+      "id": "projectile-thorn",
+      "path": "effects/combat-rewards-v1/projectile-thorn.png",
+      "width": 48,
+      "height": 24,
+      "anchor": [
+        24,
+        24
+      ],
+      "source": "effects/combat-rewards-v1/generated.png",
+      "grid": [
+        2,
+        2
+      ],
+      "cell": 2,
+      "stage": "combat-rewards-runtime-v1",
+      "visualVerified": false,
+      "sha256": "da1cdeaecddaac639d1d7425a8825b319e0a0bc1ce054a1787ea897b8948ebba"
+    },
+    {
+      "id": "projectile-pea",
+      "path": "effects/combat-rewards-v1/projectile-pea.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "effects/combat-rewards-v1/generated.png",
+      "grid": [
+        2,
+        2
+      ],
+      "cell": 3,
+      "stage": "combat-rewards-runtime-v1",
+      "visualVerified": false,
+      "sha256": "74457ee2aa75dd63822d8d836e93420f722d9feee64227f282f5f68ea90145fa"
+    }
+  ]
+}

@@ -1,12 +1,17 @@
 <!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>蔬果大冒险 · 八世界旅程</title><link rel="stylesheet" href="styles/game.css"></head>
-<body><main>
-<header><div><small>蔬果大冒险 · 八世界 / 32关</small><h1 id="title">芽豆出发</h1></div><div><button id="pause" disabled>暂停</button><button id="retry" disabled>检查点重试</button><button id="fresh" disabled>重开本关</button></div></header>
-<div class="level-picker"><label for="level">关卡</label><select id="level" aria-label="选择关卡"></select><button id="load-level" disabled>进入选中关卡</button></div>
-<div id="hud" role="status">加载资源…</div><output id="motion-qa" hidden style="display:block;font:12px monospace;color:#cde9a7"></output>
+<body><main id="game-shell">
+<header><h1 id="title">芽豆出发</h1><nav aria-label="游戏菜单"><button id="pause" disabled>暂停</button><button id="fullscreen">全屏</button><button id="settings-toggle" aria-expanded="false" aria-controls="settings">设置</button></nav></header>
+<aside id="settings" hidden aria-label="游戏设置"><button id="retry" hidden disabled>调试快照恢复</button><button id="fresh" disabled>重新开始</button>
+<div id="level-picker" class="level-picker" hidden><label for="level">调试选关</label><select id="level" aria-label="选择关卡" disabled></select><button id="load-level" disabled>进入选中关卡</button></div>
+
+<div class="music-controls"><button id="music-toggle" disabled>开启音乐</button><label for="music-volume">音乐音量</label><input id="music-volume" type="range" min="0" max="100" value="55" aria-label="音乐音量"><small id="music-state" aria-live="polite">点击开始后播放配乐</small></div>
+<div class="music-controls"><button id="sfx-toggle" disabled>音效：开</button><label for="sfx-volume">音效音量</label><input id="sfx-volume" type="range" min="0" max="100" value="65" aria-label="音效音量"></div>
+</aside>
+<div id="hud" role="status">加载资源…</div><output id="motion-qa" hidden></output>
 <section class="screen"><canvas id="game" width="768" height="720" aria-label="蔬果大冒险游戏画面"></canvas><div id="overlay"><h2 id="message">正在准备旅程</h2><p id="detail">加载主角与场景素材</p><button id="start" disabled>开始冒险</button></div></section>
 <div class="touch" aria-label="触屏操作"><div class="stick-group"><div id="joystick" aria-label="移动摇杆：左右移动，下拉蹲下"><span class="stick-directions" aria-hidden="true">←　→<br>↓</span><span class="stick-knob"></span></div><small>移动 · 下拉蹲下</small></div><div class="action-buttons"><button data-key="fire" aria-label="发射火弹">火弹</button><button data-key="jump" aria-label="按住跳跃或游泳">跳跃</button></div></div>
-<p class="help touch-help">左摇杆移动，下拉蹲下；持续移动约1秒达到最快速度和最大起跳。右侧按住跳跃可跳得更高／游泳。支持多指同时操作。</p>
+<p class="help touch-help" hidden>左摇杆移动，下拉蹲下；持续移动约1秒达到最快速度和最大起跳。右侧按住跳跃可跳得更高／游泳。支持多指同时操作。</p>
 <p class="help">方向键 / A、D 移动（持续约1秒达到最快速度和最大起跳） · 空格 / Z 跳跃（按住跳得更高，水下连续上划） · ↓ / S 蹲行 · X 火弹 · P 暂停</p>
-<p class="help">到达叶旗保存检查点，死亡无限重试。过关后可进入下一关并延续分数与形态，也可直接选关。首领绿标破绽期间可踩顶部，或命中三枚火弹；击败后出口开放。</p>
+<p class="help">每局初始有3次重生机会，每世界第一小关有一个重生＋1方块，每局各可领取一次。死亡消耗一次，从当前小关起点以基础形态重来，敌人、道具和首领重置；已领取的重生奖励保持已领取，次数用完后再次死亡则游戏结束。没有途中检查点。过关后自动进入下一关，延续分数、形态与剩余重生次数。“重新开始”从1-1开启新一局。敌兵显露身体时可踩踏扣血；壳兵与刺兵缩壳后，踩踏只弹起，双方都不掉血。首领仅在绿标弱点期可被踩踏或火弹扣血，低血量出招更快。</p>
 <p id="storage" class="help"></p></main><script type="module" src="js/main.mjs"></script></body></html>

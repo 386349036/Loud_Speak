@@ -8,14 +8,13 @@ const actor=(kind,extra={})=>({id:0,kind,x:160,y:194,w:14,h:14,vx:-20,vy:0,state
 function scene(kind,extra={}){const g=new Game();Object.assign(g.level,{platforms:[{x:0,y:208,w:600,h:32}],water:[],hazards:[],exit:580,checkpoint:570,width:600});g.enemies=[actor(kind,extra)];g.items=[];g.blocks=[];g.movers=[];g.boss=null;g.turrets=[];g.gates=[];Object.assign(g.p,{x:220,y:194,vx:0,vy:0});return g;}
 const watch=(g,seconds)=>{for(let n=0;n<Math.round(seconds/STEP);n++)updateEnemies(g,STEP,0);};
 
-test('four ground enemy types notice before a short committed pursuit, then give a rest window',()=>{
- for(const kind of ['mushroom','cabbage','walnut','spike']){
+test('ordinary mushrooms move on discovery and pursue continuously, steering when the hero crosses them',()=>{
+ for(const kind of ['mushroom']){
   const g=scene(kind),e=g.enemies[0];g.damage=()=>{};watch(g,.1);assert.equal(e.brain.mode,'patrol');assert.ok(e.vx<0);
-  watch(g,.15);assert.equal(e.brain.mode,'notice');assert.equal(e.aiWarning,true);assert.equal(e.vx,0);
-  let warning=0;while(e.brain.mode==='notice'){warning+=STEP;updateEnemies(g,STEP,0);}assert.ok(warning>.2);
-  updateEnemies(g,STEP,0);assert.equal(e.intent,'pursue');assert.ok(e.vx>0);
-  g.p.x=e.x-32;watch(g,.15);assert.ok(e.vx>0,'do not instantly reverse a committed action');
-  watch(g,.65);assert.equal(e.intent,'rest');assert.equal(e.vx,0);
+  watch(g,.15);assert.equal(e.brain.mode,'pursue');assert.equal(e.aiWarning,true);assert.ok(e.vx>0);
+  const start=e.x;watch(g,.6);assert.equal(e.intent,'pursue');assert.ok(e.x>start+32);
+  g.p.x=e.x-32;watch(g,.15);assert.ok(e.vx<0,'follow the current visible hero instead of an obsolete direction');
+  watch(g,.65);assert.equal(e.intent,'pursue');assert.notEqual(e.vx,0);
  }
 });
 
@@ -38,13 +37,12 @@ test('visible star protection prompts retreat, while shell and rolling states ke
  Object.assign(e,{state:'shell',vx:0,timer:0});watch(g,.2);assert.equal(e.vx,0);assert.equal(e.state,'shell');
 });
 
-test('fish and winged cabbage advertise an interception and lock its destination until returning',()=>{
+test('fish and winged cabbage move during discovery and keep tracking a nearby moving hero',()=>{
  for(const kind of ['fish','winged']){
   const g=scene(kind,{y:160}),e=g.enemies[0];g.level.water=[{x:96,y:144,w:240,h:80}];g.p.x=220;g.p.y=168;
-  watch(g,.3);assert.equal(e.intent,'intercept-cue');assert.equal(e.aiWarning,true);const target=e.brain.targetX;
+  watch(g,.3);assert.equal(e.intent,'intercept');assert.equal(e.aiWarning,true);const target=e.brain.targetX;
   g.p.x=128;
-  for(let n=0;n<180&&e.brain.mode!=='rest';n++){updateEnemies(g,STEP,0);assert.equal(e.brain.targetX,target);assert.ok(e.x>=e.homeX-40&&e.x<=e.homeX+40);}
-  assert.equal(e.brain.mode,'rest');
+  watch(g,.2);assert.ok(e.brain.targetX<target);assert.ok(e.vx<0);assert.equal(e.brain.mode,'pursue');
  }
 });
 
@@ -82,7 +80,7 @@ test('a noticed pursuing mushroom remains stompable through actual movement in a
  for(const form of [0,1,2]){
   const g=scene('mushroom');g.p.form=form;g.resizePlayer();g.p.x=100;g.p.y=208-g.p.h;
   for(let n=0;n<20;n++)g.step(STEP,{});for(let n=0;n<24;n++)g.step(STEP,{right:true});
-  assert.ok(g.enemies[0].brain.mode==='notice'||g.enemies[0].brain.mode==='advance');
+  assert.equal(g.enemies[0].brain.mode,'pursue');
   for(let n=0;n<120&&!g.enemies[0].dead&&g.mode==='playing';n++){
    const target=g.enemies[0].x+1,projected=g.p.x+g.p.vx*.22;
    g.step(STEP,{right:projected<target-1,left:projected>target+1,jump:true,jumpPressed:n===0});

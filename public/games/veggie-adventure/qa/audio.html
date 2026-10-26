@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>蔬果大冒险 · 配乐试听</title>
+<style>body{background:#102019;color:#e9efdb;font:16px/1.5 system-ui;margin:0}main{max-width:950px;margin:auto;padding:24px}a{color:#cee999}h1{font-size:26px}section{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}article{border:1px solid #67835b;padding:14px;border-radius:8px;background:#20372a}h2{font-size:16px;margin:0 0 6px}p{font-size:13px;color:#c2d0b7}audio{width:100%}.archived{opacity:.65}</style></head>
+<body><main><a href="../index.html">返回游戏</a><h1>配乐试听</h1><p>世界曲、首领曲及短音乐均使用游戏内播放版本。点击试听时会暂停其他曲目，切出页面也会暂停。检查点音乐仅归档，游戏中不触发。</p><p id="status">读取曲目…</p><section id="tracks"></section></main>
+<script type="module">
+const names={W01:'晨光苔林',W02:'根下矿洞',W03:'藤架云路',W04:'莲池花房',W05:'刺栗果园',W06:'辣椒作坊',W07:'月夜藤园',W08:'石榴王庭',B01:'南瓜门卫',B02:'洋葱矿主',B03:'玉米骑士',B04:'莲藕潜王',B05:'榴莲堡主',B06:'辣椒术士',B07:'葡萄双生',B08:'石榴王',M01:'标题画面',M02:'杨桃无敌',M03:'花园重生 · 结局',J01:'检查点（归档）',J02:'死亡',J03:'小关完成',J04:'首领击败',J05:'最终胜利',J06:'游戏结束 · 新作',J07:'重生 · 新作'};
+const players=[];
+try{const response=await fetch('../assets/audio/manifest.json');if(!response.ok)throw Error();const manifest=await response.json();for(const prefix of ['W','B','M','J'])for(const [id,track] of Object.entries(manifest.tracks).filter(([id])=>id.startsWith(prefix)).sort()){
+ const card=document.createElement('article');if(track.enabled===false)card.className='archived';const title=document.createElement('h2');title.textContent=id+' · '+names[id];const info=document.createElement('p');info.textContent=track.duration.toFixed(2)+'秒 · '+(track.loop?'循环配乐':'单次短曲 / 结局');const audio=document.createElement('audio');audio.controls=true;audio.preload='none';audio.src='../assets/audio/'+track.path;audio.addEventListener('play',()=>players.forEach(p=>{if(p!==audio)p.pause();}));players.push(audio);card.append(title,info,audio);document.getElementById('tracks').append(card);
+}document.getElementById('status').textContent='共'+players.length+'首，点击播放试听。';}catch{document.getElementById('status').textContent='无法读取配乐，请通过本地HTTP服务打开。';}
+document.addEventListener('visibilitychange',()=>{if(document.hidden)players.forEach(p=>p.pause());});
+</script></body></html>

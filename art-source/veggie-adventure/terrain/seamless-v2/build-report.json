@@ -1,0 +1,86 @@
+{
+  "method": "Generated textures, nearest-neighbor runtime sizing, exact shared edge rows/columns and matched soil-to-foundation boundary; original PNGs retained",
+  "size": 48,
+  "tiles": [
+    {
+      "id": "W01-kit-0",
+      "path": "terrain/seamless-v2/W01-kit-0.png",
+      "sha256": "088c59b3cc4f6b8202c418fbe0ae6ce55ae020b94c0aa29c8c5cf70879ebf7bb"
+    },
+    {
+      "id": "W01-kit-1",
+      "path": "terrain/seamless-v2/W01-kit-1.png",
+      "sha256": "5d7fce72e7833e8d397d09d9f7eee850100e89917fde237d762bf4817e8d17c9"
+    },
+    {
+      "id": "W02-kit-0",
+      "path": "terrain/seamless-v2/W02-kit-0.png",
+      "sha256": "0421a6e28d3d33e155ee25b2469e3f9b632b7fead016281ecc6b65b55949a392"
+    },
+    {
+      "id": "W02-kit-1",
+      "path": "terrain/seamless-v2/W02-kit-1.png",
+      "sha256": "3ea273bc62b49a0cbc5dba1dc11b9127e3e475e3d558b76d35dc3693e82d1dec"
+    },
+    {
+      "id": "W03-kit-0",
+      "path": "terrain/seamless-v2/W03-kit-0.png",
+      "sha256": "2d97b234ecb1ee4a07b0c033586e3b0243f500d6c76002e837a404f2bb5aed10"
+    },
+    {
+      "id": "W03-kit-1",
+      "path": "terrain/seamless-v2/W03-kit-1.png",
+      "sha256": "aa6da8229c00585287c2eb5ccebe1941f80767d35babec0b58ee27903ec77361"
+    },
+    {
+      "id": "W04-kit-0",
+      "path": "terrain/seamless-v2/W04-kit-0.png",
+      "sha256": "91e95eee65ed199db2ac0f6ab54199bc68f8d244d4db167b534f83643db980a2"
+    },
+    {
+      "id": "W04-kit-1",
+      "path": "terrain/seamless-v2/W04-kit-1.png",
+      "sha256": "ee23dda95b27662e5d15c2fe328a90b111de711599b8aced0e09ace781416d33"
+    },
+    {
+      "id": "W05-kit-0",
+      "path": "terrain/seamless-v2/W05-kit-0.png",
+      "sha256": "3740e8034c2a9f6d683d62adba114e50f2f8efd395f24966146cef590cf5ad06"
+    },
+    {
+      "id": "W05-kit-1",
+      "path": "terrain/seamless-v2/W05-kit-1.png",
+      "sha256": "9820558ce53cbcdb7174b32943d30b543ae17af6bcf5e076bf82e63020e1054f"
+    },
+    {
+      "id": "W06-kit-0",
+      "path": "terrain/seamless-v2/W06-kit-0.png",
+      "sha256": "59d0a6aa10935807e273333059b38699d51b576b1cdcb691e36f90ee9128892d"
+    },
+    {
+      "id": "W06-kit-1",
+      "path": "terrain/seamless-v2/W06-kit-1.png",
+      "sha256": "aeeee2177422fc944847b5329c28314a3bf9ced85450a0017ad95ee6b27583dc"
+    },
+    {
+      "id": "W07-kit-0",
+      "path": "terrain/seamless-v2/W07-kit-0.png",
+      "sha256": "34f244d5ae8896c52599a4dbaefcbd7881446f5f119a0fd2d0761133a34acd0c"
+    },
+    {
+      "id": "W07-kit-1",
+      "path": "terrain/seamless-v2/W07-kit-1.png",
+      "sha256": "634ee0ceb910158a561afaf76f9fc1f15ebd5710c57f8e4d2311f34700ebde0e"
+    },
+    {
+      "id": "W08-kit-0",
+      "path": "terrain/seamless-v2/W08-kit-0.png",
+      "sha256": "200109370b851a42dd6e801edaf95e4e9d61c4a21e9978ee02573afed1cac8a3"
+    },
+    {
+      "id": "W08-kit-1",
+      "path": "terrain/seamless-v2/W08-kit-1.png",
+      "sha256": "272e5d8c53775a5ce9b0a0eed5b3497e114b84a86cbf4ccc0242dc985874ed14"
+    }
+  ]
+}

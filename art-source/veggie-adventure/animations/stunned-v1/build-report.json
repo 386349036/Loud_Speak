@@ -1,0 +1,354 @@
+{
+  "tool": "built-in image_gen",
+  "visualVerified": false,
+  "actors": [
+    {
+      "id": "E02",
+      "original": "animations/v2-scene01/E02.png",
+      "path": "animations/stunned-v1/E02.png",
+      "frameSize": [
+        64,
+        64
+      ],
+      "clips": [
+        "retract",
+        "shell-idle",
+        "shell-slide",
+        "wake"
+      ],
+      "sourceCells": [
+        {
+          "left": 34,
+          "top": 140,
+          "width": 301,
+          "height": 205
+        },
+        {
+          "left": 403,
+          "top": 156,
+          "width": 289,
+          "height": 189
+        },
+        {
+          "left": 771,
+          "top": 162,
+          "width": 277,
+          "height": 183
+        },
+        {
+          "left": 1132,
+          "top": 154,
+          "width": 284,
+          "height": 191
+        },
+        {
+          "left": 38,
+          "top": 488,
+          "width": 293,
+          "height": 189
+        },
+        {
+          "left": 402,
+          "top": 488,
+          "width": 292,
+          "height": 189
+        },
+        {
+          "left": 770,
+          "top": 487,
+          "width": 288,
+          "height": 191
+        },
+        {
+          "left": 1121,
+          "top": 488,
+          "width": 292,
+          "height": 190
+        },
+        {
+          "left": 34,
+          "top": 821,
+          "width": 297,
+          "height": 187
+        },
+        {
+          "left": 400,
+          "top": 809,
+          "width": 293,
+          "height": 198
+        },
+        {
+          "left": 758,
+          "top": 807,
+          "width": 290,
+          "height": 200
+        },
+        {
+          "left": 1121,
+          "top": 805,
+          "width": 292,
+          "height": 202
+        }
+      ],
+      "scale": 0.205,
+      "frameHashes": {
+        "retract": [
+          "adf89571b0923f79a0739bc871b872f835a040446535f21180dc0eabb52c4dbb",
+          "d594adc7f8a81ee92fff10c4ff07fd4b68952aff3413c32dd5f70deaed2d4b8a",
+          "59a23ad5bc4c64fc17525ae351cadfa4d20144d11682b12deb9d1fed8c0ed581",
+          "2b7169f675a8a3eb436c35492d7571dd28c5d6d3fe416820b515bf7d6c369203"
+        ],
+        "shell-idle": [
+          "2fdf9655d22fe68bbe2938afa42046de25a7cf52591be61d3ab7ac2cc18d0da4",
+          "693852cb606fe82f1ce1ee7cae6f21375ef2467de67cdd64954869f18fdc018c",
+          "073a77151953cef4b821eecf6a2bbc5f3b9fef0908570be1b996230dec64d5e8",
+          "aefbb37f0ef0f39755e748fbfbcf76a70383c716ccbe1d56cfc2e567b1108d76"
+        ],
+        "shell-slide": [
+          "2fdf9655d22fe68bbe2938afa42046de25a7cf52591be61d3ab7ac2cc18d0da4",
+          "693852cb606fe82f1ce1ee7cae6f21375ef2467de67cdd64954869f18fdc018c",
+          "073a77151953cef4b821eecf6a2bbc5f3b9fef0908570be1b996230dec64d5e8",
+          "aefbb37f0ef0f39755e748fbfbcf76a70383c716ccbe1d56cfc2e567b1108d76"
+        ],
+        "wake": [
+          "647730a9b3c307f8a50724f9b20a5c8a83df54464cb306785ecd0dfa7a4b42ca",
+          "be06f8a2bf07698537d8944014419174e2b2eee8a0a9d49e1669584c6a99262e",
+          "e29d969a2ab4d4f0f79d4cacf7fe9d714595976439b5a0e8de6b6adb70a89f1a",
+          "a2eb709c14e4b6019103b7e56adc6421422c5c0ad1f6723e245d2ce0f61a3380"
+        ]
+      }
+    },
+    {
+      "id": "E03",
+      "original": "animations/E03.png",
+      "path": "animations/stunned-v1/E03.png",
+      "frameSize": [
+        48,
+        48
+      ],
+      "clips": [
+        "retract",
+        "shell-idle",
+        "shell-slide",
+        "wake"
+      ],
+      "sourceCells": [
+        {
+          "left": 54,
+          "top": 202,
+          "width": 229,
+          "height": 160
+        },
+        {
+          "left": 427,
+          "top": 229,
+          "width": 233,
+          "height": 133
+        },
+        {
+          "left": 794,
+          "top": 244,
+          "width": 232,
+          "height": 118
+        },
+        {
+          "left": 1173,
+          "top": 253,
+          "width": 226,
+          "height": 109
+        },
+        {
+          "left": 60,
+          "top": 362,
+          "width": 231,
+          "height": 323
+        },
+        {
+          "left": 427,
+          "top": 362,
+          "width": 230,
+          "height": 323
+        },
+        {
+          "left": 796,
+          "top": 362,
+          "width": 230,
+          "height": 323
+        },
+        {
+          "left": 1164,
+          "top": 362,
+          "width": 231,
+          "height": 323
+        },
+        {
+          "left": 61,
+          "top": 861,
+          "width": 235,
+          "height": 134
+        },
+        {
+          "left": 423,
+          "top": 834,
+          "width": 237,
+          "height": 162
+        },
+        {
+          "left": 787,
+          "top": 837,
+          "width": 234,
+          "height": 161
+        },
+        {
+          "left": 1156,
+          "top": 815,
+          "width": 237,
+          "height": 179
+        }
+      ],
+      "scale": 0.14241486068111456,
+      "frameHashes": {
+        "retract": [
+          "df2039c105aabab4fed1efd3e50818b997f5baf5784994d35e52d6a1e3361aa8",
+          "0376d30a2d11e30a71a169e35e1bd8a60b66efcbc24355ceda3d32fb2f6a4df4",
+          "db44c0a236eaae22a43adbc6fbbec405d3bd29835b77e7e732d327b38dcf4de1",
+          "25071e63928e8921b34c1c99b64bc504b8481ac325c335920c5d41f8ccb92382"
+        ],
+        "shell-idle": [
+          "d27de89673f0e245b3d24403f80ba3efb4f91558887ce0615b8357486a3b6d95",
+          "834df589766934b661a3249de6d52c94ccf68dd206215fbc3a3ba254c7e14d50",
+          "b8bc4cc5839bb9ef8505bc62a08d7d6081f6b000fa9ac49173c3ba69944f005c",
+          "fbecb86c66f6ce844223bc56ece71b389451882f6232c7a716f09b584f57c3ba"
+        ],
+        "shell-slide": [
+          "d27de89673f0e245b3d24403f80ba3efb4f91558887ce0615b8357486a3b6d95",
+          "834df589766934b661a3249de6d52c94ccf68dd206215fbc3a3ba254c7e14d50",
+          "b8bc4cc5839bb9ef8505bc62a08d7d6081f6b000fa9ac49173c3ba69944f005c",
+          "fbecb86c66f6ce844223bc56ece71b389451882f6232c7a716f09b584f57c3ba"
+        ],
+        "wake": [
+          "fc016bf4c090a5f3c9095e3e2e0014d84c1b34b79c1935663a17d7d154b3f7f5",
+          "8928d6cf680644a8d0e94a7531cb26391538c84f6b137140269aaecb8cf4e52b",
+          "fb35cddc519b9bcf0ebacae9549183fb0a117fe7af1069fc637f266ffa53eaea",
+          "7fff7ae4bacde3ec7362bedaed018a011dfa0297349e6a2ab0684f1deac655e2"
+        ]
+      }
+    },
+    {
+      "id": "E04",
+      "original": "animations/E04.png",
+      "path": "animations/stunned-v1/E04.png",
+      "frameSize": [
+        48,
+        48
+      ],
+      "clips": [
+        "retract",
+        "shell-idle",
+        "shell-slide",
+        "wake"
+      ],
+      "sourceCells": [
+        {
+          "left": 34,
+          "top": 162,
+          "width": 261,
+          "height": 242
+        },
+        {
+          "left": 338,
+          "top": 184,
+          "width": 270,
+          "height": 220
+        },
+        {
+          "left": 646,
+          "top": 197,
+          "width": 266,
+          "height": 207
+        },
+        {
+          "left": 962,
+          "top": 221,
+          "width": 262,
+          "height": 183
+        },
+        {
+          "left": 34,
+          "top": 589,
+          "width": 263,
+          "height": 206
+        },
+        {
+          "left": 343,
+          "top": 607,
+          "width": 271,
+          "height": 188
+        },
+        {
+          "left": 652,
+          "top": 592,
+          "width": 267,
+          "height": 203
+        },
+        {
+          "left": 964,
+          "top": 607,
+          "width": 263,
+          "height": 188
+        },
+        {
+          "left": 35,
+          "top": 969,
+          "width": 263,
+          "height": 180
+        },
+        {
+          "left": 345,
+          "top": 948,
+          "width": 269,
+          "height": 201
+        },
+        {
+          "left": 661,
+          "top": 919,
+          "width": 263,
+          "height": 230
+        },
+        {
+          "left": 971,
+          "top": 911,
+          "width": 256,
+          "height": 238
+        }
+      ],
+      "scale": 0.15217391304347827,
+      "frameHashes": {
+        "retract": [
+          "52143fb271c96a0188bead32c86ddc5258b7c119c4c2b1d7ab6e0770397ccbd0",
+          "a12bb91838d3e1cac2aa7c3403b0a446d333ca8e73b99d46cef237bc6640a7a3",
+          "405b643bb2544d22556146d3c6177100b810e39acd3a70d107552d1cdc294202",
+          "374be9a639cd10045e3bf931d126ff0ffcf643d8335e778092fd8599473abe0e"
+        ],
+        "shell-idle": [
+          "a71d4c823e226749e3483345665a42cc188de5c4b2f701b0cb07145efffd8686",
+          "bf4f672a634e910bc9facf687c1dc8748aed981fac0b1a272f51f87380f782d3",
+          "6e167d0eb2ce02033a4ab6901ffee7715edbb082835a7f1e8907b67689e54c71",
+          "561beb1ba78ec2246f9156cf92f630d92cd5d8ed3fead07c97f723c3cfe25325"
+        ],
+        "shell-slide": [
+          "a71d4c823e226749e3483345665a42cc188de5c4b2f701b0cb07145efffd8686",
+          "bf4f672a634e910bc9facf687c1dc8748aed981fac0b1a272f51f87380f782d3",
+          "6e167d0eb2ce02033a4ab6901ffee7715edbb082835a7f1e8907b67689e54c71",
+          "561beb1ba78ec2246f9156cf92f630d92cd5d8ed3fead07c97f723c3cfe25325"
+        ],
+        "wake": [
+          "825c79224ca9fbd527812bb864695b2fba01dfe69d32b13452abea1edce86af4",
+          "31fdf4d32927620cd6bfc824c43f7514dcc6d971ceb887db5562eb9b15f13ea3",
+          "a884b7509acdf43001157609ba763431f620fc52b0a6c9a048b38aebf8b1d31c",
+          "ad6e81eb997e1bf3afa8678f5a921d3929744aa13b532b7b76d2d7be3e3b2fc6"
+        ]
+      }
+    }
+  ]
+}

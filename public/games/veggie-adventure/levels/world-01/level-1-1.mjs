@@ -97,6 +97,16 @@ export default {
       "h": 16,
       "kind": "brick",
       "breakable": true
+    },
+    {
+      "x": 112,
+      "y": 144,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "item": "rebirth",
+      "rewardId": "1-1"
     }
   ],
   "enemies": [
@@ -244,5 +254,22 @@ export default {
       "kind": "seed",
       "collected": false
     }
-  ]
+  ],
+  "priorLayouts": [
+    {
+      "version": 1,
+      "width": 1536,
+      "timeLimit": 300,
+      "counts": {
+        "blocks": 7,
+        "enemies": 4,
+        "movers": 0,
+        "turrets": 0,
+        "gates": 0
+      },
+      "boss": null
+    }
+  ],
+  "layoutVersion": 2,
+  "rebirthRewardVersion": 1
 };

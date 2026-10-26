@@ -1,5 +1,6 @@
 import {overlap} from './geometry.mjs';
 import {predictedBossTarget,rememberBossAttack} from './boss-awareness.mjs';
+import {bossEnraged,bossTiming,readyBossSkill,releaseBossSkill,bossVulnerable} from './boss-balance.mjs';
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 const face=(b,p)=>p.x+p.w/2<b.x+b.w/2?-1:1;
 const floorAt=(g,x,ceiling=208)=>Math.min(208,...g.movers.filter(m=>m.arena&&x+32>m.x&&x<m.x+m.w&&m.y>=ceiling-2).map(m=>m.y));
@@ -13,8 +14,8 @@ export function gardenDecision(g,b){
   if((a.fire>=1.5||a.camp>=2.5&&dx>64)&&b.lastPattern!=='hop')return {pattern:'hop',intent:'flank'};
   if(a.fire>=1.5&&b.lastPattern!=='seeds')return {pattern:'seeds',intent:'suppress'};
  }
- let next=high?(dx>88?'hop':'seeds'):dx>112?'hop':dx<72?(b.hp<3?'dash':'slam'):'seeds';
- if(next===b.lastPattern)next=high?(next==='hop'?'seeds':'hop'):next==='hop'?'seeds':next==='seeds'?'hop':b.hp<3?'dash':'hop';
+ let next=high?(dx>88?'hop':'seeds'):dx>112?'hop':dx<72?(b.hp<b.maxHp?'dash':'slam'):'seeds';
+ if(next===b.lastPattern)next=high?(next==='hop'?'seeds':'hop'):next==='hop'?'seeds':next==='seeds'?'hop':b.hp<b.maxHp?'dash':'hop';
  if(next===b.lastPattern)next='seeds';
  return {pattern:next,intent:next==='hop'?'pursue':next==='dash'?'spacing':'watch'};
 }
@@ -31,7 +32,7 @@ function settle(g,b,dt){
  if(b.y+b.h>=floor){b.y=floor-b.h;b.vy=0;}
 }
 function telegraph(g,b){
- const p=g.p;Object.assign(b,gardenDecision(g,b));b.lastPattern=b.pattern;rememberBossAttack(b);
+ const p=g.p,decision=gardenDecision(g,b),pattern=readyBossSkill(b,decision.pattern);if(!pattern){b.intent='cooldown';return;}Object.assign(b,decision,{pattern,intent:pattern===decision.pattern?decision.intent:'rotate'});b.lastPattern=b.pattern;rememberBossAttack(b);
  b.direction=face(b,p);b.startX=b.x;b.startY=b.y;
  b.targetX=clamp(predictedBossTarget(g,b),b.left+16,b.right-b.w-16);
  b.targetFloor=208;
@@ -47,7 +48,7 @@ function telegraph(g,b){
  const aimX=clamp(p.x+p.w/2+clamp((b.awareness?.velocity??p.vx)*.22,-25,25),b.left+6,b.right+10);
  b.seedVX=clamp((aimX-(b.x+b.w/2))/flight,-160,160);
  b.seedVY=clamp((p.y+p.h-12-(b.y+12)-.5*gravity*flight*flight)/flight,-190,100);
- b.windupDuration=b.hp===1?1.05:1.25;
+ b.windupDuration=bossTiming(b).windup;
  b.tell=b.pattern==='hop'?'锁定落点':b.pattern==='dash'?'地面冲撞':b.pattern==='seeds'?'瞄准抛射':'落地震波';
  enter(b,'windup');
 }
@@ -59,14 +60,15 @@ export function updateGardenBoss(g,dt,oldBottom,hurt){
   if(a)a.threatTime=incoming?Math.min(.5,(a.threatTime||0)+dt):Math.max(0,(a.threatTime||0)-dt);
   const awayRoom=face(b,p)<0?b.right-b.w-16-b.x:b.x-b.left-16;
   b.direction=a?.threatTime>=.22?(awayRoom>32?-face(b,p):face(b,p)):distance>112?face(b,p):b.direction||-1;
-  b.x=clamp(b.x+b.direction*(b.hp===1?40:30)*dt,b.left+16,b.right-b.w-16);
+  b.x=clamp(b.x+b.direction*(bossEnraged(b)?40:30)*dt,b.left+16,b.right-b.w-16);
   if(b.x===b.left+16||b.x===b.right-b.w-16)b.direction*=-1;
   settle(g,b,dt);
-  if(b.timer>=(b.hp===1?.7:.9))telegraph(g,b);
+  if(b.timer>=bossTiming(b).idle)telegraph(g,b);
  }else if(b.phase==='windup'){
   if(b.timer>=b.windupDuration){
+   if(!releaseBossSkill(b)){enter(b,'idle');return;}
    b.startX=b.x;b.startY=b.y;b.cycle++;enter(b,'attack');
-   if(b.pattern==='seeds')for(let i=0;i<(b.hp===1?3:2);i++)seed(g,b,b.seedVX,b.seedVY-i*12,{gravity:260,delay:i*.28,life:2.6});
+   if(b.pattern==='seeds')for(let i=0;i<(bossEnraged(b)?3:2);i++)seed(g,b,b.seedVX,b.seedVY-i*12,{gravity:260,delay:i*.24,life:2.6});
   }
  }else if(b.phase==='attack'){
   const duration=b.pattern==='dash'?.8:b.pattern==='seeds'?1.35:1.1,u=clamp(b.timer/duration,0,1);
@@ -75,23 +77,23 @@ export function updateGardenBoss(g,dt,oldBottom,hurt){
   else if(b.pattern==='dash'){b.x=b.startX+(b.targetX-b.startX)*u;b.y=b.startY+(176-b.startY)*Math.min(1,u*3);}
   if(b.timer>=duration){
    if(b.pattern==='hop')b.y=b.targetY;else if(b.pattern==='dash')b.y=176;else b.y=b.startY;
-   if(b.pattern==='slam')for(const d of [-1,1])seed(g,b,d*(b.hp===1?96:80),0,{y:200,w:16,h:8,kind:'wave',life:2});
+   if(b.pattern==='slam')for(const d of [-1,1])seed(g,b,d*(bossEnraged(b)?96:80),0,{y:200,w:16,h:8,kind:'wave',life:2});
    // Reaching a boss on a raised ledge requires a second jump after retreating.
-   const climbAllowance=b.y+b.h<208?.6:0;
-   b.exposeTime=Math.max((b.hp===1?2.8:3.2)+climbAllowance,Math.min(4,Math.abs(p.x-b.x)/112+1.6));
+   const climbAllowance=b.y+b.h<208?1:0;
+   b.exposeTime=Math.max(bossTiming(b).expose+climbAllowance,Math.min(3.6,Math.abs(p.x-b.x)/112+1.4));
    enter(b,'expose');
   }
  }else if(b.phase==='expose'){
-  if(b.timer>=(b.exposeTime||3.2))gardenRecovery(g,b);
+  if(b.timer>=(b.exposeTime||bossTiming(b).expose))gardenRecovery(g,b);
  }else if(b.phase==='recover'){
   if(Number.isFinite(b.recoverX))b.x=b.recoverX+(b.recoverTo-b.recoverX)*Math.min(1,b.timer/.45);
-  if(b.timer>=.9){b.vy=0;enter(b,'idle');}
+  if(b.timer>=bossTiming(b).recover){b.vy=0;enter(b,'idle');}
  }
  const weakTop=gardenWeakTop(g,b);
- if(b.phase==='expose'&&b.invulnerable<=0&&!p.inWater&&p.vy>=0&&oldBottom<=weakTop+4&&p.y+p.h>=weakTop&&p.y<weakTop&&p.x+p.w>b.x&&p.x<b.x+b.w){p.y=weakTop-p.h;p.vy=-145;hurt(g,'stomp');return;}
+ if(bossVulnerable(b)&&p.vy>=0&&oldBottom<=weakTop+4&&p.y+p.h>=weakTop&&p.y<weakTop&&p.x+p.w>b.x&&p.x<b.x+b.w){p.y=weakTop-p.h;p.vy=-145;hurt(g,'stomp');return;}
  if(!overlap(p,b))return;
  // A successful hit earns a safe retreat instead of a second contact hit.
  if(b.phase==='recover')return;
- if(!p.inWater&&p.vy>=0&&oldBottom<=b.y+4&&b.phase==='expose'&&b.invulnerable<=0){p.y=b.y-p.h;p.vy=-145;hurt(g,'stomp');}
- else g.damage();
+ if(bossVulnerable(b)&&p.vy>=0&&oldBottom<=b.y+4&&p.y<b.y){p.y=b.y-p.h;p.vy=-145;hurt(g,'stomp');}
+ else {if(p.vy>=0&&oldBottom<=b.y+4&&p.y<b.y)hurt(g,'stomp');g.damage();}
 }

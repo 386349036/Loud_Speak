@@ -1,0 +1,2695 @@
+{
+  "scope": "terrain-only nonvisual simulation; combat, boss and hazard encounters excluded; not user play acceptance",
+  "standingOnly": true,
+  "quick": true,
+  "results": [
+    {
+      "id": "1-1",
+      "form": 0,
+      "terrainProbePassed": true,
+      "maxX": 1460,
+      "exit": 1460,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 1460,
+          "y": 194,
+          "height": 14
+        }
+      ]
+    },
+    {
+      "id": "1-1",
+      "form": 1,
+      "terrainProbePassed": true,
+      "maxX": 1460,
+      "exit": 1460,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 1460,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "1-1",
+      "form": 2,
+      "terrainProbePassed": true,
+      "maxX": 1460,
+      "exit": 1460,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 1460,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "1-2",
+      "form": 0,
+      "terrainProbePassed": true,
+      "maxX": 1488,
+      "exit": 1488,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 1488,
+          "y": 194,
+          "height": 14
+        }
+      ]
+    },
+    {
+      "id": "1-2",
+      "form": 1,
+      "terrainProbePassed": true,
+      "maxX": 1488,
+      "exit": 1488,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 1488,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "1-2",
+      "form": 2,
+      "terrainProbePassed": true,
+      "maxX": 1488,
+      "exit": 1488,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 1488,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "1-3",
+      "form": 0,
+      "terrainProbePassed": true,
+      "maxX": 1488,
+      "exit": 1488,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 1488,
+          "y": 194,
+          "height": 14
+        }
+      ]
+    },
+    {
+      "id": "1-3",
+      "form": 1,
+      "terrainProbePassed": true,
+      "maxX": 1488,
+      "exit": 1488,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 1488,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "1-3",
+      "form": 2,
+      "terrainProbePassed": true,
+      "maxX": 1488,
+      "exit": 1488,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 1488,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "1-4",
+      "form": 0,
+      "terrainProbePassed": true,
+      "maxX": 5840,
+      "exit": 5840,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5840,
+          "y": 194,
+          "height": 14
+        }
+      ]
+    },
+    {
+      "id": "1-4",
+      "form": 1,
+      "terrainProbePassed": true,
+      "maxX": 5840,
+      "exit": 5840,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5840,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "1-4",
+      "form": 2,
+      "terrainProbePassed": true,
+      "maxX": 5840,
+      "exit": 5840,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5840,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "2-1",
+      "form": 0,
+      "terrainProbePassed": true,
+      "maxX": 5073,
+      "exit": 5072,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5073,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "2-1",
+      "form": 1,
+      "terrainProbePassed": true,
+      "maxX": 5073,
+      "exit": 5072,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5073,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "2-1",
+      "form": 2,
+      "terrainProbePassed": true,
+      "maxX": 5073,
+      "exit": 5072,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5073,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "2-2",
+      "form": 0,
+      "terrainProbePassed": true,
+      "maxX": 5328,
+      "exit": 5328,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5328,
+          "y": 194,
+          "height": 14
+        }
+      ]
+    },
+    {
+      "id": "2-2",
+      "form": 1,
+      "terrainProbePassed": true,
+      "maxX": 5328,
+      "exit": 5328,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5328,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "2-2",
+      "form": 2,
+      "terrainProbePassed": true,
+      "maxX": 5328,
+      "exit": 5328,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5328,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "2-3",
+      "form": 0,
+      "terrainProbePassed": true,
+      "maxX": 5584,
+      "exit": 5584,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5584,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "2-3",
+      "form": 1,
+      "terrainProbePassed": true,
+      "maxX": 5584,
+      "exit": 5584,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5584,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "2-3",
+      "form": 2,
+      "terrainProbePassed": true,
+      "maxX": 5584,
+      "exit": 5584,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5584,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "2-4",
+      "form": 0,
+      "terrainProbePassed": true,
+      "maxX": 5840,
+      "exit": 5840,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5840,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "2-4",
+      "form": 1,
+      "terrainProbePassed": true,
+      "maxX": 5840,
+      "exit": 5840,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5840,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "2-4",
+      "form": 2,
+      "terrainProbePassed": true,
+      "maxX": 5840,
+      "exit": 5840,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5840,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "3-1",
+      "form": 0,
+      "terrainProbePassed": true,
+      "maxX": 5072,
+      "exit": 5072,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5072,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "3-1",
+      "form": 1,
+      "terrainProbePassed": true,
+      "maxX": 5073,
+      "exit": 5072,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5073,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "3-1",
+      "form": 2,
+      "terrainProbePassed": true,
+      "maxX": 5073,
+      "exit": 5072,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5073,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "3-2",
+      "form": 0,
+      "terrainProbePassed": true,
+      "maxX": 5329,
+      "exit": 5328,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5329,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "3-2",
+      "form": 1,
+      "terrainProbePassed": true,
+      "maxX": 5329,
+      "exit": 5328,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5329,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "3-2",
+      "form": 2,
+      "terrainProbePassed": true,
+      "maxX": 5329,
+      "exit": 5328,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5329,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "3-3",
+      "form": 0,
+      "terrainProbePassed": true,
+      "maxX": 5585,
+      "exit": 5584,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5585,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "3-3",
+      "form": 1,
+      "terrainProbePassed": true,
+      "maxX": 5585,
+      "exit": 5584,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5585,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "3-3",
+      "form": 2,
+      "terrainProbePassed": true,
+      "maxX": 5585,
+      "exit": 5584,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5585,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "3-4",
+      "form": 0,
+      "terrainProbePassed": true,
+      "maxX": 5840,
+      "exit": 5840,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5840,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "3-4",
+      "form": 1,
+      "terrainProbePassed": true,
+      "maxX": 5840,
+      "exit": 5840,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5840,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "3-4",
+      "form": 2,
+      "terrainProbePassed": true,
+      "maxX": 5840,
+      "exit": 5840,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5840,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "4-1",
+      "form": 0,
+      "terrainProbePassed": true,
+      "maxX": 5073,
+      "exit": 5072,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5073,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "4-1",
+      "form": 1,
+      "terrainProbePassed": true,
+      "maxX": 5073,
+      "exit": 5072,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5073,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "4-1",
+      "form": 2,
+      "terrainProbePassed": true,
+      "maxX": 5073,
+      "exit": 5072,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5073,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "4-2",
+      "form": 0,
+      "terrainProbePassed": true,
+      "maxX": 5328,
+      "exit": 5328,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5328,
+          "y": 194,
+          "height": 14
+        }
+      ]
+    },
+    {
+      "id": "4-2",
+      "form": 1,
+      "terrainProbePassed": true,
+      "maxX": 5328,
+      "exit": 5328,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5328,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "4-2",
+      "form": 2,
+      "terrainProbePassed": true,
+      "maxX": 5328,
+      "exit": 5328,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5328,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "4-3",
+      "form": 0,
+      "terrainProbePassed": true,
+      "maxX": 5585,
+      "exit": 5584,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5585,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "4-3",
+      "form": 1,
+      "terrainProbePassed": true,
+      "maxX": 5585,
+      "exit": 5584,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5585,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "4-3",
+      "form": 2,
+      "terrainProbePassed": true,
+      "maxX": 5585,
+      "exit": 5584,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5585,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "4-4",
+      "form": 0,
+      "terrainProbePassed": true,
+      "maxX": 5840,
+      "exit": 5840,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5840,
+          "y": 194,
+          "height": 14
+        }
+      ]
+    },
+    {
+      "id": "4-4",
+      "form": 1,
+      "terrainProbePassed": true,
+      "maxX": 5841,
+      "exit": 5840,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5841,
+          "y": 76,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "4-4",
+      "form": 2,
+      "terrainProbePassed": true,
+      "maxX": 5841,
+      "exit": 5840,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5841,
+          "y": 76,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "5-1",
+      "form": 0,
+      "terrainProbePassed": true,
+      "maxX": 5072,
+      "exit": 5072,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5072,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "5-1",
+      "form": 1,
+      "terrainProbePassed": true,
+      "maxX": 5072,
+      "exit": 5072,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5072,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "5-1",
+      "form": 2,
+      "terrainProbePassed": true,
+      "maxX": 5072,
+      "exit": 5072,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5072,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "5-2",
+      "form": 0,
+      "terrainProbePassed": true,
+      "maxX": 5328,
+      "exit": 5328,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5328,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "5-2",
+      "form": 1,
+      "terrainProbePassed": true,
+      "maxX": 5328,
+      "exit": 5328,
+      "settings": {
+        "lookahead": 9,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 9,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "playing",
+          "x": 1094,
+          "y": 186,
+          "height": 22.4
+        },
+        {
+          "lookahead": 3,
+          "obstacleLook": 16,
+          "mode": "playing",
+          "x": 1094,
+          "y": 186,
+          "height": 22.4
+        },
+        {
+          "lookahead": 3,
+          "obstacleLook": 24,
+          "mode": "playing",
+          "x": 1094,
+          "y": 186,
+          "height": 22.4
+        },
+        {
+          "lookahead": 6,
+          "obstacleLook": 8,
+          "mode": "playing",
+          "x": 1094,
+          "y": 186,
+          "height": 22.4
+        },
+        {
+          "lookahead": 6,
+          "obstacleLook": 16,
+          "mode": "playing",
+          "x": 1094,
+          "y": 186,
+          "height": 22.4
+        },
+        {
+          "lookahead": 6,
+          "obstacleLook": 24,
+          "mode": "playing",
+          "x": 1094,
+          "y": 186,
+          "height": 22.4
+        },
+        {
+          "lookahead": 9,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5328,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "5-2",
+      "form": 2,
+      "terrainProbePassed": true,
+      "maxX": 5328,
+      "exit": 5328,
+      "settings": {
+        "lookahead": 9,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 9,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "playing",
+          "x": 1094,
+          "y": 186,
+          "height": 22.4
+        },
+        {
+          "lookahead": 3,
+          "obstacleLook": 16,
+          "mode": "playing",
+          "x": 1094,
+          "y": 186,
+          "height": 22.4
+        },
+        {
+          "lookahead": 3,
+          "obstacleLook": 24,
+          "mode": "playing",
+          "x": 1094,
+          "y": 186,
+          "height": 22.4
+        },
+        {
+          "lookahead": 6,
+          "obstacleLook": 8,
+          "mode": "playing",
+          "x": 1094,
+          "y": 186,
+          "height": 22.4
+        },
+        {
+          "lookahead": 6,
+          "obstacleLook": 16,
+          "mode": "playing",
+          "x": 1094,
+          "y": 186,
+          "height": 22.4
+        },
+        {
+          "lookahead": 6,
+          "obstacleLook": 24,
+          "mode": "playing",
+          "x": 1094,
+          "y": 186,
+          "height": 22.4
+        },
+        {
+          "lookahead": 9,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5328,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "5-3",
+      "form": 0,
+      "terrainProbePassed": true,
+      "maxX": 5585,
+      "exit": 5584,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5585,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "5-3",
+      "form": 1,
+      "terrainProbePassed": true,
+      "maxX": 5584,
+      "exit": 5584,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5584,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "5-3",
+      "form": 2,
+      "terrainProbePassed": true,
+      "maxX": 5584,
+      "exit": 5584,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5584,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "5-4",
+      "form": 0,
+      "terrainProbePassed": true,
+      "maxX": 5840,
+      "exit": 5840,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5840,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "5-4",
+      "form": 1,
+      "terrainProbePassed": true,
+      "maxX": 5840,
+      "exit": 5840,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5840,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "5-4",
+      "form": 2,
+      "terrainProbePassed": true,
+      "maxX": 5840,
+      "exit": 5840,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5840,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "6-1",
+      "form": 0,
+      "terrainProbePassed": true,
+      "maxX": 5073,
+      "exit": 5072,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5073,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "6-1",
+      "form": 1,
+      "terrainProbePassed": true,
+      "maxX": 5073,
+      "exit": 5072,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5073,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "6-1",
+      "form": 2,
+      "terrainProbePassed": true,
+      "maxX": 5073,
+      "exit": 5072,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5073,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "6-2",
+      "form": 0,
+      "terrainProbePassed": true,
+      "maxX": 5328,
+      "exit": 5328,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5328,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "6-2",
+      "form": 1,
+      "terrainProbePassed": true,
+      "maxX": 5328,
+      "exit": 5328,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5328,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "6-2",
+      "form": 2,
+      "terrainProbePassed": true,
+      "maxX": 5328,
+      "exit": 5328,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5328,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "6-3",
+      "form": 0,
+      "terrainProbePassed": true,
+      "maxX": 5584,
+      "exit": 5584,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5584,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "6-3",
+      "form": 1,
+      "terrainProbePassed": true,
+      "maxX": 5584,
+      "exit": 5584,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5584,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "6-3",
+      "form": 2,
+      "terrainProbePassed": true,
+      "maxX": 5584,
+      "exit": 5584,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5584,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "6-4",
+      "form": 0,
+      "terrainProbePassed": true,
+      "maxX": 5840,
+      "exit": 5840,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5840,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "6-4",
+      "form": 1,
+      "terrainProbePassed": true,
+      "maxX": 5840,
+      "exit": 5840,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5840,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "6-4",
+      "form": 2,
+      "terrainProbePassed": true,
+      "maxX": 5840,
+      "exit": 5840,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5840,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "7-1",
+      "form": 0,
+      "terrainProbePassed": true,
+      "maxX": 5072,
+      "exit": 5072,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5072,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "7-1",
+      "form": 1,
+      "terrainProbePassed": true,
+      "maxX": 5073,
+      "exit": 5072,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5073,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "7-1",
+      "form": 2,
+      "terrainProbePassed": true,
+      "maxX": 5073,
+      "exit": 5072,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5073,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "7-2",
+      "form": 0,
+      "terrainProbePassed": true,
+      "maxX": 5329,
+      "exit": 5328,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5329,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "7-2",
+      "form": 1,
+      "terrainProbePassed": true,
+      "maxX": 5329,
+      "exit": 5328,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5329,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "7-2",
+      "form": 2,
+      "terrainProbePassed": true,
+      "maxX": 5329,
+      "exit": 5328,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5329,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "7-3",
+      "form": 0,
+      "terrainProbePassed": true,
+      "maxX": 5585,
+      "exit": 5584,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5585,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "7-3",
+      "form": 1,
+      "terrainProbePassed": true,
+      "maxX": 5585,
+      "exit": 5584,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5585,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "7-3",
+      "form": 2,
+      "terrainProbePassed": true,
+      "maxX": 5585,
+      "exit": 5584,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5585,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "7-4",
+      "form": 0,
+      "terrainProbePassed": true,
+      "maxX": 5840,
+      "exit": 5840,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5840,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "7-4",
+      "form": 1,
+      "terrainProbePassed": true,
+      "maxX": 5840,
+      "exit": 5840,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5840,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "7-4",
+      "form": 2,
+      "terrainProbePassed": true,
+      "maxX": 5840,
+      "exit": 5840,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5840,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "8-1",
+      "form": 0,
+      "terrainProbePassed": true,
+      "maxX": 5072,
+      "exit": 5072,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5072,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "8-1",
+      "form": 1,
+      "terrainProbePassed": true,
+      "maxX": 5072,
+      "exit": 5072,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5072,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "8-1",
+      "form": 2,
+      "terrainProbePassed": true,
+      "maxX": 5072,
+      "exit": 5072,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5072,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "8-2",
+      "form": 0,
+      "terrainProbePassed": true,
+      "maxX": 5328,
+      "exit": 5328,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5328,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "8-2",
+      "form": 1,
+      "terrainProbePassed": true,
+      "maxX": 5328,
+      "exit": 5328,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5328,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "8-2",
+      "form": 2,
+      "terrainProbePassed": true,
+      "maxX": 5328,
+      "exit": 5328,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5328,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "8-3",
+      "form": 0,
+      "terrainProbePassed": true,
+      "maxX": 5585,
+      "exit": 5584,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5585,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "8-3",
+      "form": 1,
+      "terrainProbePassed": true,
+      "maxX": 5585,
+      "exit": 5584,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5585,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "8-3",
+      "form": 2,
+      "terrainProbePassed": true,
+      "maxX": 5585,
+      "exit": 5584,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5585,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "8-4",
+      "form": 0,
+      "terrainProbePassed": true,
+      "maxX": 5841,
+      "exit": 5840,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5841,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "8-4",
+      "form": 1,
+      "terrainProbePassed": true,
+      "maxX": 5841,
+      "exit": 5840,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5841,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    },
+    {
+      "id": "8-4",
+      "form": 2,
+      "terrainProbePassed": true,
+      "maxX": 5841,
+      "exit": 5840,
+      "settings": {
+        "lookahead": 3,
+        "obstacleLook": 8
+      },
+      "successfulSettings": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8
+        }
+      ],
+      "attempts": [
+        {
+          "lookahead": 3,
+          "obstacleLook": 8,
+          "mode": "won",
+          "x": 5841,
+          "y": 186,
+          "height": 22.4
+        }
+      ]
+    }
+  ]
+}

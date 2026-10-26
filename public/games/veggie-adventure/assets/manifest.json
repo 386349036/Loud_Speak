@@ -4,6 +4,281 @@
   "status": "campaign-animation-integrated-awaiting-user-review",
   "assets": [
     {
+      "id": "anim-B01",
+      "path": "animations/B01.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/B01.png"
+      ]
+    },
+    {
+      "id": "anim-B02",
+      "path": "animations/B02.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/B02.png"
+      ]
+    },
+    {
+      "id": "anim-B03",
+      "path": "animations/B03.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/B03.png"
+      ]
+    },
+    {
+      "id": "anim-B04",
+      "path": "animations/B04.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/B04.png"
+      ]
+    },
+    {
+      "id": "anim-B05",
+      "path": "animations/B05.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/B05.png"
+      ]
+    },
+    {
+      "id": "anim-B06",
+      "path": "animations/B06.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/B06.png"
+      ]
+    },
+    {
+      "id": "anim-B07",
+      "path": "animations/B07.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/B07-part0.png",
+        "art-source/veggie-adventure/animations/v1/B07-part1.png"
+      ]
+    },
+    {
+      "id": "anim-B08",
+      "path": "animations/B08.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/B08.png"
+      ]
+    },
+    {
+      "id": "anim-E01",
+      "path": "animations/v2-scene01/E01.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v2-scene01/E01-part0.png"
+      ],
+      "revision": "scene01-v2",
+      "identityReference": "art-source/veggie-adventure/animations/v2-scene01/reference.png"
+    },
+    {
+      "id": "anim-E02",
+      "path": "animations/stunned-v1/E02.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "animations/v2-scene01/E02.png",
+        "art-source/veggie-adventure/animations/stunned-v1/E02/generated.png"
+      ],
+      "revision": "stunned-v1",
+      "identityReference": "art-source/veggie-adventure/animations/v2-scene01/reference.png"
+    },
+    {
+      "id": "anim-E03",
+      "path": "animations/stunned-v1/E03.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "animations/E03.png",
+        "art-source/veggie-adventure/animations/stunned-v1/E03/generated.png"
+      ],
+      "revision": "stunned-v1"
+    },
+    {
+      "id": "anim-E04",
+      "path": "animations/stunned-v1/E04.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "animations/E04.png",
+        "art-source/veggie-adventure/animations/stunned-v1/E04/generated.png"
+      ],
+      "revision": "stunned-v1"
+    },
+    {
+      "id": "anim-E05",
+      "path": "animations/E05.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/E05.png"
+      ]
+    },
+    {
+      "id": "anim-E06",
+      "path": "animations/E06.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/E06.png"
+      ]
+    },
+    {
+      "id": "anim-E07",
+      "path": "animations/E07.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/E07.png"
+      ]
+    },
+    {
+      "id": "anim-E08",
+      "path": "animations/E08.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/E08.png"
+      ]
+    },
+    {
+      "id": "anim-E09",
+      "path": "animations/E09.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/E09.png"
+      ]
+    },
+    {
+      "id": "anim-E10",
+      "path": "animations/E10.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/E10.png"
+      ]
+    },
+    {
+      "id": "anim-E11",
+      "path": "animations/E11.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/E11.png"
+      ]
+    },
+    {
+      "id": "anim-E12",
+      "path": "animations/E12.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/E12.png"
+      ]
+    },
+    {
+      "id": "anim-E13",
+      "path": "animations/E13.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/enemies/aquatic-plant-v1/generated.png"
+      ],
+      "stage": "aquatic-plant-v1"
+    },
+    {
+      "id": "anim-FX01",
+      "path": "animations/FX01.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/FX01.png"
+      ]
+    },
+    {
+      "id": "anim-N01",
+      "path": "animations/N01.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/N01.png"
+      ]
+    },
+    {
+      "id": "anim-N02",
+      "path": "animations/N02.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v1/N02.png"
+      ]
+    },
+    {
+      "id": "anim-P01-0",
+      "path": "animations/v2-scene01/P01-0.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v2-scene01/P01-0-part0.png",
+        "art-source/veggie-adventure/animations/v2-scene01/P01-0-part1.png",
+        "art-source/veggie-adventure/animations/v2-scene01/P01-0-part2.png"
+      ],
+      "revision": "scene01-v2",
+      "identityReference": "art-source/veggie-adventure/animations/v2-scene01/reference.png"
+    },
+    {
+      "id": "anim-P01-1",
+      "path": "animations/v2-scene01/P01-1.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v2-scene01/P01-1-part0.png",
+        "art-source/veggie-adventure/animations/v2-scene01/P01-1-part1.png",
+        "art-source/veggie-adventure/animations/v2-scene01/P01-1-part2.png"
+      ],
+      "revision": "scene01-v2",
+      "identityReference": "art-source/veggie-adventure/animations/v2-scene01/reference.png"
+    },
+    {
+      "id": "anim-P01-2",
+      "path": "animations/v2-scene01/P01-2.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/animations/v2-scene01/P01-2-part0.png",
+        "art-source/veggie-adventure/animations/v2-scene01/P01-2-part1.png",
+        "art-source/veggie-adventure/animations/v2-scene01/P01-2-part2.png"
+      ],
+      "revision": "scene01-v2",
+      "identityReference": "art-source/veggie-adventure/animations/v2-scene01/reference.png"
+    },
+    {
+      "id": "anim-TRAP_SOIL",
+      "path": "effects/trap-soil-v1/soil.png",
+      "animation": true,
+      "visualVerified": false,
+      "sources": [
+        "art-source/veggie-adventure/effects/trap-soil-v1/source.png"
+      ]
+    },
+    {
       "id": "B01-1",
       "path": "campaign/B01-1.png",
       "width": 120,
@@ -764,6 +1039,46 @@
       "visualVerified": false
     },
     {
+      "id": "boss-cue-hop",
+      "path": "effects/boss-cues-v1/hop.png",
+      "width": 96,
+      "height": 96,
+      "anchor": [
+        48,
+        96
+      ]
+    },
+    {
+      "id": "boss-cue-seeds",
+      "path": "effects/boss-cues-v1/seeds.png",
+      "width": 96,
+      "height": 96,
+      "anchor": [
+        48,
+        96
+      ]
+    },
+    {
+      "id": "boss-cue-slam",
+      "path": "effects/boss-cues-v1/slam.png",
+      "width": 96,
+      "height": 96,
+      "anchor": [
+        48,
+        96
+      ]
+    },
+    {
+      "id": "boss-cue-weak",
+      "path": "effects/boss-cues-v1/weak.png",
+      "width": 96,
+      "height": 96,
+      "anchor": [
+        48,
+        96
+      ]
+    },
+    {
       "id": "E01-1",
       "path": "campaign/E01-1.png",
       "width": 48,
@@ -1244,6 +1559,24 @@
       "revision": "scene01-v2"
     },
     {
+      "id": "item-rebirth",
+      "path": "effects/combat-rewards-v1/item-rebirth.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "effects/combat-rewards-v1/generated.png",
+      "grid": [
+        2,
+        2
+      ],
+      "cell": 1,
+      "stage": "combat-rewards-runtime-v1",
+      "visualVerified": false
+    },
+    {
       "id": "N01-1",
       "path": "campaign/N01-1.png",
       "width": 48,
@@ -1451,9 +1784,9 @@
       ],
       "stage": "prototype-runtime",
       "visualVerified": false,
-      "source": "animations/v2-scene01/E02.png",
+      "source": "animations/stunned-v1/E02.png",
       "cell": 5,
-      "revision": "scene01-v2"
+      "revision": "stunned-v1"
     },
     {
       "id": "objects-6",
@@ -1466,9 +1799,9 @@
       ],
       "stage": "prototype-runtime",
       "visualVerified": false,
-      "source": "animations/v2-scene01/E02.png",
+      "source": "animations/stunned-v1/E02.png",
       "cell": 6,
-      "revision": "scene01-v2"
+      "revision": "stunned-v1"
     },
     {
       "id": "objects-7",
@@ -1514,6 +1847,66 @@
       "cell": 9
     },
     {
+      "id": "projectile-pea",
+      "path": "effects/combat-rewards-v1/projectile-pea.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "effects/combat-rewards-v1/generated.png",
+      "grid": [
+        2,
+        2
+      ],
+      "cell": 3,
+      "stage": "combat-rewards-runtime-v1",
+      "visualVerified": false
+    },
+    {
+      "id": "projectile-thorn",
+      "path": "effects/combat-rewards-v1/projectile-thorn.png",
+      "width": 48,
+      "height": 24,
+      "anchor": [
+        24,
+        24
+      ],
+      "source": "effects/combat-rewards-v1/generated.png",
+      "grid": [
+        2,
+        2
+      ],
+      "cell": 2,
+      "stage": "combat-rewards-runtime-v1",
+      "visualVerified": false
+    },
+    {
+      "id": "reward-rebirth-face",
+      "path": "effects/combat-rewards-v1/reward-rebirth-face.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "effects/combat-rewards-v1/generated.png",
+      "grid": [
+        2,
+        2
+      ],
+      "cell": 0,
+      "stage": "combat-rewards-runtime-v1",
+      "visualVerified": false
+    },
+    {
+      "id": "star-shield-v1",
+      "path": "effects/star-shield-v1.png",
+      "source": "art-source/veggie-adventure/effects/star-shield-v1/source.png",
+      "visualVerified": false
+    },
+    {
       "id": "W01-arena",
       "path": "campaign/W01-arena.png",
       "source": "scenes/world-01/w01-arena-v1.png",
@@ -1531,41 +1924,115 @@
     },
     {
       "id": "W01-kit-0",
-      "path": "campaign/W01-kit-0.png",
+      "path": "terrain/world-specific-v3/W01-kit-0.png",
       "width": 48,
       "height": 48,
       "anchor": [
         24,
         48
       ],
-      "source": "scenes/batch-01/w01-kit-v1.png",
+      "source": "terrain/world-specific-v3/W01-generated.png",
+      "campaign": true,
+      "stage": "world-terrain-runtime-v3",
+      "visualVerified": false,
+      "seamless": {
+        "horizontal": true,
+        "vertical": false,
+        "opaque": true,
+        "variantCompatible": true
+      },
       "grid": [
-        4,
+        2,
         2
       ],
       "cell": 0,
-      "campaign": true,
-      "stage": "temporary-key-pose-runtime",
-      "visualVerified": false
+      "world": "W01",
+      "material": "surface-soil",
+      "variant": "a"
     },
     {
-      "id": "W01-kit-1",
-      "path": "campaign/W01-kit-1.png",
+      "id": "W01-kit-0b",
+      "campaign": true,
+      "path": "terrain/world-specific-v3/W01-kit-0b.png",
       "width": 48,
       "height": 48,
       "anchor": [
         24,
         48
       ],
-      "source": "scenes/batch-01/w01-kit-v1.png",
+      "source": "terrain/world-specific-v3/W01-generated.png",
       "grid": [
-        4,
+        2,
         2
       ],
       "cell": 1,
+      "stage": "world-terrain-runtime-v3",
+      "visualVerified": false,
+      "seamless": {
+        "horizontal": true,
+        "vertical": false,
+        "opaque": true,
+        "variantCompatible": true
+      },
+      "world": "W01",
+      "material": "surface-soil",
+      "variant": "b"
+    },
+    {
+      "id": "W01-kit-1",
+      "path": "terrain/world-specific-v3/W01-kit-1.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "terrain/world-specific-v3/W01-generated.png",
       "campaign": true,
-      "stage": "temporary-key-pose-runtime",
-      "visualVerified": false
+      "stage": "world-terrain-runtime-v3",
+      "visualVerified": false,
+      "seamless": {
+        "horizontal": true,
+        "vertical": true,
+        "opaque": true,
+        "variantCompatible": true
+      },
+      "grid": [
+        2,
+        2
+      ],
+      "cell": 2,
+      "world": "W01",
+      "material": "foundation",
+      "variant": "a"
+    },
+    {
+      "id": "W01-kit-1b",
+      "campaign": true,
+      "path": "terrain/world-specific-v3/W01-kit-1b.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "terrain/world-specific-v3/W01-generated.png",
+      "grid": [
+        2,
+        2
+      ],
+      "cell": 3,
+      "stage": "world-terrain-runtime-v3",
+      "visualVerified": false,
+      "seamless": {
+        "horizontal": true,
+        "vertical": true,
+        "opaque": true,
+        "variantCompatible": true
+      },
+      "world": "W01",
+      "material": "foundation",
+      "variant": "b"
     },
     {
       "id": "W01-kit-2",
@@ -1631,41 +2098,115 @@
     },
     {
       "id": "W02-kit-0",
-      "path": "campaign/W02-kit-0.png",
+      "path": "terrain/world-specific-v3/W02-kit-0.png",
       "width": 48,
       "height": 48,
       "anchor": [
         24,
         48
       ],
-      "source": "scenes/world-02/w02-kit-v1.png",
+      "source": "terrain/world-specific-v3/W02-generated.png",
+      "campaign": true,
+      "stage": "world-terrain-runtime-v3",
+      "visualVerified": false,
+      "seamless": {
+        "horizontal": true,
+        "vertical": false,
+        "opaque": true,
+        "variantCompatible": true
+      },
       "grid": [
-        4,
+        2,
         2
       ],
       "cell": 0,
-      "campaign": true,
-      "stage": "temporary-key-pose-runtime",
-      "visualVerified": false
+      "world": "W02",
+      "material": "surface-soil",
+      "variant": "a"
     },
     {
-      "id": "W02-kit-1",
-      "path": "campaign/W02-kit-1.png",
+      "id": "W02-kit-0b",
+      "campaign": true,
+      "path": "terrain/world-specific-v3/W02-kit-0b.png",
       "width": 48,
       "height": 48,
       "anchor": [
         24,
         48
       ],
-      "source": "scenes/world-02/w02-kit-v1.png",
+      "source": "terrain/world-specific-v3/W02-generated.png",
       "grid": [
-        4,
+        2,
         2
       ],
       "cell": 1,
+      "stage": "world-terrain-runtime-v3",
+      "visualVerified": false,
+      "seamless": {
+        "horizontal": true,
+        "vertical": false,
+        "opaque": true,
+        "variantCompatible": true
+      },
+      "world": "W02",
+      "material": "surface-soil",
+      "variant": "b"
+    },
+    {
+      "id": "W02-kit-1",
+      "path": "terrain/world-specific-v3/W02-kit-1.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "terrain/world-specific-v3/W02-generated.png",
       "campaign": true,
-      "stage": "temporary-key-pose-runtime",
-      "visualVerified": false
+      "stage": "world-terrain-runtime-v3",
+      "visualVerified": false,
+      "seamless": {
+        "horizontal": true,
+        "vertical": true,
+        "opaque": true,
+        "variantCompatible": true
+      },
+      "grid": [
+        2,
+        2
+      ],
+      "cell": 2,
+      "world": "W02",
+      "material": "foundation",
+      "variant": "a"
+    },
+    {
+      "id": "W02-kit-1b",
+      "campaign": true,
+      "path": "terrain/world-specific-v3/W02-kit-1b.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "terrain/world-specific-v3/W02-generated.png",
+      "grid": [
+        2,
+        2
+      ],
+      "cell": 3,
+      "stage": "world-terrain-runtime-v3",
+      "visualVerified": false,
+      "seamless": {
+        "horizontal": true,
+        "vertical": true,
+        "opaque": true,
+        "variantCompatible": true
+      },
+      "world": "W02",
+      "material": "foundation",
+      "variant": "b"
     },
     {
       "id": "W02-kit-2",
@@ -1731,41 +2272,115 @@
     },
     {
       "id": "W03-kit-0",
-      "path": "campaign/W03-kit-0.png",
+      "path": "terrain/world-specific-v3/W03-kit-0.png",
       "width": 48,
       "height": 48,
       "anchor": [
         24,
         48
       ],
-      "source": "scenes/world-03/w03-kit-v1.png",
+      "source": "terrain/world-specific-v3/W03-generated.png",
+      "campaign": true,
+      "stage": "world-terrain-runtime-v3",
+      "visualVerified": false,
+      "seamless": {
+        "horizontal": true,
+        "vertical": false,
+        "opaque": true,
+        "variantCompatible": true
+      },
       "grid": [
-        4,
+        2,
         2
       ],
       "cell": 0,
-      "campaign": true,
-      "stage": "temporary-key-pose-runtime",
-      "visualVerified": false
+      "world": "W03",
+      "material": "surface-soil",
+      "variant": "a"
     },
     {
-      "id": "W03-kit-1",
-      "path": "campaign/W03-kit-1.png",
+      "id": "W03-kit-0b",
+      "campaign": true,
+      "path": "terrain/world-specific-v3/W03-kit-0b.png",
       "width": 48,
       "height": 48,
       "anchor": [
         24,
         48
       ],
-      "source": "scenes/world-03/w03-kit-v1.png",
+      "source": "terrain/world-specific-v3/W03-generated.png",
       "grid": [
-        4,
+        2,
         2
       ],
       "cell": 1,
+      "stage": "world-terrain-runtime-v3",
+      "visualVerified": false,
+      "seamless": {
+        "horizontal": true,
+        "vertical": false,
+        "opaque": true,
+        "variantCompatible": true
+      },
+      "world": "W03",
+      "material": "surface-soil",
+      "variant": "b"
+    },
+    {
+      "id": "W03-kit-1",
+      "path": "terrain/world-specific-v3/W03-kit-1.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "terrain/world-specific-v3/W03-generated.png",
       "campaign": true,
-      "stage": "temporary-key-pose-runtime",
-      "visualVerified": false
+      "stage": "world-terrain-runtime-v3",
+      "visualVerified": false,
+      "seamless": {
+        "horizontal": true,
+        "vertical": true,
+        "opaque": true,
+        "variantCompatible": true
+      },
+      "grid": [
+        2,
+        2
+      ],
+      "cell": 2,
+      "world": "W03",
+      "material": "foundation",
+      "variant": "a"
+    },
+    {
+      "id": "W03-kit-1b",
+      "campaign": true,
+      "path": "terrain/world-specific-v3/W03-kit-1b.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "terrain/world-specific-v3/W03-generated.png",
+      "grid": [
+        2,
+        2
+      ],
+      "cell": 3,
+      "stage": "world-terrain-runtime-v3",
+      "visualVerified": false,
+      "seamless": {
+        "horizontal": true,
+        "vertical": true,
+        "opaque": true,
+        "variantCompatible": true
+      },
+      "world": "W03",
+      "material": "foundation",
+      "variant": "b"
     },
     {
       "id": "W03-kit-2",
@@ -1831,41 +2446,115 @@
     },
     {
       "id": "W04-kit-0",
-      "path": "campaign/W04-kit-0.png",
+      "path": "terrain/world-specific-v3/W04-kit-0.png",
       "width": 48,
       "height": 48,
       "anchor": [
         24,
         48
       ],
-      "source": "scenes/world-04/w04-kit-v1.png",
+      "source": "terrain/world-specific-v3/W04-generated.png",
+      "campaign": true,
+      "stage": "world-terrain-runtime-v3",
+      "visualVerified": false,
+      "seamless": {
+        "horizontal": true,
+        "vertical": false,
+        "opaque": true,
+        "variantCompatible": true
+      },
       "grid": [
-        4,
+        2,
         2
       ],
       "cell": 0,
-      "campaign": true,
-      "stage": "temporary-key-pose-runtime",
-      "visualVerified": false
+      "world": "W04",
+      "material": "surface-soil",
+      "variant": "a"
     },
     {
-      "id": "W04-kit-1",
-      "path": "campaign/W04-kit-1.png",
+      "id": "W04-kit-0b",
+      "campaign": true,
+      "path": "terrain/world-specific-v3/W04-kit-0b.png",
       "width": 48,
       "height": 48,
       "anchor": [
         24,
         48
       ],
-      "source": "scenes/world-04/w04-kit-v1.png",
+      "source": "terrain/world-specific-v3/W04-generated.png",
       "grid": [
-        4,
+        2,
         2
       ],
       "cell": 1,
+      "stage": "world-terrain-runtime-v3",
+      "visualVerified": false,
+      "seamless": {
+        "horizontal": true,
+        "vertical": false,
+        "opaque": true,
+        "variantCompatible": true
+      },
+      "world": "W04",
+      "material": "surface-soil",
+      "variant": "b"
+    },
+    {
+      "id": "W04-kit-1",
+      "path": "terrain/world-specific-v3/W04-kit-1.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "terrain/world-specific-v3/W04-generated.png",
       "campaign": true,
-      "stage": "temporary-key-pose-runtime",
-      "visualVerified": false
+      "stage": "world-terrain-runtime-v3",
+      "visualVerified": false,
+      "seamless": {
+        "horizontal": true,
+        "vertical": true,
+        "opaque": true,
+        "variantCompatible": true
+      },
+      "grid": [
+        2,
+        2
+      ],
+      "cell": 2,
+      "world": "W04",
+      "material": "foundation",
+      "variant": "a"
+    },
+    {
+      "id": "W04-kit-1b",
+      "campaign": true,
+      "path": "terrain/world-specific-v3/W04-kit-1b.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "terrain/world-specific-v3/W04-generated.png",
+      "grid": [
+        2,
+        2
+      ],
+      "cell": 3,
+      "stage": "world-terrain-runtime-v3",
+      "visualVerified": false,
+      "seamless": {
+        "horizontal": true,
+        "vertical": true,
+        "opaque": true,
+        "variantCompatible": true
+      },
+      "world": "W04",
+      "material": "foundation",
+      "variant": "b"
     },
     {
       "id": "W04-kit-2",
@@ -1931,41 +2620,115 @@
     },
     {
       "id": "W05-kit-0",
-      "path": "campaign/W05-kit-0.png",
+      "path": "terrain/world-specific-v3/W05-kit-0.png",
       "width": 48,
       "height": 48,
       "anchor": [
         24,
         48
       ],
-      "source": "scenes/world-05/w05-kit-v1.png",
+      "source": "terrain/world-specific-v3/W05-generated.png",
+      "campaign": true,
+      "stage": "world-terrain-runtime-v3",
+      "visualVerified": false,
+      "seamless": {
+        "horizontal": true,
+        "vertical": false,
+        "opaque": true,
+        "variantCompatible": true
+      },
       "grid": [
-        4,
+        2,
         2
       ],
       "cell": 0,
-      "campaign": true,
-      "stage": "temporary-key-pose-runtime",
-      "visualVerified": false
+      "world": "W05",
+      "material": "surface-soil",
+      "variant": "a"
     },
     {
-      "id": "W05-kit-1",
-      "path": "campaign/W05-kit-1.png",
+      "id": "W05-kit-0b",
+      "campaign": true,
+      "path": "terrain/world-specific-v3/W05-kit-0b.png",
       "width": 48,
       "height": 48,
       "anchor": [
         24,
         48
       ],
-      "source": "scenes/world-05/w05-kit-v1.png",
+      "source": "terrain/world-specific-v3/W05-generated.png",
       "grid": [
-        4,
+        2,
         2
       ],
       "cell": 1,
+      "stage": "world-terrain-runtime-v3",
+      "visualVerified": false,
+      "seamless": {
+        "horizontal": true,
+        "vertical": false,
+        "opaque": true,
+        "variantCompatible": true
+      },
+      "world": "W05",
+      "material": "surface-soil",
+      "variant": "b"
+    },
+    {
+      "id": "W05-kit-1",
+      "path": "terrain/world-specific-v3/W05-kit-1.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "terrain/world-specific-v3/W05-generated.png",
       "campaign": true,
-      "stage": "temporary-key-pose-runtime",
-      "visualVerified": false
+      "stage": "world-terrain-runtime-v3",
+      "visualVerified": false,
+      "seamless": {
+        "horizontal": true,
+        "vertical": true,
+        "opaque": true,
+        "variantCompatible": true
+      },
+      "grid": [
+        2,
+        2
+      ],
+      "cell": 2,
+      "world": "W05",
+      "material": "foundation",
+      "variant": "a"
+    },
+    {
+      "id": "W05-kit-1b",
+      "campaign": true,
+      "path": "terrain/world-specific-v3/W05-kit-1b.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "terrain/world-specific-v3/W05-generated.png",
+      "grid": [
+        2,
+        2
+      ],
+      "cell": 3,
+      "stage": "world-terrain-runtime-v3",
+      "visualVerified": false,
+      "seamless": {
+        "horizontal": true,
+        "vertical": true,
+        "opaque": true,
+        "variantCompatible": true
+      },
+      "world": "W05",
+      "material": "foundation",
+      "variant": "b"
     },
     {
       "id": "W05-kit-2",
@@ -2031,41 +2794,115 @@
     },
     {
       "id": "W06-kit-0",
-      "path": "campaign/W06-kit-0.png",
+      "path": "terrain/world-specific-v3/W06-kit-0.png",
       "width": 48,
       "height": 48,
       "anchor": [
         24,
         48
       ],
-      "source": "scenes/world-06/w06-kit-v1.png",
+      "source": "terrain/world-specific-v3/W06-generated.png",
+      "campaign": true,
+      "stage": "world-terrain-runtime-v3",
+      "visualVerified": false,
+      "seamless": {
+        "horizontal": true,
+        "vertical": false,
+        "opaque": true,
+        "variantCompatible": true
+      },
       "grid": [
-        4,
+        2,
         2
       ],
       "cell": 0,
-      "campaign": true,
-      "stage": "temporary-key-pose-runtime",
-      "visualVerified": false
+      "world": "W06",
+      "material": "surface-soil",
+      "variant": "a"
     },
     {
-      "id": "W06-kit-1",
-      "path": "campaign/W06-kit-1.png",
+      "id": "W06-kit-0b",
+      "campaign": true,
+      "path": "terrain/world-specific-v3/W06-kit-0b.png",
       "width": 48,
       "height": 48,
       "anchor": [
         24,
         48
       ],
-      "source": "scenes/world-06/w06-kit-v1.png",
+      "source": "terrain/world-specific-v3/W06-generated.png",
       "grid": [
-        4,
+        2,
         2
       ],
       "cell": 1,
+      "stage": "world-terrain-runtime-v3",
+      "visualVerified": false,
+      "seamless": {
+        "horizontal": true,
+        "vertical": false,
+        "opaque": true,
+        "variantCompatible": true
+      },
+      "world": "W06",
+      "material": "surface-soil",
+      "variant": "b"
+    },
+    {
+      "id": "W06-kit-1",
+      "path": "terrain/world-specific-v3/W06-kit-1.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "terrain/world-specific-v3/W06-generated.png",
       "campaign": true,
-      "stage": "temporary-key-pose-runtime",
-      "visualVerified": false
+      "stage": "world-terrain-runtime-v3",
+      "visualVerified": false,
+      "seamless": {
+        "horizontal": true,
+        "vertical": true,
+        "opaque": true,
+        "variantCompatible": true
+      },
+      "grid": [
+        2,
+        2
+      ],
+      "cell": 2,
+      "world": "W06",
+      "material": "foundation",
+      "variant": "a"
+    },
+    {
+      "id": "W06-kit-1b",
+      "campaign": true,
+      "path": "terrain/world-specific-v3/W06-kit-1b.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "terrain/world-specific-v3/W06-generated.png",
+      "grid": [
+        2,
+        2
+      ],
+      "cell": 3,
+      "stage": "world-terrain-runtime-v3",
+      "visualVerified": false,
+      "seamless": {
+        "horizontal": true,
+        "vertical": true,
+        "opaque": true,
+        "variantCompatible": true
+      },
+      "world": "W06",
+      "material": "foundation",
+      "variant": "b"
     },
     {
       "id": "W06-kit-2",
@@ -2131,41 +2968,115 @@
     },
     {
       "id": "W07-kit-0",
-      "path": "campaign/W07-kit-0.png",
+      "path": "terrain/world-specific-v3/W07-kit-0.png",
       "width": 48,
       "height": 48,
       "anchor": [
         24,
         48
       ],
-      "source": "scenes/batch-01/w07-kit-v1.png",
+      "source": "terrain/world-specific-v3/W07-generated.png",
+      "campaign": true,
+      "stage": "world-terrain-runtime-v3",
+      "visualVerified": false,
+      "seamless": {
+        "horizontal": true,
+        "vertical": false,
+        "opaque": true,
+        "variantCompatible": true
+      },
       "grid": [
-        4,
+        2,
         2
       ],
       "cell": 0,
-      "campaign": true,
-      "stage": "temporary-key-pose-runtime",
-      "visualVerified": false
+      "world": "W07",
+      "material": "surface-soil",
+      "variant": "a"
     },
     {
-      "id": "W07-kit-1",
-      "path": "campaign/W07-kit-1.png",
+      "id": "W07-kit-0b",
+      "campaign": true,
+      "path": "terrain/world-specific-v3/W07-kit-0b.png",
       "width": 48,
       "height": 48,
       "anchor": [
         24,
         48
       ],
-      "source": "scenes/batch-01/w07-kit-v1.png",
+      "source": "terrain/world-specific-v3/W07-generated.png",
       "grid": [
-        4,
+        2,
         2
       ],
       "cell": 1,
+      "stage": "world-terrain-runtime-v3",
+      "visualVerified": false,
+      "seamless": {
+        "horizontal": true,
+        "vertical": false,
+        "opaque": true,
+        "variantCompatible": true
+      },
+      "world": "W07",
+      "material": "surface-soil",
+      "variant": "b"
+    },
+    {
+      "id": "W07-kit-1",
+      "path": "terrain/world-specific-v3/W07-kit-1.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "terrain/world-specific-v3/W07-generated.png",
       "campaign": true,
-      "stage": "temporary-key-pose-runtime",
-      "visualVerified": false
+      "stage": "world-terrain-runtime-v3",
+      "visualVerified": false,
+      "seamless": {
+        "horizontal": true,
+        "vertical": true,
+        "opaque": true,
+        "variantCompatible": true
+      },
+      "grid": [
+        2,
+        2
+      ],
+      "cell": 2,
+      "world": "W07",
+      "material": "foundation",
+      "variant": "a"
+    },
+    {
+      "id": "W07-kit-1b",
+      "campaign": true,
+      "path": "terrain/world-specific-v3/W07-kit-1b.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "terrain/world-specific-v3/W07-generated.png",
+      "grid": [
+        2,
+        2
+      ],
+      "cell": 3,
+      "stage": "world-terrain-runtime-v3",
+      "visualVerified": false,
+      "seamless": {
+        "horizontal": true,
+        "vertical": true,
+        "opaque": true,
+        "variantCompatible": true
+      },
+      "world": "W07",
+      "material": "foundation",
+      "variant": "b"
     },
     {
       "id": "W07-kit-2",
@@ -2231,41 +3142,115 @@
     },
     {
       "id": "W08-kit-0",
-      "path": "campaign/W08-kit-0.png",
+      "path": "terrain/world-specific-v3/W08-kit-0.png",
       "width": 48,
       "height": 48,
       "anchor": [
         24,
         48
       ],
-      "source": "scenes/world-08/w08-kit-v1.png",
+      "source": "terrain/world-specific-v3/W08-generated.png",
+      "campaign": true,
+      "stage": "world-terrain-runtime-v3",
+      "visualVerified": false,
+      "seamless": {
+        "horizontal": true,
+        "vertical": false,
+        "opaque": true,
+        "variantCompatible": true
+      },
       "grid": [
-        4,
+        2,
         2
       ],
       "cell": 0,
-      "campaign": true,
-      "stage": "temporary-key-pose-runtime",
-      "visualVerified": false
+      "world": "W08",
+      "material": "surface-soil",
+      "variant": "a"
     },
     {
-      "id": "W08-kit-1",
-      "path": "campaign/W08-kit-1.png",
+      "id": "W08-kit-0b",
+      "campaign": true,
+      "path": "terrain/world-specific-v3/W08-kit-0b.png",
       "width": 48,
       "height": 48,
       "anchor": [
         24,
         48
       ],
-      "source": "scenes/world-08/w08-kit-v1.png",
+      "source": "terrain/world-specific-v3/W08-generated.png",
       "grid": [
-        4,
+        2,
         2
       ],
       "cell": 1,
+      "stage": "world-terrain-runtime-v3",
+      "visualVerified": false,
+      "seamless": {
+        "horizontal": true,
+        "vertical": false,
+        "opaque": true,
+        "variantCompatible": true
+      },
+      "world": "W08",
+      "material": "surface-soil",
+      "variant": "b"
+    },
+    {
+      "id": "W08-kit-1",
+      "path": "terrain/world-specific-v3/W08-kit-1.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "terrain/world-specific-v3/W08-generated.png",
       "campaign": true,
-      "stage": "temporary-key-pose-runtime",
-      "visualVerified": false
+      "stage": "world-terrain-runtime-v3",
+      "visualVerified": false,
+      "seamless": {
+        "horizontal": true,
+        "vertical": true,
+        "opaque": true,
+        "variantCompatible": true
+      },
+      "grid": [
+        2,
+        2
+      ],
+      "cell": 2,
+      "world": "W08",
+      "material": "foundation",
+      "variant": "a"
+    },
+    {
+      "id": "W08-kit-1b",
+      "campaign": true,
+      "path": "terrain/world-specific-v3/W08-kit-1b.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "terrain/world-specific-v3/W08-generated.png",
+      "grid": [
+        2,
+        2
+      ],
+      "cell": 3,
+      "stage": "world-terrain-runtime-v3",
+      "visualVerified": false,
+      "seamless": {
+        "horizontal": true,
+        "vertical": true,
+        "opaque": true,
+        "variantCompatible": true
+      },
+      "world": "W08",
+      "material": "foundation",
+      "variant": "b"
     },
     {
       "id": "W08-kit-2",
@@ -2314,302 +3299,452 @@
       "visualVerified": false
     },
     {
-      "id": "anim-P01-0",
-      "path": "animations/v2-scene01/P01-0.png",
-      "animation": true,
-      "visualVerified": false,
-      "sources": [
-        "art-source/veggie-adventure/animations/v2-scene01/P01-0-part0.png",
-        "art-source/veggie-adventure/animations/v2-scene01/P01-0-part1.png",
-        "art-source/veggie-adventure/animations/v2-scene01/P01-0-part2.png"
+      "id": "warp-label-1-1",
+      "path": "ui/warp-labels-v1/1-1.png",
+      "width": 48,
+      "height": 20,
+      "anchor": [
+        24,
+        20
       ],
-      "revision": "scene01-v2",
-      "identityReference": "art-source/veggie-adventure/animations/v2-scene01/reference.png"
-    },
-    {
-      "id": "anim-P01-1",
-      "path": "animations/v2-scene01/P01-1.png",
-      "animation": true,
-      "visualVerified": false,
-      "sources": [
-        "art-source/veggie-adventure/animations/v2-scene01/P01-1-part0.png",
-        "art-source/veggie-adventure/animations/v2-scene01/P01-1-part1.png",
-        "art-source/veggie-adventure/animations/v2-scene01/P01-1-part2.png"
-      ],
-      "revision": "scene01-v2",
-      "identityReference": "art-source/veggie-adventure/animations/v2-scene01/reference.png"
-    },
-    {
-      "id": "anim-P01-2",
-      "path": "animations/v2-scene01/P01-2.png",
-      "animation": true,
-      "visualVerified": false,
-      "sources": [
-        "art-source/veggie-adventure/animations/v2-scene01/P01-2-part0.png",
-        "art-source/veggie-adventure/animations/v2-scene01/P01-2-part1.png",
-        "art-source/veggie-adventure/animations/v2-scene01/P01-2-part2.png"
-      ],
-      "revision": "scene01-v2",
-      "identityReference": "art-source/veggie-adventure/animations/v2-scene01/reference.png"
-    },
-    {
-      "id": "anim-E01",
-      "path": "animations/v2-scene01/E01.png",
-      "animation": true,
-      "visualVerified": false,
-      "sources": [
-        "art-source/veggie-adventure/animations/v2-scene01/E01-part0.png"
-      ],
-      "revision": "scene01-v2",
-      "identityReference": "art-source/veggie-adventure/animations/v2-scene01/reference.png"
-    },
-    {
-      "id": "anim-E02",
-      "path": "animations/v2-scene01/E02.png",
-      "animation": true,
-      "visualVerified": false,
-      "sources": [
-        "art-source/veggie-adventure/animations/v2-scene01/E02-part0.png",
-        "art-source/veggie-adventure/animations/v2-scene01/E02-part1.png"
-      ],
-      "revision": "scene01-v2",
-      "identityReference": "art-source/veggie-adventure/animations/v2-scene01/reference.png"
-    },
-    {
-      "id": "anim-E03",
-      "path": "animations/E03.png",
-      "animation": true,
-      "visualVerified": false,
-      "sources": [
-        "art-source/veggie-adventure/animations/v1/E03.png"
-      ]
-    },
-    {
-      "id": "anim-E04",
-      "path": "animations/E04.png",
-      "animation": true,
-      "visualVerified": false,
-      "sources": [
-        "art-source/veggie-adventure/animations/v1/E04.png"
-      ]
-    },
-    {
-      "id": "anim-E05",
-      "path": "animations/E05.png",
-      "animation": true,
-      "visualVerified": false,
-      "sources": [
-        "art-source/veggie-adventure/animations/v1/E05.png"
-      ]
-    },
-    {
-      "id": "anim-E06",
-      "path": "animations/E06.png",
-      "animation": true,
-      "visualVerified": false,
-      "sources": [
-        "art-source/veggie-adventure/animations/v1/E06.png"
-      ]
-    },
-    {
-      "id": "anim-E07",
-      "path": "animations/E07.png",
-      "animation": true,
-      "visualVerified": false,
-      "sources": [
-        "art-source/veggie-adventure/animations/v1/E07.png"
-      ]
-    },
-    {
-      "id": "anim-E08",
-      "path": "animations/E08.png",
-      "animation": true,
-      "visualVerified": false,
-      "sources": [
-        "art-source/veggie-adventure/animations/v1/E08.png"
-      ]
-    },
-    {
-      "id": "anim-E09",
-      "path": "animations/E09.png",
-      "animation": true,
-      "visualVerified": false,
-      "sources": [
-        "art-source/veggie-adventure/animations/v1/E09.png"
-      ]
-    },
-    {
-      "id": "anim-E10",
-      "path": "animations/E10.png",
-      "animation": true,
-      "visualVerified": false,
-      "sources": [
-        "art-source/veggie-adventure/animations/v1/E10.png"
-      ]
-    },
-    {
-      "id": "anim-E11",
-      "path": "animations/E11.png",
-      "animation": true,
-      "visualVerified": false,
-      "sources": [
-        "art-source/veggie-adventure/animations/v1/E11.png"
-      ]
-    },
-    {
-      "id": "anim-E12",
-      "path": "animations/E12.png",
-      "animation": true,
-      "visualVerified": false,
-      "sources": [
-        "art-source/veggie-adventure/animations/v1/E12.png"
-      ]
-    },
-    {
-      "id": "anim-B01",
-      "path": "animations/B01.png",
-      "animation": true,
-      "visualVerified": false,
-      "sources": [
-        "art-source/veggie-adventure/animations/v1/B01.png"
-      ]
-    },
-    {
-      "id": "anim-B02",
-      "path": "animations/B02.png",
-      "animation": true,
-      "visualVerified": false,
-      "sources": [
-        "art-source/veggie-adventure/animations/v1/B02.png"
-      ]
-    },
-    {
-      "id": "anim-B03",
-      "path": "animations/B03.png",
-      "animation": true,
-      "visualVerified": false,
-      "sources": [
-        "art-source/veggie-adventure/animations/v1/B03.png"
-      ]
-    },
-    {
-      "id": "anim-B04",
-      "path": "animations/B04.png",
-      "animation": true,
-      "visualVerified": false,
-      "sources": [
-        "art-source/veggie-adventure/animations/v1/B04.png"
-      ]
-    },
-    {
-      "id": "anim-B05",
-      "path": "animations/B05.png",
-      "animation": true,
-      "visualVerified": false,
-      "sources": [
-        "art-source/veggie-adventure/animations/v1/B05.png"
-      ]
-    },
-    {
-      "id": "anim-B06",
-      "path": "animations/B06.png",
-      "animation": true,
-      "visualVerified": false,
-      "sources": [
-        "art-source/veggie-adventure/animations/v1/B06.png"
-      ]
-    },
-    {
-      "id": "anim-B07",
-      "path": "animations/B07.png",
-      "animation": true,
-      "visualVerified": false,
-      "sources": [
-        "art-source/veggie-adventure/animations/v1/B07-part0.png",
-        "art-source/veggie-adventure/animations/v1/B07-part1.png"
-      ]
-    },
-    {
-      "id": "anim-B08",
-      "path": "animations/B08.png",
-      "animation": true,
-      "visualVerified": false,
-      "sources": [
-        "art-source/veggie-adventure/animations/v1/B08.png"
-      ]
-    },
-    {
-      "id": "anim-N01",
-      "path": "animations/N01.png",
-      "animation": true,
-      "visualVerified": false,
-      "sources": [
-        "art-source/veggie-adventure/animations/v1/N01.png"
-      ]
-    },
-    {
-      "id": "anim-N02",
-      "path": "animations/N02.png",
-      "animation": true,
-      "visualVerified": false,
-      "sources": [
-        "art-source/veggie-adventure/animations/v1/N02.png"
-      ]
-    },
-    {
-      "id": "anim-FX01",
-      "path": "animations/FX01.png",
-      "animation": true,
-      "visualVerified": false,
-      "sources": [
-        "art-source/veggie-adventure/animations/v1/FX01.png"
-      ]
-    },
-    {
-      "id": "star-shield-v1",
-      "path": "effects/star-shield-v1.png",
-      "source": "art-source/veggie-adventure/effects/star-shield-v1/source.png",
+      "label": "1-1",
+      "stage": "warp-labels-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
       "visualVerified": false
     },
     {
-      "id": "boss-cue-slam",
-      "path": "effects/boss-cues-v1/slam.png",
-      "width": 96,
-      "height": 96,
+      "id": "warp-label-1-2",
+      "path": "ui/warp-labels-v1/1-2.png",
+      "width": 48,
+      "height": 20,
       "anchor": [
-        48,
-        96
-      ]
+        24,
+        20
+      ],
+      "label": "1-2",
+      "stage": "warp-labels-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
+      "visualVerified": false
     },
     {
-      "id": "boss-cue-hop",
-      "path": "effects/boss-cues-v1/hop.png",
-      "width": 96,
-      "height": 96,
+      "id": "warp-label-1-3",
+      "path": "ui/warp-labels-v1/1-3.png",
+      "width": 48,
+      "height": 20,
       "anchor": [
-        48,
-        96
-      ]
+        24,
+        20
+      ],
+      "label": "1-3",
+      "stage": "warp-labels-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
+      "visualVerified": false
     },
     {
-      "id": "boss-cue-seeds",
-      "path": "effects/boss-cues-v1/seeds.png",
-      "width": 96,
-      "height": 96,
+      "id": "warp-label-1-4",
+      "path": "ui/warp-labels-v1/1-4.png",
+      "width": 48,
+      "height": 20,
       "anchor": [
-        48,
-        96
-      ]
+        24,
+        20
+      ],
+      "label": "1-4",
+      "stage": "warp-labels-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
+      "visualVerified": false
     },
     {
-      "id": "boss-cue-weak",
-      "path": "effects/boss-cues-v1/weak.png",
-      "width": 96,
-      "height": 96,
+      "id": "warp-label-2-1",
+      "path": "ui/warp-labels-v1/2-1.png",
+      "width": 48,
+      "height": 20,
       "anchor": [
-        48,
-        96
-      ]
+        24,
+        20
+      ],
+      "label": "2-1",
+      "stage": "warp-labels-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
+      "visualVerified": false
+    },
+    {
+      "id": "warp-label-2-2",
+      "path": "ui/warp-labels-v1/2-2.png",
+      "width": 48,
+      "height": 20,
+      "anchor": [
+        24,
+        20
+      ],
+      "label": "2-2",
+      "stage": "warp-labels-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
+      "visualVerified": false
+    },
+    {
+      "id": "warp-label-2-3",
+      "path": "ui/warp-labels-v1/2-3.png",
+      "width": 48,
+      "height": 20,
+      "anchor": [
+        24,
+        20
+      ],
+      "label": "2-3",
+      "stage": "warp-labels-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
+      "visualVerified": false
+    },
+    {
+      "id": "warp-label-2-4",
+      "path": "ui/warp-labels-v1/2-4.png",
+      "width": 48,
+      "height": 20,
+      "anchor": [
+        24,
+        20
+      ],
+      "label": "2-4",
+      "stage": "warp-labels-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
+      "visualVerified": false
+    },
+    {
+      "id": "warp-label-3-1",
+      "path": "ui/warp-labels-v1/3-1.png",
+      "width": 48,
+      "height": 20,
+      "anchor": [
+        24,
+        20
+      ],
+      "label": "3-1",
+      "stage": "warp-labels-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
+      "visualVerified": false
+    },
+    {
+      "id": "warp-label-3-2",
+      "path": "ui/warp-labels-v1/3-2.png",
+      "width": 48,
+      "height": 20,
+      "anchor": [
+        24,
+        20
+      ],
+      "label": "3-2",
+      "stage": "warp-labels-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
+      "visualVerified": false
+    },
+    {
+      "id": "warp-label-3-3",
+      "path": "ui/warp-labels-v1/3-3.png",
+      "width": 48,
+      "height": 20,
+      "anchor": [
+        24,
+        20
+      ],
+      "label": "3-3",
+      "stage": "warp-labels-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
+      "visualVerified": false
+    },
+    {
+      "id": "warp-label-3-4",
+      "path": "ui/warp-labels-v1/3-4.png",
+      "width": 48,
+      "height": 20,
+      "anchor": [
+        24,
+        20
+      ],
+      "label": "3-4",
+      "stage": "warp-labels-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
+      "visualVerified": false
+    },
+    {
+      "id": "warp-label-4-1",
+      "path": "ui/warp-labels-v1/4-1.png",
+      "width": 48,
+      "height": 20,
+      "anchor": [
+        24,
+        20
+      ],
+      "label": "4-1",
+      "stage": "warp-labels-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
+      "visualVerified": false
+    },
+    {
+      "id": "warp-label-4-2",
+      "path": "ui/warp-labels-v1/4-2.png",
+      "width": 48,
+      "height": 20,
+      "anchor": [
+        24,
+        20
+      ],
+      "label": "4-2",
+      "stage": "warp-labels-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
+      "visualVerified": false
+    },
+    {
+      "id": "warp-label-4-3",
+      "path": "ui/warp-labels-v1/4-3.png",
+      "width": 48,
+      "height": 20,
+      "anchor": [
+        24,
+        20
+      ],
+      "label": "4-3",
+      "stage": "warp-labels-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
+      "visualVerified": false
+    },
+    {
+      "id": "warp-label-4-4",
+      "path": "ui/warp-labels-v1/4-4.png",
+      "width": 48,
+      "height": 20,
+      "anchor": [
+        24,
+        20
+      ],
+      "label": "4-4",
+      "stage": "warp-labels-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
+      "visualVerified": false
+    },
+    {
+      "id": "warp-label-5-1",
+      "path": "ui/warp-labels-v1/5-1.png",
+      "width": 48,
+      "height": 20,
+      "anchor": [
+        24,
+        20
+      ],
+      "label": "5-1",
+      "stage": "warp-labels-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
+      "visualVerified": false
+    },
+    {
+      "id": "warp-label-5-2",
+      "path": "ui/warp-labels-v1/5-2.png",
+      "width": 48,
+      "height": 20,
+      "anchor": [
+        24,
+        20
+      ],
+      "label": "5-2",
+      "stage": "warp-labels-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
+      "visualVerified": false
+    },
+    {
+      "id": "warp-label-5-3",
+      "path": "ui/warp-labels-v1/5-3.png",
+      "width": 48,
+      "height": 20,
+      "anchor": [
+        24,
+        20
+      ],
+      "label": "5-3",
+      "stage": "warp-labels-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
+      "visualVerified": false
+    },
+    {
+      "id": "warp-label-5-4",
+      "path": "ui/warp-labels-v1/5-4.png",
+      "width": 48,
+      "height": 20,
+      "anchor": [
+        24,
+        20
+      ],
+      "label": "5-4",
+      "stage": "warp-labels-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
+      "visualVerified": false
+    },
+    {
+      "id": "warp-label-6-1",
+      "path": "ui/warp-labels-v1/6-1.png",
+      "width": 48,
+      "height": 20,
+      "anchor": [
+        24,
+        20
+      ],
+      "label": "6-1",
+      "stage": "warp-labels-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
+      "visualVerified": false
+    },
+    {
+      "id": "warp-label-6-2",
+      "path": "ui/warp-labels-v1/6-2.png",
+      "width": 48,
+      "height": 20,
+      "anchor": [
+        24,
+        20
+      ],
+      "label": "6-2",
+      "stage": "warp-labels-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
+      "visualVerified": false
+    },
+    {
+      "id": "warp-label-6-3",
+      "path": "ui/warp-labels-v1/6-3.png",
+      "width": 48,
+      "height": 20,
+      "anchor": [
+        24,
+        20
+      ],
+      "label": "6-3",
+      "stage": "warp-labels-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
+      "visualVerified": false
+    },
+    {
+      "id": "warp-label-6-4",
+      "path": "ui/warp-labels-v1/6-4.png",
+      "width": 48,
+      "height": 20,
+      "anchor": [
+        24,
+        20
+      ],
+      "label": "6-4",
+      "stage": "warp-labels-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
+      "visualVerified": false
+    },
+    {
+      "id": "warp-label-7-1",
+      "path": "ui/warp-labels-v1/7-1.png",
+      "width": 48,
+      "height": 20,
+      "anchor": [
+        24,
+        20
+      ],
+      "label": "7-1",
+      "stage": "warp-labels-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
+      "visualVerified": false
+    },
+    {
+      "id": "warp-label-7-2",
+      "path": "ui/warp-labels-v1/7-2.png",
+      "width": 48,
+      "height": 20,
+      "anchor": [
+        24,
+        20
+      ],
+      "label": "7-2",
+      "stage": "warp-labels-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
+      "visualVerified": false
+    },
+    {
+      "id": "warp-label-7-3",
+      "path": "ui/warp-labels-v1/7-3.png",
+      "width": 48,
+      "height": 20,
+      "anchor": [
+        24,
+        20
+      ],
+      "label": "7-3",
+      "stage": "warp-labels-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
+      "visualVerified": false
+    },
+    {
+      "id": "warp-label-7-4",
+      "path": "ui/warp-labels-v1/7-4.png",
+      "width": 48,
+      "height": 20,
+      "anchor": [
+        24,
+        20
+      ],
+      "label": "7-4",
+      "stage": "warp-labels-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
+      "visualVerified": false
+    },
+    {
+      "id": "warp-label-8-1",
+      "path": "ui/warp-labels-v1/8-1.png",
+      "width": 48,
+      "height": 20,
+      "anchor": [
+        24,
+        20
+      ],
+      "label": "8-1",
+      "stage": "warp-labels-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
+      "visualVerified": false
+    },
+    {
+      "id": "warp-label-8-2",
+      "path": "ui/warp-labels-v1/8-2.png",
+      "width": 48,
+      "height": 20,
+      "anchor": [
+        24,
+        20
+      ],
+      "label": "8-2",
+      "stage": "warp-labels-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
+      "visualVerified": false
+    },
+    {
+      "id": "warp-label-8-3",
+      "path": "ui/warp-labels-v1/8-3.png",
+      "width": 48,
+      "height": 20,
+      "anchor": [
+        24,
+        20
+      ],
+      "label": "8-3",
+      "stage": "warp-labels-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
+      "visualVerified": false
+    },
+    {
+      "id": "warp-label-8-4",
+      "path": "ui/warp-labels-v1/8-4.png",
+      "width": 48,
+      "height": 20,
+      "anchor": [
+        24,
+        20
+      ],
+      "label": "8-4",
+      "stage": "warp-labels-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
+      "visualVerified": false
     }
   ],
   "animations": {
@@ -2697,6 +3832,74 @@
           "referenceHeight": 50.5,
           "targetHeight": 18,
           "scale": 0.3564356435643564
+        },
+        "footOffsets": {
+          "idle": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "walk": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "run": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "jump-rise": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "jump-fall": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "crouch": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "swim": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "throw": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "hurt": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "death": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "victory": [
+            0,
+            0,
+            0,
+            0
+          ]
         }
       },
       "P01-1": {
@@ -2781,6 +3984,74 @@
           "referenceHeight": 46.5,
           "targetHeight": 28,
           "scale": 0.6021505376344086
+        },
+        "footOffsets": {
+          "idle": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "walk": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "run": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "jump-rise": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "jump-fall": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "crouch": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "swim": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "throw": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "hurt": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "death": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "victory": [
+            0,
+            0,
+            0,
+            0
+          ]
         }
       },
       "P01-2": {
@@ -2865,6 +4136,74 @@
           "referenceHeight": 48,
           "targetHeight": 28,
           "scale": 0.5833333333333334
+        },
+        "footOffsets": {
+          "idle": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "walk": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "run": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "jump-rise": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "jump-fall": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "crouch": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "swim": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "throw": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "hurt": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "death": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "victory": [
+            0,
+            0,
+            0,
+            0
+          ]
         }
       },
       "E01": {
@@ -2901,6 +4240,26 @@
           "referenceHeight": 45,
           "targetHeight": 16,
           "scale": 0.35555555555555557
+        },
+        "footOffsets": {
+          "walk": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "flatten": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "hit": [
+            0,
+            0,
+            0,
+            0
+          ]
         }
       },
       "E02": {
@@ -2927,7 +4286,7 @@
           "shell-idle": {
             "row": 2,
             "frames": 4,
-            "fps": 10,
+            "fps": 8,
             "loop": true
           },
           "shell-slide": {
@@ -2939,7 +4298,7 @@
           "wake": {
             "row": 4,
             "frames": 4,
-            "fps": 10,
+            "fps": 4,
             "loop": false
           },
           "hit": {
@@ -2949,12 +4308,50 @@
             "loop": false
           }
         },
-        "revision": "scene01-v2",
+        "revision": "stunned-v1",
         "identityReference": "art-source/veggie-adventure/animations/v2-scene01/reference.png",
         "presentation": {
           "referenceHeight": 41,
           "targetHeight": 16,
           "scale": 0.3902439024390244
+        },
+        "footOffsets": {
+          "walk": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "retract": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "shell-idle": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "shell-slide": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "wake": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "hit": [
+            0,
+            0,
+            0,
+            0
+          ]
         }
       },
       "E03": {
@@ -2981,7 +4378,7 @@
           "shell-idle": {
             "row": 2,
             "frames": 4,
-            "fps": 10,
+            "fps": 8,
             "loop": true
           },
           "shell-slide": {
@@ -2993,7 +4390,7 @@
           "wake": {
             "row": 4,
             "frames": 4,
-            "fps": 10,
+            "fps": 4,
             "loop": false
           },
           "deflect": {
@@ -3013,7 +4410,52 @@
           "referenceHeight": 25,
           "targetHeight": 16,
           "scale": 0.64
-        }
+        },
+        "footOffsets": {
+          "walk": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "retract": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "shell-idle": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "shell-slide": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "wake": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "deflect": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "hit": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "revision": "stunned-v1"
       },
       "E04": {
         "asset": "anim-E04",
@@ -3047,13 +4489,88 @@
             "frames": 4,
             "fps": 10,
             "loop": false
+          },
+          "retract": {
+            "row": 4,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "shell-idle": {
+            "row": 5,
+            "frames": 4,
+            "fps": 8,
+            "loop": true
+          },
+          "shell-slide": {
+            "row": 6,
+            "frames": 4,
+            "fps": 14,
+            "loop": true
+          },
+          "wake": {
+            "row": 7,
+            "frames": 4,
+            "fps": 4,
+            "loop": false
           }
         },
         "presentation": {
           "referenceHeight": 34.5,
           "targetHeight": 16,
           "scale": 0.463768115942029
-        }
+        },
+        "footOffsets": {
+          "fall": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "unfold": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "walk": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "hit": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "retract": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "shell-idle": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "shell-slide": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "wake": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "revision": "stunned-v1"
       },
       "E05": {
         "asset": "anim-E05",
@@ -3087,6 +4604,26 @@
           "referenceHeight": 33,
           "targetHeight": 16,
           "scale": 0.48484848484848486
+        },
+        "footOffsets": {
+          "float": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "pulse": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "hit": [
+            0,
+            0,
+            0,
+            0
+          ]
         }
       },
       "E06": {
@@ -3115,6 +4652,20 @@
           "referenceHeight": 26,
           "targetHeight": 16,
           "scale": 0.6153846153846154
+        },
+        "footOffsets": {
+          "swim": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "hit": [
+            0,
+            0,
+            0,
+            0
+          ]
         }
       },
       "E07": {
@@ -3167,6 +4718,44 @@
           "referenceHeight": 27,
           "targetHeight": 16,
           "scale": 0.5925925925925926
+        },
+        "footOffsets": {
+          "walk": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "jump": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "windup": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "throw": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "recover": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "hit": [
+            0,
+            0,
+            0,
+            0
+          ]
         }
       },
       "E08": {
@@ -3205,8 +4794,34 @@
         },
         "presentation": {
           "referenceHeight": 30.5,
-          "targetHeight": 16,
-          "scale": 0.5245901639344263
+          "targetHeight": 24,
+          "scale": 0.7868852459016393
+        },
+        "footOffsets": {
+          "emerge": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "idle": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "retract": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "hit": [
+            0,
+            0,
+            0,
+            0
+          ]
         }
       },
       "E09": {
@@ -3247,6 +4862,32 @@
           "referenceHeight": 29,
           "targetHeight": 16,
           "scale": 0.5517241379310345
+        },
+        "footOffsets": {
+          "float": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "windup": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "drop": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "hit": [
+            0,
+            0,
+            0,
+            0
+          ]
         }
       },
       "E10": {
@@ -3281,6 +4922,26 @@
           "referenceHeight": 18.5,
           "targetHeight": 16,
           "scale": 0.8648648648648649
+        },
+        "footOffsets": {
+          "fly": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "fall": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "deflect": [
+            0,
+            0,
+            2,
+            0
+          ]
         }
       },
       "E11": {
@@ -3321,6 +4982,32 @@
           "referenceHeight": 29.5,
           "targetHeight": 16,
           "scale": 0.5423728813559322
+        },
+        "footOffsets": {
+          "fly": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "hop": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "lose-wings": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "hit": [
+            0,
+            0,
+            0,
+            0
+          ]
         }
       },
       "E12": {
@@ -3361,6 +5048,32 @@
           "referenceHeight": 26.5,
           "targetHeight": 16,
           "scale": 0.6037735849056604
+        },
+        "footOffsets": {
+          "leap": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "fall": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "splash": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "hit": [
+            0,
+            0,
+            0,
+            0
+          ]
         }
       },
       "B01": {
@@ -3414,6 +5127,50 @@
             "fps": 6,
             "loop": false
           }
+        },
+        "footOffsets": {
+          "idle": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "windup": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "jump": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "land": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "expose": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "hit": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "defeat": [
+            0,
+            0,
+            0,
+            0
+          ]
         }
       },
       "B02": {
@@ -3467,6 +5224,50 @@
             "fps": 6,
             "loop": false
           }
+        },
+        "footOffsets": {
+          "idle": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "throw": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "windup": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "roll": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "stun": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "hit": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "defeat": [
+            0,
+            0,
+            0,
+            0
+          ]
         }
       },
       "B03": {
@@ -3520,6 +5321,50 @@
             "fps": 6,
             "loop": false
           }
+        },
+        "footOffsets": {
+          "idle": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "throw": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "windup": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "dash": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "stagger": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "hit": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "defeat": [
+            0,
+            0,
+            0,
+            0
+          ]
         }
       },
       "B04": {
@@ -3573,6 +5418,50 @@
             "fps": 6,
             "loop": false
           }
+        },
+        "footOffsets": {
+          "swim": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "windup": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "spray": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "leap": [
+            0,
+            0,
+            8,
+            0
+          ],
+          "stranded": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "hit": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "defeat": [
+            0,
+            0,
+            0,
+            0
+          ]
         }
       },
       "B05": {
@@ -3626,6 +5515,50 @@
             "fps": 6,
             "loop": false
           }
+        },
+        "footOffsets": {
+          "idle": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "windup": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "roll": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "shed": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "open": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "hit": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "defeat": [
+            0,
+            0,
+            0,
+            0
+          ]
         }
       },
       "B06": {
@@ -3679,6 +5612,50 @@
             "fps": 6,
             "loop": false
           }
+        },
+        "footOffsets": {
+          "idle": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "cast-high": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "cast-low": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "seed": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "exhaust": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "hit": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "defeat": [
+            0,
+            0,
+            0,
+            0
+          ]
         }
       },
       "B07": {
@@ -3732,6 +5709,50 @@
             "fps": 6,
             "loop": false
           }
+        },
+        "footOffsets": {
+          "idle": [
+            3,
+            2,
+            0,
+            3
+          ],
+          "left-attack": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "right-attack": [
+            2,
+            2,
+            2,
+            1
+          ],
+          "sweep": [
+            8,
+            9,
+            8,
+            0
+          ],
+          "expose": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "hit": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "defeat": [
+            0,
+            0,
+            0,
+            0
+          ]
         }
       },
       "B08": {
@@ -3797,6 +5818,62 @@
             "fps": 6,
             "loop": false
           }
+        },
+        "footOffsets": {
+          "idle": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "windup": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "jump": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "land": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "seed-fan": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "open": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "enrage": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "hit": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "defeat": [
+            0,
+            0,
+            0,
+            0
+          ]
         }
       },
       "N01": {
@@ -3832,6 +5909,32 @@
             "fps": 10,
             "loop": false
           }
+        },
+        "footOffsets": {
+          "idle": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "wave": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "map": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "talk": [
+            0,
+            0,
+            0,
+            0
+          ]
         }
       },
       "N02": {
@@ -3867,6 +5970,32 @@
             "fps": 6,
             "loop": false
           }
+        },
+        "footOffsets": {
+          "idle": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "rescue": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "plant": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "celebrate": [
+            0,
+            0,
+            0,
+            0
+          ]
         }
       },
       "FX01": {
@@ -3944,8 +6073,182 @@
             "loop": true
           }
         }
+      },
+      "TRAP_SOIL": {
+        "asset": "anim-TRAP_SOIL",
+        "frameWidth": 64,
+        "frameHeight": 40,
+        "anchor": [
+          32,
+          40
+        ],
+        "clips": {
+          "rumble": {
+            "row": 0,
+            "frames": 4,
+            "fps": 6.666666666666667,
+            "loop": false
+          }
+        }
+      },
+      "E13": {
+        "asset": "anim-E13",
+        "frameWidth": 48,
+        "frameHeight": 48,
+        "anchor": [
+          24,
+          48
+        ],
+        "clips": {
+          "idle": {
+            "row": 0,
+            "frames": 4,
+            "fps": 5,
+            "loop": true
+          },
+          "windup": {
+            "row": 1,
+            "frames": 4,
+            "fps": 6,
+            "loop": false
+          },
+          "attack": {
+            "row": 2,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "hit": {
+            "row": 3,
+            "frames": 4,
+            "fps": 8,
+            "loop": false
+          }
+        },
+        "presentation": {
+          "referenceHeight": 32,
+          "targetHeight": 24,
+          "scale": 0.75
+        },
+        "footOffsets": {
+          "idle": [
+            0,
+            0,
+            0,
+            2
+          ],
+          "windup": [
+            0,
+            0,
+            3,
+            0
+          ],
+          "attack": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "hit": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
       }
     },
     "identityRevision": "scene01-v2"
+  },
+  "terrainVersion": 3,
+  "terrainSets": {
+    "W01": {
+      "name": "苔林",
+      "soil": [
+        "W01-kit-0",
+        "W01-kit-0b"
+      ],
+      "foundation": [
+        "W01-kit-1",
+        "W01-kit-1b"
+      ]
+    },
+    "W02": {
+      "name": "根下矿洞",
+      "soil": [
+        "W02-kit-0",
+        "W02-kit-0b"
+      ],
+      "foundation": [
+        "W02-kit-1",
+        "W02-kit-1b"
+      ]
+    },
+    "W03": {
+      "name": "藤架云路",
+      "soil": [
+        "W03-kit-0",
+        "W03-kit-0b"
+      ],
+      "foundation": [
+        "W03-kit-1",
+        "W03-kit-1b"
+      ]
+    },
+    "W04": {
+      "name": "莲池花房",
+      "soil": [
+        "W04-kit-0",
+        "W04-kit-0b"
+      ],
+      "foundation": [
+        "W04-kit-1",
+        "W04-kit-1b"
+      ]
+    },
+    "W05": {
+      "name": "刺栗果园",
+      "soil": [
+        "W05-kit-0",
+        "W05-kit-0b"
+      ],
+      "foundation": [
+        "W05-kit-1",
+        "W05-kit-1b"
+      ]
+    },
+    "W06": {
+      "name": "辣椒作坊",
+      "soil": [
+        "W06-kit-0",
+        "W06-kit-0b"
+      ],
+      "foundation": [
+        "W06-kit-1",
+        "W06-kit-1b"
+      ]
+    },
+    "W07": {
+      "name": "月夜藤园",
+      "soil": [
+        "W07-kit-0",
+        "W07-kit-0b"
+      ],
+      "foundation": [
+        "W07-kit-1",
+        "W07-kit-1b"
+      ]
+    },
+    "W08": {
+      "name": "石榴王庭",
+      "soil": [
+        "W08-kit-0",
+        "W08-kit-0b"
+      ],
+      "foundation": [
+        "W08-kit-1",
+        "W08-kit-1b"
+      ]
+    }
   }
 }

@@ -1,7 +1,9 @@
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 import {flyingTarget,jellyTarget} from './enemy-tactics.mjs';
+import {prepareTrap,trapStage,TRAP_CYCLE} from './trap-profile.mjs';
+import {seesPlayer} from './enemy-tactics.mjs';
 export function moveFlyer(game,e,dt){
- const ox=e.x,oy=e.y;
+ const ox=e.x,oy=e.y;let flightY;
  if(e.kind==='winged'&&!e.flightHomeSet){
   const floor=Math.min(208,...game.solids().filter(s=>s.y>=e.homeY&&e.x+e.w>s.x&&e.x<s.x+s.w).map(s=>s.y));
   e.homeY=Math.min(e.homeY,floor-e.h-16);e.flightHomeSet=true;
@@ -14,12 +16,21 @@ export function moveFlyer(game,e,dt){
   const patrol=e.homeX+Math.sin(e.phase*(e.kind==='fish'?1.2:.8))*24;
   const plan=e.kind==='jelly'?jellyTarget(game,e,dt,patrol):flyingTarget(game,e,dt,patrol);
   e.x+=clamp(plan.x-e.x,-plan.speed*dt,plan.speed*dt);
+  if(['winged','fish'].includes(e.kind)&&Number.isFinite(plan.y))flightY=e.y+clamp(plan.y-e.y,-80*dt,80*dt);
  }
  if(e.kind==='jelly'){
   const t=e.phase%2,lift=t<.5?24*Math.sin(t*Math.PI):24*(1-(t-.5)/1.5);
   e.y=e.homeY-lift; // Pulse upward for .5s, then drift down for 1.5s.
- }else e.y=e.homeY+Math.sin(e.phase*2)*12;
+ }else e.y=Number.isFinite(flightY)?flightY:e.homeY+Math.sin(e.phase*2)*12;
  if(e.kind==='winged')e.y=clamp(e.y,oy-80*dt,oy+80*dt);
+ if(e.kind==='winged'){
+  e.x=clamp(e.x,0,game.level.width-e.w);
+  for(const s of game.solids().filter(s=>!s.oneWay))if(e.x<s.x+s.w&&e.x+e.w>s.x&&e.y<s.y+s.h&&e.y+e.h>s.y){
+   if(oy+e.h<=s.y+.1)e.y=s.y-e.h;
+   else if(oy>=s.y+s.h-.1)e.y=s.y+s.h;
+   else {e.x=ox;e.y=oy;}
+  }
+ }
  if(['fish','jelly'].includes(e.kind)){
   const water=game.level.water?.find(w=>e.homeX+e.w>w.x&&e.homeX<w.x+w.w);
   if(water){
@@ -36,14 +47,32 @@ export function moveFlyer(game,e,dt){
    }
   }
  }
- e.vx=(e.x-ox)/dt;e.vy=(e.y-oy)/dt;
+ e.vx=dt?(e.x-ox)/dt:0;e.vy=dt?(e.y-oy)/dt:0;
  if(Math.abs(e.vx)>.1)e.facing=Math.sign(e.vx);
 }
 export function moveTrap(game,e,dt){
- const t=e.phase%3,near=Math.abs(game.p.x+game.p.w/2-(e.x+e.w/2))<24&&game.p.y+game.p.h>e.y-24;
+ prepareTrap(e);
+ // A committed warning owns the exposure clock until the shot and follow-through finish.
+ // Otherwise the fixed burrow cycle can erase a late acquisition before it fires.
+ if(e.spitTimer!=null||e.spitFlash>0)e.phase-=dt;
+ const t=e.phase%TRAP_CYCLE,near=Math.abs(game.p.x+game.p.w/2-(e.x+e.w/2))<32&&game.p.y+game.p.h>e.y-24;
  // Wait while hidden, never retract an already visible threat on proximity.
  if(t>=.8&&t<.8+dt*1.1&&near)e.phase-=t-.799;
- const phase=e.phase%3;e.active=phase>=1.2&&phase<2.6;e.warning=phase>=.8&&phase<1.2;e.vx=0;e.vy=0;
+ const stage=trapStage(e);e.active=stage.name==='idle';e.warning=['rumble','emerge'].includes(stage.name);e.intent=stage.name==='hidden'?'buried':stage.name==='rumble'?'soil-rumble':stage.name==='emerge'?'emerging':stage.name==='idle'?'exposed':'burrowing';e.vx=0;e.vy=0;
+ e.spitFlash=Math.max(0,(e.spitFlash||0)-dt);
+ const cycle=Math.floor(e.phase/TRAP_CYCLE);
+ if(stage.name==='emerge'&&!e.spitPending&&seesPlayer(game,e,144,80)){e.spitPending=true;e.spitDirection=game.p.x+game.p.w/2<e.x+e.w/2?-1:1;e.facing=e.spitDirection;}
+ if(stage.name!=='idle'){e.spitTimer=null;if(stage.name!=='emerge'){e.spitDirection=null;e.spitPending=false;}return;}
+ if(e.spitCycle!==cycle&&e.spitTimer==null&&(e.spitPending||seesPlayer(game,e,144,80))){
+  e.spitTimer=0;e.spitDirection??=game.p.x+game.p.w/2<e.x+e.w/2?-1:1;e.spitPending=false;
+ }
+ if(e.spitTimer!=null&&e.spitCycle!==cycle){
+  e.spitTimer+=dt;e.warning=true;e.intent='spit-cue';e.facing=e.spitDirection;
+  if(e.spitTimer>=.35){
+   const direction=e.spitDirection;game.dangers.push({x:e.x+e.w/2+direction*(e.w/2+4)-3,y:e.y+6,w:6,h:6,vx:direction*96,vy:0,gravity:0,life:2,kind:'plant-seed'});
+   e.spitCycle=cycle;e.spitTimer=null;e.spitFlash=.3;e.warning=false;e.intent='spit';game.emitSound?.('plant-spit',e);
+  }
+ }else if(e.spitFlash>0)e.intent='spit';
 }
 export function moveWaterLeaper(game,e,dt){
  const water=game.level.water?.find(w=>e.homeX>=w.x&&e.homeX+e.w<=w.x+w.w);

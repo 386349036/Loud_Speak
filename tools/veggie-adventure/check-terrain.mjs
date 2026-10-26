@@ -6,7 +6,9 @@ import fs from 'node:fs';
 const results=[];
 const worldOne=process.argv.includes('--world-one-forms');
 const standingOnly=process.argv.includes('--standing-only');
-for(const level of LEVELS.filter(l=>!worldOne||l.id.startsWith('1-')))for(const form of worldOne?[0,1,2]:[0]){
+const allForms=process.argv.includes('--all-forms'),quick=process.argv.includes('--quick');
+const laterWorlds=process.argv.includes('--later-worlds');
+for(const level of LEVELS.filter(l=>(!worldOne||l.id.startsWith('1-'))&&(!laterWorlds||l.world>=2)))for(const form of worldOne||allForms?[0,1,2]:[0]){
  let best=0,passed=false,settings=null,successfulSettings=[],attempts=[];
  for(const lookahead of [3,6,9,12]){for(const obstacleLook of [8,16,24]){
   const l=structuredClone(level);l.enemies=[];l.items=[];l.boss=null;l.hazards=[];l.turrets=[];l.gates=[];const g=new Game(l,{form});
@@ -24,11 +26,11 @@ for(const level of LEVELS.filter(l=>!worldOne||l.id.startsWith('1-')))for(const 
    if(g.mode==='won'){passed=true;settings={lookahead,obstacleLook};successfulSettings.push(settings);break;}if(g.mode==='dead'||stuck>240)break;
   }
   attempts.push({lookahead,obstacleLook,mode:g.mode,x:Math.round(g.p.x),y:Math.round(g.p.y),height:g.p.h});
-  if(passed&&!standingOnly)break;
- }if(passed&&!standingOnly)break;}
+  if(passed&&(!standingOnly||quick))break;
+ }if(passed&&(!standingOnly||quick))break;}
  results.push({id:level.id,form,terrainProbePassed:passed,maxX:Math.round(best),exit:level.exit,settings,successfulSettings,attempts});
 }
-const report={scope:'terrain-only nonvisual simulation; combat, boss and hazard encounters excluded; not user play acceptance',standingOnly,results};
-fs.writeFileSync(`docs/veggie-adventure/${worldOne?'world01-forms-check':'terrain-check'}${standingOnly?'-standing':''}.json`,JSON.stringify(report,null,2)+'\n');
+const report={scope:'terrain-only nonvisual simulation; combat, boss and hazard encounters excluded; not user play acceptance',standingOnly,quick,results};
+fs.writeFileSync(`docs/veggie-adventure/${laterWorlds?'later28-forms-check':worldOne?'world01-forms-check':allForms?'campaign-forms-check':'terrain-check'}${standingOnly?'-standing':''}.json`,JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify({passed:results.filter(r=>r.terrainProbePassed).length,total:results.length,failures:results.filter(r=>!r.terrainProbePassed)},null,2));
 if(results.some(r=>!r.terrainProbePassed))process.exitCode=1;

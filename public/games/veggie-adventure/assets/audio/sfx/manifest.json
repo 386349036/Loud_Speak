@@ -1,0 +1,205 @@
+{
+  "version": 1,
+  "format": "PCM WAV mono 24kHz 16-bit",
+  "source": "Original deterministic synthesis; not extracted from commercial games",
+  "sounds": {
+    "jump": {
+      "path": "jump.wav",
+      "duration": 0.162,
+      "bytes": 7820,
+      "sha256": "e0b487a241b9c2805a1b84df449b405ed0a0c485252bd294f586b8e5c10ff594",
+      "peakDb": -2.8533500713746314,
+      "cooldown": 0.1,
+      "gain": 1
+    },
+    "swim": {
+      "path": "swim.wav",
+      "duration": 0.14204166666666668,
+      "bytes": 6862,
+      "sha256": "5ab8cf115b7bb9b8872c1a9560ff1cc03f4551b9a0d5d56b30f34916cbfb2fc6",
+      "peakDb": -2.8533500713746314,
+      "cooldown": 0.1,
+      "gain": 1
+    },
+    "brick-break": {
+      "path": "brick-break.wav",
+      "duration": 0.162,
+      "bytes": 7820,
+      "sha256": "21cff226b786114fd147e81be0e3d9956b9f36589028c9fb8b2c43e44f766159",
+      "peakDb": -2.8533500713746314,
+      "cooldown": 0.06,
+      "gain": 1
+    },
+    "reward-spawn": {
+      "path": "reward-spawn.wav",
+      "duration": 0.157,
+      "bytes": 7580,
+      "sha256": "27ba37f2adb445c733ffb0d26078773add939497d2c2a383ba772742636ed96f",
+      "peakDb": -2.8533500713746314,
+      "cooldown": 0.06,
+      "gain": 1
+    },
+    "pickup-seed": {
+      "path": "pickup-seed.wav",
+      "duration": 0.112,
+      "bytes": 5420,
+      "sha256": "9184b66663dd515f99980a50dd9ec97df192b5100ec85d49e44ac6562345fa57",
+      "peakDb": -2.8533500713746314,
+      "cooldown": 0.06,
+      "gain": 1
+    },
+    "pickup-upgrade": {
+      "path": "pickup-upgrade.wav",
+      "duration": 0.242,
+      "bytes": 11660,
+      "sha256": "c92174293c9215d50a1e19801aecae9b92472c9117ccc61d96293120abe74171",
+      "peakDb": -2.8533500713746314,
+      "cooldown": 0.06,
+      "gain": 1
+    },
+    "pickup-star": {
+      "path": "pickup-star.wav",
+      "duration": 0.252,
+      "bytes": 12140,
+      "sha256": "a5c60670d424a2fe88adb25150f41d72695a17574f87c9d4a08cb39abaa97692",
+      "peakDb": -2.8533500713746314,
+      "cooldown": 0.06,
+      "gain": 1
+    },
+    "life-up": {
+      "path": "life-up.wav",
+      "duration": 0.407,
+      "bytes": 19580,
+      "sha256": "3d3856014ef7668b8340cc7e804e701a0183e2a6038408a935d83184b92f2fea",
+      "peakDb": -2.8533500713746314,
+      "cooldown": 0.06,
+      "gain": 1
+    },
+    "stomp-normal": {
+      "path": "stomp-normal.wav",
+      "duration": 0.117,
+      "bytes": 5660,
+      "sha256": "ef8bdbab988c52ea20ff6cc7e942e33ba5a90645dcf286e77a50d66681611874",
+      "peakDb": -2.8533500713746314,
+      "cooldown": 0.06,
+      "gain": 1
+    },
+    "stomp-flight": {
+      "path": "stomp-flight.wav",
+      "duration": 0.15704166666666666,
+      "bytes": 7582,
+      "sha256": "5fb1df1f99a6d18024a2bcc5584417701737885b0214d5e85937a9ece0ac3d19",
+      "peakDb": -2.8533500713746314,
+      "cooldown": 0.06,
+      "gain": 1
+    },
+    "stomp-shell": {
+      "path": "stomp-shell.wav",
+      "duration": 0.14204166666666668,
+      "bytes": 6862,
+      "sha256": "f6364a4836d54faefa31331381cc050a9920393fcd7498114ab4d8c508067c77",
+      "peakDb": -2.8533500713746314,
+      "cooldown": 0.06,
+      "gain": 1
+    },
+    "stomp-boss": {
+      "path": "stomp-boss.wav",
+      "duration": 0.252,
+      "bytes": 12140,
+      "sha256": "4c663478989ae84f2f3c1a8726ce43c534866e14f96fb6eada6ef2fafaa58cb0",
+      "peakDb": -2.8533500713746314,
+      "cooldown": 0.06,
+      "gain": 1
+    },
+    "stomp-water": {
+      "path": "stomp-water.wav",
+      "duration": 0.18204166666666666,
+      "bytes": 8782,
+      "sha256": "119ab8b7868533ba96bdd62b6409cfecfdf0350e3f028a367da88cdefb10f86d",
+      "peakDb": -2.8533500713746314,
+      "cooldown": 0.06,
+      "gain": 1
+    },
+    "shell-bounce": {
+      "path": "shell-bounce.wav",
+      "duration": 0.087,
+      "bytes": 4220,
+      "sha256": "ac56970c7a54b563db74af113df217c0813c227a859ab57395e34bc4ee85a246",
+      "peakDb": -2.8533500713746314,
+      "cooldown": 0.06,
+      "gain": 1
+    },
+    "boss-armor": {
+      "path": "boss-armor.wav",
+      "duration": 0.102,
+      "bytes": 4940,
+      "sha256": "e52d22408315a583a4ae7280021d160a4972bfc76b24c0ba6d1f6dd1d4c325f5",
+      "peakDb": -2.8533500713746314,
+      "cooldown": 0.06,
+      "gain": 1
+    },
+    "boss-hit": {
+      "path": "boss-hit.wav",
+      "duration": 0.18204166666666666,
+      "bytes": 8782,
+      "sha256": "f93ac34e041840f3b8a1c11e498c79d748d13fe163dc070c4741323d448bc976",
+      "peakDb": -2.8533500713746314,
+      "cooldown": 0.06,
+      "gain": 1
+    },
+    "fire": {
+      "path": "fire.wav",
+      "duration": 0.117,
+      "bytes": 5660,
+      "sha256": "83168d00d1fa74ee388f9c77de10012df828754067aab341b0c56e0cede33e51",
+      "peakDb": -2.8533500713746314,
+      "cooldown": 0.06,
+      "gain": 1
+    },
+    "hurt": {
+      "path": "hurt.wav",
+      "duration": 0.19204166666666667,
+      "bytes": 9262,
+      "sha256": "4fd4747000eb775d8cca0e21a6cbefb561722ede069a56a4a199e71988ac595a",
+      "peakDb": -2.8533500713746314,
+      "cooldown": 0.06,
+      "gain": 1
+    },
+    "shell-dash": {
+      "path": "shell-dash.wav",
+      "duration": 0.132,
+      "bytes": 6380,
+      "sha256": "97fcd80dc58eb82a85060d5bd831bc6267c8bf605b4add43adddab82b909b8ef",
+      "peakDb": -2.8533500713746314,
+      "cooldown": 0.06,
+      "gain": 1
+    },
+    "spine-volley": {
+      "path": "spine-volley.wav",
+      "duration": 0.117,
+      "bytes": 5660,
+      "sha256": "11a8ad25713cdb73558da8ed39be0e564e8409905ee33eb426b029ddcd7afd75",
+      "peakDb": -2.8533500713746314,
+      "cooldown": 0.06,
+      "gain": 1
+    },
+    "plant-spit": {
+      "path": "plant-spit.wav",
+      "duration": 0.16704166666666667,
+      "bytes": 8062,
+      "sha256": "13592280d9a09f0932655391b6bbb51d26cb5c7fdfc7ef0e89904f519260c3af",
+      "peakDb": -2.8533500713746314,
+      "cooldown": 0.06,
+      "gain": 1
+    },
+    "warp": {
+      "path": "warp.wav",
+      "duration": 0.392,
+      "bytes": 18860,
+      "sha256": "9447499930e407802bb28a0314b79f791a543966347282f0ec2b0863700cb55e",
+      "peakDb": -2.8533500713746314,
+      "cooldown": 0.06,
+      "gain": 1
+    }
+  }
+}

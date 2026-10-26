@@ -4,6 +4,7 @@ import {Game,STEP,overlap} from '../../public/games/veggie-adventure/js/core/gam
 import {updateEnemies,enemyFacing,enemyActive} from '../../public/games/veggie-adventure/js/core/enemies.mjs';
 import {AnimationPlayer,enemyClip} from '../../public/games/veggie-adventure/js/core/animation.mjs';
 import {LEVELS} from '../../public/games/veggie-adventure/levels/catalog.mjs';
+import {trapStage} from '../../public/games/veggie-adventure/js/core/trap-profile.mjs';
 const actor=(kind,extra={})=>({id:0,kind,x:160,y:194,w:14,h:14,vx:-20,vy:0,state:'walk',timer:0,grace:0,dead:false,...extra});
 function scene(kind,extra={}){const g=new Game();Object.assign(g.level,{platforms:[{x:0,y:208,w:600,h:32}],water:[],hazards:[],exit:580,checkpoint:570,width:600});g.enemies=[actor(kind,extra)];g.items=[];g.blocks=[];g.movers=[];g.boss=null;g.turrets=[];g.gates=[];g.p.x=32;return g;}
 const watch=(g,seconds)=>{for(let n=0;n<Math.round(seconds/STEP);n++)updateEnemies(g,STEP,0);};
@@ -33,9 +34,9 @@ test('trap waits beside a player in all forms, then provides emergence time befo
  for(const form of [0,1,2]){
   const g=scene('trap',{phase:.7,vx:0}),e=g.enemies[0];g.p.form=form;g.resizePlayer();g.p.x=160;g.p.y=208-g.p.h;
   for(let n=0;n<120*5;n++){updateEnemies(g,STEP,208);assert.equal(enemyActive(e),false);assert.equal(g.mode,'playing');assert.equal(enemyClip(e),'hidden');}
-  g.p.x=90;let visible=0;
-  for(let n=0;n<120&&!e.active;n++){updateEnemies(g,STEP,208);if(enemyClip(e)==='emerge')visible+=STEP;}
-  assert.ok(visible>=.38);assert.equal(e.active,true);assert.equal(enemyClip(e),'idle');
+  g.p.x=90;let visible=0,rumble=0;
+  for(let n=0;n<180&&!e.active;n++){updateEnemies(g,STEP,208);if(enemyClip(e)==='emerge')visible+=STEP;if(trapStage(e).name==='rumble')rumble+=STEP;}
+  assert.ok(rumble>=.59);assert.ok(visible>=.38);assert.equal(e.active,true);assert.equal(enemyClip(e),'idle');
  }
 });
 

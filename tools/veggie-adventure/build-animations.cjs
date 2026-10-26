@@ -42,8 +42,10 @@ async function build(){
  }
  const manifestPath=out+'/manifest.json',manifest=JSON.parse(fs.readFileSync(manifestPath,'utf8'));
  for(const [id,old] of Object.entries(manifest.animations?.actors||{})){if(actors[id]&&old.presentation)actors[id].presentation=old.presentation;else if(!plan.jobs.some(j=>j.id===id))actors[id]=old;}
- manifest.assets=manifest.assets.filter(a=>!a.animation).concat(assets);manifest.animations={version:1,actors};manifest.status=assets.length===plan.jobs.length?'campaign-animation-integrated-awaiting-user-review':'campaign-animation-in-progress';
+ const builtIds=new Set(assets.map(a=>a.id));manifest.assets=manifest.assets.filter(a=>!a.animation||!builtIds.has(a.id)&&!plan.jobs.some(j=>'anim-'+j.id===a.id)).concat(assets);manifest.animations={version:1,actors};manifest.status=assets.length===plan.jobs.length?'campaign-animation-integrated-awaiting-user-review':'campaign-animation-in-progress';
  fs.writeFileSync(manifestPath,JSON.stringify(manifest,null,2));plan.status=assets.length===plan.jobs.length?'built-awaiting-user-review':'in-progress';fs.writeFileSync(source+'/plan.json',JSON.stringify(plan,null,2));
+ if(fs.existsSync('art-source/veggie-adventure/animations/stunned-v1/E02/generated.png'))await require('./build-stunned-animations.cjs')();
+ await require('./calibrate-sprite-feet.cjs')();
  console.log(JSON.stringify({sheets:assets.length,planned:plan.jobs.length,clips:Object.values(actors).reduce((n,a)=>n+Object.keys(a.clips).length,0),visualVerified:false}));
 }
 build().catch(e=>{console.error(e);process.exitCode=1;});

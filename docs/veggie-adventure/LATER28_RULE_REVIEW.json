@@ -1,0 +1,4170 @@
+{
+  "scope": "2-1 through 8-4; placement and trajectory audit, not visual or combat acceptance",
+  "applied": true,
+  "levels": [
+    {
+      "id": "2-1",
+      "name": "根下入口",
+      "width": 5120,
+      "layoutVersion": 2,
+      "before": [
+        {
+          "type": "low-step-clearance",
+          "index": 1
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 56
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 71
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 85
+        }
+      ],
+      "changes": [
+        {
+          "type": "blocks",
+          "index": 1,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 608,
+            "y": 144
+          },
+          "after": {
+            "x": 608,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 56,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 2080,
+            "y": 144
+          },
+          "after": {
+            "x": 2080,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 71,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 3104,
+            "y": 144
+          },
+          "after": {
+            "x": 3104,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 85,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 4128,
+            "y": 144
+          },
+          "after": {
+            "x": 4128,
+            "y": 128
+          }
+        }
+      ],
+      "remaining": [],
+      "pits": [
+        {
+          "x": 752,
+          "w": 32
+        },
+        {
+          "x": 1792,
+          "w": 32
+        },
+        {
+          "x": 2304,
+          "w": 32
+        },
+        {
+          "x": 2816,
+          "w": 32
+        },
+        {
+          "x": 3328,
+          "w": 32
+        },
+        {
+          "x": 3840,
+          "w": 32
+        },
+        {
+          "x": 4352,
+          "w": 32
+        },
+        {
+          "x": 4864,
+          "w": 32
+        }
+      ],
+      "boss": null,
+      "aquaticPlants": 0
+    },
+    {
+      "id": "2-2",
+      "name": "垂直矿井",
+      "width": 5376,
+      "layoutVersion": 2,
+      "before": [
+        {
+          "type": "low-step-clearance",
+          "index": 20
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 35
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 49
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 64
+        }
+      ],
+      "changes": [
+        {
+          "type": "blocks",
+          "index": 20,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 1568,
+            "y": 144
+          },
+          "after": {
+            "x": 1568,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 35,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 2592,
+            "y": 144
+          },
+          "after": {
+            "x": 2592,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 49,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 3616,
+            "y": 144
+          },
+          "after": {
+            "x": 3616,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 64,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 4640,
+            "y": 144
+          },
+          "after": {
+            "x": 4640,
+            "y": 128
+          }
+        }
+      ],
+      "remaining": [],
+      "pits": [
+        {
+          "x": 448,
+          "w": 48
+        },
+        {
+          "x": 864,
+          "w": 48
+        },
+        {
+          "x": 1792,
+          "w": 48
+        },
+        {
+          "x": 2304,
+          "w": 48
+        },
+        {
+          "x": 2816,
+          "w": 48
+        },
+        {
+          "x": 3328,
+          "w": 48
+        },
+        {
+          "x": 3840,
+          "w": 48
+        },
+        {
+          "x": 4352,
+          "w": 48
+        },
+        {
+          "x": 4864,
+          "w": 48
+        }
+      ],
+      "boss": null,
+      "aquaticPlants": 0
+    },
+    {
+      "id": "2-3",
+      "name": "碎墙密道",
+      "width": 5632,
+      "layoutVersion": 2,
+      "before": [
+        {
+          "type": "low-step-clearance",
+          "index": 14
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 15
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 30
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 44
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 59
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 73
+        }
+      ],
+      "changes": [
+        {
+          "type": "blocks",
+          "index": 14,
+          "kind": "step-clearance",
+          "before": {
+            "x": 368,
+            "y": 144
+          },
+          "after": {
+            "x": 368,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 15,
+          "kind": "step-clearance",
+          "before": {
+            "x": 384,
+            "y": 144
+          },
+          "after": {
+            "x": 384,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 30,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 2080,
+            "y": 144
+          },
+          "after": {
+            "x": 2080,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 44,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 3104,
+            "y": 144
+          },
+          "after": {
+            "x": 3104,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 59,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 4128,
+            "y": 144
+          },
+          "after": {
+            "x": 4128,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 73,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 5152,
+            "y": 144
+          },
+          "after": {
+            "x": 5152,
+            "y": 128
+          }
+        }
+      ],
+      "remaining": [],
+      "pits": [
+        {
+          "x": 528,
+          "w": 32
+        },
+        {
+          "x": 1088,
+          "w": 32
+        },
+        {
+          "x": 1792,
+          "w": 48
+        },
+        {
+          "x": 2304,
+          "w": 48
+        },
+        {
+          "x": 2816,
+          "w": 48
+        },
+        {
+          "x": 3328,
+          "w": 48
+        },
+        {
+          "x": 3840,
+          "w": 48
+        },
+        {
+          "x": 4352,
+          "w": 48
+        },
+        {
+          "x": 4864,
+          "w": 48
+        },
+        {
+          "x": 5376,
+          "w": 48
+        }
+      ],
+      "boss": null,
+      "aquaticPlants": 0
+    },
+    {
+      "id": "2-4",
+      "name": "洋葱矿厅",
+      "width": 5888,
+      "layoutVersion": 2,
+      "before": [
+        {
+          "type": "low-step-clearance",
+          "index": 19
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 33
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 48
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 62
+        }
+      ],
+      "changes": [
+        {
+          "type": "blocks",
+          "index": 19,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 1568,
+            "y": 144
+          },
+          "after": {
+            "x": 1568,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 33,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 2592,
+            "y": 144
+          },
+          "after": {
+            "x": 2592,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 48,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 3616,
+            "y": 144
+          },
+          "after": {
+            "x": 3616,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 62,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 4640,
+            "y": 144
+          },
+          "after": {
+            "x": 4640,
+            "y": 128
+          }
+        }
+      ],
+      "remaining": [],
+      "pits": [
+        {
+          "x": 1792,
+          "w": 48
+        },
+        {
+          "x": 2304,
+          "w": 48
+        },
+        {
+          "x": 2816,
+          "w": 48
+        },
+        {
+          "x": 3328,
+          "w": 48
+        },
+        {
+          "x": 3840,
+          "w": 48
+        },
+        {
+          "x": 4352,
+          "w": 48
+        },
+        {
+          "x": 4864,
+          "w": 48
+        },
+        {
+          "x": 5376,
+          "w": 48
+        }
+      ],
+      "boss": "B02",
+      "aquaticPlants": 0
+    },
+    {
+      "id": "3-1",
+      "name": "初登藤架",
+      "width": 5120,
+      "layoutVersion": 2,
+      "before": [
+        {
+          "type": "low-step-clearance",
+          "index": 13
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 14
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 15
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 16
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 26
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 41
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 55
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 70
+        }
+      ],
+      "changes": [
+        {
+          "type": "blocks",
+          "index": 13,
+          "kind": "step-clearance",
+          "before": {
+            "x": 320,
+            "y": 144
+          },
+          "after": {
+            "x": 320,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 14,
+          "kind": "step-clearance",
+          "before": {
+            "x": 336,
+            "y": 144
+          },
+          "after": {
+            "x": 336,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 15,
+          "kind": "step-clearance",
+          "before": {
+            "x": 736,
+            "y": 144
+          },
+          "after": {
+            "x": 736,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 16,
+          "kind": "step-clearance",
+          "before": {
+            "x": 752,
+            "y": 144
+          },
+          "after": {
+            "x": 752,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 26,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 1568,
+            "y": 144
+          },
+          "after": {
+            "x": 1568,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 41,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 2592,
+            "y": 144
+          },
+          "after": {
+            "x": 2592,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 55,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 3616,
+            "y": 144
+          },
+          "after": {
+            "x": 3616,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 70,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 4640,
+            "y": 144
+          },
+          "after": {
+            "x": 4640,
+            "y": 128
+          }
+        }
+      ],
+      "remaining": [],
+      "pits": [
+        {
+          "x": 480,
+          "w": 48
+        },
+        {
+          "x": 912,
+          "w": 48
+        },
+        {
+          "x": 1232,
+          "w": 48
+        },
+        {
+          "x": 1792,
+          "w": 32
+        },
+        {
+          "x": 2304,
+          "w": 32
+        },
+        {
+          "x": 2816,
+          "w": 32
+        },
+        {
+          "x": 3328,
+          "w": 32
+        },
+        {
+          "x": 3840,
+          "w": 32
+        },
+        {
+          "x": 4352,
+          "w": 32
+        },
+        {
+          "x": 4864,
+          "w": 32
+        }
+      ],
+      "boss": null,
+      "aquaticPlants": 0
+    },
+    {
+      "id": "3-2",
+      "name": "浮台云路",
+      "width": 5376,
+      "layoutVersion": 2,
+      "before": [
+        {
+          "type": "pit-patrol",
+          "index": 1
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 24
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 38
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 53
+        }
+      ],
+      "changes": [
+        {
+          "type": "enemies",
+          "index": 1,
+          "kind": "corn",
+          "before": {
+            "x": 640
+          },
+          "after": {
+            "x": 978,
+            "patrolLeft": 930,
+            "patrolRight": 992
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 24,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 2080,
+            "y": 144
+          },
+          "after": {
+            "x": 2080,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 38,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 3104,
+            "y": 144
+          },
+          "after": {
+            "x": 3104,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 53,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 4128,
+            "y": 144
+          },
+          "after": {
+            "x": 4128,
+            "y": 128
+          }
+        }
+      ],
+      "remaining": [],
+      "pits": [
+        {
+          "x": 384,
+          "w": 64
+        },
+        {
+          "x": 736,
+          "w": 64
+        },
+        {
+          "x": 1120,
+          "w": 48
+        },
+        {
+          "x": 1792,
+          "w": 48
+        },
+        {
+          "x": 2304,
+          "w": 48
+        },
+        {
+          "x": 2816,
+          "w": 48
+        },
+        {
+          "x": 3328,
+          "w": 48
+        },
+        {
+          "x": 3840,
+          "w": 48
+        },
+        {
+          "x": 4352,
+          "w": 48
+        },
+        {
+          "x": 4864,
+          "w": 48
+        }
+      ],
+      "boss": null,
+      "aquaticPlants": 0
+    },
+    {
+      "id": "3-3",
+      "name": "玉米守桥",
+      "width": 5632,
+      "layoutVersion": 2,
+      "before": [
+        {
+          "type": "low-step-clearance",
+          "index": 14
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 15
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 18
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 19
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 28
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 42
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 57
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 71
+        }
+      ],
+      "changes": [
+        {
+          "type": "blocks",
+          "index": 14,
+          "kind": "step-clearance",
+          "before": {
+            "x": 368,
+            "y": 144
+          },
+          "after": {
+            "x": 368,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 15,
+          "kind": "step-clearance",
+          "before": {
+            "x": 384,
+            "y": 144
+          },
+          "after": {
+            "x": 384,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 18,
+          "kind": "step-clearance",
+          "before": {
+            "x": 816,
+            "y": 144
+          },
+          "after": {
+            "x": 816,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 19,
+          "kind": "step-clearance",
+          "before": {
+            "x": 832,
+            "y": 144
+          },
+          "after": {
+            "x": 832,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 28,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 1568,
+            "y": 144
+          },
+          "after": {
+            "x": 1568,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 42,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 2592,
+            "y": 144
+          },
+          "after": {
+            "x": 2592,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 57,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 3616,
+            "y": 144
+          },
+          "after": {
+            "x": 3616,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 71,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 4640,
+            "y": 144
+          },
+          "after": {
+            "x": 4640,
+            "y": 128
+          }
+        }
+      ],
+      "remaining": [],
+      "pits": [
+        {
+          "x": 560,
+          "w": 48
+        },
+        {
+          "x": 976,
+          "w": 48
+        },
+        {
+          "x": 1792,
+          "w": 48
+        },
+        {
+          "x": 2304,
+          "w": 48
+        },
+        {
+          "x": 2816,
+          "w": 48
+        },
+        {
+          "x": 3328,
+          "w": 48
+        },
+        {
+          "x": 3840,
+          "w": 48
+        },
+        {
+          "x": 4352,
+          "w": 48
+        },
+        {
+          "x": 4864,
+          "w": 48
+        },
+        {
+          "x": 5376,
+          "w": 48
+        }
+      ],
+      "boss": null,
+      "aquaticPlants": 0
+    },
+    {
+      "id": "3-4",
+      "name": "穗冠高台",
+      "width": 5888,
+      "layoutVersion": 2,
+      "before": [
+        {
+          "type": "low-step-clearance",
+          "index": 1
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 24
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 39
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 53
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 68
+        }
+      ],
+      "changes": [
+        {
+          "type": "blocks",
+          "index": 1,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 608,
+            "y": 144
+          },
+          "after": {
+            "x": 608,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 24,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 2080,
+            "y": 144
+          },
+          "after": {
+            "x": 2080,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 39,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 3104,
+            "y": 144
+          },
+          "after": {
+            "x": 3104,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 53,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 4128,
+            "y": 144
+          },
+          "after": {
+            "x": 4128,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 68,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 5152,
+            "y": 144
+          },
+          "after": {
+            "x": 5152,
+            "y": 128
+          }
+        }
+      ],
+      "remaining": [],
+      "pits": [
+        {
+          "x": 1792,
+          "w": 48
+        },
+        {
+          "x": 2304,
+          "w": 48
+        },
+        {
+          "x": 2816,
+          "w": 48
+        },
+        {
+          "x": 3328,
+          "w": 48
+        },
+        {
+          "x": 3840,
+          "w": 48
+        },
+        {
+          "x": 4352,
+          "w": 48
+        },
+        {
+          "x": 4864,
+          "w": 48
+        },
+        {
+          "x": 5376,
+          "w": 48
+        }
+      ],
+      "boss": "B03",
+      "aquaticPlants": 0
+    },
+    {
+      "id": "4-1",
+      "name": "浅水花房",
+      "width": 5120,
+      "layoutVersion": 3,
+      "before": [
+        {
+          "type": "low-step-clearance",
+          "index": 17
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 26
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 35
+        }
+      ],
+      "changes": [
+        {
+          "type": "blocks",
+          "index": 17,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 2080,
+            "y": 144
+          },
+          "after": {
+            "x": 2080,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 26,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 3104,
+            "y": 144
+          },
+          "after": {
+            "x": 3104,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 35,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 4128,
+            "y": 144
+          },
+          "after": {
+            "x": 4128,
+            "y": 128
+          }
+        }
+      ],
+      "remaining": [],
+      "pits": [
+        {
+          "x": 1792,
+          "w": 32
+        },
+        {
+          "x": 2304,
+          "w": 32
+        },
+        {
+          "x": 2816,
+          "w": 32
+        },
+        {
+          "x": 3328,
+          "w": 32
+        },
+        {
+          "x": 3840,
+          "w": 32
+        },
+        {
+          "x": 4352,
+          "w": 32
+        },
+        {
+          "x": 4864,
+          "w": 32
+        }
+      ],
+      "boss": null,
+      "aquaticPlants": 13
+    },
+    {
+      "id": "4-2",
+      "name": "水母回廊",
+      "width": 5376,
+      "layoutVersion": 3,
+      "before": [],
+      "changes": [],
+      "remaining": [],
+      "pits": [],
+      "boss": null,
+      "aquaticPlants": 19
+    },
+    {
+      "id": "4-3",
+      "name": "跃水长廊",
+      "width": 5632,
+      "layoutVersion": 3,
+      "before": [
+        {
+          "type": "low-step-clearance",
+          "index": 1
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 23
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 32
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 41
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 50
+        }
+      ],
+      "changes": [
+        {
+          "type": "blocks",
+          "index": 1,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 608,
+            "y": 144
+          },
+          "after": {
+            "x": 608,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 23,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 2080,
+            "y": 144
+          },
+          "after": {
+            "x": 2080,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 32,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 3104,
+            "y": 144
+          },
+          "after": {
+            "x": 3104,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 41,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 4128,
+            "y": 144
+          },
+          "after": {
+            "x": 4128,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 50,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 5152,
+            "y": 144
+          },
+          "after": {
+            "x": 5152,
+            "y": 128
+          }
+        }
+      ],
+      "remaining": [],
+      "pits": [
+        {
+          "x": 1792,
+          "w": 48
+        },
+        {
+          "x": 2304,
+          "w": 48
+        },
+        {
+          "x": 2816,
+          "w": 48
+        },
+        {
+          "x": 3328,
+          "w": 48
+        },
+        {
+          "x": 3840,
+          "w": 48
+        },
+        {
+          "x": 4352,
+          "w": 48
+        },
+        {
+          "x": 4864,
+          "w": 48
+        },
+        {
+          "x": 5376,
+          "w": 48
+        }
+      ],
+      "boss": null,
+      "aquaticPlants": 14
+    },
+    {
+      "id": "4-4",
+      "name": "莲池深殿",
+      "width": 5888,
+      "layoutVersion": 3,
+      "before": [
+        {
+          "type": "low-step-clearance",
+          "index": 1
+        }
+      ],
+      "changes": [
+        {
+          "type": "blocks",
+          "index": 1,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 608,
+            "y": 144
+          },
+          "after": {
+            "x": 608,
+            "y": 128
+          }
+        }
+      ],
+      "remaining": [],
+      "pits": [
+        {
+          "x": 1792,
+          "w": 48
+        },
+        {
+          "x": 2304,
+          "w": 48
+        },
+        {
+          "x": 2816,
+          "w": 48
+        },
+        {
+          "x": 3328,
+          "w": 48
+        },
+        {
+          "x": 3840,
+          "w": 48
+        },
+        {
+          "x": 4352,
+          "w": 48
+        },
+        {
+          "x": 4864,
+          "w": 48
+        },
+        {
+          "x": 5376,
+          "w": 48
+        }
+      ],
+      "boss": "B04",
+      "aquaticPlants": 8
+    },
+    {
+      "id": "5-1",
+      "name": "刺栗边界",
+      "width": 5120,
+      "layoutVersion": 2,
+      "before": [
+        {
+          "type": "low-step-clearance",
+          "index": 10
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 24
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 39
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 53
+        }
+      ],
+      "changes": [
+        {
+          "type": "blocks",
+          "index": 10,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 1568,
+            "y": 144
+          },
+          "after": {
+            "x": 1568,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 24,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 2592,
+            "y": 144
+          },
+          "after": {
+            "x": 2592,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 39,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 3616,
+            "y": 144
+          },
+          "after": {
+            "x": 3616,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 53,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 4640,
+            "y": 144
+          },
+          "after": {
+            "x": 4640,
+            "y": 128
+          }
+        }
+      ],
+      "remaining": [],
+      "pits": [
+        {
+          "x": 496,
+          "w": 32
+        },
+        {
+          "x": 1056,
+          "w": 48
+        },
+        {
+          "x": 1792,
+          "w": 32
+        },
+        {
+          "x": 2304,
+          "w": 32
+        },
+        {
+          "x": 2816,
+          "w": 32
+        },
+        {
+          "x": 3328,
+          "w": 32
+        },
+        {
+          "x": 3840,
+          "w": 32
+        },
+        {
+          "x": 4352,
+          "w": 32
+        },
+        {
+          "x": 4864,
+          "w": 32
+        }
+      ],
+      "boss": null,
+      "aquaticPlants": 0
+    },
+    {
+      "id": "5-2",
+      "name": "荆棘落脚",
+      "width": 5376,
+      "layoutVersion": 2,
+      "before": [
+        {
+          "type": "pit-hazard",
+          "index": 0
+        },
+        {
+          "type": "pit-hazard",
+          "index": 2
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 20
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 35
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 49
+        }
+      ],
+      "changes": [
+        {
+          "type": "hazards",
+          "index": 0,
+          "kind": "spikes",
+          "before": {
+            "x": 304,
+            "y": 200
+          },
+          "after": {
+            "x": 288,
+            "y": 200
+          }
+        },
+        {
+          "type": "hazards",
+          "index": 2,
+          "kind": "spikes",
+          "before": {
+            "x": 1120,
+            "y": 200
+          },
+          "after": {
+            "x": 1088,
+            "y": 200
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 20,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 2080,
+            "y": 144
+          },
+          "after": {
+            "x": 2080,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 35,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 3104,
+            "y": 144
+          },
+          "after": {
+            "x": 3104,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 49,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 4128,
+            "y": 144
+          },
+          "after": {
+            "x": 4128,
+            "y": 128
+          }
+        }
+      ],
+      "remaining": [],
+      "pits": [
+        {
+          "x": 448,
+          "w": 48
+        },
+        {
+          "x": 864,
+          "w": 48
+        },
+        {
+          "x": 1248,
+          "w": 48
+        },
+        {
+          "x": 1792,
+          "w": 48
+        },
+        {
+          "x": 2304,
+          "w": 48
+        },
+        {
+          "x": 2816,
+          "w": 48
+        },
+        {
+          "x": 3328,
+          "w": 48
+        },
+        {
+          "x": 3840,
+          "w": 48
+        },
+        {
+          "x": 4352,
+          "w": 48
+        },
+        {
+          "x": 4864,
+          "w": 48
+        }
+      ],
+      "boss": null,
+      "aquaticPlants": 0
+    },
+    {
+      "id": "5-3",
+      "name": "壳径果园",
+      "width": 5632,
+      "layoutVersion": 2,
+      "before": [
+        {
+          "type": "low-step-clearance",
+          "index": 13
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 14
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 18
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 19
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 31
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 46
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 60
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 75
+        }
+      ],
+      "changes": [
+        {
+          "type": "blocks",
+          "index": 13,
+          "kind": "step-clearance",
+          "before": {
+            "x": 384,
+            "y": 144
+          },
+          "after": {
+            "x": 384,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 14,
+          "kind": "step-clearance",
+          "before": {
+            "x": 400,
+            "y": 144
+          },
+          "after": {
+            "x": 400,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 18,
+          "kind": "step-clearance",
+          "before": {
+            "x": 896,
+            "y": 144
+          },
+          "after": {
+            "x": 896,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 19,
+          "kind": "step-clearance",
+          "before": {
+            "x": 912,
+            "y": 144
+          },
+          "after": {
+            "x": 912,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 31,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 1568,
+            "y": 144
+          },
+          "after": {
+            "x": 1568,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 46,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 2592,
+            "y": 144
+          },
+          "after": {
+            "x": 2592,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 60,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 3616,
+            "y": 144
+          },
+          "after": {
+            "x": 3616,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 75,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 4640,
+            "y": 144
+          },
+          "after": {
+            "x": 4640,
+            "y": 128
+          }
+        }
+      ],
+      "remaining": [],
+      "pits": [
+        {
+          "x": 592,
+          "w": 32
+        },
+        {
+          "x": 1104,
+          "w": 32
+        },
+        {
+          "x": 1792,
+          "w": 48
+        },
+        {
+          "x": 2304,
+          "w": 48
+        },
+        {
+          "x": 2816,
+          "w": 48
+        },
+        {
+          "x": 3328,
+          "w": 48
+        },
+        {
+          "x": 3840,
+          "w": 48
+        },
+        {
+          "x": 4352,
+          "w": 48
+        },
+        {
+          "x": 4864,
+          "w": 48
+        },
+        {
+          "x": 5376,
+          "w": 48
+        }
+      ],
+      "boss": null,
+      "aquaticPlants": 0
+    },
+    {
+      "id": "5-4",
+      "name": "榴莲围庭",
+      "width": 5888,
+      "layoutVersion": 2,
+      "before": [
+        {
+          "type": "low-step-clearance",
+          "index": 1
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 25
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 39
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 54
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 68
+        }
+      ],
+      "changes": [
+        {
+          "type": "blocks",
+          "index": 1,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 608,
+            "y": 144
+          },
+          "after": {
+            "x": 608,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 25,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 2080,
+            "y": 144
+          },
+          "after": {
+            "x": 2080,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 39,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 3104,
+            "y": 144
+          },
+          "after": {
+            "x": 3104,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 54,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 4128,
+            "y": 144
+          },
+          "after": {
+            "x": 4128,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 68,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 5152,
+            "y": 144
+          },
+          "after": {
+            "x": 5152,
+            "y": 128
+          }
+        }
+      ],
+      "remaining": [],
+      "pits": [
+        {
+          "x": 1792,
+          "w": 48
+        },
+        {
+          "x": 2304,
+          "w": 48
+        },
+        {
+          "x": 2816,
+          "w": 48
+        },
+        {
+          "x": 3328,
+          "w": 48
+        },
+        {
+          "x": 3840,
+          "w": 48
+        },
+        {
+          "x": 4352,
+          "w": 48
+        },
+        {
+          "x": 4864,
+          "w": 48
+        },
+        {
+          "x": 5376,
+          "w": 48
+        }
+      ],
+      "boss": "B05",
+      "aquaticPlants": 0
+    },
+    {
+      "id": "6-1",
+      "name": "热流入口",
+      "width": 5120,
+      "layoutVersion": 2,
+      "before": [
+        {
+          "type": "pit-patrol",
+          "index": 2
+        },
+        {
+          "type": "item-obstacle",
+          "index": 10
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 15
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 30
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 44
+        }
+      ],
+      "changes": [
+        {
+          "type": "enemies",
+          "index": 2,
+          "kind": "trap",
+          "before": {
+            "x": 1216,
+            "patrolLeft": 1216,
+            "patrolRight": 1278
+          },
+          "after": {
+            "x": 1220,
+            "patrolLeft": 1216,
+            "patrolRight": 1285.5
+          }
+        },
+        {
+          "type": "items",
+          "index": 10,
+          "kind": "seed",
+          "before": {
+            "x": 1248,
+            "y": 176
+          },
+          "after": {
+            "x": 1248,
+            "y": 160
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 15,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 2080,
+            "y": 144
+          },
+          "after": {
+            "x": 2080,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 30,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 3104,
+            "y": 144
+          },
+          "after": {
+            "x": 3104,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 44,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 4128,
+            "y": 144
+          },
+          "after": {
+            "x": 4128,
+            "y": 128
+          }
+        }
+      ],
+      "remaining": [],
+      "pits": [
+        {
+          "x": 512,
+          "w": 32
+        },
+        {
+          "x": 1056,
+          "w": 32
+        },
+        {
+          "x": 1792,
+          "w": 32
+        },
+        {
+          "x": 2304,
+          "w": 32
+        },
+        {
+          "x": 2816,
+          "w": 32
+        },
+        {
+          "x": 3328,
+          "w": 32
+        },
+        {
+          "x": 3840,
+          "w": 32
+        },
+        {
+          "x": 4352,
+          "w": 32
+        },
+        {
+          "x": 4864,
+          "w": 32
+        }
+      ],
+      "boss": null,
+      "aquaticPlants": 0
+    },
+    {
+      "id": "6-2",
+      "name": "炮弹作坊",
+      "width": 5376,
+      "layoutVersion": 2,
+      "before": [
+        {
+          "type": "pit-turret",
+          "index": 0
+        },
+        {
+          "type": "pit-turret",
+          "index": 1
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 13
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 14
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 17
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 18
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 29
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 44
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 58
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 73
+        }
+      ],
+      "changes": [
+        {
+          "type": "turrets",
+          "index": 0,
+          "kind": "turret",
+          "before": {
+            "x": 512,
+            "y": 176
+          },
+          "after": {
+            "x": 496,
+            "y": 176
+          }
+        },
+        {
+          "type": "turrets",
+          "index": 1,
+          "kind": "turret",
+          "before": {
+            "x": 1008,
+            "y": 176
+          },
+          "after": {
+            "x": 992,
+            "y": 176
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 13,
+          "kind": "step-clearance",
+          "before": {
+            "x": 368,
+            "y": 144
+          },
+          "after": {
+            "x": 368,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 14,
+          "kind": "step-clearance",
+          "before": {
+            "x": 384,
+            "y": 144
+          },
+          "after": {
+            "x": 384,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 17,
+          "kind": "step-clearance",
+          "before": {
+            "x": 928,
+            "y": 144
+          },
+          "after": {
+            "x": 928,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 18,
+          "kind": "step-clearance",
+          "before": {
+            "x": 944,
+            "y": 144
+          },
+          "after": {
+            "x": 944,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 29,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 1568,
+            "y": 144
+          },
+          "after": {
+            "x": 1568,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 44,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 2592,
+            "y": 144
+          },
+          "after": {
+            "x": 2592,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 58,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 3616,
+            "y": 144
+          },
+          "after": {
+            "x": 3616,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 73,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 4640,
+            "y": 144
+          },
+          "after": {
+            "x": 4640,
+            "y": 128
+          }
+        }
+      ],
+      "remaining": [],
+      "pits": [
+        {
+          "x": 640,
+          "w": 32
+        },
+        {
+          "x": 1136,
+          "w": 32
+        },
+        {
+          "x": 1792,
+          "w": 48
+        },
+        {
+          "x": 2304,
+          "w": 48
+        },
+        {
+          "x": 2816,
+          "w": 48
+        },
+        {
+          "x": 3328,
+          "w": 48
+        },
+        {
+          "x": 3840,
+          "w": 48
+        },
+        {
+          "x": 4352,
+          "w": 48
+        },
+        {
+          "x": 4864,
+          "w": 48
+        }
+      ],
+      "boss": null,
+      "aquaticPlants": 0
+    },
+    {
+      "id": "6-3",
+      "name": "阀门长廊",
+      "width": 5632,
+      "layoutVersion": 2,
+      "before": [
+        {
+          "type": "pit-hazard",
+          "index": 0
+        },
+        {
+          "type": "pit-hazard",
+          "index": 1
+        },
+        {
+          "type": "pit-hazard",
+          "index": 2
+        },
+        {
+          "type": "pit-hazard",
+          "index": 3
+        },
+        {
+          "type": "pit-patrol",
+          "index": 0
+        },
+        {
+          "type": "item-obstacle",
+          "index": 4
+        },
+        {
+          "type": "item-obstacle",
+          "index": 9
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 14
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 15
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 16
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 17
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 36
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 50
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 65
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 79
+        }
+      ],
+      "changes": [
+        {
+          "type": "hazards",
+          "index": 0,
+          "kind": "heat",
+          "before": {
+            "x": 576,
+            "y": 176
+          },
+          "after": {
+            "x": 656,
+            "y": 176
+          }
+        },
+        {
+          "type": "hazards",
+          "index": 1,
+          "kind": "heat",
+          "before": {
+            "x": 1136,
+            "y": 176
+          },
+          "after": {
+            "x": 1152,
+            "y": 176
+          }
+        },
+        {
+          "type": "hazards",
+          "index": 2,
+          "kind": "chain",
+          "before": {
+            "x": 408,
+            "y": 164
+          },
+          "after": {
+            "x": 258,
+            "y": 164
+          }
+        },
+        {
+          "type": "hazards",
+          "index": 3,
+          "kind": "chain",
+          "before": {
+            "x": 840,
+            "y": 164
+          },
+          "after": {
+            "x": 1198,
+            "y": 164
+          }
+        },
+        {
+          "type": "enemies",
+          "index": 0,
+          "kind": "trap",
+          "before": {
+            "x": 656,
+            "patrolLeft": 656,
+            "patrolRight": 718
+          },
+          "after": {
+            "x": 758,
+            "patrolLeft": 706.5,
+            "patrolRight": 823.5
+          }
+        },
+        {
+          "type": "items",
+          "index": 1,
+          "kind": "seed",
+          "before": {
+            "x": 240,
+            "y": 176
+          },
+          "after": {
+            "x": 240,
+            "y": 112
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 14,
+          "kind": "step-clearance",
+          "before": {
+            "x": 320,
+            "y": 144
+          },
+          "after": {
+            "x": 320,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 15,
+          "kind": "step-clearance",
+          "before": {
+            "x": 336,
+            "y": 144
+          },
+          "after": {
+            "x": 336,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 16,
+          "kind": "step-clearance",
+          "before": {
+            "x": 752,
+            "y": 144
+          },
+          "after": {
+            "x": 752,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 17,
+          "kind": "step-clearance",
+          "before": {
+            "x": 768,
+            "y": 144
+          },
+          "after": {
+            "x": 768,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 36,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 2080,
+            "y": 144
+          },
+          "after": {
+            "x": 2080,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 50,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 3104,
+            "y": 144
+          },
+          "after": {
+            "x": 3104,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 65,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 4128,
+            "y": 144
+          },
+          "after": {
+            "x": 4128,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 79,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 5152,
+            "y": 144
+          },
+          "after": {
+            "x": 5152,
+            "y": 128
+          }
+        }
+      ],
+      "remaining": [],
+      "pits": [
+        {
+          "x": 480,
+          "w": 48
+        },
+        {
+          "x": 976,
+          "w": 48
+        },
+        {
+          "x": 1792,
+          "w": 48
+        },
+        {
+          "x": 2304,
+          "w": 48
+        },
+        {
+          "x": 2816,
+          "w": 48
+        },
+        {
+          "x": 3328,
+          "w": 48
+        },
+        {
+          "x": 3840,
+          "w": 48
+        },
+        {
+          "x": 4352,
+          "w": 48
+        },
+        {
+          "x": 4864,
+          "w": 48
+        },
+        {
+          "x": 5376,
+          "w": 48
+        }
+      ],
+      "boss": null,
+      "aquaticPlants": 0
+    },
+    {
+      "id": "6-4",
+      "name": "辣椒炉厅",
+      "width": 5888,
+      "layoutVersion": 2,
+      "before": [
+        {
+          "type": "low-step-clearance",
+          "index": 19
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 33
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 48
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 62
+        }
+      ],
+      "changes": [
+        {
+          "type": "blocks",
+          "index": 19,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 1568,
+            "y": 144
+          },
+          "after": {
+            "x": 1568,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 33,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 2592,
+            "y": 144
+          },
+          "after": {
+            "x": 2592,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 48,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 3616,
+            "y": 144
+          },
+          "after": {
+            "x": 3616,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 62,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 4640,
+            "y": 144
+          },
+          "after": {
+            "x": 4640,
+            "y": 128
+          }
+        }
+      ],
+      "remaining": [],
+      "pits": [
+        {
+          "x": 1792,
+          "w": 48
+        },
+        {
+          "x": 2304,
+          "w": 48
+        },
+        {
+          "x": 2816,
+          "w": 48
+        },
+        {
+          "x": 3328,
+          "w": 48
+        },
+        {
+          "x": 3840,
+          "w": 48
+        },
+        {
+          "x": 4352,
+          "w": 48
+        },
+        {
+          "x": 4864,
+          "w": 48
+        },
+        {
+          "x": 5376,
+          "w": 48
+        }
+      ],
+      "boss": "B06",
+      "aquaticPlants": 0
+    },
+    {
+      "id": "7-1",
+      "name": "灯下藤径",
+      "width": 5120,
+      "layoutVersion": 2,
+      "before": [
+        {
+          "type": "pit-patrol",
+          "index": 2
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 19
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 34
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 48
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 63
+        }
+      ],
+      "changes": [
+        {
+          "type": "enemies",
+          "index": 2,
+          "kind": "mushroom",
+          "before": {
+            "x": 1296
+          },
+          "after": {
+            "x": 1376,
+            "patrolLeft": 1376,
+            "patrolRight": 1438
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 19,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 1568,
+            "y": 144
+          },
+          "after": {
+            "x": 1568,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 34,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 2592,
+            "y": 144
+          },
+          "after": {
+            "x": 2592,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 48,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 3616,
+            "y": 144
+          },
+          "after": {
+            "x": 3616,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 63,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 4640,
+            "y": 144
+          },
+          "after": {
+            "x": 4640,
+            "y": 128
+          }
+        }
+      ],
+      "remaining": [],
+      "pits": [
+        {
+          "x": 448,
+          "w": 48
+        },
+        {
+          "x": 896,
+          "w": 48
+        },
+        {
+          "x": 1200,
+          "w": 48
+        },
+        {
+          "x": 1792,
+          "w": 32
+        },
+        {
+          "x": 2304,
+          "w": 32
+        },
+        {
+          "x": 2816,
+          "w": 32
+        },
+        {
+          "x": 3328,
+          "w": 32
+        },
+        {
+          "x": 3840,
+          "w": 32
+        },
+        {
+          "x": 4352,
+          "w": 32
+        },
+        {
+          "x": 4864,
+          "w": 32
+        }
+      ],
+      "boss": null,
+      "aquaticPlants": 0
+    },
+    {
+      "id": "7-2",
+      "name": "云栗庭廊",
+      "width": 5376,
+      "layoutVersion": 2,
+      "before": [
+        {
+          "type": "pit-hazard",
+          "index": 0
+        },
+        {
+          "type": "pit-hazard",
+          "index": 1
+        },
+        {
+          "type": "item-obstacle",
+          "index": 7
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 14
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 15
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 18
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 19
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 34
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 48
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 63
+        }
+      ],
+      "changes": [
+        {
+          "type": "hazards",
+          "index": 0,
+          "kind": "rock",
+          "before": {
+            "x": 672,
+            "y": 24
+          },
+          "after": {
+            "x": 736,
+            "y": 24
+          }
+        },
+        {
+          "type": "hazards",
+          "index": 1,
+          "kind": "rock",
+          "before": {
+            "x": 1136,
+            "y": 24
+          },
+          "after": {
+            "x": 1184,
+            "y": 24
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 14,
+          "kind": "step-clearance",
+          "before": {
+            "x": 384,
+            "y": 144
+          },
+          "after": {
+            "x": 384,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 15,
+          "kind": "step-clearance",
+          "before": {
+            "x": 400,
+            "y": 144
+          },
+          "after": {
+            "x": 400,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 18,
+          "kind": "step-clearance",
+          "before": {
+            "x": 864,
+            "y": 144
+          },
+          "after": {
+            "x": 864,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 19,
+          "kind": "step-clearance",
+          "before": {
+            "x": 880,
+            "y": 144
+          },
+          "after": {
+            "x": 880,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 34,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 2080,
+            "y": 144
+          },
+          "after": {
+            "x": 2080,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 48,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 3104,
+            "y": 144
+          },
+          "after": {
+            "x": 3104,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 63,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 4128,
+            "y": 144
+          },
+          "after": {
+            "x": 4128,
+            "y": 128
+          }
+        }
+      ],
+      "remaining": [],
+      "pits": [
+        {
+          "x": 576,
+          "w": 32
+        },
+        {
+          "x": 1024,
+          "w": 32
+        },
+        {
+          "x": 1792,
+          "w": 48
+        },
+        {
+          "x": 2304,
+          "w": 48
+        },
+        {
+          "x": 2816,
+          "w": 48
+        },
+        {
+          "x": 3328,
+          "w": 48
+        },
+        {
+          "x": 3840,
+          "w": 48
+        },
+        {
+          "x": 4352,
+          "w": 48
+        },
+        {
+          "x": 4864,
+          "w": 48
+        }
+      ],
+      "boss": null,
+      "aquaticPlants": 0
+    },
+    {
+      "id": "7-3",
+      "name": "双层葡萄架",
+      "width": 5632,
+      "layoutVersion": 2,
+      "before": [
+        {
+          "type": "low-step-clearance",
+          "index": 13
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 14
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 18
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 19
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 37
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 51
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 66
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 80
+        }
+      ],
+      "changes": [
+        {
+          "type": "blocks",
+          "index": 13,
+          "kind": "step-clearance",
+          "before": {
+            "x": 304,
+            "y": 144
+          },
+          "after": {
+            "x": 304,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 14,
+          "kind": "step-clearance",
+          "before": {
+            "x": 320,
+            "y": 144
+          },
+          "after": {
+            "x": 320,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 18,
+          "kind": "step-clearance",
+          "before": {
+            "x": 784,
+            "y": 144
+          },
+          "after": {
+            "x": 784,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 19,
+          "kind": "step-clearance",
+          "before": {
+            "x": 800,
+            "y": 144
+          },
+          "after": {
+            "x": 800,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 37,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 1568,
+            "y": 144
+          },
+          "after": {
+            "x": 1568,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 51,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 2592,
+            "y": 144
+          },
+          "after": {
+            "x": 2592,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 66,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 3616,
+            "y": 144
+          },
+          "after": {
+            "x": 3616,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 80,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 4640,
+            "y": 144
+          },
+          "after": {
+            "x": 4640,
+            "y": 128
+          }
+        }
+      ],
+      "remaining": [],
+      "pits": [
+        {
+          "x": 512,
+          "w": 48
+        },
+        {
+          "x": 1088,
+          "w": 48
+        },
+        {
+          "x": 1792,
+          "w": 48
+        },
+        {
+          "x": 2304,
+          "w": 48
+        },
+        {
+          "x": 2816,
+          "w": 48
+        },
+        {
+          "x": 3328,
+          "w": 48
+        },
+        {
+          "x": 3840,
+          "w": 48
+        },
+        {
+          "x": 4352,
+          "w": 48
+        },
+        {
+          "x": 4864,
+          "w": 48
+        },
+        {
+          "x": 5376,
+          "w": 48
+        }
+      ],
+      "boss": null,
+      "aquaticPlants": 0
+    },
+    {
+      "id": "7-4",
+      "name": "双生月庭",
+      "width": 5888,
+      "layoutVersion": 2,
+      "before": [
+        {
+          "type": "low-step-clearance",
+          "index": 24
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 39
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 53
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 68
+        }
+      ],
+      "changes": [
+        {
+          "type": "blocks",
+          "index": 24,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 2080,
+            "y": 144
+          },
+          "after": {
+            "x": 2080,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 39,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 3104,
+            "y": 144
+          },
+          "after": {
+            "x": 3104,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 53,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 4128,
+            "y": 144
+          },
+          "after": {
+            "x": 4128,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 68,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 5152,
+            "y": 144
+          },
+          "after": {
+            "x": 5152,
+            "y": 128
+          }
+        }
+      ],
+      "remaining": [],
+      "pits": [
+        {
+          "x": 1792,
+          "w": 48
+        },
+        {
+          "x": 2304,
+          "w": 48
+        },
+        {
+          "x": 2816,
+          "w": 48
+        },
+        {
+          "x": 3328,
+          "w": 48
+        },
+        {
+          "x": 3840,
+          "w": 48
+        },
+        {
+          "x": 4352,
+          "w": 48
+        },
+        {
+          "x": 4864,
+          "w": 48
+        },
+        {
+          "x": 5376,
+          "w": 48
+        }
+      ],
+      "boss": "B07",
+      "aquaticPlants": 0
+    },
+    {
+      "id": "8-1",
+      "name": "王庭外墙",
+      "width": 5120,
+      "layoutVersion": 2,
+      "before": [
+        {
+          "type": "pit-hazard",
+          "index": 0
+        },
+        {
+          "type": "pit-turret",
+          "index": 0
+        },
+        {
+          "type": "pit-turret",
+          "index": 1
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 34
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 48
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 63
+        }
+      ],
+      "changes": [
+        {
+          "type": "hazards",
+          "index": 0,
+          "kind": "heat",
+          "before": {
+            "x": 1168,
+            "y": 176
+          },
+          "after": {
+            "x": 1184,
+            "y": 176
+          }
+        },
+        {
+          "type": "turrets",
+          "index": 0,
+          "kind": "turret",
+          "before": {
+            "x": 2176,
+            "y": 176
+          },
+          "after": {
+            "x": 2160,
+            "y": 176
+          }
+        },
+        {
+          "type": "turrets",
+          "index": 1,
+          "kind": "turret",
+          "before": {
+            "x": 3712,
+            "y": 176
+          },
+          "after": {
+            "x": 3696,
+            "y": 176
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 34,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 2080,
+            "y": 144
+          },
+          "after": {
+            "x": 2080,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 48,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 3104,
+            "y": 144
+          },
+          "after": {
+            "x": 3104,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 63,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 4128,
+            "y": 144
+          },
+          "after": {
+            "x": 4128,
+            "y": 128
+          }
+        }
+      ],
+      "remaining": [],
+      "pits": [
+        {
+          "x": 464,
+          "w": 48
+        },
+        {
+          "x": 1008,
+          "w": 48
+        },
+        {
+          "x": 1792,
+          "w": 32
+        },
+        {
+          "x": 2304,
+          "w": 32
+        },
+        {
+          "x": 2816,
+          "w": 32
+        },
+        {
+          "x": 3328,
+          "w": 32
+        },
+        {
+          "x": 3840,
+          "w": 32
+        },
+        {
+          "x": 4352,
+          "w": 32
+        },
+        {
+          "x": 4864,
+          "w": 32
+        }
+      ],
+      "boss": null,
+      "aquaticPlants": 0
+    },
+    {
+      "id": "8-2",
+      "name": "水火回廊",
+      "width": 5376,
+      "layoutVersion": 2,
+      "before": [
+        {
+          "type": "pit-turret",
+          "index": 2
+        },
+        {
+          "type": "pit-turret",
+          "index": 3
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 1
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 17
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 31
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 46
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 60
+        }
+      ],
+      "changes": [
+        {
+          "type": "turrets",
+          "index": 2,
+          "kind": "turret",
+          "before": {
+            "x": 2176,
+            "y": 176
+          },
+          "after": {
+            "x": 2160,
+            "y": 176
+          }
+        },
+        {
+          "type": "turrets",
+          "index": 3,
+          "kind": "turret",
+          "before": {
+            "x": 3712,
+            "y": 176
+          },
+          "after": {
+            "x": 3696,
+            "y": 176
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 1,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 608,
+            "y": 144
+          },
+          "after": {
+            "x": 608,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 17,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 1568,
+            "y": 144
+          },
+          "after": {
+            "x": 1568,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 31,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 2592,
+            "y": 144
+          },
+          "after": {
+            "x": 2592,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 46,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 3616,
+            "y": 144
+          },
+          "after": {
+            "x": 3616,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 60,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 4640,
+            "y": 144
+          },
+          "after": {
+            "x": 4640,
+            "y": 128
+          }
+        }
+      ],
+      "remaining": [],
+      "pits": [
+        {
+          "x": 1792,
+          "w": 48
+        },
+        {
+          "x": 2304,
+          "w": 48
+        },
+        {
+          "x": 2816,
+          "w": 48
+        },
+        {
+          "x": 3328,
+          "w": 48
+        },
+        {
+          "x": 3840,
+          "w": 48
+        },
+        {
+          "x": 4352,
+          "w": 48
+        },
+        {
+          "x": 4864,
+          "w": 48
+        }
+      ],
+      "boss": null,
+      "aquaticPlants": 0
+    },
+    {
+      "id": "8-3",
+      "name": "三重试炼",
+      "width": 5632,
+      "layoutVersion": 2,
+      "before": [
+        {
+          "type": "pit-hazard",
+          "index": 2
+        },
+        {
+          "type": "pit-turret",
+          "index": 0
+        },
+        {
+          "type": "pit-turret",
+          "index": 1
+        },
+        {
+          "type": "pit-turret",
+          "index": 2
+        },
+        {
+          "type": "pit-patrol",
+          "index": 2
+        },
+        {
+          "type": "item-obstacle",
+          "index": 10
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 17
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 32
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 46
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 61
+        }
+      ],
+      "changes": [
+        {
+          "type": "hazards",
+          "index": 2,
+          "kind": "chain",
+          "before": {
+            "x": 1344,
+            "y": 176
+          },
+          "after": {
+            "x": 1432,
+            "y": 176
+          }
+        },
+        {
+          "type": "turrets",
+          "index": 0,
+          "kind": "turret",
+          "before": {
+            "x": 2176,
+            "y": 176
+          },
+          "after": {
+            "x": 2160,
+            "y": 176
+          }
+        },
+        {
+          "type": "turrets",
+          "index": 1,
+          "kind": "turret",
+          "before": {
+            "x": 3712,
+            "y": 176
+          },
+          "after": {
+            "x": 3696,
+            "y": 176
+          }
+        },
+        {
+          "type": "turrets",
+          "index": 2,
+          "kind": "turret",
+          "before": {
+            "x": 5248,
+            "y": 176
+          },
+          "after": {
+            "x": 5232,
+            "y": 176
+          }
+        },
+        {
+          "type": "enemies",
+          "index": 2,
+          "kind": "walnut",
+          "before": {
+            "x": 1120
+          },
+          "after": {
+            "x": 1058,
+            "patrolLeft": 1040,
+            "patrolRight": 1072
+          }
+        },
+        {
+          "type": "items",
+          "index": 11,
+          "kind": "seed",
+          "before": {
+            "x": 1440,
+            "y": 176
+          },
+          "after": {
+            "x": 1440,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 17,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 2080,
+            "y": 144
+          },
+          "after": {
+            "x": 2080,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 32,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 3104,
+            "y": 144
+          },
+          "after": {
+            "x": 3104,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 46,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 4128,
+            "y": 144
+          },
+          "after": {
+            "x": 4128,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 61,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 5152,
+            "y": 144
+          },
+          "after": {
+            "x": 5152,
+            "y": 128
+          }
+        }
+      ],
+      "remaining": [],
+      "pits": [
+        {
+          "x": 416,
+          "w": 64
+        },
+        {
+          "x": 864,
+          "w": 48
+        },
+        {
+          "x": 1200,
+          "w": 48
+        },
+        {
+          "x": 1792,
+          "w": 48
+        },
+        {
+          "x": 2304,
+          "w": 48
+        },
+        {
+          "x": 2816,
+          "w": 48
+        },
+        {
+          "x": 3328,
+          "w": 48
+        },
+        {
+          "x": 3840,
+          "w": 48
+        },
+        {
+          "x": 4352,
+          "w": 48
+        },
+        {
+          "x": 4864,
+          "w": 48
+        },
+        {
+          "x": 5376,
+          "w": 48
+        }
+      ],
+      "boss": null,
+      "aquaticPlants": 0
+    },
+    {
+      "id": "8-4",
+      "name": "石榴王座",
+      "width": 5888,
+      "layoutVersion": 2,
+      "before": [
+        {
+          "type": "pit-turret",
+          "index": 1
+        },
+        {
+          "type": "pit-turret",
+          "index": 2
+        },
+        {
+          "type": "pit-turret",
+          "index": 3
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 19
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 34
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 48
+        },
+        {
+          "type": "low-step-clearance",
+          "index": 63
+        }
+      ],
+      "changes": [
+        {
+          "type": "turrets",
+          "index": 1,
+          "kind": "turret",
+          "before": {
+            "x": 2176,
+            "y": 176
+          },
+          "after": {
+            "x": 2160,
+            "y": 176
+          }
+        },
+        {
+          "type": "turrets",
+          "index": 2,
+          "kind": "turret",
+          "before": {
+            "x": 3712,
+            "y": 176
+          },
+          "after": {
+            "x": 3696,
+            "y": 176
+          }
+        },
+        {
+          "type": "turrets",
+          "index": 3,
+          "kind": "turret",
+          "before": {
+            "x": 5248,
+            "y": 176
+          },
+          "after": {
+            "x": 5232,
+            "y": 176
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 19,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 1568,
+            "y": 144
+          },
+          "after": {
+            "x": 1568,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 34,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 2592,
+            "y": 144
+          },
+          "after": {
+            "x": 2592,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 48,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 3616,
+            "y": 144
+          },
+          "after": {
+            "x": 3616,
+            "y": 128
+          }
+        },
+        {
+          "type": "blocks",
+          "index": 63,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 4640,
+            "y": 144
+          },
+          "after": {
+            "x": 4640,
+            "y": 128
+          }
+        }
+      ],
+      "remaining": [],
+      "pits": [
+        {
+          "x": 1792,
+          "w": 48
+        },
+        {
+          "x": 2304,
+          "w": 48
+        },
+        {
+          "x": 2816,
+          "w": 48
+        },
+        {
+          "x": 3328,
+          "w": 48
+        },
+        {
+          "x": 3840,
+          "w": 48
+        },
+        {
+          "x": 4352,
+          "w": 48
+        },
+        {
+          "x": 4864,
+          "w": 48
+        },
+        {
+          "x": 5376,
+          "w": 48
+        }
+      ],
+      "boss": "B08",
+      "aquaticPlants": 0
+    }
+  ]
+}

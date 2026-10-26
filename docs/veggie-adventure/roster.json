@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-10-24",
+  "updated": "2026-10-26",
   "title": "蔬果大冒险角色名册",
   "artDirection": "32-bit-era-2d-pixel",
   "counts": {
     "player": 1,
-    "enemy": 10,
+    "enemy": 11,
     "enemy-variant": 2,
     "boss": 8,
     "npc": 2
@@ -17,10 +17,10 @@
       "name": "芽豆",
       "category": "player",
       "ingredient": "发芽土豆",
-      "silhouette": "小土豆、两片嫩芽、短靴；成长后增高，辣椒形态增加红围巾",
+      "silhouette": "小土豆、两片嫩芽、短靴；成长与辣椒形态在原运行尺寸上等比缩小20%，辣椒增加红围巾",
       "palette": "土黄／深褐／嫩绿，辣椒形态增加朱红",
       "ability": "助跑、单次可变高度跳跃、踩敌、顶砖；成长可碎砖和蹲下；辣椒形态可投射",
-      "counterplay": "基础形态受伤死亡；成长或辣椒受伤退回基础，受伤无敌1.5秒",
+      "counterplay": "基础形态受伤死亡；成长或辣椒受伤退回基础，受伤保护1.5秒。每局可重生3次，从当前小关入口以基础形态重来；次数耗尽后再次死亡游戏结束。",
       "dangerCue": "无敌状态用星芒与节奏闪光，减少动态模式改稳定描边",
       "states": "基础→成长→辣椒；杨桃无敌是独立叠加状态",
       "animations": [
@@ -44,7 +44,26 @@
       "visualBaseline": "P01_VISUAL_BASELINE.md",
       "assetPrefix": "characters/sprout-potato",
       "card": "cards/p01-sprout-potato.md",
-      "conceptImage": "../../art-source/veggie-adventure/concepts/p01-transparent-v2.png"
+      "conceptImage": "../../art-source/veggie-adventure/concepts/p01-transparent-v2.png",
+      "runtimeSize": {
+        "base": [
+          12,
+          14
+        ],
+        "grown": [
+          9.6,
+          22.4
+        ],
+        "chili": [
+          9.6,
+          22.4
+        ],
+        "evolvedCrouch": [
+          9.6,
+          11.2
+        ],
+        "jumpAbilitiesEqual": true
+      }
     },
     {
       "id": "E01",
@@ -56,7 +75,7 @@
       "silhouette": "扁圆棕色菌盖、米白短菌柄；脸长在菌柄正面，不用红白圆点帽",
       "palette": "棕褐／米白／苔绿",
       "ability": "地面巡逻，撞墙折返，允许走落边缘",
-      "counterplay": "踩踏、辣椒火弹、运动壳体",
+      "counterplay": "从上方踩踏或火弹，每次扣1血；无免伤期；生命归零退场",
       "dangerCue": "接触伤害；无背刺",
       "states": "巡逻→被踩压扁／被击飞",
       "animations": [
@@ -70,7 +89,8 @@
       "artStatus": "transparent-concept-v2",
       "assetPrefix": "enemies/shiitake-patrol",
       "card": "cards/e01-shiitake-patrol.md",
-      "conceptImage": "../../art-source/veggie-adventure/originals/enemies/e01-shiitake-patrol-v2.png"
+      "conceptImage": "../../art-source/veggie-adventure/originals/enemies/e01-shiitake-patrol-v2.png",
+      "hp": 1
     },
     {
       "id": "E02",
@@ -82,9 +102,9 @@
       "silhouette": "层叠菜叶形成圆壳，外露短根足；缩壳时完全收脚",
       "palette": "嫩绿／深绿／奶白",
       "ability": "巡逻；被踩缩壳；接触静止壳可踢动；运动壳撞墙反弹",
-      "counterplay": "踩踏切换壳状态；火弹消灭；其他运动壳体消灭",
-      "dangerCue": "移动壳伤害玩家；静止壳安全",
-      "states": "巡逻→静止壳→运动壳；静止8秒后摇晃1秒再恢复",
+      "counterplay": "显露身体时踩踏扣1血并缩壳；缩壳时踩踏仅弹起，双方不扣血；9秒醒转后可再次踩伤；火弹每次扣1血，生命归零退场；可侧踢，运动壳可安全踩停",
+      "dangerCue": "缩壳显示护壳与挡击火花，顶部踩踏安全；运动壳侧碰危险；第8秒开始醒转提示",
+      "states": "巡逻→有效踩踏缩壳剩1血→静止壳／运动壳→9秒醒转；醒转后再踩或火弹耗尽生命退场",
       "animations": [
         "walk",
         "retract",
@@ -99,7 +119,8 @@
       "artStatus": "transparent-concept-v1",
       "assetPrefix": "enemies/cabbage-shell",
       "card": "cards/e02-cabbage-shell.md",
-      "conceptImage": "../../art-source/veggie-adventure/originals/enemies/e02-cabbage-shell-v1.png"
+      "conceptImage": "../../art-source/veggie-adventure/originals/enemies/e02-cabbage-shell-v1.png",
+      "hp": 2
     },
     {
       "id": "E03",
@@ -110,10 +131,10 @@
       "ingredient": "核桃",
       "silhouette": "低矮横椭圆硬壳，核桃沟纹与两根根须触角",
       "palette": "棕灰／赭黄／深褐",
-      "ability": "壳体状态机同卷心菜；对火弹免疫",
-      "counterplay": "踩踏缩壳后踢动；其他运动壳体",
-      "dangerCue": "深色硬壳与火花弹开反馈表示抗火",
-      "states": "巡逻→静止壳→运动壳→恢复",
+      "ability": "壳体状态机同卷心菜；火弹可扣血",
+      "counterplay": "显露身体时踩踏扣1血并缩壳；缩壳时踩踏仅弹起，双方不扣血；9秒醒转后可再次踩伤；火弹每次扣1血，生命归零退场；可侧踢，运动壳可安全踩停",
+      "dangerCue": "缩壳显示护壳与挡击火花，顶部踩踏安全；运动壳侧碰危险；第8秒开始醒转提示",
+      "states": "巡逻→有效踩踏缩壳剩1血→静止壳／运动壳→9秒醒转；醒转后再踩或火弹耗尽生命退场",
       "animations": [
         "walk",
         "retract",
@@ -129,7 +150,8 @@
       "artStatus": "transparent-concept-v1",
       "assetPrefix": "enemies/walnut-beetle",
       "card": "cards/e03-walnut-beetle.md",
-      "conceptImage": "../../art-source/veggie-adventure/originals/enemies/e03-walnut-beetle-v1.png"
+      "conceptImage": "../../art-source/veggie-adventure/originals/enemies/e03-walnut-beetle-v1.png",
+      "hp": 2
     },
     {
       "id": "E04",
@@ -140,10 +162,10 @@
       "ingredient": "栗子带刺外壳",
       "silhouette": "低矮圆球，背部至少三枚明显长刺，腹部留无刺区",
       "palette": "橄榄绿／黄褐",
-      "ability": "地面巡逻；可从云牧者投下并落地展开",
-      "counterplay": "火弹、运动壳体；不可踩",
-      "dangerCue": "长刺轮廓；踩中同接触受伤",
-      "states": "落下→展开→巡逻→击飞",
+      "ability": "地面巡逻；可从云牧者投下并落地展开；首次踩踏收拢，静止9秒后展开；收拢与展开复用fall/unfold动画",
+      "counterplay": "显露身体时踩踏扣1血并缩壳；缩壳时踩踏仅弹起，双方不扣血；9秒醒转后可再次踩伤；火弹每次扣1血，生命归零退场；可侧踢，运动壳可安全踩停",
+      "dangerCue": "缩壳显示护壳与挡击火花，顶部踩踏安全；运动壳侧碰危险；第8秒开始醒转提示",
+      "states": "巡逻→有效踩踏缩壳剩1血→静止壳／运动壳→9秒醒转；醒转后再踩或火弹耗尽生命退场",
       "animations": [
         "fall",
         "unfold",
@@ -156,7 +178,8 @@
       "artStatus": "transparent-concept-v1",
       "assetPrefix": "enemies/chestnut-spike",
       "card": "cards/e04-chestnut-spike.md",
-      "conceptImage": "../../art-source/veggie-adventure/originals/enemies/e04-chestnut-spike-v1.png"
+      "conceptImage": "../../art-source/veggie-adventure/originals/enemies/e04-chestnut-spike-v1.png",
+      "hp": 2
     },
     {
       "id": "E05",
@@ -168,7 +191,7 @@
       "silhouette": "莲藕切面圆头、可见藕孔、细根须触手",
       "palette": "淡粉／灰紫／湖绿",
       "ability": "水下脉冲上浮，停顿下沉；周期性朝玩家方向移动",
-      "counterplay": "火弹；游泳躲避；水下踩踏无效",
+      "counterplay": "从上方踩踏或火弹，每次扣1血；无免伤期；生命归零退场；水下也可踩踏",
       "dangerCue": "触手展开时接触区域仍固定，不随装饰波动",
       "states": "漂浮→蓄力→脉冲→漂浮",
       "animations": [
@@ -182,7 +205,8 @@
       "artStatus": "transparent-concept-v1",
       "assetPrefix": "enemies/lotus-jelly",
       "card": "cards/e05-lotus-jelly.md",
-      "conceptImage": "../../art-source/veggie-adventure/originals/enemies/e05-lotus-jelly-v1.png"
+      "conceptImage": "../../art-source/veggie-adventure/originals/enemies/e05-lotus-jelly-v1.png",
+      "hp": 1
     },
     {
       "id": "E06",
@@ -194,7 +218,7 @@
       "silhouette": "侧扁甜椒鱼身、叶片尾鳍、椒蒂背鳍",
       "palette": "橙红／叶绿",
       "ability": "水中沿配置方向和速度水平游动",
-      "counterplay": "火弹；水下不可踩",
+      "counterplay": "从上方踩踏或火弹，每次扣1血；无免伤期；生命归零退场；水下也可踩踏",
       "dangerCue": "鱼鳍与轮廓固定显示游动方向",
       "states": "游动→击败",
       "animations": [
@@ -207,7 +231,8 @@
       "artStatus": "transparent-concept-v2",
       "assetPrefix": "enemies/pepper-fish",
       "card": "cards/e06-pepper-fish.md",
-      "conceptImage": "../../art-source/veggie-adventure/originals/enemies/e06-pepper-fish-v2.png"
+      "conceptImage": "../../art-source/veggie-adventure/originals/enemies/e06-pepper-fish-v2.png",
+      "hp": 1
     },
     {
       "id": "E07",
@@ -219,7 +244,7 @@
       "silhouette": "直立玉米、两片粗叶手臂、穗须眉，手中玉米粒可见",
       "palette": "金黄／墨绿",
       "ability": "短距离巡逻与跳台；预备后连续抛3枚弧线玉米粒",
-      "counterplay": "踩踏、火弹、运动壳体",
+      "counterplay": "从上方踩踏或火弹，每次扣1血；无免伤期；生命归零退场",
       "dangerCue": "举臂0.5秒后投掷；每轮后至少0.8秒休息",
       "states": "巡逻→举臂→投掷→恢复；跳跃为独立移动状态",
       "animations": [
@@ -236,7 +261,8 @@
       "artStatus": "transparent-concept-v1",
       "assetPrefix": "enemies/corn-thrower",
       "card": "cards/e07-corn-thrower.md",
-      "conceptImage": "../../art-source/veggie-adventure/originals/enemies/e07-corn-thrower-v1.png"
+      "conceptImage": "../../art-source/veggie-adventure/originals/enemies/e07-corn-thrower-v1.png",
+      "hp": 1
     },
     {
       "id": "E08",
@@ -248,7 +274,7 @@
       "silhouette": "两瓣豆荚口、内部圆豆牙、细藤颈；固定藤管",
       "palette": "豆绿／浅黄",
       "ability": "周期伸出、停留、缩回；开始伸出前若玩家距管口中心不足24逻辑单位则等待",
-      "counterplay": "伸出时火弹；不可踩",
+      "counterplay": "从上方踩踏或火弹，每次扣1血；无免伤期；生命归零退场；完整出土后参与碰撞",
       "dangerCue": "张开的豆荚口表示危险；缩回后管口可站立",
       "states": "隐藏→伸出→停留→缩回",
       "animations": [
@@ -263,7 +289,8 @@
       "artStatus": "transparent-concept-v2",
       "assetPrefix": "enemies/pea-trap",
       "card": "cards/e08-pea-trap.md",
-      "conceptImage": "../../art-source/veggie-adventure/originals/enemies/e08-pea-trap-v2.png"
+      "conceptImage": "../../art-source/veggie-adventure/originals/enemies/e08-pea-trap-v2.png",
+      "hp": 1
     },
     {
       "id": "E09",
@@ -275,7 +302,7 @@
       "silhouette": "蓬松棉团托着棉桃脸，两片苞叶像扶手",
       "palette": "暖白／青灰／褐绿",
       "ability": "空中横向跟随，定时投下E04；同屏其生成的刺栗最多3只",
-      "counterplay": "借高台踩踏；火弹",
+      "counterplay": "从上方踩踏或火弹，每次扣1血；无免伤期；生命归零退场",
       "dangerCue": "投掷前0.6秒抬手；禁止在玩家身上直接生成刺栗",
       "states": "跟随→抬手→投掷→冷却",
       "animations": [
@@ -290,7 +317,8 @@
       "artStatus": "transparent-concept-v2",
       "assetPrefix": "enemies/cotton-cloud",
       "card": "cards/e09-cotton-cloud.md",
-      "conceptImage": "../../art-source/veggie-adventure/originals/enemies/e09-cotton-cloud-v2.png"
+      "conceptImage": "../../art-source/veggie-adventure/originals/enemies/e09-cotton-cloud-v2.png",
+      "hp": 1
     },
     {
       "id": "E10",
@@ -302,7 +330,7 @@
       "silhouette": "横向茄子、叶萼尾翼、钝圆头；没有手脚",
       "palette": "紫黑／浅紫／叶绿",
       "ability": "从固定发射器水平飞行，离开活动区域销毁",
-      "counterplay": "从上方踩落；火弹无效",
+      "counterplay": "从上方踩踏或火弹，每次扣1血；无免伤期；生命归零退场",
       "dangerCue": "发射器亮起0.5秒提示；近距24逻辑单位禁止发射",
       "states": "发射→飞行→踩落",
       "animations": [
@@ -316,7 +344,8 @@
       "artStatus": "transparent-concept-v1",
       "assetPrefix": "enemies/eggplant-bolt",
       "card": "cards/e10-eggplant-bolt.md",
-      "conceptImage": "../../art-source/veggie-adventure/originals/enemies/e10-eggplant-bolt-v1.png"
+      "conceptImage": "../../art-source/veggie-adventure/originals/enemies/e10-eggplant-bolt-v1.png",
+      "hp": 1
     },
     {
       "id": "E11",
@@ -327,9 +356,9 @@
       "ingredient": "卷心菜与翼状叶片",
       "silhouette": "沿用E02身体，两片对称大叶翼；不能只靠换色区分",
       "palette": "嫩绿／青绿／奶白",
-      "ability": "按关卡配置跳跃或沿固定路径飞行；首次踩踏去翼变E02",
-      "counterplay": "首次踩踏去翼；火弹或运动壳体消灭",
-      "dangerCue": "碰撞体不包括叶翼装饰",
+      "ability": "0.55秒预警锁定二维目标，1.25秒实际俯冲攻击，随后2.2秒返回；首次踩踏脱翼变E02",
+      "counterplay": "有效踩踏依次脱翼剩2血、缩壳剩1血；缩壳踩踏双方不扣血，9秒醒转后可再踩击败；火弹每次扣1血；生命归零退场",
+      "dangerCue": "预警后俯冲会触碰主角高度；可在锁定后移位躲开；不穿过实心地形",
       "states": "飞行／跳跃→去翼→E02巡逻",
       "animations": [
         "fly",
@@ -343,7 +372,8 @@
       "artStatus": "transparent-concept-v1",
       "assetPrefix": "enemies/winged-cabbage",
       "card": "cards/e11-winged-cabbage.md",
-      "conceptImage": "../../art-source/veggie-adventure/originals/enemies/e11-winged-cabbage-v1.png"
+      "conceptImage": "../../art-source/veggie-adventure/originals/enemies/e11-winged-cabbage-v1.png",
+      "hp": 3
     },
     {
       "id": "E12",
@@ -355,7 +385,7 @@
       "silhouette": "沿用E06，尾鳍展开、腹部增加浅色条纹",
       "palette": "橙红／浅黄／叶绿",
       "ability": "从关卡固定发射区沿抛物线跃水，不追踪玩家位置",
-      "counterplay": "空中可踩；火弹",
+      "counterplay": "从上方踩踏或火弹，每次扣1血；无免伤期；生命归零退场",
       "dangerCue": "水面先出现0.5秒涟漪；入水后销毁",
       "states": "涟漪预警→跃起→下落→入水",
       "animations": [
@@ -370,7 +400,35 @@
       "artStatus": "transparent-concept-v1",
       "assetPrefix": "enemies/leaping-pepper-fish",
       "card": "cards/e12-leaping-pepper-fish.md",
-      "conceptImage": "../../art-source/veggie-adventure/originals/enemies/e12-leaping-pepper-fish-v1.png"
+      "conceptImage": "../../art-source/veggie-adventure/originals/enemies/e12-leaping-pepper-fish-v1.png",
+      "hp": 1
+    },
+    {
+      "id": "E13",
+      "slug": "water-anemone",
+      "name": "水葵伏株",
+      "category": "enemy",
+      "ingredient": "莲苞与海葵状水叶",
+      "silhouette": "紫红莲苞、卷曲青绿叶片与固定根须",
+      "palette": "紫红／青绿／黄色花蕊",
+      "ability": "固定池底，0.7秒鼓苞预警后锁定喷射，3.4秒独立冷却",
+      "counterplay": "1血，可踩踏或火弹扣血；生命归零退场；移位躲开锁定种子，种子不离开水池",
+      "dangerCue": "鼓起并张开花苞，显示预警；固定身体接触危险",
+      "states": "扎根待机→预警→喷射→恢复→待机；生命耗尽枯萎退场",
+      "animations": [
+        "idle",
+        "windup",
+        "attack",
+        "hit"
+      ],
+      "introduced": "4-1至4-4池底，首领专属水池除外",
+      "designOrder": 24,
+      "status": "runtime-implemented",
+      "artStatus": "transparent-animation-v1",
+      "assetPrefix": "enemies/water-anemone",
+      "card": "cards/e13-water-anemone.md",
+      "conceptImage": "../../art-source/veggie-adventure/enemies/aquatic-plant-v1/generated.png",
+      "hp": 1
     },
     {
       "id": "B01",
@@ -382,10 +440,10 @@
       "palette": "橘黄／深绿",
       "world": 1,
       "ability": "短跳落地产生左右贴地震波",
-      "weakness": "落地后头顶嫩芽露出，喘息2秒",
-      "counterplay": "跳过震波后踩头",
+      "weakness": "仅expose弱点开放期可从顶部踩踏或用火弹扣血，绿色顶部标记与弱点倒计时同步开放",
+      "counterplay": "弱点期每次踩头或火弹扣1血并立即进入恢复关闭弱点；6血耗尽退场；其余阶段护甲阻挡，不叠加额外受击免伤时间",
       "dangerCue": "每次攻击至少0.5秒预兆；弱点打开同时改变形状、姿态和色值",
-      "states": "待机→预兆→攻击→破绽→恢复；命中后进入受伤保护；生命归零退场",
+      "states": "待机→预兆→攻击→弱点开放→恢复；有效命中后撤离并关闭弱点；生命归零退场",
       "animations": [
         "idle",
         "windup",
@@ -396,13 +454,32 @@
         "defeat"
       ],
       "introduced": "1-4",
-      "health": 3,
+      "health": 6,
       "designOrder": 14,
       "status": "specified",
       "artStatus": "transparent-concept-v1",
       "assetPrefix": "bosses/pumpkin-warden",
       "card": "cards/b01-pumpkin-warden.md",
-      "conceptImage": "../../art-source/veggie-adventure/originals/bosses/b01-pumpkin-warden-v1.png"
+      "conceptImage": "../../art-source/veggie-adventure/originals/bosses/b01-pumpkin-warden-v1.png",
+      "hp": 6,
+      "skillCooldowns": {
+        "slam": {
+          "name": "落地震波",
+          "seconds": 6.5
+        },
+        "hop": {
+          "name": "锁定跳扑",
+          "seconds": 7
+        },
+        "seeds": {
+          "name": "瞄准抛射",
+          "seconds": 5.5
+        },
+        "dash": {
+          "name": "地面冲撞",
+          "seconds": 5
+        }
+      }
     },
     {
       "id": "B02",
@@ -414,10 +491,10 @@
       "palette": "紫褐／米白",
       "world": 2,
       "ability": "依次抛落土块、卷身向玩家蓄力冲撞",
-      "weakness": "撞上场边软土后眩晕2秒，顶部矿帽脱落",
-      "counterplay": "引导撞边，避开落土后踩顶部",
+      "weakness": "仅expose弱点开放期可从顶部踩踏或用火弹扣血，绿色顶部标记与弱点倒计时同步开放",
+      "counterplay": "弱点期每次踩头或火弹扣1血并立即进入恢复关闭弱点；7血耗尽退场；其余阶段护甲阻挡，不叠加额外受击免伤时间",
       "dangerCue": "每次攻击至少0.5秒预兆；弱点打开同时改变形状、姿态和色值",
-      "states": "待机→预兆→攻击→破绽→恢复；命中后进入受伤保护；生命归零退场",
+      "states": "待机→预兆→攻击→弱点开放→恢复；有效命中后撤离并关闭弱点；生命归零退场",
       "animations": [
         "idle",
         "throw",
@@ -428,13 +505,24 @@
         "defeat"
       ],
       "introduced": "2-4",
-      "health": 3,
+      "health": 7,
       "designOrder": 15,
       "status": "specified",
       "artStatus": "transparent-concept-v1",
       "assetPrefix": "bosses/onion-miner",
       "card": "cards/b02-onion-miner.md",
-      "conceptImage": "../../art-source/veggie-adventure/originals/bosses/b02-onion-miner-v1.png"
+      "conceptImage": "../../art-source/veggie-adventure/originals/bosses/b02-onion-miner-v1.png",
+      "hp": 7,
+      "skillCooldowns": {
+        "rock-roll": {
+          "name": "落石滚撞",
+          "seconds": 6.5
+        },
+        "charge": {
+          "name": "快速冲撞",
+          "seconds": 5
+        }
+      }
     },
     {
       "id": "B03",
@@ -446,10 +534,10 @@
       "palette": "金黄／青绿",
       "world": 3,
       "ability": "抛弧线籽弹，再沿地面突进",
-      "weakness": "突进结束失衡2秒，头盔向后翻开",
-      "counterplay": "跳过突进，借场中固定矮台踩头",
+      "weakness": "仅expose弱点开放期可从顶部踩踏或用火弹扣血，绿色顶部标记与弱点倒计时同步开放",
+      "counterplay": "弱点期每次踩头或火弹扣1血并立即进入恢复关闭弱点；8血耗尽退场；其余阶段护甲阻挡，不叠加额外受击免伤时间",
       "dangerCue": "每次攻击至少0.5秒预兆；弱点打开同时改变形状、姿态和色值",
-      "states": "待机→预兆→攻击→破绽→恢复；命中后进入受伤保护；生命归零退场",
+      "states": "待机→预兆→攻击→弱点开放→恢复；有效命中后撤离并关闭弱点；生命归零退场",
       "animations": [
         "idle",
         "throw",
@@ -460,13 +548,24 @@
         "defeat"
       ],
       "introduced": "3-4",
-      "health": 3,
+      "health": 8,
       "designOrder": 16,
       "status": "specified",
       "artStatus": "transparent-concept-v1",
       "assetPrefix": "bosses/corn-knight",
       "card": "cards/b03-corn-knight.md",
-      "conceptImage": "../../art-source/veggie-adventure/originals/bosses/b03-corn-knight-v1.png"
+      "conceptImage": "../../art-source/veggie-adventure/originals/bosses/b03-corn-knight-v1.png",
+      "hp": 8,
+      "skillCooldowns": {
+        "seed-dash": {
+          "name": "三连籽弹",
+          "seconds": 6
+        },
+        "dash": {
+          "name": "突进冲撞",
+          "seconds": 5
+        }
+      }
     },
     {
       "id": "B04",
@@ -478,10 +577,10 @@
       "palette": "粉白／湖蓝",
       "world": 4,
       "ability": "水池内喷种子，随后固定轨迹跃上岸台",
-      "weakness": "上岸停留2.5秒，藕冠张开",
-      "counterplay": "岸台躲喷射，等上岸后踩顶部；不要求水下踩踏",
+      "weakness": "仅expose弱点开放期可从顶部踩踏或用火弹扣血，绿色顶部标记与弱点倒计时同步开放",
+      "counterplay": "弱点期每次踩头或火弹扣1血并立即进入恢复关闭弱点；8血耗尽退场；其余阶段护甲阻挡，不叠加额外受击免伤时间",
       "dangerCue": "每次攻击至少0.5秒预兆；弱点打开同时改变形状、姿态和色值",
-      "states": "待机→预兆→攻击→破绽→恢复；命中后进入受伤保护；生命归零退场",
+      "states": "待机→预兆→攻击→弱点开放→恢复；有效命中后撤离并关闭弱点；生命归零退场",
       "animations": [
         "swim",
         "windup",
@@ -492,13 +591,24 @@
         "defeat"
       ],
       "introduced": "4-4",
-      "health": 3,
+      "health": 8,
       "designOrder": 17,
       "status": "specified",
       "artStatus": "transparent-concept-v1",
       "assetPrefix": "bosses/lotus-diver",
       "card": "cards/b04-lotus-diver.md",
-      "conceptImage": "../../art-source/veggie-adventure/originals/bosses/b04-lotus-diver-v1.png"
+      "conceptImage": "../../art-source/veggie-adventure/originals/bosses/b04-lotus-diver-v1.png",
+      "hp": 8,
+      "skillCooldowns": {
+        "fan-leap": {
+          "name": "扇射跃岸",
+          "seconds": 6
+        },
+        "double-fan": {
+          "name": "双轮扇射",
+          "seconds": 7
+        }
+      }
     },
     {
       "id": "B05",
@@ -510,10 +620,10 @@
       "palette": "橄榄黄／深褐",
       "world": 5,
       "ability": "滚动冲撞后抖落尖刺",
-      "weakness": "撞墙开壳2秒，露出无刺果肉顶部",
-      "counterplay": "避开滚动和落刺，确认开壳后踩果肉",
+      "weakness": "仅expose弱点开放期可从顶部踩踏或用火弹扣血，绿色顶部标记与弱点倒计时同步开放",
+      "counterplay": "弱点期每次踩头或火弹扣1血并立即进入恢复关闭弱点；9血耗尽退场；其余阶段护甲阻挡，不叠加额外受击免伤时间",
       "dangerCue": "每次攻击至少0.5秒预兆；弱点打开同时改变形状、姿态和色值",
-      "states": "待机→预兆→攻击→破绽→恢复；命中后进入受伤保护；生命归零退场",
+      "states": "待机→预兆→攻击→弱点开放→恢复；有效命中后撤离并关闭弱点；生命归零退场",
       "animations": [
         "idle",
         "windup",
@@ -524,13 +634,24 @@
         "defeat"
       ],
       "introduced": "5-4",
-      "health": 3,
+      "health": 9,
       "designOrder": 18,
       "status": "specified",
       "artStatus": "transparent-concept-v1",
       "assetPrefix": "bosses/durian-fortress",
       "card": "cards/b05-durian-fortress.md",
-      "conceptImage": "../../art-source/veggie-adventure/originals/bosses/b05-durian-fortress-v1.png"
+      "conceptImage": "../../art-source/veggie-adventure/originals/bosses/b05-durian-fortress-v1.png",
+      "hp": 9,
+      "skillCooldowns": {
+        "rock-roll": {
+          "name": "落刺滚撞",
+          "seconds": 6.5
+        },
+        "thorn-roll": {
+          "name": "散刺冲撞",
+          "seconds": 6
+        }
+      }
     },
     {
       "id": "B06",
@@ -542,10 +663,10 @@
       "palette": "深红／橙金",
       "world": 6,
       "ability": "高低火弹轮换，再投延迟爆裂种子",
-      "weakness": "一轮施法后熄火2秒，顶部火冠消失",
-      "counterplay": "读高低弹道，避开爆裂圈后借矮台踩头",
+      "weakness": "仅expose弱点开放期可从顶部踩踏或用火弹扣血，绿色顶部标记与弱点倒计时同步开放",
+      "counterplay": "弱点期每次踩头或火弹扣1血并立即进入恢复关闭弱点；10血耗尽退场；其余阶段护甲阻挡，不叠加额外受击免伤时间",
       "dangerCue": "每次攻击至少0.5秒预兆；弱点打开同时改变形状、姿态和色值",
-      "states": "待机→预兆→攻击→破绽→恢复；命中后进入受伤保护；生命归零退场",
+      "states": "待机→预兆→攻击→弱点开放→恢复；有效命中后撤离并关闭弱点；生命归零退场",
       "animations": [
         "idle",
         "cast-high",
@@ -556,13 +677,24 @@
         "defeat"
       ],
       "introduced": "6-4",
-      "health": 3,
+      "health": 10,
       "designOrder": 19,
       "status": "specified",
       "artStatus": "transparent-concept-v1",
       "assetPrefix": "bosses/chili-mage",
       "card": "cards/b06-chili-mage.md",
-      "conceptImage": "../../art-source/veggie-adventure/originals/bosses/b06-chili-mage-v1.png"
+      "conceptImage": "../../art-source/veggie-adventure/originals/bosses/b06-chili-mage-v1.png",
+      "hp": 10,
+      "skillCooldowns": {
+        "crossfire": {
+          "name": "高低交叉弹",
+          "seconds": 6
+        },
+        "burst": {
+          "name": "连环爆裂种子",
+          "seconds": 7
+        }
+      }
     },
     {
       "id": "B07",
@@ -574,10 +706,10 @@
       "palette": "紫／青绿",
       "world": 7,
       "ability": "两头交替喷籽弹，随后藤条贴地横扫",
-      "weakness": "攻击头疲劳2秒；另一头同期收起攻击，共用3格生命",
-      "counterplay": "跳过横扫，踩疲劳头；两头不可同时造成伤害",
+      "weakness": "仅expose弱点开放期可从顶部踩踏或用火弹扣血，绿色顶部标记与弱点倒计时同步开放",
+      "counterplay": "弱点期每次踩头或火弹扣1血并立即进入恢复关闭弱点；10血耗尽退场；其余阶段护甲阻挡，不叠加额外受击免伤时间",
       "dangerCue": "每次攻击至少0.5秒预兆；弱点打开同时改变形状、姿态和色值",
-      "states": "待机→预兆→攻击→破绽→恢复；命中后进入受伤保护；生命归零退场",
+      "states": "待机→预兆→攻击→弱点开放→恢复；有效命中后撤离并关闭弱点；生命归零退场",
       "animations": [
         "idle",
         "left-attack",
@@ -588,13 +720,24 @@
         "defeat"
       ],
       "introduced": "7-4",
-      "health": 3,
+      "health": 10,
       "designOrder": 20,
       "status": "specified",
       "artStatus": "transparent-concept-v1",
       "assetPrefix": "bosses/grape-twins",
       "card": "cards/b07-grape-twins.md",
-      "conceptImage": "../../art-source/veggie-adventure/originals/bosses/b07-grape-twins-v1.png"
+      "conceptImage": "../../art-source/veggie-adventure/originals/bosses/b07-grape-twins-v1.png",
+      "hp": 10,
+      "skillCooldowns": {
+        "left-sweep": {
+          "name": "左头横扫",
+          "seconds": 6
+        },
+        "right-sweep": {
+          "name": "右头横扫",
+          "seconds": 6
+        }
+      }
     },
     {
       "id": "B08",
@@ -606,10 +749,10 @@
       "palette": "绛红／金褐",
       "world": 8,
       "ability": "跳震与扇形籽弹交替；剩1格时节奏加快",
-      "weakness": "每次组合结束开甲2秒，核心从顶部显露；低血阶段仍保留预兆与破绽时间",
-      "counterplay": "跳震与籽弹间隙穿行，借固定矮台踩顶部核心",
+      "weakness": "仅expose弱点开放期可从顶部踩踏或用火弹扣血，绿色顶部标记与弱点倒计时同步开放",
+      "counterplay": "弱点期每次踩头或火弹扣1血并立即进入恢复关闭弱点；12血耗尽退场；其余阶段护甲阻挡，不叠加额外受击免伤时间",
       "dangerCue": "每次攻击至少0.5秒预兆；弱点打开同时改变形状、姿态和色值",
-      "states": "待机→预兆→攻击→破绽→恢复；命中后进入受伤保护；生命归零退场",
+      "states": "待机→预兆→攻击→弱点开放→恢复；有效命中后撤离并关闭弱点；生命归零退场",
       "animations": [
         "idle",
         "windup",
@@ -622,13 +765,24 @@
         "defeat"
       ],
       "introduced": "8-4",
-      "health": 3,
+      "health": 12,
       "designOrder": 21,
       "status": "specified",
       "artStatus": "transparent-concept-v1",
       "assetPrefix": "bosses/pomegranate-king",
       "card": "cards/b08-pomegranate-king.md",
-      "conceptImage": "../../art-source/veggie-adventure/originals/bosses/b08-pomegranate-king-v1.png"
+      "conceptImage": "../../art-source/veggie-adventure/originals/bosses/b08-pomegranate-king-v1.png",
+      "hp": 12,
+      "skillCooldowns": {
+        "slam": {
+          "name": "跳震波",
+          "seconds": 5.5
+        },
+        "volley": {
+          "name": "扇形籽弹",
+          "seconds": 6
+        }
+      }
     },
     {
       "id": "N01",
@@ -682,5 +836,20 @@
       "card": "cards/n02-strawberry-gardener.md",
       "conceptImage": "../../art-source/veggie-adventure/originals/npcs/n02-strawberry-gardener-v1.png"
     }
-  ]
+  ],
+  "combatRules": {
+    "stompDamage": 1,
+    "fireDamage": 1,
+    "enemyInvulnerability": false,
+    "bossDamageInAllPhases": false,
+    "reference": "STOMP_AND_SIZE.md",
+    "bossBalanceReference": "BOSS_DIFFICULTY_V1.md",
+    "runRebirths": 3,
+    "checkpoints": false,
+    "rebirthReference": "REBIRTH_RULES.md",
+    "bossWeakWindowOnly": true,
+    "shellStompImmune": true,
+    "shellStompHurtsPlayer": false,
+    "shellWakeSeconds": 9
+  }
 }

@@ -25,6 +25,7 @@ export function updateDangers(game,dt){
  for(const d of game.dangers){d.life-=dt;if(d.delay>0){d.delay-=dt;continue;}const oldBottom=d.y+d.h;d.vy+=(d.gravity||0)*dt;d.x+=d.vx*dt;d.y+=d.vy*dt;
   if(d.kind==='burst'&&!d.exploded&&d.y>=196){d.exploded=true;d.y=184;d.x-=12;d.w=32;d.h=24;d.vx=0;d.vy=0;d.gravity=0;d.delay=.7;d.life=1.3;}
   if(d.exploded&&d.delay>0)continue;
+  if(d.aquatic&&!(game.level.water||[]).some(w=>overlap(d,w))){d.life=0;continue;}
   if(overlap(game.p,d)){game.damage();d.life=0;}
   if(!['wave','sweep','burst'].includes(d.kind)&&game.solids().some(s=>(!s.oneWay||(d.vy>=0&&oldBottom<=s.y+.1))&&overlap(d,s)))d.life=0;
  }

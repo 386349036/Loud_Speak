@@ -1,0 +1,68 @@
+{
+  "applied": true,
+  "results": [
+    {
+      "level": "2-2",
+      "fixes": [
+        {
+          "id": 0,
+          "kind": "walnut",
+          "before": {
+            "x": 306,
+            "y": 194,
+            "patrolLeft": 258,
+            "patrolRight": 320
+          },
+          "after": {
+            "x": 256,
+            "y": 194,
+            "patrolLeft": 208,
+            "patrolRight": 318
+          }
+        }
+      ]
+    },
+    {
+      "level": "8-1",
+      "fixes": [
+        {
+          "id": 0,
+          "kind": "walnut",
+          "before": {
+            "x": 322,
+            "y": 194,
+            "patrolLeft": 274,
+            "patrolRight": 336
+          },
+          "after": {
+            "x": 256,
+            "y": 194,
+            "patrolLeft": 208,
+            "patrolRight": 318
+          }
+        }
+      ]
+    },
+    {
+      "level": "8-3",
+      "fixes": [
+        {
+          "id": 1,
+          "kind": "corn",
+          "before": {
+            "x": 722,
+            "y": 194,
+            "patrolLeft": 674,
+            "patrolRight": 736
+          },
+          "after": {
+            "x": 688,
+            "y": 194,
+            "patrolLeft": 640,
+            "patrolRight": 736
+          }
+        }
+      ]
+    }
+  ]
+}

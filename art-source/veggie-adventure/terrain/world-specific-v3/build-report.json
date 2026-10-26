@@ -1,0 +1,351 @@
+{
+  "version": 3,
+  "size": 48,
+  "method": "8 independent built-in image_gen biome atlases; nearest-neighbor slicing; four-pixel shared seam bands; opaque aligned walking rim; source PNGs retained",
+  "worlds": [
+    {
+      "id": "W01",
+      "name": "苔林",
+      "source": "W01-generated.png",
+      "sourceWidth": 1254,
+      "sourceHeight": 1254,
+      "sourceSha256": "d34c5b96499c966b1586b110a03ee0010bf9fe609469d351ca526f22c09447f1",
+      "prompt": "Use case: stylized-concept. Asset type: a production 2D side-view platformer terrain tileset atlas. Create one square image divided EXACTLY at its horizontal and vertical midlines into four equally sized square texture tiles, no borders, gutters, labels, frames or margins. Top-left and top-right: two close variants of the biome's surface soil tile, each completely opaque and filled edge-to-edge; a thin flat walkable turf/moss fringe runs along the tile's TOP edge, taking about 1/8 tile height, earthy material fills the remaining 7/8. Bottom-left and bottom-right: two close variants of the biome's FOUNDATION tile; fill the whole square with continuous mineral/stone material, with no grass cap and no external silhouette. Each top tile's bottom boundary should join the foundation directly under it; each individual tile must repeat seamlessly LEFT to RIGHT, and the foundation must also repeat TOP to BOTTOM. Treat the center midlines as tile cuts, not drawn lines. Style: polished 32-bit-era 2D pixel art for a cheerful original vegetable adventure, chunky carefully placed pixel clusters, approximately 48x48 logical pixels per tile enlarged nearest-neighbor. Flat orthographic FRONT elevation, diffuse upper-left lighting, broad readable material shapes and subdued texture contrast. No perspective, isometric view, 3D block edges, drop shadows outside tiles, floating blocks, transparency, backgrounds, characters, enemies, interface, numbers, letters, captions or watermarks. All four quadrants must be material textures filling their full bounds. Distinct geometry/material for this world rather than recoloring a grass-dirt master. Biome specification: MOSSY FOREST: living lime and deep emerald short moss fringe, fine interwoven brown rootlets in warm amber sandy soil with tiny pebbles. Foundation: dark weathered sandstone rubble, rounded granular inclusions, thin roots disappearing into a warm ochre mineral matrix. Organic irregular structure.",
+      "tiles": [
+        {
+          "id": "W01-kit-0",
+          "path": "terrain/world-specific-v3/W01-kit-0.png",
+          "cell": 0,
+          "kind": "surface-soil",
+          "variant": "a",
+          "sha256": "32144f48911ccc5233258c24f589f888a70789fd6a10a2f8323fd32648509e79"
+        },
+        {
+          "id": "W01-kit-0b",
+          "path": "terrain/world-specific-v3/W01-kit-0b.png",
+          "cell": 1,
+          "kind": "surface-soil",
+          "variant": "b",
+          "sha256": "609ed3bb1567277cb987cc665643cc19e5eda0d1665270c666cf5d72a881ccb3"
+        },
+        {
+          "id": "W01-kit-1",
+          "path": "terrain/world-specific-v3/W01-kit-1.png",
+          "cell": 2,
+          "kind": "foundation",
+          "variant": "a",
+          "sha256": "e1426c2725b61b935bdc7a5f2402a75d100b3f8ffefca2ac11aebc6cf7146ae4"
+        },
+        {
+          "id": "W01-kit-1b",
+          "path": "terrain/world-specific-v3/W01-kit-1b.png",
+          "cell": 3,
+          "kind": "foundation",
+          "variant": "b",
+          "sha256": "1011a5386d409b14cc884c6ce38dca6e58b7363c4d370e1c1830058b5e32e5c2"
+        }
+      ]
+    },
+    {
+      "id": "W02",
+      "name": "根下矿洞",
+      "source": "W02-generated.png",
+      "sourceWidth": 1254,
+      "sourceHeight": 1254,
+      "sourceSha256": "d520cb8125a223436fcff66564800a83fbab1330cbddf149e860d47e797e5961",
+      "prompt": "Use case: stylized-concept. Asset type: a production 2D side-view platformer terrain tileset atlas. Create one square image divided EXACTLY at its horizontal and vertical midlines into four equally sized square texture tiles, no borders, gutters, labels, frames or margins. Top-left and top-right: two close variants of the biome's surface soil tile, each completely opaque and filled edge-to-edge; a thin flat walkable turf/moss fringe runs along the tile's TOP edge, taking about 1/8 tile height, earthy material fills the remaining 7/8. Bottom-left and bottom-right: two close variants of the biome's FOUNDATION tile; fill the whole square with continuous mineral/stone material, with no grass cap and no external silhouette. Each top tile's bottom boundary should join the foundation directly under it; each individual tile must repeat seamlessly LEFT to RIGHT, and the foundation must also repeat TOP to BOTTOM. Treat the center midlines as tile cuts, not drawn lines. Style: polished 32-bit-era 2D pixel art for a cheerful original vegetable adventure, chunky carefully placed pixel clusters, approximately 48x48 logical pixels per tile enlarged nearest-neighbor. Flat orthographic FRONT elevation, diffuse upper-left lighting, broad readable material shapes and subdued texture contrast. No perspective, isometric view, 3D block edges, drop shadows outside tiles, floating blocks, transparency, backgrounds, characters, enemies, interface, numbers, letters, captions or watermarks. All four quadrants must be material textures filling their full bounds. Distinct geometry/material for this world rather than recoloring a grass-dirt master. Biome specification: ROOT MINE: sparse dry olive moss fringe above compact ochre clay, dangling fibrous roots and broken slate chips. Foundation: interlocking large angular charcoal slate strata with a few muted teal mineral crystals embedded flush, layered geology and dark clay veins. Clearly mineral angular structure, not generic brown dirt.",
+      "tiles": [
+        {
+          "id": "W02-kit-0",
+          "path": "terrain/world-specific-v3/W02-kit-0.png",
+          "cell": 0,
+          "kind": "surface-soil",
+          "variant": "a",
+          "sha256": "9551bc05e64ea6eb909e7025585e3d6ee28cf9e81a3b0464bd4a036347f7f777"
+        },
+        {
+          "id": "W02-kit-0b",
+          "path": "terrain/world-specific-v3/W02-kit-0b.png",
+          "cell": 1,
+          "kind": "surface-soil",
+          "variant": "b",
+          "sha256": "1dd9fe3746e21593838f1d2ab472c1562c73cec9a246e08c5a85399045b52a21"
+        },
+        {
+          "id": "W02-kit-1",
+          "path": "terrain/world-specific-v3/W02-kit-1.png",
+          "cell": 2,
+          "kind": "foundation",
+          "variant": "a",
+          "sha256": "eb454380a32911901ee51ff94751e0fdf0e2a75b4cc5ec3a571500e966ba23d3"
+        },
+        {
+          "id": "W02-kit-1b",
+          "path": "terrain/world-specific-v3/W02-kit-1b.png",
+          "cell": 3,
+          "kind": "foundation",
+          "variant": "b",
+          "sha256": "36a3071ce63af910b8db2219a743f3e27b457a41e635c88f0b1f1705e69aa50f"
+        }
+      ]
+    },
+    {
+      "id": "W03",
+      "name": "藤架云路",
+      "source": "W03-generated.png",
+      "sourceWidth": 1254,
+      "sourceHeight": 1254,
+      "sourceSha256": "43312344998eadf6f280bf094b8be5b7b32a1c524b3cbaf6b9833962b4b3d5cf",
+      "prompt": "Use case: stylized-concept. Asset type: a production 2D side-view platformer terrain tileset atlas. Create one square image divided EXACTLY at its horizontal and vertical midlines into four equally sized square texture tiles, no borders, gutters, labels, frames or margins. Top-left and top-right: two close variants of the biome's surface soil tile, each completely opaque and filled edge-to-edge; a thin flat walkable turf/moss fringe runs along the tile's TOP edge, taking about 1/8 tile height, earthy material fills the remaining 7/8. Bottom-left and bottom-right: two close variants of the biome's FOUNDATION tile; fill the whole square with continuous mineral/stone material, with no grass cap and no external silhouette. Each top tile's bottom boundary should join the foundation directly under it; each individual tile must repeat seamlessly LEFT to RIGHT, and the foundation must also repeat TOP to BOTTOM. Treat the center midlines as tile cuts, not drawn lines. Style: polished 32-bit-era 2D pixel art for a cheerful original vegetable adventure, chunky carefully placed pixel clusters, approximately 48x48 logical pixels per tile enlarged nearest-neighbor. Flat orthographic FRONT elevation, diffuse upper-left lighting, broad readable material shapes and subdued texture contrast. No perspective, isometric view, 3D block edges, drop shadows outside tiles, floating blocks, transparency, backgrounds, characters, enemies, interface, numbers, letters, captions or watermarks. All four quadrants must be material textures filling their full bounds. Distinct geometry/material for this world rather than recoloring a grass-dirt master. Biome specification: VINE SKYWAY: dense fresh green creeping vine fringe and intertwining thick cinnamon roots across pale sandy loam. Foundation: light honey porous pumice and pale limestone aggregate held by tangled curving roots, airy round holes and strongly woven root shapes. Warm pale foundation, no clouds or sky.",
+      "tiles": [
+        {
+          "id": "W03-kit-0",
+          "path": "terrain/world-specific-v3/W03-kit-0.png",
+          "cell": 0,
+          "kind": "surface-soil",
+          "variant": "a",
+          "sha256": "42b88db7a16846846b51bdbbbeb8e812c4eee12bd572568f3d61ab56eca494de"
+        },
+        {
+          "id": "W03-kit-0b",
+          "path": "terrain/world-specific-v3/W03-kit-0b.png",
+          "cell": 1,
+          "kind": "surface-soil",
+          "variant": "b",
+          "sha256": "a0b17140f3219665a5554332514660941897766507b653415673c45fc73a92e5"
+        },
+        {
+          "id": "W03-kit-1",
+          "path": "terrain/world-specific-v3/W03-kit-1.png",
+          "cell": 2,
+          "kind": "foundation",
+          "variant": "a",
+          "sha256": "52bf519afad90db1823c43dfe68a2c8e69a38e123e2d5eb8cb3868c449cf7312"
+        },
+        {
+          "id": "W03-kit-1b",
+          "path": "terrain/world-specific-v3/W03-kit-1b.png",
+          "cell": 3,
+          "kind": "foundation",
+          "variant": "b",
+          "sha256": "3fb56efe6dd3c1a1451b747025b31d60c221cb64098fecf162b8bb810d9f8654"
+        }
+      ]
+    },
+    {
+      "id": "W04",
+      "name": "莲池花房",
+      "source": "W04-generated.png",
+      "sourceWidth": 1254,
+      "sourceHeight": 1254,
+      "sourceSha256": "bbdfbbcf0f560ac35adb7bba09e61c9e65776b1ff9b58a19cbc69a14dd8cbff2",
+      "prompt": "Use case: stylized-concept. Asset type: a production 2D side-view platformer terrain tileset atlas. Create one square image divided EXACTLY at its horizontal and vertical midlines into four equally sized square texture tiles, no borders, gutters, labels, frames or margins. Top-left and top-right: two close variants of the biome's surface soil tile, each completely opaque and filled edge-to-edge; a thin flat walkable turf/moss fringe runs along the tile's TOP edge, taking about 1/8 tile height, earthy material fills the remaining 7/8. Bottom-left and bottom-right: two close variants of the biome's FOUNDATION tile; fill the whole square with continuous mineral/stone material, with no grass cap and no external silhouette. Each top tile's bottom boundary should join the foundation directly under it; each individual tile must repeat seamlessly LEFT to RIGHT, and the foundation must also repeat TOP to BOTTOM. Treat the center midlines as tile cuts, not drawn lines. Style: polished 32-bit-era 2D pixel art for a cheerful original vegetable adventure, chunky carefully placed pixel clusters, approximately 48x48 logical pixels per tile enlarged nearest-neighbor. Flat orthographic FRONT elevation, diffuse upper-left lighting, broad readable material shapes and subdued texture contrast. No perspective, isometric view, 3D block edges, drop shadows outside tiles, floating blocks, transparency, backgrounds, characters, enemies, interface, numbers, letters, captions or watermarks. All four quadrants must be material textures filling their full bounds. Distinct geometry/material for this world rather than recoloring a grass-dirt master. Biome specification: LOTUS POND: short teal sedge and wet moss rim, saturated blue-brown muddy silt with fine reed roots. Foundation: rounded smooth river cobbles in cool green-gray wet mud, small dark algae patches and subdued aquatic root strands. Strong rounded cobble structure; no waterline, water surface or translucent pixels.",
+      "tiles": [
+        {
+          "id": "W04-kit-0",
+          "path": "terrain/world-specific-v3/W04-kit-0.png",
+          "cell": 0,
+          "kind": "surface-soil",
+          "variant": "a",
+          "sha256": "70b73362f6534fdb8280097428538d90c87262ccc7dc5249cc43ab3a46a434f8"
+        },
+        {
+          "id": "W04-kit-0b",
+          "path": "terrain/world-specific-v3/W04-kit-0b.png",
+          "cell": 1,
+          "kind": "surface-soil",
+          "variant": "b",
+          "sha256": "9fe25b7c0a2953f6e799c51e366a0a422a8c6e834108a3d0c9b22989649d0218"
+        },
+        {
+          "id": "W04-kit-1",
+          "path": "terrain/world-specific-v3/W04-kit-1.png",
+          "cell": 2,
+          "kind": "foundation",
+          "variant": "a",
+          "sha256": "ca2ef6912386b4ffc31d2b8438acc0a6acffa9aac35077761c4eca14139064c4"
+        },
+        {
+          "id": "W04-kit-1b",
+          "path": "terrain/world-specific-v3/W04-kit-1b.png",
+          "cell": 3,
+          "kind": "foundation",
+          "variant": "b",
+          "sha256": "fd0a453cbb2fa9d99c55024ecca4cd038892fe955c032f6ab721e22d57a75004"
+        }
+      ]
+    },
+    {
+      "id": "W05",
+      "name": "刺栗果园",
+      "source": "W05-generated.png",
+      "sourceWidth": 1254,
+      "sourceHeight": 1254,
+      "sourceSha256": "e2581c0050152e38641ca9821aa35dd80c84ea429a2c53e5508dae7502b41f99",
+      "prompt": "Use case: stylized-concept. Asset type: a production 2D side-view platformer terrain tileset atlas. Create one square image divided EXACTLY at its horizontal and vertical midlines into four equally sized square texture tiles, no borders, gutters, labels, frames or margins. Top-left and top-right: two close variants of the biome's surface soil tile, each completely opaque and filled edge-to-edge; a thin flat walkable turf/moss fringe runs along the tile's TOP edge, taking about 1/8 tile height, earthy material fills the remaining 7/8. Bottom-left and bottom-right: two close variants of the biome's FOUNDATION tile; fill the whole square with continuous mineral/stone material, with no grass cap and no external silhouette. Each top tile's bottom boundary should join the foundation directly under it; each individual tile must repeat seamlessly LEFT to RIGHT, and the foundation must also repeat TOP to BOTTOM. Treat the center midlines as tile cuts, not drawn lines. Style: polished 32-bit-era 2D pixel art for a cheerful original vegetable adventure, chunky carefully placed pixel clusters, approximately 48x48 logical pixels per tile enlarged nearest-neighbor. Flat orthographic FRONT elevation, diffuse upper-left lighting, broad readable material shapes and subdued texture contrast. No perspective, isometric view, 3D block edges, drop shadows outside tiles, floating blocks, transparency, backgrounds, characters, enemies, interface, numbers, letters, captions or watermarks. All four quadrants must be material textures filling their full bounds. Distinct geometry/material for this world rather than recoloring a grass-dirt master. Biome specification: CHESTNUT ORCHARD: dark olive turf with tiny burgundy fallen leaf fragments, red-brown rich humus and branching stout orchard roots. Foundation: densely packed dark red earthy conglomerate, chestnut-colored pebbles, broken root cross sections, reddish coarse rock aggregate. Rich autumn material structure, no spikes or harmful-looking thorns.",
+      "tiles": [
+        {
+          "id": "W05-kit-0",
+          "path": "terrain/world-specific-v3/W05-kit-0.png",
+          "cell": 0,
+          "kind": "surface-soil",
+          "variant": "a",
+          "sha256": "42fb5aa760f0656df615a619d8f03294dbad0e1e0767ad72cf8efbb349224c3e"
+        },
+        {
+          "id": "W05-kit-0b",
+          "path": "terrain/world-specific-v3/W05-kit-0b.png",
+          "cell": 1,
+          "kind": "surface-soil",
+          "variant": "b",
+          "sha256": "73c7715b5dea0d15a36ab9979ba059f1b04fc16a7cce4d69a0ed6a6049e84f66"
+        },
+        {
+          "id": "W05-kit-1",
+          "path": "terrain/world-specific-v3/W05-kit-1.png",
+          "cell": 2,
+          "kind": "foundation",
+          "variant": "a",
+          "sha256": "fc7c448536f1f62dca9314f1ba0a66cf95578c69def861c4a6d839d54c042b1f"
+        },
+        {
+          "id": "W05-kit-1b",
+          "path": "terrain/world-specific-v3/W05-kit-1b.png",
+          "cell": 3,
+          "kind": "foundation",
+          "variant": "b",
+          "sha256": "88969730459745380e6882bcf682a4496a54954ec1e70fffdfacea485fe0b428"
+        }
+      ]
+    },
+    {
+      "id": "W06",
+      "name": "辣椒作坊",
+      "source": "W06-generated.png",
+      "sourceWidth": 1254,
+      "sourceHeight": 1254,
+      "sourceSha256": "bb1e0f6e698666a7b5070d79ea2c233d9f838300c8502fb4d533574190011616",
+      "prompt": "Use case: stylized-concept. Asset type: a production 2D side-view platformer terrain tileset atlas. Create one square image divided EXACTLY at its horizontal and vertical midlines into four equally sized square texture tiles, no borders, gutters, labels, frames or margins. Top-left and top-right: two close variants of the biome's surface soil tile, each completely opaque and filled edge-to-edge; a thin flat walkable turf/moss fringe runs along the tile's TOP edge, taking about 1/8 tile height, earthy material fills the remaining 7/8. Bottom-left and bottom-right: two close variants of the biome's FOUNDATION tile; fill the whole square with continuous mineral/stone material, with no grass cap and no external silhouette. Each top tile's bottom boundary should join the foundation directly under it; each individual tile must repeat seamlessly LEFT to RIGHT, and the foundation must also repeat TOP to BOTTOM. Treat the center midlines as tile cuts, not drawn lines. Style: polished 32-bit-era 2D pixel art for a cheerful original vegetable adventure, chunky carefully placed pixel clusters, approximately 48x48 logical pixels per tile enlarged nearest-neighbor. Flat orthographic FRONT elevation, diffuse upper-left lighting, broad readable material shapes and subdued texture contrast. No perspective, isometric view, 3D block edges, drop shadows outside tiles, floating blocks, transparency, backgrounds, characters, enemies, interface, numbers, letters, captions or watermarks. All four quadrants must be material textures filling their full bounds. Distinct geometry/material for this world rather than recoloring a grass-dirt master. Biome specification: CHILI WORKSHOP: dull dry olive moss rim above burnt sienna compact soil, ash flecks and fine soot seams. Foundation: tightly interlocking rectangular dark terracotta refractory kiln bricks, charcoal mortar seams exactly filled, restrained copper oxide stains and a few rivet-like mineral inclusions. Strong regular masonry shape, cool unlit surface, absolutely no flame, lava, hot glowing fissures or red warning glow.",
+      "tiles": [
+        {
+          "id": "W06-kit-0",
+          "path": "terrain/world-specific-v3/W06-kit-0.png",
+          "cell": 0,
+          "kind": "surface-soil",
+          "variant": "a",
+          "sha256": "c4d45c8bfd055913d4e3d941b8452f8ab08b08d4dcb147ac4e2d11b512c1e9b2"
+        },
+        {
+          "id": "W06-kit-0b",
+          "path": "terrain/world-specific-v3/W06-kit-0b.png",
+          "cell": 1,
+          "kind": "surface-soil",
+          "variant": "b",
+          "sha256": "ce0144460b9fe62d9bc6356c7189c435994dfe3d534898cd96ed79e03fb6fd6a"
+        },
+        {
+          "id": "W06-kit-1",
+          "path": "terrain/world-specific-v3/W06-kit-1.png",
+          "cell": 2,
+          "kind": "foundation",
+          "variant": "a",
+          "sha256": "878fdb8376935f59601ca624a136308d4788e98b2c047ab03ff95738eae6e271"
+        },
+        {
+          "id": "W06-kit-1b",
+          "path": "terrain/world-specific-v3/W06-kit-1b.png",
+          "cell": 3,
+          "kind": "foundation",
+          "variant": "b",
+          "sha256": "6b3e8e74cacc5576c85873c0d7919e81c2ad18ffbb1f1d7a7d5d9c45b4e78c6f"
+        }
+      ]
+    },
+    {
+      "id": "W07",
+      "name": "月夜藤园",
+      "source": "W07-generated.png",
+      "sourceWidth": 1254,
+      "sourceHeight": 1254,
+      "sourceSha256": "30e221c6c0e825418040ffcd80bf8f4d43e932d0cbd2e8ec5b4f4bad6f48973d",
+      "prompt": "Use case: stylized-concept. Asset type: a production 2D side-view platformer terrain tileset atlas. Create one square image divided EXACTLY at its horizontal and vertical midlines into four equally sized square texture tiles, no borders, gutters, labels, frames or margins. Top-left and top-right: two close variants of the biome's surface soil tile, each completely opaque and filled edge-to-edge; a thin flat walkable turf/moss fringe runs along the tile's TOP edge, taking about 1/8 tile height, earthy material fills the remaining 7/8. Bottom-left and bottom-right: two close variants of the biome's FOUNDATION tile; fill the whole square with continuous mineral/stone material, with no grass cap and no external silhouette. Each top tile's bottom boundary should join the foundation directly under it; each individual tile must repeat seamlessly LEFT to RIGHT, and the foundation must also repeat TOP to BOTTOM. Treat the center midlines as tile cuts, not drawn lines. Style: polished 32-bit-era 2D pixel art for a cheerful original vegetable adventure, chunky carefully placed pixel clusters, approximately 48x48 logical pixels per tile enlarged nearest-neighbor. Flat orthographic FRONT elevation, diffuse upper-left lighting, broad readable material shapes and subdued texture contrast. No perspective, isometric view, 3D block edges, drop shadows outside tiles, floating blocks, transparency, backgrounds, characters, enemies, interface, numbers, letters, captions or watermarks. All four quadrants must be material textures filling their full bounds. Distinct geometry/material for this world rather than recoloring a grass-dirt master. Biome specification: MOONLIT VINE GARDEN: cool blue-green moss rim, purplish indigo clay with silvery slender vine roots. Foundation: irregular broad violet-blue basalt pieces and thin pale limestone mineral veins, muted silver lichen flecks. Readable restrained moonlit palette, no sparkling collectibles, no light bloom, no black silhouettes.",
+      "tiles": [
+        {
+          "id": "W07-kit-0",
+          "path": "terrain/world-specific-v3/W07-kit-0.png",
+          "cell": 0,
+          "kind": "surface-soil",
+          "variant": "a",
+          "sha256": "c5c834df72ee21e82c624871542fa7514671488ce52bb15a0651ec51ade2631d"
+        },
+        {
+          "id": "W07-kit-0b",
+          "path": "terrain/world-specific-v3/W07-kit-0b.png",
+          "cell": 1,
+          "kind": "surface-soil",
+          "variant": "b",
+          "sha256": "ec9a175c268f469b866d079a62496622246d1e8a7b5cfe5e9b924041f7abad82"
+        },
+        {
+          "id": "W07-kit-1",
+          "path": "terrain/world-specific-v3/W07-kit-1.png",
+          "cell": 2,
+          "kind": "foundation",
+          "variant": "a",
+          "sha256": "2c99e50dc10a4fcf1b519c87f9eae7946f8e883a35bd8201cfd50ad028062400"
+        },
+        {
+          "id": "W07-kit-1b",
+          "path": "terrain/world-specific-v3/W07-kit-1b.png",
+          "cell": 3,
+          "kind": "foundation",
+          "variant": "b",
+          "sha256": "c547fbfab706e02b64b893afaa600ba8dd617d4971b8e6f0d424ec2dfd16e683"
+        }
+      ]
+    },
+    {
+      "id": "W08",
+      "name": "石榴王庭",
+      "source": "W08-generated.png",
+      "sourceWidth": 1254,
+      "sourceHeight": 1254,
+      "sourceSha256": "6ea799db3955f319fe213e3e5005e6596e95925fcb0f7974cd28f4b6f6852f1d",
+      "prompt": "Use case: stylized-concept. Asset type: a production 2D side-view platformer terrain tileset atlas. Create one square image divided EXACTLY at its horizontal and vertical midlines into four equally sized square texture tiles, no borders, gutters, labels, frames or margins. Top-left and top-right: two close variants of the biome's surface soil tile, each completely opaque and filled edge-to-edge; a thin flat walkable turf/moss fringe runs along the tile's TOP edge, taking about 1/8 tile height, earthy material fills the remaining 7/8. Bottom-left and bottom-right: two close variants of the biome's FOUNDATION tile; fill the whole square with continuous mineral/stone material, with no grass cap and no external silhouette. Each top tile's bottom boundary should join the foundation directly under it; each individual tile must repeat seamlessly LEFT to RIGHT, and the foundation must also repeat TOP to BOTTOM. Treat the center midlines as tile cuts, not drawn lines. Style: polished 32-bit-era 2D pixel art for a cheerful original vegetable adventure, chunky carefully placed pixel clusters, approximately 48x48 logical pixels per tile enlarged nearest-neighbor. Flat orthographic FRONT elevation, diffuse upper-left lighting, broad readable material shapes and subdued texture contrast. No perspective, isometric view, 3D block edges, drop shadows outside tiles, floating blocks, transparency, backgrounds, characters, enemies, interface, numbers, letters, captions or watermarks. All four quadrants must be material textures filling their full bounds. Distinct geometry/material for this world rather than recoloring a grass-dirt master. Biome specification: POMEGRANATE CITADEL: neat dark emerald moss and fine burgundy root fringe over compact muted wine-brown garden earth. Foundation: carefully cut broad desaturated burgundy and warm gray castle ashlar blocks with close joints, worn beveled faces and small pale sandstone chips. Regal geometric masonry with subtle natural roots; no emblems, coins, gems, glowing marks, text or gold reward-like objects.",
+      "tiles": [
+        {
+          "id": "W08-kit-0",
+          "path": "terrain/world-specific-v3/W08-kit-0.png",
+          "cell": 0,
+          "kind": "surface-soil",
+          "variant": "a",
+          "sha256": "81182e0b43a48e1e21cbfa87803e36ef16e0508b0a0e875b186b64af96a288db"
+        },
+        {
+          "id": "W08-kit-0b",
+          "path": "terrain/world-specific-v3/W08-kit-0b.png",
+          "cell": 1,
+          "kind": "surface-soil",
+          "variant": "b",
+          "sha256": "131313ddc64e5820113b1450f240b08f771ecf4096c9ff244367a9b37a5f0961"
+        },
+        {
+          "id": "W08-kit-1",
+          "path": "terrain/world-specific-v3/W08-kit-1.png",
+          "cell": 2,
+          "kind": "foundation",
+          "variant": "a",
+          "sha256": "7b56ac2d6e92adf75b1ca1ad672e3ad77df47ffe4cb8ad105eee55b7ec83b7ca"
+        },
+        {
+          "id": "W08-kit-1b",
+          "path": "terrain/world-specific-v3/W08-kit-1b.png",
+          "cell": 3,
+          "kind": "foundation",
+          "variant": "b",
+          "sha256": "8e2a21d7373396d23822da5b6452fdb4886f214f4f13d8394551ed564a1a8984"
+        }
+      ]
+    }
+  ]
+}

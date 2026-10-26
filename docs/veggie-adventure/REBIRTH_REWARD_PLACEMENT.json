@@ -1,0 +1,125 @@
+{
+  "scope": "one additional +1 block at each world opening stage; existing terrain and upgrades preserved",
+  "levels": [
+    {
+      "id": "1-1",
+      "block": {
+        "x": 112,
+        "y": 144,
+        "w": 16,
+        "h": 16,
+        "kind": "brick",
+        "breakable": true,
+        "item": "rebirth",
+        "rewardId": "1-1"
+      },
+      "oldLayout": 1,
+      "layoutVersion": 2
+    },
+    {
+      "id": "2-1",
+      "block": {
+        "x": 112,
+        "y": 144,
+        "w": 16,
+        "h": 16,
+        "kind": "brick",
+        "breakable": true,
+        "item": "rebirth",
+        "rewardId": "2-1"
+      },
+      "oldLayout": 2,
+      "layoutVersion": 3
+    },
+    {
+      "id": "3-1",
+      "block": {
+        "x": 112,
+        "y": 144,
+        "w": 16,
+        "h": 16,
+        "kind": "brick",
+        "breakable": true,
+        "item": "rebirth",
+        "rewardId": "3-1"
+      },
+      "oldLayout": 2,
+      "layoutVersion": 3
+    },
+    {
+      "id": "4-1",
+      "block": {
+        "x": 112,
+        "y": 144,
+        "w": 16,
+        "h": 16,
+        "kind": "brick",
+        "breakable": true,
+        "item": "rebirth",
+        "rewardId": "4-1"
+      },
+      "oldLayout": 3,
+      "layoutVersion": 4
+    },
+    {
+      "id": "5-1",
+      "block": {
+        "x": 112,
+        "y": 144,
+        "w": 16,
+        "h": 16,
+        "kind": "brick",
+        "breakable": true,
+        "item": "rebirth",
+        "rewardId": "5-1"
+      },
+      "oldLayout": 2,
+      "layoutVersion": 3
+    },
+    {
+      "id": "6-1",
+      "block": {
+        "x": 112,
+        "y": 144,
+        "w": 16,
+        "h": 16,
+        "kind": "brick",
+        "breakable": true,
+        "item": "rebirth",
+        "rewardId": "6-1"
+      },
+      "oldLayout": 2,
+      "layoutVersion": 3
+    },
+    {
+      "id": "7-1",
+      "block": {
+        "x": 112,
+        "y": 144,
+        "w": 16,
+        "h": 16,
+        "kind": "brick",
+        "breakable": true,
+        "item": "rebirth",
+        "rewardId": "7-1"
+      },
+      "oldLayout": 2,
+      "layoutVersion": 3
+    },
+    {
+      "id": "8-1",
+      "block": {
+        "x": 112,
+        "y": 144,
+        "w": 16,
+        "h": 16,
+        "kind": "brick",
+        "breakable": true,
+        "item": "rebirth",
+        "rewardId": "8-1"
+      },
+      "oldLayout": 2,
+      "layoutVersion": 3
+    }
+  ]
+}

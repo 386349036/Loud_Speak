@@ -4,9 +4,11 @@ const fs=require('node:fs'),path=require('node:path'),sharp=require('sharp');
 const root=path.resolve(__dirname,'../..'),art=path.join(root,'art-source/veggie-adventure'),out=path.join(root,'public/games/veggie-adventure/assets');
 async function main(){
  const manifest=JSON.parse(fs.readFileSync(path.join(out,'manifest.json')));
- manifest.assets=manifest.assets.filter(a=>!a.campaign);
+ const protectedTiles=new Set(manifest.assets.filter(a=>['seamless-runtime-v2','world-terrain-runtime-v3'].includes(a.stage)).map(a=>a.id));
+ manifest.assets=manifest.assets.filter(a=>!a.campaign||protectedTiles.has(a.id));
  const add=a=>manifest.assets.push({...a,campaign:true,stage:'temporary-key-pose-runtime',visualVerified:false});
  async function slice(a,cols,rows,n,id,w,h,fill=false){
+  if(protectedTiles.has(id))return;
   const source=path.join(art,a.path),{data,info}=await sharp(source).ensureAlpha().raw().toBuffer({resolveWithObject:true});
   const cw=Math.floor(info.width/cols),ch=Math.floor(info.height/rows),ox=n%cols*cw,oy=Math.floor(n/cols)*ch;
   let x0=cw,y0=ch,x1=-1,y1=-1;for(let y=0;y<ch;y++)for(let x=0;x<cw;x++)if(data[((oy+y)*info.width+ox+x)*4+3]>40){x0=Math.min(x0,x);x1=Math.max(x1,x);y0=Math.min(y0,y);y1=Math.max(y1,y);}

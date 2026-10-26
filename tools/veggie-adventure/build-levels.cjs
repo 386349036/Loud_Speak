@@ -1,3 +1,5 @@
+(async()=>{
+const {BOSS_HEALTH,BOSS_BALANCE_VERSION}=await import('../../public/games/veggie-adventure/js/core/boss-balance.mjs');
 // Authored encounter plans. Generated modules are committed as readable level data.
 const fs=require('node:fs'),path=require('node:path');
 const root=path.resolve(__dirname,'../..'),dir=path.join(root,'public/games/veggie-adventure/levels');
@@ -37,6 +39,8 @@ for(const meta of plan){
  index.push(`import l${world}${stage} from './${wd}/level-${meta.id}.mjs';`);
  // Preserve the hand-authored introduction and experimental first boss level.
  if(['1-1','1-4'].includes(meta.id))continue;
+ // Preserve reviewed campaign extensions instead of replacing them with old short templates.
+ if(fs.existsSync(file)&&fs.readFileSync(file,'utf8').includes('"reworkVersion": 1'))continue;
  const boss=stage===4,design=designs[meta.id]||{},width=boss?1792:1536;
  const level={id:meta.id,name:meta.name,focus:meta.focus,world,stage,width,height:240,timeLimit:boss?420:360,spawn:{x:32,y:180},exit:width-48,checkpoint:boss?width-384:720,background:meta.background,mid:meta.mid,terrain:meta.terrain,platforms:[],blocks:[],enemies:[],items:[],movers:[],hazards:[],water:[],turrets:[],gates:[],boss:null};
  let cursor=0;for(const [x,gap] of design.gaps||[]){level.platforms.push(box(cursor,208,x-cursor,32));cursor=x+gap;}level.platforms.push(box(cursor,208,width-cursor,32));
@@ -59,7 +63,7 @@ for(const meta of plan){
  for(let x=128;x<width-128;x+=112){if(!(design.gaps||[]).some(([a,b])=>x>=a&&x<a+b))level.items.push({...box(x,176,10,12),kind:'seed',collected:false});}
  if(boss){
   const left=width-288,right=width-80;
-  level.boss={id:'B0'+world,kind:world,name:bossNames[world-1],x:left+128,y:176,w:32,h:32,left,right,hp:3,phase:'idle',timer:0,cycle:0,hits:0,invulnerable:0,active:false,dead:false};
+  level.boss={id:'B0'+world,kind:world,name:bossNames[world-1],x:left+128,y:176,w:32,h:32,left,right,hp:BOSS_HEALTH[world-1],maxHp:BOSS_HEALTH[world-1],balanceVersion:BOSS_BALANCE_VERSION,phase:'idle',timer:0,cycle:0,hits:0,invulnerable:0,active:false,dead:false};
   level.platforms.push(box(left+48,192,32,16),box(right-32,192,32,16));
   const approach=432+world*32;level.platforms.push(box(approach,192,32,16),box(approach+32,176,48,32));
   level.enemies=[enemy(320,world===1?'mushroom':world===2?'walnut':world===3?'corn':world===4?'leaper':world===5?'spike':world===6?'trap':world===7?'winged':'walnut',0),enemy(864,'cabbage',1)];
@@ -75,3 +79,5 @@ for(const meta of plan){
 fs.writeFileSync(path.join(dir,'catalog.mjs'),index.join('\n')+`\nexport const LEVELS=[${plan.map(m=>'l'+m.id.replace('-','')).join(',')}];\nexport const levelById=id=>LEVELS.find(l=>l.id===id);\nexport const nextLevel=id=>LEVELS[LEVELS.findIndex(l=>l.id===id)+1]||null;\n`);
 console.log('30 generated level modules + ordered 32-level catalog; authored 1-1 and 1-4 preserved.');
 import('./normalize-feedback-levels.mjs').catch(error=>{console.error(error);process.exitCode=1;});
+
+})().catch(error=>{console.error(error);process.exitCode=1;});

@@ -1,0 +1,189 @@
+{
+  "source": "https://www.flowmusic.app/playlist/6e7faf27-ae4a-4895-8488-64785e0f8c03",
+  "title": "蔬菜花园冒险 - 游戏原声带 (OST)",
+  "creator": "hk61023",
+  "trackCount": 19,
+  "status": "awaiting-owner-login-for-official-download",
+  "downloaded": 0,
+  "tracks": [
+    {
+      "title": "W06_workshop_v1",
+      "url": "https://www.flowmusic.app/song/0b7ee3d7-700e-42f6-9723-a64192e8e2a1",
+      "downloaded": false,
+      "id": "W06",
+      "category": "world",
+      "intendedUse": "世界6探索",
+      "localFile": null
+    },
+    {
+      "title": "B03_corn_v1",
+      "url": "https://www.flowmusic.app/song/0d6afced-9ccd-4866-8ea1-c96b08cad19d",
+      "downloaded": false,
+      "id": "B03",
+      "category": "boss",
+      "intendedUse": "首领3战斗",
+      "localFile": null
+    },
+    {
+      "title": "W01_forest_v1",
+      "url": "https://www.flowmusic.app/song/1d6ebd66-86c4-4db6-93ce-1ac92380fc0f",
+      "downloaded": false,
+      "id": "W01",
+      "category": "world",
+      "intendedUse": "世界1探索",
+      "localFile": null
+    },
+    {
+      "title": "B02_onion_v1",
+      "url": "https://www.flowmusic.app/song/2daab7b2-4805-481f-85c3-e295eae8f04a",
+      "downloaded": false,
+      "id": "B02",
+      "category": "boss",
+      "intendedUse": "首领2战斗",
+      "localFile": null
+    },
+    {
+      "title": "W08_citadel_v1",
+      "url": "https://www.flowmusic.app/song/32d37d8c-58c7-423c-9aad-2712f2632786",
+      "downloaded": false,
+      "id": "W08",
+      "category": "world",
+      "intendedUse": "世界8探索",
+      "localFile": null
+    },
+    {
+      "title": "W07_moonlight_v1",
+      "url": "https://www.flowmusic.app/song/3f2bb985-ca9e-44c2-9222-73113b78a305",
+      "downloaded": false,
+      "id": "W07",
+      "category": "world",
+      "intendedUse": "世界7探索",
+      "localFile": null
+    },
+    {
+      "title": "W04_lotus_v1",
+      "url": "https://www.flowmusic.app/song/54de598b-4e3a-42e3-9672-6665c60479c4",
+      "downloaded": false,
+      "id": "W04",
+      "category": "world",
+      "intendedUse": "世界4探索",
+      "localFile": null
+    },
+    {
+      "title": "M01_title_v1",
+      "url": "https://www.flowmusic.app/song/5a08e181-c1cf-4a66-a7c2-25b94f0d3c8f",
+      "downloaded": false,
+      "id": "M01",
+      "category": "system",
+      "intendedUse": "标题画面",
+      "localFile": null
+    },
+    {
+      "title": "W05_orchard_v1",
+      "url": "https://www.flowmusic.app/song/60239985-903f-4b7c-b4e4-3125ecd41095",
+      "downloaded": false,
+      "id": "W05",
+      "category": "world",
+      "intendedUse": "世界5探索",
+      "localFile": null
+    },
+    {
+      "title": "B06_chili_v1",
+      "url": "https://www.flowmusic.app/song/637cb0d6-3fbf-406b-8ad6-d68b9176cadc",
+      "downloaded": false,
+      "id": "B06",
+      "category": "boss",
+      "intendedUse": "首领6战斗",
+      "localFile": null
+    },
+    {
+      "title": "B08_pomegranate_king_v1",
+      "url": "https://www.flowmusic.app/song/867e0f92-ab37-4a40-9c8c-650a4bbdfbba",
+      "downloaded": false,
+      "id": "B08",
+      "category": "boss",
+      "intendedUse": "首领8战斗",
+      "localFile": null
+    },
+    {
+      "title": "W02_mine_v1",
+      "url": "https://www.flowmusic.app/song/93032415-3a1d-4a0a-a350-c9754e68265d",
+      "downloaded": false,
+      "id": "W02",
+      "category": "world",
+      "intendedUse": "世界2探索",
+      "localFile": null
+    },
+    {
+      "title": "B05_durian_v1",
+      "url": "https://www.flowmusic.app/song/9525ee13-6534-45c7-b165-53d4ef289a12",
+      "downloaded": false,
+      "id": "B05",
+      "category": "boss",
+      "intendedUse": "首领5战斗",
+      "localFile": null
+    },
+    {
+      "title": "B07_grape_twins_v1",
+      "url": "https://www.flowmusic.app/song/b4c294a5-91f2-487d-a4a8-fd3046ffd924",
+      "downloaded": false,
+      "id": "B07",
+      "category": "boss",
+      "intendedUse": "首领7战斗",
+      "localFile": null
+    },
+    {
+      "title": "W03_sky_v1",
+      "url": "https://www.flowmusic.app/song/c359446e-800b-452f-a4e8-ac7174387aeb",
+      "downloaded": false,
+      "id": "W03",
+      "category": "world",
+      "intendedUse": "世界3探索",
+      "localFile": null
+    },
+    {
+      "title": "B01_pumpkin_v1",
+      "url": "https://www.flowmusic.app/song/c625c237-10d1-41fc-bcba-3c9170cddf40",
+      "downloaded": false,
+      "id": "B01",
+      "category": "boss",
+      "intendedUse": "首领1战斗",
+      "localFile": null
+    },
+    {
+      "title": "M02_invincible_v1",
+      "url": "https://www.flowmusic.app/song/d8658d9f-0e48-45ae-8afa-4c7450b6f337",
+      "downloaded": false,
+      "id": "M02",
+      "category": "system",
+      "intendedUse": "无敌状态",
+      "localFile": null
+    },
+    {
+      "title": "B04_lotus_v1",
+      "url": "https://www.flowmusic.app/song/deb8bd29-5d0a-407d-b046-5d32fc9ee892",
+      "downloaded": false,
+      "id": "B04",
+      "category": "boss",
+      "intendedUse": "首领4战斗",
+      "localFile": null
+    },
+    {
+      "title": "M03_ending_v1",
+      "url": "https://www.flowmusic.app/song/fa6090ca-b97b-4a7b-83de-3a69de313ad3",
+      "downloaded": false,
+      "id": "M03",
+      "category": "system",
+      "intendedUse": "结局",
+      "localFile": null
+    }
+  ],
+  "checkedAt": "2026-10-25T13:55:38.455Z",
+  "missingPlannedTracks": [
+    "J01_checkpoint_v1",
+    "J02_retry_v1",
+    "J03_level_clear_v1",
+    "J04_boss_clear_v1",
+    "J05_final_victory_v1"
+  ]
+}
