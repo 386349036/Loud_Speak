@@ -11,7 +11,7 @@
     "test:sinharaja": "node integrations/sinharaja/test-zh.cjs && node integrations/sinharaja/test.cjs",
     "deploy:smallscope": "node integrations/smallscope/deploy.cjs",
     "test:smallscope": "node test-smallscope-relay.cjs && node integrations/smallscope/test.cjs",
-    "test:tank": "node test-tank.cjs",
+    "test:tank": "node test-tank.cjs && node test-tank-touch.cjs",
     "test:runner": "node test-runner.cjs && node test-runner-art.cjs",
     "test:sky": "node test-sky.cjs && node test-sky-render.mjs",
     "test:airwar": "node test-airwar.cjs && node test-airwar-expansion.cjs && node test-airwar-playthrough.cjs"

@@ -1,0 +1,14 @@
+/* Same circular thumb pad / action-button language as Veggie Adventure. */
+.touch-controls{--pad-size:clamp(88px,26vw,112px);align-items:center;padding:6px max(4px,env(safe-area-inset-right)) max(8px,env(safe-area-inset-bottom)) max(4px,env(safe-area-inset-left));user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}
+.stick-group{display:grid;justify-items:center;gap:4px;flex-shrink:0}
+.stick-group small{font-size:9px;color:#7d8e6f}
+#tank-joystick{position:relative;display:grid;place-items:center;width:var(--pad-size);height:var(--pad-size);border-radius:50%;border:3px solid #9aaa7b88;background:radial-gradient(circle,#bdce9c55,#718a4920);touch-action:none;box-shadow:inset 0 2px 9px #315d4614}
+#tank-joystick::before{content:'';position:absolute;width:70%;height:70%;border:1px dashed #83986055;border-radius:50%}
+#tank-joystick.active{border-color:#b69a54;background:radial-gradient(circle,#bfd49588,#718a4933)}
+.stick-knob{position:absolute;width:40%;height:40%;border-radius:50%;background:radial-gradient(circle at 35% 30%,#d0df9e,#718b4e);border:2px solid #dae7bb;box-shadow:0 3px 9px #213b2938;pointer-events:none}
+.action-buttons{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.action-buttons button{padding:6px;border-radius:50%;touch-action:none;user-select:none;line-height:1.35;font-weight:700;font-size:12px;box-shadow:inset 0 0 0 5px #f4f0e433,0 3px 9px #213b2920}
+.action-buttons .mobile-skill{width:64px;height:64px;min-width:64px;max-width:64px;border:2px solid #bbaa85;background:radial-gradient(circle at 35% 30%,#e9d7ae,#bd9b66);color:#594832;font-size:11px;overflow-wrap:anywhere}
+.action-buttons .fire{width:80px;height:80px;min-width:80px;border:2px solid #8da66e;background:radial-gradient(circle at 35% 30%,#718b4e,#315d46);color:#fff5da}
+.action-buttons button.held{background:#d0b268;border-color:#aa8b43;color:#253f2f;box-shadow:inset 0 2px 8px #46391b35}
+@media(max-width:350px){.touch-controls{--pad-size:86px}.action-buttons{gap:9px}.action-buttons .mobile-skill{width:56px;height:56px;min-width:56px;max-width:56px}.action-buttons .fire{width:70px;height:70px;min-width:70px}}
