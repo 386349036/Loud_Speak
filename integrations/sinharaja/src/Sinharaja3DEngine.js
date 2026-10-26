@@ -2822,11 +2822,11 @@ export class Sinharaja3DEngine {
       const nx = moveRgt / len;
       const nz = -moveFwd / len;
 
-      // Transform by Player Yaw
+      // Match Three.js camera rotation: local -Z is forward, local +X is right.
       const sinY = Math.sin(this.player.yaw);
       const cosY = Math.cos(this.player.yaw);
-      const worldDx = (nx * cosY - nz * sinY) * curSpeed * dt;
-      const worldDz = (nx * sinY + nz * cosY) * curSpeed * dt;
+      const worldDx = (nx * cosY + nz * sinY) * curSpeed * dt;
+      const worldDz = (-nx * sinY + nz * cosY) * curSpeed * dt;
 
       // Proposed horizontal positions
       let nextX = this.player.x + worldDx;

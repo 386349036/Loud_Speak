@@ -17,6 +17,7 @@ Local changes:
 - Restrict game runtime resources to the same origin with a CSP; no CDN, telemetry or backend connection is needed.
 - Fix upstream's missing Compass icon, hide a difficulty control whose method is absent from the active 3D engine, restart the engine for a same-chapter restart, and stop survival timers/input during menus and background focus loss.
 - Supply the missing 3D `setAnalogMove` adapter and a canvas touch-look handler so the original on-screen joystick can operate without calling an undefined method.
+- 2026-10-26: Correct the movement yaw transform to match Three.js camera axes (local -Z forward, +X right). Regression checks cover WASD, arrows and analog movement at five headings, including diagonal speed normalization.
 - Align displayed keyboard hints with the native 3D bindings (P photo, C crouch, J ginger tea, T beam intensity), add L brew/V view and the existing M/I/5 panel callbacks, and allow Escape/Space to dismiss the relevant paused overlays. Read both photo title/name schemas. Add CJK system fonts, scrollable controls and responsive phone HUD/buttons.
 
 Install dependencies with `npm ci --prefix integrations/sinharaja --ignore-scripts`, then build with `npm run build:sinharaja`. The generated static assets are ready to serve without installing build dependencies on the deployment host. Run `npm run test:sinharaja` with Loud available at `http://127.0.0.1:3108`; set `SINHARAJA_TEST_URL` to verify another local port.
