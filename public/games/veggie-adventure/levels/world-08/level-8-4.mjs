@@ -1,19 +1,19 @@
-// Campaign rework V1, following the authored 1-4 experiment.
+// Short boss approach; full arena and combat parameters retained.
 export default {
   "id": "8-4",
   "name": "石榴王座",
   "focus": "阶段空间与弱点；长路线分段补给，三形态净空，三层弱点战场",
   "world": 8,
   "stage": 4,
-  "width": 5888,
+  "width": 1168,
   "height": 240,
   "timeLimit": 840,
   "spawn": {
     "x": 32,
     "y": 180
   },
-  "exit": 5840,
-  "checkpoint": 5504,
+  "exit": 1120,
+  "checkpoint": 784,
   "background": "W08-arena",
   "mid": null,
   "terrain": "W08-kit",
@@ -21,65 +21,23 @@ export default {
     {
       "x": 0,
       "y": 208,
-      "w": 1408,
+      "w": 432,
       "h": 32
     },
     {
-      "x": 1408,
+      "x": 432,
       "y": 208,
-      "w": 384,
+      "w": 224,
       "h": 32
     },
     {
-      "x": 1840,
-      "y": 208,
-      "w": 464,
-      "h": 32
-    },
-    {
-      "x": 2352,
-      "y": 208,
-      "w": 464,
-      "h": 32
-    },
-    {
-      "x": 2864,
-      "y": 208,
-      "w": 464,
-      "h": 32
-    },
-    {
-      "x": 3376,
-      "y": 208,
-      "w": 464,
-      "h": 32
-    },
-    {
-      "x": 3888,
-      "y": 208,
-      "w": 464,
-      "h": 32
-    },
-    {
-      "x": 4400,
-      "y": 208,
-      "w": 464,
-      "h": 32
-    },
-    {
-      "x": 4912,
-      "y": 208,
-      "w": 464,
-      "h": 32
-    },
-    {
-      "x": 5424,
+      "x": 704,
       "y": 208,
       "w": 80,
       "h": 32
     },
     {
-      "x": 5504,
+      "x": 784,
       "y": 208,
       "w": 384,
       "h": 32
@@ -96,552 +54,7 @@ export default {
       "breakable": true
     },
     {
-      "x": 608,
-      "y": 144,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "item": "chili",
-      "breakable": true
-    },
-    {
-      "x": 1248,
-      "y": 144,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "item": "star",
-      "breakable": true
-    },
-    {
-      "x": 688,
-      "y": 192,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 704,
-      "y": 192,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 720,
-      "y": 176,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 736,
-      "y": 176,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 752,
-      "y": 176,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 720,
-      "y": 192,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 736,
-      "y": 192,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 752,
-      "y": 192,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 1472,
-      "y": 192,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 1488,
-      "y": 192,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 1504,
-      "y": 192,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 1520,
-      "y": 192,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 1536,
-      "y": 192,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 1504,
-      "y": 176,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 1520,
-      "y": 176,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 1536,
-      "y": 176,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 1568,
-      "y": 128,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true,
-      "item": "carrot"
-    },
-    {
-      "x": 1984,
-      "y": 192,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 2000,
-      "y": 192,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 2032,
-      "y": 192,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 2048,
-      "y": 192,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 2064,
-      "y": 192,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 2080,
-      "y": 144,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true,
-      "item": "chili"
-    },
-    {
-      "x": 2496,
-      "y": 176,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 2496,
-      "y": 192,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 2512,
-      "y": 176,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 2512,
-      "y": 192,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 2560,
-      "y": 176,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 2560,
-      "y": 192,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 2576,
-      "y": 176,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 2576,
-      "y": 192,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 2592,
-      "y": 128,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true,
-      "item": "seed"
-    },
-    {
-      "x": 3008,
-      "y": 144,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 3024,
-      "y": 144,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 3040,
-      "y": 144,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 3056,
-      "y": 144,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 3104,
-      "y": 144,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true,
-      "item": "carrot"
-    },
-    {
-      "x": 3520,
-      "y": 192,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 3536,
-      "y": 192,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 3552,
-      "y": 192,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 3568,
-      "y": 192,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 3584,
-      "y": 192,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 3552,
-      "y": 176,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 3568,
-      "y": 176,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 3584,
-      "y": 176,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 3616,
-      "y": 128,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true,
-      "item": "chili"
-    },
-    {
-      "x": 4032,
-      "y": 192,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 4048,
-      "y": 192,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 4080,
-      "y": 192,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 4096,
-      "y": 192,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 4112,
-      "y": 192,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 4128,
-      "y": 144,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true,
-      "item": "seed"
-    },
-    {
-      "x": 4544,
-      "y": 176,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 4544,
-      "y": 192,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 4560,
-      "y": 176,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 4560,
-      "y": 192,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 4608,
-      "y": 176,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 4608,
-      "y": 192,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 4624,
-      "y": 176,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 4624,
-      "y": 192,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 4640,
-      "y": 128,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true,
-      "item": "carrot"
-    },
-    {
-      "x": 5056,
-      "y": 144,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 5072,
-      "y": 144,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 5088,
-      "y": 144,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 5104,
-      "y": 144,
-      "w": 16,
-      "h": 16,
-      "kind": "brick",
-      "breakable": true
-    },
-    {
-      "x": 5152,
+      "x": 432,
       "y": 144,
       "w": 16,
       "h": 16,
@@ -670,126 +83,6 @@ export default {
       "phase": 0,
       "patrolLeft": 272,
       "patrolRight": 382
-    },
-    {
-      "id": 1,
-      "kind": "cabbage",
-      "x": 864,
-      "y": 194,
-      "w": 14,
-      "h": 14,
-      "vx": -20,
-      "vy": 0,
-      "state": "walk",
-      "timer": 0,
-      "grace": 0,
-      "dead": false,
-      "homeX": 864,
-      "homeY": 194,
-      "cooldown": 1.2,
-      "phase": 0,
-      "patrolLeft": 816,
-      "patrolRight": 926
-    },
-    {
-      "id": 2,
-      "kind": "walnut",
-      "x": 1632,
-      "y": 194,
-      "w": 14,
-      "h": 14,
-      "vx": -20,
-      "vy": 0,
-      "state": "walk",
-      "timer": 0,
-      "grace": 0,
-      "dead": false,
-      "homeX": 1632,
-      "homeY": 194,
-      "cooldown": 1.2,
-      "phase": 0,
-      "patrolLeft": 1584,
-      "patrolRight": 1664
-    },
-    {
-      "id": 3,
-      "kind": "winged",
-      "x": 2640,
-      "y": 112,
-      "w": 14,
-      "h": 14,
-      "vx": -20,
-      "vy": 0,
-      "state": "walk",
-      "timer": 0,
-      "grace": 0,
-      "dead": false,
-      "homeX": 2640,
-      "homeY": 112,
-      "cooldown": 1.2,
-      "phase": 0,
-      "patrolLeft": 2608,
-      "patrolRight": 2688
-    },
-    {
-      "id": 4,
-      "kind": "walnut",
-      "x": 3168,
-      "y": 194,
-      "w": 14,
-      "h": 14,
-      "vx": -20,
-      "vy": 0,
-      "state": "walk",
-      "timer": 0,
-      "grace": 0,
-      "dead": false,
-      "homeX": 3168,
-      "homeY": 194,
-      "cooldown": 1.2,
-      "phase": 0,
-      "patrolLeft": 3120,
-      "patrolRight": 3200
-    },
-    {
-      "id": 5,
-      "kind": "winged",
-      "x": 4176,
-      "y": 112,
-      "w": 14,
-      "h": 14,
-      "vx": -20,
-      "vy": 0,
-      "state": "walk",
-      "timer": 0,
-      "grace": 0,
-      "dead": false,
-      "homeX": 4176,
-      "homeY": 112,
-      "cooldown": 1.2,
-      "phase": 0,
-      "patrolLeft": 4144,
-      "patrolRight": 4224
-    },
-    {
-      "id": 6,
-      "kind": "walnut",
-      "x": 4704,
-      "y": 194,
-      "w": 14,
-      "h": 14,
-      "vx": -20,
-      "vy": 0,
-      "state": "walk",
-      "timer": 0,
-      "grace": 0,
-      "dead": false,
-      "homeX": 4704,
-      "homeY": 194,
-      "cooldown": 1.2,
-      "phase": 0,
-      "patrolLeft": 4656,
-      "patrolRight": 4736
     }
   ],
   "items": [
@@ -818,6 +111,22 @@ export default {
       "collected": false
     },
     {
+      "x": 848,
+      "y": 176,
+      "w": 10,
+      "h": 12,
+      "kind": "seed",
+      "collected": false
+    },
+    {
+      "x": 960,
+      "y": 176,
+      "w": 10,
+      "h": 12,
+      "kind": "seed",
+      "collected": false
+    },
+    {
       "x": 464,
       "y": 176,
       "w": 10,
@@ -826,367 +135,7 @@ export default {
       "collected": false
     },
     {
-      "x": 576,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 688,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 800,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 912,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 1024,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 1136,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 1248,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 1360,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 5568,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 5680,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 1440,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 1536,
-      "y": 160,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 1632,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 1728,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 1920,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 2016,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 2112,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 2208,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 2400,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 2496,
-      "y": 160,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 2592,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 2688,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 2784,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 2880,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 2976,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 3072,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 3168,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 3264,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 3456,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 3552,
-      "y": 160,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 3648,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 3744,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 3936,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 4032,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 4128,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 4224,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 4320,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 4416,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 4512,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 4608,
-      "y": 160,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 4704,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 4800,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 4992,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 5088,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 5184,
-      "y": 176,
-      "w": 10,
-      "h": 12,
-      "kind": "seed",
-      "collected": false
-    },
-    {
-      "x": 5280,
+      "x": 560,
       "y": 176,
       "w": 10,
       "h": 12,
@@ -1196,11 +145,11 @@ export default {
   ],
   "movers": [
     {
-      "x": 5552,
+      "x": 832,
       "y": 176,
       "w": 48,
       "h": 8,
-      "baseX": 5552,
+      "baseX": 832,
       "baseY": 176,
       "kind": "ledge",
       "oneWay": true,
@@ -1208,11 +157,11 @@ export default {
       "id": "arena-ledge-0"
     },
     {
-      "x": 5664,
+      "x": 944,
       "y": 160,
       "w": 48,
       "h": 8,
-      "baseX": 5664,
+      "baseX": 944,
       "baseY": 160,
       "kind": "ledge",
       "oneWay": true,
@@ -1220,11 +169,11 @@ export default {
       "id": "arena-ledge-1"
     },
     {
-      "x": 5760,
+      "x": 1040,
       "y": 176,
       "w": 32,
       "h": 8,
-      "baseX": 5760,
+      "baseX": 1040,
       "baseY": 176,
       "kind": "ledge",
       "oneWay": true,
@@ -1234,37 +183,7 @@ export default {
   ],
   "hazards": [
     {
-      "x": 736,
-      "y": 176,
-      "w": 16,
-      "h": 32,
-      "kind": "heat",
-      "period": 4,
-      "on": 1.2,
-      "offset": 0
-    },
-    {
-      "x": 2128,
-      "y": 176,
-      "w": 16,
-      "h": 32,
-      "kind": "heat",
-      "period": 4.8,
-      "on": 1.1,
-      "offset": 0.3
-    },
-    {
-      "x": 3664,
-      "y": 176,
-      "w": 16,
-      "h": 32,
-      "kind": "heat",
-      "period": 4.8,
-      "on": 1.1,
-      "offset": 1.2
-    },
-    {
-      "x": 5200,
+      "x": 480,
       "y": 176,
       "w": 16,
       "h": 32,
@@ -1277,31 +196,7 @@ export default {
   "water": [],
   "turrets": [
     {
-      "x": 1056,
-      "y": 176,
-      "w": 16,
-      "h": 32,
-      "cooldown": 1.5,
-      "windup": 0
-    },
-    {
-      "x": 2160,
-      "y": 176,
-      "w": 16,
-      "h": 32,
-      "cooldown": 1.5,
-      "windup": 0
-    },
-    {
-      "x": 3696,
-      "y": 176,
-      "w": 16,
-      "h": 32,
-      "cooldown": 1.5,
-      "windup": 0
-    },
-    {
-      "x": 5232,
+      "x": 512,
       "y": 176,
       "w": 16,
       "h": 32,
@@ -1314,12 +209,12 @@ export default {
     "id": "B08",
     "kind": 8,
     "name": "石榴王",
-    "x": 5728,
+    "x": 1008,
     "y": 176,
     "w": 32,
     "h": 32,
-    "left": 5520,
-    "right": 5808,
+    "left": 800,
+    "right": 1088,
     "hp": 12,
     "phase": "idle",
     "timer": 0,
@@ -1331,7 +226,7 @@ export default {
     "maxHp": 12,
     "balanceVersion": 1
   },
-  "layoutVersion": 2,
+  "layoutVersion": 4,
   "reworkVersion": 1,
   "priorLayout": {
     "version": 1,
@@ -1354,61 +249,85 @@ export default {
       "id": "introduction",
       "name": "原关教学与特色机制",
       "from": 0,
-      "to": 1408
-    },
-    {
-      "id": "route-0",
-      "name": "王庭外廊·1",
-      "from": 1408,
-      "to": 1920
-    },
-    {
-      "id": "route-1",
-      "name": "王庭外廊·2",
-      "from": 1920,
-      "to": 2432
-    },
-    {
-      "id": "route-2",
-      "name": "回收与补给",
-      "from": 2432,
-      "to": 2944
-    },
-    {
-      "id": "route-3",
-      "name": "王庭外廊·4",
-      "from": 2944,
-      "to": 3456
-    },
-    {
-      "id": "route-4",
-      "name": "王庭外廊·5",
-      "from": 3456,
-      "to": 3968
-    },
-    {
-      "id": "route-5",
-      "name": "回收与补给",
-      "from": 3968,
-      "to": 4480
-    },
-    {
-      "id": "route-6",
-      "name": "王庭外廊·7",
-      "from": 4480,
-      "to": 4992
+      "to": 432
     },
     {
       "id": "route-7",
       "name": "王庭外廊·8",
-      "from": 4992,
-      "to": 5504
+      "from": 432,
+      "to": 784
     },
     {
       "id": "boss",
       "name": "关底分层战场",
-      "from": 5504,
-      "to": 5888
+      "from": 784,
+      "to": 1168
+    }
+  ],
+  "priorLayouts": [
+    {
+      "version": 1,
+      "width": 1792,
+      "timeLimit": 420,
+      "counts": {
+        "blocks": 16,
+        "enemies": 2,
+        "movers": 0,
+        "turrets": 1,
+        "gates": 0
+      },
+      "boss": {
+        "left": 1504,
+        "right": 1712
+      }
+    },
+    {
+      "version": 2,
+      "width": 5888,
+      "timeLimit": 840,
+      "counts": {
+        "blocks": 69,
+        "enemies": 7,
+        "movers": 3,
+        "turrets": 4,
+        "gates": 0
+      },
+      "boss": {
+        "left": 5520,
+        "right": 5808
+      }
+    },
+    {
+      "version": 3,
+      "width": 2944,
+      "timeLimit": 840,
+      "counts": {
+        "blocks": 25,
+        "enemies": 3,
+        "movers": 3,
+        "turrets": 2,
+        "gates": 0
+      },
+      "boss": {
+        "left": 2576,
+        "right": 2864
+      }
+    }
+  ],
+  "bossRouteVersion": 2,
+  "bossRouteReduction": {
+    "priorWidth": 2944,
+    "from": 432,
+    "to": 2208,
+    "removed": 1776,
+    "requestedReduction": 0.6
+  },
+  "bossRouteHistory": [
+    {
+      "priorWidth": 5888,
+      "from": 1280,
+      "to": 4224,
+      "removed": 2944
     }
   ]
 };

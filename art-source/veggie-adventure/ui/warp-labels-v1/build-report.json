@@ -283,5 +283,67 @@
       "sha256": "1cdc88931666f2a555b76168cbae1ed84be7a6d1cde07a8feb0f32cd6d4e8f78"
     }
   ],
+  "digits": [
+    {
+      "id": "warp-stage-1",
+      "path": "ui/warp-digits-v1/1.png",
+      "width": 16,
+      "height": 20,
+      "anchor": [
+        8,
+        20
+      ],
+      "label": "1",
+      "stage": "warp-digits-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
+      "visualVerified": false,
+      "sha256": "702dafce7cb4090dc2c30b8f0ec90530b1fae3385bcde4fb58d2e0d7a76746ed"
+    },
+    {
+      "id": "warp-stage-2",
+      "path": "ui/warp-digits-v1/2.png",
+      "width": 16,
+      "height": 20,
+      "anchor": [
+        8,
+        20
+      ],
+      "label": "2",
+      "stage": "warp-digits-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
+      "visualVerified": false,
+      "sha256": "deaa7737071c92508a1f7415894404608d7ae7412ecfd62102671903a0cddb13"
+    },
+    {
+      "id": "warp-stage-3",
+      "path": "ui/warp-digits-v1/3.png",
+      "width": 16,
+      "height": 20,
+      "anchor": [
+        8,
+        20
+      ],
+      "label": "3",
+      "stage": "warp-digits-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
+      "visualVerified": false,
+      "sha256": "d5a41647e286628f6169e4e43cd99be7a1d9eca8238b921a86fafbf22ab01d5b"
+    },
+    {
+      "id": "warp-stage-4",
+      "path": "ui/warp-digits-v1/4.png",
+      "width": 16,
+      "height": 20,
+      "anchor": [
+        8,
+        20
+      ],
+      "label": "4",
+      "stage": "warp-digits-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
+      "visualVerified": false,
+      "sha256": "e44db7bcf4139dce5a79424c22f8d1088358aa669415737471d279ffb50e7908"
+    }
+  ],
   "visualVerified": false
 }

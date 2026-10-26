@@ -1,0 +1,126 @@
+{
+  "version": 2,
+  "scope": "1-4 through 8-4",
+  "levels": [
+    {
+      "id": "1-4",
+      "priorWidth": 2944,
+      "width": 1168,
+      "removed": 1776,
+      "reduction": 0.6032608695652174,
+      "splice": {
+        "from": 432,
+        "to": 2208
+      },
+      "priorApproach": 2544,
+      "approach": 768,
+      "arenaWidth": 288,
+      "repairs": []
+    },
+    {
+      "id": "2-4",
+      "priorWidth": 2944,
+      "width": 1168,
+      "removed": 1776,
+      "reduction": 0.6032608695652174,
+      "splice": {
+        "from": 432,
+        "to": 2208
+      },
+      "priorApproach": 2544,
+      "approach": 768,
+      "arenaWidth": 288,
+      "repairs": []
+    },
+    {
+      "id": "3-4",
+      "priorWidth": 2944,
+      "width": 1168,
+      "removed": 1776,
+      "reduction": 0.6032608695652174,
+      "splice": {
+        "from": 432,
+        "to": 2208
+      },
+      "priorApproach": 2544,
+      "approach": 768,
+      "arenaWidth": 288,
+      "repairs": []
+    },
+    {
+      "id": "4-4",
+      "priorWidth": 2944,
+      "width": 1168,
+      "removed": 1776,
+      "reduction": 0.6032608695652174,
+      "splice": {
+        "from": 432,
+        "to": 2208
+      },
+      "priorApproach": 2544,
+      "approach": 768,
+      "arenaWidth": 288,
+      "repairs": []
+    },
+    {
+      "id": "5-4",
+      "priorWidth": 2944,
+      "width": 1168,
+      "removed": 1776,
+      "reduction": 0.6032608695652174,
+      "splice": {
+        "from": 432,
+        "to": 2208
+      },
+      "priorApproach": 2544,
+      "approach": 768,
+      "arenaWidth": 288,
+      "repairs": []
+    },
+    {
+      "id": "6-4",
+      "priorWidth": 2944,
+      "width": 1168,
+      "removed": 1776,
+      "reduction": 0.6032608695652174,
+      "splice": {
+        "from": 432,
+        "to": 2208
+      },
+      "priorApproach": 2544,
+      "approach": 768,
+      "arenaWidth": 288,
+      "repairs": []
+    },
+    {
+      "id": "7-4",
+      "priorWidth": 2944,
+      "width": 1168,
+      "removed": 1776,
+      "reduction": 0.6032608695652174,
+      "splice": {
+        "from": 432,
+        "to": 2208
+      },
+      "priorApproach": 2544,
+      "approach": 768,
+      "arenaWidth": 288,
+      "repairs": []
+    },
+    {
+      "id": "8-4",
+      "priorWidth": 2944,
+      "width": 1168,
+      "removed": 1776,
+      "reduction": 0.6032608695652174,
+      "splice": {
+        "from": 432,
+        "to": 2208
+      },
+      "priorApproach": 2544,
+      "approach": 768,
+      "arenaWidth": 288,
+      "repairs": []
+    }
+  ]
+}

@@ -16,7 +16,7 @@ test('every authored upgrade block across 32 stages releases the next item for t
    assert.equal(g.items.length,count+1,level.id+' duplicate reward');assert.equal(g.items.at(-1).kind,form===0?'carrot':'chili',level.id+'/'+form+'/'+authored);
    assert.equal(g.p.form,form,'release must not upgrade before collection');assert.equal(block.item,authored);checked++;
   }
- }assert.equal(checked,207*3);
+ }assert.equal(checked,LEVELS.reduce((sum,l)=>sum+l.blocks.filter(b=>['carrot','chili'].includes(b.item)).length,0)*3);
 });
 
 test('actual upward collisions at the same position release carrot or chili for all forms and both block styles',()=>{

@@ -1,0 +1,195 @@
+{
+  "tool": "built-in image_gen; existing generated FX atlas reused for fallbacks",
+  "assets": [
+    {
+      "id": "hazard-chain-ball",
+      "source": "objects/object-polish-v1/chain/generated.png",
+      "crop": {
+        "cell": {
+          "left": 0,
+          "top": 0,
+          "width": 724,
+          "height": 724
+        },
+        "left": 22,
+        "top": 16,
+        "width": 702,
+        "height": 687
+      },
+      "sha256": "a8d8cd52203950c94daf188519b81885e0b239ede4ba7fe31b5528a773ca7fd8"
+    },
+    {
+      "id": "hazard-chain-link",
+      "source": "objects/object-polish-v1/chain/generated.png",
+      "crop": {
+        "cell": {
+          "left": 724,
+          "top": 0,
+          "width": 724,
+          "height": 724
+        },
+        "left": 0,
+        "top": 212,
+        "width": 724,
+        "height": 312
+      },
+      "sha256": "a3ebbece6d226a857095c42e7622cad0c5cee25b47f67b0ec62cc11ccd08872b"
+    },
+    {
+      "id": "hazard-chain-anchor",
+      "source": "objects/object-polish-v1/chain/generated.png",
+      "crop": {
+        "cell": {
+          "left": 1448,
+          "top": 0,
+          "width": 724,
+          "height": 724
+        },
+        "left": 0,
+        "top": 172,
+        "width": 629,
+        "height": 421
+      },
+      "sha256": "e98dc2b5f49dd426ba87401bcaa040d80a15f4a568319a610c48d6cc7e5106b1"
+    },
+    {
+      "id": "platform-brace",
+      "source": "objects/object-polish-v1/support/generated.png",
+      "crop": {
+        "cell": {
+          "left": 0,
+          "top": 0,
+          "width": 724,
+          "height": 724
+        },
+        "left": 204,
+        "top": 85,
+        "width": 410,
+        "height": 557
+      },
+      "sha256": "3986d9675f346f57001c67a65e8e8ad0c346361bb92482a9d8c05186017ba198"
+    },
+    {
+      "id": "platform-cracked-brace",
+      "source": "objects/object-polish-v1/support/generated.png",
+      "crop": {
+        "cell": {
+          "left": 724,
+          "top": 0,
+          "width": 724,
+          "height": 724
+        },
+        "left": 158,
+        "top": 86,
+        "width": 409,
+        "height": 564
+      },
+      "sha256": "96c7ed003f6d59997086dfc41050570e12d9b8d82c1b145a2d7ce6b99ea38601"
+    },
+    {
+      "id": "platform-vine",
+      "source": "objects/object-polish-v1/support/generated.png",
+      "crop": {
+        "cell": {
+          "left": 1448,
+          "top": 0,
+          "width": 724,
+          "height": 724
+        },
+        "left": 111,
+        "top": 85,
+        "width": 411,
+        "height": 566
+      },
+      "sha256": "f04bcb96ed79175073f40b1089de6c492648c6f53be1a644e2954093b1fb2384"
+    },
+    {
+      "id": "hazard-falling-rock",
+      "source": "objects/object-polish-v1/rock/generated.png",
+      "crop": {
+        "left": 147,
+        "top": 118,
+        "width": 986,
+        "height": 1015
+      },
+      "sha256": "bf31884f502d48f1a47f5ba7b94f1b5470ede40ea735ada48fdb631779553e7d"
+    },
+    {
+      "id": "shell-gate",
+      "source": "objects/object-polish-v1/gate/generated.png",
+      "crop": {
+        "left": 70,
+        "top": 110,
+        "width": 748,
+        "height": 1556
+      },
+      "sha256": "0e0763d279a1394f15525a3ddd3a5840a4da7e64c431c836acb625e254255f05"
+    },
+    {
+      "id": "water-surface",
+      "source": "objects/object-polish-v1/water/generated.png",
+      "crop": {
+        "left": 98,
+        "top": 208,
+        "width": 763,
+        "height": 585
+      },
+      "sha256": "9ada7ae55b12dec7abe411283e86ccbe85f909e24dc8e368e230a0880c8afadb"
+    },
+    {
+      "id": "water-body",
+      "source": "objects/object-polish-v1/water/generated.png",
+      "crop": {
+        "left": 949,
+        "top": 142,
+        "width": 710,
+        "height": 621
+      },
+      "sha256": "88767c73d3cefbc342957b56c61d1905b9036f86c353c3b0cd1749f9d99620ed"
+    },
+    {
+      "id": "fx-fallback-seed",
+      "source": "runtime/animations/FX01.png",
+      "crop": {
+        "left": 0,
+        "top": 48,
+        "width": 48,
+        "height": 48
+      },
+      "sha256": "95eee6b5ab74e20f6f57e0c1102d95601f689650ef4b3618eae80b77e4b57a49"
+    },
+    {
+      "id": "fx-fallback-wave",
+      "source": "runtime/animations/FX01.png",
+      "crop": {
+        "left": 0,
+        "top": 288,
+        "width": 48,
+        "height": 48
+      },
+      "sha256": "8a41d0b78c8d38b26a3b6fa302549dfd2e653783321cd84e960841708ab28892"
+    },
+    {
+      "id": "fx-fallback-burst",
+      "source": "runtime/animations/FX01.png",
+      "crop": {
+        "left": 0,
+        "top": 336,
+        "width": 48,
+        "height": 48
+      },
+      "sha256": "15123ab4f85bbf9b8d1f7ca49a8a458c36d7f431bb1260c15f56deaa5f37192c"
+    },
+    {
+      "id": "fx-fallback-fire",
+      "source": "runtime/animations/FX01.png",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 48,
+        "height": 48
+      },
+      "sha256": "bd78628c1629e2e26ed0fb64c1dbc52078b6476812552b9fb7261f0360c429a9"
+    }
+  ]
+}

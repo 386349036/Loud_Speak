@@ -23,7 +23,7 @@ test('all 12 exposed enemy types lose HP on a stomp in all forms, including unde
    if(e.state==='shell'){e.state='walk';e.timer=0;}if(e.kind==='trap')e.phase=2;e.leapPhase='rise';e.leapTimer=0;e.active=true;
    updateEnemies(g,STEP,placeStomp(g,e));
    assert.equal(e.hp,hp-hit,`${kind}/${form}/water=${water}/hit=${hit}`);assert.equal(g.mode,'playing');assert.equal(g.p.form,form);assert.ok(g.p.vy<0);
-   if(hit<hp){assert.ok(!e.dead);if(kind==='winged'&&hit===1)assert.equal(e.kind,'cabbage');else assert.equal(e.state,'shell');}
+   if(hit<hp){assert.ok(!e.dead);if(kind==='winged'){assert.equal(e.kind,'winged');assert.equal(e.state,'stunned');}else assert.equal(e.state,'shell');}
   }
   assert.ok(e.dead);assert.equal(e.hp,0);
  }

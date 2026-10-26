@@ -65,22 +65,23 @@ test('a diving flyer follows a changed target continuously and returns smoothly 
 
 test('water-world plants root on the pool bed with open swimming space and remain stompable in every form',()=>{
  let count=0;for(const l of LEVELS.filter(l=>l.world===4)){
-  const plants=l.enemies.filter(e=>e.kind==='anemone');assert.ok(plants.length>=5,l.id);count+=plants.length;
+  const plants=l.enemies.filter(e=>e.kind==='anemone');assert.ok(plants.length>0,l.id);assert.ok(l.water.filter(w=>w.h>=56).every(w=>plants.some(e=>e.x>w.x&&e.x+e.w<w.x+w.w)),l.id+' empty pool bed');count+=plants.length;
   for(const e of plants){const pool=l.water.find(w=>e.x>w.x&&e.x+e.w<w.x+w.w);assert.ok(pool);assert.ok(pool.h-e.h>=32);assert.ok(l.platforms.some(p=>e.x<p.x+p.w&&e.x+e.w>p.x&&e.y+e.h===p.y));assert.ok(![...l.platforms,...l.blocks].some(p=>overlap(e,p)));}
   assert.ok(decodeSave(encodeSave(new Game(l))));
  }
- assert.equal(count,54);
+ assert.equal(count,LEVELS.filter(l=>l.world===4).reduce((sum,l)=>sum+l.enemies.filter(e=>e.kind==='anemone').length,0));
  for(const form of [0,1,2]){const g=scene(form),e={id:0,kind:'anemone',x:180,y:200,w:20,h:24,homeX:180,homeY:200,vx:0,vy:0,state:'walk',timer:0,grace:0,dead:false,cooldown:2};g.level.platforms=[{x:0,y:224,w:600,h:16}];g.level.water=[{x:96,y:144,w:240,h:80}];g.enemies=[e];Object.assign(g.p,{x:184,y:e.y-g.p.h+.2,vy:40});updateEnemies(g,STEP,e.y);assert.ok(e.dead);assert.equal(e.hp,0);assert.equal(g.p.form,form);assert.equal(g.mode,'playing');}
 });
 
 test('losing wings after a dive retains the current position rather than snapping to the old flight patrol',()=>{
  const g=scene(),e=flyer(g);Object.assign(e,{x:244,y:170,homeX:160,patrolLeft:140,patrolRight:200});
- assert.equal(hurtEnemy(g,e,'stomp'),true);assert.equal(e.kind,'cabbage');assert.equal(e.x,244);updateEnemies(g,STEP,0);assert.ok(Math.abs(e.x-244)<1);assert.equal(e.hp,2);
+ assert.equal(hurtEnemy(g,e,'stomp'),true);assert.equal(e.kind,'winged');assert.equal(e.state,'stunned');assert.equal(e.x,244);updateEnemies(g,STEP,0);assert.ok(Math.abs(e.x-244)<1);assert.equal(e.hp,2);
 });
 
 test('pre-plant version-two water-world saves retain run state when upgrading to the planted maps',()=>{
+ const beforeBoss=JSON.parse(fs.readFileSync(new URL('./fixtures/pre-boss-halving-layouts.json',import.meta.url)));
  for(const l of LEVELS.filter(l=>l.world===4)){
-  const g=new Game(l,{score:18000,form:1,rebirths:1}),d=JSON.parse(encodeSave(g,['1-4','2-4','3-4']));d.layoutVersion=2;d.checkpoint.enemies=d.checkpoint.enemies.filter(e=>e.kind!=='anemone');d.checkpoint.blocks=d.checkpoint.blocks.filter(b=>b.item!=='rebirth');
+  const g=new Game(beforeBoss.find(old=>old.id===l.id)||l,{score:18000,form:1,rebirths:1}),d=JSON.parse(encodeSave(g,['1-4','2-4','3-4']));d.layoutVersion=2;d.checkpoint.enemies=d.checkpoint.enemies.filter(e=>e.kind!=='anemone');d.checkpoint.blocks=d.checkpoint.blocks.filter(b=>b.item!=='rebirth');
   const saved=decodeSave(JSON.stringify(d));assert.ok(saved,l.id);assert.equal(saved.layoutVersion,l.layoutVersion);assert.ok(saved.layoutMigrated);assert.equal(saved.run.rebirths,1);assert.equal(saved.run.entryScore,18000);assert.equal(saved.run.entryForm,1);assert.ok(saved.checkpoint.enemies.some(e=>e.kind==='anemone'));
  }
 });

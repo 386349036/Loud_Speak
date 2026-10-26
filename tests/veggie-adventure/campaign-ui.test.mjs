@@ -1,3 +1,4 @@
+import {createAssetLoader} from '../../public/games/veggie-adventure/js/asset-loader.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -11,6 +12,7 @@ import {AnimationPlayer} from '../../public/games/veggie-adventure/js/core/anima
 import {bindTouchControls} from '../../public/games/veggie-adventure/js/touch-controls.mjs';
 import {MusicDirector} from '../../public/games/veggie-adventure/js/audio.mjs';
 import {bindViewport} from '../../public/games/veggie-adventure/js/viewport.mjs';
+import {playerAttack} from '../../public/games/veggie-adventure/js/core/player-attacks.mjs';
 import {SoundDirector} from '../../public/games/veggie-adventure/js/sound-effects.mjs';
 
 const html=fs.readFileSync('public/games/veggie-adventure/index.html','utf8');
@@ -38,11 +40,12 @@ async function boot(search='',initial={}){
  }
  const actions=['fire','jump'].map(key=>{const e=new Button();e.dataset.key=key;return e;}),buttons=[...elements.values()].filter(e=>e instanceof Button).concat(actions);
  const document={body:new Element(),hidden:false,getElementById:id=>elements.get(id),createElement:()=>new Element(),addEventListener:(type,fn)=>documentEvents[type]=fn,querySelectorAll:selector=>selector==='button'?buttons:selector==='[data-key]'?actions:[]};
- const context={console,URLSearchParams,Game,STEP,LEVELS,SAVE_KEY,DEBUG_SAVE_KEY,LEGACY_SAVE_KEY,encodeSave,decodeSave,createRenderer,AnimationPlayer,bindTouchControls,MusicDirector,bindViewport,SoundDirector,
+ const context={console,URLSearchParams,Game,STEP,LEVELS,SAVE_KEY,DEBUG_SAVE_KEY,LEGACY_SAVE_KEY,encodeSave,decodeSave,createRenderer,AnimationPlayer,bindTouchControls,MusicDirector,bindViewport,SoundDirector,playerAttack,createAssetLoader,
   Campaign:class extends Campaign{constructor(){super();campaign=this;}},document,location:{search},HTMLSelectElement:Select,HTMLButtonElement:Button,
   window:{addEventListener:(type,fn)=>events[type]=fn},localStorage:{getItem:key=>store.get(key)??null,setItem:(key,value)=>{store.set(key,value);writes.push(key);}},
   Image:class{set src(value){queueMicrotask(()=>this.onload());}},fetch:async url=>({ok:true,json:async()=>url.includes('audio/')?musicManifest:manifest}),requestAnimationFrame:callback=>frames.push(callback)};
  await vm.runInNewContext(source,context,{filename:'veggie-main-ui-fixture.js'});
+ await new Promise(resolve=>setImmediate(resolve));
  assert.equal(elements.get('start').disabled,false);
  return {campaign,elements,events,document,documentEvents,store,writes,frames(count){for(let n=0;n<count;n++){const callback=frames.shift();assert.ok(callback);callback(time+=50);}}};
 }
@@ -60,7 +63,7 @@ test('actual page loop automatically starts every next level, carries results an
  for(let index=0;index<32;index++){
   const g=ui.campaign.game;assert.equal(g.level.id,LEVELS[index].id);g.p.form=index%3;g.resizePlayer();g.p.hurt=2;g.score=1000+index;g.p.x=g.level.exit;if(g.boss)g.boss.dead=true;
   ui.frames(2);assert.equal(g.mode,'won');const score=g.score,form=g.p.form;
-  ui.frames(24);assert.equal(ui.campaign.completed.size,index+1);
+  ui.frames(24);await new Promise(resolve=>setImmediate(resolve));assert.equal(ui.campaign.completed.size,index+1);
   if(index<31){assert.equal(ui.campaign.game.level.id,LEVELS[index+1].id);assert.equal(ui.campaign.game.mode,'playing');assert.equal(ui.campaign.game.score,score);assert.equal(ui.campaign.game.p.form,form);assert.equal(ui.campaign.game.rebirths,1);assert.equal(ui.elements.get('overlay').hidden,true);assert.equal(decodeSave(ui.store.get(SAVE_KEY)).level,LEVELS[index+1].id);assert.equal(decodeSave(ui.store.get(SAVE_KEY)).run.rebirths,1);}
   else {assert.equal(ui.campaign.game,g);assert.equal(ui.elements.get('message').textContent,'蔬果王庭获救！');assert.equal(ui.elements.get('overlay').hidden,false);ui.frames(40);assert.equal(ui.campaign.game,g);assert.equal(g.score,score);assert.equal(ui.campaign.completed.size,32);}
  }
@@ -113,7 +116,7 @@ test('refreshing during the last rebirth or final death preserves exhaustion and
 
 test('normal restart starts a new run at 1-1 and cannot replenish attempts while keeping a later stage',async()=>{
  const g=new Game(levelById('3-4'),{score:9800,form:2,rebirths:0}),ui=await boot('',{[SAVE_KEY]:encodeSave(g,['1-1','1-2'])});
- assert.equal(ui.campaign.game.level.id,'3-4');ui.elements.get('fresh').onclick();assert.equal(ui.campaign.game.level.id,'1-1');assert.equal(ui.campaign.game.rebirths,3);assert.equal(ui.campaign.game.score,0);assert.equal(ui.campaign.completed.size,0);assert.equal(ui.elements.get('overlay').hidden,true);const saved=decodeSave(ui.store.get(SAVE_KEY));assert.equal(saved.level,'1-1');assert.equal(saved.run.rebirths,3);
+ assert.equal(ui.campaign.game.level.id,'3-4');ui.elements.get('fresh').onclick();await new Promise(resolve=>setImmediate(resolve));assert.equal(ui.campaign.game.level.id,'1-1');assert.equal(ui.campaign.game.rebirths,3);assert.equal(ui.campaign.game.score,0);assert.equal(ui.campaign.completed.size,0);assert.equal(ui.elements.get('overlay').hidden,true);const saved=decodeSave(ui.store.get(SAVE_KEY));assert.equal(saved.level,'1-1');assert.equal(saved.run.rebirths,3);
 });
 
 test('overlay settings pause gameplay, preserve the run and close when resuming',async()=>{
@@ -127,8 +130,8 @@ test('overlay settings pause gameplay, preserve the run and close when resuming'
 test('normal play can discover the hidden warp room by keyboard, then hit a stage block and immediately play it',async()=>{
  const ui=await boot();ui.elements.get('start').onclick();ui.frames(4);
  const key=code=>ui.events.keydown({target:null,code,repeat:false,preventDefault(){}});
- key('KeyA');key('Space');ui.frames(18);assert.equal(ui.campaign.game.level.warpRoom,true);assert.equal(ui.elements.get('level-picker').hidden,true);assert.equal(decodeSave(ui.store.get(SAVE_KEY)).level,'1-1');
- const room=ui.campaign.game,block=room.blocks.find(b=>b.warpTo==='8-4');room.p.x=block.x+8;room.p.y=194;room.p.vx=0;room.p.vy=0;room.p.grounded=true;key('Space');ui.frames(9);
+ key('KeyA');key('Space');ui.frames(18);await new Promise(resolve=>setImmediate(resolve));assert.equal(ui.campaign.game.level.warpRoom,true);assert.equal(ui.elements.get('level-picker').hidden,true);assert.equal(decodeSave(ui.store.get(SAVE_KEY)).level,'1-1');
+ const room=ui.campaign.game,block=room.blocks.find(b=>b.warpTo==='8-4');room.p.x=block.x+8;room.p.y=194;room.p.vx=0;room.p.vy=0;room.p.grounded=true;key('Space');ui.frames(9);await new Promise(resolve=>setImmediate(resolve));
  assert.equal(ui.campaign.game.level.id,'8-4');assert.equal(ui.campaign.game.mode,'playing');assert.equal(ui.campaign.game.p.form,0);assert.equal(ui.elements.get('overlay').hidden,true);assert.equal(ui.campaign.completed.size,0);assert.equal(decodeSave(ui.store.get(SAVE_KEY)).level,'8-4');
 });
 

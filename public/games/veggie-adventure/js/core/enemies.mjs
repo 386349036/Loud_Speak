@@ -9,21 +9,21 @@ export const enemyFacing=e=>Math.sign(e.facing||e.vx||1);
 export const enemyActive=e=>!e.dead&&!(['trap','leaper'].includes(e.kind)&&e.active===false);
 export const enemyShelled=e=>['cabbage','walnut','spike'].includes(e.kind)&&['shell','rolling'].includes(e.state);
 export function defeat(game,e,score=200,reason='hit'){if(e.dead)return;e.dead=true;e.hp=0;e.defeatedBy=reason;game.score+=score;}
-export function hurtEnemy(game,e,method='stomp'){
- if(!enemyActive(e))return false;prepareEnemyHealth(e);if(method==='stomp'&&enemyShelled(e)){game.emitAnimation('enemy-block',e);game.emitSound?.('shell-bounce',e);return false;}if(method==='stomp')game.emitSound?.(stompSound(e),e);e.hp--;e.hitFlash=.25;game.emitAnimation('enemy-hit',e);
+export function hurtEnemy(game,e,method='stomp',damage=1){
+ if(!enemyActive(e))return false;prepareEnemyHealth(e);if(method==='stomp'&&enemyShelled(e)){game.emitAnimation('enemy-block',e);game.emitSound?.('shell-bounce',e);return false;}if(method==='stomp')game.emitSound?.(stompSound(e),e);e.lastDamage=Math.min(e.hp,method==='fire'?Math.max(1,Math.min(4,Math.floor(damage)||1)):1);e.hp-=e.lastDamage;e.hitFlash=.25;game.emitAnimation('enemy-hit',e);
  if(e.hp<=0)defeat(game,e,method==='stomp'?100:200,method);
  else if(method==='stomp'){
-  if(e.kind==='winged'){e.kind='cabbage';e.vx=-20;e.homeX=e.x;e.homeY=e.y;e.patrolLeft=Math.max(0,e.x-48);e.patrolRight=Math.min(game.level.width,e.x+e.w+48);delete e.brain;e.aiWarning=false;e.intent='dewing';}
+  if(e.kind==='winged'){e.state='stunned';e.vx=0;e.vy=Math.max(0,e.vy||0);e.timer=0;e.grounded=false;delete e.brain;e.aiWarning=false;e.intent='stunned-fall';}
   else if(['cabbage','walnut','spike'].includes(e.kind)){e.state='shell';e.vx=0;e.timer=0;}
  }
  return true;
 }
 export function updateEnemies(game,dt,oldBottom){
  const p=game.p;
- for(const e of game.enemies){prepareEnemyHealth(e);if(e.dead)continue;e.hitFlash=Math.max(0,e.hitFlash-dt);if(!['rolling','shell'].includes(e.state)&&!e.brain?.engaged&&e.brain?.mode!=='return'&&Math.abs(e.x-p.x)>320)continue;
+ for(const e of game.enemies){prepareEnemyHealth(e);if(e.dead)continue;e.hitFlash=Math.max(0,e.hitFlash-dt);if(!['rolling','shell','stunned'].includes(e.state)&&!e.brain?.engaged&&e.brain?.mode!=='return'&&Math.abs(e.x-p.x)>320)continue;
   e.grace=Math.max(0,(e.grace||0)-dt);e.phase=(e.phase||0)+dt;e.homeX??=e.x;e.homeY??=e.y;
   planGroundEnemy(game,e,dt);if(e.kind==='corn')positionCorn(game,e,dt);
-  if(['fish','jelly','cloud','winged'].includes(e.kind)){
+  if(['fish','jelly','cloud','winged'].includes(e.kind)&&e.state!=='stunned'){
    moveFlyer(game,e,dt);
   }else if(e.kind==='anemone')moveAquaticPlant(game,e,dt);
   else if(e.kind==='trap')moveTrap(game,e,dt);
@@ -55,6 +55,11 @@ export function updateEnemies(game,dt,oldBottom){
    }
   }
   if(e.state==='shell'){e.timer+=dt;if(e.timer>=9){e.state='walk';e.vx=-20;e.timer=0;e.homeX=e.x;e.patrolLeft=Math.max(0,e.x-48);e.patrolRight=Math.min(game.level.width,e.x+e.w+48);delete e.brain;}}
+  if(e.state==='stunned'){
+   e.vx=0;e.aiWarning=false;e.intent=e.grounded?'stunned':'stunned-fall';
+   if(e.grounded)e.timer+=dt;
+   if(e.timer>=9){e.state='walk';e.timer=0;e.vy=0;e.homeX=e.x;e.homeY=e.y;e.flightHomeSet=false;delete e.brain;e.intent='recover-flight';}
+  }
   if(e.state==='rolling'){
    for(const other of game.enemies)if(other!==e&&enemyActive(other)&&overlap(e,other)){defeat(game,other);if(other.state==='rolling')e.dead=true;}
    for(const gate of game.gates)if(!gate.open&&overlap({...e,x:e.x-3,w:e.w+6},gate)){gate.open=true;e.vx=-e.vx;game.score+=300;}
@@ -64,7 +69,8 @@ export function updateEnemies(game,dt,oldBottom){
   if(stomp&&enemyShelled(e)){p.y=e.y-p.h;p.vy=-135;if(e.state==='rolling'){e.state='shell';e.vx=0;e.timer=0;e.grace=.15;}hurtEnemy(game,e,'stomp');continue;}
   if(p.star>0){if(stomp)game.emitSound?.(stompSound(e),e);defeat(game,e);continue;}
   if(stomp){p.y=e.y-p.h;p.vy=-135;hurtEnemy(game,e,'stomp');
-  }else if(e.state==='shell'){e.state='rolling';e.vx=(p.x<e.x?1:-1)*150;e.grace=.15;e.timer=0;}
+  }else if(e.state==='stunned'){/* An unconscious flyer cannot attack or be kicked into a rolling shell. */}
+  else if(e.state==='shell'){e.state='rolling';e.vx=(p.x<e.x?1:-1)*150;e.grace=.15;e.timer=0;}
   else if(e.grace<=0)game.damage();
  }
  // Generated actors expire; fixed level actors stay in snapshots for deterministic rollback.

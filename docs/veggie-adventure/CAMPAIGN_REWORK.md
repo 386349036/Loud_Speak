@@ -1,5 +1,7 @@
 # 后续28关调整记录
 
+更新：八世界关底小关现已统一缩短至2944px，其余24小关长度不变。下文为此前加长记录；当前关底改动见 [BOSS_ROUTES_AND_ALERTS_V2.md](BOSS_ROUTES_AND_ALERTS_V2.md)。
+
 2026-10-26，依据[第一世界总结](WORLD01_SUMMARY_AND_RULES.md)，仅本地实现，等待用户实际试玩。
 
 | 世界 | 长路线内容 | 原机制保留 |

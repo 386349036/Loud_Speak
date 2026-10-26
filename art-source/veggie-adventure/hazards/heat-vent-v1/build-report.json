@@ -1,0 +1,65 @@
+{
+  "tool": "built-in image_gen",
+  "sourceSize": [
+    1774,
+    887
+  ],
+  "cells": [
+    {
+      "start": 0,
+      "width": 443,
+      "left": 96,
+      "top": 645,
+      "right": 347,
+      "bottom": 861
+    },
+    {
+      "start": 443,
+      "width": 444,
+      "left": 99,
+      "top": 20,
+      "right": 361,
+      "bottom": 861
+    },
+    {
+      "start": 887,
+      "width": 443,
+      "left": 88,
+      "top": 16,
+      "right": 362,
+      "bottom": 861
+    },
+    {
+      "start": 1330,
+      "width": 444,
+      "left": 76,
+      "top": 16,
+      "right": 370,
+      "bottom": 861
+    }
+  ],
+  "crop": {
+    "left": 76,
+    "right": 370,
+    "top": 16,
+    "height": 846
+  },
+  "asset": {
+    "id": "hazard-heat-vent",
+    "path": "hazards/heat-vent-v1/atlas.png",
+    "width": 384,
+    "height": 192,
+    "anchor": [
+      192,
+      192
+    ],
+    "source": "hazards/heat-vent-v1/generated.png",
+    "stage": "heat-vent-v1",
+    "frameWidth": 96,
+    "frameHeight": 192,
+    "frames": 4,
+    "visualVerified": false
+  },
+  "sha256": "47d7e49b78e3bafb4bee1eb0d831f74e7ba642a6fda430b903b1c735bffc084f",
+  "collisionChanged": false
+}

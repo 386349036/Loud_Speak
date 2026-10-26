@@ -1,0 +1,11 @@
+Use case: stylized-concept.
+Asset type: six transparent PNG gameplay warning icons for a 32-bit pixel-art vegetable platform game, arranged in a precise THREE COLUMN by TWO ROW grid with equal square cells, isolated icons and generous equal transparent gutters, no borders or labels.
+The icons must be readable at 24x24 game pixels. Bold simple silhouettes, heavy near-black inner outlines plus a narrow pale ivory outer keyline that remains visible over busy dark green scenery, crisp pixel clusters, no blur or soft glow. Use warm yellow-orange and bright red for attack alerts, mint and lime green exclusively for the vulnerability alert. No characters, portraits, backgrounds, text, letters, digits or watermark.
+Exact cell order:
+Top LEFT: ground slam / shockwave warning. A chunky downward orange impact arrow hits a cracked ground line, with two bright red shock arcs spreading sideways.
+Top MIDDLE: jump-pounce warning. A thick orange parabolic arcing arrow curves up and then sharply down onto a small red landing crosshair.
+Top RIGHT: seed barrage warning. Three large golden seed-shaped projectiles spread diagonally outward from a small red launch burst, clear fan pattern.
+Bottom LEFT: horizontal charge warning. A bold RED arrow pointing right, with three strong golden speed streaks behind it, no other symbols.
+Bottom MIDDLE: vulnerable weak-point indicator. A vivid MINT GREEN downward arrow with a bright ivory center and dark outline, directly above a small lime four-point sparkle. It must clearly point DOWN onto a boss's head.
+Bottom RIGHT: danger landing marker. A compact red-orange oval target ring on the ground with four thick inward ticks, bright ivory edging and a tiny downward orange chevron above it. Flat side elevation ground target, not perspective scenery.
+All six icons occupy their own equal square cell and must not touch adjacent cells. Maintain consistent visual weight, shared pixel size and style. Production-quality console pixel sprite icons with genuine transparent alpha around every silhouette. This is a new PNG icon sheet, not a screenshot or user interface mockup.

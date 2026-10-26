@@ -5,6 +5,7 @@ export function frameAt(clip,elapsed){const n=Math.floor(Math.max(0,elapsed)*cli
 export function playerClip(game){const p=game.p;if(game.mode==='dead'||game.mode==='gameover')return 'death';if(game.mode==='won')return 'victory';if(p.hurt>1.15)return 'hurt';if(p.form===2&&p.shotCooldown>.02)return 'throw';if(p.crouch)return 'crouch';if(p.inWater)return 'swim';if(!p.grounded)return p.vy<0?'jump-rise':'jump-fall';return Math.abs(p.vx)>4?'run':'idle';}
 export function enemyClip(e){
  if(e.dead)return e.kind==='mushroom'&&e.defeatedBy==='stomp'?'flatten':e.kind==='bolt'?'fall':'hit';
+ if(e.state==='stunned')return e.timer>=8?'wake':'shell-idle';
  if(e.state==='rolling')return 'shell-slide';if(e.state==='shell')return e.timer>=8?'wake':'shell-idle';
  switch(e.kind){
  case 'anemone':return e.plantPhase==='windup'?'windup':e.plantPhase==='attack'?'attack':'idle';
@@ -46,11 +47,11 @@ export class AnimationPlayer{
   this.lastTime=game.time;this.time+=dt;this.ghosts=this.ghosts.filter(g=>(g.elapsed+=dt)<.5);this.effects=this.effects.filter(e=>(e.elapsed+=dt)<.5);
   const p=game.p,clip=playerClip(game),rate=clip==='run'?Math.max(.35,Math.min(1,Math.abs(p.vx)/112)):1;this.track(p,'P01-'+p.form,clip,dt*rate);
   const live=new Set([p,'boss','N01','N02']);
-  for(const e of game.enemies){const old=this.previous.get(e);let actor=ENEMY_ART[e.kind],clip=enemyClip(e);live.add(e);
+  for(const e of game.enemies){const old=this.previous.get(e);let actor=e.kind==='winged'&&e.state==='stunned'?'E02':ENEMY_ART[e.kind],clip=enemyClip(e);live.add(e);
    if(old&&!old.dead&&e.dead)this.ghosts.push({actor,clip,x:e.x,y:e.y,w:e.w,h:e.h,flip:enemyFacing(e)<0,elapsed:0});
    let track=this.tracks.get(e);
    if(e.dead)track=this.track(e,actor,clip,dt);
-   else if(old&&old.kind==='winged'&&e.kind==='cabbage')track=this.track(e,'E11','lose-wings',0,'transition');
+   else if(old&&old.state!=='stunned'&&e.state==='stunned')track=this.track(e,actor,'retract',0,'transition');
    else if(old&&old.state!=='shell'&&e.state==='shell')track=this.track(e,actor,'retract',0,'transition');
    else if(old&&!old.grounded&&e.grounded&&e.state==='walk'&&['spike','leaper'].includes(e.kind))track=this.track(e,actor,e.kind==='spike'?'unfold':'splash',0,'transition');
    else if(track?.token==='transition'&&track.elapsed<.35){track.elapsed+=dt;}

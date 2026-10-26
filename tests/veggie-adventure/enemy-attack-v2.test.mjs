@@ -2,6 +2,7 @@ import test from 'node:test';import assert from 'node:assert/strict';
 import {Game,STEP,overlap} from '../../public/games/veggie-adventure/js/core/game.mjs';
 import {updateEnemies,hurtEnemy} from '../../public/games/veggie-adventure/js/core/enemies.mjs';
 import {updateDangers} from '../../public/games/veggie-adventure/js/core/environment.mjs';
+import {beginShellAttack} from '../../public/games/veggie-adventure/js/core/enemy-attacks.mjs';
 function scene(kind,dir=1){const g=new Game();Object.assign(g.level,{width:600,exit:580,platforms:[{x:0,y:208,w:600,h:32}],water:[],hazards:[]});g.blocks=[];g.items=[];g.movers=[];g.gates=[];g.turrets=[];g.boss=null;g.enemies=[{id:0,kind,x:240,y:194,w:14,h:14,vx:0,vy:0,state:'walk',timer:0,phase:0,grace:0,homeX:240,homeY:194,grounded:true,patrolLeft:160,patrolRight:336}];g.p.x=240+dir*72;g.p.y=194;g.damage=()=>{};return g;}
 const tick=g=>{g.time+=STEP;updateEnemies(g,STEP,0);};
 
@@ -20,11 +21,30 @@ test('dash still stops at walls and safe landing buffers',()=>{
  }
 });
 
-test('spike-shell fires only one three-thorn fan per exclamation, mirrored toward the hero',()=>{
+test('spike-shell fires exactly one aimed thorn per exclamation and respects the existing cooldown',()=>{
  for(const dir of [-1,1]){const g=scene('spike',dir),e=g.enemies[0];for(let n=0;n<120&&!e.aiWarning;n++)tick(g);
-  assert.equal(e.intent,'spine-volley');assert.equal(g.dangers.length,3);const [forward,up,diagonal]=g.dangers;assert.equal(forward.vx,dir*96);assert.equal(forward.vy,0);assert.equal(up.vx,0);assert.equal(up.vy,-96);assert.ok(Math.abs(diagonal.vx/diagonal.vy+dir)<1e-8);
-  for(let n=0;n<200;n++)tick(g);assert.equal(g.dangers.length,3);assert.equal(e.hp,2);assert.ok(e.brain.attackCooldown>0);
-  hurtEnemy(g,e,'stomp');assert.equal(e.hp,1);assert.equal(e.state,'shell');for(let n=0;n<120;n++)tick(g);assert.equal(g.dangers.length,3);
+  assert.equal(e.intent,'spine-volley');assert.equal(g.dangers.length,1);const [thorn]=g.dangers;assert.equal(thorn.vx,dir*96);assert.equal(thorn.vy,0);
+  for(let n=0;n<200;n++)tick(g);assert.equal(g.dangers.length,1);assert.equal(e.hp,2);assert.ok(e.brain.attackCooldown>0);
+  hurtEnemy(g,e,'stomp');assert.equal(e.hp,1);assert.equal(e.state,'shell');for(let n=0;n<120;n++)tick(g);assert.equal(g.dangers.length,1);
+ }
+});
+
+test('the single thorn aims at the current hero center in all directions and keeps that straight trajectory',()=>{
+ for(const [dx,dy] of [[72,0],[-72,0],[60,-32],[-60,-32],[60,32],[-60,32],[0,-48],[0,48],[0,0]]){
+  const g=scene('spike'),e=g.enemies[0];g.p.x=e.x+e.w/2+dx-g.p.w/2;g.p.y=e.y+e.h/2+dy-g.p.h/2;
+  beginShellAttack(g,e,e.brain={},dx<0?-1:1);assert.equal(g.dangers.length,1);const d=g.dangers[0];assert.ok(Math.abs(Math.hypot(d.vx,d.vy)-96)<1e-8);assert.ok(Number.isFinite(d.x)&&Number.isFinite(d.y));
+  if(dx||dy){assert.ok(Math.abs(d.vx*dy-d.vy*dx)<1e-7);assert.ok(d.vx*dx+d.vy*dy>0);}
+  const [vx,vy]=[d.vx,d.vy];g.p.x=10;g.p.y=40;updateDangers(g,STEP);assert.equal(d.vx,vx);assert.equal(d.vy,vy);
+ }
+});
+
+test('one aimed thorn really hits every hero form on either side and is stopped by an intervening wall',()=>{
+ for(const form of [0,1,2])for(const dir of [-1,1])for(const blocked of [false,true]){
+  const g=scene('spike',dir),e=g.enemies[0];g.p.form=form;g.resizePlayer();let hits=0;g.damage=()=>hits++;
+  beginShellAttack(g,e,e.brain={},dir);g.enemies=[];assert.equal(g.dangers.length,1);
+  if(blocked)g.blocks=[{x:dir>0?e.x+36:e.x-36,y:176,w:16,h:32,kind:'brick'}];
+  for(let n=0;n<300&&g.dangers.length;n++)updateDangers(g,STEP);
+  assert.equal(hits,blocked?0:1,`${form}/${dir}/wall=${blocked}`);assert.equal(g.dangers.length,0);
  }
 });
 

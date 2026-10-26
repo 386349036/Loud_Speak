@@ -1,7 +1,6 @@
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
 const base=(process.argv[2]||'').replace(/\/$/,''),expected=process.argv[3];if(!base||!expected)throw Error('Usage: node verify-deployment.cjs <base-url> <full-commit>');
-const digest=b=>crypto.createHash('sha256').update(b).digest('hex');
-const fileDigest=(file,b)=>digest(/\.(mjs|js|css|html|json)$/.test(file)?Buffer.from(b.toString('utf8').replace(/\r\n/g,'\n')):b);
+const fileDigest=require('./file-digest.cjs');
 async function get(url){const r=await fetch(base+url,{signal:AbortSignal.timeout(15000)});if(!r.ok)throw Error(url+': HTTP '+r.status);return Buffer.from(await r.arrayBuffer());}
 (async()=>{const home=(await get('/')).toString();if(!home.includes('id="open-veggie-adventure"'))throw Error('Homepage game entry missing');const health=JSON.parse(await get('/api/health'));if(!health.ok)throw Error('Health failed');const version=JSON.parse(await get('/deployment.json'));if(version.commit!==expected)throw Error('Version mismatch '+version.commit);await get('/games/veggie-adventure/');
 const prefix='/games/veggie-adventure/',local=path.resolve(__dirname,'../../public/games/veggie-adventure'),manifestBytes=await get(prefix+'assets/manifest.json');if(fileDigest('manifest.json',manifestBytes)!==fileDigest('manifest.json',fs.readFileSync(path.join(local,'assets/manifest.json'))))throw Error('Manifest mismatch');

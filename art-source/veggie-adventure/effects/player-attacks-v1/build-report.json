@@ -1,0 +1,68 @@
+{
+  "tool": "built-in image_gen",
+  "assets": [
+    {
+      "id": "player-shot-small",
+      "path": "effects/player-attacks-v1/small.png",
+      "width": 96,
+      "height": 96,
+      "anchor": [
+        48,
+        48
+      ],
+      "stage": "player-attacks-v1",
+      "visualVerified": false,
+      "sources": [
+        "art-source\\veggie-adventure\\effects\\player-attacks-v1\\small\\generated.png"
+      ],
+      "crop": {
+        "left": 256,
+        "top": 435,
+        "width": 760,
+        "height": 427
+      }
+    },
+    {
+      "id": "player-shot-large",
+      "path": "effects/player-attacks-v1/large.png",
+      "width": 96,
+      "height": 96,
+      "anchor": [
+        48,
+        48
+      ],
+      "stage": "player-attacks-v1",
+      "visualVerified": false,
+      "sources": [
+        "art-source\\veggie-adventure\\effects\\player-attacks-v1\\large\\generated.png"
+      ],
+      "crop": {
+        "left": 20,
+        "top": 221,
+        "width": 1220,
+        "height": 833
+      }
+    },
+    {
+      "id": "player-shot-lightning",
+      "path": "effects/player-attacks-v1/lightning.png",
+      "width": 96,
+      "height": 96,
+      "anchor": [
+        48,
+        48
+      ],
+      "stage": "player-attacks-v1",
+      "visualVerified": false,
+      "sources": [
+        "art-source\\veggie-adventure\\effects\\player-attacks-v1\\lightning\\generated.png"
+      ],
+      "crop": {
+        "left": 57,
+        "top": 307,
+        "width": 1151,
+        "height": 716
+      }
+    }
+  ]
+}

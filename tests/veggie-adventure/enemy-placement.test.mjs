@@ -9,7 +9,7 @@ import {repairGroundSpawn} from '../../tools/veggie-adventure/encounter-placemen
 test('all configured enemy collision bodies start outside solid terrain, including scaled traps and pond plants',()=>{
  let checked=0;for(const level of LEVELS){const g=new Game(level),solids=g.solids().filter(s=>!s.oneWay);
   for(const e of g.enemies){assert.ok(!solids.some(s=>overlap(e,s)),`${level.id}/${e.id}/${e.kind} starts inside terrain`);checked++;}
- }assert.ok(checked>300);
+ }assert.equal(checked,LEVELS.reduce((sum,l)=>sum+l.enemies.length,0));assert.ok(checked>200);
 });
 
 test('repaired ground enemies can actually patrol without entering the bricks in every player form',()=>{

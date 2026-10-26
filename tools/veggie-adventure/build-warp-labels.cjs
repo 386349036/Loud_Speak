@@ -16,6 +16,12 @@ async function build(){
   const entry={id,path:file,width:48,height:20,anchor:[24,20],label,stage:'warp-labels-v1',source:'ui/warp-labels-v1/generated-glyphs.png',visualVerified:false},existing=manifest.assets.findIndex(a=>a.id===id);if(existing<0)manifest.assets.push(entry);else manifest.assets[existing]=entry;
   report.push({id,path:file,label,sha256:crypto.createHash('sha256').update(png).digest('hex')});
  }
- manifest.assets.sort((a,b)=>a.id.localeCompare(b.id));fs.writeFileSync(path.join(base,'manifest.json'),JSON.stringify(manifest,null,2)+'\n');fs.writeFileSync(path.join(source,'build-report.json'),JSON.stringify({tool:'built-in image_gen',method:'Generated number glyphs, deterministic monospaced PNG assembly; no font substitution',sourceSize:[info.width,info.height],cells,scale,labels:report,visualVerified:false},null,2)+'\n');console.log('Built 32 transparent stage-number PNGs from generated glyphs');
+ const digits=[];fs.mkdirSync(path.join(base,'ui/warp-digits-v1'),{recursive:true});
+ for(let stage=1;stage<=4;stage++){
+  const label=String(stage),g=glyphs.get(label),id='warp-stage-'+stage,file='ui/warp-digits-v1/'+label+'.png';
+  const png=await sharp({create:{width:16,height:20,channels:4,background:'#00000000'}}).composite([{input:g.png,left:Math.floor((16-g.w)/2),top:19-g.h}]).png().toBuffer();fs.writeFileSync(path.join(base,file),png);
+  const entry={id,path:file,width:16,height:20,anchor:[8,20],label,stage:'warp-digits-v1',source:'ui/warp-labels-v1/generated-glyphs.png',visualVerified:false},index=manifest.assets.findIndex(a=>a.id===id);if(index<0)manifest.assets.push(entry);else manifest.assets[index]=entry;digits.push({...entry,sha256:crypto.createHash('sha256').update(png).digest('hex')});
+ }
+ manifest.assets.sort((a,b)=>a.id.localeCompare(b.id));fs.writeFileSync(path.join(base,'manifest.json'),JSON.stringify(manifest,null,2)+'\n');fs.writeFileSync(path.join(source,'build-report.json'),JSON.stringify({tool:'built-in image_gen',method:'Generated number glyphs, deterministic monospaced PNG assembly; no font substitution',sourceSize:[info.width,info.height],cells,scale,labels:report,digits,visualVerified:false},null,2)+'\n');console.log('Built 32 legacy labels and four transparent stage digits');
 }
 build().catch(e=>{console.error(e);process.exitCode=1;});

@@ -1,0 +1,122 @@
+{
+  "before": {
+    "at": "2026-10-26T13:57:28.471Z",
+    "protocol": "unsupported",
+    "index": {
+      "status": 200,
+      "ms": 758.2090999999999,
+      "cache": "no-store"
+    },
+    "manifest": {
+      "status": 200,
+      "wireBytes": 130999,
+      "decodedBytes": 130999,
+      "encoding": "identity"
+    },
+    "main": {
+      "status": 200,
+      "wireBytes": 11403,
+      "decodedBytes": 11403,
+      "encoding": "identity",
+      "type": "text/javascript; charset=utf-8"
+    },
+    "imageBatch": {
+      "count": 229,
+      "bytes": 38893480,
+      "ms": 137460.8659,
+      "failed": []
+    },
+    "repeat": {
+      "status": 304,
+      "bytes": 0
+    },
+    "pngFallback": {
+      "status": 200,
+      "type": "image/png"
+    },
+    "health": {
+      "status": 200,
+      "cache": "no-store"
+    },
+    "admin": 403
+  },
+  "after": {
+    "at": "2026-10-26T14:08:50.939Z",
+    "protocol": "h2",
+    "index": {
+      "status": 200,
+      "ms": 501.7891,
+      "cache": "public, max-age=0, must-revalidate"
+    },
+    "manifest": {
+      "status": 200,
+      "wireBytes": 7396,
+      "decodedBytes": 131040,
+      "encoding": "gzip"
+    },
+    "main": {
+      "status": 200,
+      "wireBytes": 4557,
+      "decodedBytes": 12142,
+      "encoding": "gzip",
+      "type": "text/javascript"
+    },
+    "imageBatch": {
+      "scope": "first-stage",
+      "count": 155,
+      "bytes": 3596094,
+      "ms": 23119.1931,
+      "failed": []
+    },
+    "repeat": {
+      "status": 304,
+      "bytes": 0,
+      "cache": "public, max-age=31536000, immutable"
+    },
+    "pngFallback": {
+      "status": 200,
+      "type": "image/png"
+    },
+    "health": {
+      "status": 200,
+      "cache": "no-store"
+    },
+    "admin": 403
+  },
+  "integrity": {
+    "originalHashesVerified": 229,
+    "checks": [
+      {
+        "id": "W01-far",
+        "lossless": true
+      },
+      {
+        "id": "anim-P01-0",
+        "lossless": true
+      },
+      {
+        "id": "W01-kit-0",
+        "lossless": true
+      }
+    ],
+    "range": {
+      "status": 206,
+      "bytes": 32,
+      "range": "bytes 0-31/758258"
+    }
+  },
+  "scope": "First-stage image payload; H1 six-worker transfer probe, not a timed user-browser cold start",
+  "imageByteReduction": 0.9075399270006181,
+  "productionBase": "2d44a81e6b66819c50b6320aca2a532cf88581a0",
+  "overlay": "performance only",
+  "backup": "/opt/loud/operations/performance-20261026T140640Z",
+  "browser": {
+    "firstStageReady": true,
+    "world8Ready": true,
+    "consoleErrors": []
+  },
+  "tests": {
+    "pass": 250,
+    "fail": 0
+  }
+}

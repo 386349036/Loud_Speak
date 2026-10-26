@@ -1039,44 +1039,82 @@
       "visualVerified": false
     },
     {
-      "id": "boss-cue-hop",
-      "path": "effects/boss-cues-v1/hop.png",
+      "id": "boss-cue-dash",
+      "path": "effects/boss-cues-v2/dash.png",
       "width": 96,
       "height": 96,
       "anchor": [
         48,
         96
-      ]
+      ],
+      "source": "effects/boss-cues-v2/generated.png",
+      "stage": "boss-cues-v2",
+      "visualVerified": false
+    },
+    {
+      "id": "boss-cue-hop",
+      "path": "effects/boss-cues-v2/hop.png",
+      "width": 96,
+      "height": 96,
+      "anchor": [
+        48,
+        96
+      ],
+      "source": "effects/boss-cues-v2/generated.png",
+      "stage": "boss-cues-v2",
+      "visualVerified": false
     },
     {
       "id": "boss-cue-seeds",
-      "path": "effects/boss-cues-v1/seeds.png",
+      "path": "effects/boss-cues-v2/seeds.png",
       "width": 96,
       "height": 96,
       "anchor": [
         48,
         96
-      ]
+      ],
+      "source": "effects/boss-cues-v2/generated.png",
+      "stage": "boss-cues-v2",
+      "visualVerified": false
     },
     {
       "id": "boss-cue-slam",
-      "path": "effects/boss-cues-v1/slam.png",
+      "path": "effects/boss-cues-v2/slam.png",
       "width": 96,
       "height": 96,
       "anchor": [
         48,
         96
-      ]
+      ],
+      "source": "effects/boss-cues-v2/generated.png",
+      "stage": "boss-cues-v2",
+      "visualVerified": false
+    },
+    {
+      "id": "boss-cue-target",
+      "path": "effects/boss-cues-v2/target.png",
+      "width": 96,
+      "height": 96,
+      "anchor": [
+        48,
+        96
+      ],
+      "source": "effects/boss-cues-v2/generated.png",
+      "stage": "boss-cues-v2",
+      "visualVerified": false
     },
     {
       "id": "boss-cue-weak",
-      "path": "effects/boss-cues-v1/weak.png",
+      "path": "effects/boss-cues-v2/weak.png",
       "width": 96,
       "height": 96,
       "anchor": [
         48,
         96
-      ]
+      ],
+      "source": "effects/boss-cues-v2/generated.png",
+      "stage": "boss-cues-v2",
+      "visualVerified": false
     },
     {
       "id": "E01-1",
@@ -1316,6 +1354,163 @@
       "id": "forest-mid",
       "path": "prototype/forest-mid.png",
       "stage": "prototype-runtime",
+      "visualVerified": false
+    },
+    {
+      "id": "fx-fallback-burst",
+      "path": "objects/object-polish-v1/fx-fallback-burst.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "runtime/animations/FX01.png",
+      "stage": "object-polish-v1",
+      "visualVerified": true,
+      "visualReview": "docs/veggie-adventure/qa-object-png/review.json"
+    },
+    {
+      "id": "fx-fallback-fire",
+      "path": "objects/object-polish-v1/fx-fallback-fire.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "runtime/animations/FX01.png",
+      "stage": "object-polish-v1",
+      "visualVerified": true,
+      "visualReview": "docs/veggie-adventure/qa-object-png/review.json"
+    },
+    {
+      "id": "fx-fallback-seed",
+      "path": "objects/object-polish-v1/fx-fallback-seed.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "runtime/animations/FX01.png",
+      "stage": "object-polish-v1",
+      "visualVerified": true,
+      "visualReview": "docs/veggie-adventure/qa-object-png/review.json"
+    },
+    {
+      "id": "fx-fallback-wave",
+      "path": "objects/object-polish-v1/fx-fallback-wave.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "source": "runtime/animations/FX01.png",
+      "stage": "object-polish-v1",
+      "visualVerified": true,
+      "visualReview": "docs/veggie-adventure/qa-object-png/review.json"
+    },
+    {
+      "id": "hazard-chain-anchor",
+      "path": "objects/object-polish-v1/hazard-chain-anchor.png",
+      "width": 64,
+      "height": 64,
+      "anchor": [
+        32,
+        64
+      ],
+      "source": "objects/object-polish-v1/chain/generated.png",
+      "stage": "object-polish-v1",
+      "visualVerified": true,
+      "visualReview": "docs/veggie-adventure/qa-object-png/review.json"
+    },
+    {
+      "id": "hazard-chain-ball",
+      "path": "objects/object-polish-v1/hazard-chain-ball.png",
+      "width": 64,
+      "height": 64,
+      "anchor": [
+        32,
+        64
+      ],
+      "source": "objects/object-polish-v1/chain/generated.png",
+      "stage": "object-polish-v1",
+      "visualVerified": true,
+      "visualReview": "docs/veggie-adventure/qa-object-png/review.json"
+    },
+    {
+      "id": "hazard-chain-link",
+      "path": "objects/object-polish-v1/hazard-chain-link.png",
+      "width": 64,
+      "height": 64,
+      "anchor": [
+        32,
+        64
+      ],
+      "source": "objects/object-polish-v1/chain/generated.png",
+      "stage": "object-polish-v1",
+      "visualVerified": true,
+      "visualReview": "docs/veggie-adventure/qa-object-png/review.json"
+    },
+    {
+      "id": "hazard-falling-rock",
+      "path": "objects/object-polish-v1/hazard-falling-rock.png",
+      "width": 64,
+      "height": 64,
+      "anchor": [
+        32,
+        64
+      ],
+      "source": "objects/object-polish-v1/rock/generated.png",
+      "stage": "object-polish-v1",
+      "visualVerified": true,
+      "visualReview": "docs/veggie-adventure/qa-object-png/review.json"
+    },
+    {
+      "id": "hazard-ground-spikes",
+      "path": "hazards/ground-spikes-v1/tile.png",
+      "width": 96,
+      "height": 48,
+      "anchor": [
+        48,
+        48
+      ],
+      "source": "hazards/ground-spikes-v1/generated.png",
+      "stage": "ground-spikes-v1",
+      "visualVerified": false
+    },
+    {
+      "id": "hazard-heat-vent",
+      "path": "hazards/heat-vent-v1/atlas.png",
+      "width": 384,
+      "height": 192,
+      "anchor": [
+        192,
+        192
+      ],
+      "source": "hazards/heat-vent-v1/generated.png",
+      "stage": "heat-vent-v1",
+      "frameWidth": 96,
+      "frameHeight": 192,
+      "frames": 4,
+      "visualVerified": false
+    },
+    {
+      "id": "hazard-seed-turret",
+      "path": "hazards/seed-turret-v1/atlas.png",
+      "width": 288,
+      "height": 144,
+      "anchor": [
+        144,
+        144
+      ],
+      "source": "hazards/seed-turret-v1/generated.png",
+      "stage": "seed-turret-v1",
+      "frameWidth": 96,
+      "frameHeight": 144,
+      "frames": 3,
       "visualVerified": false
     },
     {
@@ -1847,6 +2042,48 @@
       "cell": 9
     },
     {
+      "id": "platform-brace",
+      "path": "objects/object-polish-v1/platform-brace.png",
+      "width": 64,
+      "height": 64,
+      "anchor": [
+        32,
+        64
+      ],
+      "source": "objects/object-polish-v1/support/generated.png",
+      "stage": "object-polish-v1",
+      "visualVerified": true,
+      "visualReview": "docs/veggie-adventure/qa-object-png/review.json"
+    },
+    {
+      "id": "platform-cracked-brace",
+      "path": "objects/object-polish-v1/platform-cracked-brace.png",
+      "width": 64,
+      "height": 64,
+      "anchor": [
+        32,
+        64
+      ],
+      "source": "objects/object-polish-v1/support/generated.png",
+      "stage": "object-polish-v1",
+      "visualVerified": true,
+      "visualReview": "docs/veggie-adventure/qa-object-png/review.json"
+    },
+    {
+      "id": "platform-vine",
+      "path": "objects/object-polish-v1/platform-vine.png",
+      "width": 64,
+      "height": 64,
+      "anchor": [
+        32,
+        64
+      ],
+      "source": "objects/object-polish-v1/support/generated.png",
+      "stage": "object-polish-v1",
+      "visualVerified": true,
+      "visualReview": "docs/veggie-adventure/qa-object-png/review.json"
+    },
+    {
       "id": "projectile-pea",
       "path": "effects/combat-rewards-v1/projectile-pea.png",
       "width": 48,
@@ -1899,6 +2136,20 @@
       "cell": 0,
       "stage": "combat-rewards-runtime-v1",
       "visualVerified": false
+    },
+    {
+      "id": "shell-gate",
+      "path": "objects/object-polish-v1/shell-gate.png",
+      "width": 64,
+      "height": 128,
+      "anchor": [
+        32,
+        128
+      ],
+      "source": "objects/object-polish-v1/gate/generated.png",
+      "stage": "object-polish-v1",
+      "visualVerified": true,
+      "visualReview": "docs/veggie-adventure/qa-object-png/review.json"
     },
     {
       "id": "star-shield-v1",
@@ -3745,6 +3996,135 @@
       "stage": "warp-labels-v1",
       "source": "ui/warp-labels-v1/generated-glyphs.png",
       "visualVerified": false
+    },
+    {
+      "id": "warp-stage-1",
+      "path": "ui/warp-digits-v1/1.png",
+      "width": 16,
+      "height": 20,
+      "anchor": [
+        8,
+        20
+      ],
+      "label": "1",
+      "stage": "warp-digits-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
+      "visualVerified": false
+    },
+    {
+      "id": "warp-stage-2",
+      "path": "ui/warp-digits-v1/2.png",
+      "width": 16,
+      "height": 20,
+      "anchor": [
+        8,
+        20
+      ],
+      "label": "2",
+      "stage": "warp-digits-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
+      "visualVerified": false
+    },
+    {
+      "id": "warp-stage-3",
+      "path": "ui/warp-digits-v1/3.png",
+      "width": 16,
+      "height": 20,
+      "anchor": [
+        8,
+        20
+      ],
+      "label": "3",
+      "stage": "warp-digits-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
+      "visualVerified": false
+    },
+    {
+      "id": "warp-stage-4",
+      "path": "ui/warp-digits-v1/4.png",
+      "width": 16,
+      "height": 20,
+      "anchor": [
+        8,
+        20
+      ],
+      "label": "4",
+      "stage": "warp-digits-v1",
+      "source": "ui/warp-labels-v1/generated-glyphs.png",
+      "visualVerified": false
+    },
+    {
+      "id": "water-body",
+      "path": "objects/object-polish-v1/water-body.png",
+      "width": 96,
+      "height": 96,
+      "anchor": [
+        48,
+        96
+      ],
+      "source": "objects/object-polish-v1/water/generated.png",
+      "stage": "object-polish-v1",
+      "visualVerified": true,
+      "visualReview": "docs/veggie-adventure/qa-object-png/review.json"
+    },
+    {
+      "id": "water-surface",
+      "path": "objects/object-polish-v1/water-surface.png",
+      "width": 96,
+      "height": 96,
+      "anchor": [
+        48,
+        96
+      ],
+      "source": "objects/object-polish-v1/water/generated.png",
+      "stage": "object-polish-v1",
+      "visualVerified": true,
+      "visualReview": "docs/veggie-adventure/qa-object-png/review.json"
+    },
+    {
+      "id": "player-shot-small",
+      "path": "effects/player-attacks-v1/small.png",
+      "width": 96,
+      "height": 96,
+      "anchor": [
+        48,
+        48
+      ],
+      "stage": "player-attacks-v1",
+      "visualVerified": false,
+      "sources": [
+        "art-source\\veggie-adventure\\effects\\player-attacks-v1\\small\\generated.png"
+      ]
+    },
+    {
+      "id": "player-shot-large",
+      "path": "effects/player-attacks-v1/large.png",
+      "width": 96,
+      "height": 96,
+      "anchor": [
+        48,
+        48
+      ],
+      "stage": "player-attacks-v1",
+      "visualVerified": false,
+      "sources": [
+        "art-source\\veggie-adventure\\effects\\player-attacks-v1\\large\\generated.png"
+      ]
+    },
+    {
+      "id": "player-shot-lightning",
+      "path": "effects/player-attacks-v1/lightning.png",
+      "width": 96,
+      "height": 96,
+      "anchor": [
+        48,
+        48
+      ],
+      "stage": "player-attacks-v1",
+      "visualVerified": false,
+      "sources": [
+        "art-source\\veggie-adventure\\effects\\player-attacks-v1\\lightning\\generated.png"
+      ]
     }
   ],
   "animations": {

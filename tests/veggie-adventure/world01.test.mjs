@@ -1,3 +1,4 @@
+import fs from 'node:fs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {Game,STEP} from '../../public/games/veggie-adventure/js/core/game.mjs';
@@ -91,9 +92,10 @@ test('expanded 1-4 arena keeps the player visible at both edges and the hop land
  const camera=cameraX(level,{x:arenaX(1685)},b);assert.ok(arenaX(1664)-camera>=0&&arenaX(1664)+32-camera<=256);
 });
 
-test('1-4 experimental pits tolerate four takeoff timings in every standing form',()=>{
+test('the historical 1-4 experimental pits tolerate four takeoff timings in every standing form',()=>{
+ const historic=JSON.parse(fs.readFileSync(new URL('./fixtures/pre-boss-compact-layouts.json',import.meta.url))).find(l=>l.id==='1-4');
  for(const form of [0,1,2])for(const pit of [720,1056])for(const lead of [3,6,9,12]){
-  const l=structuredClone(level);l.enemies=[];l.items=[];l.boss=null;l.spawn={x:pit-96,y:194};
+  const l=structuredClone(historic);l.enemies=[];l.items=[];l.boss=null;l.spawn={x:pit-96,y:194};
   const g=new Game(l,{form});let launched=false,landed=false;
   for(let n=0;n<300;n++){
    const press=!launched&&g.p.grounded&&g.p.x+g.p.w>=pit-lead;

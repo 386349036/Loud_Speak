@@ -37,10 +37,10 @@ function chooseSkill(game,b){
  b.pattern=pattern;b.windupDuration=bossTiming(b).windup;b.head=pattern==='right-sweep'?1:0;
  b.targetX=predictedBossTarget(game,b);b.direction=p.x<b.x?-1:1;rememberBossAttack(b);phase(b,'windup');return true;
 }
-export function hurtBoss(game,method){
+export function hurtBoss(game,method,damage=1){
  const b=game.boss;if(!b||b.dead||!b.active)return false;
  if(!bossVulnerable(b)){b.blockFlash=.2;game.emitAnimation('boss-block',b);game.emitSound?.('boss-armor',b);return false;}
- b.hp--;game.score+=1000;b.invulnerable=0;b.hitFlash=.25;b.hits=0;game.emitAnimation('boss-hit',b);game.emitSound?.(method==='stomp'?'stomp-boss':'boss-hit',b);game.dangers=[];game.p.hurt=Math.max(game.p.hurt,1);
+ b.lastDamage=Math.min(b.hp,method==='fire'?Math.max(1,Math.min(4,Math.floor(damage)||1)):1);b.hp-=b.lastDamage;game.score+=1000;b.invulnerable=0;b.hitFlash=.25;b.hits=0;game.emitAnimation('boss-hit',b);game.emitSound?.(method==='stomp'?'stomp-boss':'boss-hit',b);game.dangers=[];game.p.hurt=Math.max(game.p.hurt,1);
  if(b.hp<=0){b.dead=true;b.phase='defeated';game.score+=3000;for(const e of game.enemies)e.dead=true;}
  else gardenRecovery(game,b);
  return true;

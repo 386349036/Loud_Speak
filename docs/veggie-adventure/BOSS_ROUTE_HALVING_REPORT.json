@@ -1,0 +1,249 @@
+{
+  "version": 1,
+  "scope": "1-4 through 8-4 only",
+  "levels": [
+    {
+      "id": "1-4",
+      "oldWidth": 5888,
+      "width": 2944,
+      "removed": 2944,
+      "splice": {
+        "from": 1600,
+        "to": 4544
+      },
+      "layoutVersion": 3,
+      "oldCounts": {
+        "blocks": 73,
+        "enemies": 12,
+        "items": 59
+      },
+      "counts": {
+        "blocks": 32,
+        "enemies": 4,
+        "items": 26
+      },
+      "arena": {
+        "left": 2576,
+        "right": 2864,
+        "ledges": 3
+      },
+      "repairs": [
+        {
+          "type": "blocks",
+          "index": 1,
+          "kind": "reward-clearance",
+          "before": {
+            "x": 560,
+            "y": 144
+          },
+          "after": {
+            "x": 560,
+            "y": 128
+          }
+        },
+        {
+          "type": "enemies",
+          "index": 1,
+          "kind": "cabbage",
+          "before": {
+            "x": 944
+          },
+          "after": {
+            "x": 914,
+            "patrolLeft": 896,
+            "patrolRight": 928
+          }
+        }
+      ]
+    },
+    {
+      "id": "2-4",
+      "oldWidth": 5888,
+      "width": 2944,
+      "removed": 2944,
+      "splice": {
+        "from": 1280,
+        "to": 4224
+      },
+      "layoutVersion": 3,
+      "oldCounts": {
+        "blocks": 69,
+        "enemies": 10,
+        "items": 50
+      },
+      "counts": {
+        "blocks": 26,
+        "enemies": 4,
+        "items": 24
+      },
+      "arena": {
+        "left": 2576,
+        "right": 2864,
+        "ledges": 3
+      },
+      "repairs": []
+    },
+    {
+      "id": "3-4",
+      "oldWidth": 5888,
+      "width": 2944,
+      "removed": 2944,
+      "splice": {
+        "from": 1280,
+        "to": 4224
+      },
+      "layoutVersion": 3,
+      "oldCounts": {
+        "blocks": 69,
+        "enemies": 10,
+        "items": 50
+      },
+      "counts": {
+        "blocks": 26,
+        "enemies": 4,
+        "items": 24
+      },
+      "arena": {
+        "left": 2576,
+        "right": 2864,
+        "ledges": 3
+      },
+      "repairs": []
+    },
+    {
+      "id": "4-4",
+      "oldWidth": 5888,
+      "width": 2944,
+      "removed": 2944,
+      "splice": {
+        "from": 1280,
+        "to": 4224
+      },
+      "layoutVersion": 4,
+      "oldCounts": {
+        "blocks": 33,
+        "enemies": 18,
+        "items": 50
+      },
+      "counts": {
+        "blocks": 16,
+        "enemies": 6,
+        "items": 24
+      },
+      "arena": {
+        "left": 2576,
+        "right": 2864,
+        "ledges": 3
+      },
+      "repairs": []
+    },
+    {
+      "id": "5-4",
+      "oldWidth": 5888,
+      "width": 2944,
+      "removed": 2944,
+      "splice": {
+        "from": 1280,
+        "to": 4224
+      },
+      "layoutVersion": 3,
+      "oldCounts": {
+        "blocks": 69,
+        "enemies": 7,
+        "items": 50
+      },
+      "counts": {
+        "blocks": 25,
+        "enemies": 3,
+        "items": 24
+      },
+      "arena": {
+        "left": 2576,
+        "right": 2864,
+        "ledges": 3
+      },
+      "repairs": []
+    },
+    {
+      "id": "6-4",
+      "oldWidth": 5888,
+      "width": 2944,
+      "removed": 2944,
+      "splice": {
+        "from": 1280,
+        "to": 4224
+      },
+      "layoutVersion": 3,
+      "oldCounts": {
+        "blocks": 69,
+        "enemies": 7,
+        "items": 50
+      },
+      "counts": {
+        "blocks": 26,
+        "enemies": 3,
+        "items": 24
+      },
+      "arena": {
+        "left": 2576,
+        "right": 2864,
+        "ledges": 3
+      },
+      "repairs": []
+    },
+    {
+      "id": "7-4",
+      "oldWidth": 5888,
+      "width": 2944,
+      "removed": 2944,
+      "splice": {
+        "from": 1280,
+        "to": 4224
+      },
+      "layoutVersion": 3,
+      "oldCounts": {
+        "blocks": 69,
+        "enemies": 10,
+        "items": 50
+      },
+      "counts": {
+        "blocks": 26,
+        "enemies": 4,
+        "items": 24
+      },
+      "arena": {
+        "left": 2576,
+        "right": 2864,
+        "ledges": 3
+      },
+      "repairs": []
+    },
+    {
+      "id": "8-4",
+      "oldWidth": 5888,
+      "width": 2944,
+      "removed": 2944,
+      "splice": {
+        "from": 1280,
+        "to": 4224
+      },
+      "layoutVersion": 3,
+      "oldCounts": {
+        "blocks": 69,
+        "enemies": 7,
+        "items": 50
+      },
+      "counts": {
+        "blocks": 25,
+        "enemies": 3,
+        "items": 24
+      },
+      "arena": {
+        "left": 2576,
+        "right": 2864,
+        "ledges": 3
+      },
+      "repairs": []
+    }
+  ]
+}

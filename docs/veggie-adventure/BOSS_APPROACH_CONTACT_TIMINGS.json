@@ -1,0 +1,149 @@
+{
+  "scope": "Normal physics with combat and item collection isolated; automated terrain/contact timing, not manual playthrough",
+  "rows": [
+    {
+      "id": "1-4",
+      "form": 0,
+      "priorSeconds": 23.42499999999931,
+      "seconds": 7.233333333333483
+    },
+    {
+      "id": "1-4",
+      "form": 1,
+      "priorSeconds": 23.408333333332646,
+      "seconds": 7.225000000000149
+    },
+    {
+      "id": "1-4",
+      "form": 2,
+      "priorSeconds": 23.408333333332646,
+      "seconds": 7.225000000000149
+    },
+    {
+      "id": "2-4",
+      "form": 0,
+      "priorSeconds": 23.091666666665997,
+      "seconds": 7.233333333333483
+    },
+    {
+      "id": "2-4",
+      "form": 1,
+      "priorSeconds": 23.083333333332664,
+      "seconds": 7.225000000000149
+    },
+    {
+      "id": "2-4",
+      "form": 2,
+      "priorSeconds": 23.083333333332664,
+      "seconds": 7.225000000000149
+    },
+    {
+      "id": "3-4",
+      "form": 0,
+      "priorSeconds": 23.816666666665956,
+      "seconds": 7.233333333333483
+    },
+    {
+      "id": "3-4",
+      "form": 1,
+      "priorSeconds": 23.808333333332623,
+      "seconds": 7.225000000000149
+    },
+    {
+      "id": "3-4",
+      "form": 2,
+      "priorSeconds": 23.808333333332623,
+      "seconds": 7.225000000000149
+    },
+    {
+      "id": "4-4",
+      "form": 0,
+      "priorSeconds": 23.958333333332615,
+      "seconds": 8.058333333333517
+    },
+    {
+      "id": "4-4",
+      "form": 1,
+      "priorSeconds": 23.991666666665946,
+      "seconds": 8.10000000000018
+    },
+    {
+      "id": "4-4",
+      "form": 2,
+      "priorSeconds": 23.991666666665946,
+      "seconds": 8.10000000000018
+    },
+    {
+      "id": "5-4",
+      "form": 0,
+      "priorSeconds": 23.77499999999929,
+      "seconds": 7.233333333333483
+    },
+    {
+      "id": "5-4",
+      "form": 1,
+      "priorSeconds": 24.1833333333326,
+      "seconds": 7.225000000000149
+    },
+    {
+      "id": "5-4",
+      "form": 2,
+      "priorSeconds": 24.1833333333326,
+      "seconds": 7.225000000000149
+    },
+    {
+      "id": "6-4",
+      "form": 0,
+      "priorSeconds": 23.091666666665997,
+      "seconds": 7.233333333333483
+    },
+    {
+      "id": "6-4",
+      "form": 1,
+      "priorSeconds": 23.083333333332664,
+      "seconds": 7.225000000000149
+    },
+    {
+      "id": "6-4",
+      "form": 2,
+      "priorSeconds": 23.083333333332664,
+      "seconds": 7.225000000000149
+    },
+    {
+      "id": "7-4",
+      "form": 0,
+      "priorSeconds": 23.44999999999931,
+      "seconds": 7.233333333333483
+    },
+    {
+      "id": "7-4",
+      "form": 1,
+      "priorSeconds": 23.44999999999931,
+      "seconds": 7.225000000000149
+    },
+    {
+      "id": "7-4",
+      "form": 2,
+      "priorSeconds": 23.44999999999931,
+      "seconds": 7.225000000000149
+    },
+    {
+      "id": "8-4",
+      "form": 0,
+      "priorSeconds": 23.458333333332643,
+      "seconds": 7.233333333333483
+    },
+    {
+      "id": "8-4",
+      "form": 1,
+      "priorSeconds": 23.441666666665977,
+      "seconds": 7.225000000000149
+    },
+    {
+      "id": "8-4",
+      "form": 2,
+      "priorSeconds": 23.441666666665977,
+      "seconds": 7.225000000000149
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "tool": "built-in image_gen",
+  "sourceSize": [
+    1774,
+    887
+  ],
+  "cells": [
+    {
+      "start": 0,
+      "width": 591,
+      "left": 26,
+      "top": 42,
+      "right": 557,
+      "bottom": 810
+    },
+    {
+      "start": 591,
+      "width": 591,
+      "left": 34,
+      "top": 42,
+      "right": 575,
+      "bottom": 810
+    },
+    {
+      "start": 1182,
+      "width": 592,
+      "left": 37,
+      "top": 77,
+      "right": 591,
+      "bottom": 810
+    }
+  ],
+  "crop": {
+    "left": 26,
+    "right": 590,
+    "top": 42,
+    "height": 769
+  },
+  "asset": {
+    "id": "hazard-seed-turret",
+    "path": "hazards/seed-turret-v1/atlas.png",
+    "width": 288,
+    "height": 144,
+    "anchor": [
+      144,
+      144
+    ],
+    "source": "hazards/seed-turret-v1/generated.png",
+    "stage": "seed-turret-v1",
+    "frameWidth": 96,
+    "frameHeight": 144,
+    "frames": 3,
+    "visualVerified": false
+  },
+  "sha256": "939c1e5670e6efda0cfa852dc8b31532f5e14955c80c47a67e1cfd6a621b1863",
+  "worldDraw": [
+    22,
+    34
+  ],
+  "collisionChanged": false
+}

@@ -1,5 +1,7 @@
 # 双端发布约定
 
+2026-10-26：外网已安装独立性能补丁，启用HTTP/2、游戏静态直传、gzip、无损WebP和内容版本缓存，并按场景加载。线上仍为2d44a81玩法版本。后续部署在激活新release前生成传输图片，校验器兼容派生deliveryVersion。详情、回滚路径及实测见 [GAME_DELIVERY_PERFORMANCE.md](GAME_DELIVERY_PERFORMANCE.md)。
+
 2026-10-25补充：公网HTTPS及自动续约已配置并验证，入口 https://35.221.134.170/ ，HTTP自动跳转；详见HTTPS.md。下方首次发布时的HTTP说明为历史记录。发布脚本保留现有TLS配置，不能覆盖为纯HTTP站点。
 
 2026-10-25 用户要求：以后本地和 Google Cloud 服务器都需要上线，二者同步发布同一版本。

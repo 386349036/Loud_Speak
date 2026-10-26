@@ -35,3 +35,15 @@ test('wide renderer draws terrain beyond the old 256px edge and scenery covers t
  assert.ok(draws.filter(d=>d.id===level.terrain+'-0').some(d=>d.x>600));
  const sky=draws.filter(d=>d.id===level.background);assert.ok(sky.some(d=>d.x<=0&&d.x+d.w>0));assert.ok(sky.some(d=>d.x<650&&d.x+d.w>=650));
 });
+
+// The fullscreen shell includes controls, but the renderer must measure only its canvas.
+test('touch rails resize the camera using the central canvas and respond to pointer changes',()=>{
+ const events={},mediaEvents={},classes=new Map(),canvas={getBoundingClientRect:()=>({width:580,height:390})};let coarse=true,clears=0,observed;
+ const media={get matches(){return coarse;},addEventListener:(k,f)=>mediaEvents[k]=f};
+ const host={classList:{toggle:(k,v)=>classes.set(k,v)},getBoundingClientRect:()=>({width:844,height:390})};
+ const win={matchMedia:()=>media,addEventListener:(k,f)=>events[k]=f,ResizeObserver:class{constructor(fn){this.fn=fn;}observe(target){observed=target;}}};
+ bindViewport(canvas,host,{window:win,document:{addEventListener(){}},onResize:()=>clears++});
+ assert.equal(classes.get('touch-layout'),true);assert.equal(observed,canvas);assert.equal(canvas.width,viewportSize(580,390).width*3);assert.equal(clears,1);
+ coarse=false;mediaEvents.change();assert.equal(classes.get('touch-layout'),false);
+ bindViewport(canvas,host,{window:win,document:{addEventListener(){}},forceTouch:true});assert.equal(classes.get('touch-layout'),true);
+});

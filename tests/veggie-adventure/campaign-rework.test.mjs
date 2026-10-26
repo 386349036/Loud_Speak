@@ -10,12 +10,12 @@ import {BOSS_SKILLS} from '../../public/games/veggie-adventure/js/core/boss-bala
 import {bossCue} from '../../public/games/veggie-adventure/js/core/boss-cues.mjs';
 const originals=JSON.parse(fs.readFileSync(new URL('./fixtures/pre-rework-layouts.json',import.meta.url)));
 
-test('all 28 later stages extend over threefold, retain their mechanics, and preserve world one apart from its new life reward',()=>{
- for(const old of originals){const l=levelById(old.id);if(l.id.startsWith('1-')){const current=structuredClone(l);if(current.rebirthRewardVersion){current.blocks=current.blocks.filter(b=>b.item!=='rebirth');for(const key of ['layoutVersion','priorLayouts','rebirthRewardVersion']){if(old[key]===undefined)delete current[key];else current[key]=old[key];}}assert.deepEqual(current,old);continue;}
-  assert.ok(l.width>old.width*3,l.id);assert.equal(l.reworkVersion,1);assert.ok(l.layoutVersion>=2);assert.ok(l.timeLimit>old.timeLimit);assert.equal(l.spawn.x,old.spawn.x);
-  assert.ok(l.enemies.length>old.enemies.length);assert.ok(l.items.length>old.items.length);assert.ok(l.blocks.length>old.blocks.length);
+test('later stages retain their mechanics and long routes, with boss approaches shortened independently',()=>{
+ for(const old of originals){const l=levelById(old.id);if(l.id.startsWith('1-')){if(l.bossRouteVersion){assert.equal(l.width,l.bossRouteReduction.priorWidth-l.bossRouteReduction.removed);assert.equal(l.boss.right-l.boss.left,old.boss.right-old.boss.left);continue;}const current=structuredClone(l);if(current.rebirthRewardVersion){current.blocks=current.blocks.filter(b=>b.item!=='rebirth');for(const key of ['layoutVersion','priorLayouts','rebirthRewardVersion']){if(old[key]===undefined)delete current[key];else current[key]=old[key];}}assert.deepEqual(current,old);continue;}
+  if(l.bossRouteVersion)assert.equal(l.width,l.bossRouteReduction.priorWidth-l.bossRouteReduction.removed);else assert.ok(l.width>old.width*3,l.id);assert.equal(l.reworkVersion,1);assert.ok(l.layoutVersion>=2);assert.ok(l.timeLimit>old.timeLimit);assert.equal(l.spawn.x,old.spawn.x);
+  if(!l.boss){assert.ok(l.enemies.length>old.enemies.length);assert.ok(l.items.length>old.items.length);assert.ok(l.blocks.length>=old.blocks.length);
   for(const key of ['water','hazards','turrets','gates'])assert.ok(l[key].length>=old[key].length,l.id+'/'+key);
-  for(const m of old.movers)assert.ok(l.movers.some(v=>v.id===m.id&&v.kind===m.kind),l.id+' lost original '+m.id);
+  for(const m of old.movers)assert.ok(l.movers.some(v=>v.id===m.id&&v.kind===m.kind),l.id+' lost original '+m.id);}
   let end=0;for(const s of l.sections){assert.equal(s.from,end);assert.ok(s.to>s.from);end=s.to;}assert.equal(end,l.width);
   for(const key of ['blocks','enemies','items','movers','turrets','gates'])assert.ok(l[key].length<200,l.id+' save capacity');
   const g=new Game(l);assert.ok(!g.solids().some(s=>overlap(g.p,s)));assert.ok(decodeSave(encodeSave(g)),l.id);

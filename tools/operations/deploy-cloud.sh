@@ -17,6 +17,10 @@ if [[ ! -d "$release" ]]; then
  chown -R loud:loud "$release"
  runuser -u loud -- env HOME=/var/lib/loud PATH=/usr/local/bin:/usr/bin:/bin npm ci --omit=dev --cache /var/cache/loud --prefix "$release"
  printf '{"commit":"%s"}\n' "$commit" > "$release/public/deployment.json"
+ # Rebuild lossless, versioned transport images before switching releases.
+ if [[ -f /opt/loud/operations/build-game-delivery.cjs ]]; then
+  (cd "$release" && /usr/local/bin/node /opt/loud/operations/build-game-delivery.cjs "$release/public/games/veggie-adventure/assets" "/opt/loud/operations/delivery-$commit.json")
+ fi
  chown -R root:root "$release"
 fi
 cat > /etc/systemd/system/loud-speak.service <<'SERVICE'

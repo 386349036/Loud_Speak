@@ -1,0 +1,32 @@
+{
+  "tool": "built-in image_gen",
+  "sourceSize": [
+    1774,
+    887
+  ],
+  "crop": {
+    "left": 168,
+    "top": 116,
+    "width": 1438,
+    "height": 645
+  },
+  "asset": {
+    "id": "hazard-ground-spikes",
+    "path": "hazards/ground-spikes-v1/tile.png",
+    "width": 96,
+    "height": 48,
+    "anchor": [
+      48,
+      48
+    ],
+    "source": "hazards/ground-spikes-v1/generated.png",
+    "stage": "ground-spikes-v1",
+    "visualVerified": false
+  },
+  "sha256": "1b55e56724c8140aa0b3fc25266198277349e20175cdeaa366d4f5243c718bec",
+  "worldTile": [
+    16,
+    8
+  ],
+  "collisionChanged": false
+}

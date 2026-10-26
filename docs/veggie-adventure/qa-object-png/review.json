@@ -1,0 +1,107 @@
+{
+  "date": "2026-10-26",
+  "mode": "qa=1&review=placeholder-audit",
+  "scope": "Sampled real keyboard gameplay across eight worlds; not a complete 32-stage clear or physical-phone acceptance",
+  "saveWrites": false,
+  "viewportChecks": [
+    "854x894",
+    "1280x720"
+  ],
+  "worlds": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8"
+  ],
+  "stages": [
+    "1-4",
+    "2-4",
+    "3-2",
+    "4-1",
+    "5-1",
+    "5-3",
+    "6-1",
+    "6-2",
+    "7-2",
+    "8-3"
+  ],
+  "latestShots": [
+    {
+      "point": "1-4 · 首领战",
+      "file": "after-world1-arena.png",
+      "hud": "1-4 · 基础芽豆 · 剩余重生 3次 · 分数 0 · 720秒 · 已完成 4/32",
+      "motion": "x=2634.1 foot=176.0 vx=98.7 vy=0.0 charge=88% ground playing t=0.70 | boss x=2766.0 hp=6/6 windup/slam 0.10"
+    },
+    {
+      "point": "3-2 · 平台 lift",
+      "file": "after-world3-lift.png",
+      "hud": "3-2 · 基础芽豆 · 剩余重生 3次 · 分数 0 · 780秒 · 已完成 4/32",
+      "motion": "x=352.1 foot=162.2 vx=112.0 vy=213.3 charge=100% air playing t=0.61"
+    },
+    {
+      "point": "5-1 · 平台 crumble",
+      "file": "after-world5-crumble.png",
+      "hud": "5-1 · 基础芽豆 · 剩余重生 3次 · 分数 150 · 720秒 · 已完成 4/32",
+      "motion": "x=2605.2 foot=190.5 vx=98.0 vy=-74.0 charge=87% air playing t=0.73"
+    },
+    {
+      "point": "7-2 · 机关 rock",
+      "file": "after-world7-rock.png",
+      "hud": "7-2 · 基础芽豆 · 剩余重生 3次 · 分数 0 · 779秒 · 已完成 4/32",
+      "motion": "x=724.0 foot=208.0 vx=82.7 vy=0.0 charge=74% ground playing t=1.17"
+    },
+    {
+      "point": "8-3 · 机关 chain",
+      "file": "after-world8-chain.png",
+      "hud": "8-3 · 基础芽豆 · 剩余重生 3次 · 分数 0 · 840秒 · 已完成 4/32",
+      "motion": "x=1374.4 foot=208.0 vx=6.9 vy=0.0 charge=6% ground playing t=0.37"
+    },
+    {
+      "point": "6-2 · 炮台 turrets",
+      "file": "after-world6-turret.png",
+      "hud": "6-2 · 基础芽豆 · 剩余重生 3次 · 分数 0 · 780秒 · 已完成 4/32",
+      "motion": "x=438.1 foot=208.0 vx=6.0 vy=0.0 charge=5% ground playing t=0.58"
+    },
+    {
+      "point": "1-4 · 弱点期（最终背景）",
+      "file": "after-world1-weak.png",
+      "hud": "1-4 · 基础芽豆 · 剩余重生 3次 · 分数 0 · 718秒 · 已完成 4/32",
+      "motion": "x=2645.9 foot=176.0 vx=0.0 vy=0.0 charge=0% ground playing t=2.97 | boss x=2766.0 hp=6/6 expose/slam 0.25"
+    },
+    {
+      "point": "6-1 · 机关 heat",
+      "file": "after-heat.png",
+      "hud": "6-1 · 基础芽豆 · 剩余重生 2次 · 分数 0 · 720秒 · 已完成 4/32",
+      "motion": "x=324.7 foot=208.0 vx=99.7 vy=0.0 charge=89% ground dead t=0.97"
+    },
+    {
+      "point": "4-1 · 实际游泳",
+      "file": "after-water.png",
+      "hud": "4-1 · 基础芽豆 · 剩余重生 3次 · 分数 0 · 719秒 · 已完成 4/32",
+      "motion": "x=286.3 foot=152.5 vx=0.0 vy=-19.9 charge=0% air playing t=1.20"
+    },
+    {
+      "point": "2-4 · 机关 rock",
+      "file": "after-rock.png",
+      "hud": "2-4 · 基础芽豆 · 剩余重生 3次 · 分数 0 · 839秒 · 已完成 4/32",
+      "motion": "x=698.7 foot=208.0 vx=77.3 vy=0.0 charge=69% ground playing t=1.25 | boss x=2784.0 hp=7/7 idle/- 0.00"
+    },
+    {
+      "point": "5-3 · 壳门 gates",
+      "file": "after-gate.png",
+      "hud": "5-3 · 基础芽豆 · 剩余重生 3次 · 分数 0 · 840秒 · 已完成 4/32",
+      "motion": "x=443.7 foot=208.0 vx=26.7 vy=0.0 charge=24% ground playing t=0.67"
+    },
+    {
+      "point": "5-1 · 易碎平台站立触发（专用巡检点）",
+      "file": "after-crumble-contact.png",
+      "hud": "5-1 · 基础芽豆 · 剩余重生 3次 · 分数 0 · 720秒 · 已完成 4/32",
+      "motion": "x=2628.0 foot=160.0 vx=0.0 vy=0.0 charge=0% ground playing t=0.57"
+    }
+  ],
+  "auditErrors": []
+}
