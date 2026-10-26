@@ -1,4 +1,5 @@
 /* Same circular thumb pad / action-button language as Veggie Adventure. */
+.audio-controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 8px;color:#78866b;font-size:10px}.audio-controls button{font-size:10px;padding:5px 9px}.audio-controls label{display:flex;align-items:center;gap:5px}.audio-controls input{width:80px;accent-color:#55774d}.audio-controls>span{margin-left:auto;font-size:9px}@media(max-width:350px){.audio-controls{gap:6px}.audio-controls input{width:64px}.audio-controls>span{margin-left:0}}
 .touch-controls{--pad-size:clamp(88px,26vw,112px);align-items:center;padding:6px max(4px,env(safe-area-inset-right)) max(8px,env(safe-area-inset-bottom)) max(4px,env(safe-area-inset-left));user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}
 .stick-group{display:grid;justify-items:center;gap:4px;flex-shrink:0}
 .stick-group small{font-size:9px;color:#7d8e6f}
