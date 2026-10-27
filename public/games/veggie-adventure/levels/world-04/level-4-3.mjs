@@ -1,8 +1,8 @@
-// Long water-world route with rooted aquatic plant enemies.
+// Optional breakable upper branches and raised soil banks at leaper pools.
 export default {
   "id": "4-3",
   "name": "跃水长廊",
-  "focus": "水陆跳跃；长路线分段补给，三形态净空",
+  "focus": "水陆跳跃；长路线分段补给，三形态净空；可破坏中高层支路与高台巡逻",
   "world": 4,
   "stage": 3,
   "width": 5632,
@@ -167,6 +167,265 @@ export default {
       "y": 208,
       "w": 128,
       "h": 32
+    },
+    {
+      "x": 256,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "waterBank": true
+    },
+    {
+      "x": 272,
+      "y": 176,
+      "w": 16,
+      "h": 32,
+      "waterBank": true
+    },
+    {
+      "x": 288,
+      "y": 160,
+      "w": 16,
+      "h": 48,
+      "waterBank": true
+    },
+    {
+      "x": 304,
+      "y": 160,
+      "w": 16,
+      "h": 48,
+      "waterBank": true
+    },
+    {
+      "x": 544,
+      "y": 160,
+      "w": 16,
+      "h": 48,
+      "waterBank": true
+    },
+    {
+      "x": 560,
+      "y": 160,
+      "w": 16,
+      "h": 48,
+      "waterBank": true
+    },
+    {
+      "x": 576,
+      "y": 176,
+      "w": 16,
+      "h": 32,
+      "waterBank": true
+    },
+    {
+      "x": 592,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "waterBank": true
+    },
+    {
+      "x": 672,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "waterBank": true
+    },
+    {
+      "x": 688,
+      "y": 176,
+      "w": 16,
+      "h": 32,
+      "waterBank": true
+    },
+    {
+      "x": 704,
+      "y": 160,
+      "w": 16,
+      "h": 48,
+      "waterBank": true
+    },
+    {
+      "x": 720,
+      "y": 160,
+      "w": 16,
+      "h": 48,
+      "waterBank": true
+    },
+    {
+      "x": 960,
+      "y": 160,
+      "w": 16,
+      "h": 48,
+      "waterBank": true
+    },
+    {
+      "x": 976,
+      "y": 160,
+      "w": 16,
+      "h": 48,
+      "waterBank": true
+    },
+    {
+      "x": 992,
+      "y": 176,
+      "w": 16,
+      "h": 32,
+      "waterBank": true
+    },
+    {
+      "x": 1008,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "waterBank": true
+    },
+    {
+      "x": 1088,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "waterBank": true
+    },
+    {
+      "x": 1104,
+      "y": 176,
+      "w": 16,
+      "h": 32,
+      "waterBank": true
+    },
+    {
+      "x": 1120,
+      "y": 160,
+      "w": 16,
+      "h": 48,
+      "waterBank": true
+    },
+    {
+      "x": 1136,
+      "y": 160,
+      "w": 16,
+      "h": 48,
+      "waterBank": true
+    },
+    {
+      "x": 1376,
+      "y": 160,
+      "w": 16,
+      "h": 48,
+      "waterBank": true
+    },
+    {
+      "x": 1392,
+      "y": 160,
+      "w": 16,
+      "h": 48,
+      "waterBank": true
+    },
+    {
+      "x": 1408,
+      "y": 176,
+      "w": 16,
+      "h": 32,
+      "waterBank": true
+    },
+    {
+      "x": 1424,
+      "y": 160,
+      "w": 16,
+      "h": 48,
+      "waterBank": true
+    },
+    {
+      "x": 1440,
+      "y": 160,
+      "w": 16,
+      "h": 48,
+      "waterBank": true
+    },
+    {
+      "x": 1664,
+      "y": 160,
+      "w": 16,
+      "h": 48,
+      "waterBank": true
+    },
+    {
+      "x": 1680,
+      "y": 160,
+      "w": 16,
+      "h": 48,
+      "waterBank": true
+    },
+    {
+      "x": 1696,
+      "y": 176,
+      "w": 16,
+      "h": 32,
+      "waterBank": true
+    },
+    {
+      "x": 1712,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "waterBank": true
+    },
+    {
+      "x": 4464,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "waterBank": true
+    },
+    {
+      "x": 4480,
+      "y": 176,
+      "w": 16,
+      "h": 32,
+      "waterBank": true
+    },
+    {
+      "x": 4496,
+      "y": 160,
+      "w": 16,
+      "h": 48,
+      "waterBank": true
+    },
+    {
+      "x": 4512,
+      "y": 160,
+      "w": 16,
+      "h": 48,
+      "waterBank": true
+    },
+    {
+      "x": 4736,
+      "y": 160,
+      "w": 16,
+      "h": 48,
+      "waterBank": true
+    },
+    {
+      "x": 4752,
+      "y": 160,
+      "w": 16,
+      "h": 48,
+      "waterBank": true
+    },
+    {
+      "x": 4768,
+      "y": 176,
+      "w": 16,
+      "h": 32,
+      "waterBank": true
+    },
+    {
+      "x": 4784,
+      "y": 192,
+      "w": 16,
+      "h": 16,
+      "waterBank": true
     }
   ],
   "blocks": [
@@ -199,7 +458,7 @@ export default {
     },
     {
       "x": 576,
-      "y": 192,
+      "y": 128,
       "w": 16,
       "h": 16,
       "kind": "brick",
@@ -207,7 +466,7 @@ export default {
     },
     {
       "x": 592,
-      "y": 192,
+      "y": 128,
       "w": 16,
       "h": 16,
       "kind": "brick",
@@ -247,7 +506,7 @@ export default {
     },
     {
       "x": 992,
-      "y": 192,
+      "y": 128,
       "w": 16,
       "h": 16,
       "kind": "brick",
@@ -255,7 +514,7 @@ export default {
     },
     {
       "x": 1008,
-      "y": 192,
+      "y": 128,
       "w": 16,
       "h": 16,
       "kind": "brick",
@@ -358,8 +617,8 @@ export default {
       "breakable": true
     },
     {
-      "x": 2080,
-      "y": 128,
+      "x": 2160,
+      "y": 80,
       "w": 16,
       "h": 16,
       "kind": "brick",
@@ -431,8 +690,8 @@ export default {
       "breakable": true
     },
     {
-      "x": 3104,
-      "y": 128,
+      "x": 3184,
+      "y": 80,
       "w": 16,
       "h": 16,
       "kind": "brick",
@@ -504,8 +763,8 @@ export default {
       "breakable": true
     },
     {
-      "x": 4128,
-      "y": 128,
+      "x": 4208,
+      "y": 80,
       "w": 16,
       "h": 16,
       "kind": "brick",
@@ -584,6 +843,313 @@ export default {
       "kind": "brick",
       "breakable": true,
       "item": "chili"
+    },
+    {
+      "x": 1984,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-1"
+    },
+    {
+      "x": 2000,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-1"
+    },
+    {
+      "x": 2048,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-1"
+    },
+    {
+      "x": 2064,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-1"
+    },
+    {
+      "x": 2096,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-1"
+    },
+    {
+      "x": 2112,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-1"
+    },
+    {
+      "x": 2128,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-1"
+    },
+    {
+      "x": 2144,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-1"
+    },
+    {
+      "x": 2096,
+      "y": 80,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-1"
+    },
+    {
+      "x": 2112,
+      "y": 80,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-1"
+    },
+    {
+      "x": 2128,
+      "y": 80,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-1"
+    },
+    {
+      "x": 2144,
+      "y": 80,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-1"
+    },
+    {
+      "x": 3072,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-2"
+    },
+    {
+      "x": 3088,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-2"
+    },
+    {
+      "x": 3120,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-2"
+    },
+    {
+      "x": 3136,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-2"
+    },
+    {
+      "x": 3152,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-2"
+    },
+    {
+      "x": 3168,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-2"
+    },
+    {
+      "x": 3120,
+      "y": 80,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-2"
+    },
+    {
+      "x": 3136,
+      "y": 80,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-2"
+    },
+    {
+      "x": 3152,
+      "y": 80,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-2",
+      "item": "chili"
+    },
+    {
+      "x": 3168,
+      "y": 80,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-2"
+    },
+    {
+      "x": 4032,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-3"
+    },
+    {
+      "x": 4048,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-3"
+    },
+    {
+      "x": 4096,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-3"
+    },
+    {
+      "x": 4112,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-3"
+    },
+    {
+      "x": 4144,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-3"
+    },
+    {
+      "x": 4160,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-3"
+    },
+    {
+      "x": 4176,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-3"
+    },
+    {
+      "x": 4192,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-3"
+    },
+    {
+      "x": 4144,
+      "y": 80,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-3"
+    },
+    {
+      "x": 4160,
+      "y": 80,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-3"
+    },
+    {
+      "x": 4176,
+      "y": 80,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-3"
+    },
+    {
+      "x": 4192,
+      "y": 80,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-3"
     }
   ],
   "enemies": [
@@ -1070,6 +1636,69 @@ export default {
       "homeY": 200,
       "phase": 0,
       "cooldown": 1.8499999999999999
+    },
+    {
+      "id": 26,
+      "kind": "cabbage",
+      "x": 2129,
+      "y": 66,
+      "w": 14,
+      "h": 14,
+      "vx": -20,
+      "vy": 0,
+      "state": "walk",
+      "timer": 0,
+      "grace": 0,
+      "dead": false,
+      "homeX": 2129,
+      "homeY": 66,
+      "cooldown": 1.2,
+      "phase": 0,
+      "patrolLeft": 2096,
+      "patrolRight": 2176,
+      "route": "upper-1"
+    },
+    {
+      "id": 27,
+      "kind": "mushroom",
+      "x": 3121,
+      "y": 114,
+      "w": 14,
+      "h": 14,
+      "vx": -20,
+      "vy": 0,
+      "state": "walk",
+      "timer": 0,
+      "grace": 0,
+      "dead": false,
+      "homeX": 3121,
+      "homeY": 114,
+      "cooldown": 1.2,
+      "phase": 0,
+      "patrolLeft": 3072,
+      "patrolRight": 3184,
+      "route": "upper-2"
+    },
+    {
+      "id": 28,
+      "kind": "cabbage",
+      "x": 4177,
+      "y": 66,
+      "w": 14,
+      "h": 14,
+      "vx": -20,
+      "vy": 0,
+      "state": "walk",
+      "timer": 0,
+      "grace": 0,
+      "dead": false,
+      "homeX": 4177,
+      "homeY": 66,
+      "cooldown": 1.2,
+      "phase": 0,
+      "patrolLeft": 4144,
+      "patrolRight": 4224,
+      "route": "upper-3"
     }
   ],
   "items": [
@@ -1107,7 +1736,7 @@ export default {
     },
     {
       "x": 576,
-      "y": 176,
+      "y": 156,
       "w": 10,
       "h": 12,
       "kind": "seed",
@@ -1115,7 +1744,7 @@ export default {
     },
     {
       "x": 688,
-      "y": 176,
+      "y": 156,
       "w": 10,
       "h": 12,
       "kind": "seed",
@@ -1147,7 +1776,7 @@ export default {
     },
     {
       "x": 1136,
-      "y": 176,
+      "y": 140,
       "w": 10,
       "h": 12,
       "kind": "seed",
@@ -1171,7 +1800,7 @@ export default {
     },
     {
       "x": 1440,
-      "y": 176,
+      "y": 140,
       "w": 10,
       "h": 12,
       "kind": "seed",
@@ -1355,7 +1984,7 @@ export default {
     },
     {
       "x": 4032,
-      "y": 176,
+      "y": 160,
       "w": 10,
       "h": 12,
       "kind": "seed",
@@ -1395,7 +2024,7 @@ export default {
     },
     {
       "x": 4512,
-      "y": 176,
+      "y": 140,
       "w": 10,
       "h": 12,
       "kind": "seed",
@@ -1456,6 +2085,87 @@ export default {
       "h": 12,
       "kind": "seed",
       "collected": false
+    },
+    {
+      "x": 2080,
+      "y": 104,
+      "w": 10,
+      "h": 12,
+      "kind": "seed",
+      "collected": false,
+      "route": "upper-1"
+    },
+    {
+      "x": 2112,
+      "y": 56,
+      "w": 10,
+      "h": 12,
+      "kind": "seed",
+      "collected": false,
+      "route": "upper-1"
+    },
+    {
+      "x": 2160,
+      "y": 56,
+      "w": 10,
+      "h": 12,
+      "kind": "seed",
+      "collected": false,
+      "route": "upper-1"
+    },
+    {
+      "x": 3104,
+      "y": 104,
+      "w": 10,
+      "h": 12,
+      "kind": "seed",
+      "collected": false,
+      "route": "upper-2"
+    },
+    {
+      "x": 3136,
+      "y": 56,
+      "w": 10,
+      "h": 12,
+      "kind": "seed",
+      "collected": false,
+      "route": "upper-2"
+    },
+    {
+      "x": 3184,
+      "y": 56,
+      "w": 10,
+      "h": 12,
+      "kind": "seed",
+      "collected": false,
+      "route": "upper-2"
+    },
+    {
+      "x": 4128,
+      "y": 104,
+      "w": 10,
+      "h": 12,
+      "kind": "seed",
+      "collected": false,
+      "route": "upper-3"
+    },
+    {
+      "x": 4160,
+      "y": 56,
+      "w": 10,
+      "h": 12,
+      "kind": "seed",
+      "collected": false,
+      "route": "upper-3"
+    },
+    {
+      "x": 4208,
+      "y": 56,
+      "w": 10,
+      "h": 12,
+      "kind": "seed",
+      "collected": false,
+      "route": "upper-3"
     }
   ],
   "movers": [],
@@ -1507,7 +2217,7 @@ export default {
   "turrets": [],
   "gates": [],
   "boss": null,
-  "layoutVersion": 3,
+  "layoutVersion": 5,
   "reworkVersion": 1,
   "priorLayout": {
     "version": 1,
@@ -1610,7 +2320,237 @@ export default {
         "gates": 0
       },
       "boss": null
+    },
+    {
+      "version": 3,
+      "width": 5632,
+      "timeLimit": 840,
+      "counts": {
+        "blocks": 51,
+        "enemies": 26,
+        "movers": 0,
+        "turrets": 0,
+        "gates": 0
+      }
+    },
+    {
+      "version": 4,
+      "width": 5632,
+      "timeLimit": 840,
+      "counts": {
+        "blocks": 85,
+        "enemies": 29,
+        "movers": 0,
+        "turrets": 0,
+        "gates": 0
+      }
     }
   ],
-  "aquaticPlantVersion": 1
+  "aquaticPlantVersion": 1,
+  "layeredRoutes": [
+    {
+      "id": "upper-1",
+      "optional": true,
+      "entry": {
+        "x": 1952,
+        "foot": 208
+      },
+      "floors": [
+        {
+          "x": 1984,
+          "y": 176,
+          "w": 32,
+          "h": 16
+        },
+        {
+          "x": 2048,
+          "y": 128,
+          "w": 112,
+          "h": 16
+        },
+        {
+          "x": 2096,
+          "y": 80,
+          "w": 80,
+          "h": 16
+        }
+      ],
+      "rejoin": {
+        "x": 2216,
+        "foot": 208
+      },
+      "enemyId": 26,
+      "addedBlocks": 12,
+      "blockAdjustments": [
+        {
+          "index": 23,
+          "before": {
+            "x": 2080,
+            "y": 128
+          },
+          "after": {
+            "x": 2160,
+            "y": 80
+          }
+        }
+      ],
+      "itemAdjustments": []
+    },
+    {
+      "id": "upper-2",
+      "optional": true,
+      "entry": {
+        "x": 2976,
+        "foot": 208
+      },
+      "floors": [
+        {
+          "x": 3008,
+          "y": 176,
+          "w": 32,
+          "h": 16
+        },
+        {
+          "x": 3072,
+          "y": 128,
+          "w": 112,
+          "h": 16
+        },
+        {
+          "x": 3120,
+          "y": 80,
+          "w": 80,
+          "h": 16
+        }
+      ],
+      "rejoin": {
+        "x": 3240,
+        "foot": 208
+      },
+      "enemyId": 27,
+      "addedBlocks": 10,
+      "blockAdjustments": [
+        {
+          "index": 32,
+          "before": {
+            "x": 3104,
+            "y": 128
+          },
+          "after": {
+            "x": 3184,
+            "y": 80
+          }
+        }
+      ],
+      "itemAdjustments": []
+    },
+    {
+      "id": "upper-3",
+      "optional": true,
+      "entry": {
+        "x": 4000,
+        "foot": 208
+      },
+      "floors": [
+        {
+          "x": 4032,
+          "y": 176,
+          "w": 32,
+          "h": 16
+        },
+        {
+          "x": 4096,
+          "y": 128,
+          "w": 112,
+          "h": 16
+        },
+        {
+          "x": 4144,
+          "y": 80,
+          "w": 80,
+          "h": 16
+        }
+      ],
+      "rejoin": {
+        "x": 4264,
+        "foot": 208
+      },
+      "enemyId": 28,
+      "addedBlocks": 12,
+      "blockAdjustments": [
+        {
+          "index": 41,
+          "before": {
+            "x": 4128,
+            "y": 128
+          },
+          "after": {
+            "x": 4208,
+            "y": 80
+          }
+        }
+      ],
+      "itemAdjustments": [
+        {
+          "index": 35,
+          "before": {
+            "x": 4032,
+            "y": 176
+          },
+          "after": {
+            "x": 4032,
+            "y": 160
+          }
+        }
+      ]
+    }
+  ],
+  "layeredRouteVersion": 1,
+  "leaperBankVersion": 1,
+  "waterBankBlockAdjustments": [
+    {
+      "index": 3,
+      "before": {
+        "x": 576,
+        "y": 192
+      },
+      "after": {
+        "x": 576,
+        "y": 128
+      }
+    },
+    {
+      "index": 4,
+      "before": {
+        "x": 592,
+        "y": 192
+      },
+      "after": {
+        "x": 592,
+        "y": 128
+      }
+    },
+    {
+      "index": 9,
+      "before": {
+        "x": 992,
+        "y": 192
+      },
+      "after": {
+        "x": 992,
+        "y": 128
+      }
+    },
+    {
+      "index": 10,
+      "before": {
+        "x": 1008,
+        "y": 192
+      },
+      "after": {
+        "x": 1008,
+        "y": 128
+      }
+    }
+  ]
 };

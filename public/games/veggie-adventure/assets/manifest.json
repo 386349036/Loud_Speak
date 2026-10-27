@@ -159,12 +159,14 @@
     },
     {
       "id": "anim-E09",
-      "path": "animations/E09.png",
+      "path": "animations/flyer-stun-v1/E09.png",
       "animation": true,
       "visualVerified": false,
       "sources": [
-        "art-source/veggie-adventure/animations/v1/E09.png"
-      ]
+        "public/games/veggie-adventure/assets/animations/E09.png",
+        "art-source/veggie-adventure/animations/flyer-stun-v1/E09/generated.png"
+      ],
+      "revision": "flyer-stun-v1"
     },
     {
       "id": "anim-E10",
@@ -177,12 +179,14 @@
     },
     {
       "id": "anim-E11",
-      "path": "animations/E11.png",
+      "path": "animations/flyer-stun-v1/E11.png",
       "animation": true,
       "visualVerified": false,
       "sources": [
-        "art-source/veggie-adventure/animations/v1/E11.png"
-      ]
+        "public/games/veggie-adventure/assets/animations/E11.png",
+        "art-source/veggie-adventure/animations/flyer-stun-v1/E11/generated.png"
+      ],
+      "revision": "flyer-stun-v1"
     },
     {
       "id": "anim-E12",
@@ -4125,6 +4129,275 @@
       "sources": [
         "art-source\\veggie-adventure\\effects\\player-attacks-v1\\lightning\\generated.png"
       ]
+    },
+    {
+      "id": "platform-garden-deck",
+      "path": "objects/garden-platform-v1/platform-garden-deck.png",
+      "width": 192,
+      "height": 64,
+      "anchor": [
+        96,
+        64
+      ],
+      "stage": "garden-platform-v1",
+      "sources": [
+        "art-source/veggie-adventure/objects/garden-platform-v1/generated.png"
+      ],
+      "visualVerified": false
+    },
+    {
+      "id": "E11-stunned",
+      "path": "animations/flyer-stun-v1/E11-stunned.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "stage": "flyer-stun-v1",
+      "sources": [
+        "art-source/veggie-adventure/animations/flyer-stun-v1/E11/generated.png"
+      ],
+      "visualVerified": false
+    },
+    {
+      "id": "E09-stunned",
+      "path": "animations/flyer-stun-v1/E09-stunned.png",
+      "width": 48,
+      "height": 48,
+      "anchor": [
+        24,
+        48
+      ],
+      "stage": "flyer-stun-v1",
+      "sources": [
+        "art-source/veggie-adventure/animations/flyer-stun-v1/E09/generated.png"
+      ],
+      "visualVerified": false
+    },
+    {
+      "id": "boss-fx-2",
+      "path": "effects/boss-signatures-v1/B02.png",
+      "width": 256,
+      "height": 256,
+      "anchor": [
+        128,
+        256
+      ],
+      "stage": "boss-signatures-v1",
+      "sources": [
+        "art-source/veggie-adventure/effects/boss-signatures-v1/B02/generated.png"
+      ],
+      "visualVerified": true,
+      "visualEvidence": "docs/veggie-adventure/qa/boss-seven-20261027/REPORT.md"
+    },
+    {
+      "id": "boss-cue-theme-2",
+      "path": "effects/boss-signatures-v1/B02-cue.png",
+      "width": 96,
+      "height": 96,
+      "anchor": [
+        48,
+        96
+      ],
+      "stage": "boss-signatures-v1",
+      "sources": [
+        "art-source/veggie-adventure/effects/boss-signatures-v1/B02/generated.png"
+      ],
+      "visualVerified": true,
+      "visualEvidence": "docs/veggie-adventure/qa/boss-seven-20261027/REPORT.md"
+    },
+    {
+      "id": "boss-fx-3",
+      "path": "effects/boss-signatures-v1/B03.png",
+      "width": 256,
+      "height": 256,
+      "anchor": [
+        128,
+        256
+      ],
+      "stage": "boss-signatures-v1",
+      "sources": [
+        "art-source/veggie-adventure/effects/boss-signatures-v1/B03/generated.png"
+      ],
+      "visualVerified": true,
+      "visualEvidence": "docs/veggie-adventure/qa/boss-seven-20261027/REPORT.md"
+    },
+    {
+      "id": "boss-cue-theme-3",
+      "path": "effects/boss-signatures-v1/B03-cue.png",
+      "width": 96,
+      "height": 96,
+      "anchor": [
+        48,
+        96
+      ],
+      "stage": "boss-signatures-v1",
+      "sources": [
+        "art-source/veggie-adventure/effects/boss-signatures-v1/B03/generated.png"
+      ],
+      "visualVerified": true,
+      "visualEvidence": "docs/veggie-adventure/qa/boss-seven-20261027/REPORT.md"
+    },
+    {
+      "id": "boss-fx-4",
+      "path": "effects/boss-signatures-v1/B04.png",
+      "width": 256,
+      "height": 256,
+      "anchor": [
+        128,
+        256
+      ],
+      "stage": "boss-signatures-v1",
+      "sources": [
+        "art-source/veggie-adventure/effects/boss-signatures-v1/B04/generated.png"
+      ],
+      "visualVerified": true,
+      "visualEvidence": "docs/veggie-adventure/qa/boss-seven-20261027/REPORT.md"
+    },
+    {
+      "id": "boss-cue-theme-4",
+      "path": "effects/boss-signatures-v1/B04-cue.png",
+      "width": 96,
+      "height": 96,
+      "anchor": [
+        48,
+        96
+      ],
+      "stage": "boss-signatures-v1",
+      "sources": [
+        "art-source/veggie-adventure/effects/boss-signatures-v1/B04/generated.png"
+      ],
+      "visualVerified": true,
+      "visualEvidence": "docs/veggie-adventure/qa/boss-seven-20261027/REPORT.md"
+    },
+    {
+      "id": "boss-fx-5",
+      "path": "effects/boss-signatures-v1/B05.png",
+      "width": 256,
+      "height": 256,
+      "anchor": [
+        128,
+        256
+      ],
+      "stage": "boss-signatures-v1",
+      "sources": [
+        "art-source/veggie-adventure/effects/boss-signatures-v1/B05/generated.png"
+      ],
+      "visualVerified": true,
+      "visualEvidence": "docs/veggie-adventure/qa/boss-seven-20261027/REPORT.md"
+    },
+    {
+      "id": "boss-cue-theme-5",
+      "path": "effects/boss-signatures-v1/B05-cue.png",
+      "width": 96,
+      "height": 96,
+      "anchor": [
+        48,
+        96
+      ],
+      "stage": "boss-signatures-v1",
+      "sources": [
+        "art-source/veggie-adventure/effects/boss-signatures-v1/B05/generated.png"
+      ],
+      "visualVerified": true,
+      "visualEvidence": "docs/veggie-adventure/qa/boss-seven-20261027/REPORT.md"
+    },
+    {
+      "id": "boss-fx-6",
+      "path": "effects/boss-signatures-v1/B06.png",
+      "width": 256,
+      "height": 256,
+      "anchor": [
+        128,
+        256
+      ],
+      "stage": "boss-signatures-v1",
+      "sources": [
+        "art-source/veggie-adventure/effects/boss-signatures-v1/B06/generated.png"
+      ],
+      "visualVerified": true,
+      "visualEvidence": "docs/veggie-adventure/qa/boss-seven-20261027/REPORT.md"
+    },
+    {
+      "id": "boss-cue-theme-6",
+      "path": "effects/boss-signatures-v1/B06-cue.png",
+      "width": 96,
+      "height": 96,
+      "anchor": [
+        48,
+        96
+      ],
+      "stage": "boss-signatures-v1",
+      "sources": [
+        "art-source/veggie-adventure/effects/boss-signatures-v1/B06/generated.png"
+      ],
+      "visualVerified": true,
+      "visualEvidence": "docs/veggie-adventure/qa/boss-seven-20261027/REPORT.md"
+    },
+    {
+      "id": "boss-fx-7",
+      "path": "effects/boss-signatures-v1/B07.png",
+      "width": 256,
+      "height": 256,
+      "anchor": [
+        128,
+        256
+      ],
+      "stage": "boss-signatures-v1",
+      "sources": [
+        "art-source/veggie-adventure/effects/boss-signatures-v1/B07/generated.png"
+      ],
+      "visualVerified": true,
+      "visualEvidence": "docs/veggie-adventure/qa/boss-seven-20261027/REPORT.md"
+    },
+    {
+      "id": "boss-cue-theme-7",
+      "path": "effects/boss-signatures-v1/B07-cue.png",
+      "width": 96,
+      "height": 96,
+      "anchor": [
+        48,
+        96
+      ],
+      "stage": "boss-signatures-v1",
+      "sources": [
+        "art-source/veggie-adventure/effects/boss-signatures-v1/B07/generated.png"
+      ],
+      "visualVerified": true,
+      "visualEvidence": "docs/veggie-adventure/qa/boss-seven-20261027/REPORT.md"
+    },
+    {
+      "id": "boss-fx-8",
+      "path": "effects/boss-signatures-v1/B08.png",
+      "width": 256,
+      "height": 256,
+      "anchor": [
+        128,
+        256
+      ],
+      "stage": "boss-signatures-v1",
+      "sources": [
+        "art-source/veggie-adventure/effects/boss-signatures-v1/B08/generated.png"
+      ],
+      "visualVerified": true,
+      "visualEvidence": "docs/veggie-adventure/qa/boss-seven-20261027/REPORT.md"
+    },
+    {
+      "id": "boss-cue-theme-8",
+      "path": "effects/boss-signatures-v1/B08-cue.png",
+      "width": 96,
+      "height": 96,
+      "anchor": [
+        48,
+        96
+      ],
+      "stage": "boss-signatures-v1",
+      "sources": [
+        "art-source/veggie-adventure/effects/boss-signatures-v1/B08/generated.png"
+      ],
+      "visualVerified": true,
+      "visualEvidence": "docs/veggie-adventure/qa/boss-seven-20261027/REPORT.md"
     }
   ],
   "animations": {
@@ -5236,6 +5509,24 @@
             "frames": 4,
             "fps": 10,
             "loop": false
+          },
+          "fall-stunned": {
+            "row": 4,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "stunned": {
+            "row": 5,
+            "frames": 4,
+            "fps": 6,
+            "loop": true
+          },
+          "wake": {
+            "row": 6,
+            "frames": 4,
+            "fps": 4,
+            "loop": false
           }
         },
         "presentation": {
@@ -5267,8 +5558,27 @@
             0,
             0,
             0
+          ],
+          "fall-stunned": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "stunned": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "wake": [
+            0,
+            0,
+            0,
+            0
           ]
-        }
+        },
+        "revision": "flyer-stun-v1"
       },
       "E10": {
         "asset": "anim-E10",
@@ -5356,6 +5666,24 @@
             "frames": 4,
             "fps": 10,
             "loop": false
+          },
+          "fall-stunned": {
+            "row": 4,
+            "frames": 4,
+            "fps": 10,
+            "loop": false
+          },
+          "stunned": {
+            "row": 5,
+            "frames": 4,
+            "fps": 6,
+            "loop": true
+          },
+          "wake": {
+            "row": 6,
+            "frames": 4,
+            "fps": 4,
+            "loop": false
           }
         },
         "presentation": {
@@ -5387,8 +5715,27 @@
             0,
             0,
             0
+          ],
+          "fall-stunned": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "stunned": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "wake": [
+            0,
+            0,
+            0,
+            0
           ]
-        }
+        },
+        "revision": "flyer-stun-v1"
       },
       "E12": {
         "asset": "anim-E12",

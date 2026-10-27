@@ -1,0 +1,2943 @@
+{
+  "version": 1,
+  "scope": "2-1 through 8-3, non-boss stages",
+  "levels": [
+    {
+      "id": "2-1",
+      "routes": [
+        {
+          "id": "upper-1",
+          "optional": true,
+          "entry": {
+            "x": 1920,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 1952,
+              "y": 160,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 2016,
+              "y": 112,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 2064,
+              "y": 64,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 2184,
+            "foot": 208
+          },
+          "enemyId": 10,
+          "addedBlocks": 13,
+          "blockAdjustments": [
+            {
+              "index": 56,
+              "before": {
+                "x": 2080,
+                "y": 128
+              },
+              "after": {
+                "x": 2128,
+                "y": 64
+              }
+            }
+          ],
+          "itemAdjustments": []
+        },
+        {
+          "id": "upper-2",
+          "optional": true,
+          "entry": {
+            "x": 2976,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 3008,
+              "y": 176,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 3072,
+              "y": 128,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 3120,
+              "y": 80,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 3240,
+            "foot": 208
+          },
+          "enemyId": 11,
+          "addedBlocks": 10,
+          "blockAdjustments": [
+            {
+              "index": 71,
+              "before": {
+                "x": 3104,
+                "y": 128
+              },
+              "after": {
+                "x": 3184,
+                "y": 80
+              }
+            }
+          ],
+          "itemAdjustments": []
+        }
+      ],
+      "oldBlocks": 93,
+      "blocks": 116,
+      "oldEnemies": 10,
+      "enemies": 12,
+      "layoutVersion": 4
+    },
+    {
+      "id": "2-2",
+      "routes": [
+        {
+          "id": "upper-1",
+          "optional": true,
+          "entry": {
+            "x": 1936,
+            "foot": 208
+          },
+          "entryMode": "swim-bank",
+          "floors": [
+            {
+              "x": 1968,
+              "y": 144,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 2032,
+              "y": 96,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 2080,
+              "y": 48,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 2200,
+            "foot": 208
+          },
+          "enemyId": 10,
+          "addedBlocks": 13,
+          "blockAdjustments": [
+            {
+              "index": 26,
+              "before": {
+                "x": 2080,
+                "y": 144
+              },
+              "after": {
+                "x": 2144,
+                "y": 48
+              }
+            }
+          ],
+          "itemAdjustments": []
+        },
+        {
+          "id": "upper-2",
+          "optional": true,
+          "entry": {
+            "x": 2960,
+            "foot": 208
+          },
+          "entryMode": "swim-bank",
+          "floors": [
+            {
+              "x": 2992,
+              "y": 144,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 3056,
+              "y": 96,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 3104,
+              "y": 48,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 3224,
+            "foot": 208
+          },
+          "enemyId": 11,
+          "addedBlocks": 12,
+          "blockAdjustments": [
+            {
+              "index": 40,
+              "before": {
+                "x": 3104,
+                "y": 144
+              },
+              "after": {
+                "x": 3168,
+                "y": 48
+              }
+            }
+          ],
+          "itemAdjustments": []
+        },
+        {
+          "id": "upper-3",
+          "optional": true,
+          "entry": {
+            "x": 4000,
+            "foot": 208
+          },
+          "entryMode": "swim-bank",
+          "floors": [
+            {
+              "x": 4032,
+              "y": 144,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 4096,
+              "y": 96,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 4144,
+              "y": 48,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 4264,
+            "foot": 208
+          },
+          "enemyId": 12,
+          "addedBlocks": 13,
+          "blockAdjustments": [
+            {
+              "index": 55,
+              "before": {
+                "x": 4128,
+                "y": 144
+              },
+              "after": {
+                "x": 4208,
+                "y": 48
+              }
+            }
+          ],
+          "itemAdjustments": []
+        }
+      ],
+      "oldBlocks": 66,
+      "blocks": 104,
+      "oldEnemies": 10,
+      "enemies": 13,
+      "layoutVersion": 3
+    },
+    {
+      "id": "2-3",
+      "routes": [
+        {
+          "id": "upper-1",
+          "optional": true,
+          "entry": {
+            "x": 1952,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 1984,
+              "y": 176,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 2048,
+              "y": 128,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 2096,
+              "y": 80,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 2216,
+            "foot": 208
+          },
+          "enemyId": 11,
+          "addedBlocks": 10,
+          "blockAdjustments": [
+            {
+              "index": 30,
+              "before": {
+                "x": 2080,
+                "y": 128
+              },
+              "after": {
+                "x": 2160,
+                "y": 80
+              }
+            }
+          ],
+          "itemAdjustments": []
+        },
+        {
+          "id": "upper-2",
+          "optional": true,
+          "entry": {
+            "x": 2976,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 3008,
+              "y": 176,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 3072,
+              "y": 128,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 3120,
+              "y": 80,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 3240,
+            "foot": 208
+          },
+          "enemyId": 12,
+          "addedBlocks": 12,
+          "blockAdjustments": [
+            {
+              "index": 44,
+              "before": {
+                "x": 3104,
+                "y": 128
+              },
+              "after": {
+                "x": 3184,
+                "y": 80
+              }
+            }
+          ],
+          "itemAdjustments": []
+        },
+        {
+          "id": "upper-3",
+          "optional": true,
+          "entry": {
+            "x": 4000,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 4032,
+              "y": 176,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 4096,
+              "y": 128,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 4144,
+              "y": 80,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 4264,
+            "foot": 208
+          },
+          "enemyId": 13,
+          "addedBlocks": 10,
+          "blockAdjustments": [
+            {
+              "index": 59,
+              "before": {
+                "x": 4128,
+                "y": 128
+              },
+              "after": {
+                "x": 4208,
+                "y": 80
+              }
+            }
+          ],
+          "itemAdjustments": []
+        }
+      ],
+      "oldBlocks": 74,
+      "blocks": 106,
+      "oldEnemies": 11,
+      "enemies": 14,
+      "layoutVersion": 3
+    },
+    {
+      "id": "3-1",
+      "routes": [
+        {
+          "id": "upper-1",
+          "optional": true,
+          "entry": {
+            "x": 1920,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 1952,
+              "y": 160,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 2016,
+              "y": 112,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 2064,
+              "y": 64,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 2184,
+            "foot": 208
+          },
+          "enemyId": 10,
+          "addedBlocks": 13,
+          "blockAdjustments": [
+            {
+              "index": 32,
+              "before": {
+                "x": 2080,
+                "y": 144
+              },
+              "after": {
+                "x": 2128,
+                "y": 64
+              }
+            }
+          ],
+          "itemAdjustments": []
+        },
+        {
+          "id": "upper-2",
+          "optional": true,
+          "entry": {
+            "x": 2944,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 2976,
+              "y": 160,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 3040,
+              "y": 112,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 3088,
+              "y": 64,
+              "w": 96,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 3224,
+            "foot": 208
+          },
+          "enemyId": 11,
+          "addedBlocks": 14,
+          "blockAdjustments": [
+            {
+              "index": 46,
+              "before": {
+                "x": 3104,
+                "y": 144
+              },
+              "after": {
+                "x": 3168,
+                "y": 64
+              }
+            }
+          ],
+          "itemAdjustments": []
+        }
+      ],
+      "oldBlocks": 72,
+      "blocks": 99,
+      "oldEnemies": 10,
+      "enemies": 12,
+      "layoutVersion": 4
+    },
+    {
+      "id": "3-2",
+      "routes": [
+        {
+          "id": "upper-1",
+          "optional": true,
+          "entry": {
+            "x": 1952,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 1984,
+              "y": 176,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 2048,
+              "y": 128,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 2096,
+              "y": 80,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 2216,
+            "foot": 208
+          },
+          "enemyId": 10,
+          "addedBlocks": 10,
+          "blockAdjustments": [
+            {
+              "index": 24,
+              "before": {
+                "x": 2080,
+                "y": 128
+              },
+              "after": {
+                "x": 2160,
+                "y": 80
+              }
+            }
+          ],
+          "itemAdjustments": []
+        },
+        {
+          "id": "upper-2",
+          "optional": true,
+          "entry": {
+            "x": 2976,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 3008,
+              "y": 176,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 3072,
+              "y": 128,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 3120,
+              "y": 80,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 3240,
+            "foot": 208
+          },
+          "enemyId": 11,
+          "addedBlocks": 12,
+          "blockAdjustments": [
+            {
+              "index": 38,
+              "before": {
+                "x": 3104,
+                "y": 128
+              },
+              "after": {
+                "x": 3184,
+                "y": 80
+              }
+            }
+          ],
+          "itemAdjustments": []
+        },
+        {
+          "id": "upper-3",
+          "optional": true,
+          "entry": {
+            "x": 4000,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 4032,
+              "y": 176,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 4096,
+              "y": 128,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 4144,
+              "y": 80,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 4264,
+            "foot": 208
+          },
+          "enemyId": 12,
+          "addedBlocks": 10,
+          "blockAdjustments": [
+            {
+              "index": 53,
+              "before": {
+                "x": 4128,
+                "y": 128
+              },
+              "after": {
+                "x": 4208,
+                "y": 80
+              }
+            }
+          ],
+          "itemAdjustments": []
+        }
+      ],
+      "oldBlocks": 60,
+      "blocks": 92,
+      "oldEnemies": 10,
+      "enemies": 13,
+      "layoutVersion": 3
+    },
+    {
+      "id": "3-3",
+      "routes": [
+        {
+          "id": "upper-1",
+          "optional": true,
+          "entry": {
+            "x": 1152,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 1184,
+              "y": 176,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 1248,
+              "y": 128,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 1296,
+              "y": 80,
+              "w": 64,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 1400,
+            "foot": 208
+          },
+          "enemyId": 12,
+          "addedBlocks": 12,
+          "blockAdjustments": [
+            {
+              "index": 1,
+              "before": {
+                "x": 1248,
+                "y": 144
+              },
+              "after": {
+                "x": 1344,
+                "y": 80
+              }
+            }
+          ],
+          "itemAdjustments": []
+        },
+        {
+          "id": "upper-2",
+          "optional": true,
+          "entry": {
+            "x": 2960,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 2992,
+              "y": 160,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 3056,
+              "y": 112,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 3104,
+              "y": 64,
+              "w": 96,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 3240,
+            "foot": 208
+          },
+          "enemyId": 13,
+          "addedBlocks": 14,
+          "blockAdjustments": [
+            {
+              "index": 48,
+              "before": {
+                "x": 3104,
+                "y": 144
+              },
+              "after": {
+                "x": 3184,
+                "y": 64
+              }
+            }
+          ],
+          "itemAdjustments": []
+        },
+        {
+          "id": "upper-3",
+          "optional": true,
+          "entry": {
+            "x": 5024,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 5056,
+              "y": 176,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 5120,
+              "y": 128,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 5168,
+              "y": 80,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 5288,
+            "foot": 208
+          },
+          "enemyId": 14,
+          "addedBlocks": 13,
+          "blockAdjustments": [
+            {
+              "index": 77,
+              "before": {
+                "x": 5152,
+                "y": 144
+              },
+              "after": {
+                "x": 5232,
+                "y": 80
+              }
+            }
+          ],
+          "itemAdjustments": []
+        }
+      ],
+      "oldBlocks": 78,
+      "blocks": 117,
+      "oldEnemies": 12,
+      "enemies": 15,
+      "layoutVersion": 3
+    },
+    {
+      "id": "4-1",
+      "routes": [
+        {
+          "id": "upper-1",
+          "optional": true,
+          "entry": {
+            "x": 1952,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 1984,
+              "y": 176,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 2048,
+              "y": 128,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 2096,
+              "y": 80,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 2216,
+            "foot": 208
+          },
+          "enemyId": 23,
+          "addedBlocks": 10,
+          "blockAdjustments": [
+            {
+              "index": 17,
+              "before": {
+                "x": 2080,
+                "y": 128
+              },
+              "after": {
+                "x": 2160,
+                "y": 80
+              }
+            }
+          ],
+          "itemAdjustments": []
+        },
+        {
+          "id": "upper-2",
+          "optional": true,
+          "entry": {
+            "x": 2976,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 3008,
+              "y": 176,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 3072,
+              "y": 128,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 3120,
+              "y": 80,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 3240,
+            "foot": 208
+          },
+          "enemyId": 24,
+          "addedBlocks": 12,
+          "blockAdjustments": [
+            {
+              "index": 26,
+              "before": {
+                "x": 3104,
+                "y": 128
+              },
+              "after": {
+                "x": 3184,
+                "y": 80
+              }
+            }
+          ],
+          "itemAdjustments": []
+        }
+      ],
+      "oldBlocks": 37,
+      "blocks": 59,
+      "oldEnemies": 23,
+      "enemies": 25,
+      "layoutVersion": 5
+    },
+    {
+      "id": "4-2",
+      "routes": [
+        {
+          "id": "upper-1",
+          "optional": true,
+          "entry": {
+            "x": 1664,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 1696,
+              "y": 176,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 1760,
+              "y": 128,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 1808,
+              "y": 80,
+              "w": 96,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 1944,
+            "foot": 208
+          },
+          "enemyId": 30,
+          "addedBlocks": 14,
+          "blockAdjustments": [
+            {
+              "index": 19,
+              "before": {
+                "x": 1696,
+                "y": 144
+              },
+              "after": {
+                "x": 1888,
+                "y": 80
+              }
+            }
+          ],
+          "itemAdjustments": []
+        },
+        {
+          "id": "upper-2",
+          "optional": true,
+          "entry": {
+            "x": 2688,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 2720,
+              "y": 176,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 2784,
+              "y": 128,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 2832,
+              "y": 80,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 2952,
+            "foot": 208
+          },
+          "enemyId": 31,
+          "addedBlocks": 13,
+          "blockAdjustments": [
+            {
+              "index": 21,
+              "before": {
+                "x": 2720,
+                "y": 144
+              },
+              "after": {
+                "x": 2896,
+                "y": 80
+              }
+            }
+          ],
+          "itemAdjustments": []
+        },
+        {
+          "id": "upper-3",
+          "optional": true,
+          "entry": {
+            "x": 4224,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 4256,
+              "y": 176,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 4320,
+              "y": 128,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 4368,
+              "y": 80,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 4488,
+            "foot": 208
+          },
+          "enemyId": 32,
+          "addedBlocks": 13,
+          "blockAdjustments": [
+            {
+              "index": 24,
+              "before": {
+                "x": 4256,
+                "y": 144
+              },
+              "after": {
+                "x": 4432,
+                "y": 80
+              }
+            }
+          ],
+          "itemAdjustments": []
+        }
+      ],
+      "oldBlocks": 27,
+      "blocks": 67,
+      "oldEnemies": 30,
+      "enemies": 33,
+      "layoutVersion": 4
+    },
+    {
+      "id": "4-3",
+      "routes": [
+        {
+          "id": "upper-1",
+          "optional": true,
+          "entry": {
+            "x": 1952,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 1984,
+              "y": 176,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 2048,
+              "y": 128,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 2096,
+              "y": 80,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 2216,
+            "foot": 208
+          },
+          "enemyId": 26,
+          "addedBlocks": 12,
+          "blockAdjustments": [
+            {
+              "index": 23,
+              "before": {
+                "x": 2080,
+                "y": 128
+              },
+              "after": {
+                "x": 2160,
+                "y": 80
+              }
+            }
+          ],
+          "itemAdjustments": []
+        },
+        {
+          "id": "upper-2",
+          "optional": true,
+          "entry": {
+            "x": 2976,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 3008,
+              "y": 176,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 3072,
+              "y": 128,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 3120,
+              "y": 80,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 3240,
+            "foot": 208
+          },
+          "enemyId": 27,
+          "addedBlocks": 10,
+          "blockAdjustments": [
+            {
+              "index": 32,
+              "before": {
+                "x": 3104,
+                "y": 128
+              },
+              "after": {
+                "x": 3184,
+                "y": 80
+              }
+            }
+          ],
+          "itemAdjustments": []
+        },
+        {
+          "id": "upper-3",
+          "optional": true,
+          "entry": {
+            "x": 4000,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 4032,
+              "y": 176,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 4096,
+              "y": 128,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 4144,
+              "y": 80,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 4264,
+            "foot": 208
+          },
+          "enemyId": 28,
+          "addedBlocks": 12,
+          "blockAdjustments": [
+            {
+              "index": 41,
+              "before": {
+                "x": 4128,
+                "y": 128
+              },
+              "after": {
+                "x": 4208,
+                "y": 80
+              }
+            }
+          ],
+          "itemAdjustments": [
+            {
+              "index": 35,
+              "before": {
+                "x": 4032,
+                "y": 176
+              },
+              "after": {
+                "x": 4032,
+                "y": 160
+              }
+            }
+          ]
+        }
+      ],
+      "oldBlocks": 51,
+      "blocks": 85,
+      "oldEnemies": 26,
+      "enemies": 29,
+      "layoutVersion": 4
+    },
+    {
+      "id": "5-1",
+      "routes": [
+        {
+          "id": "upper-1",
+          "optional": true,
+          "entry": {
+            "x": 1440,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 1472,
+              "y": 176,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 1536,
+              "y": 128,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 1584,
+              "y": 80,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 1704,
+            "foot": 208
+          },
+          "enemyId": 8,
+          "addedBlocks": 10,
+          "blockAdjustments": [
+            {
+              "index": 10,
+              "before": {
+                "x": 1568,
+                "y": 128
+              },
+              "after": {
+                "x": 1648,
+                "y": 80
+              }
+            }
+          ],
+          "itemAdjustments": []
+        },
+        {
+          "id": "upper-2",
+          "optional": true,
+          "entry": {
+            "x": 2976,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 3008,
+              "y": 176,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 3072,
+              "y": 128,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 3120,
+              "y": 80,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 3240,
+            "foot": 208
+          },
+          "enemyId": 9,
+          "addedBlocks": 13,
+          "blockAdjustments": [
+            {
+              "index": 30,
+              "before": {
+                "x": 3104,
+                "y": 144
+              },
+              "after": {
+                "x": 3184,
+                "y": 80
+              }
+            }
+          ],
+          "itemAdjustments": []
+        }
+      ],
+      "oldBlocks": 55,
+      "blocks": 78,
+      "oldEnemies": 8,
+      "enemies": 10,
+      "layoutVersion": 4
+    },
+    {
+      "id": "5-2",
+      "routes": [
+        {
+          "id": "upper-1",
+          "optional": true,
+          "entry": {
+            "x": 1408,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 1440,
+              "y": 160,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 1504,
+              "y": 112,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 1552,
+              "y": 64,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 1672,
+            "foot": 208
+          },
+          "enemyId": 7,
+          "addedBlocks": 13,
+          "blockAdjustments": [
+            {
+              "index": 11,
+              "before": {
+                "x": 1568,
+                "y": 144
+              },
+              "after": {
+                "x": 1616,
+                "y": 64
+              }
+            }
+          ],
+          "itemAdjustments": []
+        },
+        {
+          "id": "upper-2",
+          "optional": true,
+          "entry": {
+            "x": 2976,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 3008,
+              "y": 176,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 3072,
+              "y": 128,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 3120,
+              "y": 80,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 3240,
+            "foot": 208
+          },
+          "enemyId": 8,
+          "addedBlocks": 10,
+          "blockAdjustments": [
+            {
+              "index": 35,
+              "before": {
+                "x": 3104,
+                "y": 128
+              },
+              "after": {
+                "x": 3184,
+                "y": 80
+              }
+            }
+          ],
+          "itemAdjustments": []
+        },
+        {
+          "id": "upper-3",
+          "optional": true,
+          "entry": {
+            "x": 4496,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 4528,
+              "y": 160,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 4592,
+              "y": 112,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 4640,
+              "y": 64,
+              "w": 96,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 4776,
+            "foot": 208
+          },
+          "enemyId": 9,
+          "addedBlocks": 14,
+          "blockAdjustments": [
+            {
+              "index": 55,
+              "before": {
+                "x": 4640,
+                "y": 144
+              },
+              "after": {
+                "x": 4720,
+                "y": 64
+              }
+            }
+          ],
+          "itemAdjustments": []
+        }
+      ],
+      "oldBlocks": 57,
+      "blocks": 94,
+      "oldEnemies": 7,
+      "enemies": 10,
+      "layoutVersion": 3
+    },
+    {
+      "id": "5-3",
+      "routes": [
+        {
+          "id": "upper-1",
+          "optional": true,
+          "entry": {
+            "x": 1408,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 1440,
+              "y": 160,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 1504,
+              "y": 112,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 1552,
+              "y": 64,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 1672,
+            "foot": 208
+          },
+          "enemyId": 8,
+          "addedBlocks": 13,
+          "blockAdjustments": [
+            {
+              "index": 31,
+              "before": {
+                "x": 1568,
+                "y": 128
+              },
+              "after": {
+                "x": 1616,
+                "y": 64
+              }
+            }
+          ],
+          "itemAdjustments": []
+        },
+        {
+          "id": "upper-2",
+          "optional": true,
+          "entry": {
+            "x": 4512,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 4544,
+              "y": 176,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 4608,
+              "y": 128,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 4656,
+              "y": 80,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 4776,
+            "foot": 208
+          },
+          "enemyId": 9,
+          "addedBlocks": 10,
+          "blockAdjustments": [
+            {
+              "index": 75,
+              "before": {
+                "x": 4640,
+                "y": 128
+              },
+              "after": {
+                "x": 4720,
+                "y": 80
+              }
+            }
+          ],
+          "itemAdjustments": []
+        },
+        {
+          "id": "upper-3",
+          "optional": true,
+          "entry": {
+            "x": 736,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 768,
+              "y": 176,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 832,
+              "y": 128,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 880,
+              "y": 80,
+              "w": 64,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 984,
+            "foot": 208
+          },
+          "enemyId": 10,
+          "addedBlocks": 11,
+          "blockAdjustments": [],
+          "itemAdjustments": []
+        }
+      ],
+      "oldBlocks": 81,
+      "blocks": 115,
+      "oldEnemies": 8,
+      "enemies": 11,
+      "layoutVersion": 3
+    },
+    {
+      "id": "6-1",
+      "routes": [
+        {
+          "id": "upper-1",
+          "optional": true,
+          "entry": {
+            "x": 1408,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 1440,
+              "y": 160,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 1504,
+              "y": 112,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 1552,
+              "y": 64,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 1672,
+            "foot": 208
+          },
+          "enemyId": 8,
+          "addedBlocks": 13,
+          "blockAdjustments": [
+            {
+              "index": 6,
+              "before": {
+                "x": 1568,
+                "y": 144
+              },
+              "after": {
+                "x": 1616,
+                "y": 64
+              }
+            }
+          ],
+          "itemAdjustments": []
+        },
+        {
+          "id": "upper-2",
+          "optional": true,
+          "entry": {
+            "x": 2976,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 3008,
+              "y": 176,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 3072,
+              "y": 128,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 3120,
+              "y": 80,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 3240,
+            "foot": 208
+          },
+          "enemyId": 9,
+          "addedBlocks": 10,
+          "blockAdjustments": [
+            {
+              "index": 30,
+              "before": {
+                "x": 3104,
+                "y": 128
+              },
+              "after": {
+                "x": 3184,
+                "y": 80
+              }
+            }
+          ],
+          "itemAdjustments": []
+        }
+      ],
+      "oldBlocks": 52,
+      "blocks": 75,
+      "oldEnemies": 8,
+      "enemies": 10,
+      "layoutVersion": 4
+    },
+    {
+      "id": "6-2",
+      "routes": [
+        {
+          "id": "upper-1",
+          "optional": true,
+          "entry": {
+            "x": 1408,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 1440,
+              "y": 160,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 1504,
+              "y": 112,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 1552,
+              "y": 64,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 1672,
+            "foot": 208
+          },
+          "enemyId": 6,
+          "addedBlocks": 13,
+          "blockAdjustments": [
+            {
+              "index": 29,
+              "before": {
+                "x": 1568,
+                "y": 128
+              },
+              "after": {
+                "x": 1616,
+                "y": 64
+              }
+            }
+          ],
+          "itemAdjustments": []
+        },
+        {
+          "id": "upper-2",
+          "optional": true,
+          "entry": {
+            "x": 2464,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 2496,
+              "y": 176,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 2560,
+              "y": 128,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 2608,
+              "y": 80,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 2728,
+            "foot": 208
+          },
+          "enemyId": 7,
+          "addedBlocks": 10,
+          "blockAdjustments": [
+            {
+              "index": 44,
+              "before": {
+                "x": 2592,
+                "y": 128
+              },
+              "after": {
+                "x": 2672,
+                "y": 80
+              }
+            }
+          ],
+          "itemAdjustments": []
+        },
+        {
+          "id": "upper-3",
+          "optional": true,
+          "entry": {
+            "x": 4000,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 4032,
+              "y": 176,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 4096,
+              "y": 128,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 4144,
+              "y": 80,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 4264,
+            "foot": 208
+          },
+          "enemyId": 8,
+          "addedBlocks": 13,
+          "blockAdjustments": [
+            {
+              "index": 64,
+              "before": {
+                "x": 4128,
+                "y": 144
+              },
+              "after": {
+                "x": 4208,
+                "y": 80
+              }
+            }
+          ],
+          "itemAdjustments": [
+            {
+              "index": 34,
+              "before": {
+                "x": 4032,
+                "y": 176
+              },
+              "after": {
+                "x": 4032,
+                "y": 160
+              }
+            }
+          ]
+        }
+      ],
+      "oldBlocks": 75,
+      "blocks": 111,
+      "oldEnemies": 6,
+      "enemies": 9,
+      "layoutVersion": 3
+    },
+    {
+      "id": "6-3",
+      "routes": [
+        {
+          "id": "upper-1",
+          "optional": true,
+          "entry": {
+            "x": 1408,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 1440,
+              "y": 160,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 1504,
+              "y": 112,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 1552,
+              "y": 64,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 1672,
+            "foot": 208
+          },
+          "enemyId": 7,
+          "addedBlocks": 13,
+          "blockAdjustments": [
+            {
+              "index": 27,
+              "before": {
+                "x": 1568,
+                "y": 144
+              },
+              "after": {
+                "x": 1616,
+                "y": 64
+              }
+            }
+          ],
+          "itemAdjustments": []
+        },
+        {
+          "id": "upper-2",
+          "optional": true,
+          "entry": {
+            "x": 2976,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 3008,
+              "y": 176,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 3072,
+              "y": 128,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 3120,
+              "y": 80,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 3240,
+            "foot": 208
+          },
+          "enemyId": 8,
+          "addedBlocks": 12,
+          "blockAdjustments": [
+            {
+              "index": 50,
+              "before": {
+                "x": 3104,
+                "y": 128
+              },
+              "after": {
+                "x": 3184,
+                "y": 80
+              }
+            }
+          ],
+          "itemAdjustments": []
+        },
+        {
+          "id": "upper-3",
+          "optional": true,
+          "entry": {
+            "x": 4000,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 4032,
+              "y": 176,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 4096,
+              "y": 128,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 4144,
+              "y": 80,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 4264,
+            "foot": 208
+          },
+          "enemyId": 9,
+          "addedBlocks": 10,
+          "blockAdjustments": [
+            {
+              "index": 65,
+              "before": {
+                "x": 4128,
+                "y": 128
+              },
+              "after": {
+                "x": 4208,
+                "y": 80
+              }
+            }
+          ],
+          "itemAdjustments": []
+        }
+      ],
+      "oldBlocks": 80,
+      "blocks": 115,
+      "oldEnemies": 7,
+      "enemies": 10,
+      "layoutVersion": 3
+    },
+    {
+      "id": "7-1",
+      "routes": [
+        {
+          "id": "upper-1",
+          "optional": true,
+          "entry": {
+            "x": 1440,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 1472,
+              "y": 176,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 1536,
+              "y": 128,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 1584,
+              "y": 80,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 1704,
+            "foot": 208
+          },
+          "enemyId": 10,
+          "addedBlocks": 12,
+          "blockAdjustments": [
+            {
+              "index": 19,
+              "before": {
+                "x": 1568,
+                "y": 128
+              },
+              "after": {
+                "x": 1648,
+                "y": 80
+              }
+            }
+          ],
+          "itemAdjustments": []
+        },
+        {
+          "id": "upper-2",
+          "optional": true,
+          "entry": {
+            "x": 3456,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 3488,
+              "y": 160,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 3552,
+              "y": 112,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 3600,
+              "y": 64,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 3720,
+            "foot": 208
+          },
+          "enemyId": 11,
+          "addedBlocks": 13,
+          "blockAdjustments": [
+            {
+              "index": 48,
+              "before": {
+                "x": 3616,
+                "y": 128
+              },
+              "after": {
+                "x": 3664,
+                "y": 64
+              }
+            }
+          ],
+          "itemAdjustments": []
+        }
+      ],
+      "oldBlocks": 65,
+      "blocks": 90,
+      "oldEnemies": 10,
+      "enemies": 12,
+      "layoutVersion": 4
+    },
+    {
+      "id": "7-2",
+      "routes": [
+        {
+          "id": "upper-1",
+          "optional": true,
+          "entry": {
+            "x": 1408,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 1440,
+              "y": 160,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 1504,
+              "y": 112,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 1552,
+              "y": 64,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 1672,
+            "foot": 208
+          },
+          "enemyId": 10,
+          "addedBlocks": 13,
+          "blockAdjustments": [
+            {
+              "index": 25,
+              "before": {
+                "x": 1568,
+                "y": 144
+              },
+              "after": {
+                "x": 1616,
+                "y": 64
+              }
+            }
+          ],
+          "itemAdjustments": []
+        },
+        {
+          "id": "upper-2",
+          "optional": true,
+          "entry": {
+            "x": 2976,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 3008,
+              "y": 176,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 3072,
+              "y": 128,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 3120,
+              "y": 80,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 3240,
+            "foot": 208
+          },
+          "enemyId": 11,
+          "addedBlocks": 12,
+          "blockAdjustments": [
+            {
+              "index": 48,
+              "before": {
+                "x": 3104,
+                "y": 128
+              },
+              "after": {
+                "x": 3184,
+                "y": 80
+              }
+            }
+          ],
+          "itemAdjustments": []
+        },
+        {
+          "id": "upper-3",
+          "optional": true,
+          "entry": {
+            "x": 4000,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 4032,
+              "y": 176,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 4096,
+              "y": 128,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 4144,
+              "y": 80,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 4264,
+            "foot": 208
+          },
+          "enemyId": 12,
+          "addedBlocks": 10,
+          "blockAdjustments": [
+            {
+              "index": 63,
+              "before": {
+                "x": 4128,
+                "y": 128
+              },
+              "after": {
+                "x": 4208,
+                "y": 80
+              }
+            }
+          ],
+          "itemAdjustments": []
+        }
+      ],
+      "oldBlocks": 70,
+      "blocks": 105,
+      "oldEnemies": 10,
+      "enemies": 13,
+      "layoutVersion": 3
+    },
+    {
+      "id": "7-3",
+      "routes": [
+        {
+          "id": "upper-1",
+          "optional": true,
+          "entry": {
+            "x": 1440,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 1472,
+              "y": 176,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 1536,
+              "y": 128,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 1584,
+              "y": 80,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 1704,
+            "foot": 208
+          },
+          "enemyId": 12,
+          "addedBlocks": 10,
+          "blockAdjustments": [
+            {
+              "index": 37,
+              "before": {
+                "x": 1568,
+                "y": 128
+              },
+              "after": {
+                "x": 1648,
+                "y": 80
+              }
+            }
+          ],
+          "itemAdjustments": []
+        },
+        {
+          "id": "upper-2",
+          "optional": true,
+          "entry": {
+            "x": 2960,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 2992,
+              "y": 160,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 3056,
+              "y": 112,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 3104,
+              "y": 64,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 3224,
+            "foot": 208
+          },
+          "enemyId": 13,
+          "addedBlocks": 13,
+          "blockAdjustments": [
+            {
+              "index": 57,
+              "before": {
+                "x": 3104,
+                "y": 144
+              },
+              "after": {
+                "x": 3168,
+                "y": 64
+              }
+            }
+          ],
+          "itemAdjustments": []
+        },
+        {
+          "id": "upper-3",
+          "optional": true,
+          "entry": {
+            "x": 4512,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 4544,
+              "y": 176,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 4608,
+              "y": 128,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 4656,
+              "y": 80,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 4776,
+            "foot": 208
+          },
+          "enemyId": 14,
+          "addedBlocks": 12,
+          "blockAdjustments": [
+            {
+              "index": 80,
+              "before": {
+                "x": 4640,
+                "y": 128
+              },
+              "after": {
+                "x": 4720,
+                "y": 80
+              }
+            }
+          ],
+          "itemAdjustments": []
+        }
+      ],
+      "oldBlocks": 87,
+      "blocks": 122,
+      "oldEnemies": 12,
+      "enemies": 15,
+      "layoutVersion": 3
+    },
+    {
+      "id": "8-1",
+      "routes": [
+        {
+          "id": "upper-1",
+          "optional": true,
+          "entry": {
+            "x": 1440,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 1472,
+              "y": 176,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 1536,
+              "y": 128,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 1584,
+              "y": 80,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 1704,
+            "foot": 208
+          },
+          "enemyId": 8,
+          "addedBlocks": 13,
+          "blockAdjustments": [
+            {
+              "index": 25,
+              "before": {
+                "x": 1568,
+                "y": 144
+              },
+              "after": {
+                "x": 1648,
+                "y": 80
+              }
+            }
+          ],
+          "itemAdjustments": []
+        },
+        {
+          "id": "upper-2",
+          "optional": true,
+          "entry": {
+            "x": 2976,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 3008,
+              "y": 176,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 3072,
+              "y": 128,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 3120,
+              "y": 80,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 3240,
+            "foot": 208
+          },
+          "enemyId": 9,
+          "addedBlocks": 12,
+          "blockAdjustments": [
+            {
+              "index": 48,
+              "before": {
+                "x": 3104,
+                "y": 128
+              },
+              "after": {
+                "x": 3184,
+                "y": 80
+              }
+            }
+          ],
+          "itemAdjustments": []
+        }
+      ],
+      "oldBlocks": 70,
+      "blocks": 95,
+      "oldEnemies": 8,
+      "enemies": 10,
+      "layoutVersion": 4
+    },
+    {
+      "id": "8-2",
+      "routes": [
+        {
+          "id": "upper-1",
+          "optional": true,
+          "entry": {
+            "x": 1440,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 1472,
+              "y": 176,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 1536,
+              "y": 128,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 1584,
+              "y": 80,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 1704,
+            "foot": 208
+          },
+          "enemyId": 8,
+          "addedBlocks": 10,
+          "blockAdjustments": [
+            {
+              "index": 17,
+              "before": {
+                "x": 1568,
+                "y": 128
+              },
+              "after": {
+                "x": 1648,
+                "y": 80
+              }
+            }
+          ],
+          "itemAdjustments": []
+        },
+        {
+          "id": "upper-2",
+          "optional": true,
+          "entry": {
+            "x": 2464,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 2496,
+              "y": 176,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 2560,
+              "y": 128,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 2608,
+              "y": 80,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 2728,
+            "foot": 208
+          },
+          "enemyId": 9,
+          "addedBlocks": 12,
+          "blockAdjustments": [
+            {
+              "index": 31,
+              "before": {
+                "x": 2592,
+                "y": 128
+              },
+              "after": {
+                "x": 2672,
+                "y": 80
+              }
+            }
+          ],
+          "itemAdjustments": [
+            {
+              "index": 21,
+              "before": {
+                "x": 2496,
+                "y": 176
+              },
+              "after": {
+                "x": 2496,
+                "y": 160
+              }
+            }
+          ]
+        },
+        {
+          "id": "upper-3",
+          "optional": true,
+          "entry": {
+            "x": 4512,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 4544,
+              "y": 176,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 4608,
+              "y": 128,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 4656,
+              "y": 80,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 4776,
+            "foot": 208
+          },
+          "enemyId": 10,
+          "addedBlocks": 12,
+          "blockAdjustments": [
+            {
+              "index": 60,
+              "before": {
+                "x": 4640,
+                "y": 128
+              },
+              "after": {
+                "x": 4720,
+                "y": 80
+              }
+            }
+          ],
+          "itemAdjustments": []
+        }
+      ],
+      "oldBlocks": 62,
+      "blocks": 96,
+      "oldEnemies": 8,
+      "enemies": 11,
+      "layoutVersion": 3
+    },
+    {
+      "id": "8-3",
+      "routes": [
+        {
+          "id": "upper-1",
+          "optional": true,
+          "entry": {
+            "x": 2448,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 2480,
+              "y": 160,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 2544,
+              "y": 112,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 2592,
+              "y": 64,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 2712,
+            "foot": 208
+          },
+          "enemyId": 8,
+          "addedBlocks": 13,
+          "blockAdjustments": [
+            {
+              "index": 23,
+              "before": {
+                "x": 2592,
+                "y": 144
+              },
+              "after": {
+                "x": 2656,
+                "y": 64
+              }
+            }
+          ],
+          "itemAdjustments": []
+        },
+        {
+          "id": "upper-2",
+          "optional": true,
+          "entry": {
+            "x": 2976,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 3008,
+              "y": 176,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 3072,
+              "y": 128,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 3120,
+              "y": 80,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 3240,
+            "foot": 208
+          },
+          "enemyId": 9,
+          "addedBlocks": 10,
+          "blockAdjustments": [
+            {
+              "index": 32,
+              "before": {
+                "x": 3104,
+                "y": 128
+              },
+              "after": {
+                "x": 3184,
+                "y": 80
+              }
+            }
+          ],
+          "itemAdjustments": []
+        },
+        {
+          "id": "upper-3",
+          "optional": true,
+          "entry": {
+            "x": 4000,
+            "foot": 208
+          },
+          "floors": [
+            {
+              "x": 4032,
+              "y": 176,
+              "w": 32,
+              "h": 16
+            },
+            {
+              "x": 4096,
+              "y": 128,
+              "w": 112,
+              "h": 16
+            },
+            {
+              "x": 4144,
+              "y": 80,
+              "w": 80,
+              "h": 16
+            }
+          ],
+          "rejoin": {
+            "x": 4264,
+            "foot": 208
+          },
+          "enemyId": 10,
+          "addedBlocks": 12,
+          "blockAdjustments": [
+            {
+              "index": 46,
+              "before": {
+                "x": 4128,
+                "y": 128
+              },
+              "after": {
+                "x": 4208,
+                "y": 80
+              }
+            }
+          ],
+          "itemAdjustments": [
+            {
+              "index": 34,
+              "before": {
+                "x": 4032,
+                "y": 176
+              },
+              "after": {
+                "x": 4032,
+                "y": 160
+              }
+            }
+          ]
+        }
+      ],
+      "oldBlocks": 62,
+      "blocks": 97,
+      "oldEnemies": 8,
+      "enemies": 11,
+      "layoutVersion": 3
+    }
+  ]
+}

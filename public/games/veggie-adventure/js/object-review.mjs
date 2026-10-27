@@ -7,6 +7,7 @@ export function objectReviewPoints(levels){
    const seen=new Set();for(const a of l[key]||[]){const kind=a.arena?'arena':a.kind||key;if(seen.has(kind))continue;seen.add(kind);points.push({id:l.id+':'+key+':'+kind,level:l.id,name:l.id+' · '+label+' '+kind,x:kind==='crumble'?a.x+4:Math.max(16,a.x-64),...(kind==='crumble'?{foot:a.y}:{})});}
   }
   if(l.boss)points.push({id:l.id+':boss',level:l.id,name:l.id+' · 首领战',x:l.boss.left+8});
+  for(const r of l.layeredRoutes||[]){points.push({id:l.id+':route:'+r.id+':approach',level:l.id,name:l.id+' · 高路 '+r.id+' 入口',x:r.entry.x,foot:r.entry.foot});const f=r.floors.at(-1);points.push({id:l.id+':route:'+r.id+':top',level:l.id,name:l.id+' · 高路 '+r.id+' 顶层',x:f.x+4,foot:f.y});}
  }
  return points;
 }

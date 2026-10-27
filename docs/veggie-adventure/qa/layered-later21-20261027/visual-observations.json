@@ -1,0 +1,44 @@
+[
+  {
+    "level": "2-2",
+    "mode": "debug top spawn, real jump, ordinary damage",
+    "state": "x=2084.0 foot=-2.2 vx=0.0 vy=120.8 charge=0% air playing t=0.72",
+    "hud": "2-2 · 基础芽豆 · 剩余重生 3次 · 分数 0 · 780秒 · 已完成 4/32"
+  },
+  {
+    "level": "3-2",
+    "mode": "debug top spawn, real jump, ordinary damage",
+    "state": "x=2100.0 foot=32.1 vx=0.0 vy=120.8 charge=0% air playing t=0.68",
+    "hud": "3-2 · 基础芽豆 · 剩余重生 3次 · 分数 0 · 780秒 · 已完成 4/32"
+  },
+  {
+    "level": "4-2",
+    "mode": "debug top spawn, real jump, ordinary damage",
+    "state": "x=1812.0 foot=33.2 vx=0.0 vy=132.5 charge=0% air playing t=0.67",
+    "hud": "4-2 · 基础芽豆 · 剩余重生 3次 · 分数 0 · 780秒 · 已完成 4/32"
+  },
+  {
+    "level": "5-3",
+    "mode": "debug top spawn, real jump, ordinary damage",
+    "state": "x=1556.0 foot=17.3 vx=0.0 vy=120.8 charge=0% air playing t=0.68",
+    "hud": "5-3 · 基础芽豆 · 剩余重生 3次 · 分数 0 · 840秒 · 已完成 4/32"
+  },
+  {
+    "level": "6-2",
+    "mode": "debug top spawn, real jump, ordinary damage",
+    "state": "x=1556.0 foot=18.4 vx=0.0 vy=132.5 charge=0% air playing t=0.67",
+    "hud": "6-2 · 基础芽豆 · 剩余重生 3次 · 分数 0 · 780秒 · 已完成 4/32"
+  },
+  {
+    "level": "7-2",
+    "mode": "debug top spawn, real jump, ordinary damage",
+    "state": "x=1556.0 foot=18.4 vx=0.0 vy=132.5 charge=0% air playing t=0.68",
+    "hud": "7-2 · 基础芽豆 · 剩余重生 3次 · 分数 0 · 780秒 · 已完成 4/32"
+  },
+  {
+    "level": "8-3",
+    "mode": "debug top spawn, real jump, ordinary damage",
+    "state": "x=2596.0 foot=17.3 vx=0.0 vy=120.8 charge=0% air playing t=0.67",
+    "hud": "8-3 · 基础芽豆 · 剩余重生 3次 · 分数 0 · 840秒 · 已完成 4/32"
+  }
+]

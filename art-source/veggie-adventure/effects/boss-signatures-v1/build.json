@@ -1,0 +1,413 @@
+{
+  "tool": "built-in image_gen",
+  "records": [
+    {
+      "kind": 2,
+      "source": "art-source/veggie-adventure/effects/boss-signatures-v1/B02/generated.png",
+      "frames": [
+        {
+          "crop": {
+            "left": 28,
+            "top": 335,
+            "width": 599,
+            "height": 292
+          },
+          "x": 6,
+          "y": 67,
+          "width": 116,
+          "height": 57
+        },
+        {
+          "crop": {
+            "left": 0,
+            "top": 111,
+            "width": 593,
+            "height": 456
+          },
+          "x": 6,
+          "y": 35,
+          "width": 116,
+          "height": 89
+        },
+        {
+          "crop": {
+            "left": 35,
+            "top": 0,
+            "width": 592,
+            "height": 562
+          },
+          "x": 6,
+          "y": 14,
+          "width": 116,
+          "height": 110
+        },
+        {
+          "crop": {
+            "left": 0,
+            "top": 121,
+            "width": 597,
+            "height": 441
+          },
+          "x": 6,
+          "y": 38,
+          "width": 116,
+          "height": 86
+        }
+      ],
+      "sha256": "4bfa0a40b02f1c903a1dad91cbf3b3ef0ea95bb4eedbbbe8a90354081a396f8b",
+      "frameSize": 128,
+      "layout": "2x2",
+      "alphaPreserved": true
+    },
+    {
+      "kind": 3,
+      "source": "art-source/veggie-adventure/effects/boss-signatures-v1/B03/generated.png",
+      "frames": [
+        {
+          "crop": {
+            "left": 62,
+            "top": 61,
+            "width": 532,
+            "height": 510
+          },
+          "x": 6,
+          "y": 8,
+          "width": 116,
+          "height": 111
+        },
+        {
+          "crop": {
+            "left": 21,
+            "top": 186,
+            "width": 566,
+            "height": 301
+          },
+          "x": 6,
+          "y": 33,
+          "width": 116,
+          "height": 62
+        },
+        {
+          "crop": {
+            "left": 52,
+            "top": 47,
+            "width": 575,
+            "height": 474
+          },
+          "x": 6,
+          "y": 16,
+          "width": 116,
+          "height": 96
+        },
+        {
+          "crop": {
+            "left": 25,
+            "top": 30,
+            "width": 543,
+            "height": 505
+          },
+          "x": 6,
+          "y": 10,
+          "width": 116,
+          "height": 108
+        }
+      ],
+      "sha256": "ed5ea7cee7585ed1d407ac6ba2c56d9994dfc7a06e8cee120595b4989cf92b10",
+      "frameSize": 128,
+      "layout": "2x2",
+      "alphaPreserved": true
+    },
+    {
+      "kind": 4,
+      "source": "art-source/veggie-adventure/effects/boss-signatures-v1/B04/generated.png",
+      "frames": [
+        {
+          "crop": {
+            "left": 107,
+            "top": 402,
+            "width": 438,
+            "height": 191
+          },
+          "x": 6,
+          "y": 73,
+          "width": 116,
+          "height": 51
+        },
+        {
+          "crop": {
+            "left": 151,
+            "top": 53,
+            "width": 323,
+            "height": 531
+          },
+          "x": 28,
+          "y": 8,
+          "width": 71,
+          "height": 116
+        },
+        {
+          "crop": {
+            "left": 70,
+            "top": 17,
+            "width": 540,
+            "height": 568
+          },
+          "x": 9,
+          "y": 8,
+          "width": 110,
+          "height": 116
+        },
+        {
+          "crop": {
+            "left": 53,
+            "top": 151,
+            "width": 527,
+            "height": 439
+          },
+          "x": 6,
+          "y": 27,
+          "width": 116,
+          "height": 97
+        }
+      ],
+      "sha256": "28488cdf9505c033ea2f25a9cf00b391130d26e69e5477ab27070877bf384b88",
+      "frameSize": 128,
+      "layout": "2x2",
+      "alphaPreserved": true
+    },
+    {
+      "kind": 5,
+      "source": "art-source/veggie-adventure/effects/boss-signatures-v1/B05/generated.png",
+      "frames": [
+        {
+          "crop": {
+            "left": 103,
+            "top": 151,
+            "width": 475,
+            "height": 387
+          },
+          "x": 6,
+          "y": 16,
+          "width": 116,
+          "height": 95
+        },
+        {
+          "crop": {
+            "left": 79,
+            "top": 97,
+            "width": 450,
+            "height": 441
+          },
+          "x": 6,
+          "y": 7,
+          "width": 116,
+          "height": 114
+        },
+        {
+          "crop": {
+            "left": 70,
+            "top": 86,
+            "width": 541,
+            "height": 437
+          },
+          "x": 6,
+          "y": 17,
+          "width": 116,
+          "height": 94
+        },
+        {
+          "crop": {
+            "left": 19,
+            "top": 111,
+            "width": 591,
+            "height": 412
+          },
+          "x": 6,
+          "y": 23,
+          "width": 116,
+          "height": 81
+        }
+      ],
+      "sha256": "687570446aa44973ea2985018ce189769e495ed8092768f244e258ed7161c2ff",
+      "frameSize": 128,
+      "layout": "2x2",
+      "alphaPreserved": true
+    },
+    {
+      "kind": 6,
+      "source": "art-source/veggie-adventure/effects/boss-signatures-v1/B06/generated.png",
+      "frames": [
+        {
+          "crop": {
+            "left": 100,
+            "top": 241,
+            "width": 503,
+            "height": 386
+          },
+          "x": 6,
+          "y": 35,
+          "width": 116,
+          "height": 89
+        },
+        {
+          "crop": {
+            "left": 172,
+            "top": 67,
+            "width": 341,
+            "height": 386
+          },
+          "x": 13,
+          "y": 8,
+          "width": 102,
+          "height": 116
+        },
+        {
+          "crop": {
+            "left": 107,
+            "top": 0,
+            "width": 520,
+            "height": 564
+          },
+          "x": 10,
+          "y": 8,
+          "width": 107,
+          "height": 116
+        },
+        {
+          "crop": {
+            "left": 0,
+            "top": 217,
+            "width": 577,
+            "height": 348
+          },
+          "x": 6,
+          "y": 54,
+          "width": 116,
+          "height": 70
+        }
+      ],
+      "sha256": "2a6da864676cc255aacb2aa91f1826b147ad58a34959d64056ddfe81f87bc020",
+      "frameSize": 128,
+      "layout": "2x2",
+      "alphaPreserved": true
+    },
+    {
+      "kind": 7,
+      "source": "art-source/veggie-adventure/effects/boss-signatures-v1/B07/generated.png",
+      "frames": [
+        {
+          "crop": {
+            "left": 162,
+            "top": 199,
+            "width": 410,
+            "height": 362
+          },
+          "x": 6,
+          "y": 13,
+          "width": 116,
+          "height": 102
+        },
+        {
+          "crop": {
+            "left": 18,
+            "top": 153,
+            "width": 518,
+            "height": 425
+          },
+          "x": 6,
+          "y": 16,
+          "width": 116,
+          "height": 95
+        },
+        {
+          "crop": {
+            "left": 97,
+            "top": 42,
+            "width": 521,
+            "height": 419
+          },
+          "x": 6,
+          "y": 17,
+          "width": 116,
+          "height": 93
+        },
+        {
+          "crop": {
+            "left": 40,
+            "top": 12,
+            "width": 501,
+            "height": 469
+          },
+          "x": 6,
+          "y": 9,
+          "width": 116,
+          "height": 109
+        }
+      ],
+      "sha256": "f2d12b6a58fddee9a9a09d7bf7533e856cacf5d45fea73af49f19b886df61505",
+      "frameSize": 128,
+      "layout": "2x2",
+      "alphaPreserved": true
+    },
+    {
+      "kind": 8,
+      "source": "art-source/veggie-adventure/effects/boss-signatures-v1/B08/generated.png",
+      "frames": [
+        {
+          "crop": {
+            "left": 93,
+            "top": 55,
+            "width": 500,
+            "height": 500
+          },
+          "x": 6,
+          "y": 6,
+          "width": 116,
+          "height": 116
+        },
+        {
+          "crop": {
+            "left": 61,
+            "top": 77,
+            "width": 508,
+            "height": 506
+          },
+          "x": 6,
+          "y": 6,
+          "width": 116,
+          "height": 116
+        },
+        {
+          "crop": {
+            "left": 67,
+            "top": 41,
+            "width": 560,
+            "height": 529
+          },
+          "x": 6,
+          "y": 9,
+          "width": 116,
+          "height": 110
+        },
+        {
+          "crop": {
+            "left": 0,
+            "top": 194,
+            "width": 569,
+            "height": 288
+          },
+          "x": 6,
+          "y": 34,
+          "width": 116,
+          "height": 59
+        }
+      ],
+      "sha256": "32bc4af31edd60c4d26ebdc51fef1c92aa79a210e7fcb036938bf522c8773057",
+      "frameSize": 128,
+      "layout": "2x2",
+      "alphaPreserved": true
+    }
+  ],
+  "visualInGameVerified": true,
+  "visualEvidence": "docs/veggie-adventure/qa/boss-seven-20261027/REPORT.md"
+}

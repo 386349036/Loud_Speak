@@ -4,6 +4,7 @@ import {planGroundEnemy,confineGroundEnemy,positionCorn,groundEnemyEngaged} from
 import {prepareEnemyHealth} from './enemy-health.mjs';
 import {moveAquaticPlant} from './aquatic-plant.mjs';
 import {finishShellDash,stompSound} from './enemy-attacks.mjs';
+import {AQUATIC_MOVE_SCALE,aquaticSwimmer} from './aquatic-speed.mjs';
 export const ENEMY_ART={mushroom:'E01',cabbage:'E02',walnut:'E03',spike:'E04',jelly:'E05',fish:'E06',corn:'E07',trap:'E08',cloud:'E09',bolt:'E10',winged:'E11',leaper:'E12',anemone:'E13'};
 export const enemyFacing=e=>Math.sign(e.facing||e.vx||1);
 export const enemyActive=e=>!e.dead&&!(['trap','leaper'].includes(e.kind)&&e.active===false);
@@ -21,7 +22,7 @@ export function hurtEnemy(game,e,method='stomp',damage=1){
 export function updateEnemies(game,dt,oldBottom){
  const p=game.p;
  for(const e of game.enemies){prepareEnemyHealth(e);if(e.dead)continue;e.hitFlash=Math.max(0,e.hitFlash-dt);if(!['rolling','shell','stunned'].includes(e.state)&&!e.brain?.engaged&&e.brain?.mode!=='return'&&Math.abs(e.x-p.x)>320)continue;
-  e.grace=Math.max(0,(e.grace||0)-dt);e.phase=(e.phase||0)+dt;e.homeX??=e.x;e.homeY??=e.y;
+  e.grace=Math.max(0,(e.grace||0)-dt);e.phase=(e.phase||0)+dt*(aquaticSwimmer(e.kind)?AQUATIC_MOVE_SCALE:1);e.homeX??=e.x;e.homeY??=e.y;
   planGroundEnemy(game,e,dt);if(e.kind==='corn')positionCorn(game,e,dt);
   if(['fish','jelly','cloud','winged'].includes(e.kind)&&e.state!=='stunned'){
    moveFlyer(game,e,dt);

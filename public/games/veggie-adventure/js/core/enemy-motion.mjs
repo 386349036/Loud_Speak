@@ -2,8 +2,9 @@ const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 import {flyingTarget,jellyTarget} from './enemy-tactics.mjs';
 import {prepareTrap,trapStage,TRAP_CYCLE} from './trap-profile.mjs';
 import {seesPlayer} from './enemy-tactics.mjs';
+import {AQUATIC_MOVE_SCALE,aquaticSwimmer} from './aquatic-speed.mjs';
 export function moveFlyer(game,e,dt){
- const ox=e.x,oy=e.y;let flightY;
+ const ox=e.x,oy=e.y,moveDt=dt*(aquaticSwimmer(e.kind)?AQUATIC_MOVE_SCALE:1);let flightY;
  if(e.kind==='winged'&&!e.flightHomeSet){
   const floor=Math.min(208,...game.solids().filter(s=>s.y>=e.homeY&&e.x+e.w>s.x&&e.x<s.x+s.w).map(s=>s.y));
   e.homeY=Math.min(e.homeY,floor-e.h-16);e.flightHomeSet=true;
@@ -15,12 +16,12 @@ export function moveFlyer(game,e,dt){
  }else {
   const patrol=e.homeX+Math.sin(e.phase*(e.kind==='fish'?1.2:.8))*24;
   const plan=e.kind==='jelly'?jellyTarget(game,e,dt,patrol):flyingTarget(game,e,dt,patrol);
-  e.x+=clamp(plan.x-e.x,-plan.speed*dt,plan.speed*dt);
-  if(['winged','fish'].includes(e.kind)&&Number.isFinite(plan.y))flightY=e.y+clamp(plan.y-e.y,-80*dt,80*dt);
+  e.x+=clamp(plan.x-e.x,-plan.speed*moveDt,plan.speed*moveDt);
+  if(['winged','fish'].includes(e.kind)&&Number.isFinite(plan.y))flightY=e.y+clamp(plan.y-e.y,-80*moveDt,80*moveDt);
  }
  if(e.kind==='jelly'){
   const t=e.phase%2,lift=t<.5?24*Math.sin(t*Math.PI):24*(1-(t-.5)/1.5);
-  e.y=e.homeY-lift; // Pulse upward for .5s, then drift down for 1.5s.
+  e.y=e.homeY-lift; // Preserve the pulse arc, traversed at 70% speed.
  }else e.y=Number.isFinite(flightY)?flightY:e.homeY+Math.sin(e.phase*2)*12;
  if(e.kind==='winged')e.y=clamp(e.y,oy-80*dt,oy+80*dt);
  if(e.kind==='winged'){
@@ -81,12 +82,12 @@ export function moveWaterLeaper(game,e,dt){
  e.leapPhase??='wait';e.leapTimer=(e.leapTimer||0)+dt;
  if(e.leapPhase==='wait'){
   e.active=false;e.warning=true;e.x=e.homeX;e.y=water.y-e.h+2;e.vx=0;e.vy=0;
-  if(e.leapTimer>=.5){e.leapPhase='rise';e.leapTimer=0;e.warning=false;e.active=true;e.vx=e.leapVX;e.vy=-300;}
+  if(e.leapTimer>=.5){e.leapPhase='rise';e.leapTimer=0;e.warning=false;e.active=true;e.vx=e.leapVX*AQUATIC_MOVE_SCALE;e.vy=-300*AQUATIC_MOVE_SCALE;}
  }else if(e.leapPhase==='splash'){
   e.active=false;e.warning=false;e.vx=0;e.vy=0;
   if(e.leapTimer>=.3){e.leapPhase='wait';e.leapTimer=0;}
  }else{
-  e.active=true;e.vy+=600*dt;e.x=clamp(e.x+e.vx*dt,water.x+2,water.x+water.w-e.w-2);e.y+=e.vy*dt;
+  e.active=true;e.vy+=600*AQUATIC_MOVE_SCALE**2*dt;e.x=clamp(e.x+e.vx*dt,water.x+2,water.x+water.w-e.w-2);e.y+=e.vy*dt;
   if(e.vy>=0)e.leapPhase='fall';
   if(e.leapPhase==='fall'&&e.y+e.h>=water.y+2){e.y=water.y-e.h+2;e.leapPhase='splash';e.leapTimer=0;e.active=false;e.vx=0;e.vy=0;}
  }

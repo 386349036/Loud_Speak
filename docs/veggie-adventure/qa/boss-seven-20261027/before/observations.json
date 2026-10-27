@@ -1,0 +1,79 @@
+[
+  {
+    "level": "2-4",
+    "state": "2-4 洋葱矿主 | 时间 7.00 | playing | 主角1 x=820.0 foot=170.0 | Boss 7/7 attack / charge t=0.01 x=870.2 | 危险物0\n技能：落石滚撞、快速冲撞",
+    "log": "3.41s expose/rock-roll/1 hp=7 x=857.1\n5.14s recover/rock-roll/1 hp=7 x=857.1\n5.69s idle/rock-roll/1 hp=7 x=857.1\n6.34s windup/charge/1 hp=7 x=872.7\n6.99s attack/charge/2 hp=7 x=871.4"
+  },
+  {
+    "level": "3-4",
+    "state": "3-4 玉米骑士 | 时间 7.00 | playing | 主角3 x=820.0 foot=170.0 | Boss 8/8 windup / dash t=0.42 x=883.8 | 危险物0\n技能：三连籽弹、突进冲撞",
+    "log": "1.30s attack/seed-dash/1 hp=8 x=1100.5\n3.41s expose/seed-dash/1 hp=8 x=883.8\n5.38s recover/seed-dash/1 hp=8 x=883.8\n5.93s idle/seed-dash/1 hp=8 x=883.8\n6.58s windup/dash/1 hp=8 x=883.8"
+  },
+  {
+    "level": "4-4",
+    "state": "4-4 莲藕潜王 | 时间 0.02 | playing | 主角1 x=32.0 foot=194.3 | Boss 8/8 idle / - t=0.00 x=1120.0 | 危险物0\n技能：扇射跃岸、双轮扇射",
+    "log": "2.95s recover/fan-leap/1 hp=7 x=808.0\n3.74s idle/fan-leap/1 hp=7 x=920.0\n4.39s windup/double-fan/1 hp=7 x=920.0\n5.04s attack/double-fan/2 hp=7 x=920.0\n0.00s idle/undefined/0 hp=8 x=1120.0"
+  },
+  {
+    "level": "5-4",
+    "state": "5-4 榴莲堡主 | 时间 7.00 | playing | 主角1 x=820.0 foot=170.0 | Boss 9/9 attack / thorn-roll t=0.01 x=870.8 | 危险物2\n技能：落刺滚撞、散刺冲撞",
+    "log": "3.41s expose/rock-roll/1 hp=9 x=857.1\n5.14s recover/rock-roll/1 hp=9 x=857.1\n5.69s idle/rock-roll/1 hp=9 x=857.1\n6.34s windup/thorn-roll/1 hp=9 x=872.7\n6.99s attack/thorn-roll/2 hp=9 x=871.7"
+  },
+  {
+    "level": "6-4",
+    "state": "6-4 辣椒术士 | 时间 7.00 | playing | 主角1 x=820.0 foot=170.0 | Boss 10/10 idle / crossfire t=0.03 x=1099.5 | 危险物0\n技能：高低交叉弹、连环爆裂种子",
+    "log": "0.65s windup/crossfire/0 hp=10 x=1100.5\n1.30s attack/crossfire/1 hp=10 x=1100.5\n2.51s expose/crossfire/1 hp=10 x=1100.5\n6.42s recover/crossfire/1 hp=10 x=1100.5\n6.97s idle/crossfire/1 hp=10 x=1100.5"
+  },
+  {
+    "level": "7-4",
+    "state": "7-4 葡萄双生 | 时间 8.00 | playing | 主角3 x=820.0 foot=145.7 | Boss 10/10 windup / right-sweep t=0.38 x=1081.0 | 危险物0\n技能：左头横扫、右头横扫",
+    "log": "1.30s attack/left-sweep/1 hp=10 x=1100.5\n2.51s expose/left-sweep/1 hp=10 x=1100.5\n6.42s recover/left-sweep/1 hp=10 x=1100.5\n6.97s idle/left-sweep/1 hp=10 x=1100.5\n7.62s windup/right-sweep/1 hp=10 x=1081.0"
+  },
+  {
+    "level": "8-4",
+    "state": "8-4 石榴王 | 时间 7.50 | playing | 主角3 x=820.0 foot=177.6 | Boss 12/12 windup / slam t=0.08 x=1081.0 | 危险物0\n技能：跳震波、扇形籽弹",
+    "log": "1.30s attack/volley/1 hp=12 x=1100.5\n2.31s expose/volley/1 hp=12 x=1100.5\n6.22s recover/volley/1 hp=12 x=1100.5\n6.77s idle/volley/1 hp=12 x=1100.5\n7.42s windup/slam/1 hp=12 x=1081.0"
+  },
+  {
+    "level": "2-4",
+    "checkpoint": "3.5s",
+    "state": "2-4 洋葱矿主 | 时间 3.50 | playing | 主角1 x=820.0 foot=145.2 | Boss 7/7 expose / rock-roll t=0.09 x=857.1 | 危险物0\n技能：落石滚撞、快速冲撞",
+    "log": "0.01s idle/undefined/0 hp=7 x=1119.8\n0.65s windup/rock-roll/0 hp=7 x=1100.5\n1.30s attack/rock-roll/1 hp=7 x=1099.5\n3.41s expose/rock-roll/1 hp=7 x=857.1"
+  },
+  {
+    "level": "3-4",
+    "checkpoint": "3.5s",
+    "state": "3-4 玉米骑士 | 时间 3.50 | playing | 主角3 x=820.0 foot=145.2 | Boss 8/8 expose / seed-dash t=0.09 x=883.8 | 危险物0\n技能：三连籽弹、突进冲撞",
+    "log": "0.01s idle/undefined/0 hp=8 x=1119.8\n0.65s windup/seed-dash/0 hp=8 x=1100.5\n1.30s attack/seed-dash/1 hp=8 x=1100.5\n3.41s expose/seed-dash/1 hp=8 x=883.8"
+  },
+  {
+    "level": "4-4",
+    "checkpoint": "3.5s",
+    "state": "4-4 莲藕潜王 | 时间 3.50 | playing | 主角1 x=820.0 foot=192.7 | Boss 7/8 recover / fan-leap t=0.55 x=808.0 | 危险物0\n技能：扇射跃岸、双轮扇射",
+    "log": "0.01s idle/undefined/0 hp=8 x=920.0\n0.65s windup/fan-leap/0 hp=8 x=920.0\n1.30s attack/fan-leap/1 hp=8 x=920.0\n2.81s expose/fan-leap/1 hp=8 x=808.0\n2.95s recover/fan-leap/1 hp=7 x=808.0"
+  },
+  {
+    "level": "5-4",
+    "checkpoint": "3.5s",
+    "state": "5-4 榴莲堡主 | 时间 3.50 | playing | 主角1 x=820.0 foot=145.2 | Boss 9/9 expose / rock-roll t=0.09 x=857.1 | 危险物0\n技能：落刺滚撞、散刺冲撞",
+    "log": "0.01s idle/undefined/0 hp=9 x=1119.8\n0.65s windup/rock-roll/0 hp=9 x=1100.5\n1.30s attack/rock-roll/1 hp=9 x=1099.5\n3.41s expose/rock-roll/1 hp=9 x=857.1"
+  },
+  {
+    "level": "6-4",
+    "checkpoint": "3.5s",
+    "state": "6-4 辣椒术士 | 时间 3.50 | playing | 主角3 x=820.0 foot=145.2 | Boss 10/10 expose / crossfire t=0.99 x=1100.5 | 危险物3\n技能：高低交叉弹、连环爆裂种子",
+    "log": "0.01s idle/undefined/0 hp=10 x=1119.8\n0.65s windup/crossfire/0 hp=10 x=1100.5\n1.30s attack/crossfire/1 hp=10 x=1100.5\n2.51s expose/crossfire/1 hp=10 x=1100.5"
+  },
+  {
+    "level": "7-4",
+    "checkpoint": "3.5s",
+    "state": "7-4 葡萄双生 | 时间 3.50 | playing | 主角3 x=820.0 foot=145.2 | Boss 10/10 expose / left-sweep t=0.99 x=1100.5 | 危险物3\n技能：左头横扫、右头横扫",
+    "log": "0.01s idle/undefined/0 hp=10 x=1119.8\n0.65s windup/left-sweep/0 hp=10 x=1100.5\n1.30s attack/left-sweep/1 hp=10 x=1100.5\n2.51s expose/left-sweep/1 hp=10 x=1100.5"
+  },
+  {
+    "level": "8-4",
+    "checkpoint": "3.5s",
+    "state": "8-4 石榴王 | 时间 3.50 | playing | 主角3 x=820.0 foot=145.2 | Boss 12/12 expose / volley t=1.19 x=1100.5 | 危险物2\n技能：跳震波、扇形籽弹",
+    "log": "0.01s idle/undefined/0 hp=12 x=1119.8\n0.65s windup/volley/0 hp=12 x=1100.5\n1.30s attack/volley/1 hp=12 x=1100.5\n2.31s expose/volley/1 hp=12 x=1100.5"
+  }
+]

@@ -1,8 +1,8 @@
-// Campaign rework V1, following the authored 1-4 experiment.
+// Optional breakable upper branches; original ground, water and mechanisms preserved.
 export default {
   "id": "7-1",
   "name": "灯下藤径",
-  "focus": "夜间轮廓；长路线分段补给，三形态净空",
+  "focus": "夜间轮廓；长路线分段补给，三形态净空；可破坏中高层支路与高台巡逻",
   "world": 7,
   "stage": 1,
   "width": 5120,
@@ -252,8 +252,8 @@ export default {
       "breakable": true
     },
     {
-      "x": 1568,
-      "y": 128,
+      "x": 1648,
+      "y": 80,
       "w": 16,
       "h": 16,
       "kind": "brick",
@@ -488,8 +488,8 @@ export default {
       "breakable": true
     },
     {
-      "x": 3616,
-      "y": 128,
+      "x": 3664,
+      "y": 64,
       "w": 16,
       "h": 16,
       "kind": "brick",
@@ -627,6 +627,232 @@ export default {
       "breakable": true,
       "item": "rebirth",
       "rewardId": "7-1"
+    },
+    {
+      "x": 1472,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-1"
+    },
+    {
+      "x": 1488,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-1"
+    },
+    {
+      "x": 1536,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-1"
+    },
+    {
+      "x": 1552,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-1"
+    },
+    {
+      "x": 1584,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-1"
+    },
+    {
+      "x": 1600,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-1"
+    },
+    {
+      "x": 1616,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-1"
+    },
+    {
+      "x": 1632,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-1"
+    },
+    {
+      "x": 1584,
+      "y": 80,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-1"
+    },
+    {
+      "x": 1600,
+      "y": 80,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-1"
+    },
+    {
+      "x": 1616,
+      "y": 80,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-1"
+    },
+    {
+      "x": 1632,
+      "y": 80,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-1"
+    },
+    {
+      "x": 3488,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-2"
+    },
+    {
+      "x": 3504,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-2"
+    },
+    {
+      "x": 3552,
+      "y": 112,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-2"
+    },
+    {
+      "x": 3568,
+      "y": 112,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-2"
+    },
+    {
+      "x": 3584,
+      "y": 112,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-2"
+    },
+    {
+      "x": 3600,
+      "y": 112,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-2"
+    },
+    {
+      "x": 3616,
+      "y": 112,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-2"
+    },
+    {
+      "x": 3632,
+      "y": 112,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-2"
+    },
+    {
+      "x": 3648,
+      "y": 112,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-2"
+    },
+    {
+      "x": 3600,
+      "y": 64,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-2"
+    },
+    {
+      "x": 3616,
+      "y": 64,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-2"
+    },
+    {
+      "x": 3632,
+      "y": 64,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-2",
+      "item": "chili"
+    },
+    {
+      "x": 3648,
+      "y": 64,
+      "w": 16,
+      "h": 16,
+      "kind": "brick",
+      "breakable": true,
+      "route": "upper-2"
     }
   ],
   "enemies": [
@@ -825,6 +1051,48 @@ export default {
       "phase": 0,
       "patrolLeft": 4656,
       "patrolRight": 4736
+    },
+    {
+      "id": 10,
+      "kind": "cabbage",
+      "x": 1617,
+      "y": 66,
+      "w": 14,
+      "h": 14,
+      "vx": -20,
+      "vy": 0,
+      "state": "walk",
+      "timer": 0,
+      "grace": 0,
+      "dead": false,
+      "homeX": 1617,
+      "homeY": 66,
+      "cooldown": 1.2,
+      "phase": 0,
+      "patrolLeft": 1584,
+      "patrolRight": 1664,
+      "route": "upper-1"
+    },
+    {
+      "id": 11,
+      "kind": "spike",
+      "x": 3601,
+      "y": 98,
+      "w": 14,
+      "h": 14,
+      "vx": -20,
+      "vy": 0,
+      "state": "walk",
+      "timer": 0,
+      "grace": 0,
+      "dead": false,
+      "homeX": 3601,
+      "homeY": 98,
+      "cooldown": 1.2,
+      "phase": 0,
+      "patrolLeft": 3552,
+      "patrolRight": 3664,
+      "route": "upper-2"
     }
   ],
   "items": [
@@ -1187,6 +1455,60 @@ export default {
       "h": 12,
       "kind": "seed",
       "collected": false
+    },
+    {
+      "x": 1568,
+      "y": 104,
+      "w": 10,
+      "h": 12,
+      "kind": "seed",
+      "collected": false,
+      "route": "upper-1"
+    },
+    {
+      "x": 1600,
+      "y": 56,
+      "w": 10,
+      "h": 12,
+      "kind": "seed",
+      "collected": false,
+      "route": "upper-1"
+    },
+    {
+      "x": 1648,
+      "y": 56,
+      "w": 10,
+      "h": 12,
+      "kind": "seed",
+      "collected": false,
+      "route": "upper-1"
+    },
+    {
+      "x": 3584,
+      "y": 88,
+      "w": 10,
+      "h": 12,
+      "kind": "seed",
+      "collected": false,
+      "route": "upper-2"
+    },
+    {
+      "x": 3616,
+      "y": 40,
+      "w": 10,
+      "h": 12,
+      "kind": "seed",
+      "collected": false,
+      "route": "upper-2"
+    },
+    {
+      "x": 3664,
+      "y": 40,
+      "w": 10,
+      "h": 12,
+      "kind": "seed",
+      "collected": false,
+      "route": "upper-2"
     }
   ],
   "movers": [],
@@ -1195,7 +1517,7 @@ export default {
   "turrets": [],
   "gates": [],
   "boss": null,
-  "layoutVersion": 3,
+  "layoutVersion": 4,
   "reworkVersion": 1,
   "priorLayout": {
     "version": 1,
@@ -1292,7 +1614,118 @@ export default {
         "gates": 0
       },
       "boss": null
+    },
+    {
+      "version": 3,
+      "width": 5120,
+      "timeLimit": 720,
+      "counts": {
+        "blocks": 65,
+        "enemies": 10,
+        "movers": 0,
+        "turrets": 0,
+        "gates": 0
+      }
     }
   ],
-  "rebirthRewardVersion": 1
+  "rebirthRewardVersion": 1,
+  "layeredRoutes": [
+    {
+      "id": "upper-1",
+      "optional": true,
+      "entry": {
+        "x": 1440,
+        "foot": 208
+      },
+      "floors": [
+        {
+          "x": 1472,
+          "y": 176,
+          "w": 32,
+          "h": 16
+        },
+        {
+          "x": 1536,
+          "y": 128,
+          "w": 112,
+          "h": 16
+        },
+        {
+          "x": 1584,
+          "y": 80,
+          "w": 80,
+          "h": 16
+        }
+      ],
+      "rejoin": {
+        "x": 1704,
+        "foot": 208
+      },
+      "enemyId": 10,
+      "addedBlocks": 12,
+      "blockAdjustments": [
+        {
+          "index": 19,
+          "before": {
+            "x": 1568,
+            "y": 128
+          },
+          "after": {
+            "x": 1648,
+            "y": 80
+          }
+        }
+      ],
+      "itemAdjustments": []
+    },
+    {
+      "id": "upper-2",
+      "optional": true,
+      "entry": {
+        "x": 3456,
+        "foot": 208
+      },
+      "floors": [
+        {
+          "x": 3488,
+          "y": 160,
+          "w": 32,
+          "h": 16
+        },
+        {
+          "x": 3552,
+          "y": 112,
+          "w": 112,
+          "h": 16
+        },
+        {
+          "x": 3600,
+          "y": 64,
+          "w": 80,
+          "h": 16
+        }
+      ],
+      "rejoin": {
+        "x": 3720,
+        "foot": 208
+      },
+      "enemyId": 11,
+      "addedBlocks": 13,
+      "blockAdjustments": [
+        {
+          "index": 48,
+          "before": {
+            "x": 3616,
+            "y": 128
+          },
+          "after": {
+            "x": 3664,
+            "y": 64
+          }
+        }
+      ],
+      "itemAdjustments": []
+    }
+  ],
+  "layeredRouteVersion": 1
 };

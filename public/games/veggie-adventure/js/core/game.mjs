@@ -7,6 +7,7 @@ import {jumpProfile} from './jump-profile.mjs';
 import {prepareTrap} from './trap-profile.mjs';
 import {prepareEnemyHealth} from './enemy-health.mjs';
 import {playerSize} from './player-size.mjs';
+import {limitProjectileRange} from './projectile-range.mjs';
 import {prepareBoss} from './boss-balance.mjs';
 import {attackBonus,playerAttack,MAX_ATTACK_BONUS} from './player-attacks.mjs';
 import {INITIAL_REBIRTHS,MAX_REBIRTHS,rebirthClaims,validRebirthReward} from './rebirth-rewards.mjs';
@@ -33,7 +34,7 @@ export class Game{
  kill(){if(this.mode==='playing'){this.pendingRebirth=this.rebirths>0;if(this.pendingRebirth)this.rebirths--;this.mode='dead';this.deathTimer=.7;}}
  rebirth(){const fresh=new Game(this.level,{score:this.entryScore,form:0,rebirths:this.rebirths,claimedRebirthRewards:this.claimedRebirthRewards});Object.assign(this,fresh);}
  damage(){if(this.p.star>0||this.p.hurt>0||this.mode!=='playing')return;if(this.p.form){this.emitSound('hurt');this.p.form=0;this.p.attackBonus=0;this.resizePlayer();this.p.hurt=1.5;}else this.kill();}
- resizePlayer(crouch=false){const p=this.p,{w,h}=playerSize(p.form,crouch),x=p.x+(p.w-w)/2,y=p.y+p.h-h;if(p.form&&(h>p.h||w>p.w)&&this.solids().some(b=>!b.oneWay&&overlap({...p,x,y,w,h},b))){p.crouch=true;return;}p.x=x;p.y=y;p.w=w;p.h=h;p.crouch=!!p.form&&crouch;}
+ resizePlayer(crouch=false){const p=this.p,{w,h}=playerSize();p.x+=(p.w-w)/2;p.y+=p.h-h;p.w=w;p.h=h;p.crouch=!!p.form&&crouch;}
  collect(kind,rewardId=this.level.id){
   if(kind==='rebirth'){
    if(!validRebirthReward(rewardId)||this.claimedRebirthRewards.includes(rewardId))return;
@@ -83,7 +84,8 @@ export class Game{
   const oldBottom=p.y+p.h;this.move(p,dt,true);const boundedX=Math.max(0,Math.min(this.level.width-p.w,p.x));if(boundedX!==p.x)p.vx=0;p.x=boundedX;
   p.runCharge=p.inWater||p.crouch?0:Math.min(1,Math.abs(p.vx)/112);if(p.grounded||p.inWater)p.jumpPhysics=null;
   if(input.fire)this.shoot();updateEnemies(this,dt,oldBottom);updateBoss(this,dt,oldBottom);
-  for(const s of this.shots){s.life-=dt;s.vy=Math.min(220,s.vy+500*dt);if(this.move(s,dt))s.life=0;if(s.grounded)s.vy=-100;
+  for(const s of this.shots){const oldX=s.x,oldY=s.y;s.life-=dt;s.vy=Math.min(220,s.vy+500*dt);if(this.move(s,dt))s.life=0;if(s.grounded)s.vy=-100;
+   if(limitProjectileRange(s,oldX,oldY))continue;
    if(this.boss&&!this.boss.dead&&this.boss.active&&overlap(s,bossHitbox(this.boss))){hurtBoss(this,'fire',s.damage||1);s.life=0;}
    if(s.life>0)for(const e of this.enemies)if(enemyActive(e)&&overlap(s,e)){hurtEnemy(this,e,'fire',s.damage||1);s.life=0;break;}
   }

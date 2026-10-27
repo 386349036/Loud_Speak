@@ -13,10 +13,10 @@ import {updateDangers} from '../../public/games/veggie-adventure/js/core/environ
 
 test('arena ledges allow upward passage, stable landing and deliberate drop for every form',()=>{
  for(const form of [0,1,2]){
-  const l=structuredClone(level);l.boss=null;l.enemies=[];l.items=[];l.spawn={x:arenaX(1464),y:194};
+  const l=structuredClone(level);l.boss=null;l.enemies=[];l.items=[];l.spawn={x:l.movers[0].x+8,y:194};
   const g=new Game(l,{form});for(let n=0;n<30;n++)g.step(STEP,{});
   let peak=208;for(let n=0;n<120;n++){g.step(STEP,{jump:true,jumpPressed:n===0});peak=Math.min(peak,g.p.y+g.p.h);}
-  assert.ok(peak<160);assert.equal(g.p.y+g.p.h,176);assert.equal(g.p.h,form?22.4:14);
+  assert.ok(peak<160);assert.equal(g.p.y+g.p.h,176);assert.equal(g.p.h,14);
   for(let n=0;n<600;n++)g.step(STEP,{});assert.equal(g.p.y+g.p.h,176);assert.ok(g.movers.every(m=>!m.fallen));
   g.step(STEP,{down:true,jump:true,jumpPressed:true});for(let n=0;n<90;n++)g.step(STEP,{});
   assert.equal(g.p.y+g.p.h,208);assert.equal(g.mode,'playing');
@@ -62,7 +62,7 @@ test('later bosses lead a moving target and stationary casters reposition',()=>{
 });
 
 test('seeds can rise through an arena ledge, which catches them on descent',()=>{
- const g=new Game(level);g.p.x=arenaX(1400);g.dangers=[{x:arenaX(1470),y:190,w:6,h:6,vx:0,vy:-120,gravity:0,life:3,kind:'seed'}];
+ const g=new Game(level);g.p.x=arenaX(1400);g.dangers=[{x:g.movers[0].x+12,y:190,w:6,h:6,vx:0,vy:-120,gravity:0,life:3,kind:'seed'}];
  for(let n=0;n<40;n++)updateDangers(g,STEP);assert.equal(g.dangers.length,1);assert.ok(g.dangers[0].y<176);
  Object.assign(g.dangers[0],{y:160,vy:120});for(let n=0;n<30;n++)updateDangers(g,STEP);assert.equal(g.dangers.length,0);
 });
@@ -102,7 +102,7 @@ test('the historical 1-4 experimental pits tolerate four takeoff timings in ever
    if(press)launched=true;
    g.step(STEP,{right:true,jump:launched,jumpPressed:press});
    assert.equal(g.mode,'playing',`${form}/${pit}/${lead}`);
-   assert.equal(g.p.h,form?22.4:14);
+   assert.equal(g.p.h,14);
    if(launched&&g.p.grounded&&g.p.x>=pit+48){landed=true;break;}
   }
   assert.ok(landed,`${form}/${pit}/${lead} did not land`);

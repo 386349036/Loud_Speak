@@ -73,12 +73,12 @@ test('enemy HP survives checkpoints and legacy checkpoints initialize shell HP o
  const malformed=JSON.parse(encodeSave(g));malformed.checkpoint.enemies[0].hp=99;assert.equal(decodeSave(JSON.stringify(malformed)),null);
 });
 
-test('evolved art, collision and shield shrink 20 percent, retaining foot centre without repeated shrink',()=>{
+test('evolved artwork and shield retain their scale while every collision body stays at base size',()=>{
  const actors=JSON.parse(fs.readFileSync('public/games/veggie-adventure/assets/manifest.json')).animations.actors;
  for(const form of [0,1,2]){
   const g=flat(form),p=g.p,foot=p.y+p.h,centre=p.x+p.w/2,actor=actors[`P01-${form}`],old=spriteBox(p,actor,16,32),box=playerBox(p,actor,16,32),scale=form?.8:1;
   near(box.w,old.w*scale);near(box.h,old.h*scale);near(box.y+box.h,foot);near(box.x+box.w/2,centre);assert.deepEqual({w:p.w,h:p.h},playerSize(form));
-  for(let i=0;i<50;i++){g.resizePlayer(true);near(p.h,form?11.2:14);g.resizePlayer(false);near(p.y+p.h,foot);near(p.x+p.w/2,centre);}
+  for(let i=0;i<50;i++){g.resizePlayer(true);near(p.h,14);g.resizePlayer(false);near(p.y+p.h,foot);near(p.x+p.w/2,centre);}
   if(form){near(shieldBox(p).h,48*.8);g.damage();assert.equal(p.form,0);assert.equal(p.w,12);assert.equal(p.h,14);near(p.y+p.h,foot);near(p.x+p.w/2,centre);}
  }
 });
@@ -86,7 +86,7 @@ test('evolved art, collision and shield shrink 20 percent, retaining foot centre
 test('old grown saves migrate at the same foot centre and all forms keep identical jump trajectories',()=>{
  for(const form of [1,2]){
   const g=new Game(undefined,{form}),d=JSON.parse(encodeSave(g)),p=d.checkpoint.p,foot=p.y+p.h,centre=p.x+p.w/2;
-  Object.assign(p,{x:centre-6,y:foot-28,w:12,h:28});const saved=decodeSave(JSON.stringify(d));assert.ok(saved);g.checkpoint=saved.checkpoint;g.restore();near(g.p.h,22.4);near(g.p.w,9.6);near(g.p.y+g.p.h,foot);near(g.p.x+g.p.w/2,centre);
+  Object.assign(p,{x:centre-6,y:foot-28,w:12,h:28});const saved=decodeSave(JSON.stringify(d));assert.ok(saved);g.checkpoint=saved.checkpoint;g.restore();near(g.p.h,14);near(g.p.w,12);near(g.p.y+g.p.h,foot);near(g.p.x+g.p.w/2,centre);
   g.saveCheckpoint();assert.ok(decodeSave(encodeSave(g)));
  }
  const games=[0,1,2].map(form=>flat(form));for(const g of games){for(let n=0;n<150;n++)g.step(STEP,{right:true});}

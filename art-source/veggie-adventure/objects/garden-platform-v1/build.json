@@ -1,0 +1,17 @@
+{
+  "tool": "built-in image_gen",
+  "crop": {
+    "left": 31,
+    "top": 181,
+    "width": 2111,
+    "height": 398
+  },
+  "runtime": "objects/garden-platform-v1/platform-garden-deck.png",
+  "sha256": "bbfb750d5af0e615b009bc449cf7ef54b2d4302d3c711b0d7e5e43800a1c4011",
+  "render": {
+    "topAlignedWithCollision": true,
+    "width": "ledge width",
+    "height": 16
+  },
+  "visualInGameVerified": false
+}

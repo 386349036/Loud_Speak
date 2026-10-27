@@ -1,0 +1,195 @@
+{
+  "generator": "built-in image_gen",
+  "actors": [
+    {
+      "id": "E11",
+      "source": "art-source/veggie-adventure/animations/flyer-stun-v1/E11/generated.png",
+      "runtime": "animations/flyer-stun-v1/E11.png",
+      "fallback": "animations/flyer-stun-v1/E11-stunned.png",
+      "rows": [
+        0,
+        400,
+        724,
+        1086
+      ],
+      "cells": [
+        {
+          "left": 42,
+          "top": 90,
+          "width": 314,
+          "height": 245
+        },
+        {
+          "left": 405,
+          "top": 111,
+          "width": 310,
+          "height": 248
+        },
+        {
+          "left": 750,
+          "top": 181,
+          "width": 310,
+          "height": 194
+        },
+        {
+          "left": 1099,
+          "top": 250,
+          "width": 332,
+          "height": 150
+        },
+        {
+          "left": 21,
+          "top": 496,
+          "width": 327,
+          "height": 202
+        },
+        {
+          "left": 385,
+          "top": 497,
+          "width": 312,
+          "height": 204
+        },
+        {
+          "left": 722,
+          "top": 506,
+          "width": 342,
+          "height": 189
+        },
+        {
+          "left": 1094,
+          "top": 522,
+          "width": 335,
+          "height": 181
+        },
+        {
+          "left": 31,
+          "top": 872,
+          "width": 328,
+          "height": 145
+        },
+        {
+          "left": 385,
+          "top": 825,
+          "width": 340,
+          "height": 189
+        },
+        {
+          "left": 745,
+          "top": 783,
+          "width": 323,
+          "height": 225
+        },
+        {
+          "left": 1122,
+          "top": 782,
+          "width": 293,
+          "height": 228
+        }
+      ],
+      "scale": 0.13450292397660818,
+      "normalHeight": 33,
+      "originalRowsPreserved": 4,
+      "clips": [
+        "fall-stunned",
+        "stunned",
+        "wake"
+      ],
+      "sha256": "c4e0e93027cf052f8cf79a21d6f90f3716c2f3a1569e8fbb93458c089a0a2ed9"
+    },
+    {
+      "id": "E09",
+      "source": "art-source/veggie-adventure/animations/flyer-stun-v1/E09/generated.png",
+      "runtime": "animations/flyer-stun-v1/E09.png",
+      "fallback": "animations/flyer-stun-v1/E09-stunned.png",
+      "rows": [
+        0,
+        390,
+        724,
+        1086
+      ],
+      "cells": [
+        {
+          "left": 40,
+          "top": 74,
+          "width": 333,
+          "height": 241
+        },
+        {
+          "left": 403,
+          "top": 97,
+          "width": 316,
+          "height": 264
+        },
+        {
+          "left": 748,
+          "top": 144,
+          "width": 314,
+          "height": 243
+        },
+        {
+          "left": 1094,
+          "top": 242,
+          "width": 347,
+          "height": 148
+        },
+        {
+          "left": 16,
+          "top": 487,
+          "width": 361,
+          "height": 203
+        },
+        {
+          "left": 388,
+          "top": 501,
+          "width": 339,
+          "height": 189
+        },
+        {
+          "left": 743,
+          "top": 503,
+          "width": 357,
+          "height": 189
+        },
+        {
+          "left": 1119,
+          "top": 503,
+          "width": 322,
+          "height": 188
+        },
+        {
+          "left": 40,
+          "top": 850,
+          "width": 337,
+          "height": 176
+        },
+        {
+          "left": 408,
+          "top": 812,
+          "width": 310,
+          "height": 214
+        },
+        {
+          "left": 760,
+          "top": 800,
+          "width": 300,
+          "height": 233
+        },
+        {
+          "left": 1101,
+          "top": 808,
+          "width": 324,
+          "height": 224
+        }
+      ],
+      "scale": 0.12742382271468145,
+      "normalHeight": 29,
+      "originalRowsPreserved": 4,
+      "clips": [
+        "fall-stunned",
+        "stunned",
+        "wake"
+      ],
+      "sha256": "87c3b988d62a6d6a6aae9e9367b3ee6e03a20740298f268d95c829904b84d443"
+    }
+  ]
+}

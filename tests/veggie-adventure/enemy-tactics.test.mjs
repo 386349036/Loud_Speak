@@ -50,8 +50,8 @@ test('jelly approaches only a player in the same water and decides once per puls
  const g=scene('jelly',{y:168}),e=g.enemies[0];g.level.water=[{x:96,y:144,w:240,h:80}];g.p.x=128;g.p.y=168;
  watch(g,.1);assert.equal(e.intent,'pulse-approach');assert.ok(e.vx<0);const target=e.brain.targetX;
  g.p.x=220;watch(g,.3);assert.equal(e.brain.targetX,target);assert.ok(e.vx<=0);
- watch(g,1.65);assert.ok(e.brain.targetX>e.homeX);
- g.p.x=32;watch(g,2);assert.equal(e.brain.targetX,null);
+ watch(g,2.5);assert.ok(e.brain.targetX>e.homeX);
+ g.p.x=32;watch(g,3);assert.equal(e.brain.targetX,null);
 });
 
 test('corn maintains throwing distance inside its leash and leads the visible movement only when winding up',()=>{

@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: all 21 later ordinary stages add optional upper branches without replacing ground, water or authored mechanisms
+ok 1 - all 21 later ordinary stages add optional upper branches without replacing ground, water or authored mechanisms
+  ---
+  duration_ms: 43.1877
+  ...
+# Subtest: all three forms physically climb all 56 branches without breaking bricks and rejoin the unchanged ground route
+ok 2 - all three forms physically climb all 56 branches without breaking bricks and rejoin the unchanged ground route
+  ---
+  duration_ms: 2100.9773
+  ...
+# Subtest: ground routes remain physically traversable in every form with upper branches intact or destroyed
+ok 3 - ground routes remain physically traversable in every form with upper branches intact or destroyed
+  ---
+  duration_ms: 13206.704
+  ...
+# Subtest: all new high enemies use real ledge patrols or ranged attacks and fall when their breakable floors collapse
+ok 4 - all new high enemies use real ledge patrols or ranged attacks and fall when their breakable floors collapse
+  ---
+  duration_ms: 1641.8733
+  ...
+# Subtest: previous ordinary-stage saves migrate to layered maps while preserving score, consumed rebirths and completed stages
+ok 5 - previous ordinary-stage saves migrate to layered maps while preserving score, consumed rebirths and completed stages
+  ---
+  duration_ms: 179.2298
+  ...
+# Subtest: upper-route jumps stay below the HUD with vertical camera follow while ground, boss and warp views stay fixed
+ok 6 - upper-route jumps stay below the HUD with vertical camera follow while ground, boss and warp views stay fixed
+  ---
+  duration_ms: 82.0117
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 17263.1387

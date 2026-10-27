@@ -34,7 +34,10 @@ test('one-minute real simulations rotate skills, respect every cooldown and sign
  // Wider arenas add distance-based counterattack time; keep a measurable active rhythm.
  const minima=[10,10,11,11,10,10,10,11];
  for(let world=1;world<=8;world++){
-  const g=encounter(world),b=g.boss,{casts,cues}=observeEncounter(g,60);assert.ok(casts.length>=minima[world-1],`${b.id}: ${casts.length} releases`);assert.equal(b.hp,b.maxHp);
+  const g=encounter(world),b=g.boss,{casts,cues}=observeEncounter(g,60);
+  // Allow at most the extra crossing time per cycle when the player camps far away.
+  const minimum=Math.floor(60/(60/minima[world-1]+Math.max(0,b.right-b.left-288)/112));
+  assert.ok(casts.length>=minimum,`${b.id}: ${casts.length} releases`);assert.equal(b.hp,b.maxHp);
   assert.ok(new Set(casts.map(c=>c.skill)).size>=2,b.id+' must rotate');assert.ok(cues.every(t=>t>=bossTiming(b).windup-STEP-1e-6),b.id+' missing cue');
   const previous=new Map();for(const cast of casts){const definition=BOSS_SKILLS[world][cast.skill];assert.ok(definition);if(previous.has(cast.skill))assert.ok(cast.time-previous.get(cast.skill)>=definition.cooldown-STEP-1e-6,`${b.id}/${cast.skill} bypassed cooldown`);previous.set(cast.skill,cast.time);}
  }

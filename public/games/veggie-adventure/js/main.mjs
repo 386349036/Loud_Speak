@@ -11,6 +11,7 @@ import {bindViewport} from './viewport.mjs';
 import {playerAttack} from './core/player-attacks.mjs';
 import {SoundDirector} from './sound-effects.mjs';
 import {bindObjectReview,reviewSpawn} from './object-review.mjs';
+import {bindFull32Review} from './full32-review.mjs';
 const $=id=>document.getElementById(id),images=new Map(),campaign=new Campaign();
 const motionQA=new URLSearchParams(location.search).get('qa')==='1';$('motion-qa').hidden=!motionQA;
 const storageKey=motionQA?DEBUG_SAVE_KEY:SAVE_KEY;$('level-picker').hidden=!motionQA;
@@ -56,7 +57,9 @@ $('music-volume').oninput=()=>{audio.setVolume(Number($('music-volume').value)/1
 $('sfx-toggle').onclick=()=>{sound.toggleMute();void unlockAudio();musicState();};
 $('sfx-volume').oninput=()=>{sound.setVolume(Number($('sfx-volume').value)/100);void unlockAudio();musicState();};
 if(motionQA)for(const l of LEVELS){const option=document.createElement('option');option.value=l.id;option.textContent=l.id+' · '+(l.name||'芽豆出发');$('level').append(option);}
-if(motionQA&&new URLSearchParams(location.search).get('review')==='placeholder-audit')bindObjectReview({document,levels:LEVELS,mount:$('settings'),onSelect:point=>{enter(point.level,{score:0,form:0,rebirths:3});reviewSpawn(game,point.x,point.foot);animation.reset();animation.update(game,0);show(point.name,'素材巡检：使用正常移动、跳跃与战斗；不写入旅程存档。','开始巡检');}});
+const full32=motionQA&&new URLSearchParams(location.search).get('review')==='full32-audit';
+const auditControls=full32?bindFull32Review({document,mount:$('settings'),onPosition:point=>{enter(game.level.id,{score:0,form:point.form,rebirths:3});reviewSpawn(game,point.x,point.foot);animation.reset();animation.update(game,0);show('巡检定位 '+game.level.id,'调试定位与形态设置；使用正常输入及伤害，不写入旅程存档。','开始巡检');}}):null;
+if(motionQA&&['placeholder-audit','full32-audit'].includes(new URLSearchParams(location.search).get('review')))bindObjectReview({document,levels:LEVELS,mount:$('settings'),onSelect:point=>{enter(point.level,{score:0,form:auditControls?.form()||0,rebirths:3});reviewSpawn(game,point.x,point.foot);animation.reset();animation.update(game,0);show(point.name,'素材巡检：使用正常移动、跳跃与战斗；不写入旅程存档。','开始巡检');}});
 window.addEventListener('keydown',e=>{if(e.target instanceof HTMLSelectElement||e.target instanceof HTMLButtonElement||e.target===$('music-volume')||e.target===$('sfx-volume'))return;if(map[e.code]){e.preventDefault();if(!e.repeat&&map[e.code]==='jump'&&!active('jump'))jumpPending=true;held.add(e.code);}if(e.code==='KeyP'&&!e.repeat)pause();});
 window.addEventListener('keyup',e=>held.delete(e.code));
 document.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>b.blur()));

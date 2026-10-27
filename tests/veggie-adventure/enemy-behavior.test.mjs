@@ -13,7 +13,7 @@ test('flying enemies face their real direction after turning without retaining t
  for(const kind of ['fish','jelly','winged','cloud']){
   const g=scene(kind,{y:140}),e=g.enemies[0];g.p.x=340;
   const before=e.x;watch(g,.2);assert.ok(e.x>before);assert.equal(enemyFacing(e),1);
-  if(kind==='cloud'){g.p.x=40;watch(g,.2);}else watch(g,2.4);
+  if(kind==='cloud'){g.p.x=40;watch(g,.2);}else watch(g,['fish','jelly'].includes(kind)?2.4/.7:2.4);
   assert.equal(enemyFacing(e),-1,kind);
  }
 });
@@ -98,6 +98,6 @@ test('a cloud with three live children stops empty throws and warns again when a
 
 test('jelly pulse animation accompanies upward motion and float accompanies the slow return',()=>{
  const g=scene('jelly',{y:168}),e=g.enemies[0];g.level.water=[{x:96,y:144,w:192,h:80}];
- watch(g,.25);assert.equal(enemyClip(e),'pulse');assert.ok(e.vy<0);assert.ok(e.y<160);
- watch(g,.5);assert.equal(enemyClip(e),'float');assert.ok(e.vy>0&&e.vy<=17);assert.ok(e.y<168);
+ watch(g,.25/.7);assert.equal(enemyClip(e),'pulse');assert.ok(e.vy<0);assert.ok(e.y<160);
+ watch(g,.5/.7);assert.equal(enemyClip(e),'float');assert.ok(e.vy>0&&e.vy<=17);assert.ok(e.y<168);
 });

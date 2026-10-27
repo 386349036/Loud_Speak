@@ -45,6 +45,7 @@ export function decodeSave(text){
   for(const t of s.turrets)if(!Number.isFinite(t.cooldown)||!Number.isFinite(t.windup))return null;
   if(l.boss){
    const b=s.boss;if(!b||b.id!==l.boss.id||b.kind!==l.boss.kind||!['idle','windup','attack','expose','recover','defeated'].includes(b.phase)||!['x','y','w','h','timer','hits','cycle','invulnerable','left','right'].every(k=>Number.isFinite(b[k])))return null;
+   if(!oldCourtyard&&!oldCampaign&&(b.left!==l.boss.left||b.right!==l.boss.right))return null;
    const legacy=b.balanceVersion===undefined&&(b.maxHp===undefined||b.maxHp===3),current=b.balanceVersion===BOSS_BALANCE_VERSION&&b.maxHp===bossMaxHp(b);
    if((!legacy&&!current)||!Number.isInteger(b.hp)||b.hp<0||b.hp>(legacy?3:b.maxHp))return null;
    if(b.skillCooldowns!==undefined){if(!b.skillCooldowns||typeof b.skillCooldowns!=='object'||Array.isArray(b.skillCooldowns))return null;for(const [key,value] of Object.entries(b.skillCooldowns))if(!BOSS_SKILLS[b.kind][key]||!Number.isFinite(value)||value<0||value>BOSS_SKILLS[b.kind][key].cooldown+1e-6)return null;}

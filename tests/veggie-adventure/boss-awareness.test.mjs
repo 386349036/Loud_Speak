@@ -18,12 +18,12 @@ test('garden boss observes camping before choosing a flank, and movement clears 
 });
 
 test('extended platform camping prompts a telegraphed landing that fits the platform and stays locked',()=>{
- const g=fixture(),b=g.boss;g.p.x=arenaX(1584);g.p.y=146;watch(g,2.6);
+ const g=fixture(),b=g.boss;g.p.x=g.movers[1].x+8;g.p.y=g.movers[1].y-g.p.h;watch(g,2.6);
  assert.equal(gardenDecision(g,b).intent,'dislodge');
  // Even a recognized habit must not replace the teaching opener.
  b.cycle=0;assert.equal(gardenDecision(g,b).pattern,'slam');b.cycle=1;
  b.timer=1;updateBoss(g,STEP,160);assert.equal(b.targetFloor,160);
- assert.ok(b.targetX>=arenaX(1568)&&b.targetX+b.w<=arenaX(1616));
+ assert.ok(b.targetX>=g.movers[1].x&&b.targetX+b.w<=g.movers[1].x+g.movers[1].w);
  const target=[b.targetX,b.targetY,b.seedVX,b.seedVY];g.p.x=arenaX(1700);g.p.y=194;
  for(let n=0;n<300&&b.phase!=='expose';n++){updateBoss(g,STEP,0);assert.deepEqual([b.targetX,b.targetY,b.seedVX,b.seedVY],target);}
  assert.equal(b.phase,'expose');assert.ok(b.exposeTime>=3.2);

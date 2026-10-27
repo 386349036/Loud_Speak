@@ -1,0 +1,80 @@
+[
+  {
+    "level": "3-4",
+    "exercise": "signature-first normal-damage",
+    "state": "3-4 玉米骑士 | 时间 2.50 | playing | 主角3 x=820.0 foot=162.0 | Boss 8/8 attack / husk-lance t=0.84 x=1100.5 | 危险物1\n技能：三连籽弹、突进冲撞、回旋穗枪",
+    "log": "0.01s idle/undefined/2 hp=8 x=1119.8\n0.65s windup/husk-lance/2 hp=8 x=1100.5\n1.66s attack/husk-lance/3 hp=8 x=1100.5"
+  },
+  {
+    "level": "4-4",
+    "exercise": "signature-first normal-damage",
+    "state": "4-4 莲藕潜王 | 时间 2.50 | playing | 主角1 x=820.0 foot=162.0 | Boss 8/8 attack / lotus-geyser t=0.84 x=920.0 | 危险物1\n技能：扇射跃岸、双轮扇射、藕孔涌泉",
+    "log": "0.01s idle/undefined/2 hp=8 x=920.0\n0.65s windup/lotus-geyser/2 hp=8 x=920.0\n1.66s attack/lotus-geyser/3 hp=8 x=920.0"
+  },
+  {
+    "level": "5-4",
+    "exercise": "signature-first normal-damage",
+    "state": "5-4 榴莲堡主 | 时间 2.50 | playing | 主角3 x=820.0 foot=162.0 | Boss 9/9 attack / durian-bounce t=0.84 x=1100.5 | 危险物2\n技能：落刺滚撞、散刺冲撞、弹跳刺果",
+    "log": "0.01s idle/undefined/2 hp=9 x=1119.8\n0.65s windup/durian-bounce/2 hp=9 x=1100.5\n1.66s attack/durian-bounce/3 hp=9 x=1100.5"
+  },
+  {
+    "level": "6-4",
+    "exercise": "signature-first normal-damage",
+    "state": "6-4 辣椒术士 | 时间 2.50 | playing | 主角1 x=820.0 foot=162.0 | Boss 10/10 attack / kiln-pillars t=0.84 x=1100.5 | 危险物1\n技能：高低交叉弹、连环爆裂种子、炉心焰柱",
+    "log": "0.01s idle/undefined/2 hp=10 x=1119.8\n0.65s windup/kiln-pillars/2 hp=10 x=1100.5\n1.66s attack/kiln-pillars/3 hp=10 x=1100.5"
+  },
+  {
+    "level": "7-4",
+    "exercise": "signature-first normal-damage",
+    "state": "7-4 葡萄双生 | 时间 2.50 | playing | 主角3 x=820.0 foot=162.0 | Boss 10/10 attack / twin-pincer t=0.84 x=1100.5 | 危险物2\n技能：左头横扫、右头横扫、双生夹击",
+    "log": "0.01s idle/undefined/2 hp=10 x=1119.8\n0.65s windup/twin-pincer/2 hp=10 x=1100.5\n1.66s attack/twin-pincer/3 hp=10 x=1100.5"
+  },
+  {
+    "level": "8-4",
+    "exercise": "signature-first normal-damage",
+    "state": "8-4 石榴王 | 时间 2.50 | playing | 主角3 x=820.0 foot=162.0 | Boss 12/12 attack / crown-split t=0.84 x=1100.5 | 危险物1\n技能：跳震波、扇形籽弹、王冠裂籽",
+    "log": "0.01s idle/undefined/2 hp=12 x=1119.8\n0.65s windup/crown-split/2 hp=12 x=1100.5\n1.66s attack/crown-split/3 hp=12 x=1100.5"
+  },
+  {
+    "level": "2-4",
+    "exercise": "signature-to-weak",
+    "state": "2-4 洋葱矿主 | 时间 4.50 | playing | 主角1 x=820.0 foot=188.4 | Boss 7/7 expose / root-quake t=0.58 x=1100.5 | 危险物0\n技能：落石滚撞、快速冲撞、根脉破土",
+    "log": "0.01s idle/undefined/2 hp=7 x=1119.8\n0.65s windup/root-quake/2 hp=7 x=1100.5\n1.66s attack/root-quake/3 hp=7 x=1100.5\n3.92s expose/root-quake/3 hp=7 x=1100.5"
+  },
+  {
+    "level": "3-4",
+    "exercise": "signature-to-weak",
+    "state": "3-4 玉米骑士 | 时间 5.00 | playing | 主角3 x=820.0 foot=145.2 | Boss 8/8 expose / husk-lance t=0.23 x=1100.5 | 危险物0\n技能：三连籽弹、突进冲撞、回旋穗枪",
+    "log": "0.01s idle/undefined/2 hp=8 x=1119.8\n0.65s windup/husk-lance/2 hp=8 x=1100.5\n1.66s attack/husk-lance/3 hp=8 x=1100.5\n4.77s expose/husk-lance/3 hp=8 x=1100.5"
+  },
+  {
+    "level": "4-4",
+    "exercise": "signature-to-weak",
+    "state": "4-4 莲藕潜王 | 时间 4.50 | playing | 主角1 x=820.0 foot=188.4 | Boss 8/8 expose / lotus-geyser t=0.58 x=920.0 | 危险物0\n技能：扇射跃岸、双轮扇射、藕孔涌泉",
+    "log": "0.01s idle/undefined/2 hp=8 x=920.0\n0.65s windup/lotus-geyser/2 hp=8 x=920.0\n1.66s attack/lotus-geyser/3 hp=8 x=920.0\n3.92s expose/lotus-geyser/3 hp=8 x=920.0"
+  },
+  {
+    "level": "5-4",
+    "exercise": "signature-to-weak",
+    "state": "5-4 榴莲堡主 | 时间 5.50 | playing | 主角3 x=820.0 foot=167.1 | Boss 9/9 expose / durian-bounce t=0.33 x=1100.5 | 危险物0\n技能：落刺滚撞、散刺冲撞、弹跳刺果",
+    "log": "0.01s idle/undefined/2 hp=9 x=1119.8\n0.65s windup/durian-bounce/2 hp=9 x=1100.5\n1.66s attack/durian-bounce/3 hp=9 x=1100.5\n5.17s expose/durian-bounce/3 hp=9 x=1100.5"
+  },
+  {
+    "level": "6-4",
+    "exercise": "signature-to-weak",
+    "state": "6-4 辣椒术士 | 时间 4.50 | playing | 主角1 x=820.0 foot=188.4 | Boss 10/10 expose / kiln-pillars t=0.58 x=1100.5 | 危险物0\n技能：高低交叉弹、连环爆裂种子、炉心焰柱",
+    "log": "0.01s idle/undefined/2 hp=10 x=1119.8\n0.65s windup/kiln-pillars/2 hp=10 x=1100.5\n1.66s attack/kiln-pillars/3 hp=10 x=1100.5\n3.92s expose/kiln-pillars/3 hp=10 x=1100.5"
+  },
+  {
+    "level": "7-4",
+    "exercise": "signature-to-weak",
+    "state": "7-4 葡萄双生 | 时间 6.00 | playing | 主角3 x=820.0 foot=182.8 | Boss 10/10 expose / twin-pincer t=0.04 x=1100.5 | 危险物0\n技能：左头横扫、右头横扫、双生夹击",
+    "log": "0.01s idle/undefined/2 hp=10 x=1119.8\n0.65s windup/twin-pincer/2 hp=10 x=1100.5\n1.66s attack/twin-pincer/3 hp=10 x=1100.5\n5.96s expose/twin-pincer/3 hp=10 x=1100.5"
+  },
+  {
+    "level": "8-4",
+    "exercise": "signature-to-weak",
+    "state": "8-4 石榴王 | 时间 5.50 | playing | 主角1 x=820.0 foot=167.1 | Boss 12/12 expose / crown-split t=0.23 x=1100.5 | 危险物0\n技能：跳震波、扇形籽弹、王冠裂籽",
+    "log": "0.01s idle/undefined/2 hp=12 x=1119.8\n0.65s windup/crown-split/2 hp=12 x=1100.5\n1.66s attack/crown-split/3 hp=12 x=1100.5\n5.27s expose/crown-split/3 hp=12 x=1100.5"
+  }
+]

@@ -3,13 +3,13 @@ export const BOSS_HEALTH=[6,7,8,8,9,10,10,12];
 // Cooldowns start on release, independently of the overall attack rhythm.
 export const BOSS_SKILLS={
  1:{slam:{name:'落地震波',cooldown:6.5},hop:{name:'锁定跳扑',cooldown:7},seeds:{name:'瞄准抛射',cooldown:5.5},dash:{name:'地面冲撞',cooldown:5}},
- 2:{'rock-roll':{name:'落石滚撞',cooldown:6.5},charge:{name:'快速冲撞',cooldown:5}},
- 3:{'seed-dash':{name:'三连籽弹',cooldown:6},dash:{name:'突进冲撞',cooldown:5}},
- 4:{'fan-leap':{name:'扇射跃岸',cooldown:6},'double-fan':{name:'双轮扇射',cooldown:7}},
- 5:{'rock-roll':{name:'落刺滚撞',cooldown:6.5},'thorn-roll':{name:'散刺冲撞',cooldown:6}},
- 6:{crossfire:{name:'高低交叉弹',cooldown:6},burst:{name:'连环爆裂种子',cooldown:7}},
- 7:{'left-sweep':{name:'左头横扫',cooldown:6},'right-sweep':{name:'右头横扫',cooldown:6}},
- 8:{slam:{name:'跳震波',cooldown:5.5},volley:{name:'扇形籽弹',cooldown:6}}
+ 2:{'rock-roll':{name:'落石滚撞',cooldown:6.5},charge:{name:'快速冲撞',cooldown:5},'root-quake':{name:'根脉破土',cooldown:9}},
+ 3:{'seed-dash':{name:'三连籽弹',cooldown:6},dash:{name:'突进冲撞',cooldown:5},'husk-lance':{name:'回旋穗枪',cooldown:9}},
+ 4:{'fan-leap':{name:'扇射跃岸',cooldown:6},'double-fan':{name:'双轮扇射',cooldown:7},'lotus-geyser':{name:'藕孔涌泉',cooldown:9.5}},
+ 5:{'rock-roll':{name:'落刺滚撞',cooldown:6.5},'thorn-roll':{name:'散刺冲撞',cooldown:6},'durian-bounce':{name:'弹跳刺果',cooldown:9}},
+ 6:{crossfire:{name:'高低交叉弹',cooldown:6},burst:{name:'连环爆裂种子',cooldown:7},'kiln-pillars':{name:'炉心焰柱',cooldown:9.5}},
+ 7:{'left-sweep':{name:'左头横扫',cooldown:6},'right-sweep':{name:'右头横扫',cooldown:6},'twin-pincer':{name:'双生夹击',cooldown:10}},
+ 8:{slam:{name:'跳震波',cooldown:5.5},volley:{name:'扇形籽弹',cooldown:6},'crown-split':{name:'王冠裂籽',cooldown:10}}
 };
 export const bossMaxHp=b=>BOSS_HEALTH[b.kind-1]||6;
 export const bossEnraged=b=>b.hp<=Math.ceil((b.maxHp||bossMaxHp(b))/3);
@@ -41,3 +41,5 @@ export function releaseBossSkill(b){
  b.skillCooldowns[b.pattern]=skill.cooldown;b.lastSkill=b.pattern;b.secondaryReleased=false;return true;
 }
 export const bossSkillName=b=>BOSS_SKILLS[b.kind]?.[b.pattern]?.name||'准备攻击';
+// Wider arenas need additional running time to reach a distant exposed weak point.
+export const bossExposeLimit=b=>(b.kind===4?4.8:3.6)+Math.max(0,b.right-b.left-288)/112;

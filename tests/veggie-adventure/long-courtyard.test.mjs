@@ -9,8 +9,8 @@ import fs from 'node:fs';
 const beforeLevel=JSON.parse(fs.readFileSync(new URL('./fixtures/pre-boss-halving-layouts.json',import.meta.url))).find(l=>l.id==='1-4');
 
 test('1-4 compacts its approach while retaining populated sections and its complete arena at the far end',()=>{
- const removed=beforeLevel.width-level.width;assert.equal(level.width,1168);assert.equal(level.exit,beforeLevel.exit-removed);assert.equal(level.boss.left,beforeLevel.boss.left-removed);
- assert.equal(level.boss.right-level.boss.left,288);assert.equal(level.width-level.exit,48);assert.equal(level.movers.filter(m=>m.arena).length,3);
+ const removed=beforeLevel.width-(level.width-level.bossArenaExpansion.added);assert.equal(level.width,1312);assert.equal(level.exit,beforeLevel.exit-removed+level.bossArenaExpansion.added);assert.equal(level.boss.left,beforeLevel.boss.left-removed);
+ assert.equal(level.boss.right-level.boss.left,432);assert.equal(level.width-level.exit,48);assert.equal(level.movers.filter(m=>m.arena).length,3);
  let end=0;for(const section of level.sections){assert.equal(section.from,end);assert.ok(section.to>section.from);end=section.to;}assert.equal(end,level.width);
  assert.ok(level.enemies.length>=1);assert.ok(level.items.length>=6);assert.ok(level.blocks.filter(b=>b.item).length>=2);assert.ok(level.timeLimit>=720);
  const g=new Game(level);g.p.x=level.boss.left-64;g.p.y=194;g.step(STEP);assert.equal(g.mode,'playing');assert.equal(g.boss.active,false);
@@ -27,7 +27,7 @@ test('all standing forms traverse the full long courtyard terrain without crouch
    const press=p.grounded&&(!floorAhead||obstacle||stuck>30);
    if(press){jump=true;jumps++;}else if(p.grounded)jump=false;
    g.step(STEP,{right:true,jump,jumpPressed:press});stuck=Math.abs(g.p.x-lastX)<.02?stuck+1:0;lastX=g.p.x;
-   assert.equal(g.p.form,form);assert.equal(g.p.h,form?22.4:14);assert.equal(g.rebirths,3);if(stuck>240)break;
+   assert.equal(g.p.form,form);assert.equal(g.p.h,14);assert.equal(g.rebirths,3);if(stuck>240)break;
   }
   assert.equal(g.mode,'won',`form ${form}, lead ${lead}, x=${g.p.x}`);assert.ok(g.time<60);assert.ok(g.blocks.every(b=>!b.broken));
  }

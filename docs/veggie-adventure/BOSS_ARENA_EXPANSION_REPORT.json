@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "levels": [
+    {
+      "id": "1-4",
+      "left": 800,
+      "right": 1232,
+      "priorWidth": 288,
+      "width": 432,
+      "added": 144,
+      "priorLevelWidth": 1168,
+      "levelWidth": 1312,
+      "approachUnchanged": true
+    },
+    {
+      "id": "2-4",
+      "left": 800,
+      "right": 1232,
+      "priorWidth": 288,
+      "width": 432,
+      "added": 144,
+      "priorLevelWidth": 1168,
+      "levelWidth": 1312,
+      "approachUnchanged": true
+    },
+    {
+      "id": "3-4",
+      "left": 800,
+      "right": 1232,
+      "priorWidth": 288,
+      "width": 432,
+      "added": 144,
+      "priorLevelWidth": 1168,
+      "levelWidth": 1312,
+      "approachUnchanged": true
+    },
+    {
+      "id": "4-4",
+      "left": 800,
+      "right": 1232,
+      "priorWidth": 288,
+      "width": 432,
+      "added": 144,
+      "priorLevelWidth": 1168,
+      "levelWidth": 1312,
+      "approachUnchanged": true
+    },
+    {
+      "id": "5-4",
+      "left": 800,
+      "right": 1232,
+      "priorWidth": 288,
+      "width": 432,
+      "added": 144,
+      "priorLevelWidth": 1168,
+      "levelWidth": 1312,
+      "approachUnchanged": true
+    },
+    {
+      "id": "6-4",
+      "left": 800,
+      "right": 1232,
+      "priorWidth": 288,
+      "width": 432,
+      "added": 144,
+      "priorLevelWidth": 1168,
+      "levelWidth": 1312,
+      "approachUnchanged": true
+    },
+    {
+      "id": "7-4",
+      "left": 800,
+      "right": 1232,
+      "priorWidth": 288,
+      "width": 432,
+      "added": 144,
+      "priorLevelWidth": 1168,
+      "levelWidth": 1312,
+      "approachUnchanged": true
+    },
+    {
+      "id": "8-4",
+      "left": 800,
+      "right": 1232,
+      "priorWidth": 288,
+      "width": 432,
+      "added": 144,
+      "priorLevelWidth": 1168,
+      "levelWidth": 1312,
+      "approachUnchanged": true
+    }
+  ]
+}

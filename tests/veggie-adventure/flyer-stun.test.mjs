@@ -9,9 +9,9 @@ const tick=g=>{g.time+=STEP;updateEnemies(g,STEP,g.p.y+g.p.h);};
 
 test('a real stomp in every hero form makes the flyer unconscious, preserves its species and starts the timer only on landing',()=>{
  for(const form of [0,1,2]){const {g,e}=scene(form),a=new AnimationPlayer();a.update(g,0);Object.assign(g.p,{x:e.x+(e.w-g.p.w)/2,y:e.y-g.p.h+.2,vy:40});g.step(STEP);a.update(g,STEP);
-  assert.equal(e.kind,'winged');assert.equal(e.state,'stunned');assert.equal(e.hp,2);assert.equal(e.maxHp,3);assert.equal(e.vx,0);assert.equal(e.brain,undefined);assert.equal(g.mode,'playing');assert.equal(g.p.form,form);assert.equal(a.get(e).actor,'E02');assert.equal(a.get(e).clip,'retract');
+  assert.equal(e.kind,'winged');assert.equal(e.state,'stunned');assert.equal(e.hp,2);assert.equal(e.maxHp,3);assert.equal(e.vx,0);assert.equal(e.brain,undefined);assert.equal(g.mode,'playing');assert.equal(g.p.form,form);assert.equal(a.get(e).actor,'E11');assert.equal(a.get(e).clip,'fall-stunned');
   g.p.x=32;g.p.y=208-g.p.h;const x=e.x;let fell=false;
-  for(let n=0;n<360&&!e.grounded;n++){const y=e.y;tick(g);a.update(g,STEP);assert.equal(e.x,x);assert.equal(e.state,'stunned');assert.equal(e.kind,'winged');assert.ok(e.y>=y);assert.ok(['retract','shell-idle'].includes(a.get(e).clip));if(!e.grounded)assert.equal(e.timer,0);fell||=e.y>112;}
+  for(let n=0;n<360&&!e.grounded;n++){const y=e.y;tick(g);a.update(g,STEP);assert.equal(e.x,x);assert.equal(e.state,'stunned');assert.equal(e.kind,'winged');assert.ok(e.y>=y);assert.ok(['fall-stunned','stunned'].includes(a.get(e).clip));if(!e.grounded)assert.equal(e.timer,0);fell||=e.y>112;}
   assert.ok(fell);assert.ok(e.grounded);assert.equal(e.y+e.h,208);assert.ok(e.timer<=STEP+1e-9);
  }
 });
@@ -27,7 +27,7 @@ test('a stunned flyer cannot hurt or roll on side contact, remains stompable to 
 test('after nine grounded seconds the flyer wakes and resumes flight smoothly from the landing position',()=>{
  const {g,e}=scene(),a=new AnimationPlayer();hurtEnemy(g,e,'stomp');g.p.x=32;for(let n=0;n<240&&!e.grounded;n++)tick(g);const x=e.x;
  while(e.timer<8){tick(g);assert.equal(e.state,'stunned');assert.equal(e.x,x);assert.equal(e.vx,0);}
- a.update(g,0);assert.equal(a.get(e).clip,'wake');assert.equal(a.get(e).actor,'E02');
+ a.update(g,0);assert.equal(a.get(e).clip,'wake');assert.equal(a.get(e).actor,'E11');
  while(e.state==='stunned')tick(g);assert.equal(e.kind,'winged');assert.equal(e.hp,2);assert.equal(e.intent,'recover-flight');const y=e.y;
  tick(g);a.update(g,STEP);assert.equal(a.get(e).actor,'E11');assert.equal(a.get(e).clip,'fly');assert.ok(e.y<y);assert.ok(Math.abs(e.y-y)<=80*STEP+1e-8);assert.ok(Math.abs(e.x-x)<=112*STEP+1e-8);
 });

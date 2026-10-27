@@ -80,8 +80,9 @@ test('losing wings after a dive retains the current position rather than snappin
 
 test('pre-plant version-two water-world saves retain run state when upgrading to the planted maps',()=>{
  const beforeBoss=JSON.parse(fs.readFileSync(new URL('./fixtures/pre-boss-halving-layouts.json',import.meta.url)));
+ const beforeUpper=JSON.parse(fs.readFileSync(new URL('./fixtures/pre-layered-later21.json',import.meta.url)));
  for(const l of LEVELS.filter(l=>l.world===4)){
-  const g=new Game(beforeBoss.find(old=>old.id===l.id)||l,{score:18000,form:1,rebirths:1}),d=JSON.parse(encodeSave(g,['1-4','2-4','3-4']));d.layoutVersion=2;d.checkpoint.enemies=d.checkpoint.enemies.filter(e=>e.kind!=='anemone');d.checkpoint.blocks=d.checkpoint.blocks.filter(b=>b.item!=='rebirth');
+  const g=new Game(beforeBoss.find(old=>old.id===l.id)||beforeUpper.find(old=>old.id===l.id)||l,{score:18000,form:1,rebirths:1}),d=JSON.parse(encodeSave(g,['1-4','2-4','3-4']));d.layoutVersion=2;d.checkpoint.enemies=d.checkpoint.enemies.filter(e=>e.kind!=='anemone');d.checkpoint.blocks=d.checkpoint.blocks.filter(b=>b.item!=='rebirth');
   const saved=decodeSave(JSON.stringify(d));assert.ok(saved,l.id);assert.equal(saved.layoutVersion,l.layoutVersion);assert.ok(saved.layoutMigrated);assert.equal(saved.run.rebirths,1);assert.equal(saved.run.entryScore,18000);assert.equal(saved.run.entryForm,1);assert.ok(saved.checkpoint.enemies.some(e=>e.kind==='anemone'));
  }
 });

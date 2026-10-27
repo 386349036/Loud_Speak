@@ -1,0 +1,39 @@
+{
+  "task": "boss-seven-visual-audit",
+  "date": "2026-10-27",
+  "status": "inspection-and-fixes-complete",
+  "beforeCompleted": [
+    "2-4",
+    "3-4",
+    "4-4",
+    "5-4",
+    "6-4",
+    "7-4",
+    "8-4"
+  ],
+  "afterCompleted": [
+    "2-4",
+    "3-4",
+    "4-4",
+    "5-4",
+    "6-4",
+    "7-4",
+    "8-4"
+  ],
+  "tests": {
+    "total": 280,
+    "passed": 280,
+    "failed": 0
+  },
+  "generatedSourceImages": 7,
+  "runtimeEffectSheets": 7,
+  "runtimeCueImages": 7,
+  "screenshots": {
+    "before": 22,
+    "after": 41
+  },
+  "fullUnaidedBossWinsVerified": false,
+  "physicalMobileVerified": false,
+  "published": false,
+  "report": "REPORT.md"
+}

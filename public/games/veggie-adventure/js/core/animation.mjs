@@ -4,8 +4,9 @@ import {bossEnraged} from './boss-balance.mjs';
 export function frameAt(clip,elapsed){const n=Math.floor(Math.max(0,elapsed)*clip.fps+1e-7);return clip.loop?n%clip.frames:Math.min(clip.frames-1,n);}
 export function playerClip(game){const p=game.p;if(game.mode==='dead'||game.mode==='gameover')return 'death';if(game.mode==='won')return 'victory';if(p.hurt>1.15)return 'hurt';if(p.form===2&&p.shotCooldown>.02)return 'throw';if(p.crouch)return 'crouch';if(p.inWater)return 'swim';if(!p.grounded)return p.vy<0?'jump-rise':'jump-fall';return Math.abs(p.vx)>4?'run':'idle';}
 export function enemyClip(e){
+ if(['winged','cloud'].includes(e.kind)&&e.dead)return e.grounded?'stunned':'fall-stunned';
  if(e.dead)return e.kind==='mushroom'&&e.defeatedBy==='stomp'?'flatten':e.kind==='bolt'?'fall':'hit';
- if(e.state==='stunned')return e.timer>=8?'wake':'shell-idle';
+ if(e.state==='stunned')return !e.grounded?'fall-stunned':e.timer>=8?'wake':'stunned';
  if(e.state==='rolling')return 'shell-slide';if(e.state==='shell')return e.timer>=8?'wake':'shell-idle';
  switch(e.kind){
  case 'anemone':return e.plantPhase==='windup'?'windup':e.plantPhase==='attack'?'attack':'idle';
@@ -25,6 +26,13 @@ export function bossClip(b){
  if(b.phase==='expose')return ['expose','expose','stun','stagger','stranded','open','exhaust','expose','open'][kind];
  if(b.phase==='recover')return 'hit';
  if(b.phase==='attack'){
+  if(b.pattern==='root-quake')return 'throw';
+  if(b.pattern==='husk-lance')return 'throw';
+  if(b.pattern==='lotus-geyser')return 'spray';
+  if(b.pattern==='durian-bounce')return 'shed';
+  if(b.pattern==='kiln-pillars')return 'cast-high';
+  if(b.pattern==='twin-pincer')return t<1?'left-attack':'right-attack';
+  if(b.pattern==='crown-split')return 'seed-fan';
   if(kind===2&&b.pattern==='charge')return 'roll';
   if(kind===3&&b.pattern==='dash')return 'dash';
   if(kind===3&&b.pattern==='seed-dash')return t<.45?'throw':'dash';
@@ -41,24 +49,36 @@ export function bossClip(b){
 export class AnimationPlayer{
  constructor(){this.reset();}
  reset(){this.time=0;this.game=null;this.lastTime=-1;this.tracks=new Map();this.previous=new Map();this.ghosts=[];this.effects=[];this.observed=false;}
+ addGhost(e,actor,clip){const flying=['winged','cloud'].includes(e.kind);this.ghosts.push({actor,clip:flying?(e.grounded?'stunned':'fall-stunned'):clip,x:e.x,y:e.y,w:e.w,h:e.h,flip:enemyFacing(e)<0,elapsed:0,flying,grounded:!!e.grounded,vy:Math.max(0,e.vy||0),hold:0});}
+ advanceGhosts(game,dt){
+  this.ghosts=this.ghosts.filter(g=>{
+   g.elapsed+=dt;if(!g.flying)return g.elapsed<.5;
+   if(!g.grounded){
+    const bottom=g.y+g.h;g.vy=Math.min(280,g.vy+600*dt);g.y+=g.vy*dt;
+    const floor=Math.min(240,...game.solids().filter(s=>s.x<g.x+g.w&&s.x+s.w>g.x&&s.y>=bottom-.1).map(s=>s.y));
+    if(g.y+g.h>=floor){g.y=floor-g.h;g.grounded=true;g.elapsed=0;g.clip='stunned';}
+   }else {g.hold+=dt;g.clip='stunned';}
+   return g.hold<.5&&g.elapsed<3;
+  });
+ }
  track(key,actor,clip,dt,token=''){let t=this.tracks.get(key);if(!t||t.actor!==actor||t.clip!==clip||t.token!==token)t={actor,clip,elapsed:0,token};else t.elapsed+=dt;this.tracks.set(key,t);return t;}
  update(game,dt){
   if(this.game!==game||game.time<this.lastTime||this.player&&this.player!==game.p){this.reset();this.game=game;}this.player=game.p;
-  this.lastTime=game.time;this.time+=dt;this.ghosts=this.ghosts.filter(g=>(g.elapsed+=dt)<.5);this.effects=this.effects.filter(e=>(e.elapsed+=dt)<.5);
+  this.lastTime=game.time;this.time+=dt;this.advanceGhosts(game,dt);this.effects=this.effects.filter(e=>(e.elapsed+=dt)<.5);
   const p=game.p,clip=playerClip(game),rate=clip==='run'?Math.max(.35,Math.min(1,Math.abs(p.vx)/112)):1;this.track(p,'P01-'+p.form,clip,dt*rate);
   const live=new Set([p,'boss','N01','N02']);
-  for(const e of game.enemies){const old=this.previous.get(e);let actor=e.kind==='winged'&&e.state==='stunned'?'E02':ENEMY_ART[e.kind],clip=enemyClip(e);live.add(e);
-   if(old&&!old.dead&&e.dead)this.ghosts.push({actor,clip,x:e.x,y:e.y,w:e.w,h:e.h,flip:enemyFacing(e)<0,elapsed:0});
+  for(const e of game.enemies){const old=this.previous.get(e);let actor=ENEMY_ART[e.kind],clip=enemyClip(e);live.add(e);
+   if(old&&!old.dead&&e.dead)this.addGhost(e,actor,clip);
    let track=this.tracks.get(e);
    if(e.dead)track=this.track(e,actor,clip,dt);
-   else if(old&&old.state!=='stunned'&&e.state==='stunned')track=this.track(e,actor,'retract',0,'transition');
+   else if(e.state==='stunned')track=this.track(e,actor,clip,dt);
    else if(old&&old.state!=='shell'&&e.state==='shell')track=this.track(e,actor,'retract',0,'transition');
    else if(old&&!old.grounded&&e.grounded&&e.state==='walk'&&['spike','leaper'].includes(e.kind))track=this.track(e,actor,e.kind==='spike'?'unfold':'splash',0,'transition');
    else if(track?.token==='transition'&&track.elapsed<.35){track.elapsed+=dt;}
    else this.track(e,actor,clip,clip==='walk'?dt*Math.min(1.4,Math.abs(e.vx)/20):dt,clip==='walk'&&Math.abs(e.vx)<.1?'stand':'');
    this.previous.set(e,{kind:e.kind,state:e.state,dead:e.dead,grounded:e.grounded});
   }
-  for(const [e,old] of this.previous)if(!live.has(e)){if(e.dead&&!old.dead)this.ghosts.push({actor:ENEMY_ART[old.kind],clip:old.kind==='bolt'?'fall':'hit',x:e.x,y:e.y,w:e.w,h:e.h,flip:e.vx<0,elapsed:0});this.previous.delete(e);}
+  for(const [e,old] of this.previous)if(!live.has(e)){if(e.dead&&!old.dead)this.addGhost(e,ENEMY_ART[old.kind],old.kind==='bolt'?'fall':'hit');this.previous.delete(e);}
   if(game.boss)this.track('boss',game.boss.id,bossClip(game.boss),dt,game.boss.phase);
   this.track('N01','N01',Math.abs(p.x-64)<48?['wave','map','talk'][Math.floor(this.time/2)%3]:'idle',dt);
   const rescued=this.tracks.get('boss');this.track('N02','N02',game.mode==='won'?'celebrate':game.boss?.dead?(rescued?.elapsed<.6?'rescue':'plant'):'idle',dt);

@@ -4,6 +4,7 @@ export function assetsForLevel(assets,level){
  const backgrounds=new Set([level.background||'W01-far',...(level.mid===null?[]:[level.mid||'W01-mid'])]);
  return assets.filter(a=>{
   if(backgrounds.has(a.id))return true;
+  if(/^boss-fx-\d$|^boss-cue-theme-\d$/.test(a.id))return Number(a.id.at(-1))===level.boss?.kind;
   if(/^anim-B\d+/.test(a.id))return a.id==='anim-'+level.boss?.id;
   if(['forest-far','forest-mid'].includes(a.id))return false;
   if(/^W\d\d-/.test(a.id))return level.warpRoom?/^W\d\d-kit-/.test(a.id):a.id.startsWith(terrain+'-')||a.id==='W'+world+'-special-exit';

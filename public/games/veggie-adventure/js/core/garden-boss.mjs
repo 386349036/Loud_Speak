@@ -1,6 +1,6 @@
 import {overlap} from './geometry.mjs';
 import {predictedBossTarget,rememberBossAttack} from './boss-awareness.mjs';
-import {bossEnraged,bossTiming,readyBossSkill,releaseBossSkill,bossVulnerable} from './boss-balance.mjs';
+import {bossEnraged,bossTiming,readyBossSkill,releaseBossSkill,bossVulnerable,bossExposeLimit} from './boss-balance.mjs';
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 const face=(b,p)=>p.x+p.w/2<b.x+b.w/2?-1:1;
 const floorAt=(g,x,ceiling=208)=>Math.min(208,...g.movers.filter(m=>m.arena&&x+32>m.x&&x<m.x+m.w&&m.y>=ceiling-2).map(m=>m.y));
@@ -80,7 +80,7 @@ export function updateGardenBoss(g,dt,oldBottom,hurt){
    if(b.pattern==='slam')for(const d of [-1,1])seed(g,b,d*(bossEnraged(b)?96:80),0,{y:200,w:16,h:8,kind:'wave',life:2});
    // Reaching a boss on a raised ledge requires a second jump after retreating.
    const climbAllowance=b.y+b.h<208?1:0;
-   b.exposeTime=Math.max(bossTiming(b).expose+climbAllowance,Math.min(3.6,Math.abs(p.x-b.x)/112+1.4));
+   b.exposeTime=Math.max(bossTiming(b).expose+climbAllowance,Math.min(bossExposeLimit(b),Math.abs(p.x-b.x)/112+1.4));
    enter(b,'expose');
   }
  }else if(b.phase==='expose'){

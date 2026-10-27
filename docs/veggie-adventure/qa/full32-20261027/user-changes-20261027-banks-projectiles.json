@@ -1,0 +1,137 @@
+{
+  "at": "2026-10-27T08:54:32.106Z",
+  "authorization": "用户在32关初查期间明确追加鱼池齐平岸台、抛掷攻击十格消失，按新指令先落实；不属于擅自提前统一修复。",
+  "banks": {
+    "levels": [
+      "2-3",
+      "4-1",
+      "4-2",
+      "4-3",
+      "8-2"
+    ],
+    "pools": 10,
+    "sides": 20,
+    "columns": 79,
+    "movedBricks": [
+      {
+        "level": "4-3",
+        "index": 3,
+        "before": {
+          "x": 576,
+          "y": 192
+        },
+        "after": {
+          "x": 576,
+          "y": 128
+        }
+      },
+      {
+        "level": "4-3",
+        "index": 4,
+        "before": {
+          "x": 592,
+          "y": 192
+        },
+        "after": {
+          "x": 592,
+          "y": 128
+        }
+      },
+      {
+        "level": "4-3",
+        "index": 9,
+        "before": {
+          "x": 992,
+          "y": 192
+        },
+        "after": {
+          "x": 992,
+          "y": 128
+        }
+      },
+      {
+        "level": "4-3",
+        "index": 10,
+        "before": {
+          "x": 1008,
+          "y": 192
+        },
+        "after": {
+          "x": 1008,
+          "y": 128
+        }
+      },
+      {
+        "level": "8-2",
+        "index": 2,
+        "before": {
+          "x": 1248,
+          "y": 144
+        },
+        "after": {
+          "x": 1248,
+          "y": 80
+        }
+      }
+    ]
+  },
+  "projectiles": {
+    "tiles": 10,
+    "units": 160,
+    "metric": "累计实际飞行路径；包含水平、竖直、抛物线及回弹；达到上限即移除且不再结算命中",
+    "scope": "普通种子、玉米粒、植物弹、尖刺、主角火球、Boss飞行专属弹；固定落石机关、地面震波/横扫、静止根刺非抛掷物"
+  },
+  "files": [
+    {
+      "path": "public/games/veggie-adventure/levels/world-02/level-2-3.mjs",
+      "sha256": "36364cefa4d7af3bd2772a269f2ce4e9049f81cda3a7d8269d8eaad0e2d1bd2d"
+    },
+    {
+      "path": "public/games/veggie-adventure/levels/world-04/level-4-1.mjs",
+      "sha256": "fde334bfa74b3e3f2c22115efc1486a0f496ca3a26aa958353aed2e82a622126"
+    },
+    {
+      "path": "public/games/veggie-adventure/levels/world-04/level-4-2.mjs",
+      "sha256": "a9aad7eafa2dc28d7a731c4d2c0e99b9024f33a17a340e7ffe5c3a910308c401"
+    },
+    {
+      "path": "public/games/veggie-adventure/levels/world-04/level-4-3.mjs",
+      "sha256": "f185f2e8ae8039fea78856da88ade630ee2c9b74eac3a49f933d133950c6300b"
+    },
+    {
+      "path": "public/games/veggie-adventure/levels/world-08/level-8-2.mjs",
+      "sha256": "ea4d906be317a24b5a4951ff722889947d36cc800e8ca72841e9f8ed7a938484"
+    },
+    {
+      "path": "public/games/veggie-adventure/js/core/game.mjs",
+      "sha256": "ed1d9bc00c9e7cdbb6d3ade8c9027dc48272a8eaf6674114b7279cadae87db5a"
+    },
+    {
+      "path": "public/games/veggie-adventure/js/core/environment.mjs",
+      "sha256": "934c83456057d32983e9f49dc2941274672d8479f1461aa2832975e00f9adb72"
+    },
+    {
+      "path": "public/games/veggie-adventure/js/core/boss-signatures.mjs",
+      "sha256": "fc595b8caedf902a55fbfdecb1acbca4bbad34d0be62fdc52d8b13510eeed564"
+    },
+    {
+      "path": "public/games/veggie-adventure/js/core/projectile-range.mjs",
+      "sha256": "5682860518f876267ad902e7e49fa01d82a6b80cabb1cd617ae62ac0b854b7fd"
+    }
+  ],
+  "visualEvidence": [
+    "qa/leaper-banks-20261027/2-3-swim-left-bank.png",
+    "qa/leaper-banks-20261027/8-2-both-shores.png",
+    "qa/leaper-banks-20261027/8-2-base-swim-exit.png",
+    "qa/leaper-banks-20261027/4-3-raised-banks.png",
+    "qa/leaper-banks-20261027/8-2-right-exit-reward-clear.png"
+  ],
+  "limitations": "只对鱼池代表场景专项视觉检查，不算4-3/8-2完整初查；没有完成32关巡检，没有部署。",
+  "validation": {
+    "tests": 291,
+    "passed": 291,
+    "failed": 0,
+    "gitDiffCheck": "pass",
+    "builderIdempotent": true
+  }
+}

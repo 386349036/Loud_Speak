@@ -66,7 +66,7 @@ test('standing, partial and full run jumps increase height and distance equally 
  }
 });
 test('all static above-ground blocks are breakable, clear of pits and collectible seeds',()=>{
- for(const l of LEVELS){assert.ok(l.platforms.every(p=>p.y>=208),l.id);const ground=[...l.platforms].sort((a,b)=>a.x-b.x);let end=0;const gaps=[];for(const p of ground){if(p.x>end)gaps.push({x:end,w:p.x-end});end=Math.max(end,p.x+p.w);}
+ for(const l of LEVELS){assert.ok(l.platforms.every(p=>p.y>=208||p.waterBank),l.id);const ground=[...l.platforms].sort((a,b)=>a.x-b.x);let end=0;const gaps=[];for(const p of ground){if(p.x>end)gaps.push({x:end,w:p.x-end});end=Math.max(end,p.x+p.w);}
  for(const b of l.blocks){assert.equal(b.breakable,true,l.id);assert.ok(!gaps.some(g=>b.x<g.x+g.w+128&&b.x+b.w>g.x-128),l.id+' pit clearance');}
  for(const i of l.items.filter(i=>i.kind==='seed'))assert.ok(![...l.platforms,...l.blocks,...(l.gates||[])].some(s=>overlap(i,s)),l.id+' seed overlap');}
 });

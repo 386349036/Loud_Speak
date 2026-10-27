@@ -1,18 +1,18 @@
-// Short boss approach; full arena and combat parameters retained.
+// Expanded boss arena; short approach and actor dimensions retained.
 export default {
   "id": "4-4",
   "name": "莲池深殿",
   "focus": "水面上下分区；长路线分段补给，三形态净空，三层弱点战场",
   "world": 4,
   "stage": 4,
-  "width": 1168,
+  "width": 1312,
   "height": 240,
   "timeLimit": 840,
   "spawn": {
     "x": 32,
     "y": 180
   },
-  "exit": 1120,
+  "exit": 1264,
   "checkpoint": 784,
   "background": "W04-arena",
   "mid": null,
@@ -51,19 +51,19 @@ export default {
     {
       "x": 784,
       "y": 208,
-      "w": 200,
+      "w": 292,
       "h": 32
     },
     {
-      "x": 984,
+      "x": 1076,
       "y": 224,
-      "w": 96,
+      "w": 144,
       "h": 16
     },
     {
-      "x": 1080,
+      "x": 1220,
       "y": 208,
-      "w": 88,
+      "w": 92,
       "h": 32
     }
   ],
@@ -191,7 +191,7 @@ export default {
       "collected": false
     },
     {
-      "x": 848,
+      "x": 874.5,
       "y": 176,
       "w": 10,
       "h": 12,
@@ -199,7 +199,7 @@ export default {
       "collected": false
     },
     {
-      "x": 960,
+      "x": 1042.5,
       "y": 176,
       "w": 10,
       "h": 12,
@@ -225,11 +225,11 @@ export default {
   ],
   "movers": [
     {
-      "x": 832,
+      "x": 860,
       "y": 176,
       "w": 48,
       "h": 8,
-      "baseX": 832,
+      "baseX": 860,
       "baseY": 176,
       "kind": "ledge",
       "oneWay": true,
@@ -237,11 +237,11 @@ export default {
       "id": "arena-ledge-0"
     },
     {
-      "x": 944,
+      "x": 1028,
       "y": 160,
       "w": 48,
       "h": 8,
-      "baseX": 944,
+      "baseX": 1028,
       "baseY": 160,
       "kind": "ledge",
       "oneWay": true,
@@ -249,11 +249,11 @@ export default {
       "id": "arena-ledge-1"
     },
     {
-      "x": 1040,
+      "x": 1168,
       "y": 176,
       "w": 32,
       "h": 8,
-      "baseX": 1040,
+      "baseX": 1168,
       "baseY": 176,
       "kind": "ledge",
       "oneWay": true,
@@ -270,9 +270,9 @@ export default {
       "h": 64
     },
     {
-      "x": 984,
+      "x": 1076,
       "y": 176,
-      "w": 96,
+      "w": 144,
       "h": 48
     }
   ],
@@ -282,12 +282,12 @@ export default {
     "id": "B04",
     "kind": 4,
     "name": "莲藕潜王",
-    "x": 1008,
+    "x": 1120,
     "y": 176,
     "w": 32,
     "h": 32,
     "left": 800,
-    "right": 1088,
+    "right": 1232,
     "hp": 8,
     "phase": "idle",
     "timer": 0,
@@ -299,7 +299,7 @@ export default {
     "maxHp": 8,
     "balanceVersion": 1
   },
-  "layoutVersion": 5,
+  "layoutVersion": 6,
   "reworkVersion": 1,
   "priorLayout": {
     "version": 1,
@@ -334,7 +334,7 @@ export default {
       "id": "boss",
       "name": "关底分层战场",
       "from": 784,
-      "to": 1168
+      "to": 1312
     }
   ],
   "priorLayouts": [
@@ -401,6 +401,22 @@ export default {
         "left": 2576,
         "right": 2864
       }
+    },
+    {
+      "version": 5,
+      "width": 1168,
+      "timeLimit": 840,
+      "counts": {
+        "blocks": 2,
+        "enemies": 4,
+        "movers": 3,
+        "turrets": 0,
+        "gates": 0
+      },
+      "boss": {
+        "left": 800,
+        "right": 1088
+      }
     }
   ],
   "aquaticPlantVersion": 1,
@@ -419,5 +435,13 @@ export default {
       "to": 4224,
       "removed": 2944
     }
-  ]
+  ],
+  "bossArenaVersion": 1,
+  "bossArenaExpansion": {
+    "priorWidth": 288,
+    "width": 432,
+    "added": 144,
+    "scale": 1.5,
+    "priorLevelWidth": 1168
+  }
 };

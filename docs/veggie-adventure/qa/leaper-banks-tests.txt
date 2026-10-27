@@ -1,0 +1,1465 @@
+TAP version 13
+# Subtest: gravity lands on floor and movement stays grounded
+ok 1 - gravity lands on floor and movement stays grounded
+  ---
+  duration_ms: 9.8814
+  ...
+# Subtest: held jump exceeds tap, repeated press cannot double jump
+ok 2 - held jump exceeds tap, repeated press cannot double jump
+  ---
+  duration_ms: 6.4655
+  ...
+# Subtest: short pits in 1-1 are below full running jump horizontal range
+ok 3 - short pits in 1-1 are below full running jump horizontal range
+  ---
+  duration_ms: 1.6045
+  ...
+# Subtest: breakable reward spawns once and basic form breaks brick
+ok 4 - breakable reward spawns once and basic form breaks brick
+  ---
+  duration_ms: 0.8999
+  ...
+# Subtest: reward emerges then drops to reachable ground beside box
+ok 5 - reward emerges then drops to reachable ground beside box
+  ---
+  duration_ms: 5.3391
+  ...
+# Subtest: growth keeps the base collision body and standing clearance under a low ceiling
+ok 6 - growth keeps the base collision body and standing clearance under a low ceiling
+  ---
+  duration_ms: 0.7542
+  ...
+# Subtest: power states and damage protection
+ok 7 - power states and damage protection
+  ---
+  duration_ms: 0.3436
+  ...
+# Subtest: star resets to ten seconds and does not protect pits
+ok 8 - star resets to ten seconds and does not protect pits
+  ---
+  duration_ms: 0.3534
+  ...
+# Subtest: descending stomp kills mushroom but side contact kills player
+ok 9 - descending stomp kills mushroom but side contact kills player
+  ---
+  duration_ms: 1.575
+  ...
+# Subtest: cabbage stomp, kick and rolling-shell enemy hit
+ok 10 - cabbage stomp, kick and rolling-shell enemy hit
+  ---
+  duration_ms: 1.0409
+  ...
+# Subtest: shell recovers after nine seconds
+ok 11 - shell recovers after nine seconds
+  ---
+  duration_ms: 0.659
+  ...
+# Subtest: fireball respects form, cooldown, count and crouch
+ok 12 - fireball respects form, cooldown, count and crouch
+  ---
+  duration_ms: 0.4631
+  ...
+# Subtest: death restores world, score, timer and clears star/projectiles
+ok 13 - death restores world, score, timer and clears star/projectiles
+  ---
+  duration_ms: 0.9731
+  ...
+# Subtest: passing the old checkpoint cannot change the stage entrance used for rebirth
+ok 14 - passing the old checkpoint cannot change the stage entrance used for rebirth
+  ---
+  duration_ms: 0.7181
+  ...
+# Subtest: timeout restarts and exit completes without advancing other levels
+ok 15 - timeout restarts and exit completes without advancing other levels
+  ---
+  duration_ms: 0.2222
+  ...
+# Subtest: save round trip rejects broken inputs
+ok 16 - save round trip rejects broken inputs
+  ---
+  duration_ms: 1.0917
+  ...
+# Subtest: 32 ordered independent maps, all resource references and safe spawn/checkpoint/exit ground
+ok 17 - 32 ordered independent maps, all resource references and safe spawn/checkpoint/exit ground
+  ---
+  duration_ms: 36.3785
+  ...
+# Subtest: campaign advances all 32 exits, carries score/form, restores completed campaign and ends once
+ok 18 - campaign advances all 32 exits, carries score/form, restores completed campaign and ends once
+  ---
+  duration_ms: 45.2653
+  ...
+# Subtest: grown player crawls through low root tunnel without standing into roof
+ok 19 - grown player crawls through low root tunnel without standing into roof
+  ---
+  duration_ms: 26.6535
+  ...
+# Subtest: underwater swimming rises, fish and air leaper can both be stomped
+ok 20 - underwater swimming rises, fish and air leaper can both be stomped
+  ---
+  duration_ms: 2.2152
+  ...
+# Subtest: moving platforms carry rider, crumble restores and crushing ignores star
+ok 21 - moving platforms carry rider, crumble restores and crushing ignores star
+  ---
+  duration_ms: 2.4782
+  ...
+# Subtest: heat has warning/rest phases and is fatal even with star; spikes respect temporary immunity
+ok 22 - heat has warning/rest phases and is fatal even with star; spikes respect temporary immunity
+  ---
+  duration_ms: 0.9094
+  ...
+# Subtest: all former resistant enemies take damage and a surviving winged enemy is stunned
+ok 23 - all former resistant enemies take damage and a surviving winged enemy is stunned
+  ---
+  duration_ms: 1.6159
+  ...
+# Subtest: rolling shell opens gate and defeats fireproof walnut
+ok 24 - rolling shell opens gate and defeats fireproof walnut
+  ---
+  duration_ms: 0.6161
+  ...
+# Subtest: turret suppresses near fire, signals before shooting; cloud has three-child cap
+ok 25 - turret suppresses near fire, signals before shooting; cloud has three-child cap
+  ---
+  duration_ms: 1.1291
+  ...
+# Subtest: boss 1 telegraph, weak-window damage and entrance rollback
+ok 26 - boss 1 telegraph, weak-window damage and entrance rollback
+  ---
+  duration_ms: 3.5407
+  ...
+# Subtest: boss 2 telegraph, weak-window damage and entrance rollback
+ok 27 - boss 2 telegraph, weak-window damage and entrance rollback
+  ---
+  duration_ms: 1.6752
+  ...
+# Subtest: boss 3 telegraph, weak-window damage and entrance rollback
+ok 28 - boss 3 telegraph, weak-window damage and entrance rollback
+  ---
+  duration_ms: 1.4211
+  ...
+# Subtest: boss 4 telegraph, weak-window damage and entrance rollback
+ok 29 - boss 4 telegraph, weak-window damage and entrance rollback
+  ---
+  duration_ms: 1.5427
+  ...
+# Subtest: boss 5 telegraph, weak-window damage and entrance rollback
+ok 30 - boss 5 telegraph, weak-window damage and entrance rollback
+  ---
+  duration_ms: 0.9342
+  ...
+# Subtest: boss 6 telegraph, weak-window damage and entrance rollback
+ok 31 - boss 6 telegraph, weak-window damage and entrance rollback
+  ---
+  duration_ms: 0.7762
+  ...
+# Subtest: boss 7 telegraph, weak-window damage and entrance rollback
+ok 32 - boss 7 telegraph, weak-window damage and entrance rollback
+  ---
+  duration_ms: 2.39
+  ...
+# Subtest: boss 8 telegraph, weak-window damage and entrance rollback
+ok 33 - boss 8 telegraph, weak-window damage and entrance rollback
+  ---
+  duration_ms: 1.3997
+  ...
+# Subtest: closed boss blocks exit; open-window partial fire hits reset and star cannot auto-kill
+ok 34 - closed boss blocks exit; open-window partial fire hits reset and star cannot auto-kill
+  ---
+  duration_ms: 0.5264
+  ...
+# Subtest: checkpoint restores moving terrain, gates, enemy projectiles and timers
+ok 35 - checkpoint restores moving terrain, gates, enemy projectiles and timers
+  ---
+  duration_ms: 1.3938
+  ...
+# Subtest: campaign save rejects other-level shapes, malformed boss and NaN-like fields
+ok 36 - campaign save rejects other-level shapes, malformed boss and NaN-like fields
+  ---
+  duration_ms: 0.715
+  ...
+# Subtest: basic running jump physically reaches every exposed boss head without a power-up
+ok 37 - basic running jump physically reaches every exposed boss head without a power-up
+  ---
+  duration_ms: 6.2386
+  ...
+# Subtest: all runtime images decode with foot anchors for actors and center anchors for player projectiles
+ok 38 - all runtime images decode with foot anchors for actors and center anchors for player projectiles
+  ---
+  duration_ms: 433.1995
+  ...
+# Subtest: local HTTP serves page, complete module graph and every manifest image
+ok 39 - local HTTP serves page, complete module graph and every manifest image
+  ---
+  duration_ms: 615.0369
+  ...
+# Subtest: every stage loads its actual background, terrain, shared sprites and boss without unrelated world backgrounds
+ok 40 - every stage loads its actual background, terrain, shared sprites and boss without unrelated world backgrounds
+  ---
+  duration_ms: 31.3339
+  ...
+# Subtest: bounded image loads deduplicate concurrent requests and use immutable content revisions
+ok 41 - bounded image loads deduplicate concurrent requests and use immutable content revisions
+  ---
+  duration_ms: 0.762
+  ...
+# Subtest: failed loads settle, keep successful images and can retry without replaying completed downloads
+ok 42 - failed loads settle, keep successful images and can retry without replaying completed downloads
+  ---
+  duration_ms: 0.6369
+  ...
+# Subtest: visible body calibration makes base hero larger than common enemies while keeping feet and collision data
+ok 43 - visible body calibration makes base hero larger than common enemies while keeping feet and collision data
+  ---
+  duration_ms: 0.2471
+  ...
+# Subtest: new PNG shield has a transparent center and renders only while star protection is active
+ok 44 - new PNG shield has a transparent center and renders only while star protection is active
+  ---
+  duration_ms: 19.2731
+  ...
+# Subtest: all 29 atlases cover roster clips, decode, have alpha and distinct nonempty frames
+ok 45 - all 29 atlases cover roster clips, decode, have alpha and distinct nonempty frames
+  ---
+  duration_ms: 3001.6559
+  ...
+# Subtest: looping frames wrap and terminal frames hold independently of frame rate
+ok 46 - looping frames wrap and terminal frames hold independently of frame rate
+  ---
+  duration_ms: 0.1908
+  ...
+# Subtest: animation changes do not change simulation outcomes across all 32 levels
+ok 47 - animation changes do not change simulation outcomes across all 32 levels
+  ---
+  duration_ms: 922.426
+  ...
+# Subtest: death continues visually while physics time stops; restore resets presentation
+ok 48 - death continues visually while physics time stops; restore resets presentation
+  ---
+  duration_ms: 0.4743
+  ...
+# Subtest: terminal victory animates every form and does not advance simulation
+ok 49 - terminal victory animates every form and does not advance simulation
+  ---
+  duration_ms: 1.9566
+  ...
+# Subtest: shell retract, flyer stun, deflect and defeated sprites persist without live collisions
+ok 50 - shell retract, flyer stun, deflect and defeated sprites persist without live collisions
+  ---
+  duration_ms: 0.4892
+  ...
+# Subtest: every enemy and boss phase selects a clip that exists
+ok 51 - every enemy and boss phase selects a clip that exists
+  ---
+  duration_ms: 0.5138
+  ...
+# Subtest: headless draw uses valid atlas crops for all levels without mutating gameplay
+ok 52 - headless draw uses valid atlas crops for all levels without mutating gameplay
+  ---
+  duration_ms: 34.1795
+  ...
+# Subtest: joystick deadzone, diagonal crouch and radius clamp
+ok 53 - joystick deadzone, diagonal crouch and radius clamp
+  ---
+  duration_ms: 0.189
+  ...
+# Subtest: multitouch movement and actions remain independent and cancel safely
+ok 54 - multitouch movement and actions remain independent and cancel safely
+  ---
+  duration_ms: 0.5924
+  ...
+# Subtest: arena ledges allow upward passage, stable landing and deliberate drop for every form
+ok 55 - arena ledges allow upward passage, stable landing and deliberate drop for every form
+  ---
+  duration_ms: 11.9155
+  ...
+# Subtest: garden boss selects distance and elevation responses, avoids repeats, and locks telegraphs
+ok 56 - garden boss selects distance and elevation responses, avoids repeats, and locks telegraphs
+  ---
+  duration_ms: 1.0697
+  ...
+# Subtest: garden hit recovery permits retreat without an immediate second body hit
+ok 57 - garden hit recovery permits retreat without an immediate second body hit
+  ---
+  duration_ms: 0.3854
+  ...
+# Subtest: a ledge flush with the garden boss head does not intercept the exposed stomp
+ok 58 - a ledge flush with the garden boss head does not intercept the exposed stomp
+  ---
+  duration_ms: 0.6848
+  ...
+# Subtest: later bosses lead a moving target and stationary casters reposition
+ok 59 - later bosses lead a moving target and stationary casters reposition
+  ---
+  duration_ms: 0.5067
+  ...
+# Subtest: seeds can rise through an arena ledge, which catches them on descent
+ok 60 - seeds can rise through an arena ledge, which catches them on descent
+  ---
+  duration_ms: 0.3781
+  ...
+# Subtest: garden seed aiming covers the player at the arena edge independently of leap limits
+ok 61 - garden seed aiming covers the player at the arena edge independently of leap limits
+  ---
+  duration_ms: 0.2772
+  ...
+# Subtest: pre-ledge 1-4 checkpoint migrates without losing score or completed levels
+ok 62 - pre-ledge 1-4 checkpoint migrates without losing score or completed levels
+  ---
+  duration_ms: 0.4975
+  ...
+# Subtest: 1-1 late enemies cannot patrol into the required pit landing buffers
+ok 63 - 1-1 late enemies cannot patrol into the required pit landing buffers
+  ---
+  duration_ms: 21.3002
+  ...
+# Subtest: expanded 1-4 arena keeps the player visible at both edges and the hop landing
+ok 64 - expanded 1-4 arena keeps the player visible at both edges and the hop landing
+  ---
+  duration_ms: 0.2565
+  ...
+# Subtest: the historical 1-4 experimental pits tolerate four takeoff timings in every standing form
+ok 65 - the historical 1-4 experimental pits tolerate four takeoff timings in every standing form
+  ---
+  duration_ms: 49.9625
+  ...
+# Subtest: 1-4 boss can be stomped with the shared full-speed jump in every form
+ok 66 - 1-4 boss can be stomped with the shared full-speed jump in every form
+  ---
+  duration_ms: 4.5077
+  ...
+# Subtest: B01 cycles three attacks with locked hop target and timed exposure windows
+ok 67 - B01 cycles three attacks with locked hop target and timed exposure windows
+  ---
+  duration_ms: 5.4659
+  ...
+# Subtest: ordinary movement uses running animation and no separate sprint speed
+ok 68 - ordinary movement uses running animation and no separate sprint speed
+  ---
+  duration_ms: 1.2321
+  ...
+# Subtest: all forms share the initial-form jump height, distance and release cutoff
+ok 69 - all forms share the initial-form jump height, distance and release cutoff
+  ---
+  duration_ms: 0.1507
+  ...
+# Subtest: air momentum persists without input and reversal brakes before changing direction
+ok 70 - air momentum persists without input and reversal brakes before changing direction
+  ---
+  duration_ms: 0.9778
+  ...
+# Subtest: late edge jump and just-before-landing buffered jump work without an air double jump
+ok 71 - late edge jump and just-before-landing buffered jump work without an air double jump
+  ---
+  duration_ms: 0.5221
+  ...
+# Subtest: ordinary ground movement accumulates half speed at half second and full speed at one second
+ok 72 - ordinary ground movement accumulates half speed at half second and full speed at one second
+  ---
+  duration_ms: 1.2358
+  ...
+# Subtest: standing, partial and full run jumps increase height and distance equally for all body forms
+ok 73 - standing, partial and full run jumps increase height and distance equally for all body forms
+  ---
+  duration_ms: 9.5748
+  ...
+# Subtest: all static above-ground blocks are breakable, clear of pits and collectible seeds
+ok 74 - all static above-ground blocks are breakable, clear of pits and collectible seeds
+  ---
+  duration_ms: 13.9166
+  ...
+# Subtest: garden boss observes camping before choosing a flank, and movement clears that habit
+ok 75 - garden boss observes camping before choosing a flank, and movement clears that habit
+  ---
+  duration_ms: 0.8902
+  ...
+# Subtest: extended platform camping prompts a telegraphed landing that fits the platform and stays locked
+ok 76 - extended platform camping prompts a telegraphed landing that fits the platform and stays locked
+  ---
+  duration_ms: 1.3862
+  ...
+# Subtest: fire pressure comes from visible firing, decays, and does not infer intent from a power-up
+ok 77 - fire pressure comes from visible firing, decays, and does not infer intent from a power-up
+  ---
+  duration_ms: 0.8288
+  ...
+# Subtest: adaptive responses have a turn cooldown and only retain three recent attacks
+ok 78 - adaptive responses have a turn cooldown and only retain three recent attacks
+  ---
+  duration_ms: 0.5139
+  ...
+# Subtest: casters react after a delay, seek space at an edge, and stop evading once a cue starts
+ok 79 - casters react after a delay, seek space at an edge, and stop evading once a cue starts
+  ---
+  duration_ms: 0.7277
+  ...
+# Subtest: all eight exposed bosses keep their opening under sustained fire pressure
+ok 80 - all eight exposed bosses keep their opening under sustained fire pressure
+  ---
+  duration_ms: 3.6091
+  ...
+# Subtest: boss observations round-trip through checkpoints and a retry restores the earlier memory
+ok 81 - boss observations round-trip through checkpoints and a retry restores the earlier memory
+  ---
+  duration_ms: 0.8311
+  ...
+# Subtest: final boss changes its follow-up against camping instead of repeating a single attack
+ok 82 - final boss changes its follow-up against camping instead of repeating a single attack
+  ---
+  duration_ms: 0.576
+  ...
+# Subtest: every form has time to reach the raised right-platform weak point after returning to the middle ledge
+ok 83 - every form has time to reach the raised right-platform weak point after returning to the middle ledge
+  ---
+  duration_ms: 4.4124
+  ...
+# Subtest: flying enemies face their real direction after turning without retaining their spawn velocity
+ok 84 - flying enemies face their real direction after turning without retaining their spawn velocity
+  ---
+  duration_ms: 6.4119
+  ...
+# Subtest: every configured fish and jelly stays within its water and above overlapping terrain
+ok 85 - every configured fish and jelly stays within its water and above overlapping terrain
+  ---
+  duration_ms: 322.8374
+  ...
+# Subtest: low-altitude winged cabbage patrol no longer sinks into the ground
+ok 86 - low-altitude winged cabbage patrol no longer sinks into the ground
+  ---
+  duration_ms: 2.0802
+  ...
+# Subtest: trap waits beside a player in all forms, then provides emergence time before becoming dangerous
+ok 87 - trap waits beside a player in all forms, then provides emergence time before becoming dangerous
+  ---
+  duration_ms: 4.6335
+  ...
+# Subtest: corn faces and locks its warned throw direction even if the player crosses behind it
+ok 88 - corn faces and locks its warned throw direction even if the player crosses behind it
+  ---
+  duration_ms: 0.6885
+  ...
+# Subtest: cloud follows within a bounded area and postpones a drop that would overlap the player
+ok 89 - cloud follows within a bounded area and postpones a drop that would overlap the player
+  ---
+  duration_ms: 24.9721
+  ...
+# Subtest: water leaper warns, jumps on a fixed arc, splashes and hides before another warning
+ok 90 - water leaper warns, jumps on a fixed arc, splashes and hides before another warning
+  ---
+  duration_ms: 1.0918
+  ...
+# Subtest: ground leaper landing animation finishes before its next ascent begins
+ok 91 - ground leaper landing animation finishes before its next ascent begins
+  ---
+  duration_ms: 0.6176
+  ...
+# Subtest: shell wake cue lasts about one second before walking resumes
+ok 92 - shell wake cue lasts about one second before walking resumes
+  ---
+  duration_ms: 0.9789
+  ...
+# Subtest: defeat interrupts landing transitions and mushroom fire hits do not play stomp flattening
+ok 93 - defeat interrupts landing transitions and mushroom fire hits do not play stomp flattening
+  ---
+  duration_ms: 0.3258
+  ...
+# Subtest: a cloud with three live children stops empty throws and warns again when a slot opens
+ok 94 - a cloud with three live children stops empty throws and warns again when a slot opens
+  ---
+  duration_ms: 6.4808
+  ...
+# Subtest: jelly pulse animation accompanies upward motion and float accompanies the slow return
+ok 95 - jelly pulse animation accompanies upward motion and float accompanies the slow return
+  ---
+  duration_ms: 0.7343
+  ...
+# Subtest: ordinary mushrooms move on discovery and pursue continuously, steering when the hero crosses them
+ok 96 - ordinary mushrooms move on discovery and pursue continuously, steering when the hero crosses them
+  ---
+  duration_ms: 1.9357
+  ...
+# Subtest: ground enemies cannot see through a wall or react to an unrelated high platform
+ok 97 - ground enemies cannot see through a wall or react to an unrelated high platform
+  ---
+  duration_ms: 1.1302
+  ...
+# Subtest: ground pursuit respects a gap and the configured landing buffers for every body form
+ok 98 - ground pursuit respects a gap and the configured landing buffers for every body form
+  ---
+  duration_ms: 53.397
+  ...
+# Subtest: visible star protection prompts retreat, while shell and rolling states keep their original control
+ok 99 - visible star protection prompts retreat, while shell and rolling states keep their original control
+  ---
+  duration_ms: 0.806
+  ...
+# Subtest: fish and winged cabbage move during discovery and keep tracking a nearby moving hero
+ok 100 - fish and winged cabbage move during discovery and keep tracking a nearby moving hero
+  ---
+  duration_ms: 0.9724
+  ...
+# Subtest: jelly approaches only a player in the same water and decides once per pulse
+ok 101 - jelly approaches only a player in the same water and decides once per pulse
+  ---
+  duration_ms: 3.1455
+  ...
+# Subtest: corn maintains throwing distance inside its leash and leads the visible movement only when winding up
+ok 102 - corn maintains throwing distance inside its leash and leads the visible movement only when winding up
+  ---
+  duration_ms: 2.8805
+  ...
+# Subtest: cloud holds its warned drop column when the player changes direction
+ok 103 - cloud holds its warned drop column when the player changes direction
+  ---
+  duration_ms: 0.9128
+  ...
+# Subtest: enemy decisions are saved and restored with checkpoints, and old checkpoints start with no memory
+ok 104 - enemy decisions are saved and restored with checkpoints, and old checkpoints start with no memory
+  ---
+  duration_ms: 2.9948
+  ...
+# Subtest: a noticed pursuing mushroom remains stompable through actual movement in all three forms
+ok 105 - a noticed pursuing mushroom remains stompable through actual movement in all three forms
+  ---
+  duration_ms: 3.8007
+  ...
+# Subtest: all configured planted traps grow exactly 1.5 times once, keeping ground and center anchors
+ok 106 - all configured planted traps grow exactly 1.5 times once, keeping ground and center anchors
+  ---
+  duration_ms: 19.5482
+  ...
+# Subtest: buried soil, rumble, emergence, danger and retraction occur in order with a full one-second warning
+ok 107 - buried soil, rumble, emergence, danger and retraction occur in order with a full one-second warning
+  ---
+  duration_ms: 1.231
+  ...
+# Subtest: overlapping every hero form during soil warning or emergence is harmless, exposed contact still hurts
+ok 108 - overlapping every hero form during soil warning or emergence is harmless, exposed contact still hurts
+  ---
+  duration_ms: 0.6678
+  ...
+# Subtest: hidden soil is rendered before the plant, and the warning advances all four generated PNG frames
+ok 109 - hidden soil is rendered before the plant, and the warning advances all four generated PNG frames
+  ---
+  duration_ms: 0.9848
+  ...
+# Subtest: new checkpoints do not repeatedly enlarge traps; legacy checkpoints restart with a visible safe mound
+ok 110 - new checkpoints do not repeatedly enlarge traps; legacy checkpoints restart with a visible safe mound
+  ---
+  duration_ms: 1.2346
+  ...
+# Subtest: normal mode has no selectable levels and rejects even a direct selection-handler call
+ok 111 - normal mode has no selectable levels and rejects even a direct selection-handler call
+  ---
+  duration_ms: 26.886
+  ...
+# Subtest: actual page loop automatically starts every next level, carries results and stops at the final ending
+ok 112 - actual page loop automatically starts every next level, carries results and stops at the final ending
+  ---
+  duration_ms: 250.1607
+  ...
+# Subtest: loading an older completed-stage save proceeds immediately, while final saves retain the ending
+ok 113 - loading an older completed-stage save proceeds immediately, while final saves retain the ending
+  ---
+  duration_ms: 7.0926
+  ...
+# Subtest: debug selection works only with qa=1 and cannot overwrite or be loaded as normal progress
+ok 114 - debug selection works only with qa=1 and cannot overwrite or be loaded as normal progress
+  ---
+  duration_ms: 8.6348
+  ...
+# Subtest: review mode can inspect automatic advancement and debug selection without writing either save
+ok 115 - review mode can inspect automatic advancement and debug selection without writing either save
+  ---
+  duration_ms: 4.565
+  ...
+# Subtest: losing focus during the victory delay pauses transition and resume continues automatically
+ok 116 - losing focus during the victory delay pauses transition and resume continues automatically
+  ---
+  duration_ms: 9.0329
+  ...
+# Subtest: actual page shows the game-over dialog after three rebirths and cannot resume it with pause or focus changes
+ok 117 - actual page shows the game-over dialog after three rebirths and cannot resume it with pause or focus changes
+  ---
+  duration_ms: 21.0356
+  ...
+# Subtest: refreshing during the last rebirth or final death preserves exhaustion and the game-over screen
+ok 118 - refreshing during the last rebirth or final death preserves exhaustion and the game-over screen
+  ---
+  duration_ms: 10.0612
+  ...
+# Subtest: normal restart starts a new run at 1-1 and cannot replenish attempts while keeping a later stage
+ok 119 - normal restart starts a new run at 1-1 and cannot replenish attempts while keeping a later stage
+  ---
+  duration_ms: 4.5995
+  ...
+# Subtest: overlay settings pause gameplay, preserve the run and close when resuming
+ok 120 - overlay settings pause gameplay, preserve the run and close when resuming
+  ---
+  duration_ms: 6.5275
+  ...
+# Subtest: normal play can discover the hidden warp room by keyboard, then hit a stage block and immediately play it
+ok 121 - normal play can discover the hidden warp room by keyboard, then hit a stage block and immediately play it
+  ---
+  duration_ms: 18.9444
+  ...
+# Subtest: SFX settings are independent from music, and review mode writes no preferences
+ok 122 - SFX settings are independent from music, and review mode writes no preferences
+  ---
+  duration_ms: 9.2259
+  ...
+# Subtest: all 12 exposed enemy types lose HP on a stomp in all forms, including underwater
+ok 123 - all 12 exposed enemy types lose HP on a stomp in all forms, including underwater
+  ---
+  duration_ms: 15.0488
+  ...
+# Subtest: all 12 enemies take one damage per fireball without immunity or duplicate score
+ok 124 - all 12 enemies take one damage per fireball without immunity or duplicate score
+  ---
+  duration_ms: 1.7321
+  ...
+# Subtest: base hero safely bounces on a shell without draining HP, then can hit after the enemy wakes
+ok 125 - base hero safely bounces on a shell without draining HP, then can hit after the enemy wakes
+  ---
+  duration_ms: 2.1132
+  ...
+# Subtest: all eight bosses take stomp damage only in an open weak window in every player form
+ok 126 - all eight bosses take stomp damage only in an open weak window in every player form
+  ---
+  duration_ms: 21.2541
+  ...
+# Subtest: both halves of the twin boss are hittable and ascent or side contact does not count as a stomp
+ok 127 - both halves of the twin boss are hittable and ascent or side contact does not count as a stomp
+  ---
+  duration_ms: 1.3513
+  ...
+# Subtest: enemy HP survives checkpoints and legacy checkpoints initialize shell HP once
+ok 128 - enemy HP survives checkpoints and legacy checkpoints initialize shell HP once
+  ---
+  duration_ms: 0.824
+  ...
+# Subtest: evolved artwork and shield retain their scale while every collision body stays at base size
+ok 129 - evolved artwork and shield retain their scale while every collision body stays at base size
+  ---
+  duration_ms: 1.6566
+  ...
+# Subtest: old grown saves migrate at the same foot centre and all forms keep identical jump trajectories
+ok 130 - old grown saves migrate at the same foot centre and all forms keep identical jump trajectories
+  ---
+  duration_ms: 4.08
+  ...
+# Subtest: eight authored bosses and generated profiles use the increased HP and can still be defeated by base-form stomps
+ok 131 - eight authored bosses and generated profiles use the increased HP and can still be defeated by base-form stomps
+  ---
+  duration_ms: 1.7495
+  ...
+# Subtest: one-minute real simulations rotate skills, respect every cooldown and signal attacks before release
+ok 132 - one-minute real simulations rotate skills, respect every cooldown and signal attacks before release
+  ---
+  duration_ms: 281.4475
+  ...
+# Subtest: the last third of HP shortens pacing while keeping telegraphs and never reduces release frequency
+ok 133 - the last third of HP shortens pacing while keeping telegraphs and never reduces release frequency
+  ---
+  duration_ms: 405.7781
+  ...
+# Subtest: all skills cooling down waits safely, chooses another ready skill, and resumes when a timer ends
+ok 134 - all skills cooling down waits safely, chooses another ready skill, and resumes when a timer ends
+  ---
+  duration_ms: 6.4342
+  ...
+# Subtest: checkpoints preserve damage and cooldowns, legacy HP migrates once and invalid cooldowns are rejected
+ok 135 - checkpoints preserve damage and cooldowns, legacy HP migrates once and invalid cooldowns are rejected
+  ---
+  duration_ms: 9.0015
+  ...
+# Subtest: new variants use valid existing animation clips and keep platform-climbing counterplay time
+ok 136 - new variants use valid existing animation clips and keep platform-climbing counterplay time
+  ---
+  duration_ms: 11.485
+  ...
+# Subtest: one run has three rebirths, repeated death callbacks consume once, and the fourth death ends the game
+ok 137 - one run has three rebirths, repeated death callbacks consume once, and the fourth death ends the game
+  ---
+  duration_ms: 0.842
+  ...
+# Subtest: all 32 stages and all three entering forms reset at the entrance with fresh actors and base form
+ok 138 - all 32 stages and all three entering forms reset at the entrance with fresh actors and base form
+  ---
+  duration_ms: 184.5539
+  ...
+# Subtest: pit and timeout deaths use the same limited rebirth rule
+ok 139 - pit and timeout deaths use the same limited rebirth rule
+  ---
+  duration_ms: 1.1412
+  ...
+# Subtest: stage transitions carry remaining rebirths, and a death resets only the current stage and its score gains
+ok 140 - stage transitions carry remaining rebirths, and a death resets only the current stage and its score gains
+  ---
+  duration_ms: 0.7386
+  ...
+# Subtest: saving or refreshing during death cannot refill lives, double-charge, or skip game over
+ok 141 - saving or refreshing during death cannot refill lives, double-charge, or skip game over
+  ---
+  duration_ms: 4.5466
+  ...
+# Subtest: legacy stage checkpoints migrate to the entrance instead of restoring a position or grown state
+ok 142 - legacy stage checkpoints migrate to the entrance instead of restoring a position or grown state
+  ---
+  duration_ms: 0.8577
+  ...
+# Subtest: run save validation rejects impossible counts and terminal states
+ok 143 - run save validation rejects impossible counts and terminal states
+  ---
+  duration_ms: 1.7106
+  ...
+# Subtest: 24 Drive originals retain exact bytes; 26 runtime tracks match checksums, sizes and expected durations
+ok 144 - 24 Drive originals retain exact bytes; 26 runtime tracks match checksums, sizes and expected durations
+  ---
+  duration_ms: 157.2487
+  ...
+# Subtest: all 32 stages select their world, activated boss, power-up override and ending correctly
+ok 145 - all 32 stages select their world, activated boss, power-up override and ending correctly
+  ---
+  duration_ms: 13.6146
+  ...
+# Subtest: audio waits for a gesture, restores the previous music position, and suspends without restarting on pause or blur
+ok 146 - audio waits for a gesture, restores the previous music position, and suspends without restarting on pause or blur
+  ---
+  duration_ms: 4.6074
+  ...
+# Subtest: boss victory and normal clear cues survive automatic stage transitions, without duplicate fanfares
+ok 147 - boss victory and normal clear cues survive automatic stage transitions, without duplicate fanfares
+  ---
+  duration_ms: 2.3243
+  ...
+# Subtest: death, rebirth, exhaustion and final victory play the matching short cue before the correct next music
+ok 148 - death, rebirth, exhaustion and final victory play the matching short cue before the correct next music
+  ---
+  duration_ms: 1.3328
+  ...
+# Subtest: late downloads cannot start the wrong world and failed or unavailable audio does not interrupt gameplay
+ok 149 - late downloads cannot start the wrong world and failed or unavailable audio does not interrupt gameplay
+  ---
+  duration_ms: 3.641
+  ...
+# Subtest: volume and mute work independently of gameplay and review mode keeps settings read-only
+ok 150 - volume and mute work independently of gameplay and review mode keeps settings read-only
+  ---
+  duration_ms: 0.3179
+  ...
+# Subtest: local server serves all audio files with the expected bytes and music MIME type
+ok 151 - local server serves all audio files with the expected bytes and music MIME type
+  ---
+  duration_ms: 137.279
+  ...
+# Subtest: all eight boss guards reject both attacks without awarding score, clearing danger or consuming cooldowns
+ok 152 - all eight boss guards reject both attacks without awarding score, clearing danger or consuming cooldowns
+  ---
+  duration_ms: 2.5902
+  ...
+# Subtest: actual fireball collision respects closed, open and newly recovering boss armor in every world
+ok 153 - actual fireball collision respects closed, open and newly recovering boss armor in every world
+  ---
+  duration_ms: 2.9677
+  ...
+# Subtest: repeated top stomps on stationary or moving shells are harmless in every form, including star protection
+ok 154 - repeated top stomps on stationary or moving shells are harmless in every form, including star protection
+  ---
+  duration_ms: 18.1156
+  ...
+# Subtest: a spike takes two exposed hits, its shell still takes fire damage, and old shell saves do not refill HP
+ok 155 - a spike takes two exposed hits, its shell still takes fire damage, and old shell saves do not refill HP
+  ---
+  duration_ms: 0.601
+  ...
+# Subtest: spike shell and wake use available clips, while blocked hits emit sparks without damage feedback
+ok 156 - spike shell and wake use available clips, while blocked hits emit sparks without damage feedback
+  ---
+  duration_ms: 2.0584
+  ...
+# Subtest: 1-4 compacts its approach while retaining populated sections and its complete arena at the far end
+ok 157 - 1-4 compacts its approach while retaining populated sections and its complete arena at the far end
+  ---
+  duration_ms: 0.6695
+  ...
+# Subtest: all standing forms traverse the full long courtyard terrain without crouching, breaking bricks or changing movement physics
+ok 158 - all standing forms traverse the full long courtyard terrain without crouching, breaking bricks or changing movement physics
+  ---
+  duration_ms: 79.9531
+  ...
+# Subtest: the old short courtyard save migrates to the new entrance without losing completed stages, run score or rebirths
+ok 159 - the old short courtyard save migrates to the new entrance without losing completed stages, run score or rebirths
+  ---
+  duration_ms: 15.2992
+  ...
+# Subtest: later stages retain their mechanics and long routes, with boss approaches shortened independently
+ok 160 - later stages retain their mechanics and long routes, with boss approaches shortened independently
+  ---
+  duration_ms: 19.9498
+  ...
+# Subtest: old campaign saves migrate all 28 layouts without changing run progression, score, form or consumed rebirths
+ok 161 - old campaign saves migrate all 28 layouts without changing run progression, score, form or consumed rebirths
+  ---
+  duration_ms: 174.4601
+  ...
+# Subtest: every later boss permits a stomp above a flush arena ledge in all forms, with a harmless smooth retreat
+ok 162 - every later boss permits a stomp above a flush arena ledge in all forms, with a harmless smooth retreat
+  ---
+  duration_ms: 4.7197
+  ...
+# Subtest: all later bosses allow an actual ground approach and jump to the far weak point in every form
+ok 163 - all later bosses allow an actual ground approach and jump to the far weak point in every form
+  ---
+  duration_ms: 57.1941
+  ...
+# Subtest: every boss skill has a concrete instruction and an existing PNG cue
+ok 164 - every boss skill has a concrete instruction and an existing PNG cue
+  ---
+  duration_ms: 1.4637
+  ...
+# Subtest: all sixteen terrain tiles are opaque and join exactly across repeats and soil-to-stone boundaries
+ok 165 - all sixteen terrain tiles are opaque and join exactly across repeats and soil-to-stone boundaries
+  ---
+  duration_ms: 54.479
+  ...
+# Subtest: every actor frame registers its visible silhouette to the foot anchor without editing PNGs
+ok 166 - every actor frame registers its visible silhouette to the foot anchor without editing PNGs
+  ---
+  duration_ms: 135.0145
+  ...
+# Subtest: winged enemies warn then actually dive to hit a standing hero in all three forms
+ok 167 - winged enemies warn then actually dive to hit a standing hero in all three forms
+  ---
+  duration_ms: 2.6888
+  ...
+# Subtest: the renderer rounds both sprite edges and places visible boots on the collision support line
+ok 168 - the renderer rounds both sprite edges and places visible boots on the collision support line
+  ---
+  duration_ms: 0.6792
+  ...
+# Subtest: a diving flyer follows a changed target continuously and returns smoothly after losing it
+ok 169 - a diving flyer follows a changed target continuously and returns smoothly after losing it
+  ---
+  duration_ms: 2.8483
+  ...
+# Subtest: water-world plants root on the pool bed with open swimming space and remain stompable in every form
+ok 170 - water-world plants root on the pool bed with open swimming space and remain stompable in every form
+  ---
+  duration_ms: 5.0919
+  ...
+# Subtest: losing wings after a dive retains the current position rather than snapping to the old flight patrol
+ok 171 - losing wings after a dive retains the current position rather than snapping to the old flight patrol
+  ---
+  duration_ms: 0.2604
+  ...
+# Subtest: pre-plant version-two water-world saves retain run state when upgrading to the planted maps
+ok 172 - pre-plant version-two water-world saves retain run state when upgrading to the planted maps
+  ---
+  duration_ms: 8.8351
+  ...
+# Subtest: rooted plants telegraph and lock a real damaging projectile, keep cooldowns, and do not attack outside water
+ok 173 - rooted plants telegraph and lock a real damaging projectile, keep cooldowns, and do not attack outside water
+  ---
+  duration_ms: 3.0967
+  ...
+# Subtest: all configured enemy collision bodies start outside solid terrain, including scaled traps and pond plants
+ok 174 - all configured enemy collision bodies start outside solid terrain, including scaled traps and pond plants
+  ---
+  duration_ms: 17.5998
+  ...
+# Subtest: repaired ground enemies can actually patrol without entering the bricks in every player form
+ok 175 - repaired ground enemies can actually patrol without entering the bricks in every player form
+  ---
+  duration_ms: 410.5594
+  ...
+# Subtest: the map-building placement repair handles each reproduced overlap and is idempotent afterwards
+ok 176 - the map-building placement repair handles each reproduced overlap and is idempotent afterwards
+  ---
+  duration_ms: 3.2374
+  ...
+# Subtest: desktop, phone portrait and ultrawide views keep equal horizontal and vertical sprite scale
+ok 177 - desktop, phone portrait and ultrawide views keep equal horizontal and vertical sprite scale
+  ---
+  duration_ms: 0.6847
+  ...
+# Subtest: viewport resize releases held input and fullscreen keeps controls inside the same host
+ok 178 - viewport resize releases held input and fullscreen keeps controls inside the same host
+  ---
+  duration_ms: 0.5577
+  ...
+# Subtest: wide renderer draws terrain beyond the old 256px edge and scenery covers the full viewport
+ok 179 - wide renderer draws terrain beyond the old 256px edge and scenery covers the full viewport
+  ---
+  duration_ms: 0.8861
+  ...
+# Subtest: touch rails resize the camera using the central canvas and respond to pointer changes
+ok 180 - touch rails resize the camera using the central canvas and respond to pointer changes
+  ---
+  duration_ms: 0.3357
+  ...
+# Subtest: all later 28 maps leave pit buffers clear of bricks, patrols, turrets and complete hazard sweeps
+ok 181 - all later 28 maps leave pit buffers clear of bricks, patrols, turrets and complete hazard sweeps
+  ---
+  duration_ms: 37.1221
+  ...
+# Subtest: reproduced low ceilings and hazard overlaps are repaired without removing objects or changing progression
+ok 182 - reproduced low ceilings and hazard overlaps are repaired without removing objects or changing progression
+  ---
+  duration_ms: 626.25
+  ...
+# Subtest: relocated patrols keep their actual scaled bodies outside pit buffers during AI movement
+ok 183 - relocated patrols keep their actual scaled bodies outside pit buffers during AI movement
+  ---
+  duration_ms: 396.102
+  ...
+# Subtest: chain audit includes the entire rotating radius rather than only the visible anchor
+ok 184 - chain audit includes the entire rotating radius rather than only the visible anchor
+  ---
+  duration_ms: 0.2241
+  ...
+# Subtest: eight worlds use independent generated material atlases, each with soil and foundation variants
+ok 185 - eight worlds use independent generated material atlases, each with soil and foundation variants
+  ---
+  duration_ms: 4.8636
+  ...
+# Subtest: all 32 world tiles are opaque and every A/B neighbor and soil-foundation combination joins exactly
+ok 186 - all 32 world tiles are opaque and every A/B neighbor and soil-foundation combination joins exactly
+  ---
+  duration_ms: 63.9023
+  ...
+# Subtest: ground materials vary by stable world coordinates, preserve bridges, and support legacy maps
+ok 187 - ground materials vary by stable world coordinates, preserve bridges, and support legacy maps
+  ---
+  duration_ms: 0.4495
+  ...
+# Subtest: every authored upgrade block across 32 stages releases the next item for the current form exactly once
+ok 188 - every authored upgrade block across 32 stages releases the next item for the current form exactly once
+  ---
+  duration_ms: 40.8782
+  ...
+# Subtest: actual upward collisions at the same position release carrot or chili for all forms and both block styles
+ok 189 - actual upward collisions at the same position release carrot or chili for all forms and both block styles
+  ---
+  duration_ms: 2.5687
+  ...
+# Subtest: upgrade collection advances one stage, caps at chili, and leaves seed and star rewards unchanged
+ok 190 - upgrade collection advances one stage, caps at chili, and leaves seed and star rewards unchanged
+  ---
+  duration_ms: 1.4017
+  ...
+# Subtest: hit-time form follows damage and rebirth, while already released items retain their kind and save correctly
+ok 191 - hit-time form follows damage and rebirth, while already released items retain their kind and save correctly
+  ---
+  duration_ms: 1.6406
+  ...
+# Subtest: one upgrade chain yields carrot, chili, three attack upgrades, then score without another item
+ok 192 - one upgrade chain yields carrot, chili, three attack upgrades, then score without another item
+  ---
+  duration_ms: 0.3631
+  ...
+# Subtest: every upgrade block gives chili below the attack cap and only score at the cap, without changing other rewards
+ok 193 - every upgrade block gives chili below the attack cap and only score at the cap, without changing other rewards
+  ---
+  duration_ms: 52.1108
+  ...
+# Subtest: actual fired projectiles snapshot their damage and size in both directions and keep the two-shot limit
+ok 194 - actual fired projectiles snapshot their damage and size in both directions and keep the two-shot limit
+  ---
+  duration_ms: 1.0515
+  ...
+# Subtest: powered shots deal their actual bonus damage to enemies while stomps stay at one and shells stay protected
+ok 195 - powered shots deal their actual bonus damage to enemies while stomps stay at one and shells stay protected
+  ---
+  duration_ms: 0.7873
+  ...
+# Subtest: all eight bosses take powered damage only in the weakness phase and clamp overkill to zero HP
+ok 196 - all eight bosses take powered damage only in the weakness phase and clamp overkill to zero HP
+  ---
+  duration_ms: 13.8243
+  ...
+# Subtest: campaign advance, save, restore and legacy migration retain valid attack upgrades, while death and damage reset them
+ok 197 - campaign advance, save, restore and legacy migration retain valid attack upgrades, while death and damage reset them
+  ---
+  duration_ms: 6.5349
+  ...
+# Subtest: three generated projectile PNGs decode with transparent margins and render using their own visual assets
+ok 198 - three generated projectile PNGs decode with transparent margins and render using their own visual assets
+  ---
+  duration_ms: 11.9095
+  ...
+# Subtest: each world opening contains exactly one additional accessible extra-life block, with no other stage copies
+ok 199 - each world opening contains exactly one additional accessible extra-life block, with no other stage copies
+  ---
+  duration_ms: 31.1974
+  ...
+# Subtest: extra lives persist across death, refresh and stage transitions without being farmed again
+ok 200 - extra lives persist across death, refresh and stage transitions without being farmed again
+  ---
+  duration_ms: 0.9796
+  ...
+# Subtest: all eight bonuses can raise reserves above three and invalid save claims cannot forge extra lives
+ok 201 - all eight bonuses can raise reserves above three and invalid save claims cannot forge extra lives
+  ---
+  duration_ms: 0.5895
+  ...
+# Subtest: all eight pre-reward stage layouts migrate old progress without refilling lives or clearing completed levels
+ok 202 - all eight pre-reward stage layouts migrate old progress without refilling lives or clearing completed levels
+  ---
+  duration_ms: 14.6663
+  ...
+# Subtest: four generated reward and projectile sprites retain real transparent PNG pixels and visible silhouettes
+ok 203 - four generated reward and projectile sprites retain real transparent PNG pixels and visible silhouettes
+  ---
+  duration_ms: 13.4506
+  ...
+# Subtest: cabbage and walnut dash exactly two tiles in the locked direction at the first exclamation
+ok 204 - cabbage and walnut dash exactly two tiles in the locked direction at the first exclamation
+  ---
+  duration_ms: 1.8632
+  ...
+# Subtest: dash still stops at walls and safe landing buffers
+ok 205 - dash still stops at walls and safe landing buffers
+  ---
+  duration_ms: 2.983
+  ...
+# Subtest: spike-shell fires exactly one aimed thorn per exclamation and respects the existing cooldown
+ok 206 - spike-shell fires exactly one aimed thorn per exclamation and respects the existing cooldown
+  ---
+  duration_ms: 2.6833
+  ...
+# Subtest: the single thorn aims at the current hero center in all directions and keeps that straight trajectory
+ok 207 - the single thorn aims at the current hero center in all directions and keeps that straight trajectory
+  ---
+  duration_ms: 1.6639
+  ...
+# Subtest: one aimed thorn really hits every hero form on either side and is stopped by an intervening wall
+ok 208 - one aimed thorn really hits every hero form on either side and is stopped by an intervening wall
+  ---
+  duration_ms: 2.3046
+  ...
+# Subtest: carnivorous trap warns, locks its firing side, and sends a real damaging pea only while exposed
+ok 209 - carnivorous trap warns, locks its firing side, and sends a real damaging pea only while exposed
+  ---
+  duration_ms: 1.1093
+  ...
+# Subtest: new attacks physically reach a stationary hero, while a dash interrupted by a new wall stays safe
+ok 210 - new attacks physically reach a stationary hero, while a dash interrupted by a new wall stays safe
+  ---
+  duration_ms: 6.1108
+  ...
+# Subtest: only an initial leftward airborne boundary contact in 1-1 opens the hidden entrance
+ok 211 - only an initial leftward airborne boundary contact in 1-1 opens the hidden entrance
+  ---
+  duration_ms: 4.8836
+  ...
+# Subtest: all selectors and their PNG badges stay on one screen at desktop, phone and portrait sizes
+ok 212 - all selectors and their PNG badges stay on one screen at desktop, phone and portrait sizes
+  ---
+  duration_ms: 0.5775
+  ...
+# Subtest: every one of the 32 selectors is reachable from the real entrance using walking and standing jumps
+ok 213 - every one of the 32 selectors is reachable from the real entrance using walking and standing jumps
+  ---
+  duration_ms: 130.6962
+  ...
+# Subtest: upper shelves support dropping through safely and the room never starts the stage timer or completes
+ok 214 - upper shelves support dropping through safely and the room never starts the stage timer or completes
+  ---
+  duration_ms: 5.3023
+  ...
+# Subtest: only four shared PNG digits appear above the world soils, without world text or full stage labels
+ok 215 - only four shared PNG digits appear above the world soils, without world text or full stage labels
+  ---
+  duration_ms: 92.4269
+  ...
+# Subtest: both side aisles let the hero walk off the upper row and land on the ground without a down-jump
+ok 216 - both side aisles let the hero walk off the upper row and land on the ground without a down-jump
+  ---
+  duration_ms: 13.1685
+  ...
+# Subtest: all 32 numbered blocks are in campaign order and can be struck by a real jump
+ok 217 - all 32 numbered blocks are in campaign order and can be struck by a real jump
+  ---
+  duration_ms: 26.4074
+  ...
+# Subtest: 22 original short WAV effects have valid PCM samples, nonzero signal, no clipped peaks and distinct stomp voices
+ok 218 - 22 original short WAV effects have valid PCM samples, nonzero signal, no clipped peaks and distinct stomp voices
+  ---
+  duration_ms: 9.1487
+  ...
+# Subtest: real gameplay emits separate jump, brick, emergence, pickup and five enemy-family stomp events
+ok 219 - real gameplay emits separate jump, brick, emergence, pickup and five enemy-family stomp events
+  ---
+  duration_ms: 0.7962
+  ...
+# Subtest: SFX waits for unlock, consumes events once, limits voices and stops on pause, blur, mute and disposal
+ok 220 - SFX waits for unlock, consumes events once, limits voices and stops on pause, blur, mute and disposal
+  ---
+  duration_ms: 4.0461
+  ...
+# Subtest: late sound loads cannot replay a paused action and missing audio does not break gameplay or retry every frame
+ok 221 - late sound loads cannot replay a paused action and missing audio does not break gameplay or retry every frame
+  ---
+  duration_ms: 1.0613
+  ...
+# Subtest: all 22 action WAVs are served over local HTTP with exact bytes and audio MIME types
+ok 222 - all 22 action WAVs are served over local HTTP with exact bytes and audio MIME types
+  ---
+  duration_ms: 24.2807
+  ...
+# Subtest: all four ground fighters really close a long gap beyond their idle patrol and contact every hero form
+ok 223 - all four ground fighters really close a long gap beyond their idle patrol and contact every hero form
+  ---
+  duration_ms: 55.7578
+  ...
+# Subtest: the actual 1-1 mushrooms and cabbage reach and injure all hero forms on both sides of their original banks
+ok 224 - the actual 1-1 mushrooms and cabbage reach and injure all hero forms on both sides of their original banks
+  ---
+  duration_ms: 24.9353
+  ...
+# Subtest: pursuers turn toward a crossing hero, resume after an obstacle clears, and keep real pit landing buffers
+ok 225 - pursuers turn toward a crossing hero, resume after an obstacle clears, and keep real pit landing buffers
+  ---
+  duration_ms: 26.7578
+  ...
+# Subtest: a stunned shell wakes at its current chased position without snapping to an old patrol
+ok 226 - a stunned shell wakes at its current chased position without snapping to an old patrol
+  ---
+  duration_ms: 7.7575
+  ...
+# Subtest: shell states always select the new unconscious sprites, including a fresh restored shell and spike landing
+ok 227 - shell states always select the new unconscious sprites, including a fresh restored shell and spike landing
+  ---
+  duration_ms: 0.7319
+  ...
+# Subtest: new stunned atlases retain every normal walking/falling pixel and contain distinct alpha animation cells
+ok 228 - new stunned atlases retain every normal walking/falling pixel and contain distinct alpha animation cells
+  ---
+  duration_ms: 23.9524
+  ...
+# Subtest: a plant acquiring the hero at the very end of exposure must fire before retracting in every form and direction
+ok 229 - a plant acquiring the hero at the very end of exposure must fire before retracting in every form and direction
+  ---
+  duration_ms: 5.1199
+  ...
+# Subtest: the plant remembers a hero seen during emergence and completes its shot, even if that hero changes side
+ok 230 - the plant remembers a hero seen during emergence and completes its shot, even if that hero changes side
+  ---
+  duration_ms: 0.4657
+  ...
+# Subtest: fish pursue through the water column and physically damage a moving target rather than swimming at an old waypoint
+ok 231 - fish pursue through the water column and physically damage a moving target rather than swimming at an old waypoint
+  ---
+  duration_ms: 3.2827
+  ...
+# Subtest: a real stomp in every hero form makes the flyer unconscious, preserves its species and starts the timer only on landing
+ok 232 - a real stomp in every hero form makes the flyer unconscious, preserves its species and starts the timer only on landing
+  ---
+  duration_ms: 1.9204
+  ...
+# Subtest: a stunned flyer cannot hurt or roll on side contact, remains stompable to zero HP, and uses flying stomp sounds
+ok 233 - a stunned flyer cannot hurt or roll on side contact, remains stompable to zero HP, and uses flying stomp sounds
+  ---
+  duration_ms: 1.0501
+  ...
+# Subtest: after nine grounded seconds the flyer wakes and resumes flight smoothly from the landing position
+ok 234 - after nine grounded seconds the flyer wakes and resumes flight smoothly from the landing position
+  ---
+  duration_ms: 2.9083
+  ...
+# Subtest: stunned flight state round-trips in real campaign checkpoints without changing the enemy species
+ok 235 - stunned flight state round-trips in real campaign checkpoints without changing the enemy species
+  ---
+  duration_ms: 1.1505
+  ...
+# Subtest: the previous eight boss approaches halve their width and keep the full arena, rewards and safe splice support
+ok 236 - the previous eight boss approaches halve their width and keep the full arena, rewards and safe splice support
+  ---
+  duration_ms: 2.2307
+  ...
+# Subtest: all eight shortened routes are physically traversable in every standing form, including pools and the splice
+ok 237 - all eight shortened routes are physically traversable in every standing form, including pools and the splice
+  ---
+  duration_ms: 321.6487
+  ...
+# Subtest: long-layout saves at the old far arena migrate safely, retaining progression and rejecting malformed layouts
+ok 238 - long-layout saves at the old far arena migrate safely, retaining progression and rejecting malformed layouts
+  ---
+  duration_ms: 82.5472
+  ...
+# Subtest: weak PNG stays centered above the actual boss head in world coordinates at every HUD scale
+ok 239 - weak PNG stays centered above the actual boss head in world coordinates at every HUD scale
+  ---
+  duration_ms: 32.5718
+  ...
+# Subtest: garden boss windups show distinct PNG skill cues and visible landing or charge-path markers
+ok 240 - garden boss windups show distinct PNG skill cues and visible landing or charge-path markers
+  ---
+  duration_ms: 2.6782
+  ...
+# Subtest: all six generated warning PNGs retain transparency and strong visible silhouettes
+ok 241 - all six generated warning PNGs retain transparency and strong visible silhouettes
+  ---
+  duration_ms: 21.0391
+  ...
+# Subtest: eight boss stages remove 60 percent on the tile grid while retaining arenas and combat parameters
+ok 242 - eight boss stages remove 60 percent on the tile grid while retaining arenas and combat parameters
+  ---
+  duration_ms: 4.9109
+  ...
+# Subtest: three forms reach each boss on the real terrain in under 12 seconds without breaking bricks
+ok 243 - three forms reach each boss on the real terrain in under 12 seconds without breaking bricks
+  ---
+  duration_ms: 518.509
+  ...
+# Subtest: saves from all eight previous boss layouts migrate without losing campaign progression
+ok 244 - saves from all eight previous boss layouts migrate without losing campaign progression
+  ---
+  duration_ms: 51.8828
+  ...
+# Subtest: all remaining trap, water, support and projectile objects draw PNGs even without animation tracks
+ok 245 - all remaining trap, water, support and projectile objects draw PNGs even without animation tracks
+  ---
+  duration_ms: 1.576
+  ...
+# Subtest: rotating PNG balls stay centered on their original damaging shapes throughout the orbit
+ok 246 - rotating PNG balls stay centered on their original damaging shapes throughout the orbit
+  ---
+  duration_ms: 12.1553
+  ...
+# Subtest: falling rock and rotating trap still inflict their original contact damage for every player form
+ok 247 - falling rock and rotating trap still inflict their original contact damage for every player form
+  ---
+  duration_ms: 1.9108
+  ...
+# Subtest: all 32 stages and every object category have safe inspectable points without a gameplay bypass
+ok 248 - all 32 stages and every object category have safe inspectable points without a gameplay bypass
+  ---
+  duration_ms: 378.7983
+  ...
+# Subtest: generated object PNGs and reused FX fallback frames have visible content and transparent alpha
+ok 249 - generated object PNGs and reused FX fallback frames have visible content and transparent alpha
+  ---
+  duration_ms: 44.8216
+  ...
+# Subtest: a single proportional background covers narrow and wide views throughout the level without repeated landmarks
+ok 250 - a single proportional background covers narrow and wide views throughout the level without repeated landmarks
+  ---
+  duration_ms: 74.4743
+  ...
+# Subtest: all eight arenas expand exactly 1.5 times, keeping approaches, actor sizes and combat stats
+ok 251 - all eight arenas expand exactly 1.5 times, keeping approaches, actor sizes and combat stats
+  ---
+  duration_ms: 2.9793
+  ...
+# Subtest: enlarged arena floors and pool shorelines remain continuous and supported to the exit
+ok 252 - enlarged arena floors and pool shorelines remain continuous and supported to the exit
+  ---
+  duration_ms: 1.8735
+  ...
+# Subtest: all player forms keep a 12x14 collision body through upgrades, crouch, damage and restore
+ok 253 - all player forms keep a 12x14 collision body through upgrades, crouch, damage and restore
+  ---
+  duration_ms: 0.993
+  ...
+# Subtest: a 16-unit-high tunnel and contact hit tests behave identically in all three forms
+ok 254 - a 16-unit-high tunnel and contact hit tests behave identically in all three forms
+  ---
+  duration_ms: 2.6798
+  ...
+# Subtest: all historic grown collision sizes normalize at the same feet on restore
+ok 255 - all historic grown collision sizes normalize at the same feet on restore
+  ---
+  duration_ms: 2.1561
+  ...
+# Subtest: pre-expansion boss saves migrate all run states without losing score, form or completed stages
+ok 256 - pre-expansion boss saves migrate all run states without losing score, form or completed stages
+  ---
+  duration_ms: 18.8629
+  ...
+# Subtest: wider-arena camera and combat barriers keep each player form visible at every screen width
+ok 257 - wider-arena camera and combat barriers keep each player form visible at every screen width
+  ---
+  duration_ms: 51.5244
+  ...
+# Subtest: garden boss far-edge weak point remains reachable with an actual running jump in each form
+ok 258 - garden boss far-edge weak point remains reachable with an actual running jump in each form
+  ---
+  duration_ms: 8.6821
+  ...
+# Subtest: first-world ledges render the generated flat wooden deck PNG at the collision top
+ok 259 - first-world ledges render the generated flat wooden deck PNG at the collision top
+  ---
+  duration_ms: 5.9778
+  ...
+# Subtest: fish pursuit has exactly 70 percent horizontal and vertical speed while winged enemies retain theirs
+ok 260 - fish pursuit has exactly 70 percent horizontal and vertical speed while winged enemies retain theirs
+  ---
+  duration_ms: 1.327
+  ...
+# Subtest: fish patrol and jelly vertical pulse traverse the same paths at 70 percent speed
+ok 261 - fish patrol and jelly vertical pulse traverse the same paths at 70 percent speed
+  ---
+  duration_ms: 2.1611
+  ...
+# Subtest: jelly horizontal approach slows to 16.8 units per second without delaying recognition of a pulse target
+ok 262 - jelly horizontal approach slows to 16.8 units per second without delaying recognition of a pulse target
+  ---
+  duration_ms: 0.8613
+  ...
+# Subtest: water leaper keeps its warning and arc size while launch speed and flight gravity give slower traversal
+ok 263 - water leaper keeps its warning and arc size while launch speed and flight gravity give slower traversal
+  ---
+  duration_ms: 1.6824
+  ...
+# Subtest: water boss leap uses a slower continuous path, retaining projectile speed and completing into a weak window
+ok 264 - water boss leap uses a slower continuous path, retaining projectile speed and completing into a weak window
+  ---
+  duration_ms: 0.5246
+  ...
+# Subtest: two generated flyer atlases retain every old flight pixel and add twelve distinct transparent stun frames each
+ok 265 - two generated flyer atlases retain every old flight pixel and add twelve distinct transparent stun frames each
+  ---
+  duration_ms: 96.0097
+  ...
+# Subtest: both species select their own fall, grounded stun and wake clips and never a shell clip
+ok 266 - both species select their own fall, grounded stun and wake clips and never a shell clip
+  ---
+  duration_ms: 3.1951
+  ...
+# Subtest: fallback rendering draws the matching flyer PNG instead of cabbage shell even without an animation player
+ok 267 - fallback rendering draws the matching flyer PNG instead of cabbage shell even without an animation player
+  ---
+  duration_ms: 1.031
+  ...
+# Subtest: defeated flying units fall visually to the real platform, show their own unconscious pose, then disappear
+ok 268 - defeated flying units fall visually to the real platform, show their own unconscious pose, then disappear
+  ---
+  duration_ms: 7.7982
+  ...
+# Subtest: 1-3 adds three optional brick branches with high enemies, rewards and two safely buffered pits
+ok 269 - 1-3 adds three optional brick branches with high enemies, rewards and two safely buffered pits
+  ---
+  duration_ms: 1.1595
+  ...
+# Subtest: all three forms climb every upper route with real inputs and intact bricks, then safely rejoin the ground
+ok 270 - all three forms climb every upper route with real inputs and intact bricks, then safely rejoin the ground
+  ---
+  duration_ms: 61.8112
+  ...
+# Subtest: the short-jump ground route and the fully collapsed layout remain traversable without upgrades in all forms
+ok 271 - the short-jump ground route and the fully collapsed layout remain traversable without upgrades in all forms
+  ---
+  duration_ms: 65.3444
+  ...
+# Subtest: high-route enemies patrol and pursue on brick floors, never start embedded, and fall when their route breaks
+ok 272 - high-route enemies patrol and pursue on brick floors, never start embedded, and fall when their route breaks
+  ---
+  duration_ms: 56.7234
+  ...
+# Subtest: the previous 1-3 layout migrates campaign run states while keeping progress, score and rebirths
+ok 273 - the previous 1-3 layout migrates campaign run states while keeping progress, score and rebirths
+  ---
+  duration_ms: 5.0397
+  ...
+# Subtest: each of seven bosses actually selects its theme attack during autonomous normal and rage rotations
+ok 274 - each of seven bosses actually selects its theme attack during autonomous normal and rage rotations
+  ---
+  duration_ms: 506.5914
+  ...
+# Subtest: theme attack always completes and gives every form a reachable, damageable weak phase
+ok 275 - theme attack always completes and gives every form a reachable, damageable weak phase
+  ---
+  duration_ms: 31.7566
+  ...
+# Subtest: theme warnings never damage early and active areas have finite life, with no full-arena wall
+ok 276 - theme warnings never damage early and active areas have finite life, with no full-arena wall
+  ---
+  duration_ms: 1.1384
+  ...
+# Subtest: returning lance, bouncing pod, coordinated twins and splitting core are distinct moving hazards
+ok 277 - returning lance, bouncing pod, coordinated twins and splitting core are distinct moving hazards
+  ---
+  duration_ms: 1.0496
+  ...
+# Subtest: boss shots survive one-way platforms and lotus body never sinks into dry arena floor
+ok 278 - boss shots survive one-way platforms and lotus body never sinks into dry arena floor
+  ---
+  duration_ms: 8.3193
+  ...
+# Subtest: all seven generated effect sheets and warning icons decode with alpha and stage documentation
+ok 279 - all seven generated effect sheets and warning icons decode with alpha and stage documentation
+  ---
+  duration_ms: 58.9803
+  ...
+# Subtest: returning lance turns at arena edges, and offscreen theme projectiles retain PNG warnings in narrow views
+ok 280 - returning lance turns at arena edges, and offscreen theme projectiles retain PNG warnings in narrow views
+  ---
+  duration_ms: 1.8486
+  ...
+# Subtest: all 21 later ordinary stages add optional upper branches without replacing ground, water or authored mechanisms
+ok 281 - all 21 later ordinary stages add optional upper branches without replacing ground, water or authored mechanisms
+  ---
+  duration_ms: 36.8505
+  ...
+# Subtest: all three forms physically climb all 56 branches without breaking bricks and rejoin the unchanged ground route
+ok 282 - all three forms physically climb all 56 branches without breaking bricks and rejoin the unchanged ground route
+  ---
+  duration_ms: 2136.0702
+  ...
+# Subtest: ground routes remain physically traversable in every form with upper branches intact or destroyed
+ok 283 - ground routes remain physically traversable in every form with upper branches intact or destroyed
+  ---
+  duration_ms: 14473.8797
+  ...
+# Subtest: all new high enemies use real ledge patrols or ranged attacks and fall when their breakable floors collapse
+ok 284 - all new high enemies use real ledge patrols or ranged attacks and fall when their breakable floors collapse
+  ---
+  duration_ms: 1554.1215
+  ...
+# Subtest: previous ordinary-stage saves migrate to layered maps while preserving score, consumed rebirths and completed stages
+ok 285 - previous ordinary-stage saves migrate to layered maps while preserving score, consumed rebirths and completed stages
+  ---
+  duration_ms: 175.4482
+  ...
+# Subtest: upper-route jumps stay below the HUD with vertical camera follow while ground, boss and warp views stay fixed
+ok 286 - upper-route jumps stay below the HUD with vertical camera follow while ground, boss and warp views stay fixed
+  ---
+  duration_ms: 88.5254
+  ...
+# Subtest: all ten jumping-fish pools have solid soil shores at the water surface on both sides
+ok 287 - all ten jumping-fish pools have solid soil shores at the water surface on both sides
+  ---
+  duration_ms: 0.9656
+  ...
+# Subtest: all three forms can swim and jump out of each raised shore in both directions
+ok 288 - all three forms can swim and jump out of each raised shore in both directions
+  ---
+  duration_ms: 65.5283
+  ...
+# Subtest: saved runs from before the shore update migrate to a safe current entrance
+ok 289 - saved runs from before the shore update migrate to a safe current entrance
+  ---
+  duration_ms: 8.5776
+  ...
+# Subtest: ten-tile flight limit counts leftward, diagonal, vertical and returning movement
+ok 290 - ten-tile flight limit counts leftward, diagonal, vertical and returning movement
+  ---
+  duration_ms: 0.2993
+  ...
+# Subtest: delayed enemy throws wait, expire at range and cannot hit a hero beyond ten tiles
+ok 291 - delayed enemy throws wait, expire at range and cannot hit a hero beyond ten tiles
+  ---
+  duration_ms: 0.5134
+  ...
+1..291
+# tests 291
+# suites 0
+# pass 291
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 31551.4935

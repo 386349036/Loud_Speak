@@ -1,0 +1,37 @@
+[
+  {
+    "level": "2-4",
+    "hud": "2-4 · 基础芽豆 · 剩余重生 3次 · 分数 0 · 839秒 · 已完成 4/32",
+    "state": "x=868.2 foot=208.0 vx=0.0 vy=0.0 charge=0% ground playing t=1.42 | boss x=1085.2 hp=7/7 attack/rock-roll 0.12"
+  },
+  {
+    "level": "3-4",
+    "hud": "3-4 · 基础芽豆 · 剩余重生 3次 · 分数 0 · 839秒 · 已完成 4/32",
+    "state": "x=868.2 foot=208.0 vx=0.0 vy=0.0 charge=0% ground playing t=1.38 | boss x=1100.5 hp=8/8 attack/seed-dash 0.08"
+  },
+  {
+    "level": "4-4",
+    "hud": "4-4 · 基础芽豆 · 剩余重生 3次 · 分数 0 · 839秒 · 已完成 4/32",
+    "state": "x=866.1 foot=208.0 vx=0.0 vy=0.0 charge=0% ground playing t=1.39 | boss x=913.2 hp=8/8 attack/fan-leap 0.09"
+  },
+  {
+    "level": "5-4",
+    "hud": "5-4 · 基础芽豆 · 剩余重生 3次 · 分数 0 · 839秒 · 已完成 4/32",
+    "state": "x=868.2 foot=208.0 vx=0.0 vy=0.0 charge=0% ground playing t=1.42 | boss x=1085.2 hp=9/9 attack/rock-roll 0.12"
+  },
+  {
+    "level": "6-4",
+    "hud": "6-4 · 基础芽豆 · 剩余重生 3次 · 分数 0 · 839秒 · 已完成 4/32",
+    "state": "x=866.1 foot=208.0 vx=0.0 vy=0.0 charge=0% ground playing t=1.37 | boss x=1100.5 hp=10/10 attack/crossfire 0.07"
+  },
+  {
+    "level": "7-4",
+    "hud": "7-4 · 基础芽豆 · 剩余重生 3次 · 分数 0 · 839秒 · 已完成 4/32",
+    "state": "x=866.1 foot=208.0 vx=0.0 vy=0.0 charge=0% ground playing t=1.42 | boss x=1100.5 hp=10/10 attack/left-sweep 0.12"
+  },
+  {
+    "level": "8-4",
+    "hud": "8-4 · 基础芽豆 · 剩余重生 3次 · 分数 0 · 839秒 · 已完成 4/32",
+    "state": "x=866.1 foot=208.0 vx=0.0 vy=0.0 charge=0% ground playing t=1.41 | boss x=1100.5 hp=12/12 attack/volley 0.11"
+  }
+]
