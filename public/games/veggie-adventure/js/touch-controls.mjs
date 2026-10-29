@@ -1,5 +1,12 @@
 export function stickDirection(dx,dy,radius){const length=Math.hypot(dx,dy),ratio=length>radius?radius/length:1,x=dx*ratio,y=dy*ratio;return {x,y,left:x< -radius*.24,right:x>radius*.24,down:y>radius*.42};}
 export function bindTouchControls(stick,buttons,{enabled,jump}){
+ // Safari can still interpret rapid taps on positioned controls as smart zoom.
+ // Input uses pointer events; cancel only the controls' native touch-end action.
+ const preventControlZoom=e=>{if(e.cancelable)e.preventDefault();};
+ for(const control of [stick,...buttons]){
+  control.addEventListener('touchend',preventControlZoom,{passive:false});
+  control.addEventListener('dblclick',preventControlZoom);
+ }
  let pointer=null,direction={},actions=new Map();const knob=stick.querySelector('.stick-knob');
  const active=key=>!!direction[key]||[...actions.values()].includes(key);
  const paint=()=>{for(const b of buttons)b.classList.toggle('active',[...actions.values()].includes(b.dataset.key));};
