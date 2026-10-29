@@ -10,6 +10,10 @@ The downloaded upstream archive contains no explicit LICENSE file. Upstream game
 
 Local changes:
 
+- 2026-10-27: Replace legacy 3200x2400 illustrative maps with live scene landmark positions, real trail/cabin geometry, camera-heading player arrows, follow/overview, drag/pan, zoom and optional paused inspection. Opening the map keeps movement active; Escape closes it without also toggling pause. The active upstream 3D engine only builds the Kudawa world; map goals absent from that scene are explicitly identified instead of invented.
+
+- 2026-10-27: Make all five chapter cards immediately selectable for both new players and existing saves. Completion history, evidence and achievements remain independent of access.
+
 - Build a production bundle with pinned React 19.2.3, React DOM 19.2.3, Three.js 0.186.1 and esbuild 0.25.12, retaining editable source and lockfile here.
 - Serve the game at `/games/sinharaja/` from Loud's existing static service. The homepage entry opens a new tab; no separate Python service or extra exposed port is required.
 - Default UI language is Simplified Chinese, with a persistent Chinese/English/Sinhala cycle. The local React text adapter translates shared HUD keys, chapter cards/objectives, pause/controls, backpacks, evidence, achievements, field guides, photos, dialogue and transcripts present in the active source. The text audit checks Sinhala literals and template fragments while allowing explicit language names. Technical abbreviations and scientific names may remain. Static text coverage does not establish full-chapter playthrough acceptance. Language selection never changes game IDs or saved progress.

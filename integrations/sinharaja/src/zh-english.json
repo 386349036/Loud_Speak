@@ -1,4 +1,6 @@
 {
+  "Live scene map":"当前场景实时地图","Follow player":"跟随玩家","Overview":"场景总览","Zoom in":"放大地图","Zoom out":"缩小地图","Pause to inspect":"暂停查看","Resume live map":"恢复实时","Map paused":"地图已暂停","Live tracking":"实时跟随","Drag to pan · scroll to zoom · WASD to move":"拖动平移 · 滚轮缩放 · WASD 移动","Mission object not present in this scene":"当前场景尚未提供此任务物体","Field Journal":"野外日记","Brass Key":"黄铜钥匙","Research Sample":"研究样本","Cave Gate":"洞窟入口","Helipad":"直升机坪","Ranger":"护林员","Radio":"无线电","Audio Reel":"录音带","Balm":"药膏","UV Lens":"紫外镜片","Ginger Tea":"姜茶","Salt":"盐",
+  "Heading:":"朝向：","Direction to objective":"目标方向",
   "[MAP]":"地图","[BAG]":"背包","[SALT]":"撒盐","[HEAL]":"治疗","[BALM]":"药膏","[CRANK]":"充电","[TEA]":"药茶","[CAM]":"拍照","[2.5D]":"视角","[TORCH]":"手电","[UV]":"紫外","D-PAD":"方向键","JOYSTICK":"摇杆","Show or hide interface":"显示 / 隐藏界面",
   "Jump / remove attached leeches":"跳跃 / 去除附着水蛭","Crouch / stand":"蹲伏 / 起身","Cycle flashlight intensity":"切换手电亮度","Cycle camera view":"切换视角","METERS":"米","ELEV:":"海拔：","TMP":"体温","SAN":"精神","STA":"体力",
   "Cableway Mechanic":"缆车技师","Frost Ward":"抵御严寒","Leech Ward":"水蛭防护","Wildlife Photographer":"野生动物摄影师","UV Investigator":"紫外侦探","Rescue Beacon":"救援信号","Lucky Magpie Charm":"蓝鹊护符","Crystal Spring":"清凉山泉","Golden Wildlife Master":"野生动物专家",

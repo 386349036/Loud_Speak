@@ -3,6 +3,8 @@ import React, { useState, useEffect, useRef, useCallback, useContext } from "rea
 import { localizedElement, LanguageContext, readLanguage } from './zh';
 import { Sinharaja3DEngine } from "./Sinharaja3DEngine";
 import { I18N } from "./i18n";
+import { getNavigation, getCompassTicks } from './navigation';
+import SceneMap from './SceneMap';
 import "./App.css";
 
 // ── Sharp Monochrome Vector SVG Icons for Tactical HUD ────────────────────────
@@ -577,7 +579,7 @@ function GameApp() {
   const canvasRef = useRef(null);
   const engineRef = useRef(null);
 
-  // Persistence State - Strict Sequential Progression (1 -> 2 -> 3 -> 4 -> 5)
+  // Keep completion history separate from chapter access.
   const [completedChapters, setCompletedChapters] = useState(() => {
     try {
       const saved = localStorage.getItem(SAVE_KEY);
@@ -591,23 +593,8 @@ function GameApp() {
     return [];
   });
 
-  const [unlockedChapters, setUnlockedChapters] = useState(() => {
-    try {
-      const saved = localStorage.getItem(SAVE_KEY);
-      if (saved) {
-        const parsed = JSON.parse(saved);
-        const unlocked = new Set([1]);
-        if (parsed.completedChapters && Array.isArray(parsed.completedChapters)) {
-          parsed.completedChapters.forEach((c) => {
-            unlocked.add(c);
-            if (c + 1 <= 5) unlocked.add(c + 1);
-          });
-        }
-        return Array.from(unlocked).sort((a, b) => a - b);
-      }
-    } catch (e) {}
-    return [1]; // Only Chapter 1 unlocked initially
-  });
+  // Every chapter is selectable, including for existing saves with locked chapters.
+  const [unlockedChapters, setUnlockedChapters] = useState(() => CHAPTERS.map(chapter => chapter.id));
 
   const [unlockedAchievements, setUnlockedAchievements] = useState(() => {
     try {
@@ -695,6 +682,7 @@ function GameApp() {
   const [showJournal, setShowJournal] = useState(false);
   const [journalTab, setJournalTab] = useState("guide"); // 'guide' | 'photos'
   const [showTacticalMap, setShowTacticalMap] = useState(false);
+  const [mapPaused,setMapPaused] = useState(false);
   const [showInventory, setShowInventory] = useState(false);
   const [inspectDiaryOpen, setInspectDiaryOpen] = useState(false);
   const [inspectTapeOpen, setInspectTapeOpen] = useState(false);
@@ -798,6 +786,7 @@ function GameApp() {
     zoom: 1.0,
     playerX: 520,
     playerY: 720,
+    playerAngle: Math.PI,
     attachedLeeches: 0,
     venomToxicity: 0,
     noiseLevel: 14,
@@ -1111,13 +1100,19 @@ function GameApp() {
   useEffect(() => {
     const engine = engineRef.current;
     if (!engine) return;
-    engine.paused = Boolean(isPaused || dialogue || showEvidenceBoard || showJournal || showTacticalMap || showInventory || showControlsGuide || showTrophies || runePuzzleOpen || inspectDiaryOpen || inspectTapeOpen || inspectDouglasTapeOpen || photoModal || showDebriefing);
+    engine.paused = Boolean(isPaused || dialogue || showEvidenceBoard || showJournal || (showTacticalMap && mapPaused) || showInventory || showControlsGuide || showTrophies || runePuzzleOpen || inspectDiaryOpen || inspectTapeOpen || inspectDouglasTapeOpen || photoModal || showDebriefing);
     if (engine.paused) {
       engine.keys = {};
       engine.setAnalogMove(0, 0, false);
       if (document.pointerLockElement) document.exitPointerLock();
     }
-  }, [isPaused, dialogue, showEvidenceBoard, showJournal, showTacticalMap, showInventory, showControlsGuide, showTrophies, runePuzzleOpen, inspectDiaryOpen, inspectTapeOpen, inspectDouglasTapeOpen, photoModal, showDebriefing, missionRun, currentView]);
+  }, [isPaused, dialogue, showEvidenceBoard, showJournal, showTacticalMap, mapPaused, showInventory, showControlsGuide, showTrophies, runePuzzleOpen, inspectDiaryOpen, inspectTapeOpen, inspectDouglasTapeOpen, photoModal, showDebriefing, missionRun, currentView]);
+
+  useEffect(()=>{
+    const engine=engineRef.current;if(!engine)return;
+    engine.mapOpen=showTacticalMap;
+    if(showTacticalMap){setMapPaused(false);engine.keys={};engine.setAnalogMove(0,0,false);if(document.pointerLockElement)document.exitPointerLock();}
+  },[showTacticalMap,missionRun]);
 
   useEffect(() => {
     const pauseInBackground = () => {
@@ -1575,9 +1570,9 @@ function GameApp() {
   };
 
   const activeObj = getActiveObjectiveInfo();
-  const distToActiveObj = activeChapter === 1
-    ? Math.round(Math.hypot(activeObj.x - stats.playerX, activeObj.y - stats.playerY))
-    : Math.round(Math.hypot(activeObj.x - stats.playerX, activeObj.y - stats.playerY) / 10);
+  const navigation = getNavigation(stats.playerAngle,stats.playerX,stats.playerY,activeObj.x,activeObj.y);
+  const compassTicks = getCompassTicks(navigation.heading);
+  const distToActiveObj = Math.round(navigation.distance);
 
   // Heart Rate BPM (Simulated based on health/danger)
   const heartBpm = stats.bleeding || stats.health < 40 ? 138 : stats.health < 75 ? 96 : 72;
@@ -2439,16 +2434,14 @@ function GameApp() {
 
           {/* Center: Tactical Expedition Compass Bar */}
           <div className="tactical-compass-pod">
-            <div className="compass-tape">
-              <span className="compass-mark">NW</span>
-              <span className="compass-mark dot">·</span>
-              <span className="compass-mark primary-mark">N</span>
-              <span className="compass-mark dot">·</span>
-              <span className="compass-mark">NE</span>
-              <span className="compass-mark dot">·</span>
-              <span className="compass-mark primary-mark">E</span>
+            <div className="compass-tape" role="img" aria-label={`Heading: ${navigation.direction} ${Math.round(navigation.heading)%360}°`}>
+              {compassTicks.map(tick=><span key={tick.degrees} className={`compass-mark ${tick.primary?'primary-mark':''}`} style={{left:`calc(50% + ${tick.offset}px)`}}>{tick.label}</span>)}
             </div>
-            <div className="compass-nav-pointer">▲</div>
+            <div className="compass-heading">
+              <span className="compass-center-line" aria-hidden="true">│</span>
+              <span>{navigation.direction} {Math.round(navigation.heading)%360}°</span>
+              <span className="compass-nav-pointer" style={{transform:`rotate(${navigation.relativeBearing}deg)`}} title="Direction to objective" aria-label="Direction to objective">{navigation.arrived?'●':'▲'}</span>
+            </div>
             <div className="compass-objective-chip">
               <span className="chip-icon"><Icons.Target className="tactical-svg-icon" /></span>
               <span className="chip-text">{activeObj.title}: <strong>{distToActiveObj}m</strong></span>
@@ -2470,24 +2463,7 @@ function GameApp() {
                 setShowTacticalMap(true);
               }}
             >
-              <div className="radar-sweep-beam" />
-              <div
-                className="player-radar-dot"
-                style={{
-                  left: `${(stats.playerX / 3200) * 100}%`,
-                  top: `${(stats.playerY / 2400) * 100}%`,
-                  transform: `translate(-50%, -50%) rotate(${stats.playerAngle || 0}rad)`,
-                }}
-              >
-                <div className="radar-player-arrow" />
-              </div>
-              <div
-                className="obj-radar-dot"
-                style={{
-                  left: `${(activeObj.x / 3200) * 100}%`,
-                  top: `${(activeObj.y / 2400) * 100}%`,
-                }}
-              />
+              <SceneMap stats={stats} objective={activeObj} mini />
               <span className="radar-click-hint">MAP [M]</span>
             </div>
 
@@ -3553,12 +3529,11 @@ function GameApp() {
             <div className="pda-frame-header">
               <div className="pda-branding">
                 <span className="pda-mil-badge">MIL-SPEC PDA // MK-IV</span>
-                <h3><Icons.Satellite className="tactical-svg-icon" /> {activeChapter === 2 ? "THE SILENT CASCADES SATELLITE MAP" : "KUDAWA SATELLITE MAP"}</h3>
+                <h3><Icons.Satellite className="tactical-svg-icon" /> {CHAPTERS.find(chapter=>chapter.id===activeChapter)?.title} · Live scene map</h3>
               </div>
               <div className="pda-live-telemetry">
-                <span>LAT: 6.405° N</span>
-                <span>LON: 80.453° E</span>
-                <span>ELEV: {activeChapter === 2 ? "620m" : "418m"}</span>
+                <span>X: {stats.playerX.toFixed(1)}</span>
+                <span>Z: {stats.playerY.toFixed(1)}</span>
                 <button
                   className="pda-close-btn"
                   onClick={() => {
@@ -3573,99 +3548,7 @@ function GameApp() {
 
             <div className="pda-screen-content">
               <div className="pda-map-viewport">
-                <div className="satellite-topo-grid" />
-
-                {activeChapter === 2 ? (
-                  <>
-                    {/* Chapter 2 River & Cascades */}
-                    <div className="topo-river-band cascade-band" />
-                    <div className="topo-zone-tag zone-kudawa" style={{ left: "10%", top: "20%" }}>
-                      <span>[ENTRY] CASCADES ENTRY (පිවිසුම)</span>
-                    </div>
-                    <div className="topo-zone-tag zone-outpost" style={{ left: "28%", top: "26%" }}>
-                      <span>[BASE] GEOLOGIST BASE (භූවිද්‍යා කඳවුර)</span>
-                    </div>
-                    <div className="topo-zone-tag zone-river" style={{ left: "24%", top: "42%" }}>
-                      <span>[RAFT] BAMBOO RAFT (උණ බම්බු පහුර)</span>
-                    </div>
-                    <div className="topo-zone-tag zone-swamp hazard" style={{ left: "48%", top: "72%" }}>
-                      <span>[HAZARD] WATERFALL SPRAY (දියඇලි අගාධය)</span>
-                    </div>
-                    <div className="topo-zone-tag zone-cave" style={{ left: "70%", top: "62%" }}>
-                      <span>[MINE] OLD GEM MINE (පැරණි පතල)</span>
-                    </div>
-                    <div className="topo-zone-tag zone-helipad extract" style={{ left: "86%", top: "78%" }}>
-                      <span>[TOWER] SIGNAL TOWER (සංඥා කුලුන)</span>
-                    </div>
-
-                    {/* Safe Campfire Pins */}
-                    <div className="map-pin campfire-pin" style={{ left: "17%", top: "27%" }} title="දියඇලි කඳවුරේ ගිනිමැලය">
-                      <Icons.Flame className="tactical-svg-icon map-fire-svg" />
-                    </div>
-                    <div className="map-pin campfire-pin" style={{ left: "61%", top: "65%" }} title="පතල් පිවිසුමේ ගිනිමැලය">
-                      <Icons.Flame className="tactical-svg-icon map-fire-svg" />
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    {/* Chapter 1 Zones */}
-                    <div className="topo-river-band" />
-                    <div className="topo-zone-tag zone-kudawa" style={{ left: "10%", top: "16%" }}>
-                      <span>[ENTRY] KUDAWA ENTRY (කඳවුර)</span>
-                    </div>
-                    <div className="topo-zone-tag zone-outpost" style={{ left: "18%", top: "34%" }}>
-                      <span>[OUTPOST] RANGER OUTPOST (මුරපොළ)</span>
-                    </div>
-                    <div className="topo-zone-tag zone-river" style={{ left: "36%", top: "38%" }}>
-                      <span>[CROSSING] RIVER CROSSING (ඔරු තොට)</span>
-                    </div>
-                    <div className="topo-zone-tag zone-swamp hazard" style={{ left: "44%", top: "60%" }}>
-                      <span>[HAZARD] LEECH SWAMP (කූඩැලි වගුර)</span>
-                    </div>
-                    <div className="topo-zone-tag zone-cave" style={{ left: "55%", top: "48%" }}>
-                      <span>[CAVE] RUNIC CAVE (පුරාණ ලෙන)</span>
-                    </div>
-                    <div className="topo-zone-tag zone-helipad extract" style={{ left: "82%", top: "75%" }}>
-                      <span>[EXTRACT] EXTRACTION HELIPAD (හෙලිපෑඩ්)</span>
-                    </div>
-
-                    {/* Safe Campfire Pins */}
-                    <div className="map-pin campfire-pin" style={{ left: "15%", top: "37%" }} title="මුරපොළේ ගිනිමැලය">
-                      <Icons.Flame className="tactical-svg-icon map-fire-svg" />
-                    </div>
-                    <div className="map-pin campfire-pin" style={{ left: "51%", top: "58%" }} title="ලෙන් දොරටුවේ ගිනිමැලය">
-                      <Icons.Flame className="tactical-svg-icon map-fire-svg" />
-                    </div>
-                  </>
-                )}
-
-                {/* Player Real-Time Marker with Beacon Rings */}
-                <div
-                  className="pda-player-beacon"
-                  style={{
-                    left: `${(stats.playerX / 3200) * 100}%`,
-                    top: `${(stats.playerY / 2400) * 100}%`,
-                  }}
-                >
-                  <div className="beacon-ping" />
-                  <div className="beacon-core" />
-                  <span className="beacon-label">YOU (EXPLORER)</span>
-                </div>
-
-                {/* Active Objective Pin */}
-                <div
-                  className="pda-objective-pin"
-                  style={{
-                    left: `${(activeObj.x / 3200) * 100}%`,
-                    top: `${(activeObj.y / 2400) * 100}%`,
-                  }}
-                >
-                  <span className="obj-pin-icon">
-                    {Icons[activeObj.icon] ? React.createElement(Icons[activeObj.icon], { className: "tactical-svg-icon" }) : <Icons.Target className="tactical-svg-icon" />}
-                  </span>
-                  <div className="obj-pin-sonar" />
-                  <span className="obj-pin-text">{activeObj.title} [{distToActiveObj}m]</span>
-                </div>
+                <SceneMap stats={stats} objective={activeObj} paused={mapPaused||isPaused} onTogglePause={()=>{if(mapPaused||isPaused){setMapPaused(false);setIsPaused(false);}else setMapPaused(true);}} />
               </div>
 
               {/* Tactical Map Side Dossier */}

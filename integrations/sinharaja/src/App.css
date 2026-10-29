@@ -620,13 +620,18 @@ body {
 }
 
 .compass-tape {
-  display: flex;
-  gap: 16px;
+  position: relative;
+  width: 220px;
+  height: 22px;
+  overflow: hidden;
   font-family: var(--font-hud);
   font-size: 0.82rem;
   letter-spacing: 0.12em;
   color: #64748b;
 }
+.compass-tape .compass-mark { position:absolute; top:0; width:32px; margin-left:-16px; text-align:center; }
+.compass-heading { position:relative; display:flex; justify-content:center; align-items:center; gap:9px; color:#cbd5e1; font-size:0.72rem; font-family:var(--font-hud); }
+.compass-center-line { position:absolute; left:50%; top:-13px; transform:translateX(-50%); color:#fbbf24; font-size:11px; }
 
 .compass-mark.primary-mark {
   color: #38bdf8;
@@ -639,11 +644,12 @@ body {
 }
 
 .compass-nav-pointer {
+  display: inline-block;
   font-size: 0.68rem;
   color: #fbbf24;
   margin-top: -2px;
   text-shadow: 0 0 8px #fbbf24;
-  animation: pointerPulse 1s infinite alternate;
+  transform-origin: center;
 }
 
 @keyframes pointerPulse {
@@ -4841,6 +4847,26 @@ body {
   background: rgba(14, 165, 233, 0.2) !important;
   color: #38bdf8 !important;
   border-color: #0ea5e9 !important;
+}
+
+.scene-map { position:absolute; inset:0; min-width:0; overflow:hidden; color:#d6e6d8; }
+.scene-map-svg { display:block; width:100%; height:100%; touch-action:none; cursor:grab; }
+.scene-map-svg:active { cursor:grabbing; }
+.scene-map-mini { pointer-events:none; }
+.scene-map-mini-north { position:absolute; top:3px; left:4px; color:#b5dbbd; font:9px var(--font-hud); }
+.scene-map-toolbar { position:absolute; top:8px; left:8px; right:8px; display:flex; flex-wrap:wrap; gap:5px; }
+.scene-map-toolbar button { background:#10251ee8; border:1px solid #53855c; border-radius:5px; padding:6px 9px; color:#d8f7dc; font-family:var(--font-hud); font-size:12px; cursor:pointer; }
+.scene-map-toolbar button:hover { background:#245236; }
+.scene-map-status { position:absolute; bottom:8px; left:8px; right:8px; display:flex; gap:10px; justify-content:space-between; flex-wrap:wrap; font:11px var(--font-hud); pointer-events:none; background:#06100be0; padding:5px 7px; }
+.scene-map-help { position:absolute; left:8px; bottom:43px; max-width:calc(100% - 16px); background:#06100bd9; padding:4px 7px; color:#c6d9ca; font:11px var(--font-hud); pointer-events:none; }
+.pda-map-viewport { min-width:0; min-height:220px; }
+@media(max-width:680px) {
+  .tactical-pda-device { height:94dvh; width:calc(100vw - 16px); }
+  .pda-frame-header { padding:8px; flex-wrap:wrap; gap:8px; }
+  .pda-live-telemetry { gap:8px; flex-wrap:wrap; }
+  .pda-screen-content { flex-direction:column; min-height:0; }
+  .pda-side-dossier { width:100%; max-height:150px; overflow-y:auto; }
+  .scene-map-toolbar button { padding:5px 7px; font-size:11px; }
 }
 
 /* Keep localized labels reachable without horizontal clipping on phones. */

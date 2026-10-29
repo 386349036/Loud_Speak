@@ -196,8 +196,9 @@ export class Sinharaja3DEngine {
         teaBuffTimer: Math.round(this.teaBuffTimer),
         chapter: this.chapter,
         zoom: this.zoom,
-        playerX: Math.round(this.player.x),
-        playerY: Math.round(this.player.z),
+        playerX: this.player.x,
+        playerY: this.player.z,
+        sceneMap: this.getSceneMap(),
         playerAngle: this.player.yaw,
         elapsedTime: 0,
         inShelter: !!this.player.inShelter,
@@ -1049,6 +1050,7 @@ export class Sinharaja3DEngine {
     const cabinW = 18;
     const cabinD = 14;
     const cabinH = 4.2;
+    this.sceneMapGeometry={buildings:[{x:cabinOriginX,z:cabinOriginZ,width:cabinW,depth:cabinD}],paths:[trailCurve.points.map(p=>({x:p.x,z:p.z}))]};
 
     // 1. Polished Timber Floorboards inside cabin
     const floorGeo = new THREE.PlaneGeometry(cabinW, cabinD);
@@ -2299,7 +2301,7 @@ export class Sinharaja3DEngine {
       this.cycleQuality();
     }
     // Escape -> Pause
-    if (e.key === "Escape" && this.cb.onTogglePause) {
+    if (e.key === "Escape" && !this.mapOpen && this.cb.onTogglePause) {
       this.cb.onTogglePause();
     }
   }
@@ -3068,8 +3070,9 @@ export class Sinharaja3DEngine {
         teaBuffTimer: Math.round(this.teaBuffTimer),
         chapter: this.chapter,
         zoom: this.zoom,
-        playerX: Math.round(this.player.x),
-        playerY: Math.round(this.player.z),
+        playerX: this.player.x,
+        playerY: this.player.z,
+        sceneMap: this.getSceneMap(),
         playerAngle: this.player.yaw,
         elapsedTime: Math.floor(this.elapsedTime),
         inShelter: !!this.player.inShelter,
@@ -3081,6 +3084,17 @@ export class Sinharaja3DEngine {
         quality: this.quality,
       });
     }
+  }
+
+  getSceneMap() {
+    const position=new THREE.Vector3();
+    const landmarks=this.interactableMeshes.filter(mesh=>{
+      let node=mesh;while(node&&node!==this.scene){if(!node.visible)return false;node=node.parent;}return node===this.scene;
+    }).map(mesh=>{
+      mesh.getWorldPosition(position);
+      return {id:mesh.userData.id||String(mesh.id),x:position.x,z:position.z,title:mesh.userData.titleEn||mesh.userData.title||''};
+    });
+    return {landmarks,...this.sceneMapGeometry};
   }
 
   render() {
