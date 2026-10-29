@@ -1,0 +1,7 @@
+.chat-card{position:relative}
+.image-drop-hint{display:none;position:absolute;inset:10px;z-index:12;align-items:center;justify-content:center;flex-direction:column;gap:8px;border:2px dashed #6d8c57;border-radius:18px;background:#f0f3e7f2;color:#315d46;pointer-events:none;text-align:center;padding:20px;font-size:16px;font-weight:600}
+.image-drop-hint small{font-size:12px;font-weight:400;color:#738564}
+.image-drag-over .image-drop-hint{display:flex}
+.message>a.image-download{display:inline-flex;align-items:center;gap:5px;margin-top:7px;padding:3px 9px;border:1px solid #cbd4bc;border-radius:7px;background:#e7ecdc;color:#426441;font-size:11px;text-decoration:none;line-height:1.6}
+.message>a.image-download:hover{background:#dae4cd;border-color:#9bad87}
+.message>a.image-download:focus-visible{outline:2px solid #a28045;outline-offset:2px}

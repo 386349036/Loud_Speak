@@ -1,0 +1,19 @@
+/* Keep arcade entries reachable when a desktop window or phone is small. */
+body.chat-page{overflow-x:hidden;overflow-y:auto}
+.chat-page>.app-grid{min-height:360px;flex-shrink:0}
+.chat-page .garden-sidebar{min-height:0;min-width:0;overflow-x:hidden;overflow-y:auto;scrollbar-width:auto;scrollbar-color:#91a17d #ececdf;scrollbar-gutter:stable;padding-right:10px;overscroll-behavior-y:contain}
+.garden-sidebar>*{flex-shrink:0}
+.garden-sidebar .garden-art{flex:1 0 100px}
+.garden-sidebar:focus-visible{outline:2px solid #91a17d;outline-offset:2px;border-radius:8px}
+.garden-sidebar::-webkit-scrollbar{width:10px}
+.garden-sidebar::-webkit-scrollbar-track{background:#ececdf;border-radius:8px}
+.garden-sidebar::-webkit-scrollbar-thumb{background:#91a17d;border:2px solid #ececdf;border-radius:8px}
+.garden-sidebar::-webkit-scrollbar-thumb:hover{background:#617c51}
+@media(min-width:681px) and (max-width:1100px){
+ .garden-sidebar .arcade-entries{gap:8px}
+ .garden-sidebar .tank-icon-only{width:60px;height:60px;min-height:60px}
+}
+@media(max-width:680px){
+ .chat-page>.app-grid{min-height:480px}
+ .chat-page .garden-sidebar{max-height:clamp(96px,25dvh,180px);flex:0 0 auto;padding-right:6px}
+}

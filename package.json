@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node server.cjs",
     "deploy:two-games": "npm run build --prefix integrations/dungeon-crawler-now && node integrations/deploy-two-games.cjs",
-    "test": "node test.cjs",
+    "test": "node test-chat-images.cjs && node test.cjs",
     "test:breakout": "node --test test-breakout.cjs test-breakout-ui.cjs",
     "build:sinharaja": "npm run build --prefix integrations/sinharaja",
     "test:sinharaja": "node integrations/sinharaja/test-zh.cjs && node integrations/sinharaja/test.cjs",
