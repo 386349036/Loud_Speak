@@ -5,3 +5,6 @@
 .message>a.image-download{display:inline-flex;align-items:center;gap:5px;margin-top:7px;padding:3px 9px;border:1px solid #cbd4bc;border-radius:7px;background:#e7ecdc;color:#426441;font-size:11px;text-decoration:none;line-height:1.6}
 .message>a.image-download:hover{background:#dae4cd;border-color:#9bad87}
 .message>a.image-download:focus-visible{outline:2px solid #a28045;outline-offset:2px}
+.attachment-preview{flex-wrap:wrap}
+.attachment-preview>span{flex:1}
+.attachment-preview button+button{margin-left:0}

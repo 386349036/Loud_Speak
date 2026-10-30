@@ -15,5 +15,15 @@ class Node{constructor(tag){this.tag=tag;this.children=[];this.attributes={};}ap
 async function main(){const source=fs.readFileSync('public/chat.js','utf8'),start=source.indexOf('async function attachment('),end=source.indexOf('\nfunction render()',start);assert(start>=0&&end>start);
  const body=new Node('body'),requests=[],blobs=[],original=new Blob(['unmodified-original-image'],{type:'image/png'});const context={chatEnabled:true,token:'test-token',urls:new Map(),document:{body,createElement:tag=>new Node(tag)},URL:{createObjectURL:b=>{blobs.push(b);return 'blob:original';}},fetch:async(url,options)=>{requests.push({url,options});return {ok:true,blob:async()=>original};},$:()=>({textContent:''})};vm.createContext(context);vm.runInContext(source.slice(start,end),context);
  const el=new Node('article'),m={id:'test-image',attachment:{url:'/api/files/test-image',name:png.name,mime:'image/png',size:original.size}};await context.attachment(m,el);assert.equal(el.children[0].tag,'img');assert.equal(el.children[1].textContent,'↓ 下载原图');assert.equal(blobs[0],original);await el.children[1].onclick({preventDefault(){}});assert.equal(body.children[0].download,png.name);assert.equal(body.children[0].href,'blob:original');assert(body.children[0].clicked&&body.children[0].removed);assert.equal(requests.length,1);assert.equal(requests[0].options.headers.Authorization,'Bearer test-token');
- console.log('PASS: image drag validation, nested enter/leave, blocked/closed uploads, navigation prevention, original blob downloads and filename preservation.');}
+ const saveSource=source.slice(source.indexOf('async function saveAttachmentSticker('),source.indexOf("\n$('file').addEventListener"));
+ const status={textContent:''},calls=[];let fail=false,refreshes=0;
+ const saveContext={chatEnabled:true,FormData,$:()=>status,api:async(url,options)=>{calls.push({url,options});if(fail)throw Error('上传失败');},refreshStickers:async()=>refreshes++};
+ vm.createContext(saveContext);vm.runInContext(saveSource,saveContext);
+ const button={disabled:false},file=new File(['original'],'sticker.png',{type:'image/png'});
+ const first=saveContext.saveAttachmentSticker(file,button);await saveContext.saveAttachmentSticker(file,button);await first;
+ assert.equal(calls.length,1);assert.equal(calls[0].url,'/api/stickers');assert.equal(calls[0].options.body.get('file').name,file.name);assert.equal(refreshes,1);assert.equal(button.disabled,true);assert.match(button.textContent,/已添加/);
+ const retry={disabled:false};fail=true;await saveContext.saveAttachmentSticker(file,retry);assert.equal(retry.disabled,false);assert.match(status.textContent,/上传失败/);fail=false;await saveContext.saveAttachmentSticker(file,retry);assert.equal(retry.disabled,true);
+ const before=calls.length;await saveContext.saveAttachmentSticker({size:5*1024*1024+1},{disabled:false});assert.equal(calls.length,before);assert.match(status.textContent,/5 MB/);
+ saveContext.chatEnabled=false;await saveContext.saveAttachmentSticker(file,{disabled:false});assert.equal(calls.length,before);assert.match(status.textContent,/不可用/);
+ console.log('PASS: image drag, original downloads, one-click sticker save, duplicate clicks, retry, size and closed-chat guards.');}
 main().catch(e=>{console.error(e);process.exitCode=1;});

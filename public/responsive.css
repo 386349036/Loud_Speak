@@ -1,4 +1,31 @@
 /* Keep arcade entries reachable when a desktop window or phone is small. */
+.community-games{border-top:1px solid var(--line);padding-top:16px;margin-top:4px}
+.community-games-heading{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:4px 12px;margin-bottom:14px}
+.community-games-heading h3{margin:0;font-size:19px;letter-spacing:2px;color:var(--ink)}
+.community-games-heading>span{font-size:10px;color:var(--muted)}
+.community-authors{margin-top:18px;padding:12px;border:1px dashed #b8c5ac;border-radius:12px;background:#e8eddf55}
+.community-authors-label{font-size:11px;font-weight:600;color:var(--green)}
+.author-slots{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px}
+.author-slot{display:flex;align-items:center;gap:6px;font-size:10px;color:var(--muted)}
+.author-avatar{display:grid;place-items:center;width:26px;height:26px;border:1px dashed #a6b498;border-radius:50%;color:#7d9272;font-size:16px}
+.chat-card .room-header{gap:18px}
+.room-title-group{display:flex;align-items:center;gap:12px}
+.room-title-group h2{white-space:nowrap;margin:0}
+.room-title-group .online-pill{font-size:10px;padding:4px 9px;min-height:0;background:#f7f8ef88;border:1px solid #cbd5bd;color:#647955}
+.chat-card .chat-welcome-note{flex:0 1 auto;min-width:0;max-width:520px;margin:0 0 0 auto;padding:0;border:0;gap:8px;line-height:1.65;text-align:right;align-items:center}
+.chat-welcome-note>div{min-width:0}
+.room-header>div:first-child,.room-header .online-pill{flex-shrink:0}
+.chat-welcome-note .note-icon{font-size:21px;opacity:.8}
+.chat-welcome-note p{display:inline;margin:0 8px 0 0;font-size:10px;color:#818a79}
+.chat-welcome-note strong{display:block;font-size:12px;letter-spacing:.4px}
+@media(max-width:680px){
+ .community-games{padding-top:8px}
+ .community-games-heading{margin-bottom:10px}
+ .community-authors{margin-top:12px;padding:8px}
+ .chat-card .room-header{flex-wrap:wrap;gap:8px}
+ .chat-card .chat-welcome-note{flex:1 0 100%;max-width:none;margin:0;padding:0;line-height:1.5;text-align:left}
+ .chat-welcome-note .note-icon{display:none}
+}
 body.chat-page{overflow-x:hidden;overflow-y:auto}
 .chat-page>.app-grid{min-height:360px;flex-shrink:0}
 .chat-page .garden-sidebar{min-height:0;min-width:0;overflow-x:hidden;overflow-y:auto;scrollbar-width:auto;scrollbar-color:#91a17d #ececdf;scrollbar-gutter:stable;padding-right:10px;overscroll-behavior-y:contain}
