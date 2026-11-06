@@ -2,14 +2,15 @@
   const ids = ['tank', 'runner', 'airwar', 'sky', 'veggie-adventure', 'breakout'];
   for (const id of ids) {
     const entry = document.getElementById(`open-${id}`);
-    if (!entry || entry.querySelector('.game-original-badge')) continue;
-    entry.classList.add('original-game');
-    const badge = document.createElement('span');
-    badge.className = 'game-original-badge';
-    badge.textContent = '原创';
-    badge.setAttribute('aria-hidden', 'true');
+    if (!entry || entry.querySelector('.game-author-badge')) continue;
+    entry.dataset.author = 'dongshoudaren';
+    const badge = document.createElement('img');
+    badge.className = 'game-author-badge';
+    badge.src = '/assets/authors/dongshoudaren.png';
+    badge.alt = '作者：冻手打人';
+    badge.width = badge.height = 22;
     entry.append(badge);
-    entry.title += ' · 原创游戏';
-    entry.setAttribute('aria-label', `${entry.getAttribute('aria-label') || entry.title}（原创游戏）`);
+    entry.title += ' · 作者：冻手打人';
+    entry.setAttribute('aria-label', `${entry.getAttribute('aria-label') || entry.title}（作者：冻手打人）`);
   }
 })();
