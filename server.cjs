@@ -51,6 +51,18 @@ app.post('/api/admin/chat-state',admin,(req,res)=>{
 io.use((socket,next)=>{const u=db.prepare('SELECT * FROM sessions WHERE token=?').get(socket.handshake.auth.token||'');if(!u)return next(new Error('unauthorized'));if(socket.handshake.headers.origin&&socket.handshake.headers.origin!==`http://${socket.handshake.headers.host}`)return next(new Error('origin'));socket.data.user=u;next()});
 const count=()=>io.emit('online',new Set([...io.sockets.sockets.values()].map(s=>s.data.user.token)).size);io.on('connection',s=>{count();s.on('disconnect',count)});
 const smallScopeRelay=require('./smallscope-relay.cjs')(server);
+require('./pixel-battle-relay.cjs')(server);
+require('./transformers-bubble-server.cjs')(server);
+app.get('/api/pixel-battle/share',(req,res)=>{
+  let host=req.get('host');
+  if(/^(localhost|127\.0\.0\.1)(:|$)/.test(host)){
+    const addresses=Object.values(require('os').networkInterfaces()).flat().filter(n=>n&&n.family==='IPv4'&&!n.internal);
+    const lan=addresses.find(n=>/^(192\.168\.|10\.|172\.(1[6-9]|2\d|3[01])\.)/.test(n.address));
+    if(lan)host=lan.address+(host.includes(':')?':'+host.split(':').pop():'');
+  }
+  const room=String(req.query.room||'GAME').slice(0,32);
+  res.json({url:`${req.protocol}://${host}/games/pixel-battle/?room=${encodeURIComponent(room)}`,lan:host.split(':')[0]});
+});
 app.get('/api/smallscope/network',(req,res)=>res.json(smallScopeRelay.networkInfo(req)));
 app.use(express.static(path.join(__dirname,'public')));app.get('/admin',(req,res)=>res.sendFile(path.join(__dirname,'public','admin.html')));
 app.use((err,req,res,next)=>res.status(err.code==='LIMIT_FILE_SIZE'?413:500).json({error:err.code==='LIMIT_FILE_SIZE'?'文件不能超过 20 MB':'请求失败，请稍后重试'}));

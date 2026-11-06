@@ -1,0 +1,76 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>地图预览 · 变形金刚泡泡大作战</title>
+<style>
+  body{margin:0;background:radial-gradient(circle at 50% 0%,#2c2150,#110a26 75%);color:#f3ecff;
+    font-family:"Microsoft YaHei","PingFang SC","Segoe UI",sans-serif;padding:28px;}
+  h1{text-align:center;font-size:24px;margin:6px 0 4px;}
+  h2{font-size:17px;color:#ffb27a;margin:30px 4px 0;border-left:4px solid #ff7a45;padding-left:10px;}
+  .sub{text-align:center;opacity:.72;margin-bottom:12px;font-size:13px;}
+  .grid{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;}
+  .card{background:rgba(24,16,46,.72);border:1px solid rgba(255,255,255,.14);border-radius:16px;
+    padding:14px;width:420px;box-shadow:0 16px 50px rgba(0,0,0,.5);}
+  .card.dm{width:300px;border-color:rgba(255,122,69,.45);box-shadow:0 16px 50px rgba(255,90,40,.18);}
+  .cap{font-weight:700;font-size:17px;color:#39d5ff;margin-bottom:10px;}
+  .card.dm .cap{color:#ffb27a;}
+  .tag{font-size:11px;font-weight:600;margin-left:8px;padding:1px 7px;border-radius:8px;
+    background:rgba(255,255,255,.12);color:#d9cff5;}
+  .card img{width:100%;border-radius:10px;display:block;border:1px solid rgba(255,255,255,.08);
+    image-rendering:pixelated;background:#160f29;}
+  .desc{margin-top:10px;opacity:.84;font-size:13px;line-height:1.5;}
+  .meta{opacity:.72;font-size:12px;}
+  .note{text-align:center;opacity:.6;font-size:12px;margin-top:26px;}
+</style></head><body>
+  <h1>变形金刚泡泡大作战 · 地图预览</h1>
+  <div class="sub">青色=不可破坏钢墙　橙色小块=可炸木箱　深色棋盘=地板　🔵=出发口　🔴=BOSS 位置（橙框=BOSS 巢穴）</div>
+  <h2>⚔️ 对抗地图（19×19 · PVP / 打电脑，一屏看完）</h2>
+  <div class="grid">
+  <div class="card dm">
+    <div class="cap">竞技一 · 决斗台<span class="tag">19×19</span></div>
+    <img src="map_duel.png" alt="竞技一 · 决斗台">
+    <div class="desc">中央石台 + 四角掩体，四角出生，绕柱走位<br><span class="meta">可炸木箱 48 格 · 野怪 4 只</span></div>
+  </div>
+  <div class="card dm">
+    <div class="cap">竞技二 · 石柱阵<span class="tag">19×19</span></div>
+    <img src="map_pillars.png" alt="竞技二 · 石柱阵">
+    <div class="desc">等距方尖柱点阵，四条直通长枪线<br><span class="meta">可炸木箱 50 格 · 野怪 4 只</span></div>
+  </div>
+  <div class="card dm">
+    <div class="cap">竞技三 · 四门桥<span class="tag">19×19</span></div>
+    <img src="map_bridge.png" alt="竞技三 · 四门桥">
+    <div class="desc">十字墙把场地切四块，四门争夺<br><span class="meta">可炸木箱 52 格 · 野怪 4 只</span></div>
+  </div>
+  <div class="card dm">
+    <div class="cap">竞技四 · 铁笼阵<span class="tag">19×19</span></div>
+    <img src="map_cage.png" alt="竞技四 · 铁笼阵">
+    <div class="desc">中央空心铁笼四面开门，外围掩体<br><span class="meta">可炸木箱 49 格 · 野怪 4 只</span></div>
+  </div>
+  <div class="card dm">
+    <div class="cap">竞技五 · 交叉火力<span class="tag">19×19</span></div>
+    <img src="map_crossfire.png" alt="竞技五 · 交叉火力">
+    <div class="desc">X 形斜墙，对角线射击与上下掩体<br><span class="meta">可炸木箱 50 格 · 野怪 4 只</span></div>
+  </div>
+  <div class="card dm">
+    <div class="cap">竞技六 · 四合院<span class="tag">19×19</span></div>
+    <img src="map_wells.png" alt="竞技六 · 四合院">
+    <div class="desc">四角小室各开两门，中央十字柱<br><span class="meta">可炸木箱 54 格 · 野怪 4 只</span></div>
+  </div></div>
+  <h2>🗺️ 冒险迷宫（50×50 · PVE，走到另一端打 BOSS）</h2>
+  <div class="grid">
+  <div class="card">
+    <div class="cap">迷宫一 · 回廊<span class="tag">50×50</span></div>
+    <img src="map_maze1.png" alt="迷宫一 · 回廊">
+    <div class="desc">标准迷宫，岔路多；走到另一端 BOSS 巢穴<br><span class="meta">可炸木箱 400 格 · 野怪 23 只</span></div>
+  </div>
+  <div class="card">
+    <div class="cap">迷宫二 · 巢穴<span class="tag">50×50</span></div>
+    <img src="map_maze2.png" alt="迷宫二 · 巢穴">
+    <div class="desc">环路迷宫（死路打通），跑图更顺畅<br><span class="meta">可炸木箱 400 格 · 野怪 23 只</span></div>
+  </div>
+  <div class="card">
+    <div class="cap">迷宫三 · 深渊<span class="tag">50×50</span></div>
+    <img src="map_maze3.png" alt="迷宫三 · 深渊">
+    <div class="desc">大厅 + 长廊，空间开阔，BOSS 巢穴更大<br><span class="meta">可炸木箱 400 格 · 野怪 23 只</span></div>
+  </div></div>
+  <div class="note">提示：对抗图开局即交火；冒险迷宫从左上出发口走到右下 BOSS 巢穴，BOSS 平时休眠，踏进领地才苏醒</div>
+</body></html>

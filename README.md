@@ -1,5 +1,13 @@
 # 大声说话 · Loud Speak
 
+## 变形金刚泡泡大作战
+
+首页游戏区的机器人图标打开 `/games/transformers-bubble/`，作者为爱吃炸鸡腿，右上角显示作者头像。保留原作的本机玩法、联机房间及电脑补位，联机逻辑复用本站端口。发布文件位于 `public/games/transformers-bubble/`，服务端为 `transformers-bubble-server.cjs`，协议检查运行 `node test-transformers-bubble.cjs`。原始文件保留在 `game/变形金刚泡泡大作战/`。
+
+## 像素大战
+
+首页众创游戏区的像素坦克图标打开 `/games/pixel-battle/`，作者为钓鱼丢了杆，入口右上角显示作者头像。支持本机对战和最多四人的联机房间；点击“创建联机房间”后分享链接。联机服务复用本站端口，无需另外启动原版 3000 端口服务。接入文件位于 `public/games/pixel-battle/`，中继服务为 `pixel-battle-relay.cjs`，协议验证运行 `node test-pixel-battle.cjs`。用户提供的原文件保留在 `game/pixel-battle/pixel-battle/`。
+
 ## 双端同步发布
 
 本地内网及 Google Cloud 实例按同一 Git 提交发布；代码和静态资源同步，各端聊天数据独立保存。发布、版本核验及管理隧道说明见 [双端发布约定](docs/operations/DEPLOYMENT.md)。

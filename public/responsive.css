@@ -47,6 +47,8 @@ body.chat-page{overflow-x:hidden;overflow-y:auto}
 
 .community-authors .author-avatar{display:block;width:32px;height:32px;object-fit:cover;flex-shrink:0;border:1px solid #a6b498;background:#fff}
 .community-authors .author-slot{font-size:11px;color:var(--green)}
+.author-avatar-preview{position:fixed;z-index:10000;width:100px;height:100px;object-fit:cover;border:2px solid #a6b498;border-radius:50%;background:#fff;box-shadow:0 4px 18px #163b3950;pointer-events:none}
+.author-avatar-preview[hidden]{display:none}
 .garden-sidebar .tank-icon-only[data-author]{position:relative;overflow:visible}
 .garden-sidebar .tank-icon-only[data-author]>img:first-child{border-radius:inherit}
 .garden-sidebar .tank-icon-only>img.game-author-badge{position:absolute;top:-4px;right:-4px;width:22px;height:22px;object-fit:cover;border:2px solid #f4f5ec;border-radius:50%;background:#fff;box-shadow:0 1px 4px #163b3940;pointer-events:none}

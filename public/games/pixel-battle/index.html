@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>像素大战 · 钓鱼丢了杆</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    background:#1a1a2e; color:#eee;
+    font-family:"Courier New", monospace;
+    display:flex; flex-direction:column; align-items:center;
+    min-height:100vh; padding:12px;
+    image-rendering:pixelated;
+  }
+  h1 { font-size:22px; letter-spacing:4px; margin:6px 0; color:#ffd700; text-shadow:2px 2px 0 #000; }
+  #scorebar { display:flex; gap:24px; font-size:17px; margin-bottom:6px; }
+  canvas {
+    background:#111;
+    border:4px solid #444;
+    box-shadow:0 0 20px rgba(0,0,0,.8);
+    image-rendering:pixelated;
+    max-width:96vw;
+  }
+  #msg { margin-top:8px; font-size:14px; line-height:1.7; text-align:center; color:#bbb; }
+  #msg b { color:#fff; }
+  kbd { background:#333; border:1px solid #666; border-radius:3px; padding:1px 6px; font-family:inherit; }
+  #shareBox button { font-family:inherit; }
+</style>
+</head>
+<body>
+<h1>像素大战</h1><nav style="margin:6px 0 12px;font-size:14px"><a href="/games/pixel-battle/" style="color:#8ab4ff">本机对战</a> · <a id="createOnlineRoom" style="color:#8ab4ff">创建联机房间</a></nav>
+<div id="scorebar"></div>
+<canvas id="game" width="960" height="640"></canvas>
+<div id="msg"></div>
+<script>
+const cv = document.getElementById('game');
+const ctx = cv.getContext('2d');
+const T = 32;
+const COLS = 30, ROWS = 20;   // 960 x 640 大地图
+
+const PLAYER_DEFS = [
+  {name:'P1', cname:'红', color:'#ff5555', dark:'#aa2222', label:'W A S D 移动 · F 开火'},
+  {name:'P2', cname:'蓝', color:'#5599ff', dark:'#2255aa', label:'方向键移动 · P 开火'},
+  {name:'P3', cname:'绿', color:'#66dd66', dark:'#2f8f2f', label:'I J K L 移动 · O 开火'},
+  {name:'P4', cname:'黄', color:'#ffdd44', dark:'#aa9922', label:'8 4 5 6 移动 · 0 开火'}
+];
+const CONTROLS = [
+  {up:'w',down:'s',left:'a',right:'d',fire:'f'},
+  {up:'arrowup',down:'arrowdown',left:'arrowleft',right:'arrowright',fire:'p'},
+  {up:'i',down:'k',left:'j',right:'l',fire:'o'},
+  {up:'8',down:'5',left:'4',right:'6',fire:'0'}
+];
+// 联机模式：所有人统一 WASD 移动 + K 开火
+const ONLINE_CTRL = {up:'w',down:'s',left:'a',right:'d',fire:'k'};
+
+const POWERUPS = {
+  speed:  {char:'加', color:'#00e676', dark:'#0a5c34'},
+  power:  {char:'火', color:'#ff9100', dark:'#8a4a00'},
+  shield: {char:'盾', color:'#40c4ff', dark:'#155a80'},
+  ammo:   {char:'弹', color:'#ffd740', dark:'#8a7500'},
+  special:{char:'特', color:'#ff5252', dark:'#8a1a1a'}
+};
+
+// 地图字符: B边界(不可摧毁) #钢墙(可碎无掉落) x砖墙(可碎35%掉落)
+//           ~河道(坦克不可过,子弹可过) *草丛(坦克隐身,子弹可穿过且不可破坏) .空地
+let MAP = [];
+function makePlayer(idx, x, y, dir){
+  const d = PLAYER_DEFS[idx];
+  return {idx, x, y, dir, color:d.color, dark:d.dark, cd:0, fireCd:30,
+    speed:2, bulletSize:8, bulletSpeed:6, shield:0, speedTimer:0, powerTimer:0, specialTimer:0, hp:2, maxHp:2,
+    ammo:15, alive:false, active:false};
+}
+
+// ===== 状态 =====
+let keys = {};
+let bullets = [];
+let items = [];
+let crates = [];          // 道具箱（宝箱）{c,r}：需用弹药打破，打破后掉落道具
+let booms = [];
+let fires = [];   // 特殊弹爆炸后留下的火焰坑 {c,r,life,hit[]}
+let state = "lobby";      // lobby | countdown | play | roundover | gameover
+let countdown = 0;
+let msgTimer = 0;
+let round = 1;
+let wins = [0,0,0,0];
+let brickTimer = 300;
+let grassTimer = 240;
+let itemTimer = 480;      // 弹药道具随机掉落计时（8秒首刷）
+let crateTimer = 600;     // 道具箱随机掉落计时（10秒首刷）
+
+const CORNERS = [[1,1,'R'],[COLS-2,1,'L'],[COLS-2,ROWS-2,'L'],[1,ROWS-2,'R']];
+const players = [];
+for(let i=0;i<4;i++){
+  players.push(makePlayer(i, CORNERS[i][0]*T+4, CORNERS[i][1]*T+4, CORNERS[i][2]));
+}
+let names = ['玩家1','玩家2','玩家3','玩家4'];
+
+// ===== 昵称输入 =====
+const nameRow = document.createElement('div');
+nameRow.style.cssText = 'display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;justify-content:center;';
+document.body.appendChild(nameRow);
+function buildNameInputs(){
+  nameRow.innerHTML = '';
+  const count = NET_MODE === 'local' ? 4 : 1;
+  const slots = NET_MODE === 'local' ? [0,1,2,3] : [NET_MODE==='host' ? 0 : mySlot];
+  slots.forEach(i=>{
+    const wrap = document.createElement('span');
+    wrap.style.color = PLAYER_DEFS[i].color;
+    wrap.textContent = PLAYER_DEFS[i].name + ' ';
+    const inp = document.createElement('input');
+    inp.maxLength = 8;
+    inp.value = names[i];
+    inp.style.cssText = `background:#15152a;border:2px solid ${PLAYER_DEFS[i].color};border-radius:4px;padding:5px 8px;color:#eee;font-family:inherit;font-size:14px;width:110px;`;
+    inp.oninput = ()=>{
+      names[i] = inp.value.trim() || PLAYER_DEFS[i].name + PLAYER_DEFS[i].cname;
+      if(NET_MODE === 'guest' && ws && ws.readyState===1) ws.send(JSON.stringify({t:'name', v:names[i]}));
+    };
+    wrap.appendChild(inp);
+    nameRow.appendChild(wrap);
+  });
+}
+
+// ===== 随机地图生成 =====
+function inSpawnZone(c, r){
+  return (c<5&&r<5) || (c>COLS-6&&r<5) || (c<5&&r>ROWS-6) || (c>COLS-6&&r>ROWS-6);
+}
+// 从左上出生点能走到的空地格数：用于判断「永久障碍」（河道/不可破坏墙）有没有把某块区域封死
+function reachOpenCount(){
+  const seen = new Set(['1,1']), q = [[1,1]];
+  let n = 0;
+  while(q.length){
+    const [c,r] = q.pop(); n++;
+    for(const [dc,dr] of [[1,0],[-1,0],[0,1],[0,-1]]){
+      const nc = c+dc, nr = r+dr;
+      if(nc<1 || nc>COLS-2 || nr<1 || nr>ROWS-2) continue;
+      const k = nc+','+nr;
+      const t = MAP[nr] ? MAP[nr][nc] : 'B';
+      if(seen.has(k) || t==='B' || t==='#' || t==='x' || t==='~') continue;
+      seen.add(k); q.push([nc,nr]);
+    }
+  }
+  return n;
+}
+function genMap(){
+  MAP = Array.from({length:ROWS}, ()=>Array(COLS).fill('.'));
+  for(let c=0;c<COLS;c++){ MAP[0][c]='B'; MAP[ROWS-1][c]='B'; }
+  for(let r=0;r<ROWS;r++){ MAP[r][0]='B'; MAP[r][COLS-1]='B'; }
+  // 各类地形独立配额：片数 × 每片格数（越大场上越多）
+  // 想整体加/减量，优先调 patches；想改块头大小调 minLen/maxLen
+  const TERRAIN_PLAN = [
+    {type:'*', patches:9,  minLen:5, maxLen:9 },  // 草丛：隐身区，控制在少量成片（约 50 格）
+    {type:'x', patches:13, minLen:4, maxLen:9 },  // 砖墙：可打碎掉道具（约 55 格）
+    {type:'~', patches:7,  minLen:4, maxLen:8 },  // 河道：挡坦克不挡子弹（约 27 格）
+    {type:'#', patches:6,  minLen:2, maxLen:4 },  // 钢墙：可碎无掉落（约 14 格）
+    {type:'B', patches:12, minLen:2, maxLen:4 }   // 不可破坏砖墙：打不掉的硬掩体（约 30 格）
+  ];
+  for(const plan of TERRAIN_PLAN){
+    for(let i=0;i<plan.patches;i++){
+      // 每片随机游走长出来；若这次撞到已有地形导致太短，就换个起点重试
+      for(let tries=0; tries<40; tries++){
+        let c = 2+Math.floor(Math.random()*(COLS-4));
+        let r = 2+Math.floor(Math.random()*(ROWS-4));
+        const n = plan.minLen + Math.floor(Math.random()*(plan.maxLen-plan.minLen+1));
+        const cells = [], used = new Set();
+        for(let j=0;j<n;j++){
+          // 随机游走可能踩回刚走过的格子，用 used 去重，保证 cells.length 等于真实占格数
+          const key = c+','+r;
+          if(!inSpawnZone(c,r) && MAP[r][c]==='.' && !used.has(key)){ used.add(key); cells.push([c,r]); }
+          const dir = Math.floor(Math.random()*4);
+          c += [1,-1,0,0][dir]; r += [0,0,1,-1][dir];
+          if(c<2||c>COLS-3||r<2||r>ROWS-3) break;
+        }
+        if(cells.length >= plan.minLen){
+          // 河道与不可破坏砖墙拆不掉：落地前先验证没把某片空地围死，围死就撤销重来
+          const permanent = plan.type==='B' || plan.type==='~';
+          const before = permanent ? reachOpenCount() : 0;
+          for(const [cc,rr] of cells) MAP[rr][cc] = plan.type;
+          if(permanent && before - reachOpenCount() > cells.length){
+            for(const [cc,rr] of cells) MAP[rr][cc] = '.';
+            continue;
+          }
+          break;
+        }
+      }
+    }
+  }
+}
+
+// ===== 输入 =====
+document.addEventListener('keydown', e=>{
+  const k = e.key.toLowerCase();
+  keys[k] = true;
+  if(['arrowup','arrowdown','arrowleft','arrowright'].includes(k)) e.preventDefault();
+  if(k==='r'){ if(NET_MODE==='guest'){ ws&&ws.readyState===1&&ws.send(JSON.stringify({t:'reset'})); } else resetAll(); }
+  if(k==='enter' && NET_MODE!=='guest' && state==='lobby') tryStartGame();
+  // 本地模式：大厅内按各自的开火键准备/取消准备
+  if(NET_MODE==='local' && state==='lobby'){
+    const idx = CONTROLS.findIndex(c=>c.fire===k);
+    if(idx >= 0) readyLocal[idx] = !readyLocal[idx];
+  }
+});
+document.addEventListener('keyup', e=>{ keys[e.key.toLowerCase()] = false; });
+
+// ===== 碰撞 =====
+function tileAt(px, py){
+  const c = Math.floor(px/T), r = Math.floor(py/T);
+  if(c<0||c>=COLS||r<0||r>=ROWS) return 'B';
+  return MAP[r][c];
+}
+function tankBlocked(c, r){
+  const t = MAP[r] ? MAP[r][c] : 'B';
+  return t==='B' || t==='#' || t==='x' || t==='~';
+}
+function hitWall(x, y, size){
+  return tankBlocked(Math.floor((x+2)/T), Math.floor((y+2)/T)) ||
+         tankBlocked(Math.floor((x+size-2)/T), Math.floor((y+2)/T)) ||
+         tankBlocked(Math.floor((x+2)/T), Math.floor((y+size-2)/T)) ||
+         tankBlocked(Math.floor((x+size-2)/T), Math.floor((y+size-2)/T));
+}
+function hitCrate(x, y, size){
+  return crates.some(cr=>{
+    const cx = cr.c*T, cy = cr.r*T;
+    return x < cx+T-4 && x+size > cx+4 && y < cy+T-4 && y+size > cy+4;
+  });
+}
+function tryMove(p, dx, dy){
+  const s = 24, nx = p.x+dx, ny = p.y+dy;
+  if(!hitWall(nx, ny, s) && !hitCrate(nx, ny, s) && !overlapOther(nx, ny, s, p)){ p.x = nx; p.y = ny; }
+}
+function overlapOther(nx, ny, s, self){
+  for(const o of players){
+    if(o === self || !o.alive) continue;
+    if(nx < o.x+24 && nx+s > o.x && ny < o.y+24 && ny+s > o.y) return true;
+  }
+  return false;
+}
+function onGrass(p){
+  return tileAt(p.x+12, p.y+12) === '*';
+}
+
+function fire(p){
+  if(p.cd > 0) return;
+  // 火力道具期间无限弹药；否则消耗1发，没弹药打不了
+  if(p.powerTimer <= 0){
+    if(p.ammo <= 0) return;
+    p.ammo--;
+  }
+  p.cd = p.fireCd;
+  const cx = p.x+12, cy = p.y+12;
+  const v = {R:[p.bulletSpeed,0], L:[-p.bulletSpeed,0], U:[0,-p.bulletSpeed], D:[0,p.bulletSpeed]}[p.dir];
+  // 在草丛中开火：子弹可穿透草丛；特殊弹期间打出的子弹均为特殊弹
+  bullets.push({x:cx-p.bulletSize/2, y:cy-p.bulletSize/2, vx:v[0], vy:v[1], owner:p, s:p.bulletSize,
+    dist:0, special:p.specialTimer > 0, grassPass:onGrass(p)});
+}
+
+function dropItem(col, row, force){
+  if(force || Math.random() < 0.35){
+    // 弹药是补给命脉，权重更高
+    const pool = ['ammo','ammo','ammo','speed','power','shield','special'];
+    const type = pool[Math.floor(Math.random()*pool.length)];
+    items.push({x:col*T+6, y:row*T+6, type, blink:0});
+  }
+}
+
+// 每 5 秒随机生成砖墙：4~7 格，其中 30% 为不可破坏墙
+function spawnBricks(){
+  const n = 4 + Math.floor(Math.random()*4);
+  let spawned = 0, attempts = 0;
+  while(spawned < n && attempts++ < 300){
+    const c = 1 + Math.floor(Math.random()*(COLS-2));
+    const r = 1 + Math.floor(Math.random()*(ROWS-2));
+    if(MAP[r][c] !== '.') continue;
+    let near = false;
+    for(const p of players){
+      if(p.alive && Math.abs(p.x/T+0.5-(c+0.5)) < 2.5 && Math.abs(p.y/T+0.5-(r+0.5)) < 2.5){ near = true; break; }
+    }
+    if(near) continue;
+    MAP[r][c] = Math.random() < 0.3 ? 'B' : 'x';
+    spawnBoom(c*T+16, r*T+16, MAP[r][c]==='B' ? '#667' : '#c87a4a');
+    spawned++;
+  }
+}
+
+// 随机生成草丛：每 4 秒长出 2~3 片，每片 5~9 格，可用于隐身
+function spawnGrass(){
+  const patches = 2 + Math.floor(Math.random()*2);
+  for(let i=0; i<patches; i++){
+    // 找一个空地作为草丛起点（每片独立探测，找不到就跳过这一片）
+    let c, r, ok = false;
+    for(let attempts=0; attempts<80; attempts++){
+      c = 2 + Math.floor(Math.random()*(COLS-4));
+      r = 2 + Math.floor(Math.random()*(ROWS-4));
+      if(MAP[r][c] === '.') { ok = true; break; }
+    }
+    if(!ok) continue;
+    let near = false;
+    for(const p of players){
+      if(p.alive && Math.abs(p.x/T+0.5-(c+0.5)) < 2.5 && Math.abs(p.y/T+0.5-(r+0.5)) < 2.5){ near = true; break; }
+    }
+    if(near) continue;
+    // 从起点向外长 5~9 格
+    const n = 5 + Math.floor(Math.random()*5);
+    let grown = 0, guard = 0;
+    while(grown < n && guard++ < 60){
+      if(MAP[r] && MAP[r][c] === '.'){
+        MAP[r][c] = '*';
+        spawnBoom(c*T+16, r*T+16, '#3a8a3a');
+        grown++;
+      }
+      c += Math.floor(Math.random()*3) - 1;
+      r += Math.floor(Math.random()*3) - 1;
+      if(c<2||c>COLS-3||r<2||r>ROWS-3) break;
+    }
+  }
+}
+
+// 弹药道具随机掉落：不依赖打砖，每隔一段时间在空地刷「弹」
+function spawnAmmoItem(silent){
+  let attempts = 0;
+  while(attempts++ < 100){
+    const c = 1 + Math.floor(Math.random()*(COLS-2));
+    const r = 1 + Math.floor(Math.random()*(ROWS-2));
+    if(MAP[r][c] !== '.') continue;
+    let near = false;
+    for(const p of players){
+      if(p.alive && Math.abs(p.x/T+0.5-(c+0.5)) < 2.5 && Math.abs(p.y/T+0.5-(r+0.5)) < 2.5){ near = true; break; }
+    }
+    if(near) continue;
+    items.push({x:c*T+6, y:r*T+6, type:'ammo', blink:0});
+    if(!silent) spawnBoom(c*T+16, r*T+16, POWERUPS.ammo.color);
+    return true;
+  }
+  return false;
+}
+
+// 道具箱（宝箱）随机掉落：每 10~14 秒在空地刷一个，场上最多同时 4 个
+function spawnCrate(){
+  if(crates.length >= 4) return;
+  let attempts = 0;
+  while(attempts++ < 120){
+    const c = 1 + Math.floor(Math.random()*(COLS-2));
+    const r = 1 + Math.floor(Math.random()*(ROWS-2));
+    if(MAP[r][c] !== '.') continue;
+    if(crates.some(cr=>cr.c===c && cr.r===r)) continue;
+    let near = false;
+    for(const p of players){
+      if(p.alive && Math.abs(p.x/T+0.5-(c+0.5)) < 2.5 && Math.abs(p.y/T+0.5-(r+0.5)) < 2.5){ near = true; break; }
+    }
+    if(near) continue;
+    crates.push({c, r});
+    spawnBoom(c*T+16, r*T+16, '#ffd700');
+    return true;
+  }
+  return false;
+}
+
+// 打破道具箱：随机掉落两个道具（第二个掉在全场随机空地，不与宝箱重叠）
+function breakCrate(cr){
+  const pool = ['ammo','ammo','speed','power','shield','special'];
+  items.push({x:cr.c*T+6, y:cr.r*T+6, type:pool[Math.floor(Math.random()*pool.length)], blink:0});
+  // 第二个道具：全场随机空地（避开坦克附近与其他宝箱）
+  const spot = findEmptyTile(cr.c, cr.r);
+  items.push({x:spot.c*T+6, y:spot.r*T+6, type:pool[Math.floor(Math.random()*pool.length)], blink:0});
+  spawnBoom(cr.c*T+16, cr.r*T+16, '#ffd700');
+  spawnBoom(spot.c*T+16, spot.r*T+16, '#ffd700');
+  crates = crates.filter(x=>x!==cr);
+}
+
+// 在全场随机找一个空地格（避开坦克附近与其他宝箱），找不到则退回原格
+function findEmptyTile(fallbackC, fallbackR){
+  let attempts = 0;
+  while(attempts++ < 120){
+    const c = 1 + Math.floor(Math.random()*(COLS-2));
+    const r = 1 + Math.floor(Math.random()*(ROWS-2));
+    if(MAP[r][c] !== '.') continue;
+    if(crates.some(cr=>cr.c===c && cr.r===r)) continue;
+    let near = false;
+    for(const p of players){
+      if(p.alive && Math.abs(p.x/T+0.5-(c+0.5)) < 2.5 && Math.abs(p.y/T+0.5-(r+0.5)) < 2.5){ near = true; break; }
+    }
+    if(near) continue;
+    return {c, r};
+  }
+  return {c: fallbackC, r: fallbackR};
+}
+
+function applyPowerup(p, type){
+  if(type === 'speed'){ p.speed = Math.min(4, p.speed + 1); p.speedTimer = 300; }   // 加速5秒
+  else if(type === 'power'){
+    p.bulletSize = 14; p.bulletSpeed = 9; p.fireCd = Math.max(10, p.fireCd - 15);
+    p.powerTimer = 300;   // 火力5秒：子弹增强+无限弹药
+  }
+  else if(type === 'shield'){ p.shield = 300; }   // 护盾5秒
+  else if(type === 'special'){ p.specialTimer = 300; }  // 特殊弹5秒：子弹碰到物体即引发 2×2 爆炸
+  else if(type === 'ammo'){ p.ammo = 15; }          // 弹药：直接补满15发
+}
+
+// ===== 回合/大厅 =====
+function alivePlayers(){ return players.filter(p=>p.alive); }
+function checkRoundEnd(){
+  const alive = alivePlayers();
+  if(alive.length === 1) roundOver(alive[0].idx);
+  else if(alive.length === 0) roundOver(-1);
+}
+function roundOver(winnerIdx){
+  if(state !== 'play') return;
+  state = "roundover"; msgTimer = 180;
+  if(winnerIdx >= 0) wins[winnerIdx]++;
+  // 无总回合数限制：任一玩家先赢 6 回合即取得最终胜利
+  if(winnerIdx >= 0 && wins[winnerIdx] >= 6) state = "gameover";
+  else round++;
+  updateHUD();
+}
+function tryStartGame(){
+  const readyN = NET_MODE==='local'
+    ? readyLocal.filter(Boolean).length
+    : 1 + guestsReady.filter((v,i)=>slotsJoined.includes(i) && v).length;
+  const allReady = NET_MODE!=='host' || guestsReady.every((v,i)=>!slotsJoined.includes(i) || v);
+  if(state !== 'lobby') return;
+  if(readyN < 2){ flashMsg('至少需要 2 名玩家准备才能开始'); return; }
+  if(!allReady){ flashMsg('还有玩家未准备'); return; }
+  startMatch();
+}
+let flashTimer = null;
+function flashMsg(text){
+  const el = document.getElementById('msg');
+  el.innerHTML = `<b style="color:#ff9100">${text}</b>`;
+  clearTimeout(flashTimer);
+  flashTimer = setTimeout(()=>{ if(state==='lobby') el.innerHTML = lobbyHint(); }, 2000);
+}
+function lobbyHint(){
+  if(NET_MODE==='host'){
+    const allReady = guestsReady.every((v,i)=>!slotsJoined.includes(i) || v);
+    return allReady ? '所有人已准备，点击「开始对局」！' : '等待其他玩家点击准备...';
+  }
+  return NET_MODE==='local' ? '按各自的开火键准备，然后点击「开始对局」' : '';
+}
+function startMatch(){
+  if(window.__showStart) window.__showStart(false);
+  if(NET_MODE==='local'){
+    players.forEach((p,i)=>{ p.active = readyLocal[i]; });
+  } else {
+    players.forEach((p,i)=>{ p.active = i===0 || slotsJoined.includes(i); });
+  }
+  state = 'countdown'; countdown = 180;
+  round = 1; wins = [0,0,0,0];
+  resetRound();
+  updateHUD();
+}
+function resetRound(){
+  genMap();
+  players.forEach((p,i)=>{
+    p.x = CORNERS[i][0]*T+4; p.y = CORNERS[i][1]*T+4; p.dir = CORNERS[i][2];
+    p.cd = 0; p.fireCd = 30; p.speed = 2; p.bulletSize = 8; p.bulletSpeed = 6;
+    p.shield = 0; p.speedTimer = 0; p.powerTimer = 0; p.specialTimer = 0; p.hp = 2; p.ammo = 15;
+    p.alive = p.active;
+  });
+  bullets = []; items = []; crates = []; booms = []; fires = []; brickTimer = 300; grassTimer = 240; itemTimer = 480; crateTimer = 600;
+  // 回合开始先在场上随机放 2 个「弹」补给和 1 个道具箱
+  spawnAmmoItem(true); spawnAmmoItem(true); spawnCrate();
+}
+function resetAll(){
+  wins = [0,0,0,0]; round = 1;
+  if(NET_MODE==='local') state = 'lobby';
+  else { state = 'lobby'; resetRound(); }
+  if(window.__showStart && NET_MODE !== 'guest') window.__showStart(true);
+  updateLobbyMsg();
+  updateHUD();
+}
+
+// 特殊弹药：碰到物体（墙体/宝箱/坦克）命中后，引发 2×2 格爆炸（摧毁范围内可破坏地形并波及坦克）
+function explode2x2(bc, br, bl){
+  for(let r=br; r<=br+1; r++){
+    for(let c=bc; c<=bc+1; c++){
+      if(!MAP[r] || MAP[r][c] === undefined || MAP[r][c] === 'B') continue;
+      const t = MAP[r][c];
+      if(t==='#' || t==='x'){
+        MAP[r][c] = '.';
+        if(t==='x') dropItem(c, r, false);
+      }
+      spawnBoom(c*T+16, r*T+16, '#ff9100');
+    }
+  }
+  // 爆炸范围内坦克全部被摧毁（2格血直接清零，护盾可抵挡）
+  const bx = bc*T, by = br*T, bs = 2*T;
+  for(const p of players){
+    if(!p.alive || p === bl.owner) continue;
+    if(p.x+24 > bx && p.x < bx+bs && p.y+24 > by && p.y < by+bs){
+      if(p.shield > 0){ p.shield = 0; spawnBoom(p.x+12, p.y+12, '#40c4ff'); }
+      else {
+        p.hp = 0;
+        spawnBoom(p.x+12, p.y+12, p.color);
+        dropItem(Math.floor((p.x+12)/T), Math.floor((p.y+12)/T), true);
+        p.alive = false;
+      }
+    }
+  }
+  spawnBoom(bc*T+T, br*T+T, '#ffd700');
+  addFire(bc, br);   // 爆炸中心留下一格火焰坑（3秒）
+  checkRoundEnd();
+}
+
+// 火焰坑：在爆炸 2×2 范围内取最靠近爆炸中心、且不是边界墙的一格
+const FIRE_LIFE = 180;   // 3秒（60帧/秒）
+function addFire(bc, br){
+  const cands = [[bc,br],[bc+1,br],[bc,br+1],[bc+1,br+1]]
+    .filter(([c,r]) => MAP[r] && MAP[r][c] !== undefined && MAP[r][c] !== 'B');
+  if(!cands.length) return;
+  const cx = bc*T + T, cy = br*T + T;    // 爆炸几何中心
+  cands.sort((a,b)=> (Math.abs(a[0]*T+T/2-cx)+Math.abs(a[1]*T+T/2-cy))
+                  - (Math.abs(b[0]*T+T/2-cx)+Math.abs(b[1]*T+T/2-cy)) );
+  const [fc, fr] = cands[0];
+  const old = fires.find(f=>f.c===fc && f.r===fr);
+  if(old){ old.life = FIRE_LIFE; old.hit = []; return; }   // 同格刷新，不堆叠
+  fires.push({c:fc, r:fr, life:FIRE_LIFE, hit:[]});
+}
+function tickFires(){
+  for(let i=fires.length-1; i>=0; i--){
+    const f = fires[i];
+    const t = MAP[f.r] ? MAP[f.r][f.c] : 'B';
+    if(--f.life <= 0 || t !== '.') { fires.splice(i,1); }   // 熄灭，或该格被墙/砖/草覆盖则提前消失
+  }
+}
+
+// ===== 更新 =====
+function update(){
+  tickFires();   // 火焰坑计时（3秒后自行熄灭）
+  if(state === 'countdown'){
+    if(--countdown <= 0) state = 'play';
+    booms.forEach(b=>{ b.life--; b.r += 0.8; });
+    booms = booms.filter(b=>b.life>0);
+    return;
+  }
+  if(state !== 'play'){
+    booms.forEach(b=>{ b.life--; b.r += 0.8; });
+    booms = booms.filter(b=>b.life>0);
+    if(msgTimer > 0){ msgTimer--; if(msgTimer===0 && state==='roundover'){ resetRound(); state='countdown'; countdown=300; } }
+    return;
+  }
+
+  // 坦克控制
+  for(const p of players){
+    if(!p.alive) continue;
+    let k = keys;
+    if(NET_MODE === 'host' && p.idx > 0) k = remoteInputs[p.idx] || {};
+    const ctrl = NET_MODE === 'local' ? CONTROLS[p.idx] : ONLINE_CTRL, sp = p.speed;
+    if(k[ctrl.left])  { p.dir='L'; tryMove(p,-sp,0); }
+    if(k[ctrl.right]) { p.dir='R'; tryMove(p, sp,0); }
+    if(k[ctrl.up])    { p.dir='U'; tryMove(p,0,-sp); }
+    if(k[ctrl.down])  { p.dir='D'; tryMove(p,0, sp); }
+    if(k[ctrl.fire])  fire(p);
+    if(p.cd>0) p.cd--;
+    if(p.shield>0) p.shield--;
+    if(p.speedTimer > 0 && --p.speedTimer === 0) p.speed = 2;
+    if(p.powerTimer > 0 && --p.powerTimer === 0){
+      p.bulletSize = 8; p.bulletSpeed = 6; p.fireCd = 30;
+    }
+    if(p.specialTimer > 0) p.specialTimer--;
+  }
+
+  // 火焰坑伤害：坦克经过扣 1 格血（同一火焰坑对同一坦克只生效一次，避免站在火里被瞬间烧死）
+  let burned = false;
+  for(const f of fires){
+    const fx = f.c*T, fy = f.r*T;
+    for(const p of players){
+      if(!p.alive || f.hit.includes(p.idx)) continue;
+      if(p.x+24 > fx && p.x < fx+T && p.y+24 > fy && p.y < fy+T){
+        f.hit.push(p.idx);
+        spawnBoom(p.x+12, p.y+12, '#ff9100');
+        if(p.shield > 0){ p.shield = 0; spawnBoom(p.x+12, p.y+12, '#40c4ff'); }
+        else {
+          p.hp--;
+          if(p.hp <= 0){
+            spawnBoom(p.x+12, p.y+12, p.color);
+            dropItem(Math.floor((p.x+12)/T), Math.floor((p.y+12)/T), true);
+            p.alive = false;
+            burned = true;
+          }
+        }
+      }
+    }
+  }
+  if(burned) checkRoundEnd();
+
+  // 道具拾取
+  for(let i=items.length-1; i>=0; i--){
+    const it = items[i];
+    it.blink++;
+    let taken = false;
+    for(const p of players){
+      if(!p.alive) continue;
+      if(it.x-4 < p.x+24 && it.x+20+4 > p.x && it.y-4 < p.y+24 && it.y+20+4 > p.y){
+        applyPowerup(p, it.type);
+        spawnBoom(it.x+10, it.y+10, POWERUPS[it.type].color);
+        taken = true;
+      }
+    }
+    if(taken) items.splice(i,1);
+  }
+  // 砖墙与草丛的随机生成已取消：地图在开局时一次性生成，局内不再变化
+  // 弹药道具随机掉落：约每 6~10 秒刷一个「弹」
+  if(--itemTimer <= 0){ itemTimer = 360 + Math.floor(Math.random()*240); spawnAmmoItem(false); }
+  // 道具箱随机掉落：约每 10~14 秒刷一个宝箱
+  if(--crateTimer <= 0){ crateTimer = 600 + Math.floor(Math.random()*240); spawnCrate(); }
+
+  // 子弹
+  for(let i=bullets.length-1; i>=0; i--){
+    const bl = bullets[i];
+    bl.x += bl.vx; bl.y += bl.vy;
+    bl.dist = (bl.dist||0) + Math.abs(bl.vx) + Math.abs(bl.vy);
+    let dead = false;
+    const bc = Math.floor((bl.x+bl.s/2)/T), br = Math.floor((bl.y+bl.s/2)/T);
+    const tile = MAP[br] ? MAP[br][bc] : 'B';
+    if(tile==='*'){
+      // 草丛不阻挡弹药：所有子弹直接穿过，草不被破坏
+    } else if(tile==='#' || tile==='x'){
+      if(bl.special){ explode2x2(bc, br, bl); dead = true; }
+      else {
+        MAP[br][bc] = '.';
+        if(tile==='x') dropItem(bc, br, false);
+        spawnBoom(bc*T+16, br*T+16, tile==='#' ? '#8888aa' : '#c87a4a');
+        dead = true;
+      }
+    } else if(tile==='B'){
+      if(bl.special){ explode2x2(bc, br, bl); dead = true; }
+      else { dead = true; spawnBoom(bl.x+bl.s/2, bl.y+bl.s/2, '#888'); }
+    }
+    // 撞道具箱：一发弹药打破宝箱；特殊弹视为命中物体，同时引发 2×2 爆炸
+    if(!dead){
+      const cr = crates.find(cr=>cr.c===bc && cr.r===br);
+      if(cr){ breakCrate(cr); if(bl.special) explode2x2(bc, br, bl); dead = true; }
+    }
+    // 撞坦克
+    if(!dead) for(const p of players){
+      if(!p.alive || p === bl.owner) continue;
+      if(bl.x+bl.s > p.x && bl.x < p.x+24 && bl.y+bl.s > p.y && bl.y < p.y+24){
+        if(bl.special){
+          // 特殊弹直接打掉2格血
+          explode2x2(bc, br, bl);
+        } else if(p.shield > 0){
+          p.shield = 0;
+          spawnBoom(p.x+12, p.y+12, '#40c4ff');
+        } else {
+          p.hp--;
+          if(p.hp <= 0){
+            spawnBoom(p.x+12, p.y+12, p.color);
+            // 阵亡掉落
+            dropItem(Math.floor((p.x+12)/T), Math.floor((p.y+12)/T), true);
+            p.alive = false;
+            checkRoundEnd();
+          } else {
+            // 受击未阵亡：白色火花提示
+            spawnBoom(p.x+12, p.y+12, '#ffffff');
+          }
+        }
+        dead = true;
+      }
+    }
+    if(dead) bullets.splice(i,1);
+  }
+
+  booms.forEach(b=>{ b.life--; b.r += 0.8; });
+  booms = booms.filter(b=>b.life>0);
+
+  // 子弹互相抵消：同一格内（不同主人）即抵消，无需精确碰撞
+  for(let i=bullets.length-1; i>=0; i--){
+    const a = bullets[i];
+    const ac = Math.floor((a.x+a.s/2)/T), ar = Math.floor((a.y+a.s/2)/T);
+    for(let j=i-1; j>=0; j--){
+      const b = bullets[j];
+      if(a.owner === b.owner) continue;
+      const bc2 = Math.floor((b.x+b.s/2)/T), br2 = Math.floor((b.y+b.s/2)/T);
+      if(ac === bc2 && ar === br2){
+        spawnBoom((a.x+b.x)/2+a.s/2, (a.y+b.y)/2+a.s/2, '#fff');
+        bullets.splice(i,1); bullets.splice(j,1);
+        i--; break;
+      }
+    }
+  }
+}
+
+function spawnBoom(x,y,c){ booms.push({x,y,c,life:20,r:4}); }
+
+// 火焰坑绘制：焦黑坑底 + 跳动火苗（最后 1 秒闪烁提示即将熄灭）
+function drawFire(f){
+  const x = f.c*T, y = f.r*T;
+  const fading = f.life < 60;
+  const t = Math.floor(frame/5);
+  ctx.globalAlpha = fading ? (t % 2 ? 0.45 : 0.85) : 1;
+  // 焦黑坑
+  ctx.fillStyle = '#1a0c06'; ctx.fillRect(x+3, y+3, T-6, T-6);
+  ctx.fillStyle = '#3d1a0b'; ctx.fillRect(x+5, y+5, T-10, T-10);
+  // 三簇火苗，高度随时间跳动
+  for(let i=0;i<3;i++){
+    const fh = 9 + Math.abs(Math.sin(t*0.7 + i*2.1)) * 13;
+    const fx = x + 6 + i*7;
+    ctx.fillStyle = '#e03000'; ctx.fillRect(fx, y+T-5-fh, 6, fh);
+    ctx.fillStyle = '#ff9100'; ctx.fillRect(fx+1, y+T-5-fh*0.68, 4, fh*0.68);
+    ctx.fillStyle = '#ffe082'; ctx.fillRect(fx+2, y+T-5-fh*0.32, 2, fh*0.32);
+  }
+  ctx.globalAlpha = 1;
+}
+
+// ===== 绘制 =====
+// 草丛绘制（alpha 用于「草盖在坦克上」的覆盖层，让草丛更厚、更不透明）
+function drawGrassTile(c, r, alpha){
+  const x = c*T, y = r*T;
+  ctx.globalAlpha = alpha === undefined ? 1 : alpha;
+  // 底色：实心浓绿，先铺满整格避免透出地砖
+  ctx.fillStyle = '#1e5a28'; ctx.fillRect(x, y, T, T);
+  ctx.fillStyle = '#276b30';
+  for(let yy=0; yy<T; yy+=10) ctx.fillRect(x, y+yy+3, T, 4);
+  ctx.fillStyle = '#337d3c';
+  for(let i=0;i<6;i++){
+    const gx = x+((c*7+i*13)%26)+2, gy = y+((r*11+i*7)%26)+2;
+    ctx.fillRect(gx, gy, 5, 5);
+  }
+  ctx.fillStyle = '#45a44f';
+  for(let i=0;i<5;i++){
+    const gx = x+((c*5+i*17)%27)+3, gy = y+((r*13+i*11)%27)+3;
+    ctx.fillRect(gx, gy, 3, 3);
+  }
+  ctx.fillStyle = '#5cc466';
+  for(let i=0;i<3;i++){
+    const gx = x+((c*3+i*19)%28)+2, gy = y+((r*7+i*13)%28)+2;
+    ctx.fillRect(gx, gy, 2, 2);
+  }
+  ctx.globalAlpha = 1;
+}
+
+function drawTile(c, r){
+  if(!MAP[r] || MAP[r][c] === undefined) return;
+  const t = MAP[r][c], x = c*T, y = r*T;
+  if(t==='B'){
+    ctx.fillStyle = '#3a3a52'; ctx.fillRect(x,y,T,T);
+    ctx.fillStyle = '#2c2c3e'; ctx.fillRect(x,y,T,2);
+  } else if(t==='#'){
+    ctx.fillStyle = '#5a5a7a'; ctx.fillRect(x,y,T,T);
+    ctx.fillStyle = '#6e6e92'; ctx.fillRect(x,y,T,4);
+    ctx.fillStyle = '#44445e'; ctx.fillRect(x,y+T-4,T,4);
+  } else if(t==='x'){
+    ctx.fillStyle = '#b05a3a'; ctx.fillRect(x,y,T,T);
+    ctx.fillStyle = '#d88a5a';
+    for(let yy=0;yy<T;yy+=8) ctx.fillRect(x,y+yy,T,2);
+    ctx.fillStyle = '#8a3a22';
+    for(let yy=4;yy<T;yy+=16) ctx.fillRect(x+15,y+yy,2,12);
+  } else if(t==='~'){
+    ctx.fillStyle = '#1a4a7a'; ctx.fillRect(x,y,T,T);
+    ctx.fillStyle = '#2a6aa2';
+    const ph = Math.floor(Date.now()/300)%2;
+    for(let yy=4+ph*4; yy<T; yy+=12){
+      for(let xx=(yy%24===4?4:12); xx<T-6; xx+=16) ctx.fillRect(x+xx,y+yy,8,3);
+    }
+  } else if(t==='*'){
+    drawGrassTile(c, r, 1);
+  } else {
+    ctx.fillStyle = '#181828'; ctx.fillRect(x,y,T,T);
+    if((r+c)%2===0){ ctx.fillStyle = '#1d1d30'; ctx.fillRect(x,y,T,T); }
+  }
+}
+
+function drawTank(p){
+  if(!p.alive) return;
+  const x = p.x, y = p.y, s = 24;
+  const hidden = onGrass(p);
+  const isSelf = p === localPlayer();
+  // 进草后半透明：不再额外铺设任何覆盖块，避免出现游离的绿色条/色块
+  ctx.globalAlpha = hidden ? (isSelf ? 0.34 : 0.24) : 1;
+  ctx.fillStyle = '#333';
+  if(p.dir==='U'||p.dir==='D'){
+    ctx.fillRect(x, y, 6, s); ctx.fillRect(x+s-6, y, 6, s);
+    ctx.fillStyle = '#555';
+    for(let i=0;i<s;i+=6){ ctx.fillRect(x, y+i, 6, 2); ctx.fillRect(x+s-6, y+i, 6, 2); }
+  } else {
+    ctx.fillRect(x, y, s, 6); ctx.fillRect(x, y+s-6, s, 6);
+    ctx.fillStyle = '#555';
+    for(let i=0;i<s;i+=6){ ctx.fillRect(x+i, y, 2, 6); ctx.fillRect(x+i, y+s-6, 2, 6); }
+  }
+  ctx.fillStyle = p.color; ctx.fillRect(x+6, y+6, s-12, s-12);
+  ctx.fillStyle = p.dark;  ctx.fillRect(x+6, y+6, s-12, 4);
+  ctx.fillStyle = '#222';
+  const c = x+s/2, m = y+s/2;
+  if(p.dir==='R') ctx.fillRect(c, m-2, 14, 4);
+  if(p.dir==='L') ctx.fillRect(c-14, m-2, 14, 4);
+  if(p.dir==='U') ctx.fillRect(c-2, m-14, 4, 14);
+  if(p.dir==='D') ctx.fillRect(c-2, m, 4, 14);
+  ctx.fillStyle = '#fff'; ctx.fillRect(c-3, m-3, 6, 6);
+  ctx.fillStyle = p.dark; ctx.fillRect(c-1, m-1, 2, 2);
+  if(p.shield > 0){
+    ctx.strokeStyle = '#40c4ff'; ctx.lineWidth = 2;
+    ctx.globalAlpha = (hidden ? (isSelf?0.34:0.24) : 1) * (p.shield < 120 ? (Math.floor(Date.now()/100)%2 ? 0.8 : 0.2) : 0.8);
+    ctx.strokeRect(x-3, y-3, s+6, s+6);
+  }
+  ctx.globalAlpha = 1; ctx.lineWidth = 1;
+  // 血量条：两格，位于坦克上方。隐身时（含自己）一律不画，避免草丛里冒出绿色条
+  if(!hidden){
+    for(let seg=0; seg<2; seg++){
+      ctx.fillStyle = seg < (p.hp||0) ? '#66dd66' : 'rgba(0,0,0,.55)';
+      ctx.fillRect(x + seg*13, y-8, 11, 4);
+    }
+  }
+  // 局内不显示玩家昵称；弹药显示：坦克下方（火力道具期间显示∞）
+  if(!hidden){
+    ctx.font = 'bold 11px "Courier New"';
+    ctx.textAlign = 'center'; ctx.textBaseline = 'top';
+    if(p.bulletSize > 8){ ctx.fillStyle = '#ff9100'; ctx.fillText('弹药 ∞', x+12, y+26); }
+    else {
+      ctx.fillStyle = p.ammo > 0 ? '#ffd740' : '#ff5555';
+      ctx.fillText('弹药 ' + p.ammo, x+12, y+26);
+    }
+  }
+  // buff 图标（隐身时不显示，避免暴露位置）
+  if(!hidden){
+    ctx.textAlign = 'left';
+    let ix = x;
+    if(p.speed > 2){ ctx.fillStyle = '#00e676'; ctx.font='bold 9px "Courier New"'; ctx.fillText('»', ix, y-21); ix += 10; }
+    if(p.bulletSize > 8){ ctx.fillStyle = '#ff9100'; ctx.font='bold 9px "Courier New"'; ctx.fillText('★', ix, y-21); ix += 10; }
+    if(p.specialTimer > 0){ ctx.fillStyle = '#ff5252'; ctx.font='bold 9px "Courier New"'; ctx.fillText('✸', ix, y-21); }
+  }
+}
+
+function localPlayer(){
+  if(NET_MODE === 'host') return players[0];
+  if(NET_MODE === 'guest') return players[mySlot] || players[1];
+  return null;
+}
+
+function draw(){
+  for(let r=0;r<ROWS;r++) for(let c=0;c<COLS;c++) drawTile(c,r);
+
+  // 火焰坑画在地面上、坦克与子弹之下
+  if(state !== 'lobby') fires.forEach(drawFire);
+
+  booms.forEach(b=>{
+    ctx.globalAlpha = b.life/20;
+    ctx.fillStyle = b.c; ctx.fillRect(b.x-b.r/2, b.y-b.r/2, b.r, b.r);
+    ctx.fillStyle = '#ffd700'; ctx.fillRect(b.x-b.r/3, b.y-b.r/3, b.r/1.5, b.r/1.5);
+    ctx.globalAlpha = 1;
+  });
+
+  if(state !== 'lobby'){
+    // 道具箱：宝箱样式（木箱身+箱盖+金色包边+锁扣，外圈金光呼吸闪烁）
+    crates.forEach(cr=>{
+      const x = cr.c*T+3, y = cr.r*T+3, w = T-6, h = T-6;
+      ctx.globalAlpha = (frame%60 < 30) ? 0.35 : 0.12;
+      ctx.fillStyle = '#ffd700'; ctx.fillRect(x-3, y-3, w+6, h+6);
+      ctx.globalAlpha = 1;
+      ctx.fillStyle = '#8a5a2b'; ctx.fillRect(x, y, w, h);              // 箱身
+      ctx.fillStyle = '#6e4520'; ctx.fillRect(x, y, w, h*0.38);         // 箱盖
+      ctx.fillStyle = '#5a3818'; ctx.fillRect(x, y+h*0.38, w, 1);       // 盖缝
+      ctx.fillStyle = '#ffd700';                                        // 金色包边
+      ctx.fillRect(x, y+h*0.36, w, 3);
+      ctx.fillRect(x+w/2-3, y, 6, h);
+      ctx.fillStyle = '#ffe066';                                        // 锁扣
+      ctx.fillRect(x+w/2-4, y+h*0.30, 8, 10);
+      ctx.fillStyle = '#6e4520';                                        // 锁孔
+      ctx.fillRect(x+w/2-1, y+h*0.30+4, 2, 3);
+    });
+    items.forEach(it=>{
+      const pu = POWERUPS[it.type];
+      if(it.blink % 24 < 18){
+        ctx.fillStyle = pu.dark; ctx.fillRect(it.x-1, it.y-1, 22, 22);
+        ctx.fillStyle = pu.color; ctx.fillRect(it.x, it.y, 20, 20);
+        ctx.fillStyle = '#000'; ctx.font = 'bold 13px "Courier New"';
+        ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+        ctx.fillText(pu.char, it.x+10, it.y+11);
+        ctx.globalAlpha = 0.3; ctx.fillStyle = pu.color;
+        ctx.fillRect(it.x-3, it.y-3, 26, 26);
+        ctx.globalAlpha = 1;
+      }
+    });
+    bullets.forEach(b=>{
+      if(b.special){
+        // 特殊弹药：橙红光晕，命中会引发 2×2 爆炸
+        ctx.fillStyle = '#ff9100'; ctx.fillRect(b.x-2, b.y-2, b.s+4, b.s+4);
+        ctx.fillStyle = '#ffd700'; ctx.fillRect(b.x, b.y, b.s, b.s);
+        ctx.fillStyle = '#fff'; ctx.fillRect(b.x+2, b.y+2, b.s-4, b.s-4);
+      } else {
+        ctx.fillStyle = '#fff'; ctx.fillRect(b.x, b.y, b.s, b.s);
+        ctx.fillStyle = '#ffd700'; ctx.fillRect(b.x+2, b.y+2, b.s-4, b.s-4);
+      }
+    });
+    players.forEach(drawTank);
+    // 冷却条
+    if(state==='play') for(const p of players){
+      if(!p.alive || p.cd<=0) continue;
+      if(onGrass(p)) continue;   // 隐身时不显示冷却条（含自己）
+      ctx.fillStyle = 'rgba(0,0,0,.5)'; ctx.fillRect(p.x+4, p.y-4, 16, 3);
+      ctx.fillStyle = '#ffd700'; ctx.fillRect(p.x+4, p.y-4, 16*(1-p.cd/p.fireCd), 3);
+    }
+  }
+
+  ctx.textAlign = 'center'; ctx.textBaseline = 'alphabetic';
+  if(state === 'countdown'){
+    ctx.fillStyle = 'rgba(0,0,0,.5)'; ctx.fillRect(0, 0, cv.width, cv.height);
+    ctx.fillStyle = '#ffd700'; ctx.font = 'bold 26px "Courier New"';
+    ctx.fillText(`第 ${round} 回合`, cv.width/2, cv.height/2-90);
+    drawScoreRow(cv.height/2-55);
+    ctx.font = 'bold 90px "Courier New"';
+    ctx.fillText(Math.ceil(countdown/60), cv.width/2, cv.height/2+40);
+  }
+  if(state === 'roundover'){
+    ctx.fillStyle = 'rgba(0,0,0,.7)'; ctx.fillRect(0, 230, cv.width, 140);
+    ctx.fillStyle = '#ffd700'; ctx.font = 'bold 32px "Courier New"';
+    ctx.fillText(lastRoundMsg, cv.width/2, 280);
+    // 各玩家之间比分
+    drawScoreRow(320);
+    ctx.font = '16px "Courier New"'; ctx.fillStyle = '#ccc';
+    ctx.fillText("下一回合 5 秒后开始...", cv.width/2, 355);
+  }
+  if(state === 'gameover'){
+    ctx.fillStyle = 'rgba(0,0,0,.8)'; ctx.fillRect(0, 220, cv.width, 170);
+    ctx.fillStyle = '#ffd700'; ctx.font = 'bold 38px "Courier New"';
+    const maxW = Math.max(...wins);
+    const wIdx = maxW > 0 ? wins.indexOf(maxW) : -1;
+    const tie = wins.filter(w=>w===maxW).length > 1;
+    ctx.fillText((wIdx >= 0 && !tie) ? `${names[wIdx]}(${PLAYER_DEFS[wIdx].cname}) 赢得最终胜利！` : "平局！", cv.width/2, 280);
+    ctx.font = '18px "Courier New"'; ctx.fillStyle = '#ccc';
+    ctx.fillText(`最终比分  ${wins.join(' : ')}`, cv.width/2, 320);
+    ctx.fillText("按 R 重新回到大厅", cv.width/2, 355);
+  }
+  if(state === 'lobby'){ drawLobby(); }
+}
+
+// 比分板：显示各玩家昵称与当前胜场（按玩家颜色区分）
+function drawScoreRow(cy){
+  const parts = players.filter(p=>p.active).map(p=>{
+    const i = p.idx;
+    return {text:`${names[i]} ${wins[i]}`, color:PLAYER_DEFS[i].color};
+  });
+  if(!parts.length) return;
+  ctx.font = 'bold 20px "Courier New"';
+  ctx.textBaseline = 'alphabetic';
+  const gap = 48;
+  const widths = parts.map(p=>ctx.measureText(p.text).width);
+  const total = widths.reduce((a,b)=>a+b,0) + gap*(parts.length-1);
+  let x = cv.width/2 - total/2;
+  ctx.textAlign = 'left';
+  for(let i=0;i<parts.length;i++){
+    ctx.fillStyle = parts[i].color;
+    ctx.fillText(parts[i].text, x, cy);
+    x += widths[i] + gap;
+  }
+  ctx.textAlign = 'center';
+}
+
+let lastRoundMsg = "";
+const _roundOver = roundOver;
+roundOver = function(winnerIdx){
+  _roundOver(winnerIdx);
+  lastRoundMsg = winnerIdx >= 0
+    ? `${names[winnerIdx]}(${PLAYER_DEFS[winnerIdx].cname}) 赢得本回合！`
+    : "同归于尽，无人得分";
+};
+
+// ===== 大厅 =====
+let readyLocal = [false,false,false,false];
+function drawMiniTank(idx, cx, cy){
+  const d = PLAYER_DEFS[idx];
+  const x = cx-12, y = cy-12, s = 24;
+  ctx.fillStyle = '#333';
+  ctx.fillRect(x, y, 6, s); ctx.fillRect(x+s-6, y, 6, s);
+  ctx.fillStyle = '#555';
+  for(let i=0;i<s;i+=6){ ctx.fillRect(x, y+i, 6, 2); ctx.fillRect(x+s-6, y+i, 6, 2); }
+  ctx.fillStyle = d.color; ctx.fillRect(x+6, y+6, s-12, s-12);
+  ctx.fillStyle = d.dark; ctx.fillRect(x+6, y+6, s-12, 4);
+  ctx.fillStyle = '#222'; ctx.fillRect(cx-2, cy-16, 4, 10);
+  ctx.fillStyle = '#fff'; ctx.fillRect(cx-3, cy-3, 6, 6);
+  ctx.fillStyle = d.dark; ctx.fillRect(cx-1, cy-1, 2, 2);
+}
+
+function drawLobby(){
+  ctx.fillStyle = 'rgba(10,10,25,.88)'; ctx.fillRect(0, 0, cv.width, cv.height);
+  ctx.fillStyle = '#ffd700'; ctx.font = 'bold 36px "Courier New"';
+  ctx.fillText("像素坦克大战 · 大厅", cv.width/2, 90);
+
+  const bw = 200, bh = 170, gap = 24;
+  const startX = (cv.width - (bw*4+gap*3))/2;
+  for(let i=0;i<4;i++){
+    const x = startX + i*(bw+gap), y = 140;
+    const d = PLAYER_DEFS[i];
+    const joined = NET_MODE==='local' ? readyLocal[i] : (i===0 || slotsJoined.includes(i));
+    const ready  = NET_MODE==='local' ? readyLocal[i] : (i===0 || guestsReady[i]);
+    ctx.strokeStyle = joined ? d.color : '#444';
+    ctx.lineWidth = 3;
+    ctx.strokeRect(x, y, bw, bh);
+    ctx.lineWidth = 1;
+    ctx.fillStyle = d.color; ctx.font = 'bold 18px "Courier New"';
+    ctx.fillText(names[i], x+bw/2, y+26);
+    drawMiniTank(i, x+bw/2, y+56);
+    if(joined && ready){
+      ctx.fillStyle = '#00e676'; ctx.font = 'bold 20px "Courier New"';
+      ctx.fillText("✔ 已准备", x+bw/2, y+118);
+    } else if(joined){
+      ctx.fillStyle = '#888'; ctx.font = 'bold 18px "Courier New"';
+      ctx.fillText("未准备", x+bw/2, y+118);
+    } else {
+      ctx.fillStyle = '#666'; ctx.font = '15px "Courier New"';
+      ctx.fillText("空位", x+bw/2, y+118);
+    }
+    ctx.fillStyle = '#999'; ctx.font = '11px "Courier New"';
+    const labels = NET_MODE === 'local' ? d.label.split(' · ') : ['W A S D 移动', 'K 开火'];
+    labels.forEach((s,j)=> ctx.fillText(s, x+bw/2, y+140+j*15));
+  }
+  ctx.fillStyle = '#ccc'; ctx.font = '16px "Courier New"';
+  if(NET_MODE === 'local'){
+    ctx.fillText("按各自的开火键准备（至少 2 人）", cv.width/2, 370);
+  } else if(NET_MODE === 'guest'){
+    ctx.fillStyle = '#8ab4ff';
+    ctx.fillText("点击下方「准备」按钮，等待主机开始", cv.width/2, 370);
+  } else {
+    ctx.fillStyle = '#8ab4ff';
+    const allReady = guestsReady.every((v,i)=>!slotsJoined.includes(i) || v);
+    ctx.fillText(allReady ? "所有人已准备！按 Enter 开始对局" : "等待其他玩家点击准备...", cv.width/2, 370);
+  }
+  ctx.fillStyle = '#777'; ctx.font = '13px "Courier New"';
+  ctx.fillText("回合制 FFA · 存活到最后的玩家得分 · 先赢 6 回合取得最终胜利", cv.width/2, 405);
+  ctx.fillText("每人15发弹药 · 特弹道具(5秒)：子弹碰到物体即爆2×2 · 坦克2格血 · 子弹同格抵消 · 草中开火可穿草", cv.width/2, 428);
+  ctx.fillText("特殊弹爆炸中心留一格火焰坑(3秒)，坦克经过扣 1 格血（护盾可挡一次）", cv.width/2, 450);
+  // 构建号：用于确认浏览器加载的是否为最新版本
+  ctx.fillStyle = '#555'; ctx.font = '12px "Courier New"'; ctx.textAlign = 'right';
+  ctx.fillText('build v1029-1805', cv.width-10, cv.height-10);
+  ctx.textAlign = 'center';
+}
+
+// ===== HUD =====
+function buildScorebar(){
+  document.getElementById('scorebar').innerHTML = PLAYER_DEFS.map((d,i)=>
+    `<span style="color:${d.color}">${d.name}${d.cname} <span id="w${i}">0</span></span>`
+  ).join('');
+}
+function updateHUD(){
+  for(let i=0;i<4;i++){ const el = document.getElementById('w'+i); if(el) el.textContent = wins[i]; }
+}
+buildScorebar(); updateHUD();
+
+// ===== 联机模块 =====
+const qs = new URLSearchParams(location.search);
+const CHARS = '23456789ABCDEFGHJKMNPQRSTUVWXYZ';
+function randomRoom(){
+  let s = '';
+  for(let i=0;i<4;i++) s += CHARS[Math.floor(Math.random()*CHARS.length)];
+  return '坦' + s;
+}
+const NET_MODE = qs.has('host') ? 'host' : qs.has('room') ? 'guest' : 'local';
+const ROOM = qs.get('host') || qs.get('room') || randomRoom();
+document.getElementById('createOnlineRoom').href = '/games/pixel-battle/?host=' + encodeURIComponent(randomRoom());
+let ws = null;
+let netReady = false;
+let mySlot = 1;
+let slotsJoined = [];         // 主机视角：已加入的客机 slot
+let guestsReady = [false,false,false,false];
+let remoteInputs = {1:{},2:{},3:{}};
+let frame = 0;
+
+// 分享面板
+const shareBox = document.createElement('div');
+shareBox.id = 'shareBox';
+shareBox.style.cssText = 'display:none;background:#22223a;border:2px solid #444;border-radius:8px;padding:14px 20px;margin-top:12px;text-align:center;color:#ccc;font-size:14px;';
+shareBox.innerHTML = `
+  <div style="color:#ffd700;font-weight:bold;margin-bottom:6px;">🔗 把链接发给好友加入（最多4人 · 同一局域网）</div>
+  <div id="shareUrl" style="background:#15152a;border:1px solid #555;border-radius:4px;padding:8px 10px;word-break:break-all;color:#8ab4ff;font-size:15px;"></div>
+  <button id="copyBtn" style="margin-top:8px;background:#ffd700;border:none;border-radius:4px;padding:6px 18px;font-weight:bold;cursor:pointer;">复制链接</button>
+  <span id="copyOk" style="margin-left:8px;color:#00e676;display:none;">已复制 ✓</span>`;
+document.body.appendChild(shareBox);
+function showShare(show){ shareBox.style.display = show ? 'block' : 'none'; }
+function getJSON(url){
+  return new Promise((res, rej)=>{
+    if(window.fetch){ fetch(url).then(r=>r.json()).then(res).catch(rej); return; }
+    try{
+      const x = new XMLHttpRequest();
+      x.open('GET', url);
+      x.onload = ()=>{ try{ res(JSON.parse(x.responseText)); }catch(e){ rej(e); } };
+      x.onerror = ()=>rej(new Error('network'));
+      x.send();
+    }catch(e){ rej(e); }
+  });
+}
+function fillShareUrl(){
+  // 主链接优先用「服务器探测到的局域网地址」（朋友可达），本机打开地址仅作备选
+  const self = `${location.origin}/games/pixel-battle/?room=${encodeURIComponent(ROOM)}`;
+  const el = document.getElementById('shareUrl');
+  el.dataset.primary = self;
+  el.textContent = self;
+  getJSON(`/api/pixel-battle/share?room=${encodeURIComponent(ROOM)}`)
+    .then(d=>{
+      const lan = d.lan || ((d.url || '').match(/\d+\.\d+\.\d+\.\d+/) || [''])[0];
+      const bad = !lan || lan === '127.0.0.1' || lan.startsWith('169.254');
+      const serverUrl = d.url || '';
+      const primary = (!bad && serverUrl) ? serverUrl : self;
+      el.dataset.primary = primary;
+      el.textContent = (!bad && primary !== self)
+        ? `好友加入： ${primary}　（本机备选： ${self}）`
+        : primary;
+    })
+    .catch(()=>{ el.dataset.primary = ''; el.textContent = '❌ 联机服务器未运行！请在游戏文件夹双击 start-server.bat 启动后再分享（单机模式不受影响）'; });
+  document.getElementById('copyBtn').onclick = ()=>{
+    const url = el.dataset.primary;
+    if(!url){ return; }
+    (navigator.clipboard ? navigator.clipboard.writeText(url) : Promise.reject())
+      .catch(()=>{ const t=document.createElement('textarea'); t.value=url; document.body.appendChild(t); t.select(); document.execCommand('copy'); t.remove(); })
+      .finally(()=>{ const ok=document.getElementById('copyOk'); ok.style.display='inline'; setTimeout(()=>ok.style.display='none',1500); });
+  };
+}
+
+// 开始对局按钮（主机 / 本地）
+if(NET_MODE !== 'guest'){
+  const startBtn = document.createElement('button');
+  startBtn.id = 'startBtn';
+  startBtn.textContent = '▶ 开始对局';
+  startBtn.style.cssText = 'display:none;margin-top:10px;background:#ffd700;border:none;border-radius:6px;padding:10px 40px;font-size:18px;font-weight:bold;cursor:pointer;font-family:inherit;color:#4a3800;';
+  document.body.appendChild(startBtn);
+  startBtn.onclick = tryStartGame;
+  window.__showStart = show => startBtn.style.display = show ? 'inline-block' : 'none';
+  if(NET_MODE === 'local') window.__showStart(true);
+
+  // 分享链接按钮
+  const shareBtn = document.createElement('button');
+  shareBtn.id = 'shareBtn';
+  shareBtn.textContent = '🔗 分享链接';
+  shareBtn.style.cssText = 'display:none;margin-top:10px;margin-left:10px;background:#4a6cff;border:none;border-radius:6px;padding:10px 28px;font-size:18px;font-weight:bold;cursor:pointer;font-family:inherit;color:#fff;';
+  document.body.appendChild(shareBtn);
+  document.body.appendChild(shareBox); // 移到按钮下方
+  shareBtn.onclick = ()=>{
+    if(NET_MODE === 'local'){ location.href = '/games/pixel-battle/?host=' + encodeURIComponent(ROOM); return; }
+    const showing = shareBox.style.display === 'block';
+    showShare(!showing);
+    if(!showing) fillShareUrl();
+  };
+  window.__showShareBtn = show => shareBtn.style.display = show ? 'inline-block' : 'none';
+  window.__showShareBtn(true);
+}
+function updateLobbyMsg(){
+  const el = document.getElementById('msg');
+  if(state === 'lobby') el.innerHTML = lobbyHint();
+}
+
+// 准备按钮（客机）
+if(NET_MODE === 'guest'){
+  const btn = document.createElement('button');
+  btn.id = 'readyBtn';
+  btn.textContent = '准备';
+  btn.style.cssText = 'display:none;margin-top:10px;background:#00e676;border:none;border-radius:6px;padding:10px 40px;font-size:18px;font-weight:bold;cursor:pointer;font-family:inherit;color:#003a1c;';
+  document.body.appendChild(btn);
+  btn.onclick = ()=>{
+    guestsReady[mySlot] = !guestsReady[mySlot];
+    btn.textContent = guestsReady[mySlot] ? '取消准备' : '准备';
+    btn.style.background = guestsReady[mySlot] ? '#ff9100' : '#00e676';
+    if(ws && ws.readyState===1) ws.send(JSON.stringify({t:'ready', v:guestsReady[mySlot]}));
+  };
+}
+
+if(NET_MODE !== 'local'){
+  if(NET_MODE === 'guest'){
+    const tip = document.createElement('div');
+    tip.textContent = `房间: ${ROOM}`;
+    tip.style.cssText = 'color:#888;margin-top:6px;';
+    document.body.appendChild(tip);
+  }
+  ws = new WebSocket(`${location.protocol === "https:" ? "wss:" : "ws:"}//${location.host}/games/pixel-battle/ws`);
+  ws.onopen = ()=> ws.send(JSON.stringify({t: NET_MODE==='host' ? 'create' : 'join', room: ROOM}));
+  ws.onmessage = e=>{
+    const m = JSON.parse(e.data);
+    if(m.t === 'created'){
+      netReady = true; slotsJoined = []; resetRound(); state='lobby';
+      if(window.__showStart) window.__showStart(true);
+      updateLobbyMsg();
+    }
+    else if(m.t === 'peer'){ mySlot = m.slot; netReady = true; document.getElementById('readyBtn').style.display='inline-block'; buildNameInputs(); }
+    else if(m.t === 'guestjoined' && NET_MODE==='host'){
+      slotsJoined.push(m.slot); resetRound(); state='lobby';
+      document.getElementById('msg').innerHTML = `<b style="color:#00e676">${PLAYER_DEFS[m.slot].name} 加入了房间</b>`;
+      updateLobbyMsg();
+    }
+    else if(m.t === 'guestleft' && NET_MODE==='host'){
+      slotsJoined = slotsJoined.filter(s=>s!==m.slot);
+      guestsReady[m.slot] = false;
+      remoteInputs[m.slot] = {};
+      players[m.slot].active = false; players[m.slot].alive = false;
+      if(state!=='play') { resetRound(); state='lobby'; }
+      updateLobbyMsg();
+    }
+    else if(m.t === 'ready' && NET_MODE==='host'){ guestsReady[m.slot] = m.v; updateLobbyMsg(); }
+    else if(m.t === 'name' && NET_MODE==='host'){ names[m.slot] = String(m.v).slice(0,8); }
+    else if(m.t === 'in' && NET_MODE==='host'){ remoteInputs[m.slot] = m.k || {}; }
+    else if(m.t === 'reset' && NET_MODE==='host'){ resetAll(); }
+    else if(m.t === 'st' && NET_MODE==='guest'){ applySnapshot(m); }
+    else if(m.t === 'err'){ document.getElementById('msg').innerHTML = `<b style="color:#ff5555">${m.msg}</b>`; }
+    else if(m.t === 'peerleft'){
+      netReady = false;
+      document.getElementById('msg').innerHTML = '<b style="color:#ff5555">主机已离开</b>';
+    }
+  };
+  ws.onclose = ()=>{ document.getElementById('msg').innerHTML = '<b style="color:#ff5555">联机连接已断开</b>'; };
+}
+buildNameInputs();
+
+function snapshot(){
+  return {t:'st',
+    p:players.map(pl=>({...pl})),
+    b:bullets.map(b=>({x:b.x,y:b.y,vx:b.vx,vy:b.vy,s:b.s,owner:b.owner.idx,d:b.dist||0,sp:!!b.special,g:!!b.grassPass})),
+    it:items, cr:crates, m:MAP.map(r=>r.join('')),
+    bo:booms, fi:fires, w:[...wins], rd:round, st:state, rm:lastRoundMsg, cd:countdown,
+    slots:slotsJoined, gr:[...guestsReady], nm:[...names]};
+}
+function applySnapshot(m){
+  const prevState = state;
+  m.p.forEach((pp,i)=>{
+    const p = players[i];
+    const tx = pp.x, ty = pp.y;
+    delete pp.x; delete pp.y;   // 坐标交给插值处理
+    Object.assign(p, pp);
+    // 状态切换(重置回合)或大幅位移(重生/传送)时直接对齐，否则走平滑插值
+    if(prevState !== m.st || p._tx === undefined || Math.abs(tx-p._tx) > 80 || Math.abs(ty-p._ty) > 80){
+      p.x = tx; p.y = ty;
+    }
+    p._tx = tx; p._ty = ty;
+  });
+  bullets = m.b.map(x=>({...x, dist:x.d||0, special:!!x.sp, grassPass:!!x.g, owner: players[x.owner]}));
+  items = m.it;
+  crates = m.cr || [];
+  MAP = m.m.map(r=>r.split(''));
+  booms = m.bo; fires = m.fi || []; wins = m.w; round = m.rd;
+  state = m.st; lastRoundMsg = m.rm; countdown = m.cd;
+  slotsJoined = m.slots; guestsReady = m.gr; names = m.nm;
+  const inp = nameRow.querySelector('input');
+  if(inp && document.activeElement !== inp) inp.value = names[mySlot];
+  updateHUD();
+}
+
+// ===== 主循环 =====
+function loop(){
+  frame++;
+  if(NET_MODE === 'guest'){
+    // 客机插值：坦克位置平滑趋近主机同步的目标点，消除20/30Hz跳变卡顿
+    for(const p of players){
+      if(p._tx !== undefined){
+        p.x += (p._tx - p.x) * 0.45;
+        p.y += (p._ty - p.y) * 0.45;
+      }
+    }
+    if(netReady && frame % 2 === 0 && ws && ws.readyState === 1){
+      const k = {};
+      for(const key of [ONLINE_CTRL.up,ONLINE_CTRL.down,ONLINE_CTRL.left,ONLINE_CTRL.right,ONLINE_CTRL.fire]) k[key] = !!keys[key];
+      ws.send(JSON.stringify({t:'in', k}));
+    }
+  } else {
+    if(NET_MODE==='host' && frame % 2 === 0 && netReady && ws && ws.readyState === 1)
+      ws.send(JSON.stringify(snapshot()));
+    update();
+  }
+  draw();
+  requestAnimationFrame(loop);
+}
+resetRound();  // 初始化地图，避免首帧遍历空MAP导致崩溃
+loop();
+</script>
+</body>
+</html>
