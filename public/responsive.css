@@ -44,3 +44,14 @@ body.chat-page{overflow-x:hidden;overflow-y:auto}
  .chat-page>.app-grid{min-height:480px}
  .chat-page .garden-sidebar{max-height:clamp(96px,25dvh,180px);flex:0 0 auto;padding-right:6px}
 }
+
+.community-authors .author-avatar{display:block;width:32px;height:32px;object-fit:cover;flex-shrink:0;border:1px solid #a6b498;background:#fff}
+.garden-sidebar .tank-icon-only.original-game{position:relative;overflow:visible}
+.garden-sidebar .tank-icon-only.original-game>img:first-child{border-radius:inherit}
+.game-original-badge{position:absolute;top:-4px;right:-6px;display:block;padding:2px 4px;border:2px solid #f4f5ec;border-radius:7px;background:#37664d;color:#fff8dd;font-size:10px;font-weight:700;line-height:14px;letter-spacing:0;white-space:nowrap;box-shadow:0 1px 4px #163b3940;pointer-events:none}
+@media(max-width:680px){.game-original-badge{top:-3px;right:-4px;padding:1px 3px;font-size:9px;line-height:12px}}
+.community-authors .author-slot{font-size:11px;color:var(--green)}
+.garden-sidebar .tank-icon-only[data-author]{position:relative;overflow:visible}
+.garden-sidebar .tank-icon-only[data-author]>img:first-child{border-radius:inherit}
+.garden-sidebar .tank-icon-only>img.game-author-badge{position:absolute;top:-4px;right:-4px;width:22px;height:22px;object-fit:cover;border:2px solid #f4f5ec;border-radius:50%;background:#fff;box-shadow:0 1px 4px #163b3940;pointer-events:none}
+@media(max-width:680px){.garden-sidebar .tank-icon-only>img.game-author-badge{width:18px;height:18px;top:-3px;right:-3px}}

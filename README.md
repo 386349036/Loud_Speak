@@ -126,3 +126,7 @@ WASD 移动，鼠标左键开火、右键瞄准，R 换弹，Shift 冲刺，Spac
 左下角蓝色图标在新标签页打开 `/games/smallscope/`。默认中文菜单、设置、装备名称及练习工具，可切换英文。同一局域网通过 `http://192.168.5.8:3210/games/smallscope/` 访问；房主选择「练习场」，点击顶部「复制邀请」，其他玩家打开邀请并准备，房主开始后共同进入地图。练习工具可升级，移动和等级同步。中继使用 Loud 的同一端口，聊天连接继续可用；房主需保持页面开启。使用 WASD 移动、Escape 打开设置。练习模式直达 `/games/smallscope/?practice=1`。
 
 `npm run deploy:smallscope` 部署，`npm run test:smallscope` 验证。来源、固定版本、素材授权范围与验收记录见 [SMALLSCOPE_DEPLOYMENT.md](SMALLSCOPE_DEPLOYMENT.md)。
+
+## 空中炮艇 · 丧尸清剿
+
+首页“众创游戏”区的炮艇图标在新标签页打开 `/games/zombie-gunship/`。接入用户提供的单文件 HTML 游戏，保留原版玩法与操作说明，全部资源随本站提供。
