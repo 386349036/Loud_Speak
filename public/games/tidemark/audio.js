@@ -728,8 +728,30 @@
     });
   }
 
+  let turnVoice;
+  function loadTurnVoice() {
+    if (!ctx) return;
+    turnVoice ??= fetch('ui-assets/lan-my-turn.mp3')
+      .then(response => {
+        if (!response.ok) throw new Error('Turn voice unavailable');
+        return response.arrayBuffer();
+      })
+      .then(bytes => ctx.decodeAudioData(bytes))
+      .catch(() => { turnVoice = null; return null; });
+    return turnVoice;
+  }
+  async function playTurnVoice(stillMyTurn) {
+    const buffer = await loadTurnVoice();
+    if (!buffer || muted || ctx.state !== 'running' || !stillMyTurn()) return;
+    const source = ctx.createBufferSource();
+    source.buffer = buffer;
+    source.connect(graph.sfx);
+    source.start();
+  }
+
   var api = {
     unlock: unlock, sfx: sfx, music: music, setVolume: setVolume, setMuted: setMuted,
+    loadTurnVoice, playTurnVoice,
     _info: info, _state: state, _renderOffline: renderOffline,
     _sfxNames: Object.keys(SFX), _trackNames: Object.keys(TRACKS)
   };

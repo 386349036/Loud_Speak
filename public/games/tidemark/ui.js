@@ -289,10 +289,11 @@
   // ───────── 存档 ─────────
   const SV = () => window.AWSave || null;
   function autosave() {
+    if (lanSeat) return;
     const A = SV(); if (!A || DEMO || !S || S.winner) return;
     try { A.save(S, { human: human.slice(), map: opt.map, mapName: S.map.name || '', money: INC, camp: S.camp ? S.camp.id : '' }); } catch (e) { console.error(e); }
   }
-  function clearSave() { const A = SV(); if (A && !DEMO) { try { A.clear(); } catch (e) { } } }
+  function clearSave() { const A = SV(); if (A && !DEMO && !lanSeat) { try { A.clear(); } catch (e) { } } }
   // 读档并核对：数据文件改过（兵种、地形、指挥官对不上）的旧档直接作废
   function loadSave() {
     const A = SV(); if (!A || DEMO) return null;
@@ -487,6 +488,8 @@
     ctx.fillStyle = 'rgba(20,22,28,.6)'; ctx.fillRect(0, 0, cv.width, cv.height);
   }
   function showTitle() {
+    closeLan();
+    lanButton.hidden = true;
     gid++; unstage(); holdReset(); S = null; mode = 'title'; closeOverlays(); Nav.stack = []; if (Camp) Camp.abort();
     sel = reach = reachMask = inspect = anim = movePath = loadTr = joinTr = null; fx = []; ghosts = []; plays.clear(); mapCvs = []; warmMap = null; apron = null; visMask = seeMask = null; quiet = false;
     fcast = null; loadingOn = false; HUD.clear();
@@ -496,6 +499,7 @@
     Front.title(); music('title');
   }
   function enterGame() {
+    lanButton.hidden = !lanSeat;
     gid++; fx = []; ghosts = []; plays.clear(); sprLog.last.clear(); sel = reach = reachMask = inspect = anim = camAnim = shakeFx = movePath = loadTr = joinTr = null; camX = camY = 0; lastCurKey = ''; quiet = false; preview(false);
     fcast = null; HUD.clear(); quit.clear(); gaveUp = 0; holdReset();
     if (lsGet('steel-tide.fast') == null) cfg.fast = S.map.w * S.map.h >= 4000; // 没设过“电脑加速”：64×64 的大图默认开
@@ -519,7 +523,7 @@
     await b; if (g !== gid) return;
     if (first) { await bannerTurn(tt('收入 +{n}', { n: C.income(S, S.turn) })); if (g !== gid) return; }
     hintUntil = performance.now() + 4000;       // 开局头几秒把按键提示亮出来一次
-    if (human[S.turn]) { mode = 'idle'; updateHud(); } else runAI();
+    settleTurn();
   }
   async function startGame() {
     try { const A = window.AWPortraits; if (A && A.preloadHi) { A.preloadHi('power'); A.preloadHi('lose'); } } catch (e) { }   // 技能演出、结算页的大立绘提前解码
@@ -1330,7 +1334,7 @@
     const p = S.turn, co = coOf(p); let pw = null; try { pw = C.powerInfo ? C.powerInfo(S, p) : null; } catch (e) { }
     const mm = Math.min(1, (S.meter[p] || 0) / D.METER_MAX);
     return { p, name: pname(p), day: S.day, ore: oreOn() ? ((S.ore && S.ore[p]) || 0) : null, rp: techOn() && S.rp ? (S.rp[p] || 0) : null, funds: S.funds[p] || 0, meter: mm, full: mm >= 1, powers: powersOn(), co: S.co[p], coName: co ? co.name : '', power: (pw && pw.name) || (co ? co.power : ''),
-      techIdle: techMark(), ai: !human[p] && !S.winner, demo: DEMO, tag: (NP() > 2 || hasTeams()) ? teamTag(p) : '',
+      techIdle: techMark(), ai: !human[p] && !S.winner && (!lanSeat || !lanPicks.some(pick => pick?.color === p)), demo: DEMO, tag: (NP() > 2 || hasTeams()) ? teamTag(p) : '',
       others: NP() > 2 ? plist().filter(q => q !== p && isAlive(q)).map(q => ({ p: q, funds: S.funds[q] || 0 })) : [] };   // 多方对局：其余阵营的资金（细条上是徽记 + 数字）
   }
   // 运输单位里装着的单位，逐个列出来（信息条、详情卡、卸载菜单共用）：HP 和场上单位一样用显示 HP
@@ -1436,7 +1440,7 @@
   // 底部提示条在对局里显示什么：跟着现在的操作阶段走
   function battleHints() {
     if (!S || mode === 'over' || mode === 'title' || curtain) return [];
-    if (mode === 'ai' || mode === 'anim') return human[S.turn] ? [] : [['', DEMO ? '演示对局' : '电脑行动中…']];
+    if (mode === 'ai' || mode === 'anim') return human[S.turn] ? [] : [['', lanSeat ? lanButton.textContent : DEMO ? '演示对局' : '电脑行动中…']];
     if (mode === 'move') return [['a', aim ? (aim.moves ? '移动并攻击' : '攻击') : '移动至此'], ['b', '取消'], ['x', '详情']];   // 光标压在打得到的敌人身上：确定 = 原地打，或走过去打
     if (mode === 'target') return [['a', '攻击'], ['b', '返回'], ['lr', '切换目标']];
     if (mode === 'unload') return [['a', '卸载至此'], ['b', '返回'], ['lr', '切换位置']];
@@ -2292,6 +2296,7 @@
     mode = 'anim'; const g = gid;
     const hp = new Map(); for (const q of S.units) hp.set(q, q.hp);
     C.endTurn(S); checkMap(); checkDefeats();
+    if (lanSeat && !S.winner) { sendLan('turn', S); return; }
     if (S.winner) return over();
     // 多人同屏 + 迷雾：下一位是玩家就先拉黑幕，等他接手
     const needCurtain = fogOn() && human[S.turn] && plist().filter(p => human[p]).length > 1 && !DEMO;
@@ -2422,6 +2427,7 @@
     endTurn();
   }
   function over() {
+    if (lanSeat && !lanReceiving) sendLan('turn', S);
     const g0 = gid; mode = 'over'; closeOverlays(); fcast = null; visMask = seeMask = null;
     clearSave(); music('off');
     const win = winnersOf(), ps = plist(), hs = ps.filter(p => human[p] || quit.has(p));
@@ -2431,7 +2437,7 @@
     if (S.camp && Camp) { const won = S.camp.result ? S.camp.result === 'win' : win.includes(S.camp.seat); return void wipe({ p: won ? (win.find(p => human[p]) || 0) : 0, big: won ? tt('作战成功') : tt('作战失败'), full: true, ms: 1100 }).then(() => { if (g0 === gid && mode === 'over') Camp.finish(won); }); }
     // 胜负：先一道整屏转场（胜方的阵营色 + “胜利 / 失败”），再出结算页
     const g = gid, anyHuman = hs.length > 0;
-let unlock = null; try { unlock = freeWin(win, lost); } catch (e) { console.error(e); }
+let unlock = null; try { if (!lanSeat) unlock = freeWin(win, lost); } catch (e) { console.error(e); }
     lastUnlock = unlock;
     wipe({ p: lost ? 0 : (win[0] || 0), big: lost ? tt('失败') : anyHuman ? tt('胜利') : tt('对局结束'), full: true, ms: 1100 }).then(() => {
       if (g !== gid || mode !== 'over') return;
@@ -2532,6 +2538,8 @@ let unlock = null; try { unlock = freeWin(win, lost); } catch (e) { console.erro
   // 空格：地图比窗口大时，按住空格拖鼠标是平移镜头，所以“确定”等松开时再算（没拖过才算）
   let spaceDown = false, spaceDragged = false, drag = null, ptr = null;
   addEventListener('keydown', e => {
+    // Native dialog controls need their normal editing and navigation keys.
+    if (lanPanel.open || e.target?.closest?.('input, textarea, select, [contenteditable]')) return;
     if (e.metaKey || e.ctrlKey || e.altKey) return;
     if (e.key === ' ' && S && (scrollX || scrollY) && !Nav.stack.length) {
       e.preventDefault(); if (!e.repeat) { spaceDown = true; spaceDragged = false; cv.style.cursor = 'grab'; } return;
@@ -2746,7 +2754,7 @@ let unlock = null; try { unlock = freeWin(win, lost); } catch (e) { console.erro
     fac, facOpen, isFac, facSwap, defaultFunds, startCampaign, get gid() { return gid; }, over, centerOn(x, y) { cur = { x, y }; lastCurKey = x + ',' + y; centerOn(x, y); }, clearSave,
     opt, cfg, RULES, flashHints(ms) { hintUntil = performance.now() + (ms || 3000); }, AILV, RDEF, INC, myRules, MAP_GROUPS, ZOOMS,
     selectMap, mapOk, mapDims, mapN, mapGroup, thumb, mapRec, mapRecText, setRule, saveRules, resetRec() { recFor = -1; selectMap(opt.map); },
-    startGame, resumeGame, loadSave, showTitle, autosave, showHelp,
+    startGame, resumeGame, loadSave, showTitle, autosave, showHelp, openLan,
     coFactions, cosOf, coOrder, firstCo, loreCo, loreFac, quoteOf, coLabel, LORE,
     get soundOn() { return soundOn; }, setSound, applyVol, get zoomPref() { return zoomPref; }, setZoomPref(v) { zoomPref = v; lsSet('steel-tide.zoom', String(v)); if (S) setZoom(v); },
     fogOn, darkOn, plist, NP, teamTag, hasTeams, isAlive, isEnemy, teamOf, powersOn, coOf, costOf, unitBuff, unitTags, unitSeen, unitAtV, capPow, winnersOf, quit, get gaveUp() { return gaveUp; },
@@ -2765,6 +2773,346 @@ let unlock = null; try { unlock = freeWin(win, lost); } catch (e) { console.erro
     const A = AU(); if (A) { try { if (A.muted !== !soundOn) A.setMuted(!soundOn); } catch (e) { } }   // 音频模块自己也记了一份静音状态：以界面这份为准
   })();
   try { document.title = tt('潮汐战线'); } catch (e) { }
+  let lanSocket, lanSeat = 0, lanCode = '', lanCount = 1, lanReceiving = false;
+  let lanActor = 0, lanPicks = [];
+  let lanDeadline = 0;
+  function settleTurn() {
+    if (human[S.turn]) {
+      mode = 'idle';
+      updateHud();
+      if (lanSeat) {
+        const line = '俺のターン';
+        HUD.banner({ p: S.turn, pre: tt('第 {n} 天', { n: S.day }), big: line,
+          sub: pname(S.turn), tin: 180, hold: 1700, out: 200 });
+        const turnState = S;
+        if (soundOn) AU()?.playTurnVoice?.(() => soundOn && lanSeat && S === turnState && !S.winner && human[S.turn]);
+      }
+    }
+    else if (!lanSeat || lanActor === lanSeat) runAI();
+    else { mode = 'anim'; updateHud(); }
+  }
+  const lanPanel = document.createElement('dialog');
+  lanPanel.className = 'tidemark-lan';
+  lanPanel.innerHTML = '<h2>局域网对战（2–4 人）</h2><p role="status">创建房间，或输入好友的房间码。</p><select aria-label="对战地图"></select> <button data-lan="create">创建房间</button><p><input aria-label="房间码" maxlength="4" inputmode="numeric" placeholder="四位数字"> <button data-lan="join">加入房间</button></p><button data-lan="start" hidden>开始对战</button> <button data-lan="leave" hidden>退出房间</button> <button data-lan="dismiss">关闭面板</button>';
+  const lanStatus = lanPanel.querySelector('[role="status"]');
+  const lanMaps = lanPanel.querySelector('select');
+  const lanStart = lanPanel.querySelector('[data-lan="start"]');
+  const lanLeave = lanPanel.querySelector('[data-lan="leave"]');
+  const setup = document.createElement('div');
+  setup.hidden = true;
+  setup.innerHTML = '<fieldset><legend>阵营和指挥官</legend></fieldset><fieldset><legend>战场与规则（房主）</legend></fieldset>';
+  const [seatFields, hostFields] = setup.querySelectorAll('fieldset');
+  function addChoice(parent, label, entries) {
+    const row = document.createElement('label');
+    row.style.cssText = 'display:inline-flex;gap:6px;margin:5px;align-items:center';
+    const control = document.createElement('select');
+    control.setAttribute('aria-label', label);
+    control.replaceChildren(...entries.map(([value, label]) => new Option(label, value)));
+    row.append(label, control);
+    parent.append(row);
+    return control;
+  }
+  const colors = ['赤焰（红）', '苍蓝（蓝）', '翠林（绿）', '金沙（金）'];
+  const color = addChoice(seatFields, '颜色', colors.map((name,i) => [i+1,name]));
+  const faction = addChoice(seatFields, '阵营', ['赤焰','苍蓝','翠林','金沙','黑潮'].map((name,i) => [i+1,name]));
+  const team = addChoice(seatFields, '队伍', ['A','B','C','D'].map((name,i) => [i+1,name+' 队']));
+  const commander = addChoice(seatFields, '指挥官', []);
+  const coPreview = document.createElement('div');
+  coPreview.className = 'lan-co-preview';
+  seatFields.append(coPreview);
+  function previewCommander() {
+    const co = D.COS.find(candidate => candidate.id === commander.value);
+    coPreview.innerHTML = Kit.head(co?.id || 'rand', +faction.value, 68) +
+      '<div><strong>' + esc(co ? coLabel(co) : '随机指挥官') + '</strong><p>' +
+      esc(co?.passive || '开局从所选阵营抽取指挥官。') + '</p>' +
+      (co?.desc ? '<p><b>' + esc(co.power || '技能') + '</b> · ' + esc(co.desc) + '</p>' : '') + '</div>';
+    Kit.hydrate(coPreview);
+  }
+  function updateCommanders() {
+    commander.replaceChildren(new Option('随机', 'rand'), ...cosOf(+faction.value).map(co => new Option(coLabel(co), co.id)));
+    previewCommander();
+  }
+  faction.onchange = updateCommanders;
+  commander.onchange = previewCommander;
+  const ready = document.createElement('button');
+  ready.textContent = '准备';
+  const roster = document.createElement('ul');
+  roster.className = 'lan-roster';
+  roster.setAttribute('aria-label', '玩家准备状态');
+  roster.setAttribute('aria-live', 'polite');
+  seatFields.append(ready, roster);
+  ready.onclick = () => lanSocket?.send(JSON.stringify({
+    type:'pick', ready: !lanPicks[lanSeat], color:+color.value, faction:+faction.value, team:+team.value, co:commander.value,
+  }));
+  const group = addChoice(hostFields, '地图类型', ['小型','中型','大型','多阵营'].map((name,i) => [i,name]));
+  hostFields.append(lanMaps);
+  const mapPreview = document.createElement('canvas');
+  mapPreview.className = 'lan-map-preview';
+  mapPreview.setAttribute('aria-label', '地图概览');
+  hostFields.append(mapPreview);
+  const mapSummary = document.createElement('p');
+  hostFields.append(mapSummary);
+  const fill = document.createElement('input');
+  fill.type = 'checkbox';
+  fill.checked = true;
+  const fillLabel = document.createElement('label');
+  fillLabel.append(fill, '电脑补位');
+  fill.title = '多阵营真人对战中，空余席位由电脑补齐';
+  hostFields.append(fillLabel);
+  const cpuFields = document.createElement('fieldset');
+  cpuFields.className = 'lan-cpu-setup';
+  hostFields.append(cpuFields);
+  const cpuPicks = new Map();
+  function renderCpuSeats(map) {
+    const seats = map ? Array.from({ length: mapN(map) }, (_, i) => i + 1)
+      .filter(p => mapN(map) === 2 ? !lanPicks[p] : !lanPicks.some(pick => pick?.color === p)) : [];
+    cpuFields.hidden = !seats.length;
+    const legend = document.createElement('legend');
+    legend.textContent = lanPicks.some(Boolean) ? '补位电脑的阵营、指挥官和队伍' : '电脑阵营、指挥官和队伍';
+    cpuFields.replaceChildren(legend);
+    for (const p of seats) {
+      const pick = cpuPicks.get(p) || { faction: p, co: 'rand', team: p };
+      cpuPicks.set(p, pick);
+      const row = document.createElement('div');
+      const title = document.createElement('strong');
+      title.textContent = '电脑 ' + p;
+      row.append(title);
+      const side = addChoice(row, '阵营', ['赤焰','苍蓝','翠林','金沙','黑潮'].map((name,i) => [i+1,name]));
+      const leader = addChoice(row, '指挥官', []);
+      const alliance = addChoice(row, '队伍', ['A','B','C','D'].map((name,i) => [i+1,name+' 队']));
+      const updateLeaders = () => {
+        leader.replaceChildren(new Option('随机', 'rand'), ...cosOf(pick.faction).map(co => new Option(coLabel(co), co.id)));
+        leader.value = pick.co;
+      };
+      side.value = String(pick.faction);
+      alliance.value = String(pick.team);
+      side.onchange = () => { pick.faction = +side.value; pick.co = 'rand'; updateLeaders(); };
+      alliance.onchange = () => { pick.team = +alliance.value; };
+      leader.onchange = () => { pick.co = leader.value; };
+      updateLeaders();
+      cpuFields.append(row);
+    }
+  }
+  const ruleControls = RULES.map(([key, name, choices]) => {
+    const control = addChoice(hostFields, name, choices.map(([, label],i) => [i,label]));
+    const ix = choices.findIndex(([value]) => value === (key === 'fog' ? false : opt.rules[key]));
+    control.selectedIndex = Math.max(0, ix);
+    return [key, choices, control];
+  });
+  lanPanel.insertBefore(setup, lanStart);
+  lanPanel.style.maxHeight = '85vh';
+  lanPanel.style.maxWidth = 'min(720px, 90vw)';
+  group.onchange = fill.onchange = updateLanMaps;
+  lanMaps.onchange = syncLanReady;
+  const lanButton = document.createElement('button');
+  lanButton.setAttribute('aria-label', '局域网对战');
+  lanButton.textContent = '局域网对战';
+  lanButton.className = 'lan-connect';
+  const clock = document.createElement('span');
+  clock.className = 'lan-clock';
+  clock.hidden = true;
+  document.body.append(lanButton, clock, lanPanel);
+  setInterval(() => {
+    if (!lanDeadline || !S || S.winner) { clock.hidden = true; return; }
+    const seconds = Math.max(0, Math.ceil((lanDeadline - performance.now()) / 1000));
+    clock.hidden = false;
+    clock.textContent = Math.floor(seconds / 60) + ':' + String(seconds % 60).padStart(2, '0');
+    if (!seconds && human[S.turn] && mode !== 'anim' && mode !== 'over') {
+      lanDeadline = 0;
+      closeOverlays();
+      Nav.stack = [];
+      endTurn();
+    }
+  }, 200);
+  function updateLanMaps() {
+    fillLabel.hidden = +group.value !== 3;
+    const previous = lanMaps.value;
+    const allAI = !lanPicks.some(Boolean);
+    const minSeats = Math.max(lanCount, ...lanPicks.map(pick => pick?.color || 0));
+    lanMaps.replaceChildren(...D.MAPS.flatMap((map, index) =>
+      !map.campaign && mapGroup(map) === +group.value && mapOk(map) &&
+      (allAI || (+group.value !== 3 ? lanCount === 2 :
+        fill.checked ? mapN(map) >= minSeats : mapN(map) === lanCount && mapN(map) >= minSeats))
+        ? [new Option(map.name, index)] : []));
+    if ([...lanMaps.options].some(o => o.value === previous)) lanMaps.value = previous;
+    syncLanReady();
+  }
+  function syncLanReady() {
+    const map = lanMaps.value ? D.MAPS[+lanMaps.value] : null;
+    if (lanSeat === 1) renderCpuSeats(map);
+    const size = map && mapDims(map);
+    mapPreview.hidden = !map;
+    if (map) {
+      const source = thumb(+lanMaps.value);
+      const scale = Math.min(240 / source.width, 140 / source.height);
+      mapPreview.width = Math.max(1, Math.round(source.width * scale));
+      mapPreview.height = Math.max(1, Math.round(source.height * scale));
+      const ctx = mapPreview.getContext('2d');
+      ctx.imageSmoothingEnabled = false;
+      ctx.drawImage(source, 0, 0, mapPreview.width, mapPreview.height);
+    }
+    mapSummary.textContent = map ? size.w + ' × ' + size.h + ' · ' + mapN(map) + ' 个阵营 · ' +
+      Math.max(0, mapN(map) - lanPicks.filter(Boolean).length) + ' 个电脑席位' : '';
+    const readyCount = lanPicks.filter(Boolean).length;
+    lanStart.hidden = lanSeat !== 1;
+    lanStart.disabled = !lanMaps.options.length || (readyCount > 0 && (readyCount !== lanCount || lanCount < 2));
+    lanStart.textContent = readyCount ? '开始对战' : '开始对战（全电脑观战）';
+    ready.textContent = lanPicks[lanSeat] ? '取消准备' : '准备';
+    for (const field of [color, faction, team, commander]) field.disabled = !!lanPicks[lanSeat];
+    for (const option of color.options) {
+      option.disabled = lanPicks.some((pick,i) => i !== lanSeat && pick?.color === +option.value);
+    }
+    roster.replaceChildren(...Array.from({ length: lanCount }, (_, i) => {
+      const seat = i + 1;
+      const pick = lanPicks[seat];
+      const co = pick && D.COS.find(c => c.id === pick.co);
+      const row = document.createElement('li');
+      const name = document.createElement('strong');
+      name.textContent = '玩家 ' + seat + (seat === 1 ? ' · 房主' : '') + (seat === lanSeat ? ' · 你' : '');
+      const status = document.createElement('span');
+      status.className = pick ? 'lan-ready-yes' : 'lan-ready-no';
+      status.textContent = pick ? '✓ 已准备' : '○ 未准备';
+      row.append(name, status);
+      if (pick) {
+        const detail = document.createElement('small');
+        detail.textContent = [colors[pick.color - 1], 'ABCD'[pick.team - 1] + ' 队', co ? coLabel(co) : '随机指挥官'].join(' · ');
+        row.append(detail);
+      }
+      return row;
+    }));
+  }
+  function openLan() {
+    if (!lanSeat && mode !== 'title') return;
+    if (soundOn) { audio(); AU()?.loadTurnVoice?.(); }
+    if (!lanPanel.open) lanPanel.showModal();
+  }
+  lanButton.onclick = openLan;
+  function closeLan() {
+    const old = lanSocket;
+    lanSocket = null;
+    lanSeat = 0;
+    lanActor = 0;
+    lanDeadline = 0;
+    clock.hidden = true;
+    lanPicks = [];
+    cpuPicks.clear();
+    fill.checked = true;
+    setup.hidden = true;
+    lanCode = '';
+    lanCount = 1;
+    lanMaps.replaceChildren();
+    old?.close();
+    lanPanel.close();
+    lanStart.hidden = true;
+    lanLeave.hidden = true;
+    lanStatus.textContent = '创建房间，或输入好友的房间码。';
+    lanButton.textContent = '局域网对战';
+  }
+  function sendLan(type, state) {
+    if (lanSocket?.readyState === WebSocket.OPEN) {
+      lanSocket.send(JSON.stringify({ type, state: { ...state, ai: null } }));
+    }
+  }
+  function connectLan(type) {
+    if (lanSocket || mode !== 'title') return;
+    const code = lanPanel.querySelector('input').value.trim().toUpperCase();
+    if (type === 'join' && !/^\d{4}$/.test(code)) {
+      lanStatus.textContent = '请输入四位数字房间码。';
+      return;
+    }
+    const socket = new WebSocket((location.protocol === 'https:' ? 'wss://' : 'ws://') + location.host + '/games/tidemark/ws');
+    lanSocket = socket;
+    lanStatus.textContent = '正在连接…';
+    socket.onopen = () => socket.send(JSON.stringify({ type, code }));
+    socket.onclose = () => {
+      if (socket !== lanSocket) return;
+      showTitle();
+      lanStatus.textContent = '连接已断开。请重新创建或加入房间。';
+      lanPanel.showModal();
+    };
+    socket.onmessage = async event => {
+      if (socket !== lanSocket) return;
+      const msg = JSON.parse(event.data);
+      if (msg.type === 'room') {
+        lanSeat = msg.seat;
+        lanCount = msg.count;
+        setup.hidden = false;
+        seatFields.hidden = false;
+        hostFields.hidden = lanSeat !== 1;
+        color.value = team.value = String(lanSeat);
+        faction.value = String(lanSeat);
+        updateCommanders();
+        updateLanMaps();
+        lanCode = msg.code;
+        lanLeave.hidden = false;
+        lanStatus.textContent = '房间码 ' + msg.code + (lanSeat === 1 ? '，等待好友加入。' : '，等待房主开始。');
+      } else if (msg.type === 'ready') {
+        lanCount = msg.count;
+        lanPicks = msg.picks;
+        if (lanCount > 2 && +group.value !== 3) group.value = '3';
+        updateLanMaps();
+        lanStatus.textContent = '房间码 ' + lanCode + ' · ' + lanCount + '/4 人。' +
+          (lanSeat !== 1 ? '请选择阵营并准备，等待房主开始。' : !lanMaps.options.length ? '请选择适合当前阵营的地图或开启电脑补位。' : '所有玩家准备后可以开战。');
+      } else if (msg.type === 'error') {
+        lanStatus.textContent = msg.message;
+        if (!lanSeat) { lanSocket = null; socket.close(); }
+      } else if (msg.type === 'state') {
+        const first = mode === 'title';
+        lanPanel.close();
+        lanStart.hidden = true;
+        S = msg.state;
+        lanActor = msg.actor;
+        lanDeadline = msg.turnSeconds ? performance.now() + msg.turnSeconds * 1000 : 0;
+        lanPicks = msg.picks;
+        human = Array.from({ length: S.players + 1 }, (_, seat) => seat === msg.picks[lanSeat]?.color);
+        setup.hidden = true;
+        lanButton.textContent = human[S.turn] ? '你的回合' : msg.picks.some(pick => pick?.color === S.turn) ? '等待对手结束回合' : '电脑行动中';
+        lanStatus.textContent = S.winner ? '对局已结束。' : lanButton.textContent;
+        if (S.winner) {
+          lanReceiving = true;
+          if (mode !== 'over') over();
+          lanReceiving = false;
+        } else if (first) {
+          await openGame('局域网对战');
+        } else {
+          enterGame();
+          mode = 'anim';
+          const current = gid;
+          await warm();
+          if (current === gid) settleTurn();
+        }
+      }
+    };
+  }
+  for (const type of ['create', 'join']) {
+    lanPanel.querySelector('[data-lan="' + type + '"]').onclick = () => connectLan(type);
+  }
+  lanPanel.querySelector('[data-lan="dismiss"]').onclick = () => lanPanel.close();
+  lanPanel.addEventListener('close', () => {
+    if (mode === 'title' && lanSocket && !S) closeLan();
+  });
+  lanLeave.onclick = showTitle;
+  lanStart.onclick = () => {
+    const map = D.MAPS[Number(lanMaps.value)];
+    if (lanStart.disabled || !lanMaps.value || !mapOk(map)) return;
+    const n = mapN(map), cos = [null], teams = [0], factions = [0];
+    const rules = Object.fromEntries(ruleControls.map(([key, choices, control]) => [key, choices[control.selectedIndex][0]]));
+    for (let p = 1; p <= n; p++) {
+      const pick = (n === 2 ? lanPicks[p] : lanPicks.find(entry => entry?.color === p)) || cpuPicks.get(p);
+      factions[p] = pick?.faction || p;
+      const pool = cosOf(factions[p]);
+      const candidates = pool.length ? pool : D.COS;
+      cos[p] = D.COS.some(co => co.id === pick?.co) ? pick.co : candidates[Math.floor(Math.random() * candidates.length)].id;
+      teams[p] = pick?.team || p;
+    }
+    if (new Set(teams.slice(1)).size < 2) {
+      lanStatus.textContent = '至少需要两支不同队伍。';
+      return;
+    }
+    const state = C.newGame(map, { cos, teams, factions, funds: rules.startFunds, rules });
+    defaultFunds(state, p => n === 2 ? !!lanPicks[p] : lanPicks.some(pick => pick?.color === p));
+    lanSocket.send(JSON.stringify({ type:'start', state, fill:fill.checked }));
+  };
   resize(); showTitle(); refreshMute(); requestAnimationFrame(frame);
   // 测试入口。sync：测试脚本直接改了 S 之后刷新画面；view：格子到屏幕坐标的换算
   const cssRect = r => r ? { l: r.x * u, t: r.y * u, r: (r.x + r.w) * u, b: (r.y + r.h) * u, w: r.w * u, h: r.h * u } : null;

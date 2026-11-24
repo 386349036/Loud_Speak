@@ -1,0 +1,38 @@
+.tidemark-lan {
+  --lan-gold: #ffd270;
+  width: min(720px, 88vw);
+  color: #fff0d5;
+  background: linear-gradient(150deg, #57291d, #291b19 75%);
+  border: 2px solid #ba7c39;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: inset 0 0 0 4px #24150f, 0 20px 70px #000a;
+}
+.tidemark-lan::backdrop { background: #16100bc9; }
+.tidemark-lan h2, .tidemark-lan legend, .lan-co-preview strong { color: var(--lan-gold); }
+.tidemark-lan fieldset { border: 1px solid #99633a; border-radius: 7px; margin: 12px 0; padding: 9px; background: #210f0b66; }
+.tidemark-lan button, .tidemark-lan select, .tidemark-lan input:not([type="checkbox"]), .lan-connect, .lan-clock {
+  color: #fff1d7;
+  background: linear-gradient(#853d29, #481e17);
+  border: 1px solid #d09757;
+  border-radius: 6px;
+  padding: 6px 10px;
+}
+.tidemark-lan option { background: #49251c; }
+.tidemark-lan button[data-lan="start"] { background: linear-gradient(#ffe99e, #d89a36); color: #381c0d; font-weight: bold; }
+.tidemark-lan button:disabled { opacity: .47; }
+.lan-map-preview { display: block; margin: 10px auto; border: 2px solid #d09757; image-rendering: pixelated; max-width: 100%; }
+.lan-map-preview[hidden] { display: none; }
+.lan-co-preview { display: flex; gap: 12px; align-items: flex-start; min-height: 55px; margin: 8px 0; }
+.lan-co-preview .hd { flex: 0 0 auto; }
+.lan-co-preview p { margin: 4px 0; }
+.lan-roster { display: grid; gap: 6px; list-style: none; padding: 0; margin: 10px 0 0; font-size: .85em; }
+.lan-roster li { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 3px 10px; padding: 6px 9px; border: 1px solid #805538; border-radius: 6px; background: #2a1510; }
+.lan-roster small { color: #dfba99; grid-column: 1 / -1; }
+.lan-ready-yes, .lan-ready-no { border-radius: 5px; padding: 2px 7px; font-weight: bold; white-space: nowrap; }
+.lan-ready-yes { background: #a6e59b; color: #143d1d; }
+.lan-ready-no { background: #f4cb83; color: #513015; }
+.lan-connect, .lan-clock { position: fixed; right: max(12px, calc(32 * var(--r, 1px))); z-index: 100; font-weight: bold; }
+.lan-connect { top: calc(38 * var(--r, 1px) + max(48px, 88 * var(--r, 1px)) + 8px); cursor: pointer; }
+.lan-connect::before { content: '⚑'; color: #ffd270; margin-right: .4em; }
+.lan-clock { top: calc(38 * var(--r, 1px) + max(48px, 88 * var(--r, 1px)) + 50px); color: #ffd270; font-variant-numeric: tabular-nums; pointer-events: none; }

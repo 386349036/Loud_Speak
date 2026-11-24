@@ -223,6 +223,7 @@
       const items = [];
       if (G.camp) items.push({ id: 'tCamp', label: G.camp.any ? T('继续战役') : T('战役'), info: (() => { try { const pr = root.AWCampaignRun.progress(); return Kit.ic('flag') + esc(T('{a}/{b}', { a: pr.done, b: pr.total })); } catch (e) { return ''; } })(), onPick: go(() => G.camp.select()) });
       items.push({ id: 'tStart', label: G.camp ? T('自由对局') : T('开始作战'), info: esc(T('2–4 个阵营')), onPick: go(wizard) });
+      items.push({ id: 'tLan', label: T('局域网对战'), onPick: go(G.openLan) });
       // 顺序照成品图：战役、自由对局、继续（有存档才有；打开时默认选中它）、图鉴、设置
       if (sv) items.push({ id: 'resume', label: T('继续'), info: esc(T('{map} · 第 {day} 天', { map: T(sv.state.map.name || '', null, 'map'), day: sv.state.day })), onPick: G.resumeGame });
       if (root.AWCodex) items.push({ id: 'tCodex', label: T('图鉴'), onPick: go(() => G.openCodex()) });
@@ -231,7 +232,7 @@
       // 画面是分层的（大背景、云、草坡、人物组、钢板、浪花带、标志各一张图），按窗口大小各自定位，见下面的 layout()
       // 菜单：铭牌组块。每块两种状态叠在一起——没选中的小红牌、选中的大金牌（带光标和溅上来的浪花），都是从 Codex 画的成品图里裁出来的；
       // 简体中文直接用图里画好的字，其他语言（和还没有专属金牌图的项）用空白牌子 + 程序排的斜粗体字。光标移动：旧的缩小褪成红牌、浪花落下；新的放大变金牌、浪花溅起；其余牌子让位
-      const ART = { tCamp: 'rg', tStart: 'rg', resume: 'rg', tCodex: 'rg', tSet: 'rg' }, zhCN = Kit.lang() === 'zh-CN', T0 = 'ui-assets/title/';
+      const ART = { tCamp: 'rg', tStart: 'rg', tLan: 'rg', resume: 'rg', tCodex: 'rg', tSet: 'rg' }, zhCN = Kit.lang() === 'zh-CN', T0 = 'ui-assets/title/';
       const host = $('tmenu'); host.innerHTML = '';
       const btns = items.map((it, i) => {
         const b = document.createElement('button'); b.className = 'nav tpl'; b.id = it.id; b.dataset.sid = it.id; const a = zhCN ? (ART[it.id] || '') : '';
@@ -259,7 +260,7 @@
         const cloud = (tw, cy) => { box(LY.cl, -M, cy - tw * CLR * 0.6, W + 2 * M + tw, tw * CLR); LY.cl.style.setProperty('--tw', tw + 'px'); };   // 云：一条横向平铺的云带（tw 是一组云的宽度），慢慢向左飘，飘完一组正好接上
         let k, at, y, y0;
         if (nar) {
-          k = Math.min(W * 0.6 / 465, H * 0.42 / 735); bgAt(W * 0.6, H * 0.27, W * 0.62);
+          k = Math.min(W * 0.6 / 465, H * 0.42 / (btns.length > 5 ? 855 : 735)); bgAt(W * 0.6, H * 0.27, W * 0.62);
           const kf = Math.min(H * 0.3 / 724, W * 0.72 / 740), fy = H * 0.545 - SH * kf; box(LY.fig, -8, fy, 1671 * kf, SH * kf); box(LY.sl, -20, fy + (SH - 481 * 0.9) * kf + 10, SW * 0.9 * kf, 481 * 0.9 * kf);
           box(LY.pan, -8, 0, W + 16, H + 8);
           const ws = 1.35 * Math.hypot(W, H * 0.12) / 1113; box(LY.wv, W / 2 - 1097 * ws, H * 0.47 - 470 * ws, SW * ws, SH * ws); LY.wv.style.transformOrigin = '65.6% 50%'; LY.wv.style.rotate = (Math.atan2(H * 0.12, -W) * 180 / Math.PI - 122.3) + 'deg';
@@ -274,9 +275,9 @@
           const lw = Math.min(740, Wd - 470), lx = Math.max(24, Math.min(135, (Wd - 420 - lw) / 2)); box(LY.logo, lx * k, 24 * k, lw * k);
           { const tg = LY.logo.querySelector('.ltag'); if (tg) tg.style.marginLeft = Math.max(0, 440 * kf - 18 - lx * k) + 'px'; }   // 标语靠右排在标志下面，左边让开燕烽的头发和抬起的手
           cloud(Math.max(W * 0.8, 1100 * k), 200 * k);
-          y0 = btns.length >= 5 ? 197 : 250; y = y0; at = (x, top) => [sx + x * k, oy + top * k];
+          y0 = btns.length > 5 ? 140 : btns.length === 5 ? 197 : 250; y = y0; at = (x, top) => [sx + x * k, oy + top * k];
         }
-        btns.forEach((b, i) => { const on = i === f, id = b.dataset.sid, q = (on ? GS : RS)[id] || (on ? [520, 170] : [460, 130]), tf = b.querySelector('.tinfo'), info = on && tf ? 40 : 0;
+        btns.forEach((b, i) => { const on = i === f, id = b.dataset.sid, q = (on ? GS : RS)[id === 'tLan' ? 'tStart' : id] || (on ? [520, 170] : [460, 130]), tf = b.querySelector('.tinfo'), info = on && tf ? 40 : 0;
           const top = on ? y - 14 : y, p = at(1171 - (y - 208) * 0.2166 - (on ? 46 : 0), top, q[0]);
           b.style.left = p[0] + 'px'; b.style.top = p[1] + 'px'; b.style.width = (q[0] * k) + 'px'; b.style.height = (q[1] * k) + 'px'; b.style.fontSize = (62 * k) + 'px';
           if (tf) { tf.style.left = ''; const over = p[0] + q[0] * k * 0.12 + tf.offsetWidth - (W - 10); if (over > 0) tf.style.left = (q[0] * k * 0.12 - over) + 'px'; }   // 说明文字不伸出窗口右边

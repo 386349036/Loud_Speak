@@ -52,6 +52,7 @@ io.use((socket,next)=>{const u=db.prepare('SELECT * FROM sessions WHERE token=?'
 const count=()=>io.emit('online',new Set([...io.sockets.sockets.values()].map(s=>s.data.user.token)).size);io.on('connection',s=>{count();s.on('disconnect',count)});
 const smallScopeRelay=require('./smallscope-relay.cjs')(server);
 require('./pixel-battle-relay.cjs')(server);
+require('./tidemark-lan.cjs')(server);
 require('./transformers-bubble-server.cjs')(server);
 app.get('/api/pixel-battle/share',(req,res)=>{
   let host=req.get('host');
